@@ -18,10 +18,10 @@ const { seo } = Astro.props;
   <div class="wrapper">
   <body>
     <slot name="header" />
+    <slot name="side-nav" />
     <main class="main-content">
       <slot />
     </main>
-    <slot name="side-nav" />
     <slot name="footer" />
   </body>
   </div>
