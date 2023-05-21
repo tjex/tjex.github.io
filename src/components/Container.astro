@@ -1,14 +1,20 @@
 ---
+import SideNav from "../components/SideNav.astro";
 ---
 
 <div class="container">
-  <slot />
+  <aside>
+  <SideNav />
+  </aside>
+  <slot class="main" />
 </div>
 
 <style>
   .container {
+    height: 100%;
     margin: 0 auto;
     max-width: var(--container-width, 960px);
     padding: 0 var(--container-padding, 1rem);
   }
+
 </style>

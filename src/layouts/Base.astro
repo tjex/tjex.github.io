@@ -15,11 +15,14 @@ const { seo } = Astro.props;
     <BaseHead {...seo} />
     <slot name="head-bottom" />
   </head>
+  <div class="wrapper">
+    <slot class="header" name="header" />
   <body>
-    <slot name="header" />
-    <main>
+    <slot class="aside aside-1" name="side-nav" />
+    <main class="main">
       <slot />
     </main>
-    <slot name="footer" />
+    <slot class="footer" name="footer" />
   </body>
+  </div>
 </html>
