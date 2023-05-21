@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Base.astro";
-import Container from "../components/Container.astro";
+import Header from "../components/Header.astro";
+import SideNav from "../components/SideNav.astro";
+import MainContent from "../components/MainContent.astro";
 
 const seo = {
   title: "Astro Minimal Starter",
@@ -11,7 +13,9 @@ const seo = {
 <Layout
   seo={seo}
 >
-  <Container>
+<Header slot="header" />
+<SideNav slot="side-nav" />
+  <MainContent>
     <h1>Astro Minimal Starter</h1>
     <p>
       If you haven't heard about <a
@@ -40,5 +44,5 @@ const seo = {
     </p>
 
     <a href="/blog">Blog →</a>
-  </Container>
+  </MainContent>
 </Layout>

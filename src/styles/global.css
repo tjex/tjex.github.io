@@ -135,19 +135,16 @@
 html,
 body {
   margin: 0;
-  padding: 0;
+  padding: 1em;
   overflow: hidden; /* not scrollable */
   font-family: var(--font-family);
   line-height: var(--line-height);
   color: var(--color);
 }
 
-
 .wrapper {
   display: flex;  
   flex-flow: row wrap;
-  font-weight: bold;
-  text-align: center; 
 }
 
 .wrapper > * {
@@ -163,7 +160,7 @@ body {
   background: lightgreen;
 }
 
-.main {
+.main-content {
   text-align: left;
   background: deepskyblue;
 }
@@ -181,16 +178,13 @@ body {
 }
 
 @media all and (min-width: 800px) {
-  .main    { flex: 3 0px; }
-  .aside-1 { order: 1; } 
-  .main    { order: 2; }
-  .aside-2 { order: 3; }
-  .footer  { order: 4; }
+  .main-content { flex: 3 0px; }
+  .aside-1      { order: 1; }
+  .main-content { order: 2; }
+  .aside-2      { order: 3; }
+  .footer       { order: 4; }
 }
 
-body {
-  padding: 2em; 
-}
 
 /* --- LINKS --- */
 
