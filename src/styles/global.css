@@ -1,6 +1,6 @@
 :root {
-  --container-width: 960px;
-  --container-padding: 1rem;
+  --main-content-width: 660px;
+  --main-content-padding: 1rem;
   --font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
     "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
@@ -25,6 +25,8 @@
   --form-label-font-weight: var(--font-weight);
   --transition: 0.05s ease-in-out;
   --modal-overlay-backdrop-filter: blur(0.25rem);
+
+  --h1-size: 1.5rem;
 
   --background-color: #11191f;
   --color: hsl(205, 16%, 77%);
@@ -132,11 +134,12 @@
 }
 
 
+/* LAYOUTS AND STRUCTURE */
+
 html,
 body {
   margin: 0;
   padding: 1em;
-  overflow: hidden; /* not scrollable */
   font-family: var(--font-family);
   line-height: var(--line-height);
   color: var(--color);
@@ -153,26 +156,28 @@ body {
 }
 
 .header {
-  background: tomato;
+    font-size: 3em;
 }
 
 .footer {
-  background: lightgreen;
 }
 
 .main-content {
   text-align: left;
-  background: deepskyblue;
+  width: var(--main-content-width);
 }
 
+/*code for left sidebar */
 .aside-1 {
-  background: gold;
+    padding-top: 6.25em;
+    text-align: right;
 }
 
+/*code for right sidebar */
 .aside-2 {
-  background: hotpink;
 }
 
+/* from: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-examples */
 @media all and (min-width: 600px) {
   .aside { flex: 1 0 0; }
 }
@@ -185,6 +190,16 @@ body {
   .footer       { order: 4; }
 }
 
+@media only screen and (max-width: 800px) {
+  .aside-1 { 
+        text-align: left; 
+        padding: 0
+   }
+   .main-content {
+        width: 100%; 
+   }
+    
+}
 
 /* --- LINKS --- */
 
