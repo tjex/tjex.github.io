@@ -1,5 +1,6 @@
 ---
-import Layout from '../../layouts/Base.astro'
+import Layout from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
 import MainContent from '../../components/MainContent.astro';
 import BlogPostPreview from '../../components/BlogPostPreview.astro';
 import Paginator from '../../components/Paginator.astro'
@@ -14,7 +15,7 @@ export async function getStaticPaths({paginate}) {
 			title: frontmatter.title,
 			description: frontmatter.description,
 			publishDate: frontmatter.publishDate,
-			image: frontmatter.image,
+			// image: frontmatter.image,
 		}))
 		// .sort((a, b) => {
 		// 	new Date(b.publishDate) - new Date(a.publishDate)
@@ -39,6 +40,7 @@ const { page } = Astro.props;
 
 
 <Layout seo={seo} >
+  <Header slot='header' />
   <MainContent>
     <article class="blog-page-content__article">
       <section class="postlist">
