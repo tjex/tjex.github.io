@@ -143,6 +143,7 @@ body {
   font-family: var(--font-family);
   line-height: var(--line-height);
   color: var(--color);
+  font-size: 18px;
 }
 
 .wrapper {
@@ -151,7 +152,7 @@ body {
 }
 
 .wrapper > * {
-  padding: 10px;
+  padding: 20px;
   flex: 1 100%;
 }
 
@@ -178,14 +179,15 @@ body {
 
 /*code for right sidebar */
 .aside-2 {
+    padding-top: 6.25em;
 }
 
 /* from: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-examples */
-@media all and (min-width: 600px) {
-  .aside { flex: 1 0 0; }
-}
+/* @media all and (min-width: 600px) { */
+/* } */
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 900px) {
+  .aside { flex: 1 0 0; }
   .main-content { flex: 3 0px; }
   .aside-1      { order: 1; }
   .main-content { order: 2; }
@@ -193,8 +195,9 @@ body {
   .footer       { order: 4; }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   .aside-1 { 
+        display:inline-flex;
         text-align: left; 
         padding: 0
    }

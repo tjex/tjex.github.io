@@ -1,6 +1,7 @@
 ---
 import Layout from './Base.astro';
 import SideNav from '../components/SideNav.astro';
+import RightSidebar from '../components/RightSidebar.astro';
 import type { Props as BaseHeadProps } from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 // import Footer from '../components/Footer.astro';
@@ -16,5 +17,6 @@ const { seo } = Astro.props as Props;
   <Header slot="header" />
   <SideNav class="aside aside-1" slot="side-nav" />
 		<slot />
+  <RightSidebar class="aside aside-2" slot="right-sidebar" />
   <!-- <Footer slot="footer" /> -->
 </Layout>

@@ -2,6 +2,7 @@
 import Layout from "../layouts/Base.astro";
 import Header from "../components/Header.astro";
 import SideNav from "../components/SideNav.astro";
+import RightSidebar from "../components/RightSidebar.astro";
 import MainContent from "../components/MainContent.astro";
 
 const seo = {
@@ -43,4 +44,5 @@ const seo = {
       problem!
     </p>
   </MainContent>
+  <RightSidebar slot='right-sidebar' />
 </Layout>
