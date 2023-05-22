@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Base.astro';
 import Header from '../../components/Header.astro';
 import SideLeftPage from '../../components/SideLeftPage.astro';
+import SideRightBlank from '../../components/SideRightBlank.astro';
 import MainContent from '../../components/MainContent.astro';
 import BlogPostPreview from '../../components/BlogPostPreview.astro';
 import Paginator from '../../components/Paginator.astro'
@@ -42,9 +43,7 @@ const { page } = Astro.props;
 
 <Layout seo={seo} >
   <Header slot='header' />
-  <SideLeftPage slot='side-left-page' >
-    here's text
-  </SideLeftPage>
+  <SideLeftPage slot='side-left-page' />
   <MainContent>
     <article class="blog-page-content__article">
       <section class="postlist">
@@ -53,6 +52,7 @@ const { page } = Astro.props;
     </article>
     <Paginator page={page}/>
   </MainContent>
+<SideRightBlank slot="side-right-page" />
 </Layout>
 
 <style>

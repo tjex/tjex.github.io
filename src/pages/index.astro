@@ -3,6 +3,7 @@ import Layout from "../layouts/Base.astro";
 import Header from "../components/Header.astro";
 import SideLeftPage from "../components/SideLeftPage.astro";
 import SideRightPage from "../components/SideRightPage.astro";
+import SideRightBlank from '../components/SideRightBlank.astro';
 import MainContent from "../components/MainContent.astro";
 
 const seo = {
@@ -44,5 +45,5 @@ const seo = {
       problem!
     </p>
   </MainContent>
-  <SideRightPage slot='side-right-page' />
+<SideRightBlank slot="side-right-page" />
 </Layout>
