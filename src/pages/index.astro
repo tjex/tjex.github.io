@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/Base.astro";
 import Header from "../components/Header.astro";
-import SideNav from "../components/SideNav.astro";
-import RightSidebar from "../components/RightSidebar.astro";
+import SideLeftPage from "../components/SideLeftPage.astro";
+import SideRightPage from "../components/SideRightPage.astro";
 import MainContent from "../components/MainContent.astro";
 
 const seo = {
@@ -15,7 +15,7 @@ const seo = {
   seo={seo}
 >
 <Header slot="header" />
-<SideNav slot="side-nav" />
+<SideLeftPage slot="side-left-page" />
   <MainContent>
     <h1>Astro Minimal Starter</h1>
     <p>
@@ -44,5 +44,5 @@ const seo = {
       problem!
     </p>
   </MainContent>
-  <RightSidebar slot='right-sidebar' />
+  <SideRightPage slot='side-right-page' />
 </Layout>
