@@ -1,12 +1,20 @@
 ---
 // this is the base component for the RIGHT sidebar on PAGES
 // it's wrapped in the <aside> attribute, which is part of the flex layout of the site.
+import ArticleSchema from "./ArticleSchema.astro";
+const allPosts = await Astro.glob("../pages/blog/*.md");
 ---
 
+
 <aside class="aside aside-2">
-<ul>
-    <li><a href="#">a post example </a></li>
-    <li><a href="#">a post example </a></li>
-    </ul>
+    <hr>
+    <p>latest posts</p>
+    {
+        allPosts.map((post) => (
+            <ul>
+                <li><a href={post.url}>{post.frontmatter.title}</a></li>
+            </ul>
+        ))
+    }
 </aside>
 

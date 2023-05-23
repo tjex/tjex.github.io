@@ -1,13 +1,13 @@
 export default {
-  title: `Astro Minimal Starter`,
-  description: `This is an example blog made with Astro.`,
-  url: `https://astro-minimal-starter.netlify.app`, // No trailing slash!
+  title: `Tillman Jex`,
+  description: `Software developer, creative technologist and a few other things`,
+  url: `https://tjex.net`, // No trailing slash!
   // JSON LD
-  name: `Example`,
+  name: `tillman jex`,
   // Facebook URL
-  facebookURL: `https://facebook.com`,
+  //facebookURL: `https://facebook.com`,
   // Twitter URL
-  twitterURL: `https://twitter.com/jaydanurwin`,
+  //twitterURL: `https://twitter.com/jaydanurwin`,
   // Instagram URL
-  instagramURL: `https://instagram.com/jaydanurwin`,
+  //instagramURL: `https://instagram.com/jaydanurwin`,
 };

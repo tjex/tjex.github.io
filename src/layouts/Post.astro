@@ -2,6 +2,7 @@
 import Layout from './Base.astro';
 import Header from "../components/Header.astro";
 import SideLeftPage from "../components/SideLeftPage.astro";
+import SideRightBlank from '../components/SideRightBlank.astro';
 import MainContent from "../components/MainContent.astro";
 import ArticleSchema from '../components/ArticleSchema.astro';
 
@@ -13,7 +14,7 @@ const { frontmatter } = Astro.props;
   <ArticleSchema {...frontmatter}  />
  </Fragment>
  <Header slot="header" />
- <SideLeftPage slot="side-left-page"/>
+ <SideLeftPage slot="side-left"/>
   <MainContent>
     <article class="post-content__article">
       {frontmatter.image && <img width="720" height="420" class="post-main__img" loading="lazy" src={frontmatter.image} alt={frontmatter.alt} />}
@@ -22,4 +23,5 @@ const { frontmatter } = Astro.props;
       <slot />
     </article>
   </MainContent>
+  <SideRightBlank slot="side-right" />
 </Layout>

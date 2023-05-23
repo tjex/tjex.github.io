@@ -1,24 +1,13 @@
 ---
-import Layout from "../layouts/Base.astro";
-import Header from "../components/Header.astro";
-import SideLeftPage from "../components/SideLeftPage.astro";
-import SideRightPage from "../components/SideRightPage.astro";
-import SideRightBlank from '../components/SideRightBlank.astro';
-import MainContent from "../components/MainContent.astro";
+import Layout from "../layouts/Page.astro";
 
 const seo = {
-  title: "Astro Minimal Starter",
-  description: "This is a starter repo for an blog built with Astro including open graph tags, canonical urls, RSS, sitemap support."
+  title: "Home",
+  description: "Home page for Tillman Jex, software developer and creative technologist based in Berlin, Germany."
   }
 ---
 
-<Layout
-  seo={seo}
->
-<Header slot="header" />
-<SideLeftPage slot="side-left-page" />
-  <MainContent>
-    <h1>Astro Minimal Starter</h1>
+<Layout seo={seo} >
     <p>
       If you haven't heard about <a
         href="https://astro.build"
@@ -44,6 +33,5 @@ const seo = {
       actually wanted. Want to use vanilla CSS instead of Tailwind or Scss? No
       problem!
     </p>
-  </MainContent>
-<SideRightBlank slot="side-right-page" />
 </Layout>
+
