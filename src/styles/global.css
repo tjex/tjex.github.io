@@ -1332,8 +1332,9 @@ textarea,
 
 .header {
   display: flex;
-  justify-content: space-between-safe;
+  justify-content: space-between;
   align-items: center;
+  padding: vat(--spacing);
 }
 
 .wrapper {
@@ -1347,24 +1348,28 @@ textarea,
 }
 
 .wrapper > * {
-  padding: 20px;
+  padding: calc(var(--spacing) * 1.5);
   flex: 1 100%;
 }
 
 .main-content {
   text-align: left;
   width: var(--main-content-width);
+  padding: calc(var(--spacing) * 1.5);
 }
 
 /*code for left sidebar */
 .aside-1 {
-  padding-top: calc(var(--block-spacing-vertical) * 3.55);
+  display: flex;
+  gap: 0.5em;
+  flex-direction: column;
+  padding-top: calc(var(--spacing) * 3.55);
   text-align: right;
 }
 
 /*code for right sidebar */
 .aside-2 {
-  padding-top: calc(var(--block-spacing-vertical) * 3.55);
+  padding-top: calc(var(--spacing) * 3.55);
 }
 
 /* from: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-examples */
@@ -1390,10 +1395,9 @@ textarea,
 }
 @media only screen and (max-width: 900px) {
   .aside-1 {
-    display: inline-flex;
-    text-align: left;
+    flex-direction: row;
+    padding: calc(var(--spacing) * 1.5);
     padding-top: 0;
-    padding-left: var(--block-spacing-horizontal);
   }
   .main-content {
     width: 100%;

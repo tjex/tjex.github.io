@@ -1,9 +1,8 @@
 ---
 ---
-
 <div class="header">
-<a class="site-heading" href="/">: tjex</a> 
-<button class="theme-button" id="themeToggle"> &#9788; &VerticalSeparator; &#9790; </button>
+  <a class="site-heading" href="/">: tjex</a> 
+  <button class="outline" style="flex-grow: 0; width: 5%" id="themeToggle"> &#9788; </button>
 </div>
 
 <script>
@@ -12,23 +11,21 @@ const rootElement = document.documentElement;
 
 themeToggle.addEventListener('click', () => {
   const currentTheme = rootElement.getAttribute('data-theme');
-
+  
   if (currentTheme === 'light') {
     rootElement.setAttribute('data-theme', 'dark');
+    themeToggle.innerHTML = '&#9788;';
   } else {
     rootElement.setAttribute('data-theme', 'light');
+    themeToggle.innerHTML = '&#9790;';
   }
 });
 </script>
 
 <style>
 #themeToggle {
-    flex-shrink: 0;
-    margin-left: auto;
+  flex-shrink: 0;
+  margin-left: auto;
 }
-.theme-button {
-    background: none;
-    flex-grow: 0;
-    width: 10%;
-    }
 </style>
+
