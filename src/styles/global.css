@@ -250,7 +250,7 @@ kbd {
     --h5-color: hsl(205, 16%, 67%);
     --h6-color: #a0aeb9;
     --muted-color: hsl(205, 10%, 50%);
-    --muted-border-color: #1f2d38;
+    --muted-border-color: #2f404d;
     --primary: hsl(195, 85%, 41%);
     --primary-hover: hsl(195, 80%, 50%);
     --primary-focus: rgba(16, 149, 193, 0.25);
@@ -356,7 +356,7 @@ kbd {
   --h5-color: hsl(205, 16%, 67%);
   --h6-color: #a0aeb9;
   --muted-color: hsl(205, 10%, 50%);
-  --muted-border-color: #1f2d38;
+  --muted-border-color: #2f404d;
   --primary: hsl(195, 85%, 41%);
   --primary-hover: hsl(195, 80%, 50%);
   --primary-focus: rgba(16, 149, 193, 0.25);
@@ -647,7 +647,6 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  margin-bottom: var(--typography-spacing-vertical);
   color: var(--color);
   font-weight: var(--font-weight);
   font-size: var(--font-size);
@@ -1275,7 +1274,7 @@ kbd {
 hr {
   height: 0;
   border: 0;
-  border-top: 1px solid var(--muted-border-color);
+  border-top: 2px solid var(--muted-border-color);
   color: inherit;
 }
 
@@ -1325,6 +1324,12 @@ textarea,
   direction: rtl;
 }
 
+.post-info {
+  color: hsl(205, 10%, 50%);
+  text-align: right;
+  margin-bottom: var(--block-spacing-vertical);
+}
+
 .wrapper {
   display: flex;
   flex-flow: row wrap;
@@ -1346,18 +1351,16 @@ textarea,
 
 /*code for left sidebar */
 .aside-1 {
-  padding-top: 6.25em;
+  padding-top: calc(var(--block-spacing-vertical) * 3.55);
   text-align: right;
 }
 
 /*code for right sidebar */
 .aside-2 {
-  padding-top: 6.25em;
+  padding-top: calc(var(--block-spacing-vertical) * 3.55);
 }
 
 /* from: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-examples */
-/* @media all and (min-width: 600px) { */
-/* } */
 @media all and (min-width: 900px) {
   .aside {
     flex: 1 0 0;
@@ -1382,7 +1385,8 @@ textarea,
   .aside-1 {
     display: inline-flex;
     text-align: left;
-    padding: 0;
+    padding-top: 0;
+    padding-left: var(--block-spacing-horizontal);
   }
   .main-content {
     width: 100%;

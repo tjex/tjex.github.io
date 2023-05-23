@@ -16,7 +16,6 @@ const { seo } = Astro.props as Props;
 <Layout seo={seo}>
   <Header slot="header" />
   <SideLeftPage class="aside aside-1" slot="side-left" />
-        <h1> {seo.title} </h1>
 		<slot />
   <SideRightPage class="aside aside-2" slot="side-right" />
   <!-- <Footer slot="footer" /> -->
