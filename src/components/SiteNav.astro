@@ -1,0 +1,30 @@
+---
+---
+<button id="themeToggle">Toggle Theme</button>
+
+<nav class='nav-items'><a href="/blog">blog &#9871;</a></nav>
+<nav class='nav-items'><a href="/contact">contact &#9871;</a></nav>
+<nav class='nav-items'><a href="/contact">something &#9871;</a></nav>
+
+<style>
+.nav-items {
+        padding-left: var(--nav-link-spacing-horizontal);
+        padding-right: var(--nav-link-spacing-horizontal);
+        padding-bottom: var(--nav-link-spacing-vertical);
+    }
+</style>
+
+<script>
+const themeToggle = document.getElementById('themeToggle');
+const rootElement = document.documentElement;
+
+themeToggle.addEventListener('click', () => {
+  const currentTheme = rootElement.getAttribute('data-theme');
+
+  if (currentTheme === 'light') {
+    rootElement.setAttribute('data-theme', 'dark');
+  } else {
+    rootElement.setAttribute('data-theme', 'light');
+  }
+});
+</script>

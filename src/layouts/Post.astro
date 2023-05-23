@@ -1,7 +1,10 @@
 ---
-import Layout from './Base.astro';
-import Container from "../components/Container.astro";
 import ArticleSchema from '../components/ArticleSchema.astro';
+
+import Layout from './Base.astro';
+import SideLeftPage from '../components/SideLeftPage.astro';
+import SideRightBlank from '../components/SideRightBlank.astro';
+import Header from '../components/Header.astro';
 
 const { frontmatter } = Astro.props;
 ---
@@ -10,12 +13,16 @@ const { frontmatter } = Astro.props;
   <Fragment slot="head-bottom">
   <ArticleSchema {...frontmatter}  />
  </Fragment>
-  <Container>
+ <Header slot="header" />
+ <SideLeftPage slot="side-left"/>
     <article class="post-content__article">
       {frontmatter.image && <img width="720" height="420" class="post-main__img" loading="lazy" src={frontmatter.image} alt={frontmatter.alt} />}
       <h1>{frontmatter.title}</h1>
+      <div class="post-info">
       <time>{frontmatter.publishDate}</time>
+      </div>
       <slot />
     </article>
-  </Container>
+  <SideRightBlank slot="side-right" />
 </Layout>
+

@@ -1,0 +1,21 @@
+---
+// this is the base component for the LEFT sidebar on PAGES
+// it's wrapped in the <aside> attribute, which is part of the flex layout of the site.
+
+const allPosts = await Astro.glob("../pages/blog/*.md");
+import SiteNav from './SiteNav.astro';
+---
+
+<aside class="aside aside-1">
+    <SiteNav />
+
+    <!--
+    {
+        allPosts.map((post) => (
+            <ul>
+                <li><a href={post.url}>{post.frontmatter.title}</a></li>
+            </ul>
+        ))
+    }
+    -->
+</aside>
