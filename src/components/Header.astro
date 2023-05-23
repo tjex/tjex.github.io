@@ -3,4 +3,32 @@
 
 <div class="header">
 <a class="site-heading" href="/">: tjex</a> 
+<button class="theme-button" id="themeToggle"> &#9788; &VerticalSeparator; &#9790; </button>
 </div>
+
+<script>
+const themeToggle = document.getElementById('themeToggle');
+const rootElement = document.documentElement;
+
+themeToggle.addEventListener('click', () => {
+  const currentTheme = rootElement.getAttribute('data-theme');
+
+  if (currentTheme === 'light') {
+    rootElement.setAttribute('data-theme', 'dark');
+  } else {
+    rootElement.setAttribute('data-theme', 'light');
+  }
+});
+</script>
+
+<style>
+#themeToggle {
+    flex-shrink: 0;
+    margin-left: auto;
+}
+.theme-button {
+    background: none;
+    flex-grow: 0;
+    width: 10%;
+    }
+</style>

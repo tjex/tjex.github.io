@@ -466,7 +466,7 @@ progress,
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: content-box;
   background-repeat: no-repeat;
 }
 
@@ -1330,18 +1330,25 @@ textarea,
   margin-bottom: var(--block-spacing-vertical);
 }
 
+.header {
+  display: flex;
+  justify-content: space-between-safe;
+  align-items: center;
+}
+
 .wrapper {
   display: flex;
   flex-flow: row wrap;
 }
 
+.site-heading {
+  font-size: 3em;
+  flex-grow: 0;
+}
+
 .wrapper > * {
   padding: 20px;
   flex: 1 100%;
-}
-
-.site-heading {
-  font-size: 3em;
 }
 
 .main-content {
