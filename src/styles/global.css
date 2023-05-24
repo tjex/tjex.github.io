@@ -9,8 +9,8 @@
  * Theme: tjex.net
  */
 :root {
-  --font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
-    "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  --font-family: system-ui, -apple-system, "Segoe UI", "Helvetica", "Roboto", "Ubuntu",
+    "Cantarell", "Oxygen-Sans", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
   --line-height: 1.5;
   --font-weight: 400;
@@ -133,9 +133,29 @@ kbd {
   --font-weight: bolder;
 }
 
+.site-heading {
+  font-size: 3em;
+  flex-grow: 0;
+}
+
+.post-info {
+  color: hsl(205, 10%, 50%);
+  text-align: right;
+  margin-bottom: var(--block-spacing-vertical);
+}
+
+.tag {
+  color: var(--secondary);
+  margin: 0.5em;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.1em 0.5em;
+  background-color: var(--secondary-focus);
+}
+
 [data-theme=light],
 :root:not([data-theme=dark]) {
-  --background-color: #d4d4d4;
+  --background-color: hsl(32, 90%, 84%);
   --color: hsl(205, 20%, 32%);
   --h1-color: hsl(205, 30%, 15%);
   --h2-color: #24333e;
@@ -152,13 +172,13 @@ kbd {
   --secondary: hsl(205, 15%, 41%);
   --secondary-hover: hsl(205, 20%, 32%);
   --secondary-focus: rgba(89, 107, 120, 0.125);
-  --secondary-inverse: #d4d4d4;
+  --secondary-inverse: #2d2d2d;
   --contrast: hsl(205, 30%, 15%);
   --contrast-hover: #2d2d2d;
   --contrast-focus: rgba(89, 107, 120, 0.125);
   --contrast-inverse: #d4d4d4;
-  --mark-background-color: #fff2ca;
-  --mark-color: #543a26;
+  --mark-background-color: #facf9f;
+  --mark-color: #212526;
   --ins-color: #388e3c;
   --del-color: #c62828;
   --blockquote-border-color: var(--muted-border-color);
@@ -263,7 +283,7 @@ kbd {
     --contrast-hover: #d4d4d4;
     --contrast-focus: rgba(115, 130, 140, 0.25);
     --contrast-inverse: #2d2d2d;
-    --mark-background-color: #d1c284;
+    --mark-background-color: #c8a57a;
     --mark-color: #222a30;
     --ins-color: #388e3c;
     --del-color: #c62828;
@@ -369,7 +389,7 @@ kbd {
   --contrast-hover: #d4d4d4;
   --contrast-focus: rgba(115, 130, 140, 0.25);
   --contrast-inverse: #2d2d2d;
-  --mark-background-color: #d1c284;
+  --mark-background-color: #c8a57a;
   --mark-color: #222a30;
   --ins-color: #388e3c;
   --del-color: #c62828;
@@ -459,6 +479,74 @@ progress,
   accent-color: var(--primary);
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: vat(--spacing);
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.wrapper > * {
+  padding: calc(var(--spacing) * 1.5);
+  flex: 1 100%;
+}
+
+.main-content {
+  text-align: left;
+  width: var(--main-content-width);
+  padding: calc(var(--spacing) * 1.5);
+}
+
+/*code for left sidebar */
+.aside-1 {
+  display: flex;
+  gap: 0.5em;
+  flex-direction: column;
+  padding-top: calc(var(--spacing) * 6);
+  text-align: right;
+}
+
+/*code for right sidebar */
+.aside-2 {
+  padding-top: calc(var(--spacing) * 6);
+}
+
+/* from: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-examples */
+@media all and (min-width: 900px) {
+  .aside {
+    flex: 1 0 0;
+  }
+  .main-content {
+    flex: 3 0px;
+  }
+  .aside-1 {
+    order: 1;
+  }
+  .main-content {
+    order: 2;
+  }
+  .aside-2 {
+    order: 3;
+  }
+  .footer {
+    order: 4;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .aside-1 {
+    flex-direction: row;
+    padding: calc(var(--spacing) * 1.5);
+    padding-top: 0;
+  }
+  .main-content {
+    width: 100%;
+  }
+}
 /**
  * Document
  * Content-box & Responsive typography
@@ -602,7 +690,6 @@ a,
   --color: var(--primary);
   --background-color: transparent;
   outline: none;
-  background-color: var(--background-color);
   color: var(--color);
   text-decoration: var(--text-decoration);
 }
@@ -1322,86 +1409,6 @@ textarea,
 
 [dir=rtl] {
   direction: rtl;
-}
-
-.post-info {
-  color: hsl(205, 10%, 50%);
-  text-align: right;
-  margin-bottom: var(--block-spacing-vertical);
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: vat(--spacing);
-}
-
-.wrapper {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.site-heading {
-  font-size: 3em;
-  flex-grow: 0;
-}
-
-.wrapper > * {
-  padding: calc(var(--spacing) * 1.5);
-  flex: 1 100%;
-}
-
-.main-content {
-  text-align: left;
-  width: var(--main-content-width);
-  padding: calc(var(--spacing) * 1.5);
-}
-
-/*code for left sidebar */
-.aside-1 {
-  display: flex;
-  gap: 0.5em;
-  flex-direction: column;
-  padding-top: calc(var(--spacing) * 3.55);
-  text-align: right;
-}
-
-/*code for right sidebar */
-.aside-2 {
-  padding-top: calc(var(--spacing) * 3.55);
-}
-
-/* from: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-examples */
-@media all and (min-width: 900px) {
-  .aside {
-    flex: 1 0 0;
-  }
-  .main-content {
-    flex: 3 0px;
-  }
-  .aside-1 {
-    order: 1;
-  }
-  .main-content {
-    order: 2;
-  }
-  .aside-2 {
-    order: 3;
-  }
-  .footer {
-    order: 4;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .aside-1 {
-    flex-direction: row;
-    padding: calc(var(--spacing) * 1.5);
-    padding-top: 0;
-  }
-  .main-content {
-    width: 100%;
-  }
 }
 
 /*# sourceMappingURL=global.css.map */

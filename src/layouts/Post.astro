@@ -5,6 +5,7 @@ import Layout from './Base.astro';
 import SideLeftPage from '../components/SideLeftPage.astro';
 import SideRightBlank from '../components/SideRightBlank.astro';
 import Header from '../components/Header.astro';
+import Tags from "../components/Tags.astro";
 
 const { frontmatter } = Astro.props;
 ---
@@ -19,7 +20,7 @@ const { frontmatter } = Astro.props;
       {frontmatter.image && <img width="720" height="420" class="post-main__img" loading="lazy" src={frontmatter.image} alt={frontmatter.alt} />}
       <h1>{frontmatter.title}</h1>
       <div class="post-info">
-      <time>{frontmatter.publishDate}</time>
+      <Tags tags={frontmatter.tags} /><time>{frontmatter.publishDate}</time>
       </div>
       <slot />
     </article>

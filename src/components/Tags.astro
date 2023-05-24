@@ -1,0 +1,17 @@
+---
+const { tags } = Astro.props;
+---
+
+{ tags.map((tag: any) => ( <a class="tag" href={`/tags/${tag}`}>{tag}</a> )) }
+
+
+<!--
+    <p>Posts tagged with {tag}</p>
+
+    {
+        posts.map((post) => (
+            <BlogPost url={post.url} title={post.frontmatter.title} />
+        ))
+    }
+</div>
+-->

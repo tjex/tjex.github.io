@@ -6,6 +6,7 @@ publishDate: May 22, 2020
 author: "tjex"
 image:
 alt: Trees in the mountains
+tags: ['idiot', 'patriot']
 ---
 
 Here is the second post
