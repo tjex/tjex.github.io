@@ -1,12 +1,11 @@
 ---
 layout: ../../layouts/Post.astro
-title: Post 2
+title: FLOSS, an antidote to social destruction
 description: This is an example blog post
 publishDate: May 22, 2020
 author: "tjex"
 image:
 alt: Trees in the mountains
-tags: ['this', 'that']
 ---
 
 Here is the second post
