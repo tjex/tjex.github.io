@@ -22,6 +22,24 @@ if (savedTheme) {
   }
 }
 
+function setButtonIcon(theme) {
+  if (theme === 'dark') {
+      console.log('set button: dark')
+    themeToggle.innerHTML = '&#9788;';
+  } else {
+      console.log('set button: light')
+    themeToggle.innerHTML = '&#9790;';
+  }
+}
+
+// Check the browser's default theme preference
+const prefersDarkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+console.log(prefersDarkTheme);
+
+// Apply the default theme preference to the button icon
+setButtonIcon(prefersDarkTheme ? 'dark' : 'light');
+
 themeToggle.addEventListener('click', () => {
   const currentTheme = rootElement.getAttribute('data-theme');
   let newTheme: any;
