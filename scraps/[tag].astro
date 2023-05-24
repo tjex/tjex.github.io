@@ -1,6 +1,9 @@
 ---
+import Layout from "../../layouts/Page.astro";
+import BlogPosts from "../../components/BlogPostPreview.astro";
+
 export async function getStaticPaths() {
-    const allPosts = await Astro.glob("../pages/blog/*.md");
+    const allPosts = await Astro.glob("../blog/*.md");
 
     // getting unique tags
     const uniqueTags = [
@@ -20,26 +23,14 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
-const { tags } = Astro.props;
 ---
 
-<!--
-<div class="tags">
-    {
-        tags.map((tag) => (
-            <p class="tag">
-                <a href={`/tags/${tag}`}>{tag}</a>
-            </p>
-        ))
-    }
-
-
+<Layout >
     <p>Posts tagged with {tag}</p>
 
     {
         posts.map((post) => (
-            <BlogPost url={post.url} title={post.frontmatter.title} />
+             <a>{post} </a> 
         ))
     }
-</div>
--->
+</Layout>
