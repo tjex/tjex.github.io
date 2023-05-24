@@ -9,18 +9,37 @@
 const themeToggle = document.getElementById('themeToggle');
 const rootElement = document.documentElement;
 
+// Check if a theme preference is already saved
+const savedTheme = localStorage.getItem('theme');
+
+// Apply the saved theme if it exists
+if (savedTheme) {
+  rootElement.setAttribute('data-theme', savedTheme);
+  if (savedTheme === 'light') {
+    themeToggle.innerHTML = '&#9790;';
+  } else {
+    themeToggle.innerHTML = '&#9788;';
+  }
+}
+
 themeToggle.addEventListener('click', () => {
   const currentTheme = rootElement.getAttribute('data-theme');
-  
+  let newTheme: any;
+
   if (currentTheme === 'light') {
-    rootElement.setAttribute('data-theme', 'dark');
+    newTheme = 'dark';
     themeToggle.innerHTML = '&#9788;';
   } else {
-    rootElement.setAttribute('data-theme', 'light');
+    newTheme = 'light';
     themeToggle.innerHTML = '&#9790;';
   }
+
+  // Save the new theme preference in localStorage
+  localStorage.setItem('theme', newTheme);
+  rootElement.setAttribute('data-theme', newTheme);
 });
 </script>
+
 
 <style>
 #themeToggle {
