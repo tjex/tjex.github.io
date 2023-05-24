@@ -2,6 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=node
 .astro
 .DS_Store
+scraps/
 
 ### Node ###
 # Logs
