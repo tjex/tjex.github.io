@@ -1,0 +1,47 @@
+---
+// Lists pages with tag x
+import Layout from "../../layouts/Page.astro";
+import BlogPostPreview from "../../components/BlogPostPreview.astro";
+
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob('../blog/*.md');
+  
+  const uniqueTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts
+    .filter((post) => post.frontmatter.tags.includes(tag))
+    .map(({ frontmatter, url }) => ({
+        url: url,
+        title: frontmatter.title,
+        description: frontmatter.description,
+        publishDate: frontmatter.publishDate,
+      }));
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+
+const seo = {
+  title: {tag},
+  description: 'Index page for posts tagged `{tag}`'
+}
+---
+
+
+<Layout>
+    <h1>{tag}</h1>
+    <p>Posts tagged with <a class="tag" style="text-decoration: none">{tag}</a></p>
+    <article class="blog-page-content__article">
+      <section class="postlist">
+        { posts.map((post: any) => <BlogPostPreview post={post} />) }
+      </section>
+    </article>
+</Layout>
+

@@ -153,6 +153,19 @@ kbd {
   background-color: var(--secondary-focus);
 }
 
+.postlist {
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  list-style: none;
+}
+
+@media screen and (max-width: 769px) {
+  .postlist {
+    grid-template-columns: 1fr;
+  }
+}
 [data-theme=light],
 :root:not([data-theme=dark]) {
   --background-color: hsl(32, 90%, 84%);
