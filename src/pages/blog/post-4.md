@@ -5,7 +5,7 @@ description: A description of post 4
 pubDate: May 25, 2023
 author: "tjex"
 image:
-tags: ['bottle', 'pen']
+tags: ["bottle", "pen"]
 ---
 
 Chimpy scrimpy

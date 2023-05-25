@@ -1,55 +1,54 @@
 ---
 export interface Props {
-    post: any;
+  post: any;
 }
 
 const { post } = Astro.props;
 ---
 
 <article class="post-preview">
-    <a href={post.url}>
-        <h1 class="title">{post.title}</h1> 
-        <!--<time class="pub-date">{post.pubDate}</time>-->
-        <p class="teaser">{post.description}</p>
-    </a>
+  <a href={post.url}>
+    <h1 class="title">{post.title}</h1>
+    <!--<time class="pub-date">{post.pubDate}</time>-->
+    <p class="teaser">{post.description}</p>
+  </a>
 </article>
 
 <style>
-    a {
-        text-decoration: none;
-    }
+  a {
+    text-decoration: none;
+  }
 
-    a:hover > .title {
-        text-decoration: underline;
-    }
+  a:hover > .title {
+    text-decoration: underline;
+  }
 
-    .post-main__img {
-        width: 100%;
-        max-width: 600px;
-        height: auto;
-        margin-bottom: 1rem;
-    }
+  .post-main__img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
 
-    .title,
-    .author,
-    .publish-date {
-        margin: 0;
-    }
+  .title,
+  .author,
+  .publish-date {
+    margin: 0;
+  }
 
-    .pub-date,
-    .author {
-        font-size: 0.8rem;
-        color: var(--secondary);
-        
-    }
+  .pub-date,
+  .author {
+    font-size: 0.8rem;
+    color: var(--secondary);
+  }
 
-    .title {
-        font-size: 1rem;
-        font-weight: 700;
-        color: var(--theme-text);
-    }
+  .title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--theme-text);
+  }
 
-    .teaser {
-        color: var(--secondary);
-    }
+  .teaser {
+    color: var(--secondary);
+  }
 </style>

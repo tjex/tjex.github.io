@@ -4,10 +4,11 @@ title: Example Blog
 description: This is an example blog post
 pubDate: Saturday, July 31 2021
 author: "Jaydan Urwin"
-image: "/assets/blog/example-blog/alex-bertha-7VAXeUIn3tI-unsplash.jpg"
+image: "./landscape.jpg"
 alt: Trees in the mountains
-tags: ['doc', 'java']
+tags: ["doc", "java"]
 ---
+
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua. Quis lectus nulla at volutpat diam
