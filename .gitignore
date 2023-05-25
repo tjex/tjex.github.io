@@ -3,6 +3,7 @@
 .astro
 .DS_Store
 scraps/
+src/assets/
 
 ### Node ###
 # Logs
