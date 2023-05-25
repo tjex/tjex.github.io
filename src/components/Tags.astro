@@ -1,17 +1,7 @@
 ---
+// takes the tags from post frontmatter and makes a href from their slug.
+// used in posts primarily in the info line
 const { tags } = Astro.props;
 ---
 
 { tags.map((tag: any) => ( <a class="tag" href={`/tags/${tag}`}>{tag}</a> )) }
-
-
-<!--
-    <p>Posts tagged with {tag}</p>
-
-    {
-        posts.map((post) => (
-            <BlogPost url={post.url} title={post.frontmatter.title} />
-        ))
-    }
-</div>
--->
