@@ -6,7 +6,11 @@ const blogCollection = defineCollection({
     schema: z.object({
         title: z.string(),
         description: z.string(),
-        pubDate: z.date().transform((str) => new Date(str)),
+        pubDate: z.date().transform((str) => {
+          const date = new Date(str);
+          const options = { month: 'short', day: 'numeric', year: 'numeric' };
+          return date.toLocaleDateString('en-US', options);
+        }),
         author: z.string(),
         authorContact: z.string().email(),
         tags: z.array(z.string()),
