@@ -9,7 +9,7 @@ import Tags from "./Tags.astro";
 
 // getting unique tags
 const uniqueTags = [
-  ...new Set(posts.map((post) => post.tags).flat()),
+  ...new Set(posts.map((post) => post.data.tags).flat()),
 ];
 const seo = {
   title: "Tags",
