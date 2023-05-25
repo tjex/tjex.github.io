@@ -7,20 +7,21 @@ import SideRightBlank from '../components/SideRightBlank.astro';
 import Header from '../components/Header.astro';
 import Tags from "../components/Tags.astro";
 
-const { frontmatter } = Astro.props;
+const { seo } = Astro.props;
+const { post } = Astro.props;
 ---
 
-<Layout seo={frontmatter}>
+<!-- double check all of this, seo and article schema input -->
+<Layout seo={seo}>
   <Fragment slot="head-bottom">
-  <ArticleSchema {...frontmatter}  />
+  <ArticleSchema {...post}  />
  </Fragment>
  <Header slot="header" />
  <SideLeftPage slot="side-left"/>
     <article class="post-content__article">
-      {frontmatter.image && <img width="720" height="420" class="post-main__img" loading="lazy" src={frontmatter.image} alt={frontmatter.alt} />}
-      <h1>{frontmatter.title}</h1>
+      <h1>{post.data.title}</h1>
       <div class="post-info">
-      <Tags tags={frontmatter.tags} /><time>{frontmatter.pubDate}</time>
+      <Tags tags={post.data.tags} /><time>{post.data.pubDate}</time>
       </div>
       <slot />
     </article>
