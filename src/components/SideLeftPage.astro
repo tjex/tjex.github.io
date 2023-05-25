@@ -3,13 +3,13 @@
 // it's wrapped in the <aside> attribute, which is part of the flex layout of the site.
 
 const allPosts = await Astro.glob("../pages/blog/*.md");
-import SiteNav from './SiteNav.astro';
+import SiteNav from "./SiteNav.astro";
 ---
 
 <aside class="aside aside-1">
-    <SiteNav />
+  <SiteNav />
 
-    <!--
+  <!--
     {
         allPosts.map((post) => (
             <ul>

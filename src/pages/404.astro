@@ -4,18 +4,21 @@ import Layout from "../layouts/Base.astro";
 const seo = {
   title: "404",
   description: "404. Nothing here",
-  index: "none"
-}
+  index: "none",
+};
 ---
+
 <script src="../components/scripts/emailDecode.js"></script>
 
-<Layout seo={seo}>
-<center>
+<Layout {seo}>
+  <center>
     <h1>404</h1>
     <p>zinger...</p>
-    <p>Nothing here. </p>
-    <p>If you think this is an error on my end, <br> 
-    please shoot me a quick <a id="denc" href="">email</a> letting me know.</p>
+    <p>Nothing here.</p>
+    <p>
+      If you think this is an error on my end, <br />
+      please shoot me a quick <a id="denc" href="">email</a> letting me know.
+    </p>
     <a href="/">Return Home</a>
-    </center>
+  </center>
 </Layout>

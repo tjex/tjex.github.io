@@ -1,11 +1,9 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import type { Props as BaseHeadProps } from '../components/BaseHead.astro';
-
+import type { Props as BaseHeadProps } from "../components/BaseHead.astro";
 
 export interface Props {
-	seo?: BaseHeadProps;
-
+  seo?: BaseHeadProps;
 }
 
 const { seo } = Astro.props;
@@ -17,14 +15,14 @@ const { seo } = Astro.props;
     <slot name="head-bottom" />
   </head>
   <div class="wrapper">
-  <body>
-    <slot name="header" />
-    <slot name="side-left" />
-    <main class="main-content">
-      <slot />
-    </main>
-    <slot name="side-right" />
-    <slot name="footer" />
-  </body>
+    <body>
+      <slot name="header" />
+      <slot name="side-left" />
+      <main class="main-content">
+        <slot />
+      </main>
+      <slot name="side-right" />
+      <slot name="footer" />
+    </body>
   </div>
 </html>

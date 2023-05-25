@@ -3,18 +3,18 @@ import Layout from "../layouts/Page.astro";
 
 const seo = {
   title: "Contact",
-  description: "This is a starter repo for an blog built with Astro including open graph tags, canonical urls, RSS, sitemap support."
-  }
-
+  description:
+    "This is a starter repo for an blog built with Astro including open graph tags, canonical urls, RSS, sitemap support.",
+};
 ---
+
 <script src="../components/scripts/emailDecode.js"></script>
 
-<Layout seo={seo}>
-    <h1>contact</h1>
-    <ul>
-        <li><a rel="me" href="https://github.com/tjex">github</a></li>
-        <li><a rel="me" href="https://fosstodon.org/@tjex">mastodon</a></li>
-        <li><a id="denc" href="">tjex (..) tjex.net</a></li>
-    </ul>
+<Layout {seo}>
+  <h1>contact</h1>
+  <ul>
+    <li><a rel="me" href="https://github.com/tjex">github</a></li>
+    <li><a rel="me" href="https://fosstodon.org/@tjex">mastodon</a></li>
+    <li><a id="denc" href="">tjex (..) tjex.net</a></li>
+  </ul>
 </Layout>
-
