@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Page.astro';
+import BlogPostPreview from '../../components/BlogPostPreview.astro';
+import Paginator from '../../components/Paginator.astro'
+  
+  
+export async function getStaticPaths({paginate}) {
+
+  const posts = await Astro.glob('./*.md').then(posts =>
+	posts
+		.map(({ frontmatter, url }) => ({
+      url: url,
+			title: frontmatter.title,
+			description: frontmatter.description,
+			pubDate: frontmatter.pubDate,
+			// image: frontmatter.image,
+		}))
+		// .sort((a, b) => {
+		// 	new Date(b.pubDate) - new Date(a.pubDate)
+		// })
+);
+return paginate(posts, {pageSize: 10});
+
+
+}
+
+const seo = {
+  title: 'Posts',
+  description: 'Posts, essays, diaries, news and tutorials by tjex'
+}
+
+const { page } = Astro.props;
+---
+
+
+<Layout seo={seo} >
+    <article class="blog-page-content__article">
+      <section class="postlist">
+        {page.data.map((post: any) => <BlogPostPreview post={post} />)}
+      </section>
+    </article>
+    <Paginator page={page}/>
+</Layout>
+
+
