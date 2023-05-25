@@ -1,0 +1,5 @@
+// tsconfig
+
+{
+  "extends": "astro/tsconfigs/strict"
+}
