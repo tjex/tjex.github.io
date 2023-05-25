@@ -3,7 +3,7 @@ export default {
   description: `Software developer, creative technologist and a few other things`,
   url: `https://tjex.net`, // No trailing slash!
   // JSON LD
-  name: `tillman jex`,
+  name: `tjex`,
   githubURL: `https://github.com/tjex`,
   mastodonURL: `https://fosstodon.org/@tjex`,
 };

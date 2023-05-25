@@ -2,13 +2,20 @@
 import Layout from "../layouts/Base.astro";
 
 const seo = {
-  title: "Uh Oh! Page Not Found",
-  description: "This is a starter repo for an blog built with Astro including open graph tags, canonical urls, RSS, sitemap support."
+  title: "404",
+  description: "404. Nothing here",
+  index: "none"
 }
 ---
+<script src="../components/scripts/emailDecode.js"></script>
 
 <Layout seo={seo}>
+<center>
     <h1>404</h1>
-    <p>Uh Oh! We couldn't find the page you were looking for</p>
+    <p>zinger...</p>
+    <p>Nothing here. </p>
+    <p>If you think this is an error on my end, <br> 
+    please shoot me a quick <a id="denc" href="">email</a> letting me know.</p>
     <a href="/">Return Home</a>
+    </center>
 </Layout>
