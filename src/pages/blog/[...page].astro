@@ -2,22 +2,20 @@
 import Layout from '../../layouts/Page.astro';
 import BlogPostPreview from '../../components/BlogPostPreview.astro';
 import Paginator from '../../components/Paginator.astro'
+import { getCollection } from 'astro:content';
   
   
 export async function getStaticPaths({paginate}) {
 
-  const posts = await Astro.glob('./*.md').then(posts =>
+    const posts = await getCollection('blog').then(posts =>
 	posts
-		.map(({ frontmatter, url }) => ({
-      url: url,
-			title: frontmatter.title,
-			description: frontmatter.description,
-			pubDate: frontmatter.pubDate,
-			// image: frontmatter.image,
+		.map(({ data, url, slug }) => ({
+            url: url,
+            slug: slug,
+			title: data.title,
+			description: data.description,
+			pubDate: data.pubDate,
 		}))
-		// .sort((a, b) => {
-		// 	new Date(b.pubDate) - new Date(a.pubDate)
-		// })
 );
 return paginate(posts, {pageSize: 10});
 
@@ -41,4 +39,5 @@ const { page } = Astro.props;
     </article>
     <Paginator page={page}/>
 </Layout>
+
 

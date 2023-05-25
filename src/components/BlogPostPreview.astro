@@ -7,7 +7,7 @@ const { post } = Astro.props;
 ---
 
 <article class="post-preview">
-  <a href={post.url}>
+  <a href={`/blog/${post.slug}`}>
     <h1 class="title">{post.title}</h1>
     <!--<time class="pub-date">{post.pubDate}</time>-->
     <p class="teaser">{post.description}</p>

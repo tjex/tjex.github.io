@@ -2,20 +2,22 @@
 // Lists pages with tag x
 import Layout from "../../layouts/Page.astro";
 import BlogPostPreview from "../../components/BlogPostPreview.astro";
+import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-  const allPosts = await Astro.glob('../blog/*.md');
+  const posts = await getCollection('blog');
   
-  const uniqueTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+  const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
 
   return uniqueTags.map((tag) => {
-    const filteredPosts = allPosts
-    .filter((post) => post.frontmatter.tags.includes(tag))
-    .map(({ frontmatter, url }) => ({
+    const filteredPosts = posts
+    .filter((post) => post.data.tags.includes(tag))
+    .map(({ data, url, slug }) => ({
         url: url,
-        title: frontmatter.title,
-        description: frontmatter.description,
-        pubDate: frontmatter.pubDate,
+        slug: slug,
+        title: data.title,
+        description: data.description,
+        pubDate: data.pubDate,
       }));
     return {
       params: { tag },
