@@ -20,7 +20,7 @@ const { frontmatter } = Astro.props;
       {frontmatter.image && <img width="720" height="420" class="post-main__img" loading="lazy" src={frontmatter.image} alt={frontmatter.alt} />}
       <h1>{frontmatter.title}</h1>
       <div class="post-info">
-      <Tags tags={frontmatter.tags} /><time>{frontmatter.publishDate}</time>
+      <Tags tags={frontmatter.tags} /><time>{frontmatter.pubDate}</time>
       </div>
       <slot />
     </article>

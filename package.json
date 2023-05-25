@@ -5,6 +5,7 @@
   "scripts": {
     "start": "astro dev",
     "build": "astro build",
+    "preview": "astro preview",
     "format": "npx prettier --write ."
   },
   "devDependencies": {

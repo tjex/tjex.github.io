@@ -2,7 +2,7 @@
 layout: ../../layouts/Post.astro
 title: Copy and Paste Example
 description: Technology moves fast, and increasingly so. 
-publishDate: May 22, 2023
+pubDate: May 22, 2023
 author: "tjex"
 image:
 alt: Trees in the mountains
