@@ -42,19 +42,3 @@ const { page } = Astro.props;
     <Paginator page={page}/>
 </Layout>
 
-<style>
- /* Posts list */
-  .postlist {
-    padding: 1rem 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    list-style: none;
-  }
-    
-  @media screen and (max-width: 769px) {
-    .postlist {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
