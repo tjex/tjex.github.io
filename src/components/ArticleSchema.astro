@@ -5,11 +5,11 @@ export interface Props {
     title: string;
     description: string;
     permalink: string;
-    publishDate: string;
+    pubDate: string;
     ogImageUrl?: string;
 }
 
-const { title, permalink, publishDate, ogImageUrl, description } = Astro.props;
+const { title, permalink, pubDate, ogImageUrl, description } = Astro.props;
 
 const ldData = {
     "@context": "https://schema.org",
@@ -38,7 +38,7 @@ const ldData = {
     },
     headline: `${title}`,
     url: `${permalink}`,
-    datePublished: `${publishDate}`,
+    datePublished: `${pubDate}`,
     image: {
         "@type": "ImageObject",
         url: `${site.url}${ogImageUrl}`,

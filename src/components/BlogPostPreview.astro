@@ -9,7 +9,7 @@ const { post } = Astro.props;
 <article class="post-preview">
     <a href={post.url}>
         <h1 class="title">{post.title}</h1> 
-        <!--<time class="publish-date">{post.publishDate}</time>-->
+        <!--<time class="pub-date">{post.pubDate}</time>-->
         <p class="teaser">{post.description}</p>
     </a>
 </article>
@@ -36,7 +36,7 @@ const { post } = Astro.props;
         margin: 0;
     }
 
-    .publish-date,
+    .pub-date,
     .author {
         font-size: 0.8rem;
         color: var(--secondary);

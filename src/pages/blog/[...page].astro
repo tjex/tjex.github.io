@@ -12,11 +12,11 @@ export async function getStaticPaths({paginate}) {
       url: url,
 			title: frontmatter.title,
 			description: frontmatter.description,
-			publishDate: frontmatter.publishDate,
+			pubDate: frontmatter.pubDate,
 			// image: frontmatter.image,
 		}))
 		// .sort((a, b) => {
-		// 	new Date(b.publishDate) - new Date(a.publishDate)
+		// 	new Date(b.pubDate) - new Date(a.pubDate)
 		// })
 );
 return paginate(posts, {pageSize: 10});

@@ -15,7 +15,7 @@ export async function getStaticPaths() {
         url: url,
         title: frontmatter.title,
         description: frontmatter.description,
-        publishDate: frontmatter.publishDate,
+        pubDate: frontmatter.pubDate,
       }));
     return {
       params: { tag },
