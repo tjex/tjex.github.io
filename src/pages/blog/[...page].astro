@@ -14,8 +14,8 @@ export async function getStaticPaths({paginate}) {
 			title: data.title,
 			description: data.description,
 			pubDate: data.pubDate,
-            cover: data.cover,
-            coverAlt: data.coverAlt,
+            imgSrc: data.image.src,
+            imgAlt: data.image.alt,
 		}))
 );
 return paginate(posts, {pageSize: 10});
