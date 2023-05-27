@@ -9,12 +9,12 @@ export async function getStaticPaths({paginate}) {
 
     const posts = await getCollection('blog').then(posts =>
 	posts
-		.map(({ data, url, slug }) => ({
-            url: url,
+		.map(({ data, slug }) => ({
             slug: slug,
 			title: data.title,
 			description: data.description,
 			pubDate: data.pubDate,
+            cover: data.cover,
 		}))
 );
 return paginate(posts, {pageSize: 10});

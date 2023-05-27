@@ -4,39 +4,39 @@ import site from "../data/settings.js";
 export interface Props {
   title: string;
   description: string;
-  permalink: string;
   pubDate: string;
-  ogImageUrl?: string;
+  slug: string;
+  imageSlug?: string;
 }
 
-const { title, permalink, pubDate, ogImageUrl, description } = Astro.props;
+const { title, slug, pubDate, imageSlug, description } = Astro.props;
 
 const ldData = {
   "@context": "https://schema.org",
   "@type": "Article",
   publisher: {
     "@type": "Organization",
-    name: `${site.name} Blog`,
+    name: `${site.rssName} - Blog`,
     url: `${site.url}/blog/`,
   },
   author: {
     "@type": "Person",
-    name: `${site.name}`,
+    name: `${site.webName}`,
     image: {
       "@type": "ImageObject",
-      url: `${site.url}/assets/img/favicon.png`,
-      width: 512,
-      height: 512,
+      url: `${site.url}/assets/img/tjex-social-img.jpg`,
+      width: 488,
+      height: 488,
     },
-    url: "https://tjex.net/about/",
+    url: "https://tjex.net/",
     sameAs: [`${site.url}`, `${site.githubURL}`, `${site.mastodonURL}`],
   },
   headline: `${title}`,
-  url: `${permalink}`,
+  url: `${site.url}/blog/${slug}`,
   datePublished: `${pubDate}`,
   image: {
     "@type": "ImageObject",
-    url: `${site.url}${ogImageUrl}`,
+    url: `${site.url}${imageSlug}`,
     width: 3600,
     height: 1890,
   },
