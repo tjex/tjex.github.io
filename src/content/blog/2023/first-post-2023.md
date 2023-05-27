@@ -5,7 +5,7 @@ pubDate: 2023-05-27
 author: tjex
 tags: ['misc']
 cover: "../../../assets/img/landscape.jpg"
-alt: chickens
+coverAlt: chickens
 draft: false
 ---
 

@@ -15,7 +15,7 @@ export async function getStaticPaths({paginate}) {
 			description: data.description,
 			pubDate: data.pubDate,
             cover: data.cover,
-            alt: data.alt,
+            coverAlt: data.coverAlt,
 		}))
 );
 return paginate(posts, {pageSize: 10});

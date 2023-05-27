@@ -18,6 +18,8 @@ export async function getStaticPaths() {
         title: data.title,
         description: data.description,
         pubDate: data.pubDate,
+        cover: data.cover,
+        coverAlt: data.coverAlt,
       }));
     return {
       params: { tag },
