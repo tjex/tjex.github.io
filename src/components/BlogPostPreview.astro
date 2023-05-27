@@ -1,5 +1,6 @@
 ---
-import { Image } from "astro:assets";
+// uncomenting for the moment, so I can remember how to use it down the track...
+// import { Image } from "astro:assets"; 
 
 export interface Props {
   post: any;
@@ -11,10 +12,10 @@ const { post } = Astro.props;
 
 <article class="post-preview">
   <a href={`/blog/${post.slug}`}>
-    <h1 class="title">{post.data.title}</h1>
-    <Image src={post.data.cover} alt={post.data.coverAlt} />
+    <h1 class="title">{post.title}</h1>
+    <!--<Image src={post.cover} alt={post.alt} />-->
     <!--<time class="pub-date">{post.pubDate}</time>-->
-    <p class="teaser">{post.data.description}</p>
+    <p class="teaser">{post.description}</p>
   </a>
 </article>
 

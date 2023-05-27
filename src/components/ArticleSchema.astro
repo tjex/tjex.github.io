@@ -6,10 +6,10 @@ export interface Props {
   description: string;
   pubDate: string;
   slug: string;
-  imageSlug?: string;
+  cover?: string;
 }
 
-const { title, slug, pubDate, imageSlug, description } = Astro.props;
+const { title, slug, pubDate, cover, description } = Astro.props;
 
 const ldData = {
   "@context": "https://schema.org",
@@ -36,7 +36,7 @@ const ldData = {
   datePublished: `${pubDate}`,
   image: {
     "@type": "ImageObject",
-    url: `${site.url}${imageSlug}`,
+    url: `${site.url}/${cover}`,
     width: 3600,
     height: 1890,
   },
