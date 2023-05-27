@@ -1,9 +1,14 @@
 ---
 import Layout from "../../layouts/Page.astro";
 import TagsUnique from "../../components/TagsUnique.astro";
+
+const seo = {
+    title: 'Tags',
+    description: 'List of all tags from blog posts on tjex.net'
+    }
 ---
 
-<Layout>
+<Layout seo={seo}>
   <h1>tags</h1>
   <TagsUnique />
 </Layout>

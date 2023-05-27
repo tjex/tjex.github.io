@@ -16,8 +16,8 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 
 const seo = {
-  title: 'Posts',
-  description: 'Posts, essays, diaries, news and tutorials by tjex',
+  title: '`{post.data.title}`',
+  description: '`{post.data.description}`',
 };
 ---
 <Layout seo={seo} post={post}>
