@@ -12,9 +12,9 @@ const blogCollection = defineCollection({
           return date.toLocaleDateString('en-US', options);
         }),
         author: z.string(),
-        authorContact: z.string().email(),
         tags: z.array(z.string()),
-        category: z.string(),
+        draft: z.boolean(),
+        category: z.string().optional(),
         image: z.string().optional(),
   }),
 });
