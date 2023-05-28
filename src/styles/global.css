@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Pico CSS v1.5.10 (https://picocss.com)
  * Copyright 2019-2023 - Licensed under MIT
@@ -821,7 +822,8 @@ small {
 }
 
 ul li {
-  list-style: square;
+  list-style-type: "―";
+  padding-left: 0.4rem;
 }
 
 mark {
