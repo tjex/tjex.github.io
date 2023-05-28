@@ -18,6 +18,8 @@ export async function getStaticPaths() {
         title: data.title,
         description: data.description,
         pubDate: data.pubDate,
+        cover: data.cover,
+        coverAlt: data.coverAlt,
       }));
     return {
       params: { tag },
@@ -30,14 +32,15 @@ export async function getStaticPaths() {
 const { tag } = Astro.params;
 const { posts } = Astro.props;
 
+const seoTitle = tag;
 const seo = {
-  title: {tag},
-  description: "All posts tagged with `{tag}` on tjex.net"
+  title: seoTitle,
+  description: `All posts tagged with ${seoTitle} on tjex.net`
 }
 ---
 
 
-<Layout>
+<Layout seo={seo}>
     <h1>{tag}</h1>
     <p>Posts tagged with <a class="tag" style="text-decoration: none">{tag}</a></p>
     <article class="blog-page-content__article">

@@ -6,7 +6,7 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://tjex.net/",
+  site: "https://tjex.net",
   integrations: [sitemap(), mdx()],
   experimental: {
     assets: true

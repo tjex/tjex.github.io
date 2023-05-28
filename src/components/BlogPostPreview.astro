@@ -1,14 +1,20 @@
 ---
+// uncomenting for the moment, so I can remember how to use it down the track...
+import { Image } from "astro:assets"; 
+
 export interface Props {
   post: any;
 }
 
 const { post } = Astro.props;
+
+
 ---
 
 <article class="post-preview">
   <a href={`/blog/${post.slug}`}>
     <h1 class="title">{post.title}</h1>
+    <!--<Image src={post.imgSrc} alt={post.imgAlt} />-->
     <!--<time class="pub-date">{post.pubDate}</time>-->
     <p class="teaser">{post.description}</p>
   </a>
