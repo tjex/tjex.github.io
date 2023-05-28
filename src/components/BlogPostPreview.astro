@@ -8,13 +8,13 @@ export interface Props {
 
 const { post } = Astro.props;
 
+
 ---
 
-<Image src={post.imgSrc} alt={post.imgAlt} />
 <article class="post-preview">
   <a href={`/blog/${post.slug}`}>
     <h1 class="title">{post.title}</h1>
-    <!--<Image src={post.cover} alt={post.coverAlt} />-->
+    <!--<Image src={post.imgSrc} alt={post.imgAlt} />-->
     <!--<time class="pub-date">{post.pubDate}</time>-->
     <p class="teaser">{post.description}</p>
   </a>
