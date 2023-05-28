@@ -3,13 +3,12 @@ import site from "../data/settings.js";
 
 export interface Props {
   title: string;
-  description: string;
-  pubDate: string;
   slug: string;
-  cover?: string;
+  pubDate: string;
+  description: string;
 }
 
-const { title, slug, pubDate, cover, description } = Astro.props;
+const { title, slug, pubDate, description } = Astro.props;
 
 const ldData = {
   "@context": "https://schema.org",
@@ -28,18 +27,12 @@ const ldData = {
       width: 488,
       height: 488,
     },
-    url: "https://tjex.net/",
+    url: "https://tjex.net",
     sameAs: [`${site.url}`, `${site.githubURL}`, `${site.mastodonURL}`],
   },
   headline: `${title}`,
   url: `${site.url}/blog/${slug}`,
   datePublished: `${pubDate}`,
-  image: {
-    "@type": "ImageObject",
-    url: `${site.url}/${cover}`,
-    width: 3600,
-    height: 1890,
-  },
   description: `${description}`,
   mainEntityOfPage: {
     "@type": "WebPage",

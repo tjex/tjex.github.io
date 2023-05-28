@@ -6,6 +6,7 @@ import SideLeftPage from '../components/SideLeftPage.astro';
 import SideRightBlank from '../components/SideRightBlank.astro';
 import Header from '../components/Header.astro';
 import Tags from "../components/Tags.astro";
+import Footer from "../components/Footer.astro";
 
 const { seo } = Astro.props;
 const { post } = Astro.props;
@@ -26,5 +27,6 @@ const { post } = Astro.props;
       <slot />
     </article>
   <SideRightBlank slot="side-right" />
+  <Footer slot="footer" />
 </Layout>
 

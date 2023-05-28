@@ -16,7 +16,7 @@ const { post } = Astro.props;
     <h1 class="title">{post.title}</h1>
     <!--<Image src={post.imgSrc} alt={post.imgAlt} />-->
     <!--<time class="pub-date">{post.pubDate}</time>-->
-    <p class="teaser">{post.description}</p>
+    <p class="description">{post.description}</p>
   </a>
 </article>
 
@@ -54,7 +54,7 @@ const { post } = Astro.props;
     color: var(--theme-text);
   }
 
-  .teaser {
+  .description {
     color: var(--secondary);
   }
 </style>

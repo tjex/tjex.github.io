@@ -4,7 +4,7 @@ import Layout from "./Base.astro";
 import SideLeftPage from "../components/SideLeftPage.astro";
 import SideRightPage from "../components/SideRightPage.astro";
 import Header from "../components/Header.astro";
-// import Footer from '../components/Footer.astro';
+import Footer from '../components/Footer.astro';
 
 export interface Props {
   seo?: BaseHeadProps;
@@ -15,8 +15,8 @@ const { seo } = Astro.props as Props;
 
 <Layout {seo}>
   <Header slot="header" />
-  <SideLeftPage class="aside aside-1" slot="side-left" />
+  <SideLeftPage slot="side-left" />
   <slot />
-  <SideRightPage class="aside aside-2" slot="side-right" />
-  <!-- <Footer slot="footer" /> -->
+  <SideRightPage slot="side-right" />
+  <Footer slot="footer" />
 </Layout>
