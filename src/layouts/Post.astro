@@ -15,7 +15,7 @@ const { post } = Astro.props;
 <!-- double check all of this, seo and article schema input -->
 <Layout seo={seo}>
   <Fragment slot="head-bottom">
-  <ArticleSchema {...post}  />
+  <ArticleSchema post={post}  />
  </Fragment>
  <Header slot="header" />
  <SideLeftPage slot="side-left"/>

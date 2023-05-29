@@ -4,17 +4,8 @@ description: It's traditional.
 pubDate: 2023-05-28
 author: tjex
 tags: ['misc']
-customData: "<atom:link href='https://tjex.net/rss.xml' rel='self' type='application/rss+xml' />"
 draft: false
 ---
-
-
-<blockquote>
-    "Lets see how long this lasts..."
-    <footer>
-    <cite> - tjex, date of this post </cite>
-    </footer>
-</blockquote>
 
 Why am I starting to blog? 
 

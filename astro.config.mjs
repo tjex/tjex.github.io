@@ -7,8 +7,13 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   site: "https://tjex.net",
-  integrations: [sitemap(), mdx()],
+    markdown: {
+        drafts: true
+    },
+  integrations: [sitemap({}), mdx({
+      drafts: true,
+  })],
   experimental: {
-    assets: true
-  }
+    assets: true,
+  },
 });
