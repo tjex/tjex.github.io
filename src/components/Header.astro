@@ -32,10 +32,10 @@
   const rootElement = document.documentElement;
 
   // Apply the saved theme if it exists
-  if (savedTheme == "dark") {
-    rootElement.setAttribute("data-theme", "dark");
-  } else {
+  if (savedTheme == "light") {
     rootElement.setAttribute("data-theme", "light");
+  } else {
+    rootElement.setAttribute("data-theme", "dark");
   }
 
   themeToggle.addEventListener("click", () => {
