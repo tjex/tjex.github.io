@@ -14,11 +14,6 @@ const ldData = {
   url: `${site.url}/blog/${post.slug}`,
   datePublished: `${post.data.pubDate}`,
   description: `${post.data.description}`,
-  publisher: {
-    "@type": "Organization",
-    name: `${site.rssName} - Blog`,
-    url: `${site.url}/blog/`,
-  },
   author: {
     "@type": "Person",
     name: `${site.webName}`,
