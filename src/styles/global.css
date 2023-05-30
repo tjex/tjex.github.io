@@ -57,6 +57,77 @@
   }
 }
 
+@media (min-width: 576px) {
+  body > header,
+  body > main,
+  body > footer,
+  section {
+    --block-spacing-vertical: calc(var(--spacing) * 2.5);
+  }
+}
+@media (min-width: 768px) {
+  body > header,
+  body > main,
+  body > footer,
+  section {
+    --block-spacing-vertical: calc(var(--spacing) * 3);
+  }
+}
+@media (min-width: 992px) {
+  body > header,
+  body > main,
+  body > footer,
+  section {
+    --block-spacing-vertical: calc(var(--spacing) * 3.5);
+  }
+}
+@media (min-width: 1200px) {
+  body > header,
+  body > main,
+  body > footer,
+  section {
+    --block-spacing-vertical: calc(var(--spacing) * 4);
+  }
+}
+
+@media (min-width: 576px) {
+  article {
+    --block-spacing-horizontal: calc(var(--spacing) * 1.25);
+  }
+}
+@media (min-width: 768px) {
+  article {
+    --block-spacing-horizontal: calc(var(--spacing) * 1.5);
+  }
+}
+@media (min-width: 992px) {
+  article {
+    --block-spacing-horizontal: calc(var(--spacing) * 1.75);
+  }
+}
+@media (min-width: 1200px) {
+  article {
+    --block-spacing-horizontal: calc(var(--spacing) * 2);
+  }
+}
+
+dialog > article {
+  --block-spacing-vertical: calc(var(--spacing) * 2);
+  --block-spacing-horizontal: var(--spacing);
+}
+@media (min-width: 576px) {
+  dialog > article {
+    --block-spacing-vertical: calc(var(--spacing) * 2.5);
+    --block-spacing-horizontal: calc(var(--spacing) * 1.25);
+  }
+}
+@media (min-width: 768px) {
+  dialog > article {
+    --block-spacing-vertical: calc(var(--spacing) * 3);
+    --block-spacing-horizontal: calc(var(--spacing) * 1.5);
+  }
+}
+
 a {
   --text-decoration: none;
 }
@@ -146,13 +217,24 @@ kbd {
   margin-bottom: var(--block-spacing-vertical);
 }
 
+.pill-link a,
 .tag {
-  color: var(--theme-text);
+  text-decoration: none;
   margin: 0.4em;
   border: none;
   border-radius: 0.3em;
-  padding: 0.1em 0.5em;
+  padding: 0.1em 0.8em;
   background-color: var(--secondary-focus);
+}
+
+.tag {
+  color: var(--theme-text);
+  font-style: italic;
+}
+
+.pill-link a:hover,
+.pill-link a:focus {
+  background-color: var(--secondary-contrast);
 }
 
 .postlist {
@@ -192,8 +274,8 @@ kbd {
   --contrast-hover: #2d2d2d;
   --contrast-focus: rgba(89, 107, 120, 0.125);
   --contrast-inverse: #e8d1bb;
-  --mark-background-color: #facf9f;
-  --mark-color: #212526;
+  --mark-background-color: #d2c794;
+  --mark-color: #202827;
   --ins-color: #388e3c;
   --del-color: #c62828;
   --blockquote-border-color: var(--muted-border-color);
@@ -298,7 +380,7 @@ kbd {
     --contrast-hover: #e8d1bb;
     --contrast-focus: rgba(115, 130, 140, 0.25);
     --contrast-inverse: #2d2d2d;
-    --mark-background-color: #c8a57a;
+    --mark-background-color: #afab79;
     --mark-color: #222a30;
     --ins-color: #388e3c;
     --del-color: #c62828;
@@ -404,7 +486,7 @@ kbd {
   --contrast-hover: #e8d1bb;
   --contrast-focus: rgba(115, 130, 140, 0.25);
   --contrast-inverse: #2d2d2d;
-  --mark-background-color: #c8a57a;
+  --mark-background-color: #afab79;
   --mark-color: #222a30;
   --ins-color: #388e3c;
   --del-color: #c62828;
@@ -507,8 +589,8 @@ progress,
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: vat(--spacing);
+  align-items: flex-start;
+  padding: var(--spacing);
 }
 
 .footer {
