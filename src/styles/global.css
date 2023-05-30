@@ -910,7 +910,7 @@ span.secondary {
 }
 
 span.bubble {
-  color: hsl(205, 30%, 15%);
+  color: var(--secondary-contrast);
   font-size: var(--font-small);
   margin: 0.4em;
   border: none;
