@@ -16,6 +16,7 @@
   --line-height: 1.5;
   --font-weight: 400;
   --font-size: 15px;
+  --font-small: 0.85rem;
   --border-radius: 0.25rem;
   --border-width: 1px;
   --outline-width: 3px;
@@ -818,7 +819,22 @@ p {
 }
 
 small {
-  font-size: var(--font-size);
+  --font-size: var(--font-size);
+}
+
+span.secondary {
+  font-size: var(--font-small);
+  color: var(--secondary);
+}
+
+span.bubble {
+  color: hsl(205, 30%, 15%);
+  font-size: var(--font-small);
+  margin: 0.4em;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.1em 0.5em;
+  background-color: var(--secondary-focus);
 }
 
 :where(dl, ol, ul) {
@@ -879,6 +895,25 @@ del {
 
 ::selection {
   background-color: var(--primary-focus);
+}
+
+/**
+ * Miscs
+ */
+hr {
+  height: 0;
+  border: 0;
+  border-top: 2px solid var(--muted-border-color);
+  color: inherit;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+canvas {
+  display: inline-block;
 }
 
 /**
@@ -1383,25 +1418,6 @@ kbd {
   background-color: var(--code-kbd-background-color);
   color: var(--code-kbd-color);
   vertical-align: baseline;
-}
-
-/**
- * Miscs
- */
-hr {
-  height: 0;
-  border: 0;
-  border-top: 2px solid var(--muted-border-color);
-  color: inherit;
-}
-
-[hidden],
-template {
-  display: none;
-}
-
-canvas {
-  display: inline-block;
 }
 
 /**

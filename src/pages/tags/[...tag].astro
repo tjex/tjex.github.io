@@ -42,7 +42,7 @@ const seo = {
 
 <Layout seo={seo}>
     <h1>{tag}</h1>
-    <p>Posts tagged with <a class="tag" style="text-decoration: none">{tag}</a></p>
+    <p>Posts tagged with <span class="bubble" >{tag}</a></p>
     <article class="blog-page-content__article">
       <section class="postlist">
         { posts.map((post: any) => <BlogPostPreview post={post} />) }

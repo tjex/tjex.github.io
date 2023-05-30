@@ -1,0 +1,10 @@
+---
+const { src, artist, work, source, genre } = Astro.props;
+---
+
+<div class=`filter ${genre} ${source}`>
+    <a style="font-style: italic;" href={`${src}`}
+        >{artist}<br />
+        <span class="secondary">&#10149; {work} </span></a
+    > 
+</div>
