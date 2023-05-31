@@ -135,8 +135,8 @@ a.secondary, a.contrast {
   --text-decoration: underline;
 }
 
-.nohist a {
-  color: var(--primary);
+.hist a {
+  color: var(--link-visited);
 }
 
 small {
@@ -831,14 +831,6 @@ a:focus,
 [role=link]:focus {
   --background-color: var(--primary-focus);
 }
-a:visited,
-[role=link]:visited {
-  --color: var(--link-visited);
-}
-a:visited:hover,
-[role=link]:visited:hover {
-  --color: var(--link-visited-hover);
-}
 a.secondary,
 [role=link].secondary {
   --color: var(--secondary);
@@ -863,9 +855,13 @@ a.contrast:focus,
 [role=link].contrast:focus {
   --background-color: var(--contrast-focus);
 }
-a.nohist:visited,
-[role=link].nohist:visited {
-  --color: var(--primary);
+a.hist:visited,
+[role=link].hist:visited {
+  --color: var(--link-visited);
+}
+a:hist:visited:hover,
+[role=link]:hist:visited:hover {
+  --color: var(--link-visited-hover);
 }
 
 h1,
