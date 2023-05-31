@@ -135,7 +135,7 @@ a.secondary, a.contrast {
   --text-decoration: underline;
 }
 
-.hist a {
+.visit a {
   color: var(--link-visited);
 }
 
@@ -855,12 +855,12 @@ a.contrast:focus,
 [role=link].contrast:focus {
   --background-color: var(--contrast-focus);
 }
-a.hist:visited,
-[role=link].hist:visited {
+a.visit:visited,
+[role=link].visit:visited {
   --color: var(--link-visited);
 }
-a:hist:visited:hover,
-[role=link]:hist:visited:hover {
+a:visit:visited:hover,
+[role=link]:visit:visited:hover {
   --color: var(--link-visited-hover);
 }
 
