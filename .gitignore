@@ -4,7 +4,7 @@
 .DS_Store
 scraps/
 src/assets/
-test-doc.md
+*.test.md
 
 ### Node ###
 # Logs
