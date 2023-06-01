@@ -698,6 +698,14 @@ body > footer {
 }
 
 /**
+ * Structures
+ * divs and other structural element styling
+ */
+.media-link {
+  padding-bottom: var(--spacing);
+}
+
+/**
  * Document
  * Content-box & Responsive typography
  */
