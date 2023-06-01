@@ -8,6 +8,7 @@ export default defineConfig({
   site: "https://tjex.net",
     markdown: {
         drafts: true,
+        remarkRehype: { footnoteLabelTagName: "h5"},
     },
   integrations: [sitemap({}), mdx({
       drafts: true,
