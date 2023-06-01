@@ -1,10 +1,10 @@
 ---
-import ArticleSchema from '../components/ArticleSchema.astro';
+import ArticleSchema from "../components/ArticleSchema.astro";
 
-import Layout from './Base.astro';
-import SideLeftPage from '../components/SideLeftPage.astro';
-import SideRightBlank from '../components/SideRightBlank.astro';
-import Header from '../components/Header.astro';
+import Layout from "./Base.astro";
+import SideLeftPage from "../components/SideLeftPage.astro";
+import SideRightBlank from "../components/SideRightBlank.astro";
+import Header from "../components/Header.astro";
 import Tags from "../components/Tags.astro";
 import Footer from "../components/Footer.astro";
 
@@ -14,20 +14,20 @@ const { post } = Astro.props;
 
 <script src="../components/scripts/emailDecode.js"></script>
 
-<Layout seo={seo}>
-  <Fragment slot="head-bottom">
-  <ArticleSchema post={post}  />
- </Fragment>
- <Header slot="header" />
- <SideLeftPage slot="side-left"/>
+<Layout {seo}>
+    <Fragment slot="head-bottom">
+        <ArticleSchema {post} />
+    </Fragment>
+    <Header slot="header" />
+    <SideLeftPage slot="side-left" />
     <article class="post-content__article">
-      <h1>{post.data.title}</h1>
-      <div class="post-info">
-      <Tags tags={post.data.tags} /><time>{post.data.pubDate}</time>
-      </div>
-      <slot />
+        <h1>{post.data.title}</h1>
+        <div class="post-info">
+            <Tags tags={post.data.tags} /><time>{post.data.pubDate}</time><br />
+            <a id="denc" href="">tjex@tjex.net</a>
+        </div>
+        <slot />
     </article>
-  <SideRightBlank slot="side-right" />
-  <Footer slot="footer" />
+    <SideRightBlank slot="side-right" />
+    <Footer slot="footer" />
 </Layout>
-
