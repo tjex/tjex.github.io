@@ -216,13 +216,6 @@ kbd {
   flex-grow: 0;
 }
 
-.post-info {
-  color: hsl(205, 12%, 59%);
-  text-align: right;
-  margin-bottom: var(--block-spacing-vertical);
-  font-size: var(--font-small);
-}
-
 .pill-link a,
 .tag {
   text-decoration: none;
@@ -703,6 +696,14 @@ body > footer {
  */
 .media-link {
   padding-bottom: var(--spacing);
+}
+
+.post-info,
+.post-info a {
+  color: hsl(205, 12%, 59%);
+  text-align: right;
+  margin-bottom: var(--block-spacing-vertical);
+  font-size: var(--font-small);
 }
 
 /**

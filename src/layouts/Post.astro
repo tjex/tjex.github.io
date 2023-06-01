@@ -12,7 +12,8 @@ const { seo } = Astro.props;
 const { post } = Astro.props;
 ---
 
-<!-- double check all of this, seo and article schema input -->
+<script src="../components/scripts/emailDecode.js"></script>
+
 <Layout seo={seo}>
   <Fragment slot="head-bottom">
   <ArticleSchema post={post}  />

@@ -7,7 +7,7 @@ tags: ['open-source', 'society']
 draft: false
 ---
 
-# What is the problem?
+## What is the problem?
 
 Technology, and in particular software, moves fast, and increasingly so.
 Software interfaces with our lives on so many levels, that it becomes
@@ -35,7 +35,7 @@ how this has in part been enabled by the dominance of corporate
 philosophies and tactics over those of an alternative model known as
 Free/Libre and Open Source Software (FLOSS).
 
-# What is FLOSS?
+## What is FLOSS?
 
 Free/Libre and Open Source Software (FLOSS) is the combination of two
 longer standing terminologies. "Free software" was coined by Richard
@@ -63,7 +63,7 @@ freedom) to the "free software" idiom in order to make clearer the
 true meaning of the philosophy. It therefore offers a neutrality between
 the two.
 
-# What is the common alternative to FLOSS?
+## What is the common alternative to FLOSS?
 
 The success of any corporation against its competitors can often rest
 significantly on the strength of secrecy behind trade secrets. The
@@ -140,7 +140,7 @@ budding technology company that is yet to come.
 
 We should change that.
 
-# How does the public stand to benefit from FLOSS?
+## How does the public stand to benefit from FLOSS?
 
 > "We need to rebuild our societies and institutions with a new ethos of
 > distributed power. It is our collective responsibility." - Webb, [Coding Democracy](https://mitpress.mit.edu/9780262542289/coding-democracy/)
@@ -233,7 +233,7 @@ and we should be enabled, not restricted, by them --- *especially* if we, the
 consumer, being restricted means profit for some person or faceless
 corporation.
 
-# A Focus on Communication
+## A Focus on Communication
 
 As stated at the beginning of this essay; software interfaces with our lives so
 frequently, that it becomes harder and harder to distinguish a segregation
@@ -281,7 +281,7 @@ children signing up for new accounts who have little to no idea about the dark
 reality they are stepping into. Simply limping away from this social
 catastrophe and dragging a few out with you does not bring lasting change.
 
-# A New Hope
+## A New Hope
 
 One of the greater public goods that Elon Musk has yet to bring is the
 near total destruction of Twitter. His shameful treatment of employees
@@ -321,7 +321,7 @@ existing within the same ecosystem. Users of one ActivityPub based
 service help all others *equally* with every user that signs up. A
 community of communities.
 
-# Conclusion
+## Conclusion
 
 FLOSS is a system of production that has the power not only to create
 public goods like a free and academically valid encyclopedia, and social
