@@ -16,6 +16,7 @@
   "dependencies": {
     "@astrojs/mdx": "^0.19.4",
     "@astrojs/rss": "^2.4.3",
+    "@igor.dvlpr/astro-post-excerpt": "^2.0.1",
     "markdown-it": "^13.0.1",
     "sanitize-html": "^2.10.0"
   }
