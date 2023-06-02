@@ -18,10 +18,10 @@ export async function get(context) {
       </atom:link>
     `,
     items: blog.map((post) => {
-      const pubDate = new Date(post.data.pubDate).toUTCString();
+      // const pubDate = new Date(post.data.pubDate).toUTCString();
       return {
         title: post.data.title,
-        pubDate: pubDate,
+        pubDate: post.data.pubDate,
         description: post.data.description,
         categories: post.data.tags,
         link: `/blog/${post.slug}/`,

@@ -25,7 +25,7 @@ const pubDate = new Date(post.data.pubDate).toUTCString();
     <article class="post-content__article">
         <h1>{post.data.title}</h1>
         <div class="post-info">
-            <Tags tags={post.data.tags} /><time>{post.data.pubDate}</time><br />
+            <Tags tags={post.data.tags} /><time>{pubDate}</time><br />
             <a id="denc" href="">tjex@tjex.net</a>
         </div>
         <slot />

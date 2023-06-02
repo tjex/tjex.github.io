@@ -1,7 +1,7 @@
 ---
 title: Hello World
 description: It's traditional.
-pubDate: 2023-05-28
+pubDate: 2023-05-28T10:30:10+02
 author: tjex
 tags: ['misc']
 draft: false

@@ -6,11 +6,12 @@ const blog = defineCollection({
   schema: ({ image }) => z.object({
     title: z.string(),
     description: z.string(),
-    pubDate: z.date().transform((str) => {
-      const date = new Date(str);
-      const options = { month: 'long', day: '2-digit', year: 'numeric', hour12:false };
-      return date.toLocaleDateString('en-US', options);
-    }),
+    pubDate: z.date(),
+    // .transform((str) => {
+    //   const date = new Date(str);
+    //   const options = { month: 'long', day: '2-digit', year: 'numeric', hour12:false };
+    //   return date.toLocaleDateString('en-US', options);
+    // }),
     author: z.string(),
     tags: z.array(z.string()),
     draft: z.boolean(),
