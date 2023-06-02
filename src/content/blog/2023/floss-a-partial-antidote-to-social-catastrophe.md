@@ -87,9 +87,9 @@ Google, Amazon, Apple and Meta. In the book [*Chokepoint Capitalism*](https://ch
 Giblin and Doctorow outline how this was in part a result of Robert
 Bork's reinvention of antitrust, as put forth in his 1978 book *The
 Antitrust Paradox*. The Borkian reinvention of antitrust named
-"consumer welfare" as the goal, meaning that, *"so long as prices
+"consumer welfare" as the goal, meaning that, "so long as prices
 went down (or at least, didn't go up), companies more or less stopped
-having to worry about antitrust enforcers showing up with subpoenas", [Chokepoint Capitalism](https://chokepointcapitalism.com/). The worst players in Big
+having to worry about antitrust enforcers showing up with subpoenas", [Giblin / Doctorow](https://chokepointcapitalism.com/). The worst players in Big
 Tech make their fortunes with free products (free as in, "free
 beer").
 
@@ -229,7 +229,7 @@ that by the end of 2024 all manufacturers of small electronic devices must use
 USB-C for charging. Additionally consumers must be given the choice to buy a
 device with or without a charger. This is interoperability on a hardware level,
 but it illustrates the same fundamental point; technologies must work together
-and we should be enabled, not restricted, by them --- *especially* if we, the
+and we should be enabled, not restricted, by them - *especially* if we, the
 consumer, being restricted means profit for some person or faceless
 corporation.
 
