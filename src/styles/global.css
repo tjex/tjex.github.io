@@ -610,13 +610,23 @@ main {
   display: block;
   position: fixed;
   font-size: 0.8rem;
-  left: 20%;
+  left: 0;
   bottom: 0;
-  width: 60%;
-  text-align: left;
-  padding: var(--spacing);
-  border-top: 1px solid var(--secondary);
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  padding-bottom: 1rem;
   background: var(--background-color);
+}
+
+.footer::before {
+  content: "";
+  display: block;
+  height: 0;
+  border-top: 1px solid var(--secondary);
+  width: 60%; /* Set the width to 35% */
+  padding-top: var(--spacing);
+  margin: 0 auto; /* Center the element horizontally */
 }
 
 .main-content {
@@ -646,7 +656,7 @@ main {
 }
 
 /* from: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-examples */
-@media all and (min-width: 900px) {
+@media all and (min-width: 960px) {
   .aside {
     flex: 1 0 0;
   }
@@ -663,7 +673,7 @@ main {
     order: 3;
   }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 960px) {
   .aside-1 {
     padding-top: var(--spacing);
     flex-direction: row;
