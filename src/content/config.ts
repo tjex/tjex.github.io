@@ -8,7 +8,7 @@ const blog = defineCollection({
     description: z.string(),
     pubDate: z.date().transform((str) => {
       const date = new Date(str);
-      const options = { month: 'short', day: 'numeric', year: 'numeric' };
+      const options = { month: 'long', day: 'numeric', year: 'numeric' };
       return date.toLocaleDateString('en-US', options);
     }),
     author: z.string(),
