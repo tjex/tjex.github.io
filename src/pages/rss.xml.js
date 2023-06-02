@@ -17,14 +17,18 @@ export async function get(context) {
       xmlns:atom='http://www.w3.org/2005/Atom' xmlns:content='http://purl.org/rss/1.0/modules/content/'>
       </atom:link>
     `,
-    items: blog.map((post) => ({
-      title: post.data.title,
-      pubDate: post.data.pubDate,
-      description: post.data.description,
-      categories: post.data.tags,
-      link: `/blog/${post.slug}/`,
-      content: sanitizeHtml(parser.render(post.body)),
-    })),
+    items: blog.map((post) => {
+      const pubDate = new Date(post.data.pubDate).toUTCString();
+      return {
+        title: post.data.title,
+        pubDate: pubDate,
+        description: post.data.description,
+        categories: post.data.tags,
+        link: `/blog/${post.slug}/`,
+        content: sanitizeHtml(parser.render(post.body)),
+      };
+    }),
   });
 }
+
 

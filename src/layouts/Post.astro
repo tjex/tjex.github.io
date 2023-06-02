@@ -10,6 +10,8 @@ import Footer from "../components/Footer.astro";
 
 const { seo } = Astro.props;
 const { post } = Astro.props;
+
+const pubDate = new Date(post.data.pubDate).toUTCString();
 ---
 
 <script src="../components/scripts/emailDecode.js"></script>
