@@ -12,14 +12,11 @@ export async function getStaticPaths() {
   return uniqueTags.map((tag) => {
     const filteredPosts = posts
     .filter((post) => post.data.tags.includes(tag))
-    .map(({ data, url, slug }) => ({
-        url: url,
+    .map(({ data, slug }) => ({
         slug: slug,
         title: data.title,
         description: data.description,
         pubDate: data.pubDate,
-        img: data.img.src,
-        alt: data.img.alt,
       }));
     return {
       params: { tag },
