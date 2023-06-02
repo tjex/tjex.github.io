@@ -11,7 +11,10 @@ import Footer from "../components/Footer.astro";
 const { seo } = Astro.props;
 const { post } = Astro.props;
 
-const pubDate = new Date(post.data.pubDate).toUTCString();
+const dateFormatted = new Date(post.data.pubDate);
+const options = { month: 'long', day: '2-digit', year: 'numeric', hour12:false };
+const pubDate = dateFormatted.toLocaleDateString('en-US', options);
+
 ---
 
 <script src="../components/scripts/emailDecode.js"></script>
