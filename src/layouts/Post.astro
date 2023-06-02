@@ -1,5 +1,6 @@
 ---
 import ArticleSchema from "../components/ArticleSchema.astro";
+import Date from "../components/utility/DateFormat.astro";
 
 import Layout from "./Base.astro";
 import SideLeftPage from "../components/SideLeftPage.astro";
@@ -11,9 +12,6 @@ import Footer from "../components/Footer.astro";
 const { seo } = Astro.props;
 const { post } = Astro.props;
 
-const dateFormatted = new Date(post.data.pubDate);
-const options = { month: 'long', day: '2-digit', year: 'numeric', hour12:false };
-const pubDate = dateFormatted.toLocaleDateString('en-US', options);
 
 ---
 
@@ -28,7 +26,7 @@ const pubDate = dateFormatted.toLocaleDateString('en-US', options);
     <article class="post-content__article">
         <h1>{post.data.title}</h1>
         <div class="post-info">
-            <Tags tags={post.data.tags} /><time>{pubDate}</time><br />
+            <Tags tags={post.data.tags} /><Date date={post.data.pubDate}/><br />
             <a id="denc" href="">tjex@tjex.net</a>
         </div>
         <slot />

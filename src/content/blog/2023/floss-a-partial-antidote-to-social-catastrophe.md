@@ -1,7 +1,7 @@
 ---
 title: Floss, A Partial Antidote To Social Catastrophe
 description: Technology and software have together enabled immense change. Can FLOSS principals help mitigate the harm that society is enduring?
-pubDate: 2023-06-01
+pubDate: 2023-06-01T18:00:00Z
 author: tjex
 tags: ['open source', 'society']
 draft: false
