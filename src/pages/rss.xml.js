@@ -18,7 +18,6 @@ export async function get(context) {
       </atom:link>
     `,
     items: blog.map((post) => {
-      // const pubDate = new Date(post.data.pubDate).toUTCString();
       return {
         title: post.data.title,
         pubDate: post.data.pubDate,
