@@ -2,35 +2,40 @@
 import Layout from "../layouts/Page.astro";
 
 const seo = {
-  title: "Home",
-  description: "Home page for tjex (Tillman Jex), software developer and creative technologist based in Berlin, Germany. Project documentation, open source contributions and blog posts are to be found",
-  image: "../assets/tjex-square-profile-1.jpg",
+    title: "Home",
+    description:
+        "Home page for tjex (Tillman Jex), software developer and creative technologist based in Berlin, Germany. Project documentation, open source contributions and blog posts are to be found",
+    image: "../assets/tjex-square-profile-1.jpg",
 };
 ---
 
-<Layout seo={seo}>
-  <h1>hello</h1>
-  <p>
-    I'm a programmer interested in decentralisation and commons-based
-    production principals as an effective antidote to social and technological
-    problems. Currently I'm finishing my masters degree in
-    Creative Technologies / Computer Science between Berlin and Stockholm.
-  </p>
-  <p>
-    Before a focus on programming, I was working in the arts / music industry
-    as a <a rel="me" href="https://tillmanjex.bandcamp.com/music"
-      >producer of story music</a>, 
-      <a rel="me" href="https://vimeo.com/345958732?embedded=true&source=video_title&owner=17991259">film
-      music</a>, and sound engineer. I was also the head engineer of
-    <a href="https://www.monomsound.com/">MONOM</a>, a spatial audio studio in
-    Berlin, which saw my two loves of music and tech come together and
-    insighted me to focus on programming and tech more seriously.
-  </p>
-  <p>
-    My creative pursuits and the experiences it has lead me through influence 
-    my technical work and way of thinking. I try to foster that  
-    in my writing, which has so far only been taking place privately, but which 
-    will gradually start to materialise on this site. <br>
-    RSS is available for those who know what's up. 
-  </p>
+<Layout {seo}>
+    <h1>hello</h1>
+    <p>
+        I'm a programmer interested in decentralisation and commons-based
+        production principals as an effective antidote to social and
+        technological problems. Currently I'm finishing my masters degree in
+        Creative Technologies / Computer Science between Berlin and Stockholm.
+    </p>
+    <p>
+        Before a focus on programming, I was working in the arts / music
+        industry as a <a rel="me" href="https://tillmanjex.bandcamp.com/music"
+            >producer of story music</a
+        >,
+        <a
+            rel="me"
+            href="https://vimeo.com/345958732?embedded=true&source=video_title&owner=17991259"
+            >film music</a
+        >, and sound engineer. I was also the head engineer of
+        <a href="https://www.monomsound.com/">MONOM</a>, a spatial audio studio
+        in Berlin, which saw my two loves of music and tech come together and
+        insighted me to focus on programming and tech more seriously.
+    </p>
+    <p>
+        My creative pursuits and the experiences it has lead me through
+        influence my technical work and way of thinking. I try to foster that in
+        my writing, which has so far only been taking place privately, but which
+        will gradually start to materialise on this site. <br />
+        RSS is available for those who know what's up.
+    </p>
 </Layout>
