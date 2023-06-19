@@ -678,6 +678,7 @@ main {
     padding-top: var(--spacing);
     flex-direction: row;
     text-align: left;
+    position: inherit;
   }
   .main-content {
     width: 100%;
