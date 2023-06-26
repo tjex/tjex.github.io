@@ -368,7 +368,7 @@ kbd {
     --h5-color: hsl(205, 16%, 67%);
     --h6-color: #a0aeb9;
     --muted-color: hsl(205, 10%, 50%);
-    --muted-border-color: #2f404d;
+    --muted-border-color: #274655;
     --primary: hsl(195, 85%, 41%);
     --primary-hover: hsl(195, 80%, 50%);
     --primary-focus: rgba(16, 149, 193, 0.25);
@@ -476,7 +476,7 @@ kbd {
   --h5-color: hsl(205, 16%, 67%);
   --h6-color: #a0aeb9;
   --muted-color: hsl(205, 10%, 50%);
-  --muted-border-color: #2f404d;
+  --muted-border-color: #274655;
   --primary: hsl(195, 85%, 41%);
   --primary-hover: hsl(195, 80%, 50%);
   --primary-focus: rgba(16, 149, 193, 0.25);
@@ -1065,9 +1065,12 @@ audio:not([controls]) {
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
   border-style: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 :where(svg:not([fill])) {
