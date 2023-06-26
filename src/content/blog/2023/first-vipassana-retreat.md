@@ -1,6 +1,6 @@
 ---
 title: First 10 Day Vipassana Retreat
-description: A few thoughts after my first 10 day silent meditation retreat in the technique of Vipassana and a consolidation of it's philosophies. 
+description: A few thoughts after my first 10 day silent meditation retreat in the technique of Vipassana and a consolidation of its philosophies. 
 pubDate: 2023-06-26T18:51:08Z 
 author: tjex
 tags: ['meditation', 'philosophy']
