@@ -3,7 +3,8 @@
 .astro
 .DS_Store
 scraps/
-src/assets/
+#src/assets/
+src/drafts/
 *.test.md
 
 ### Node ###
