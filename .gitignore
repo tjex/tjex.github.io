@@ -4,7 +4,6 @@
 .DS_Store
 scraps/
 #src/assets/
-src/drafts/
 *.test.md
 
 ### Node ###
