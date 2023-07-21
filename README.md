@@ -2,8 +2,8 @@
 
 The repo for my personal website / blog, [tjex.net](https://tjex.net). 
 
-It's using the [Astro](astro.dev) framework and was extended from the 
-[Astro Minimal Starter](https://github.com/littlesticks/astro-minimal-starter) template, using [pico css](picocss.com) 
+It's using the [Astro](https://astro.dev) framework and was extended from the 
+[Astro Minimal Starter](https://github.com/littlesticks/astro-minimal-starter) template, using [pico css](https://picocss.com) 
 as a base for styling.
 
 As a note for anyone else interested in using the Astro Minimal Starter linked above; it was built before Astro collections were 
