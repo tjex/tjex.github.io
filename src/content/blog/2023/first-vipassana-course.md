@@ -5,7 +5,7 @@ pubDate: 2023-06-26T18:51:08Z
 author: tjex
 tags: ['meditation', 'philosophy']
 draft: false
-post: AstroCollectionEntry
+postPreview: AstroCollectionEntry
 ---
 
 ## Vipassana

@@ -5,7 +5,7 @@ pubDate: 2023-05-28T10:30:00Z
 author: tjex
 tags: ['misc']
 draft: false
-post: AstroCollectionEntry
+postPreview: AstroCollectionEntry
 ---
 
 Why am I starting to blog? 

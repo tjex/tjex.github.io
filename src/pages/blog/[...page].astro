@@ -37,7 +37,7 @@ const { page } = Astro.props;
     <article class="blog-page-content__article">
       <section class="postlist">
         <p class="post-excerpt">
-        {page.data.map((post: any) => <PostExcerpt post={post} words={20} addEllipsis={false} />)}
+        {page.data.map((post: any) => <PostExcerpt post={post.postPreview} words={20} addEllipsis={false} />)}
         </p>
       </section>
     </article>
