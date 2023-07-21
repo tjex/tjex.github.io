@@ -1,6 +1,8 @@
 # tjex.net
 
-The repo for my personal website / blog, [tjex.net](https://tjex.net). It was extended from the 
+The repo for my personal website / blog, [tjex.net](https://tjex.net). 
+
+It's using the [Astro](astro.dev) framework and was extended from the 
 [Astro Minimal Starter](https://github.com/littlesticks/astro-minimal-starter) template, using [pico css](picocss.com) 
 as a base for styling.
 
