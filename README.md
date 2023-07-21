@@ -2,7 +2,7 @@
 
 The repo for my personal website / blog, [tjex.net](https://tjex.net). 
 
-It's using the [Astro](https://astro.dev) framework and was extended from the 
+It's using the [Astro](https://astro.build) framework and was extended from the 
 [Astro Minimal Starter](https://github.com/littlesticks/astro-minimal-starter) template, using [pico css](https://picocss.com) 
 as a base for styling.
 
