@@ -689,6 +689,7 @@ body {
     width: 100%;
   }
   .footer {
+    position: relative;
     left: 0;
     width: 100%;
   }
