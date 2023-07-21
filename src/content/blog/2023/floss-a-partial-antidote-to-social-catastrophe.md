@@ -5,6 +5,7 @@ pubDate: 2023-06-01T18:00:00Z
 author: tjex
 tags: ['open source', 'society']
 draft: false
+post: AstroCollectionEntry
 ---
 
 ## What is the problem?

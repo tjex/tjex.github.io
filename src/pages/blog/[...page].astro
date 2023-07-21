@@ -1,9 +1,9 @@
 ---
 import Layout from '../../layouts/Page.astro';
 import BlogPostPreview from '../../components/BlogPostPreview.astro';
-import Paginator from '../../components/Paginator.astro'
+import Paginator from '../../components/Paginator.astro';
 import { getCollection } from 'astro:content';
-  
+import PostExcerpt from '@igor.dvlpr/astro-post-excerpt';  
   
 export async function getStaticPaths({paginate}) {
 
@@ -14,6 +14,7 @@ export async function getStaticPaths({paginate}) {
 			title: data.title,
 			description: data.description,
 			pubDate: data.pubDate,
+            postPreview: data.postPreview,
             // imgSrc: data.image.src,
             // imgAlt: data.image.alt,
 		}))
@@ -35,10 +36,10 @@ const { page } = Astro.props;
 <Layout seo={seo} >
     <article class="blog-page-content__article">
       <section class="postlist">
-        {page.data.map((post: any) => <BlogPostPreview post={post} />)}
+        <p class="post-excerpt">
+        {page.data.map((post: any) => <PostExcerpt post={post} words={20} addEllipsis={false} />)}
+        </p>
       </section>
     </article>
     <Paginator page={page}/>
 </Layout>
-
-
