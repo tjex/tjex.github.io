@@ -925,6 +925,10 @@ h5 {
 
 h6 {
   --color: var(--h6-color);
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: center;
+  font-style: italic;
 }
 
 :where(address, blockquote, dl, figure, form, ol, p, pre, table, ul) ~ :is(h1, h2, h3, h4, h5, h6) {
