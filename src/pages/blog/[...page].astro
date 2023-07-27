@@ -9,17 +9,17 @@ export async function getStaticPaths({paginate}) {
 
     const posts = await getCollection('blog').then(posts =>
 	posts
-		.map(({ data, slug }) => ({
-            slug: slug,
-			title: data.title,
-			description: data.description,
-			pubDate: data.pubDate,
+        .map((post) => ({
+            slug: post.slug,
+			title: post.data.title,
+			description: post.data.description,
+			pubDate: post.data.pubDate,
             // imgSrc: data.image.src,
             // imgAlt: data.image.alt,
 		}))
+        .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate))
 );
 return paginate(posts, {pageSize: 10});
-
 
 }
 
@@ -33,11 +33,11 @@ const { page } = Astro.props;
 
 
 <Layout seo={seo} >
-    <article class="blog-page-content__article">
+    <!-- <article class="blog-page-content__article"> -->
       <section class="postlist">
         {page.data.map((post: any) => <BlogPostPreview post={post} />)}
       </section>
-    </article>
+    <!-- </article> -->
     <Paginator page={page}/>
 </Layout>
 
