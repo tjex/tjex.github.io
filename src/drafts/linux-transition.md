@@ -6,7 +6,8 @@ the password was not wrong. Others have had the [same issue](https://forum.garud
 critical was `cryptosetup luksFormat --type luks1 ...`, as luks2 is not compatible with grub.
 `parted` was also ruining the fun with grub. Either giving me "unknown file system" or "cannot find EFI directory" errors when running `grub-install`
 
-auto decrypt after grub is documented well here https://unix.stackexchange.com/questions/716531/preventing-boot-prompting-twice-for-encryption-passphrase-on-debian-based-os
+auto decrypt after grub is documented well here https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#Avoiding_having_to_enter_the_passphrase_twice
+
 
 
 First impressions after succesful arch / kde install. 
