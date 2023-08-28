@@ -1,6 +1,6 @@
 export default {
   title: `Tillman Jex`,
-  description: `Software developer, creative technologist and animated meat sack`,
+  description: `Programmer, creative technologist and animated meat sack`,
   url: `https://tjex.net`, // No trailing slash!
   rssURL: `https://tjex.net/rss.xml`,
   // JSON LD
