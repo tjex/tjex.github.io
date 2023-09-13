@@ -23,21 +23,26 @@
 
 <script>
     const themeToggle = document.getElementById("themeToggle");
-    const savedTheme = localStorage.getItem("theme");
     const rootElement = document.documentElement;
+    const getTheme = () => localStorage.getItem("theme");
+    const setTheme = (theme: any) => {
+        localStorage.setItem("theme", theme);
+        rootElement.setAttribute("data-theme", theme);
+    };
 
     // Apply the saved theme if it exists
-    if (savedTheme == "light") {
-        rootElement.setAttribute("data-theme", "light");
+    if (getTheme() == "light") {
+        console.log("saved theme = light");
+        setTheme("light");
     } else {
-        rootElement.setAttribute("data-theme", "dark");
+        console.log("saved theme = dark");
+        setTheme("dark");
     }
 
     themeToggle.addEventListener("click", () => {
-        const currentTheme = rootElement.getAttribute("data-theme");
         let newTheme: any;
 
-        if (currentTheme === "light") {
+        if (getTheme() === "light") {
             console.log("change to dark");
             newTheme = "dark";
         } else {
@@ -46,8 +51,7 @@
         }
 
         // Save the new theme preference in localStorage
-        localStorage.setItem("theme", newTheme);
-        rootElement.setAttribute("data-theme", newTheme);
+        setTheme(newTheme);
     });
 </script>
 
