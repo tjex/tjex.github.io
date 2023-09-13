@@ -14,6 +14,5 @@ export default defineConfig({
       drafts: true,
   })],
   experimental: {
-    assets: true,
   },
 });
