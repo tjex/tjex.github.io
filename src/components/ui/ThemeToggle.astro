@@ -25,37 +25,21 @@
 <script>
     const themeToggle = document.getElementById("themeToggle");
     const rootElement = document.documentElement;
-    const getTheme = () => localStorage.getItem("theme");
+    const getTheme = () => localStorage.getItem("theme") || "dark";
     const setTheme = (theme: any) => {
         localStorage.setItem("theme", theme);
         rootElement.setAttribute("data-theme", theme);
     };
 
-    // Apply the saved theme if it exists
-    if (getTheme() == "light") {
-        console.log("saved theme = light");
-        setTheme("light");
-    } else {
-        console.log("saved theme = dark");
-        setTheme("dark");
-    }
+    window.addEventListener("DOMContentLoaded", () => setTheme(getTheme()));
 
     themeToggle.addEventListener("click", () => {
-        let newTheme: any;
-
         if (getTheme() == "light") {
-            console.log("change to dark");
-            newTheme = "dark";
+            setTheme("dark");
         } else {
-            console.log("change to light");
-            newTheme = "light";
+            setTheme("light");
         }
-
-        // Save the new theme preference in localStorage
-        setTheme(newTheme);
     });
-
-    window.addEventListener("DOMContentLoaded", () => setTheme(getTheme()));
 </script>
 
 <style>
