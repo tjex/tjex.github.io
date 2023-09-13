@@ -24,11 +24,10 @@
 
 <script>
     const themeToggle = document.getElementById("themeToggle");
-    const rootElement = document.documentElement;
     const getTheme = () => localStorage.getItem("theme") || "dark";
     const setTheme = (theme: any) => {
         localStorage.setItem("theme", theme);
-        rootElement.setAttribute("data-theme", theme);
+        document.documentElement.dataset.theme = theme;
     };
 
     window.addEventListener("DOMContentLoaded", () => setTheme(getTheme()));
