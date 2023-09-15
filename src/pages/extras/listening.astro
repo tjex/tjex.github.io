@@ -5,7 +5,7 @@ import MediaLink from "../../components/MediaLink.astro";
 const seo = {
     title: "Listening",
     description: "External link archive of what music I'm listening to",
-    index: "noindex"
+    index: "nofollow"
 };
 ---
 
@@ -14,18 +14,29 @@ const seo = {
     <p>
         Music tempers the soul. Society (increasingly) needs more of that. <br>
         Support it where you can: buy music, send money, subscribe, go to gigs and / or share music with others. <br />
-        Latest additions first. 
+        Newest additions first. 
     </p>
 
 <div class="filterWrapper">
 <div class="grid">
         <div>
             <MediaLink
-                src={"https://inverted-audio.com/mix/jakojako/"}
+                src={"https://sine-music.bandcamp.com/track/feel-love"}
+                artist={"Sine"}
+                work={"Feel Love"}
+                genre={"chill out"}
+                source={"bandcamp"}
+            />
+        </div>
+</div>
+<div class="grid">
+        <div>
+            <MediaLink
+                src={"https://soundcloud.com/inverted-audio/ia-mix-365-jakojako"}
                 artist={"Jako Jako"}
                 work={"Inverted Audio - Mix"}
                 genre={"techno"}
-                source={"website"}
+                source={"soundcloud"}
             />
         </div>
         <div>
