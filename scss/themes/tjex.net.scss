@@ -1,0 +1,37 @@
+/**
+ * Theme: tjex.net
+ */
+
+// Variables
+@import "../variables";
+@import "tjex.net/colors";
+
+// Commons styles
+@import "tjex.net/styles";
+
+// Light theme (tjex.net)
+// Can be forced with data-theme="light"
+@import "tjex.net/light";
+
+// Dark theme (Auto)
+// Automatically enabled if user has Dark mode enabled
+@import "tjex.net/dark";
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    @include dark;
+  }
+}
+
+// Dark theme (Forced)
+// Enabled if forced with data-theme="dark"
+[data-theme="dark"] {
+  @include dark;
+}
+
+// Accent-color
+progress,
+[type="checkbox"],
+[type="radio"],
+[type="range"] {
+  accent-color: var(--primary);
+}
