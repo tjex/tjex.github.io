@@ -1,0 +1,14 @@
+---
+// this component takes information about projects and formats them visually.
+
+const { src, title, description, lang, project } = Astro.props;
+---
+
+<div class = media-link>
+<a href={`${src}`}>
+    {project} </a>
+    <br />
+    <span > {description} </span>
+    <br />
+    <span class="secondary" style="font-style: italic;">&#10149; language: {lang}</span>
+</div>
