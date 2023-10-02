@@ -5,10 +5,11 @@ const { src, title, description, lang, project } = Astro.props;
 ---
 
 <div class = media-link>
-<a href={`${src}`}>
+<h5><a href={`${src}`}>
     {project} </a>
-    <br />
+    <br /></h5>
     <span > {description} </span>
     <br />
-    <span class="secondary" style="font-style: italic;">&#10149; language: {lang}</span>
+    {lang ? <span class="secondary" style="font-style: italic;">&#10149; language: {lang}</span> : '' }
+    
 </div>

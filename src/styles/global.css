@@ -921,10 +921,12 @@ h4 {
 
 h5 {
   --color: var(--h5-color);
+  margin-bottom: 0.3rem;
 }
 
 h6 {
   --color: var(--h6-color);
+  margin-bottom: 0.3rem;
   font-weight: 300;
   font-size: 1rem;
   text-align: center;
