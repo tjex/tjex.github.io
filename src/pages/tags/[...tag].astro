@@ -5,7 +5,9 @@ import BlogPostPreview from "../../components/BlogPostPreview.astro";
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
+  const posts = await getCollection('blog', ({data}) => {
+      return data.draft !== true;
+      });
   
   const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
 
