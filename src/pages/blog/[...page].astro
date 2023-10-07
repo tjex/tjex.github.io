@@ -7,8 +7,10 @@ import { getCollection } from 'astro:content';
   
 export async function getStaticPaths({paginate}) {
 
-    const posts = await getCollection('blog').then(posts =>
-	posts
+  const posts = await getCollection('blog', ({data}) => {
+      return import.meta.env.PROD ? data.draft !== true : true;
+      }).then(posts =>
+      posts
         .map((post) => ({
             slug: post.slug,
 			title: post.data.title,
