@@ -11,12 +11,13 @@ export async function GET(context) {
   return rss({
     title: "tjex.net - blog",
     description: site.description,
-    site: site.url,
+    site: context.site,
     customData: `
       <atom:link href='${site.rssURL}' rel='self' type='application/rss+xml' 
       xmlns:atom='http://www.w3.org/2005/Atom' xmlns:content='http://purl.org/rss/1.0/modules/content/'>
       </atom:link>
     `,
+    stylesheet: "/rss/styles.xsl",
     items: blog.map((post) => {
       return {
         title: post.data.title,
