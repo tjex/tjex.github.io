@@ -263,8 +263,7 @@ kbd {
 // -- BLOG / POSTS -- //
 
 
-.pill-link a,
-.tag {
+.pill-link a {
     text-decoration: none;
     margin: 0.4em;
     border: none;
@@ -274,6 +273,12 @@ kbd {
 }
 
 .tag {
+    text-decoration: none;
+    margin: 0.2em 0.2em;
+    border: none;
+    border-radius: .3em;
+    padding: .1em .8em;
+    background-color: var(--secondary-focus);
     color: var(--theme-text);
     font-style: italic;
 }

@@ -1,20 +1,16 @@
 ---
 // Used to list all unique tags
-// goal to have little counter next to each one showing how
-// many times the tag has been used
-import { getCollection } from 'astro:content';
-const posts = await getCollection('blog');
+import { getCollection } from "astro:content";
+const blog = await getCollection("blog", ({ data }) => {
+    return data.draft !== true;
+});
 
 import Tags from "./Tags.astro";
 
 // getting unique tags
-const uniqueTags = [
-  ...new Set(posts.map((post) => post.data.tags).flat()),
-];
-const seo = {
-  title: "Tags",
-  description: "A list of all tags used sitewide for blog posts and images",
-};
+const uniqueTags = [...new Set(blog.map((post) => post.data.tags).flat())];
 ---
 
-<Tags tags={uniqueTags} />
+<!-- <Tags tags={uniqueTags} /> -->
+
+{uniqueTags.map((tag) => ( <ul><li><a class="tag" href={`/tags/${tag}`}>{tag}</a></li></ul>))}

@@ -216,8 +216,7 @@ kbd {
   flex-grow: 0;
 }
 
-.pill-link a,
-.tag {
+.pill-link a {
   text-decoration: none;
   margin: 0.4em;
   border: none;
@@ -227,6 +226,12 @@ kbd {
 }
 
 .tag {
+  text-decoration: none;
+  margin: 0.2em 0.2em;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.1em 0.8em;
+  background-color: var(--secondary-focus);
   color: var(--theme-text);
   font-style: italic;
 }
