@@ -1,46 +1,40 @@
 ---
-import Layout from '../../layouts/Page.astro';
-import BlogPostPreview from '../../components/BlogPostPreview.astro';
-import Paginator from '../../components/Paginator.astro'
-import { getCollection } from 'astro:content';
-  
-  
-export async function getStaticPaths({paginate}) {
+import Layout from "../../layouts/Page.astro";
+import BlogPostPreview from "../../components/BlogPostPreview.astro";
+import Paginator from "../../components/Paginator.astro";
+import { getCollection } from "astro:content";
+import * as getBlog from "../../components/utility/getBlog.js";
 
-  const posts = await getCollection('blog', ({data}) => {
-      return import.meta.env.PROD ? data.draft !== true : true;
-      }).then(posts =>
-      posts
-        .map((post) => ({
-            slug: post.slug,
-			title: post.data.title,
-			description: post.data.description,
-			pubDate: post.data.pubDate,
-            // imgSrc: data.image.src,
-            // imgAlt: data.image.alt,
-		}))
-        .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate))
-);
-return paginate(posts, {pageSize: 10});
-
+export async function getStaticPaths({ paginate }) {
+    const posts = await getBlog.noDrafts().then((posts) =>
+        posts
+            .map((post) => ({
+                slug: post.slug,
+                title: post.data.title,
+                description: post.data.description,
+                pubDate: post.data.pubDate,
+                // imgSrc: data.image.src,
+                // imgAlt: data.image.alt,
+            }))
+            .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate)),
+    );
+    return paginate(posts, { pageSize: 10 });
 }
 
 const seo = {
-  title: 'Blog',
-  description: 'Blog posts, essays, diaries, news and tutorials by tjex (Tillman Jex)'
-}
+    title: "Blog",
+    description:
+        "Blog posts, essays, diaries, news and tutorials by tjex (Tillman Jex)",
+};
 
 const { page } = Astro.props;
 ---
 
-
-<Layout seo={seo} >
+<Layout seo={seo}>
     <!-- <article class="blog-page-content__article"> -->
-      <section class="postlist">
+    <section class="postlist">
         {page.data.map((post: any) => <BlogPostPreview post={post} />)}
-      </section>
+    </section>
     <!-- </article> -->
-    <Paginator page={page}/>
+    <Paginator page={page} />
 </Layout>
-
-

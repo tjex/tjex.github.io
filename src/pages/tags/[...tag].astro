@@ -5,12 +5,12 @@ import BlogPostPreview from "../../components/BlogPostPreview.astro";
 import * as getBlog from "../../components/utility/getBlog.js"
 
 export async function getStaticPaths() {
-    const blog = await getBlog.noDrafts();
+    const posts = await getBlog.noDrafts();
 
-    const uniqueTags = [...new Set(blog.map((post) => post.data.tags).flat())];
+    const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
 
     return uniqueTags.map((tag) => {
-        const filteredPosts = blog
+        const filteredPosts = posts
             .filter((post) => post.data.tags.includes(tag))
             .map(({ data, slug }) => ({
                 slug: slug,

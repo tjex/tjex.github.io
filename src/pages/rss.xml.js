@@ -8,7 +8,7 @@ import * as getBlog from "../components/utility/getBlog.js"
 const parser = new MarkdownIt();
 
 export async function GET(context) {
-    const blog = await getBlog.noDrafts();
+    const posts = await getBlog.noDrafts();
   return rss({
     title: "tjex.net - blog",
     description: site.description,
@@ -19,7 +19,7 @@ export async function GET(context) {
       </atom:link>
     `,
     stylesheet: "/rss/styles.xsl",
-    items: blog.map((post) => {
+    items: posts.map((post) => {
       return {
         title: post.data.title,
         pubDate: post.data.pubDate,

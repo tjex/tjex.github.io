@@ -1,8 +1,8 @@
 ---
 import * as getBlog from "./utility/getBlog.js";
 
-const blog = await getBlog.noDrafts();
-const uniqueTags = [...new Set(blog.map((post) => post.data.tags).flat())];
+const posts = await getBlog.noDrafts();
+const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
 ---
 
 {
