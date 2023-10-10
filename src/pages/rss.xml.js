@@ -3,7 +3,7 @@ import site from '../data/settings';
 import { getCollection } from 'astro:content';
 import sanitizeHtml from 'sanitize-html';
 import MarkdownIt from 'markdown-it';
-import * as getBlog from "../../components/utility/getBlog.js"
+import * as getBlog from "../components/utility/getBlog.js"
 
 const parser = new MarkdownIt();
 
