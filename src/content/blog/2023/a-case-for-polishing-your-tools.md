@@ -58,10 +58,12 @@ first place.
 
 Then you may want to alias some other frequently typed commands. Now you have enough where you refactor them
 out into a separate file and source it in your `.zshrc`, which requires you to learn a bit of bash syntax,
-which leads you to writing little utility scripts that run fast and do whatever you want, *because it
-runs in the shell and the shell is the lowest level interface between you and the computer*. Your computer becomes a much more powerful tool for you, and it's nicely polished so that you *move
+which leads you to writing little utility scripts that run fast and do whatever you want, because it
+runs in the shell and the shell is the lowest level interface between you and the computer. Your computer becomes a much more powerful tool for you, and it's nicely polished so that you *move
 fast* and *freely*. That's ace!
 
 Whenever someone says "polishing your tools is a trap, it's a bad thing", they're speaking of the extremes.
-Polishing your tools [ can be a great thing ](https://www.youtube.com/watch?v=9gUatBHuXE0). No-one wants to
-use a rusty hammer that gives them splinters.
+Polishing your tools [ can be a great thing ](https://www.youtube.com/watch?v=9gUatBHuXE0). It's helped me
+learn a good amount of base knowledge in an engaging environment and rewarding environment. No-one wants to
+use a rusty hammer that gives them splinters, particularly if they can learn things a long the way by
+polishing and sanding it. As with everything, self control, moderation and keeping an end goal in mind is key.
