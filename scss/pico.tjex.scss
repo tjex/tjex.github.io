@@ -29,17 +29,17 @@ $enable-important: false;
 @import "themes/tjex.net";
 
 // Layout
-@import "layout/tjex.net/sectioning"; // body, header, main, footer
-@import "layout/tjex.net/structures"; // divs styles and structure
-@import "layout/tjex.net/document"; // html
+@import "layout/sectioning"; // body, header, main, footer
+@import "layout/structures"; // divs styles and structure
+@import "layout/document"; // html
 @import "layout/section"; // section
 @import "layout/grid"; // .grid
 @import "layout/scroller"; // figure
 
 // Content
-@import "content/tjex.net/typography"; // a, headings, p, ul, blockquote, ...
-@import "content/tjex.net/miscs"; // hr, template, [hidden], dialog, canvas
-@import "content/tjex.net/embedded"; // audio, canvas, iframe, img, svg, video
+@import "content/typography"; // a, headings, p, ul, blockquote, ...
+@import "content/miscs"; // hr, template, [hidden], dialog, canvas
+@import "content/embedded"; // audio, canvas, iframe, img, svg, video
 @import "content/button"; // button, a[role=button], type=button, type=submit ...
 @import "content/form"; // input, select, textarea, label, fieldset, legend
 @import "content/table"; // table, tr, td, ...
