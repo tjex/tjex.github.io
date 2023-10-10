@@ -2,50 +2,46 @@
 // Lists pages with tag x
 import Layout from "../../layouts/Page.astro";
 import BlogPostPreview from "../../components/BlogPostPreview.astro";
-import { getCollection } from 'astro:content';
+import * as getBlog from "../../components/utility/getBlog.js"
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog', ({data}) => {
-      return data.draft !== true;
-      });
-  
-  const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
+    // I want to declare a const with the output of getBlog.noDrafts();
+    const blog = await getBlog.noDrafts();
 
-  return uniqueTags.map((tag) => {
-    const filteredPosts = posts
-    .filter((post) => post.data.tags.includes(tag))
-    .map(({ data, slug }) => ({
-        slug: slug,
-        title: data.title,
-        description: data.description,
-        pubDate: data.pubDate,
-      }));
-    return {
-      params: { tag },
-      props: { posts: filteredPosts },
-    };
-  });
+    const uniqueTags = [...new Set(blog.map((post) => post.data.tags).flat())];
+
+    return uniqueTags.map((tag) => {
+        const filteredPosts = blog
+            .filter((post) => post.data.tags.includes(tag))
+            .map(({ data, slug }) => ({
+                slug: slug,
+                title: data.title,
+                description: data.description,
+                pubDate: data.pubDate,
+            }));
+        return {
+            params: { tag },
+            props: { posts: filteredPosts },
+        };
+    });
 }
-
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
 
 const seoTitle = tag;
 const seo = {
-  title: seoTitle,
-  description: `All posts tagged with ${seoTitle} on tjex.net`
-}
+    title: seoTitle,
+    description: `All posts tagged with ${seoTitle} on tjex.net`,
+};
 ---
-
 
 <Layout seo={seo}>
     <h1>{tag}</h1>
-    <p>Posts tagged with <span class="bubble" >{tag}</a></p>
+    <p>Posts tagged with <span class="bubble">{tag}</span></p>
     <article class="blog-page-content__article">
-      <section class="postlist">
-        { posts.map((post: any) => <BlogPostPreview post={post} />) }
-      </section>
+        <section class="postlist">
+            {posts.map((post: any) => <BlogPostPreview post={post} />)}
+        </section>
     </article>
 </Layout>
-
