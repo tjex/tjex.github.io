@@ -6,7 +6,3 @@ const noDrafts = getCollection("blog", ({ data }) => {
 });
     return noDrafts
 }
-
-export function test() {
-    return "text"
-}

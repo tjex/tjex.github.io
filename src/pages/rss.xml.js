@@ -3,13 +3,12 @@ import site from '../data/settings';
 import { getCollection } from 'astro:content';
 import sanitizeHtml from 'sanitize-html';
 import MarkdownIt from 'markdown-it';
+import * as getBlog from "../../components/utility/getBlog.js"
 
 const parser = new MarkdownIt();
 
 export async function GET(context) {
-  const blog = await getCollection('blog', ({data}) => {
-      return data.draft !== true;
-  });
+    const blog = await getBlog.noDrafts();
   return rss({
     title: "tjex.net - blog",
     description: site.description,

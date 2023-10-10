@@ -1,16 +1,11 @@
 ---
-// Used to list all unique tags
-import { getCollection } from "astro:content";
+import * as getBlog from "./utility/getBlog.js";
 
-const blog = await getCollection("blog", ({ data }) => {
-    return data.draft !== true;
-});
-
-// getting unique tags
+const blog = await getBlog.noDrafts();
 const uniqueTags = [...new Set(blog.map((post) => post.data.tags).flat())];
 ---
 
-<!-- <Tags tags={uniqueTags} /> -->{
+{
     uniqueTags.map((tag) => (
         <ul>
             <li>

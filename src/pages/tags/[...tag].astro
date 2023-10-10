@@ -5,7 +5,6 @@ import BlogPostPreview from "../../components/BlogPostPreview.astro";
 import * as getBlog from "../../components/utility/getBlog.js"
 
 export async function getStaticPaths() {
-    // I want to declare a const with the output of getBlog.noDrafts();
     const blog = await getBlog.noDrafts();
 
     const uniqueTags = [...new Set(blog.map((post) => post.data.tags).flat())];
