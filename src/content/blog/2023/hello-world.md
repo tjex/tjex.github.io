@@ -21,3 +21,8 @@ And if people actually get to this blog...
 
 Let's see...
 
+```go
+import fmt 
+
+-->
+```
