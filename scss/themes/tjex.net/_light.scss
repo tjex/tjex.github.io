@@ -27,7 +27,7 @@
 
   // Secondary colors
   --secondary: #{$grey-600};
-  --secondary-hover: #{$grey-700};
+  --secondary-hover: #{mix($grey-100, $grey-200)};
   --secondary-focus: #{rgba($grey-600, 0.125)};
   --secondary-inverse: #{$black};
 

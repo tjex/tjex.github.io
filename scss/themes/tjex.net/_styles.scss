@@ -70,7 +70,7 @@
   --form-label-font-weight: var(--font-weight);
 
   // Transitions
-  --transition: 0.2s ease-in-out;
+  --transition: 0.25s ease-in-out;
 
   // Modal (<dialog>)
   --modal-overlay-backdrop-filter: blur(0.25rem);
@@ -160,6 +160,7 @@
 // Link
 a {
   --text-decoration: none;
+  transition: var(--transition);
 
   // Secondary & Contrast
   @if $enable-classes {
@@ -170,8 +171,8 @@ a {
   }
 }
 
-// all links in visit[ed] area will be visited link color
-// good to make sense of 'previously, previously, previously' navigation
+
+// use this class if you would like to force a visited link color.
 .visit a {
    color: var(--link-visited); 
 }
@@ -260,16 +261,14 @@ kbd {
     flex-grow: 0;
 }
 
-// -- BLOG / POSTS -- //
-
-
 .pill-link a {
     text-decoration: none;
     margin: 0.4em;
     border: none;
     border-radius: .3em;
-    padding: .1em .8em;
+    padding: .2em .8em;
     background-color: var(--secondary-focus);
+    transition: var(--transition);
 }
 
 .tag {
@@ -285,7 +284,7 @@ kbd {
 
 .pill-link a:hover,
 .pill-link a:focus {
-    background-color: var(--secondary-contrast);
+    background-color: var(--secondary-hover);
 }
 
 .postlist {

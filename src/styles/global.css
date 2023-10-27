@@ -33,7 +33,7 @@
   --nav-link-spacing-vertical: 0.5rem;
   --nav-link-spacing-horizontal: 0.5rem;
   --form-label-font-weight: var(--font-weight);
-  --transition: 0.2s ease-in-out;
+  --transition: 0.25s ease-in-out;
   --modal-overlay-backdrop-filter: blur(0.25rem);
 }
 @media (min-width: 576px) {
@@ -130,6 +130,7 @@ dialog > article {
 
 a {
   --text-decoration: none;
+  transition: var(--transition);
 }
 a.secondary, a.contrast {
   --text-decoration: underline;
@@ -221,8 +222,9 @@ kbd {
   margin: 0.4em;
   border: none;
   border-radius: 0.3em;
-  padding: 0.1em 0.8em;
+  padding: 0.2em 0.8em;
   background-color: var(--secondary-focus);
+  transition: var(--transition);
 }
 
 .tag {
@@ -238,7 +240,7 @@ kbd {
 
 .pill-link a:hover,
 .pill-link a:focus {
-  background-color: var(--secondary-contrast);
+  background-color: var(--secondary-hover);
 }
 
 .postlist {
@@ -271,7 +273,7 @@ kbd {
   --primary-focus: rgba(16, 149, 193, 0.125);
   --primary-inverse: #fff3f1;
   --secondary: hsl(205, 15%, 41%);
-  --secondary-hover: hsl(205, 20%, 32%);
+  --secondary-hover: #aab9c3;
   --secondary-focus: rgba(89, 107, 120, 0.125);
   --secondary-inverse: #2d2d2d;
   --link-visited: hsl(75, 56%, 47%);
@@ -379,7 +381,7 @@ kbd {
     --primary-focus: rgba(16, 149, 193, 0.25);
     --primary-inverse: #fff3f1;
     --secondary: hsl(205, 15%, 41%);
-    --secondary-hover: hsl(205, 10%, 50%);
+    --secondary-hover: #4e606d;
     --secondary-focus: rgba(115, 130, 140, 0.25);
     --secondary-inverse: #fff3f1;
     --link-visited: #94758c;
@@ -487,7 +489,7 @@ kbd {
   --primary-focus: rgba(16, 149, 193, 0.25);
   --primary-inverse: #fff3f1;
   --secondary: hsl(205, 15%, 41%);
-  --secondary-hover: hsl(205, 10%, 50%);
+  --secondary-hover: #4e606d;
   --secondary-focus: rgba(115, 130, 140, 0.25);
   --secondary-inverse: #fff3f1;
   --link-visited: #94758c;
