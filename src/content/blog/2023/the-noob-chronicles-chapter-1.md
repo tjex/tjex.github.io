@@ -127,12 +127,12 @@ Since then I've...
   damn easy it is to work with text and files compared to before.
 - built my own website from scratch *and actually make conscious design
   decisions that I follow through on*.
-- studied a full semester of computer science at one of the best regarded
+- studied a full semester of computer science at one of the most notable 
   engineering schools in Europe (KTH, Stockholm) and survived.
 - became proficient with git and feel safe and confident to try out changes
   quickly and deeply within my projects.
 - become comfortable reading and implementing API documentation.
-- learned my way around JavaScript, Python, Go, HTML, CSS, Lua and Bash to a degree that is between functional and mediocre. 
+- learned my way around JavaScript, Python, Go, HTML, CSS, Lua and Bash to a degree that is on average between functional and mediocre. 
 - solved a real world creative problem with code during an [artistic
   project](https://github.com/tjex/WOMB-Installation).
 - reinvigorated my musical side and creative palette with [TidalCycles](https://tidalcycles.org/), allowing
@@ -142,6 +142,17 @@ Since then I've...
 - researching into topics of distributed systems, conflict-free replicated data
   types, ActivityPub, LoRaWAN, Multi-agent systems and pattern generation for
   my masters thesis - and can actually comprehend what I'm reading.
+
+
+## Until Next Time
+
+My main goals / tasks from here are to:
+
+1. finish my masters thesis
+2. learn algorithms
+3. learn JavaScript, Go, Node and Flutter
+4. up my Machine Learning skills
+5. learn about distributed systems and the respective technologies
 
 Let's see what happens up until chapter two!
 
