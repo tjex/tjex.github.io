@@ -241,11 +241,25 @@ tfoot {
 }
 
 // Code
+
+// Fira Code
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('/fonts/woff2/FiraCode-VF.woff2') format('woff2-variations');
+}
+
+@supports (font-variation-settings: normal) {
+  code { font-family: 'Fira Code VF', monospace; }
+}
+
 pre,
 code,
 kbd,
 samp {
-  --font-family: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace",
+  --font-family: "Fira Code", "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace",
     "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
