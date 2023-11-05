@@ -1,0 +1,38 @@
+---
+import Layout from "../../layouts/Page.astro";
+import HackPreview from "../../components/HackPreview.astro";
+import Paginator from "../../components/Paginator.astro";
+import * as getHacks from "../../components/utility/getHacks.js";
+
+export async function getStaticPaths({ paginate }) {
+    const hacks = await getHacks.noDrafts().then((hacks) =>
+        hacks
+            .map((hack: any) => ({
+                slug: hack.slug,
+                title: hack.data.title,
+                description: hack.data.description,
+                pubDate: hack.data.pubDate,
+            }))
+            .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate)),
+    );
+    return paginate(hacks, { pageSize: 10 });
+}
+
+const seo = {
+    title: "Hacks",
+    description:
+        "Collection of hacks, configurations, functions, and other tips and tricks that I've personally found to be useful",
+};
+
+const { page } = Astro.props;
+---
+
+<Layout seo={seo}>
+    <!-- <article class="blog-page-content__article"> -->
+    <section class="postlist">
+        {page.data.map((hack: any) => <HackPreview hack={hack} />)}
+    </section>
+    <!-- </article> -->
+    <Paginator page={page} />
+</Layout>
+

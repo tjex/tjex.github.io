@@ -28,7 +28,6 @@ const hacks = defineCollection({
         modDate: z.date().optional(),
         author: z.string(),
         tags: z.array(z.string()),
-        draft: z.boolean(),
         category: z.string().optional(),
     })
 })

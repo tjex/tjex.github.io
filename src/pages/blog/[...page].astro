@@ -2,7 +2,6 @@
 import Layout from "../../layouts/Page.astro";
 import BlogPostPreview from "../../components/BlogPostPreview.astro";
 import Paginator from "../../components/Paginator.astro";
-import { getCollection } from "astro:content";
 import * as getBlog from "../../components/utility/getBlog.js";
 
 export async function getStaticPaths({ paginate }) {
