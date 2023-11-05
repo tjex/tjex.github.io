@@ -1,0 +1,22 @@
+---
+title: fzf - directory picker widget
+description: A zsh function that picks a directory and pastes it into the current prompt.
+pubDate: 2023-11-05 
+author: tjex
+tags: ['shell', 'fzf']
+draft: true
+---
+
+```zsh
+# use fzf to search for dirs and paste them inplace, in the current prompt
+fzf_dir() {
+    cmd=$(fd . --type d | fzf --preview ${FZF_ALT_C_OPTS})
+    LBUFFER="${LBUFFER}${(q)cmd}"
+    local ret=$?
+    zle reset-prompt
+    return $ret
+}
+
+# export the directory as a widget to use in keybinds
+zle -N fzf_dir
+```

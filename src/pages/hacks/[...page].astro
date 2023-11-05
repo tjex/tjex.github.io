@@ -11,7 +11,7 @@ export async function getStaticPaths({ paginate }) {
                 slug: hack.slug,
                 title: hack.data.title,
                 description: hack.data.description,
-                pubDate: hack.data.pubDate,
+                tags: hack.data.tags,
             }))
             .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate)),
     );
@@ -28,11 +28,10 @@ const { page } = Astro.props;
 ---
 
 <Layout seo={seo}>
-    <!-- <article class="blog-page-content__article"> -->
+    <h1> Hacks </h1>
     <section class="postlist">
         {page.data.map((hack: any) => <HackPreview hack={hack} />)}
     </section>
-    <!-- </article> -->
     <Paginator page={page} />
 </Layout>
 
