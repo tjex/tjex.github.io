@@ -9,15 +9,14 @@
     "format": "npx prettier --write ."
   },
   "devDependencies": {
-    "@astrojs/sitemap": "^2.0.2",
-    "astro": "^3.2.3",
-    "prettier-plugin-astro": "^0.11.1"
+    "@astrojs/sitemap": "^3.0.3",
+    "astro": "^3.4.3",
+    "prettier-plugin-astro": "^0.12.1"
   },
   "dependencies": {
-    "@astrojs/mdx": "^0.19.4",
-    "@astrojs/rss": "^2.4.4",
-    "@igor.dvlpr/astro-post-excerpt": "^2.0.1",
-    "markdown-it": "^13.0.1",
-    "sanitize-html": "^2.10.0"
+    "@astrojs/mdx": "^1.1.3",
+    "@astrojs/rss": "^3.0.0",
+    "markdown-it": "^13.0.2",
+    "sanitize-html": "^2.11.0"
   }
 }
