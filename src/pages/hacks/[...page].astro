@@ -1,8 +1,8 @@
 ---
-import Layout from "../../../layouts/Page.astro";
-import HackPreview from "../../../components/HackPreview.astro";
-import Paginator from "../../../components/Paginator.astro";
-import * as getHacks from "../../../components/utility/getHacks.js";
+import Layout from "../../layouts/Page.astro";
+import HackPreview from "../../components/HackPreview.astro";
+import Paginator from "../../components/Paginator.astro";
+import * as getHacks from "../../components/utility/getHacks.js";
 
 export async function getStaticPaths({ paginate }) {
     const hacks = await getHacks.noDrafts().then((hacks) =>
