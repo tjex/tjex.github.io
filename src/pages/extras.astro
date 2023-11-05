@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Page.astro";
+
+const seo = {
+    title: "Extras",
+    description:
+        "Extra content and value for the curious. For example, useful programming tips and tricks, recommended music, books and films.",
+    image: "../src/tjex-social-img.jpg",
+};
+---
+
+<Layout seo={seo}>
+    <h1>Extras</h1>
+    <ul>
+        <li>
+            <a rel="me" href="/extras/listening"
+                >Selected recommended listenings</a
+            >
+        </li>
+        <li><a rel="me" href="/extras/hacks">Hacks, configs, etc</a></li>
+    </ul>
+</Layout>
