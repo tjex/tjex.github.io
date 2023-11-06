@@ -1,26 +1,15 @@
 ---
 import * as colUtil from "../scripts/collectionUtil.ts";
 
-const entries = await colUtil.noDrafts("blog");
-const hacks = await colUtil.noDrafts("hacks");
-const postsTags = [...new Set(entries.map((entry: any) => entry.data.tags).flat())];
-const hacksTags = [...new Set(hacks.map((entry: any) => entry.data.tags).flat())];
+const { collection } = Astro.props;
+
+const entries = await colUtil.noDrafts(collection);
+const tags = [...new Set(entries.map((entry: any) => entry.data.tags).flat())];
 ---
 
-<h3>From <a href="/blog">Blog</a></h3>
 <p>
 {
-    postsTags.map((tag) => (
-        <a class="tag" href={`/tags/${tag}`}>
-            {tag}
-        </a>
-    ))
-}
-</p>
-<h3>From <a href="/hacks">Hacks</a></h3>
-<p>
-{
-    hacksTags.map((tag) => (
+    tags.map((tag) => (
         <a class="tag" href={`/tags/${tag}`}>
             {tag}
         </a>
