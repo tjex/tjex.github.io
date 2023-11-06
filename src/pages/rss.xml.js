@@ -2,12 +2,12 @@ import rss from '@astrojs/rss';
 import site from '../data/settings';
 import sanitizeHtml from 'sanitize-html';
 import MarkdownIt from 'markdown-it';
-import * as getBlog from "../components/utility/getBlog.js"
+import * as colUtil from "../scripts/collectionUtil.js"
 
 const parser = new MarkdownIt();
 
 export async function GET(context) {
-    const posts = await getBlog.noDrafts();
+    const posts = await colUtil.noDrafts("blog");
   return rss({
     title: "tjex.net - blog",
     description: site.description,

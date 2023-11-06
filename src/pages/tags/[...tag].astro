@@ -2,12 +2,12 @@
 // Lists pages with tag x
 import Layout from "../../layouts/Page.astro";
 import BlogPostPreview from "../../components/BlogPostPreview.astro";
-import * as getBlog from "../../components/utility/getBlog.js"
+import * as colUtil from "../../scripts/collectionUtil.js"
 
 export async function getStaticPaths() {
-    const posts = await collectionUtil.noDrafts("blog");
+    const posts = await colUtil.noDrafts("blog");
 
-    const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
+    const uniqueTags = [...new Set(posts.map((post: any) => post.data.tags).flat())];
 
     return uniqueTags.map((tag) => {
         const filteredPosts = posts
