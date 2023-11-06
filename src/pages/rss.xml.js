@@ -2,7 +2,7 @@ import rss from '@astrojs/rss';
 import site from '../data/settings';
 import sanitizeHtml from 'sanitize-html';
 import MarkdownIt from 'markdown-it';
-import * as colUtil from "../scripts/collectionUtil.js"
+import * as colUtil from "../scripts/collectionUtil.ts"
 
 const parser = new MarkdownIt();
 

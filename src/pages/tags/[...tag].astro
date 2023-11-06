@@ -2,7 +2,7 @@
 // Lists pages with tag x
 import Layout from "../../layouts/Page.astro";
 import BlogPostPreview from "../../components/BlogPostPreview.astro";
-import * as colUtil from "../../scripts/collectionUtil.js"
+import * as colUtil from "../../scripts/collectionUtil.ts"
 
 export async function getStaticPaths() {
     const posts = await colUtil.noDrafts("blog");
