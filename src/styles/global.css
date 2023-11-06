@@ -240,14 +240,14 @@ kbd {
 }
 
 .tag {
+  font-size: 0.8rem;
   text-decoration: none;
-  margin: 0.2em 0.2em;
+  margin: 0.2em 0.3em;
   border: none;
   border-radius: 0.3em;
   padding: 0.1em 0.8em;
   background-color: var(--secondary-focus);
   color: var(--theme-text);
-  font-style: italic;
 }
 
 .pill-link a:hover,

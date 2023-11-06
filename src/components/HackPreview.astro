@@ -12,8 +12,7 @@ const { entry } = Astro.props;
 
 <article>
     <a href={`/hacks/${entry.slug}`}>
-        <h1 class="title">{entry.title}</h1>
+        <h1 class="title">{entry.title}<span class="secondary"> •</span> <Tags tags={entry.tags} /></h1>
     </a>
     <p class="description">{entry.description}</p>
-    <Tags tags={entry.tags} />
 </article>
