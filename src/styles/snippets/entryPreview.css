@@ -1,0 +1,29 @@
+a {
+  text-decoration: none;
+}
+
+a:hover > .title {
+  text-decoration: underline;
+}
+
+.title,
+.author,
+.publish-date {
+  margin: 0;
+}
+
+.pub-date,
+.author {
+  font-size: 0.8rem;
+  color: var(--secondary);
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--theme-text);
+}
+
+.description {
+  color: var(--secondary);
+}

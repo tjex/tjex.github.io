@@ -1,4 +1,6 @@
 ---
+// entry preview component for contact filed as "Blog"
+import "../styles/snippets/entryPreview.css";
 export interface Props {
     entry: any;
 }
@@ -13,41 +15,3 @@ const { entry } = Astro.props;
     <p class="description">{entry.description}</p>
 </article>
 
-<style>
-    a {
-        text-decoration: none;
-    }
-
-    a:hover > .title {
-        text-decoration: underline;
-    }
-
-    .post-main__img {
-        width: 100%;
-        max-width: 600px;
-        height: auto;
-        margin-bottom: 1rem;
-    }
-
-    .title,
-    .author,
-    .publish-date {
-        margin: 0;
-    }
-
-    .pub-date,
-    .author {
-        font-size: 0.8rem;
-        color: var(--secondary);
-    }
-
-    .title {
-        font-size: 1rem;
-        font-weight: 700;
-        color: var(--theme-text);
-    }
-
-    .description {
-        color: var(--secondary);
-    }
-</style>

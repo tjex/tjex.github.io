@@ -1,4 +1,6 @@
 ---
+// entry preview component for contact filed as "Hacks".
+import "../styles/snippets/entryPreview.css";
 import Tags from "../components/Tags.astro";
 
 export interface Props {
@@ -15,43 +17,3 @@ const { entry } = Astro.props;
     <p class="description">{entry.description}</p>
     <Tags tags={entry.tags} />
 </article>
-
-<!-- TODO: refactor the css as a compontnet as it's used by postPreview as well-->
-<style>
-    a {
-        text-decoration: none;
-    }
-
-    a:hover > .title {
-        text-decoration: underline;
-    }
-
-    .post-main__img {
-        width: 100%;
-        max-width: 600px;
-        height: auto;
-        margin-bottom: 1rem;
-    }
-
-    .title,
-    .author,
-    .publish-date {
-        margin: 0;
-    }
-
-    .pub-date,
-    .author {
-        font-size: 0.8rem;
-        color: var(--secondary);
-    }
-
-    .title {
-        font-size: 1rem;
-        font-weight: 700;
-        color: var(--theme-text);
-    }
-
-    .description {
-        color: var(--secondary);
-    }
-</style>
