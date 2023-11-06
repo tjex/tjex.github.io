@@ -1,11 +1,10 @@
 ---
-import * as getBlog from "./utility/getBlog.js";
-import * as getHacks from "./utility/getHacks.js";
+import * as colUtil from "./utility/collectionUtil.js";
 
-const posts = await collectionUtil.noDrafts("blog");
-const hacks = await collectionUtil.noDrafts("hacks");
-const postsTags = [...new Set(posts.map((post) => post.data.tags).flat())];
-const hacksTags = [...new Set(hacks.map((hack) => hack.data.tags).flat())];
+const entries = await colUtil.noDrafts("blog");
+const hacks = await colUtil.noDrafts("hacks");
+const postsTags = [...new Set(entries.map((entry: any) => entry.data.tags).flat())];
+const hacksTags = [...new Set(hacks.map((entry: any) => entry.data.tags).flat())];
 ---
 
 <h3>From <a href="/blog">Blog</a></h3>

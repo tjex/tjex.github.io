@@ -2,10 +2,10 @@
 import Layout from "../../layouts/Page.astro";
 import HackPreview from "../../components/HackPreview.astro";
 import Paginator from "../../components/Paginator.astro";
-import * as getHacks from "../../components/utility/getHacks.js";
+import * as colUtil from "../../components/utility/collectionUtil.js";
 
 export async function getStaticPaths({ paginate }) {
-    const hacks = await getHacks.noDrafts().then((hacks) =>
+    const hacks = await colUtil.noDrafts("hacks").then((hacks) =>
         hacks
             .map((hack: any) => ({
                 slug: hack.slug,

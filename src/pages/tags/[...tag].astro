@@ -5,7 +5,7 @@ import BlogPostPreview from "../../components/BlogPostPreview.astro";
 import * as getBlog from "../../components/utility/getBlog.js"
 
 export async function getStaticPaths() {
-    const posts = await getBlog.noDrafts();
+    const posts = await collectionUtil.noDrafts("blog");
 
     const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
 

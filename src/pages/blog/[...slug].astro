@@ -3,11 +3,11 @@
 
 import Layout from "../../layouts/Post.astro";
 import { Image } from "astro:assets";
-import * as getBlog from "../../components/utility/getBlog.js";
+import * as colUtil from "../../components/utility/collectionUtil.js";
 
 // Generate a new path for every blog entry
 export async function getStaticPaths() {
-    const posts = await getBlog.noDrafts();
+    const posts = await colUtil.noDrafts("blog");
     return posts.map((post: any) => ({
         params: { slug: post.slug },
         props: { post },

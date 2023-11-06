@@ -2,12 +2,12 @@
 import Layout from "../../layouts/Page.astro";
 import BlogPostPreview from "../../components/BlogPostPreview.astro";
 import Paginator from "../../components/Paginator.astro";
-import * as getBlog from "../../components/utility/getBlog.js";
+import * as colUtil from "../../components/utility/collectionUtil.js";
 
 export async function getStaticPaths({ paginate }) {
-    const posts = await getBlog.noDrafts().then((posts) =>
+    const posts = await colUtil.noDrafts("blog").then((posts) =>
         posts
-            .map((post) => ({
+            .map((post: any) => ({
                 slug: post.slug,
                 title: post.data.title,
                 description: post.data.description,
