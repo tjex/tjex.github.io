@@ -7,6 +7,25 @@ tags: ['fzf', 'shell']
 draft: true
 ---
 
+[fzf](https://github.com/junegunn/fzf) is of course one of the best tools around. 
+
+Out of the box it offers:
+
+- file and directory search
+- history search
+- "auto `cd`" (search for a directory and cd into it on selection)
+
+I would say 80% of the time I use `fzf` to pick files, and therefore have my 
+`$FZF_DEFAULT_COMMAND` set to only find files.
+
+This then means that I can't use the keybinding to find directories.
+
+I dug into the `zsh` functions that come with `fzf` to replicate the same file picking 
+behaviour, but for directories. It get's exported as a widget, which you can then 
+use to bind to a keybind of your choice.
+
+In your `.zshrc`:
+
 ```zsh
 # use fzf to search for dirs and paste them inplace, in the current prompt
 fzf_dir() {
@@ -17,6 +36,10 @@ fzf_dir() {
     return $ret
 }
 
-# export the directory as a widget to use in keybinds
+# export the function as a widget
 zle -N fzf_dir
+
+# assign the widget to a keybind
+bindkey '^d' fzf_dir # set in ./functions
 ```
+
