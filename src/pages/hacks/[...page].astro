@@ -1,40 +1,37 @@
 ---
-// tjex.net/blog (display of all blog posts)
-
 import Layout from "../../layouts/Page.astro";
-import BlogPostPreview from "../../components/BlogPostPreview.astro";
+import HackPreview from "../../components/HackPreview.astro";
 import Paginator from "../../components/Paginator.astro";
 import * as colUtil from "../../scripts/collectionUtil.ts";
 
 export async function getStaticPaths({ paginate }) {
-    const entries = await colUtil.noDrafts("blog").then((entries) =>
+    const entries = await colUtil.noDrafts("hacks").then((entries) =>
         entries
             .map((entry: any) => ({
                 slug: entry.slug,
                 title: entry.data.title,
                 description: entry.data.description,
                 tags: entry.data.tags,
-                pubDate: entry.data.pubDate,
             }))
             .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate)),
     );
     return paginate(entries, { pageSize: 10 });
 }
 
-
 const seo = {
-    title: "Blog",
+    title: "Hacks",
     description:
-        "Blog posts, essays, diaries, news and tutorials by tjex (Tillman Jex)",
+        "Collection of hacks, configurations, functions, and other tips and tricks that I've personally found to be useful",
 };
 
 const { page } = Astro.props;
 ---
 
 <Layout seo={seo}>
-    <h1>Blog</h1>
+    <h1> Hacks </h1>
     <section class="postlist">
-        {page.data.map((entry: any) => <BlogPostPreview entry={entry} />)}
+        {page.data.map((entry: any) => <HackPreview entry={entry} />)}
     </section>
     <Paginator page={page} />
 </Layout>
+

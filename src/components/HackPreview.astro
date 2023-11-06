@@ -1,4 +1,6 @@
 ---
+import Tags from "../components/Tags.astro";
+
 export interface Props {
     entry: any;
 }
@@ -7,12 +9,14 @@ const { entry } = Astro.props;
 ---
 
 <article class="entry-preview">
-    <a href={`/blog/${entry.slug}`}>
+    <a href={`/hacks/${entry.slug}`}>
         <h1 class="title">{entry.title}</h1>
     </a>
     <p class="description">{entry.description}</p>
+    <Tags tags={entry.tags} />
 </article>
 
+<!-- TODO: refactor the css as a compontnet as it's used by postPreview as well-->
 <style>
     a {
         text-decoration: none;

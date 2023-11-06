@@ -1,18 +1,29 @@
 ---
-import * as getBlog from "./utility/getBlog.js";
+import * as colUtil from "../scripts/collectionUtil.ts";
 
-const posts = await getBlog.noDrafts();
-const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
+const entries = await colUtil.noDrafts("blog");
+const hacks = await colUtil.noDrafts("hacks");
+const postsTags = [...new Set(entries.map((entry: any) => entry.data.tags).flat())];
+const hacksTags = [...new Set(hacks.map((entry: any) => entry.data.tags).flat())];
 ---
 
+<h3>From <a href="/blog">Blog</a></h3>
+<p>
 {
-    uniqueTags.map((tag) => (
-        <ul>
-            <li>
-                <a class="tag" href={`/tags/${tag}`}>
-                    {tag}
-                </a>
-            </li>
-        </ul>
+    postsTags.map((tag) => (
+        <a class="tag" href={`/tags/${tag}`}>
+            {tag}
+        </a>
     ))
 }
+</p>
+<h3>From <a href="/hacks">Hacks</a></h3>
+<p>
+{
+    hacksTags.map((tag) => (
+        <a class="tag" href={`/tags/${tag}`}>
+            {tag}
+        </a>
+    ))
+}
+</p>

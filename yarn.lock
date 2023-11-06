@@ -531,30 +531,6 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.19.4.tgz#d46a6e220a717f31f39ae80f49477cc3220be0f0"
   integrity sha512-HP0GDNla1T3ZL8Ko/SHAS2GgtjOg+VmWnnYLhuTksr++EnduYB0f3Y2LzHsUwb2iQ13JGoY6G3R8h6Du/WG6uA==
 
-"@igor.dvlpr/astro-post-excerpt@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@igor.dvlpr/astro-post-excerpt/-/astro-post-excerpt-2.1.0.tgz#957eb09704067c3891ab10d48f7f0f1216e43f23"
-  integrity sha512-KCX5ohcRr4Mz43cBLGMYUx5DqB1yrpZMXx/y2QU5z58yAiqFcpv80a7J5g+7gM2IslrPjrIiWewxRAGUo3VJ9Q==
-  dependencies:
-    "@igor.dvlpr/strip-headings" "^1.0.1"
-    "@igor.dvlpr/strip-html" "^1.0.1"
-    "@igor.dvlpr/strip-html-headings" "^1.0.0"
-
-"@igor.dvlpr/strip-headings@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@igor.dvlpr/strip-headings/-/strip-headings-1.0.1.tgz#08ee78fbcb229844081380883c87ef000e082562"
-  integrity sha512-JSQhnsBHG6t7sc1LzhDqk6TLg/AoXACTe5Yf7c2AtbB1OsKl2NPNOQHYUr68THPUSn0JTQMLAYXxfVu3SixSbA==
-
-"@igor.dvlpr/strip-html-headings@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@igor.dvlpr/strip-html-headings/-/strip-html-headings-1.0.0.tgz#49559013794f829b8cc906f10d42c41a10c8fbb9"
-  integrity sha512-mwkLmjzVJ5rUdPzIBc3GvVqhkJAtMpcuLZnBlOrhQMSYCzeMl8WTCPvExgb38aCH0/WAJyuQc7NgNnAQRwsXmw==
-
-"@igor.dvlpr/strip-html@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@igor.dvlpr/strip-html/-/strip-html-1.0.1.tgz#b94a74dcb0754fae598b21b423eacf27f157daf4"
-  integrity sha512-7ngztsUqgrCzs2VBiMYl8LOORpNP1m7pVzzt932QVgxhU360LGwvEcEOnv9vEa223l6tc/1rSYR/g4aBH9ahVw==
-
 "@jridgewell/gen-mapping@^0.3.0", "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz#7e02e6eb5df901aaedb08514203b096614024098"
