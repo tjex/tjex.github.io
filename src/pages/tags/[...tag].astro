@@ -1,32 +1,18 @@
 ---
 // Lists pages with tag x
+import type { GetStaticPaths } from "astro";
 import Layout from "../../layouts/Page.astro";
 import BlogPostPreview from "../../components/BlogPostPreview.astro";
-import * as colUtil from "../../scripts/collectionUtil.ts"
+import * as colUtil from "../../scripts/collectionUtil.ts";
 
-export async function getStaticPaths() {
-    const posts = await colUtil.noDrafts("blog");
-
-    const uniqueTags = [...new Set(posts.map((post: any) => post.data.tags).flat())];
-
-    return uniqueTags.map((tag) => {
-        const filteredPosts = posts
-            .filter((post) => post.data.tags.includes(tag))
-            .map(({ data, slug }) => ({
-                slug: slug,
-                title: data.title,
-                description: data.description,
-                pubDate: data.pubDate,
-            }));
-        return {
-            params: { tag },
-            props: { posts: filteredPosts },
-        };
-    });
+export const getStaticPaths: GetStaticPaths = async () => {
+  const collectionName = "blog"; 
+  const paths = await colUtil.getStaticPaths(collectionName);
+  return paths;
 }
 
 const { tag } = Astro.params;
-const { posts } = Astro.props;
+const { entries } = Astro.props;
 
 const seoTitle = tag;
 const seo = {
@@ -40,7 +26,7 @@ const seo = {
     <p>Posts tagged with <span class="bubble">{tag}</span></p>
     <article class="blog-page-content__article">
         <section class="postlist">
-            {posts.map((post: any) => <BlogPostPreview post={post} />)}
+            {entries.map((post: any) => <BlogPostPreview post={post} />)}
         </section>
     </article>
 </Layout>
