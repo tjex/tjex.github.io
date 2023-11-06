@@ -2,18 +2,18 @@
 import Tags from "../components/Tags.astro";
 
 export interface Props {
-    hack: any;
+    entry: any;
 }
 
-const { hack } = Astro.props;
+const { entry } = Astro.props;
 ---
 
-<article class="post-preview">
-    <a href={`/hacks/${hack.slug}`}>
-        <h1 class="title">{hack.title}</h1>
+<article class="entry-preview">
+    <a href={`/hacks/${entry.slug}`}>
+        <h1 class="title">{entry.title}</h1>
     </a>
-    <p class="description">{hack.description}</p>
-    <Tags tags={hack.tags} />
+    <p class="description">{entry.description}</p>
+    <Tags tags={entry.tags} />
 </article>
 
 <!-- TODO: refactor the css as a compontnet as it's used by postPreview as well-->

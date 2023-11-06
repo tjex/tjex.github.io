@@ -6,10 +6,9 @@ import BlogPostPreview from "../../components/BlogPostPreview.astro";
 import * as colUtil from "../../scripts/collectionUtil.ts";
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const collectionName = "blog"; 
-  const paths = await colUtil.getStaticPaths(collectionName);
-  return paths;
-}
+    const paths = await colUtil.getEntriesPerTag(["blog", "hacks"]);
+    return paths;
+};
 
 const { tag } = Astro.params;
 const { entries } = Astro.props;
@@ -26,7 +25,7 @@ const seo = {
     <p>Posts tagged with <span class="bubble">{tag}</span></p>
     <article class="blog-page-content__article">
         <section class="postlist">
-            {entries.map((post: any) => <BlogPostPreview post={post} />)}
+            {entries.map((entry: any) => <BlogPostPreview entry={entry}/>)}
         </section>
     </article>
 </Layout>
