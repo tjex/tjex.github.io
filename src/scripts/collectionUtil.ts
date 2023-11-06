@@ -34,22 +34,3 @@ export async function getEntriesPerTag(collections: string[]) {
     }
     return l
 }
-
-// export async function getEntriesPerTag(collection: string) {
-//     const entries = await noDrafts(collection);
-//
-//     const uniqueTags = [...new Set(entries.map((entry: any) => entry.data.tags).flat())];
-//
-//     return uniqueTags.map((tag) => {
-//         const filteredentries = entries
-//             .filter((entry) => entry.data.tags.includes(tag))
-//             .map(({ data, slug }) => ({
-//                 slug: slug,
-//                 title: data.title,
-//                 description: data.description,
-//                 pubDate: data.pubDate,
-//             }));
-//         return {
-//             params: { tag },
-//             props: { entries: filteredentries },
-//         };
