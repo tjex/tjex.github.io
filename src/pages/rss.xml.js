@@ -1,6 +1,5 @@
 import rss from '@astrojs/rss';
 import site from '../data/settings';
-import { getCollection } from 'astro:content';
 import sanitizeHtml from 'sanitize-html';
 import MarkdownIt from 'markdown-it';
 import * as getBlog from "../components/utility/getBlog.js"
@@ -14,7 +13,7 @@ export async function GET(context) {
     description: site.description,
     site: context.site,
     customData: `
-      <atom:link href='${site.rssURL}' rel='self' type='application/rss+xml' 
+      <atom:link href='${site.rssURL}' rel='self' type='application/rss+xml'
       xmlns:atom='http://www.w3.org/2005/Atom' xmlns:content='http://purl.org/rss/1.0/modules/content/'>
       </atom:link>
     `,
@@ -31,5 +30,4 @@ export async function GET(context) {
     }),
   });
 }
-
 
