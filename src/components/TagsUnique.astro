@@ -2,8 +2,8 @@
 import * as getBlog from "./utility/getBlog.js";
 import * as getHacks from "./utility/getHacks.js";
 
-const posts = await getBlog.noDrafts();
-const hacks = await getHacks.noDrafts();
+const posts = await collectionUtil.noDrafts("blog");
+const hacks = await collectionUtil.noDrafts("hacks");
 const postsTags = [...new Set(posts.map((post) => post.data.tags).flat())];
 const hacksTags = [...new Set(hacks.map((hack) => hack.data.tags).flat())];
 ---
