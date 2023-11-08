@@ -329,8 +329,8 @@ kbd {
   --range-thumb-active-color: var(--primary);
   --table-border-color: var(--muted-border-color);
   --table-row-stripped-background-color: #d7d9de;
-  --code-background-color: hsl(205, 20%, 74%);
-  --code-color: var(--muted-color);
+  --code-background-color: hsl(205, 18%, 76%);
+  --code-color: var(--color);
   --code-kbd-background-color: var(--contrast);
   --code-kbd-color: var(--contrast-inverse);
   --code-tag-color: hsl(330, 40%, 50%);
@@ -437,8 +437,8 @@ kbd {
     --range-thumb-active-color: var(--primary);
     --table-border-color: var(--muted-border-color);
     --table-row-stripped-background-color: rgba(115, 130, 140, 0.05);
-    --code-background-color: #1d2931;
-    --code-color: var(--muted-color);
+    --code-background-color: #294852;
+    --code-color: var(--color);
     --code-kbd-background-color: var(--contrast);
     --code-kbd-color: var(--contrast-inverse);
     --code-tag-color: hsl(330, 30%, 50%);
@@ -545,8 +545,8 @@ kbd {
   --range-thumb-active-color: var(--primary);
   --table-border-color: var(--muted-border-color);
   --table-row-stripped-background-color: rgba(115, 130, 140, 0.05);
-  --code-background-color: #1d2931;
-  --code-color: var(--muted-color);
+  --code-background-color: #294852;
+  --code-color: var(--color);
   --code-kbd-background-color: var(--contrast);
   --code-kbd-color: var(--contrast-inverse);
   --code-tag-color: hsl(330, 30%, 50%);
@@ -1545,7 +1545,7 @@ kbd {
 code,
 kbd {
   display: inline-block;
-  padding: 0.25rem 0.5rem;
+  padding: 0.2rem 0.4rem;
 }
 
 pre {

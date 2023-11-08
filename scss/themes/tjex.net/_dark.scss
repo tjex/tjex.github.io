@@ -93,8 +93,8 @@
   --table-row-stripped-background-color: #{rgba($grey-500, 0.05)};
 
   // Code
-  --code-background-color: #{mix($black, $grey-900, 12.5%)};
-  --code-color: var(--muted-color);
+  --code-background-color: #{mix($black, $primary-500, 80%)};
+  --code-color: var(--color);
   --code-kbd-background-color: var(--contrast);
   --code-kbd-color: var(--contrast-inverse);
   --code-tag-color: #{hsl(330, 30%, 50%)};
