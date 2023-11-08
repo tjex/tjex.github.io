@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config"; // import lit from '@astrojs/lit';
+import { defineConfig } from "astro/config";
 
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
@@ -10,7 +10,9 @@ export default defineConfig({
         drafts: true,
         remarkRehype: { footnoteLabelTagName: "h5"},
     },
-  integrations: [sitemap({}), mdx({
+  integrations: [
+      sitemap({}),
+      mdx({
       drafts: true,
   })],
   experimental: {
