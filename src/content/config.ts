@@ -30,6 +30,7 @@ const hacks = defineCollection({
         tags: z.array(z.string()),
         draft: z.boolean(),
         category: z.string().optional(),
+        progVersions: z.array(z.string()).optional(), // the version of the program in any given hack / tutorial
     })
 })
 

@@ -11,8 +11,6 @@ import Footer from "../components/Footer.astro";
 
 const { seo } = Astro.props;
 const { post } = Astro.props;
-
-
 ---
 
 <script src="../scripts/emailDecode.js"></script>
@@ -26,9 +24,24 @@ const { post } = Astro.props;
     <article class="post-content__article">
         <h1>{post.data.title}</h1>
         <div class="post-info">
-            <Tags tags={post.data.tags} /><Date date={post.data.pubDate}/><br />
+            <Tags tags={post.data.tags} /><Date date={post.data.pubDate} /><br
+            />
             <a id="denc" href="">tjex@tjex.net</a>
         </div>
+        <div class="post-info">
+        {
+            post.data.progVersions ? (
+                <>
+                    <span>Versions used:</span>
+
+                    {post.data.progVersions.map((v: any) => (
+                        <span class="tag">{v}</span>
+                    ))}
+                </>
+            ) : null
+        }
+        </div>
+
         <slot />
     </article>
     <SideRightBlank slot="side-right" />
