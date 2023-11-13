@@ -29,21 +29,28 @@ const { post } = Astro.props;
             <a id="denc" href="">tjex@tjex.net</a>
         </div>
         <div class="post-info">
-        {
-            post.data.progVersions ? (
-                <>
-                    <span>Versions used:</span>
+            {
+                post.data.progVersions ? (
+                    <>
+                        <span>Versions used:</span>
 
-                    {post.data.progVersions.map((v: any) => (
-                        <span class="tag">{v}</span>
-                    ))}
-                </>
-            ) : null
-        }
+                        {post.data.progVersions.map((v: any) => (
+                            <span class="tag">{v}</span>
+                        ))}
+                    </>
+                ) : null
+            }
         </div>
 
         <slot />
     </article>
+    <p xmlns:cc="http://creativecommons.org/ns#" style="font-size: 0.8rem">
+        Licensed under <a
+            href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1"
+            target="_blank"
+            rel="license noopener noreferrer"
+            >CC BY 4.0</a>
+    </p>
     <SideRightBlank slot="side-right" />
     <Footer slot="footer" />
 </Layout>
