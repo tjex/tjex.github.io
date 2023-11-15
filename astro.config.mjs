@@ -4,7 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 
 export default defineConfig({
-  site: "https://www.tjex.net",
+  site: "https://tjex.net",
     markdown: {
         drafts: true,
         remarkRehype: { footnoteLabelTagName: "h5"},
