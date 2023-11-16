@@ -626,8 +626,8 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: var(--spacing);
+  align-items: flex-end;
+  padding: calc(var(--spacing) * 1.5);
 }
 
 .footer {
