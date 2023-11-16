@@ -734,6 +734,7 @@ body > footer {
   padding-bottom: var(--spacing);
 }
 
+.img,
 .post-info,
 .post-info a {
   color: hsl(205, 12%, 59%);
