@@ -1,0 +1,20 @@
+---
+// insert html depending on license
+
+const { license } = Astro.props;
+---
+
+{
+    license == "cc" ? (
+        <p xmlns:cc="http://creativecommons.org/ns#" style="font-size: 0.8rem">
+            Licensed under{" "}
+            <a
+                href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1"
+                target="_blank"
+                rel="license noopener noreferrer"
+            >
+                CC BY 4.0
+            </a>
+        </p>
+    ) : null
+}

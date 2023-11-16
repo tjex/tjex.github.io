@@ -4,6 +4,7 @@ description: Technology and software have together enabled immense change. Can F
 pubDate: 2023-06-01T18:00:00Z
 author: tjex
 tags: ['open-source', 'society']
+license: "cc"
 draft: false
 ---
 

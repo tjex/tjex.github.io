@@ -8,6 +8,7 @@ import SideRightBlank from "../components/SideRightBlank.astro";
 import Header from "../components/Header.astro";
 import Tags from "../components/Tags.astro";
 import Footer from "../components/Footer.astro";
+import License from "../components/License.astro";
 
 const { seo } = Astro.props;
 const { post } = Astro.props;
@@ -44,13 +45,7 @@ const { post } = Astro.props;
 
         <slot />
     </article>
-    <p xmlns:cc="http://creativecommons.org/ns#" style="font-size: 0.8rem">
-        Licensed under <a
-            href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1"
-            target="_blank"
-            rel="license noopener noreferrer"
-            >CC BY 4.0</a>
-    </p>
     <SideRightBlank slot="side-right" />
+    {post.data.license && <License license={post.data.license} />}
     <Footer slot="footer" />
 </Layout>
