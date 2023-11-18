@@ -18,3 +18,17 @@ const { license } = Astro.props;
         </p>
     ) : null
 }
+{
+    license == "mit" ? (
+        <p style="font-size: 0.8rem">
+            Licensed under{" "}
+            <a
+                href="https://mit-license.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                MIT
+            </a>
+        </p>
+    ) : null
+}
