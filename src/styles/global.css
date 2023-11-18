@@ -239,15 +239,17 @@ kbd {
   transition: var(--transition);
 }
 
-.tag {
+.tag,
+.tag a {
   font-size: 0.8rem;
+  font-weight: 400; /* e.g. tags in heading or emboldened phrase */
   text-decoration: none;
   margin: 0.2em 0.3em;
   border: none;
   border-radius: 0.3em;
   padding: 0.1em 0.8em;
   background-color: var(--secondary-focus);
-  color: var(--theme-text);
+  color: var(--muted);
 }
 
 .pill-link a:hover,
@@ -255,12 +257,31 @@ kbd {
   background-color: var(--secondary-hover);
 }
 
+/* display lists of blog entries */
 .postlist {
   padding: 1rem 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  list-style: none;
+}
+
+.postlist-single {
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+.post-info,
+.post-info a {
+  color: var(--muted);
+  text-align: right;
+  margin-bottom: var(--block-spacing-vertical);
+  font-size: var(--font-small);
+}
+
+.media-link {
+  padding-bottom: var(--spacing);
 }
 
 @media screen and (max-width: 769px) {
@@ -386,7 +407,7 @@ kbd {
     --h4-color: #aab9c3;
     --h5-color: hsl(205, 16%, 67%);
     --h6-color: #a0aeb9;
-    --muted-color: hsl(205, 10%, 50%);
+    --muted-color: hsl(205, 12%, 59%);
     --muted-border-color: #274655;
     --primary: hsl(195, 85%, 41%);
     --primary-hover: hsl(195, 80%, 50%);
@@ -494,7 +515,7 @@ kbd {
   --h4-color: #aab9c3;
   --h5-color: hsl(205, 16%, 67%);
   --h6-color: #a0aeb9;
-  --muted-color: hsl(205, 10%, 50%);
+  --muted-color: hsl(205, 12%, 59%);
   --muted-border-color: #274655;
   --primary: hsl(195, 85%, 41%);
   --primary-hover: hsl(195, 80%, 50%);
@@ -724,23 +745,6 @@ body > footer {
   margin-right: auto;
   margin-left: auto;
   padding: var(--block-spacing-vertical) 0;
-}
-
-/**
- * Structures
- * divs and other structural element styling
- */
-.media-link {
-  padding-bottom: var(--spacing);
-}
-
-.img,
-.post-info,
-.post-info a {
-  color: hsl(205, 12%, 59%);
-  text-align: right;
-  margin-bottom: var(--block-spacing-vertical);
-  font-size: var(--font-small);
 }
 
 /**

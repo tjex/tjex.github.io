@@ -30,7 +30,6 @@ $enable-important: false;
 
 // Layout
 @import "layout/sectioning"; // body, header, main, footer
-@import "layout/structures"; // divs styles and structure
 @import "layout/document"; // html
 @import "layout/section"; // section
 @import "layout/grid"; // .grid
