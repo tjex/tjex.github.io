@@ -128,10 +128,6 @@ dialog > article {
   }
 }
 
-.visit a {
-  color: var(--link-visited);
-}
-
 small {
   --font-size: 0.875em;
 }

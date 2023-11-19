@@ -3,6 +3,6 @@ const { src, artist, work, source, genre } = Astro.props;
 ---
 
 <div class=`media-link filter ${genre} ${source}`>
-    <a href={`${src}`}> {artist}</a> <br/>
+    <a href={`${src}`} class="visit"> {artist}</a> <br/>
         <span class="secondary" style="font-style: italic;">&#10149; {work}</span>
 </div>
