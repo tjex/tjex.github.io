@@ -1,7 +1,6 @@
 ---
-// entry preview component for contact filed as "Hacks"
+// entry preview component for content filed under "Hacks"
 import "../styles/snippets/entryPreview.css";
-import Tags from "../components/Tags.astro";
 
 export interface Props {
     entry: any;
@@ -12,7 +11,7 @@ const { entry } = Astro.props;
 
 <article>
     <a href={`/hacks/${entry.slug}`}>
-        <h1 class="title">{entry.title}
-        </h1>
+        <h1 class="title">{entry.title} </h1>
+        <span class="secondary">{entry.description}</span>
     </a>
 </article>
