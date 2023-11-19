@@ -157,20 +157,6 @@
   }
 }
 
-// Link
-a {
-  --text-decoration: none;
-  transition: var(--transition);
-
-  // Secondary & Contrast
-  @if $enable-classes {
-    &.secondary,
-    &.contrast {
-      --text-decoration: underline;
-    }
-  }
-}
-
 
 // use this class if you would like to force a visited link color.
 .visit a {

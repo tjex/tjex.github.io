@@ -19,6 +19,7 @@
 
   // Primary colors
   --primary: #{$primary-600};
+  --primary-muted: #{mix($primary-700, $primary-800)};
   --primary-hover: #{$primary-500};
   --primary-focus: #{rgba($primary-600, 0.25)};
   --primary-inverse: #{$white};
@@ -30,6 +31,7 @@
   --secondary-inverse: #{$white};
 
   // Links
+  --link-hover: #($amber-500);
   --link-visited: #{mix($purple-100, $black)};
   --link-visited-hover: #{mix($purple-100, $black, 75%)};
 

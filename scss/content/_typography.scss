@@ -55,10 +55,17 @@ a,
 [role="link"] {
   --color: var(--primary);
   --background-color: transparent;
-  outline: none;
-  // background-color: var(--background-color); // this colors the background on click
+  --text-decoration: underline;
+  --text-decoration-thickness: 3px;
+  --text-decoration-color: var(--primary-muted);
+  --text-underline-position: under;
+
   color: var(--color);
   text-decoration: var(--text-decoration);
+  text-decoration-thickness: var(--text-decoration-thickness);
+  text-decoration-color: var(--text-decoration-color);
+  text-underline-position: var(--text-underline-position);
+  outline: none;
 
   @if $enable-transitions {
     transition: background-color var(--transition), color var(--transition),
@@ -67,7 +74,7 @@ a,
 
   &:is([aria-current], :hover, :active, :focus) {
     --color: var(--primary-hover);
-    --text-decoration: underline;
+    --text-decoration: var(--text-decoration);
   }
 
   &:focus {
@@ -112,6 +119,7 @@ a,
   }
 }
 
+
 // Headings
 h1,
 h2,
@@ -142,7 +150,7 @@ h5 {
   --color: var(--h5-color);
   margin-bottom: 0.3rem;
 }
-// h6 is used for image captions until 
+// h6 is used for image captions until
 // astro comes up with markdown image caption functionality
 h6 {
   --color: var(--h6-color);

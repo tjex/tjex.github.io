@@ -128,14 +128,6 @@ dialog > article {
   }
 }
 
-a {
-  --text-decoration: none;
-  transition: var(--transition);
-}
-a.secondary, a.contrast {
-  --text-decoration: underline;
-}
-
 .visit a {
   color: var(--link-visited);
 }
@@ -302,6 +294,7 @@ kbd {
   --muted-color: hsl(205, 10%, 50%);
   --muted-border-color: hsl(205, 20%, 74%);
   --primary: hsl(195, 85%, 41%);
+  --primary-muted: #2ebae9;
   --primary-hover: hsl(195, 90%, 32%);
   --primary-focus: rgba(16, 149, 193, 0.125);
   --primary-inverse: #fff3f1;
@@ -309,6 +302,7 @@ kbd {
   --secondary-hover: #aab9c3;
   --secondary-focus: rgba(89, 107, 120, 0.125);
   --secondary-inverse: #2d2d2d;
+  --link-hover: #($amber-500);
   --link-visited: hsl(75, 56%, 47%);
   --link-visited-hover: hsl(75, 54%, 38%);
   --contrast: hsl(205, 30%, 15%);
@@ -410,6 +404,7 @@ kbd {
     --muted-color: hsl(205, 12%, 59%);
     --muted-border-color: #274655;
     --primary: hsl(195, 85%, 41%);
+    --primary-muted: #066787;
     --primary-hover: hsl(195, 80%, 50%);
     --primary-focus: rgba(16, 149, 193, 0.25);
     --primary-inverse: #fff3f1;
@@ -417,6 +412,7 @@ kbd {
     --secondary-hover: #4e606d;
     --secondary-focus: rgba(115, 130, 140, 0.25);
     --secondary-inverse: #fff3f1;
+    --link-hover: #($amber-500);
     --link-visited: #94758c;
     --link-visited-hover: #c898bc;
     --contrast: hsl(205, 20%, 74%);
@@ -518,6 +514,7 @@ kbd {
   --muted-color: hsl(205, 12%, 59%);
   --muted-border-color: #274655;
   --primary: hsl(195, 85%, 41%);
+  --primary-muted: #066787;
   --primary-hover: hsl(195, 80%, 50%);
   --primary-focus: rgba(16, 149, 193, 0.25);
   --primary-inverse: #fff3f1;
@@ -525,6 +522,7 @@ kbd {
   --secondary-hover: #4e606d;
   --secondary-focus: rgba(115, 130, 140, 0.25);
   --secondary-inverse: #fff3f1;
+  --link-hover: #($amber-500);
   --link-visited: #94758c;
   --link-visited-hover: #c898bc;
   --contrast: hsl(205, 20%, 74%);
@@ -868,15 +866,22 @@ a,
 [role=link] {
   --color: var(--primary);
   --background-color: transparent;
-  outline: none;
+  --text-decoration: underline;
+  --text-decoration-thickness: 3px;
+  --text-decoration-color: var(--primary-muted);
+  --text-underline-position: under;
   color: var(--color);
   text-decoration: var(--text-decoration);
+  text-decoration-thickness: var(--text-decoration-thickness);
+  text-decoration-color: var(--text-decoration-color);
+  text-underline-position: var(--text-underline-position);
+  outline: none;
   transition: background-color var(--transition), color var(--transition), text-decoration var(--transition), box-shadow var(--transition);
 }
 a:is([aria-current], :hover, :active, :focus),
 [role=link]:is([aria-current], :hover, :active, :focus) {
   --color: var(--primary-hover);
-  --text-decoration: underline;
+  --text-decoration: var(--text-decoration);
 }
 a:focus,
 [role=link]:focus {
