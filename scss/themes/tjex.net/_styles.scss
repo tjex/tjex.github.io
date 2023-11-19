@@ -256,12 +256,14 @@ kbd {
 
 
 .site-heading {
+    text-decoration: none;
     color: var(--primary);
-    font-size: 3em;
+    font-size: 3rem;
     flex-grow: 0;
 }
 
 .pill-link a {
+    color: var(--primary);
     text-decoration: none;
     margin: 0.4em;
     border: none;

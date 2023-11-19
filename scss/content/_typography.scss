@@ -73,7 +73,7 @@ a,
   }
 
   &:is([aria-current], :hover, :active, :focus) {
-    --color: var(--primary-hover);
+    --color: var(--link-hover);
     --text-decoration: var(--text-decoration);
   }
 

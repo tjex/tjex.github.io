@@ -216,12 +216,14 @@ kbd {
 }
 
 .site-heading {
+  text-decoration: none;
   color: var(--primary);
-  font-size: 3em;
+  font-size: 3rem;
   flex-grow: 0;
 }
 
 .pill-link a {
+  color: var(--primary);
   text-decoration: none;
   margin: 0.4em;
   border: none;
@@ -294,7 +296,7 @@ kbd {
   --muted-color: hsl(205, 10%, 50%);
   --muted-border-color: hsl(205, 20%, 74%);
   --primary: hsl(195, 85%, 41%);
-  --primary-muted: #2ebae9;
+  --primary-muted: hsl(195, 86%, 77%);
   --primary-hover: hsl(195, 90%, 32%);
   --primary-focus: rgba(16, 149, 193, 0.125);
   --primary-inverse: #fff3f1;
@@ -302,15 +304,15 @@ kbd {
   --secondary-hover: #aab9c3;
   --secondary-focus: rgba(89, 107, 120, 0.125);
   --secondary-inverse: #2d2d2d;
-  --link-hover: #($amber-500);
+  --link-hover: hsl(30, 50%, 57%);
   --link-visited: hsl(75, 56%, 47%);
   --link-visited-hover: hsl(75, 54%, 38%);
   --contrast: hsl(205, 30%, 15%);
   --contrast-hover: #2d2d2d;
   --contrast-focus: rgba(89, 107, 120, 0.125);
   --contrast-inverse: #fff3f1;
-  --mark-background-color: #c7a185;
-  --mark-color: #202427;
+  --mark-background-color: #c9a683;
+  --mark-color: #202527;
   --ins-color: hsl(75, 70%, 22%);
   --del-color: hsl(0, 75%, 13%);
   --blockquote-border-color: var(--muted-border-color);
@@ -404,7 +406,7 @@ kbd {
     --muted-color: hsl(205, 12%, 59%);
     --muted-border-color: #274655;
     --primary: hsl(195, 85%, 41%);
-    --primary-muted: #066787;
+    --primary-muted: hsl(195, 95%, 23%);
     --primary-hover: hsl(195, 80%, 50%);
     --primary-focus: rgba(16, 149, 193, 0.25);
     --primary-inverse: #fff3f1;
@@ -412,14 +414,14 @@ kbd {
     --secondary-hover: #4e606d;
     --secondary-focus: rgba(115, 130, 140, 0.25);
     --secondary-inverse: #fff3f1;
-    --link-hover: #($amber-500);
+    --link-hover: hsl(30, 42%, 60%);
     --link-visited: #94758c;
     --link-visited-hover: #c898bc;
     --contrast: hsl(205, 20%, 74%);
     --contrast-hover: #fff3f1;
     --contrast-focus: rgba(115, 130, 140, 0.25);
     --contrast-inverse: #2d2d2d;
-    --mark-background-color: #af8f79;
+    --mark-background-color: #af9579;
     --mark-color: #222a30;
     --ins-color: hsl(75, 70%, 22%);
     --del-color: hsl(0, 75%, 13%);
@@ -514,7 +516,7 @@ kbd {
   --muted-color: hsl(205, 12%, 59%);
   --muted-border-color: #274655;
   --primary: hsl(195, 85%, 41%);
-  --primary-muted: #066787;
+  --primary-muted: hsl(195, 95%, 23%);
   --primary-hover: hsl(195, 80%, 50%);
   --primary-focus: rgba(16, 149, 193, 0.25);
   --primary-inverse: #fff3f1;
@@ -522,14 +524,14 @@ kbd {
   --secondary-hover: #4e606d;
   --secondary-focus: rgba(115, 130, 140, 0.25);
   --secondary-inverse: #fff3f1;
-  --link-hover: #($amber-500);
+  --link-hover: hsl(30, 42%, 60%);
   --link-visited: #94758c;
   --link-visited-hover: #c898bc;
   --contrast: hsl(205, 20%, 74%);
   --contrast-hover: #fff3f1;
   --contrast-focus: rgba(115, 130, 140, 0.25);
   --contrast-inverse: #2d2d2d;
-  --mark-background-color: #af8f79;
+  --mark-background-color: #af9579;
   --mark-color: #222a30;
   --ins-color: hsl(75, 70%, 22%);
   --del-color: hsl(0, 75%, 13%);
@@ -880,7 +882,7 @@ a,
 }
 a:is([aria-current], :hover, :active, :focus),
 [role=link]:is([aria-current], :hover, :active, :focus) {
-  --color: var(--primary-hover);
+  --color: var(--link-hover);
   --text-decoration: var(--text-decoration);
 }
 a:focus,

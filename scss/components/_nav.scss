@@ -60,6 +60,7 @@ nav {
 
     &:is([aria-current], :hover, :active, :focus) {
       text-decoration: none;
+      color: var(--primary);
     }
   }
 
