@@ -55,15 +55,13 @@ a,
 [role="link"] {
   --color: var(--primary);
   --background-color: transparent;
-  --text-decoration: underline;
+  --text-decoration: none;
   --text-decoration-thickness: 3px;
-  --text-decoration-color: var(--primary-muted);
   --text-underline-position: under;
 
   color: var(--color);
   text-decoration: var(--text-decoration);
   text-decoration-thickness: var(--text-decoration-thickness);
-  text-decoration-color: var(--text-decoration-color);
   text-underline-position: var(--text-underline-position);
   outline: none;
 
@@ -74,7 +72,8 @@ a,
 
   &:is([aria-current], :hover, :active, :focus) {
     --color: var(--link-hover);
-    --text-decoration: var(--text-decoration);
+    --text-decoration: underline;
+    --text-decoration-color: var(--link-hover);
   }
 
   &:focus {
@@ -88,6 +87,8 @@ a,
 
       &:is([aria-current], :hover, :active, :focus) {
         --color: var(--secondary-hover);
+        --text-decoration: underline;
+        --text-decoration-color: var(--link-hover);
       }
 
       &:focus {
@@ -102,6 +103,8 @@ a,
 
       &:is([aria-current], :hover, :active, :focus) {
         --color: var(--contrast-hover);
+        --text-decoration: underline;
+        --text-decoration-color: var(--link-hover);
       }
 
       &:focus {

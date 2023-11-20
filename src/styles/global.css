@@ -864,14 +864,12 @@ a,
 [role=link] {
   --color: var(--primary);
   --background-color: transparent;
-  --text-decoration: underline;
+  --text-decoration: none;
   --text-decoration-thickness: 3px;
-  --text-decoration-color: var(--primary-muted);
   --text-underline-position: under;
   color: var(--color);
   text-decoration: var(--text-decoration);
   text-decoration-thickness: var(--text-decoration-thickness);
-  text-decoration-color: var(--text-decoration-color);
   text-underline-position: var(--text-underline-position);
   outline: none;
   transition: background-color var(--transition), color var(--transition), text-decoration var(--transition), box-shadow var(--transition);
@@ -879,7 +877,8 @@ a,
 a:is([aria-current], :hover, :active, :focus),
 [role=link]:is([aria-current], :hover, :active, :focus) {
   --color: var(--link-hover);
-  --text-decoration: var(--text-decoration);
+  --text-decoration: underline;
+  --text-decoration-color: var(--link-hover);
 }
 a:focus,
 [role=link]:focus {
@@ -892,6 +891,8 @@ a.secondary,
 a.secondary:is([aria-current], :hover, :active, :focus),
 [role=link].secondary:is([aria-current], :hover, :active, :focus) {
   --color: var(--secondary-hover);
+  --text-decoration: underline;
+  --text-decoration-color: var(--link-hover);
 }
 a.secondary:focus,
 [role=link].secondary:focus {
@@ -904,6 +905,8 @@ a.contrast,
 a.contrast:is([aria-current], :hover, :active, :focus),
 [role=link].contrast:is([aria-current], :hover, :active, :focus) {
   --color: var(--contrast-hover);
+  --text-decoration: underline;
+  --text-decoration-color: var(--link-hover);
 }
 a.contrast:focus,
 [role=link].contrast:focus {
