@@ -3,6 +3,18 @@
  */
 
 
+.note {
+    background: var(--note);
+}
+
+.warning {
+    background: var(--warning);
+}
+
+.danger {
+    background: var(--danger);
+}
+
 .callout {
     display: block;
     border: solid;
@@ -13,41 +25,30 @@
     color: var(--color);
 }
 
+.callout-title {
+    padding-left: var(--spacing);
+    padding-right: var(--spacing);
+    color: var(--contrast-inverse);
+}
+
 .callout-content {
     padding-left: var(--spacing);
     padding-right: var(--spacing);
 }
 
-// info
-.callout-info {
-    border-color: var(--info);
+// note
+.callout-note {
+    border-color: var(--note);
 }
 
-.callout-title-info {
-    background: var(--info);
-    padding-left: var(--spacing);
-    padding-right: var(--spacing);
-}
 
 // warn
 .callout-warning {
     border-color: var(--warning);
 }
 
-.callout-title-warning {
-    background: var(--warning);
-    padding-left: var(--spacing);
-    padding-right: var(--spacing);
-}
-
 // danger
 .callout-danger {
     border-color: var(--danger);
-}
-
-.callout-title-danger {
-    background: var(--danger);
-    padding-left: var(--spacing);
-    padding-right: var(--spacing);
 }
 
