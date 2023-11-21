@@ -345,7 +345,7 @@ kbd {
   --range-thumb-active-color: var(--primary);
   --table-border-color: var(--muted-border-color);
   --table-row-stripped-background-color: #d7d9de;
-  --code-background-color: hsl(205, 18%, 76%);
+  --code-background-color: hsl(205, 20%, 74%);
   --code-color: var(--color);
   --code-kbd-background-color: var(--contrast);
   --code-kbd-color: var(--contrast-inverse);
@@ -458,7 +458,7 @@ kbd {
     --range-thumb-active-color: var(--primary);
     --table-border-color: var(--muted-border-color);
     --table-row-stripped-background-color: rgba(115, 130, 140, 0.05);
-    --code-background-color: #05242e;
+    --code-background-color: #171d22;
     --code-color: var(--color);
     --code-kbd-background-color: var(--contrast);
     --code-kbd-color: var(--contrast-inverse);
@@ -571,7 +571,7 @@ kbd {
   --range-thumb-active-color: var(--primary);
   --table-border-color: var(--muted-border-color);
   --table-row-stripped-background-color: rgba(115, 130, 140, 0.05);
-  --code-background-color: #05242e;
+  --code-background-color: #171d22;
   --code-color: var(--color);
   --code-kbd-background-color: var(--contrast);
   --code-kbd-color: var(--contrast-inverse);
