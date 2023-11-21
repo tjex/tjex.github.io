@@ -9,6 +9,7 @@ progVersions: ['yabai: 6.0.1', 'skhd: 0.3.9', 'wezterm: 20230712-072601-f4abf8fd
 draft: true
 ---
 
+import Callout from "../../components/ui/Callout.astro";
 import { Image } from 'astro:assets';
 import center_float from './img/yabai-center-float.png';
 
@@ -88,8 +89,10 @@ Broken down further:
 - `<start-x>:<start-y>` is which tile on the x axis and which on the y should the window be placed.
 - `<width>:<height>` defines how many tiles the window should span in x and y.
 
-> The above explanations are as best I understand from the documentation, however as you see from the screenshot below, 
-> the columns / rows are not evenly sized. So I'm not sure exactly what detail I'm missing there... But, it works...
+<Callout type="info">
+The above explanations are as best I understand from the documentation, however as you see from the screenshot below, 
+the columns / rows are not evenly sized. So I'm not sure exactly what detail I'm missing there... But, it works...
+</Callout>
 
 Now when we execute the keybind, we get a floating window in the center which runs gopass.
 

@@ -53,6 +53,11 @@
   --blockquote-border-color: var(--muted-border-color);
   --blockquote-footer-color: var(--muted-color);
 
+  // Callouts
+  --info: #{$green-500};
+  --warning: #{$amber-400};
+  --danger: #{$red-400};
+
   // Button
   // To disable box-shadow, remove the var or set to '0 0 0 rgba(0, 0, 0, 0)'
   // Don't use, 'none, 'false, 'null', '0', etc.

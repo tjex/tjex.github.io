@@ -1,0 +1,53 @@
+/**
+ * Callouts
+ */
+
+
+.callout {
+    display: block;
+    border: solid;
+    border-width: var(--border-width);
+    border-radius: var(--border-radius);
+    margin: var(--spacing);
+    background: none;
+    color: var(--color);
+}
+
+.callout-content {
+    padding-left: var(--spacing);
+    padding-right: var(--spacing);
+}
+
+// info
+.callout-info {
+    border-color: var(--info);
+}
+
+.callout-title-info {
+    background: var(--info);
+    padding-left: var(--spacing);
+    padding-right: var(--spacing);
+}
+
+// warn
+.callout-warning {
+    border-color: var(--warning);
+}
+
+.callout-title-warning {
+    background: var(--warning);
+    padding-left: var(--spacing);
+    padding-right: var(--spacing);
+}
+
+// danger
+.callout-danger {
+    border-color: var(--danger);
+}
+
+.callout-title-danger {
+    background: var(--danger);
+    padding-left: var(--spacing);
+    padding-right: var(--spacing);
+}
+
