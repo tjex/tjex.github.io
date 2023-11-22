@@ -3,8 +3,8 @@ import * as colUtil from "../scripts/collectionUtil.ts";
 
 const { collection } = Astro.props;
 
-const entries = await colUtil.noDrafts(collection);
-const tags = [...new Set(entries.map((entry: any) => entry.data.tags).flat())];
+const posts = await colUtil.noDrafts(collection);
+const tags = [...new Set(posts.map((post: any) => post.data.tags).flat())];
 ---
 
 <p>

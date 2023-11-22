@@ -4,7 +4,7 @@
 import Layout from "../../layouts/Post.astro";
 import * as colUtil from "../../scripts/collectionUtil.ts";
 
-// Generate a new path for every hack entry
+// Generate a new path for every hack post
 export async function getStaticPaths() {
     const hacks = await colUtil.noDrafts("hacks");
     return hacks.map((hack: any) => ({

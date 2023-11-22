@@ -1,24 +1,27 @@
 ---
 title: Unmount all external drives with bash
 description: Shell script to unmount / eject all external hard drives.
-pubDate: 2023-11-18T20:04:27Z 
+pubDate: 2023-11-18T20:04:27Z
 author: tjex
 tags: ['shell', 'mac']
 license: mit
 draft: false
 ---
 
-Perhaps one of the most annoying reasons to open Finder on mac is to eject hard drives. 
+import Callout from "../../components/ui/Callout.astro";
 
-This script allows you to avoid that. It will list all drives to be ejected and prompt 
-you for confirmation before unmounting them with `diskutil`. 
+Perhaps one of the most annoying reasons to open Finder on mac is to eject hard drives.
 
-> Note: \
->  If you've renamed your internal HD, you will need to update the variable in
->  the script!
+This script allows you to avoid that. It will list all drives to be ejected and prompt
+you for confirmation before unmounting them with `diskutil`.
+
+<Callout type="danger">
+If you've renamed your internal HD, you will need to update the variable in
+the script!
+</Callout>
 
 Unmounting is done with `diskutil unmountDisk`, which is safer than `eject`. If
-the disk is in use then it will not be ejected. 
+the disk is in use then it will not be ejected.
 
 ```bash
 #! /usr/bin/env bash

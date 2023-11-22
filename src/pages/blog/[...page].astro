@@ -6,19 +6,20 @@ import BlogPostPreview from "../../components/BlogPostPreview.astro";
 import Paginator from "../../components/Paginator.astro";
 import * as colUtil from "../../scripts/collectionUtil.ts";
 
+// TODO: refactor this into colUtil
 export async function getStaticPaths({ paginate }) {
-    const entries = await colUtil.noDrafts("blog").then((entries) =>
-        entries
-            .map((entry: any) => ({
-                slug: entry.slug,
-                title: entry.data.title,
-                description: entry.data.description,
-                tags: entry.data.tags,
-                pubDate: entry.data.pubDate,
+    const posts = await colUtil.noDrafts("blog").then((posts) =>
+        posts
+            .map((post: any) => ({
+                slug: post.slug,
+                title: post.data.title,
+                description: post.data.description,
+                tags: post.data.tags,
+                pubDate: post.data.pubDate,
             }))
             .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate)),
     );
-    return paginate(entries, { pageSize: 10 });
+    return paginate(posts, { pageSize: 10 });
 }
 
 
@@ -34,7 +35,7 @@ const { page } = Astro.props;
 <Layout seo={seo}>
     <h1>Blog</h1>
     <section class="postlist">
-        {page.data.map((entry: any) => <BlogPostPreview entry={entry} />)}
+        {page.data.map((post: any) => <BlogPostPreview post={post} />)}
     </section>
     <Paginator page={page} />
 </Layout>

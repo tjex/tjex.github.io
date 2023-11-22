@@ -1,17 +1,17 @@
 ---
-// entry preview component for content filed under "Hacks"
-import "../styles/snippets/entryPreview.css";
+// post preview component for content filed under "Hacks"
+import "../styles/snippets/postPreview.css";
 
 export interface Props {
-    entry: any;
+    post: any;
 }
 
-const { entry } = Astro.props;
+const { post } = Astro.props;
 ---
 
 <article>
-    <a href={`/hacks/${entry.slug}`}>
-        <h1 class="title">{entry.title}</h1>
+    <a href={`/hacks/${post.slug}`}>
+        <h1 class="title">{post.title}</h1>
     </a>
-    <span class="secondary">{entry.description}</span>
+    <span class="secondary">{post.description}</span>
 </article>

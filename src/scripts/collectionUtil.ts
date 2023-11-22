@@ -8,16 +8,16 @@ export async function noDrafts(collection: string) {
     return noDrafts;
 }
 
-export async function getEntriesPerTag(collections: string[]) {
+export async function getPostsPerTag(collections: string[]) {
     const l = []
     for (const collection of collections) {
-        const entries = await noDrafts(collection);
+        const posts = await noDrafts(collection);
 
-        const uniqueTags = [...new Set(entries.map((entry: any) => entry.data.tags).flat())];
+        const uniqueTags = [...new Set(posts.map((post: any) => post.data.tags).flat())];
 
-        const allFiltEntries = uniqueTags.map((tag) => {
-            const filtEntries = entries
-                .filter((entry) => entry.data.tags.includes(tag))
+        const allFiltPosts = uniqueTags.map((tag) => {
+            const filtPosts = posts
+                .filter((post) => post.data.tags.includes(tag))
                 .map(({ data, slug }) => ({
                     slug: slug,
                     title: data.title,
@@ -27,10 +27,11 @@ export async function getEntriesPerTag(collections: string[]) {
                 }));
             return {
                 params: { tag },
-                props: { entries: filtEntries },
+                props: { posts: filtPosts },
             };
         });
-        l.push(...allFiltEntries);
+        l.push(...allFiltPosts);
     }
     return l
 }
+

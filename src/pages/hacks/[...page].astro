@@ -7,18 +7,18 @@ import Paginator from "../../components/Paginator.astro";
 import * as colUtil from "../../scripts/collectionUtil.ts";
 
 export async function getStaticPaths({ paginate }) {
-    const entries = await colUtil.noDrafts("hacks").then((entries) =>
-        entries
-            .map((entry: any) => ({
-                slug: entry.slug,
-                title: entry.data.title,
-                description: entry.data.description,
-                tags: entry.data.tags,
-                pubDate: entry.data.pubDate,
+    const posts = await colUtil.noDrafts("hacks").then((posts) =>
+        posts
+            .map((post: any) => ({
+                slug: post.slug,
+                title: post.data.title,
+                description: post.data.description,
+                tags: post.data.tags,
+                pubDate: post.data.pubDate,
             }))
             .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate)),
     );
-    return paginate(entries, { pageSize: 10 });
+    return paginate(posts, { pageSize: 10 });
 }
 
 const seo = {
@@ -37,7 +37,7 @@ const { page } = Astro.props;
             View by tag: <TagsUnique collection={"hacks"} />
         </div>
     <section class="postlist-single">
-        {page.data.map((entry: any) => <HackPreview entry={entry} />)}
+        {page.data.map((post: any) => <HackPreview post={post} />)}
     </section>
     <Paginator page={page} />
 </Layout>
