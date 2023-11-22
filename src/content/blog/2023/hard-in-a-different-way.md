@@ -1,27 +1,43 @@
 ---
-title: First 10 Day Vipassana Course
-description: A few thoughts after my first 10 day silent meditation course in the technique of Vipassana and a consolidation of its philosophies. 
-pubDate: 2023-06-26T18:51:08Z 
+title: Hard in a different way
+description: Some thoughts on what makes life "hard" these days.
+pubDate: 2023-11-21T19:01:40Z 
 author: tjex
-tags: ['meditation', 'philosophy']
+tags: ['society', 'psychology']
 draft: true
 ---
 
-It's an interesting point about what makes life "hard" now and what made
-life "hard" back then. 
+I don't think it an unusual topic between children and parents, how life has
+changed in the span of a generation. And an interesting candidate for comparring the two
+time frames is what makes life "hard" now, and what made life "hard" back then. 
+
+I write "hard" in quotation marks, as the kind of hard I'm referring to 
+here is not in any way appropriate when considering the death, destruction and 
+chaos that is enveloping Ukraine and Gaza right now.
+
+It's the kind of "hard" we think about when considering the requirements of day
+to day life. For context, this blog post is almost an unedited response to an email
+on the same topic with my mum. She'd mentioned that back when she was younger,
+she walked kilometers to work because she couldn't afford the tram fare, and
+that they used milk crates to sit out the back in the garden instead of buying
+chairs. At the time (and still to this day) she lived in Australia, where the
+cost of living has for the most part been quite affordable. She was also not 
+destitute, working part / full time since the age of 16.
+
+For the average Australian today, that kind of expenditure (a tram ticket) more
+or less goes without saying. It's not a luxury in place of walking kilometers
+to work.
+
+...
 
 I think in the present, we have so much access to information,
 knowledge, technology, mobility, luxuries, services, etc. For the most
-part they're quite affordable too (or free). As you said, you sat on
-milk crates in your apartments, now everyone can fully furnish their
+part they're quite affordable too (or free). As my mum had said, she'd sat on
+milk crates out the back; now everyone can fully furnish their
 house from Ikea as a 'cheap' option. Despite the wealth divide growing, 
 real poverty is still at an all time low and our general standard of
 living has increased markedly as time moves on (a lot to do with the
 cost of manufacturing and technolgical innovation).
-
-The cost of dads first computer relative to the minimum wage back then,
-would probably, for the sake of making a point, mean in today's rates
-you could by a quantum computer on today's minimum wage.
 
 But all the technology, access, mobility has totally abstracted us from
 our present moment and as a result abstracted us from who we are, where
