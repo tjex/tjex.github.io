@@ -294,6 +294,7 @@ tfoot {
     padding: var(--spacing);
 }
 .nextPost a, .prevPost a {
+    display: inline-flex;
     margin: 0.4em;
     border: none;
     border-radius: .3em;

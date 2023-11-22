@@ -257,6 +257,7 @@ tfoot td {
 }
 
 .nextPost a, .prevPost a {
+  display: inline-flex;
   margin: 0.4em;
   border: none;
   border-radius: 0.3em;
