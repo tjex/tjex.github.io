@@ -1,11 +1,10 @@
 ---
-const { type, message } = Astro.props;
+const { type  } = Astro.props;
 ---
 
-<aside class=`callout callout-${type}`>
-    <p class=`callout-title ${type}`>{type}</p>
-
+<aside class=`callout-${type}`>
+    <p class=`callout-${type}-title` >{type}</p>
     <div class="callout-content">
-    <slot />
+        <slot />
     </div>
 </aside>
