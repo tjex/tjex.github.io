@@ -1,36 +1,13 @@
 ---
-// this file generates the blog posts.
+// this file generates each post in the "blog" collection.
 
 import Layout from "../../layouts/Post.astro";
 import NextPrevPost from "../../components/NextPrevPost.astro";
 import { Image } from "astro:assets";
 import * as colUtil from "../../scripts/collectionUtil.ts";
 
-// Generate a new path for every blog post
-// and get previous and next posts
 export async function getStaticPaths() {
-    const posts = await colUtil.noDrafts("blog");
-    const numberOfPosts = posts.length;
-
-    const postsSortedByDate = posts.sort(
-        (a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate),
-    );
-    return postsSortedByDate.map((post: any, i) => ({
-        params: { slug: post.slug },
-        props: {
-            post,
-            // Previous post
-            prevPost:
-                i + 1 === numberOfPosts // If the current post is the oldest
-                    ? { data: "" }
-                    : posts[i + 1],
-            // Next post
-            nextPost:
-                i === 0 // If the current post is the newest
-                    ? { data: "" }
-                    : posts[i - 1],
-        },
-    }));
+    return colUtil.getAllPostsFromCollection("blog");
 }
 
 const { post, prevPost, nextPost } = Astro.props;

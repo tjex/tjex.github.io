@@ -35,3 +35,27 @@ export async function getPostsPerTag(collections: string[]) {
     return l
 }
 
+export async function getAllPostsFromCollection(collection: string) {
+    const posts = await noDrafts(collection);
+    const numberOfPosts = posts.length;
+
+    const postsSortedByDate = posts.sort(
+        (a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate),
+    );
+    return postsSortedByDate.map((post: any, i) => ({
+        params: { slug: post.slug },
+        props: {
+            post,
+            // Previous post
+            prevPost:
+                i + 1 === numberOfPosts // If the current post is the oldest
+                    ? { data: "" }
+                    : posts[i + 1],
+            // Next post
+            nextPost:
+                i === 0 // If the current post is the newest
+                    ? { data: "" }
+                    : posts[i - 1],
+        },
+    }));
+}

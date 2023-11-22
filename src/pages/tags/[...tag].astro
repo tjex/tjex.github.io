@@ -3,6 +3,7 @@
 import type { GetStaticPaths } from "astro";
 import Layout from "../../layouts/Page.astro";
 import BlogPostPreview from "../../components/BlogPostPreview.astro";
+import HackPreview from "../../components/HackPreview.astro";
 import * as colUtil from "../../scripts/collectionUtil.ts";
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -22,10 +23,18 @@ const seo = {
 
 <Layout seo={seo}>
     <h1>{tag}</h1>
-    <p>Posts tagged with <span class="bubble">{tag}</span></p>
+    <p>Posts tagged: <span class="bubble">{tag}</span></p>
     <article class="blog-page-content__article">
         <section class="postlist">
-            {posts.map((post: any) => <BlogPostPreview post={post}/>)}
+            {
+                posts.map((post: any) =>
+                    post.collection === "blog" ? (
+                        <BlogPostPreview post={post} />
+                    ) : post.collection === "hacks" ? (
+                        <HackPreview post={post} />
+                    ) : null,
+                )
+            }
         </section>
     </article>
 </Layout>

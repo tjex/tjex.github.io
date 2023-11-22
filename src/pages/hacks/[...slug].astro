@@ -1,23 +1,19 @@
 ---
-// this file generates the blog posts.
+// this file generates each post in the "hacks" collection.
 
 import Layout from "../../layouts/Post.astro";
 import * as colUtil from "../../scripts/collectionUtil.ts";
 
-// Generate a new path for every hack post
+
 export async function getStaticPaths() {
-    const hacks = await colUtil.noDrafts("hacks");
-    return hacks.map((hack: any) => ({
-        params: { slug: hack.slug },
-        props: { hack },
-    }));
+    return colUtil.getAllPostsFromCollection("hacks");
 }
 
-const { hack } = Astro.props;
-const { Content } = await hack.render();
+const { post } = Astro.props;
+const { Content } = await post.render();
 
-const seoTitle = hack.data.title;
-const seoDescription = hack.data.description;
+const seoTitle = post.data.title;
+const seoDescription = post.data.description;
 
 const seo = {
     title: seoTitle,
@@ -25,7 +21,7 @@ const seo = {
 };
 ---
 
-<Layout seo={seo} post={hack}>
+<Layout seo={seo} post={post}>
     <Content />
 </Layout>
 
