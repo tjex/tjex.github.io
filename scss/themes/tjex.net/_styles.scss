@@ -323,3 +323,14 @@ tfoot {
       grid-template-columns: 1fr;
     }
   }
+
+body::-webkit-scrollbar {
+    width: 0.6em;
+}
+body::-webkit-scrollbar-track {
+    background: var(--code-background-color);
+}
+body::-webkit-scrollbar-thumb {
+    background: var(--muted-color);
+
+}

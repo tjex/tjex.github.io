@@ -285,6 +285,18 @@ tfoot td {
     grid-template-columns: 1fr;
   }
 }
+body::-webkit-scrollbar {
+  width: 0.6em;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--code-background-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--muted-color);
+}
+
 [data-theme=light],
 :root:not([data-theme=dark]) {
   --background-color: #fff3f1;
