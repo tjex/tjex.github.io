@@ -291,6 +291,7 @@ tfoot {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: var(--spacing);
 }
 .nextPost a, .prevPost a {
     margin: 0.4em;

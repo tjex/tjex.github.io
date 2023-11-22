@@ -2,6 +2,7 @@
 // this file generates each post in the "hacks" collection.
 
 import Layout from "../../layouts/Post.astro";
+import NextPrevPost from "../../components/NextPrevPost.astro";
 import * as colUtil from "../../scripts/collectionUtil.ts";
 
 
@@ -9,7 +10,7 @@ export async function getStaticPaths() {
     return colUtil.getAllPostsFromCollection("hacks");
 }
 
-const { post } = Astro.props;
+const { post, prevPost, nextPost } = Astro.props;
 const { Content } = await post.render();
 
 const seoTitle = post.data.title;
@@ -23,5 +24,6 @@ const seo = {
 
 <Layout seo={seo} post={post}>
     <Content />
+    <NextPrevPost nextPost={nextPost} prevPost={prevPost} collection={post.collection} />
 </Layout>
 
