@@ -22,12 +22,12 @@ export async function getStaticPaths() {
             // Previous post
             prevPost:
                 i + 1 === numberOfPosts // If the current post is the oldest
-                    ? { frontmatter: "" }
+                    ? { data: "" }
                     : posts[i + 1],
             // Next post
             nextPost:
                 i === 0 // If the current post is the newest
-                    ? { frontmatter: "" }
+                    ? { data: "" }
                     : posts[i - 1],
         },
     }));
