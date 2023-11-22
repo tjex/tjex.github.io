@@ -221,34 +221,6 @@ tfoot {
   --font-size: 0.875em;
 }
 
-// Code
-
-// Fira Code
-@font-face {
-  font-family: 'Fira Code';
-  font-style: normal;
-  font-weight: 300 700;
-  font-display: swap;
-  src: url('/fonts/woff2/FiraCode-VF.woff2') format('woff2-variations');
-}
-
-@supports (font-variation-settings: normal) {
-  code { font-family: 'Fira Code VF', monospace; }
-}
-
-pre,
-code,
-kbd,
-samp {
-  --font-family: "Fira Code", "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace",
-    "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-kbd {
-  --font-weight: bolder;
-}
-
 
 .site-heading {
     text-decoration: none;
@@ -286,7 +258,12 @@ kbd {
     background-color: var(--secondary-hover);
 }
 
-/* display lists of blog entries */
+.media-link {
+    padding-bottom: var(--spacing);
+}
+
+/* POSTS / BLOG */
+
 .postlist {
     padding: 1rem 0;
     display: grid;
@@ -302,7 +279,7 @@ kbd {
 }
 
 // for divs that display page infrormation such as author and date
-.post-info, 
+.post-info,
 .post-info a {
     color: var(--muted);
     text-align: right;
@@ -310,10 +287,34 @@ kbd {
     font-size: var(--font-small);
 }
 
-.media-link {
-    padding-bottom: var(--spacing);
+.neighbourPost {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nextPost a, .prevPost a {
+    margin: 0.4em;
+    border: none;
+    border-radius: .3em;
+    padding: .2em .8em;
+    background-color: var(--secondary-focus);
+    transition: var(--transition);
 }
 
+.nextPost a:hover, .nextPost a:focus,
+.prevPost a:hover, .prevPost a:focus {
+    background-color: var(--secondary-hover);
+    text-decoration: none;
+
+}
+
+.nextPost a::before {
+    content: var(--icon-left-arrow);
+}
+
+.prevPost a::after {
+    content: var(--icon-right-arrow);
+}
 
 @media screen and (max-width: 769px) {
     .postlist {

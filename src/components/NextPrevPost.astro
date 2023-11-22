@@ -1,0 +1,8 @@
+---
+const { nextPost, prevPost } = Astro.props;
+---
+
+<nav class="neighbourPost">
+<span class="nextPost"><a href=`${prevPost.slug}`>{prevPost.data.title}</a> </span>
+<span class="prevPost"><a href=`${nextPost.slug}`>{nextPost.data.title}</a> </span>
+</nav>

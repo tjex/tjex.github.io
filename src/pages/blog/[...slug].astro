@@ -2,6 +2,7 @@
 // this file generates the blog posts.
 
 import Layout from "../../layouts/Post.astro";
+import NextPrevPost from "../../components/NextPrevPost.astro";
 import { Image } from "astro:assets";
 import * as colUtil from "../../scripts/collectionUtil.ts";
 
@@ -51,6 +52,6 @@ const seo = {
             <Image src={post.data.image.src} alt={post.data.image.alt} />
         )
     }
-    {prevPost.slug}
     <Content />
+    <NextPrevPost nextPost={nextPost} prevPost={prevPost} />
 </Layout>

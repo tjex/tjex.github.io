@@ -65,7 +65,7 @@ body {
   text-align: left;
   width: var(--main-content-width);
   padding: calc(var(--spacing) * 1.5);
-  padding-bottom: calc(var(--spacing) * 3.5);
+  padding-bottom: calc(var(--spacing) * 6); // need to take footer height into account
 }
 
 /*code for left sidebar */

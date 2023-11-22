@@ -186,31 +186,6 @@ tfoot td {
   --font-size: 0.875em;
 }
 
-@font-face {
-  font-family: "Fira Code";
-  font-style: normal;
-  font-weight: 300 700;
-  font-display: swap;
-  src: url("/fonts/woff2/FiraCode-VF.woff2") format("woff2-variations");
-}
-@supports (font-variation-settings: normal) {
-  code {
-    font-family: "Fira Code VF", monospace;
-  }
-}
-pre,
-code,
-kbd,
-samp {
-  --font-family: "Fira Code", "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace",
-    "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-kbd {
-  --font-weight: bolder;
-}
-
 .site-heading {
   text-decoration: none;
   color: var(--primary);
@@ -247,7 +222,11 @@ kbd {
   background-color: var(--secondary-hover);
 }
 
-/* display lists of blog posts */
+.media-link {
+  padding-bottom: var(--spacing);
+}
+
+/* POSTS / BLOG */
 .postlist {
   padding: 1rem 0;
   display: grid;
@@ -270,8 +249,33 @@ kbd {
   font-size: var(--font-small);
 }
 
-.media-link {
-  padding-bottom: var(--spacing);
+.neighbourPost {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nextPost a, .prevPost a {
+  margin: 0.4em;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.2em 0.8em;
+  background-color: var(--secondary-focus);
+  transition: var(--transition);
+}
+
+.nextPost a:hover, .nextPost a:focus,
+.prevPost a:hover, .prevPost a:focus {
+  background-color: var(--secondary-hover);
+  text-decoration: none;
+}
+
+.nextPost a::before {
+  content: var(--icon-left-arrow);
+}
+
+.prevPost a::after {
+  content: var(--icon-right-arrow);
 }
 
 @media screen and (max-width: 769px) {
@@ -503,7 +507,8 @@ kbd {
     --icon-search: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(162, 175, 185)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
     --icon-time: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(162, 175, 185)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpolyline points='12 6 12 12 16 14'%3E%3C/polyline%3E%3C/svg%3E");
     --icon-valid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(8, 58, 12)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
-    --icon-under-arrow: "&#10149;";
+    --icon-left-arrow: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="24" height="24" viewBox="5 -5 24 24"%3E%3Cpath fill="rgb(138, 153, 163)" d="m7.825 13l4.9 4.9q.3.3.288.7t-.313.7q-.3.275-.7.288t-.7-.288l-6.6-6.6q-.15-.15-.213-.325T4.425 12q0-.2.063-.375T4.7 11.3l6.6-6.6q.275-.275.688-.275t.712.275q.3.3.3.713t-.3.712L7.825 11H19q.425 0 .713.288T20 12q0 .425-.288.713T19 13H7.825Z"%2F%3E%3C%2Fsvg%3E');
+    --icon-right-arrow: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="24" height="24" viewBox="-5 -5 24 24"%3E%3Cpath fill="rgb(138, 153, 163)" d="M16.175 13H5q-.425 0-.713-.288T4 12q0-.425.288-.713T5 11h11.175l-4.9-4.9q-.3-.3-.288-.7t.313-.7q.3-.275.7-.288t.7.288l6.6 6.6q.15.15.213.325t.062.375q0 .2-.063.375t-.212.325l-6.6 6.6q-.275.275-.687.275T11.3 19.3q-.3-.3-.3-.713t.3-.712L16.175 13Z"%2F%3E%3C%2Fsvg%3E');
     color-scheme: dark;
   }
 }
@@ -617,7 +622,8 @@ kbd {
   --icon-search: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(162, 175, 185)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
   --icon-time: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(162, 175, 185)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpolyline points='12 6 12 12 16 14'%3E%3C/polyline%3E%3C/svg%3E");
   --icon-valid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(8, 58, 12)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
-  --icon-under-arrow: "&#10149;";
+  --icon-left-arrow: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="24" height="24" viewBox="5 -5 24 24"%3E%3Cpath fill="rgb(138, 153, 163)" d="m7.825 13l4.9 4.9q.3.3.288.7t-.313.7q-.3.275-.7.288t-.7-.288l-6.6-6.6q-.15-.15-.213-.325T4.425 12q0-.2.063-.375T4.7 11.3l6.6-6.6q.275-.275.688-.275t.712.275q.3.3.3.713t-.3.712L7.825 11H19q.425 0 .713.288T20 12q0 .425-.288.713T19 13H7.825Z"%2F%3E%3C%2Fsvg%3E');
+  --icon-right-arrow: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="24" height="24" viewBox="-5 -5 24 24"%3E%3Cpath fill="rgb(138, 153, 163)" d="M16.175 13H5q-.425 0-.713-.288T4 12q0-.425.288-.713T5 11h11.175l-4.9-4.9q-.3-.3-.288-.7t.313-.7q.3-.275.7-.288t.7.288l6.6 6.6q.15.15.213.325t.062.375q0 .2-.063.375t-.212.325l-6.6 6.6q-.275.275-.687.275T11.3 19.3q-.3-.3-.3-.713t.3-.712L16.175 13Z"%2F%3E%3C%2Fsvg%3E');
   color-scheme: dark;
 }
 
@@ -685,7 +691,7 @@ body {
   text-align: left;
   width: var(--main-content-width);
   padding: calc(var(--spacing) * 1.5);
-  padding-bottom: calc(var(--spacing) * 3.5);
+  padding-bottom: calc(var(--spacing) * 6);
 }
 
 /*code for left sidebar */
@@ -1076,6 +1082,13 @@ del {
 
 ::selection {
   background-color: var(--primary-focus);
+}
+
+/* These styles are required to make icons render reliably */
+.icon::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
 }
 
 /**
@@ -1541,10 +1554,25 @@ table[role=grid] tbody tr:nth-child(odd) {
 /**
  * Code
  */
+@font-face {
+  font-family: "Fira Code";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/woff2/FiraCode-VF.woff2") format("woff2-variations");
+}
+@supports (font-variation-settings: normal) {
+  code {
+    font-family: "Fira Code VF", monospace;
+  }
+}
 pre,
 code,
 kbd,
 samp {
+  --font-family: "Fira Code", "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace",
+    "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.875em;
   font-family: var(--font-family);
 }
@@ -1601,6 +1629,7 @@ code em {
 }
 
 kbd {
+  --font-weight: bolder;
   background-color: var(--code-kbd-background-color);
   color: var(--code-kbd-color);
   vertical-align: baseline;
