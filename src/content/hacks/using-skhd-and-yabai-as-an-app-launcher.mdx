@@ -1,6 +1,6 @@
 ---
-title: Quick access to programs with skhd and yabai
-description: How to quickly spawn programs and have them display nicely.
+title: Using skhd and yabai as a launcher
+description: Mac doesn't have a good solution for launching and interfacting with terminal applications yet, this is my strategy in the meantime.
 pubDate: 2023-11-21T14:18:55Z
 author: tjex
 tags: ['skhd', 'yabai', 'shell']
@@ -43,10 +43,10 @@ As I'm using [wezterm](https://wezfurlong.org/wezterm/) (the best terminal emula
 the entry in `~/.config/skhd/skhdrc` looks like:
 
 ```bash
-alt + cmd - g : /Applications/WezTerm.app/Contents/MacOS/wezterm start zsh -l -c gopass
+alt + cmd - g : /Applications/WezTerm.app/Contents/MacOS/wezterm cli spawn --new-window zsh -l -c gopass
 ```
 <Callout type="note">
-If you use a different terminal emulator, replace the app path with whatever you're using.
+If you use a different terminal emulator, replace the app path with the appropriate path change.
 </Callout>
 
 Now we can hold down `alt` and `cmd` and press `g` to spawn a terminal instance with gopass running.
@@ -56,9 +56,16 @@ the terminal emulator, rather than using the already running process.
 
 Some extra detail on the command:
 
-- `start` is [specific to wezterm](https://wezfurlong.org/wezterm/cli/start.html).
-- `zsh -l` starts the spawned terminal process as a login shell, which loads our environment variables.
+- `cli spawn --new-window` is [specific to wezterm](https://wezfurlong.org/wezterm/cli/cli/spawn.html).
+- `zsh -l` starts the spawned terminal process as a login shell, which loads our environment variables (important for gopass as it needs to know gpg directories as well as the $PASSWORD_STORE_DIR).
 - `-c <command>` takes the first argument as a command to execute ([zsh docs](https://zsh.sourceforge.io/Doc/Release/Invocation.html#Invocation)).
+
+<Callout type="note">
+In the case of a command with arguments, the entire call needs to be wrapped in quotes. This is because of how `-c` works.
+```bash
+... cli spawn --new-window zsh -l -c "bkmr search --fzf"
+```
+</Callout >
 
 ### yabai
 
