@@ -242,6 +242,7 @@ tfoot {
 
 .tag,
 .tag a {
+    display: inline-block;
     font-size: 0.8rem;
     font-weight: 400; /* e.g. tags in heading or emboldened phrase */
     text-decoration: none;
