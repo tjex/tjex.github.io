@@ -242,11 +242,10 @@ tfoot td {
   gap: 1rem;
 }
 
-.post-info,
-.post-info a {
+.post-info {
   color: var(--muted);
   text-align: right;
-  margin-bottom: var(--block-spacing-vertical);
+  margin-bottom: var(--spacing);
   font-size: var(--font-small);
 }
 

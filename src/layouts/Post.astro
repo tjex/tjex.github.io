@@ -1,6 +1,7 @@
 ---
 import ArticleSchema from "../components/ArticleSchema.astro";
 import Date from "../components/utility/DateFormat.astro";
+import path from 'node:path';
 
 import Layout from "./Base.astro";
 import SideLeftPage from "../components/SideLeftPage.astro";
@@ -13,6 +14,8 @@ import License from "../components/License.astro";
 const { seo } = Astro.props;
 const { post } = Astro.props;
 
+const ext = path.extname(post.id)
+const postGithubUrl = 'https://github.com/tjex/tjex.github.io/commits/main/src/content' + Astro.url.pathname + ext
 ---
 
 <script src="../scripts/emailDecode.js"></script>
@@ -24,14 +27,18 @@ const { post } = Astro.props;
     <Header slot="header" />
     <SideLeftPage slot="side-left" />
     <article class="post-content__article">
+
         <h1>{post.data.title}</h1>
         <div class="post-info">
-            <Tags tags={post.data.tags} /><Date date={post.data.pubDate} /><br
-            />
-            <a id="denc" href="">tjex@tjex.net</a>
-        </div>
-        <!-- for posts that refer to computer programs used -->
-        <div class="post-info">
+            <span>Tillman Jex, </span> 
+            <Date date={post.data.pubDate} />
+            {
+                post.data.modDate ? (
+                <span> - </span><a rel="me" href=`${postGithubUrl}`> view edit history </a> ) : null
+            } <br>
+            <span>Tagged:</span>
+            <Tags tags={post.data.tags} /><br />
+            <!-- for posts that refer to computer programs used -->
             {
                 post.data.progVersions ? (
                     <>

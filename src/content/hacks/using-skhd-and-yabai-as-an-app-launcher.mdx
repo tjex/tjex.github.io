@@ -2,6 +2,7 @@
 title: Using skhd and yabai as a launcher
 description: Mac doesn't have a good solution for launching and interfacting with terminal applications yet, this is my strategy in the meantime.
 pubDate: 2023-11-21T14:18:55Z
+modDate: 2023-11-29T15:51:13Z 
 author: tjex
 tags: ['skhd', 'yabai', 'shell']
 license: mit
@@ -43,20 +44,20 @@ As I'm using [wezterm](https://wezfurlong.org/wezterm/) (the best terminal emula
 the entry in `~/.config/skhd/skhdrc` looks like:
 
 ```bash
-alt + cmd - g : /Applications/WezTerm.app/Contents/MacOS/wezterm cli spawn --new-window zsh -l -c gopass
+alt + cmd - g : /Applications/WezTerm.app/Contents/MacOS/wezterm start zsh -l -c gopass
 ```
 <Callout type="note">
 If you use a different terminal emulator, replace the app path with the appropriate path change.
 </Callout>
 
-Now we can hold down `alt` and `cmd` and press `g` to spawn a terminal instance with gopass running.
+Now we can hold down `alt` - `cmd` and press `g` to spawn a terminal instance with gopass running.
 
 The full application is needed as otherwise skhd will launch a new instance of
 the terminal emulator, rather than using the already running process.
 
 Some extra detail on the command:
 
-- `cli spawn --new-window` is [specific to wezterm](https://wezfurlong.org/wezterm/cli/cli/spawn.html).
+- `cli start` is [specific to wezterm](https://wezfurlong.org/wezterm/cli/start.html?h=start).
 - `zsh -l` starts the spawned terminal process as a login shell, which loads our environment variables (important for gopass as it needs to know gpg directories as well as the $PASSWORD_STORE_DIR).
 - `-c <command>` takes the first argument as a command to execute ([zsh docs](https://zsh.sourceforge.io/Doc/Release/Invocation.html#Invocation)).
 
