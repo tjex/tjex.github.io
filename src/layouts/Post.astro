@@ -15,7 +15,7 @@ const { seo } = Astro.props;
 const { post } = Astro.props;
 
 const ext = path.extname(post.id)
-const postGithubUrl =  new URL('https://github.com/tjex/tjex.github.io/commits/main/src/content' + Astro.url.pathname + ext)
+const postGithubUrl =  new URL('https://github.com/tjex/tjex.github.io/commits/main/src/content' + Astro.url.pathname + `${ext}`)
 ---
 
 <script src="../scripts/emailDecode.js"></script>
@@ -31,12 +31,15 @@ const postGithubUrl =  new URL('https://github.com/tjex/tjex.github.io/commits/m
         <div class="post-info">
             <span>Tillman Jex, </span> 
             <Date date={post.data.pubDate} />
+
+            <!-- if the post has been modified since original publication -->
             {
                 post.data.modDate ? (
                 <span> - </span><a rel="me" href=`${postGithubUrl}`> view edit history </a> ) : null
             } <br>
             <span>Tagged:</span>
             <Tags tags={post.data.tags} /><br />
+
             <!-- for posts that refer to computer programs used -->
             {
                 post.data.progVersions ? (
