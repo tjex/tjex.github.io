@@ -15,7 +15,8 @@ const { seo } = Astro.props;
 const { post } = Astro.props;
 
 const ext = path.extname(post.id)
-const postGithubUrl =  new URL('https://github.com/tjex/tjex.github.io/commits/main/src/content' + Astro.url.pathname + `${ext}`)
+const pathname = Astro.url.pathname.replace(/\/$/, "")
+const postGithubUrl =  new URL('https://github.com/tjex/tjex.github.io/commits/main/src/content' + pathname + `${ext}`)
 ---
 
 <script src="../scripts/emailDecode.js"></script>
