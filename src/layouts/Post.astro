@@ -14,7 +14,8 @@ import License from "../components/License.astro";
 const { seo } = Astro.props;
 const { post } = Astro.props;
 
-const postGithubUrl = 'https://github.com/tjex/tjex.github.io/commits/main' + post.id
+const ext = path.extname(post.id)
+const postGithubUrl =  new URL('https://github.com/tjex/tjex.github.io/commits/main/src/content' + Astro.url.pathname + ext)
 ---
 
 <script src="../scripts/emailDecode.js"></script>
@@ -26,7 +27,6 @@ const postGithubUrl = 'https://github.com/tjex/tjex.github.io/commits/main' + po
     <Header slot="header" />
     <SideLeftPage slot="side-left" />
     <article class="post-content__article">
-
         <h1>{post.data.title}</h1>
         <div class="post-info">
             <span>Tillman Jex, </span> 
