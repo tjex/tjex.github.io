@@ -14,9 +14,10 @@ import License from "../components/License.astro";
 const { seo } = Astro.props;
 const { post } = Astro.props;
 
-const ext = path.extname(post.id)
+// cobble together a valid url for GitHub
 const pathname = Astro.url.pathname.replace(/\/$/, "")
-const postGithubUrl =  new URL('https://github.com/tjex/tjex.github.io/commits/main/src/content' + pathname + `${ext}`)
+const ext = path.extname(post.id)
+const postGithubUrl =  new URL('https://github.com/tjex/tjex.github.io/commits/main/src/content' + pathname + ext)
 ---
 
 <script src="../scripts/emailDecode.js"></script>
