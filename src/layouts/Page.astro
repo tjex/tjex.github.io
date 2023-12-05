@@ -3,7 +3,10 @@ import type { Props as BaseHeadProps } from "../components/BaseHead.astro";
 import Layout from "./Base.astro";
 import SideLeftPage from "../components/SideLeftPage.astro";
 import SideRightPage from "../components/SideRightPage.astro";
-import Header from "../components/Header.astro";
+import HeaderCenter from "../components/HeaderCenter.astro";
+import HeaderLeft from "../components/HeaderLeft.astro";
+import HeaderRight from "../components/HeaderRight.astro";
+
 import Footer from '../components/Footer.astro';
 
 export interface Props {
@@ -14,7 +17,9 @@ const { seo } = Astro.props as Props;
 ---
 
 <Layout {seo}>
-  <Header slot="header" />
+  <HeaderLeft slot="header-left" />
+  <HeaderCenter slot="header-center" />
+  <HeaderRight slot="header-left" />
   <SideLeftPage slot="side-left" />
   <slot />
   <SideRightPage slot="side-right" />

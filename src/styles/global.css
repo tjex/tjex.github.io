@@ -664,7 +664,7 @@ progress,
  * Container and responsive spacings for header, main, footer
  */
 :root {
-  --max-page-width: 1200px;
+  --main-content-width: 1200px;
 }
 
 main {
@@ -687,34 +687,31 @@ body {
   flex: 1 100%;
 }
 
-.header {
+.header-wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
+
+.header-center,
+.header-left,
+.header-right {
+  display: flex;
+  flex-grow: 1;
   padding: calc(var(--spacing) * 1.5);
 }
 
-.footer {
-  display: block;
-  position: fixed;
-  font-size: 0.8rem;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding: 0;
-  padding-bottom: 1rem;
-  background: var(--background-color);
+.header-center {
+  align-items: flex-end;
+  flex: 0 0 var(--main-content-width);
+  border: solid;
+  border-width: 2px;
+  justify-content: center;
 }
 
-.footer::before {
-  content: "";
-  display: block;
-  height: 0;
-  border-top: 1px solid var(--secondary);
-  width: 60%; /* Set the width to 35% */
-  padding-top: var(--spacing);
-  margin: 0 auto; /* Center the element horizontally */
+.header-left {
+  text-align: right;
+  justify-content: right;
 }
 
 .main-content {
@@ -743,22 +740,51 @@ body {
   padding-top: calc(var(--spacing) * 6);
 }
 
+.footer {
+  display: block;
+  position: fixed;
+  font-size: 0.8rem;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  padding-bottom: 1rem;
+  background: var(--background-color);
+}
+
+.footer::before {
+  content: "";
+  display: block;
+  height: 0;
+  border-top: 1px solid var(--secondary);
+  width: 60%; /* Set the width to 35% */
+  padding-top: var(--spacing);
+  margin: 0 auto; /* Center the element horizontally */
+}
+
 /* from: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-examples */
 @media all and (min-width: 960px) {
   .aside {
     flex: 1 0 0;
   }
-  .main-content {
-    flex: 3 0px;
-  }
-  .aside-1 {
+  .header-left {
     order: 1;
   }
-  .main-content {
+  .header-center {
     order: 2;
   }
-  .aside-2 {
+  .header-right {
     order: 3;
+  }
+  .aside-1 {
+    order: 4;
+  }
+  .main-content {
+    order: 5;
+  }
+  .aside-2 {
+    order: 6;
   }
 }
 @media only screen and (max-width: 960px) {

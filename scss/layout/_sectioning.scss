@@ -15,7 +15,7 @@
 // }
 
 :root {
-    --max-page-width: 1200px;
+  --main-content-width: 1200px;
 }
 // Render the `main` element consistently in IE
 main {
@@ -39,36 +39,32 @@ body {
   flex: 1 100%;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: calc(var(--spacing) * 1.5);
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
 
-// see below too!
-.footer {
-    display: block;
-    position: fixed;
-    font-size: 0.8rem;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 0;
-    padding-bottom: 1rem;
-    background: var(--background-color);
+.header-center,
+.header-left,
+.header-right {
+  display: flex;
+  flex-grow: 1;
+  padding: calc(var(--spacing) * 1.5);
 }
 
-// this makes the crisp border ontop of the footer
-.footer::before {
-  content: "";
-  display: block;
-  height: 0;
-  border-top: 1px solid var(--secondary);
-  width: 60%; /* Set the width to 35% */
-  padding-top: var(--spacing);
-  margin: 0 auto; /* Center the element horizontally */
+.header-center {
+  align-items: flex-end;
+  flex: 0 0 var(--main-content-width);
+  border: solid;
+  border-width: 2px;
+  // width: var(--main-content-width);
+  justify-content: center;
+}
+
+.header-left {
+  text-align: right;
+  justify-content: right;
 }
 
 .main-content {
@@ -94,35 +90,76 @@ body {
 
 /*code for right sidebar */
 .aside-2 {
-    padding-top: calc(var(--spacing) * 6);
+  padding-top: calc(var(--spacing) * 6);
+}
+
+// see below too!
+.footer {
+  display: block;
+  position: fixed;
+  font-size: 0.8rem;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  padding-bottom: 1rem;
+  background: var(--background-color);
+}
+
+// this makes the crisp border ontop of the footer
+.footer::before {
+  content: "";
+  display: block;
+  height: 0;
+  border-top: 1px solid var(--secondary);
+  width: 60%; /* Set the width to 35% */
+  padding-top: var(--spacing);
+  margin: 0 auto; /* Center the element horizontally */
 }
 
 /* from: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-examples */
 @media all and (min-width: 960px) {
-  .aside { flex: 1 0 0; }
-  .main-content { flex: 3 0px; }
-  .aside-1      { order: 1; }
-  .main-content { order: 2; }
-  .aside-2      { order: 3; }
+  .aside {
+    flex: 1 0 0;
+  }
+  .header-left {
+    order: 1;
+  }
+  .header-center {
+    order: 2;
+  }
+  .header-right {
+    order: 3;
+  }
+  .aside-1 {
+    order: 4;
+  }
+  .main-content {
+    // I dont think this is needed?
+    // flex: 3 0px;
+    order: 5;
+  }
+  .aside-2 {
+    order: 6;
+  }
 }
 
 @media only screen and (max-width: 960px) {
   .aside-1 {
-        padding-top: var(--spacing);
-        flex-direction: row;
-        text-align: left;
-        position: inherit;
-
-    }
-    .main-content {
-        width: 100%;
-    }
-    .footer {
-       position: relative;
-       left: 0;
-       width: 100%;
-    }
-
+    padding-top: var(--spacing);
+    flex-direction: row;
+    text-align: left;
+    position: inherit;
+  }
+  .main-content {
+    width: 100%;
+  }
+  .footer {
+    position: relative;
+    left: 0;
+    width: 100%;
+  }
 }
 // Pico
 // ––––––––––––––––––––

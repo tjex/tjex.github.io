@@ -6,7 +6,7 @@ import path from 'node:path';
 import Layout from "./Base.astro";
 import SideLeftPage from "../components/SideLeftPage.astro";
 import SideRightBlank from "../components/SideRightBlank.astro";
-import Header from "../components/Header.astro";
+import HeaderCenter from "../components/HeaderCenter.astro";
 import Tags from "../components/Tags.astro";
 import Footer from "../components/Footer.astro";
 import License from "../components/License.astro";
@@ -26,7 +26,7 @@ const postGithubUrl =  new URL('https://github.com/tjex/tjex.github.io/commits/m
     <Fragment slot="head-bottom">
         <ArticleSchema {post} />
     </Fragment>
-    <Header slot="header" />
+    <HeaderCenter slot="header-center" />
     <SideLeftPage slot="side-left" />
     <article class="post-content__article">
         <h1>{post.data.title}</h1>

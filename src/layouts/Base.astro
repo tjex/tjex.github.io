@@ -16,7 +16,11 @@ const { seo } = Astro.props;
   </head>
   <div class="wrapper">
     <body>
-      <slot name="header" />
+      <div class="header-wrapper">
+        <slot name="header-left" />
+        <slot name="header-center" />
+        <slot name="header-right" />
+      </div>
       <slot name="side-left" />
       <main class="main-content">
         <slot />
