@@ -38,22 +38,22 @@
 }
 @media (min-width: 576px) {
   :root {
-    --font-size: 14px;
+    --font-size: 1rem;
   }
 }
 @media (min-width: 768px) {
   :root {
-    --font-size: 15px;
+    --font-size: 1rem;
   }
 }
 @media (min-width: 992px) {
   :root {
-    --font-size: 16px;
+    --font-size: 1rem;
   }
 }
 @media (min-width: 1200px) {
   :root {
-    --font-size: 17px;
+    --font-size: 1.05rem;
   }
 }
 
@@ -663,8 +663,13 @@ progress,
  * Sectioning
  * Container and responsive spacings for header, main, footer
  */
+:root {
+  --max-page-width: 1200px;
+}
+
 main {
   display: block;
+  max-width: 1200px;
 }
 
 body {

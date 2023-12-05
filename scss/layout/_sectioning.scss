@@ -8,9 +8,19 @@
 // - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css
 // ––––––––––––––––––––
 
+// html {
+//     width: 1900px;
+//     position: relative;
+//     margin: 0;
+// }
+
+:root {
+    --max-page-width: 1200px;
+}
 // Render the `main` element consistently in IE
 main {
   display: block;
+  max-width: 1200px;
 }
 
 body {
@@ -20,7 +30,7 @@ body {
 
 // fundamental site structure made of flexboxes
 .wrapper {
-  display: flex;  
+  display: flex;
   flex-wrap: wrap;
 }
 
@@ -78,7 +88,7 @@ body {
   text-align: right;
   padding-top: calc(var(--spacing) * 6);
   position: sticky;
-  top: var(--offset); 
+  top: var(--offset);
   max-height: calc(100vh - var(--spacing) * 2);
 }
 
@@ -97,7 +107,7 @@ body {
 }
 
 @media only screen and (max-width: 960px) {
-  .aside-1 { 
+  .aside-1 {
         padding-top: var(--spacing);
         flex-direction: row;
         text-align: left;
@@ -105,14 +115,14 @@ body {
 
     }
     .main-content {
-        width: 100%; 
+        width: 100%;
     }
     .footer {
        position: relative;
        left: 0;
        width: 100%;
     }
-    
+
 }
 // Pico
 // ––––––––––––––––––––
