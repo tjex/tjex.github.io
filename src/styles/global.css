@@ -699,6 +699,7 @@ body {
   flex: 1 1 var(--max-width);
   justify-content: center;
   padding: calc(var(--spacing) * 1.5);
+  max-width: var(--max-width);
 }
 
 .header-left,
@@ -709,11 +710,13 @@ body {
 
 .header-left {
   flex: 1 1 20%;
+  min-width: 100px;
   text-align: right;
   justify-content: right;
 }
 
 .header-right {
+  padding-top: 3rem;
   flex: 1 1 20%;
 }
 
