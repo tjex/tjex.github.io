@@ -981,8 +981,6 @@ a:is([aria-current], :hover, :active, :focus),
 a:focus,
 [role=link]:focus {
   --background-color: var(--primary-focus);
-  --text-decoration: none;
-  outline: dashed;
 }
 a.secondary,
 [role=link].secondary {
@@ -1017,8 +1015,7 @@ a:visited {
   color: var(--color);
   text-decoration-color: var(--link-visited);
 }
-
-a:visited:hover {
+a:visited:focus, a:visited:hover {
   color: var(--link-visited);
 }
 

@@ -83,8 +83,6 @@ a,
 
   &:focus {
     --background-color: var(--primary-focus);
-    --text-decoration: none;
-    outline: dashed;
   }
 
   @if $enable-classes {
@@ -123,10 +121,9 @@ a,
 a:visited {
   color: var(--color);
   text-decoration-color: var(--link-visited);
-}
-
-a:visited:hover {
-  color: var(--link-visited);
+  &:focus, &:hover {
+    color: var(--link-visited);
+  }
 }
 
 // Headings
