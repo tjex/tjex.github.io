@@ -5,22 +5,8 @@ import "../styles/snippets/contentPreview.css";
 const { src, title, description, lang, project } = Astro.props;
 ---
 
-<div class="content-preview">
-  <h5>
-    <a href={`${src}`}>
-      {project}
-    </a>
-    <br />
-  </h5>
-  <span> {description}</span>
-  <br />
-  {
-    lang ? (
-      <span class="secondary" style="font-style: italic;">
-        &#10149; language: {lang}
-      </span>
-    ) : (
-      ""
-    )
-  }
-</div>
+<article>
+  <a class="preview-title" href={`${src}`}> {project}</a>
+  <span class="description"> ( {lang} )</span><br />
+  <p class="description">{description}</p>
+</article>
