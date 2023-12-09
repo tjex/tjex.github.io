@@ -1,9 +1,11 @@
 a {
   text-decoration: none;
+  color: var(--primary);
 }
 
 a:hover > .title {
   text-decoration: underline;
+  text-decoration-thickness: var(--text-decoration-thickness);
 }
 
 .title,
@@ -21,7 +23,7 @@ a:hover > .title {
 .title {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--theme-text);
+  color: var(--primary);
 }
 
 .description {

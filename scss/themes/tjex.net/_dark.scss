@@ -31,6 +31,7 @@
   --secondary-inverse: #{$white};
 
   // Links
+  --link-decoration-color: #{$grey-500};
   --link-visited: #{ $purple-200};
   --link-visited-hover: #{mix($purple-100, $black, 75%)};
 

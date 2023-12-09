@@ -329,6 +329,7 @@ body::-webkit-scrollbar-thumb {
   --secondary-hover: #aab9c3;
   --secondary-focus: rgba(89, 107, 120, 0.125);
   --secondary-inverse: #000;
+  --link-decoration-color: hsl(205, 10%, 50%);
   --link-visited: hsl(315, 64%, 65%);
   --link-visited-hover: hsl(315, 64%, 65%);
   --contrast: hsl(205, 30%, 15%);
@@ -446,6 +447,7 @@ body::-webkit-scrollbar-thumb {
     --secondary-hover: #4e606d;
     --secondary-focus: rgba(115, 130, 140, 0.25);
     --secondary-inverse: #e2dbd6;
+    --link-decoration-color: hsl(205, 10%, 50%);
     --link-visited: hsl(315, 64%, 65%);
     --link-visited-hover: #b072a1;
     --contrast: hsl(205, 20%, 74%);
@@ -563,6 +565,7 @@ body::-webkit-scrollbar-thumb {
   --secondary-hover: #4e606d;
   --secondary-focus: rgba(115, 130, 140, 0.25);
   --secondary-inverse: #e2dbd6;
+  --link-decoration-color: hsl(205, 10%, 50%);
   --link-visited: hsl(315, 64%, 65%);
   --link-visited-hover: #b072a1;
   --contrast: hsl(205, 20%, 74%);
@@ -962,7 +965,7 @@ a,
   --background-color: transparent;
   --text-decoration: underline;
   --text-decoration-thickness: 2px;
-  --text-decoration-color: var(--primary);
+  --text-decoration-color: var(--link-decoration-color);
   --text-underline-position: under;
   color: var(--color);
   text-decoration: var(--text-decoration);
@@ -1009,14 +1012,6 @@ a.contrast:is([aria-current], :hover, :active, :focus),
 a.contrast:focus,
 [role=link].contrast:focus {
   --background-color: var(--contrast-focus);
-}
-
-a:visited {
-  color: var(--color);
-  text-decoration-color: var(--link-visited);
-}
-a:visited:focus, a:visited:hover {
-  color: var(--link-visited);
 }
 
 h1,

@@ -57,7 +57,7 @@ a,
   --background-color: transparent;
   --text-decoration: underline;
   --text-decoration-thickness: 2px;
-  --text-decoration-color: var(--primary);
+  --text-decoration-color: var(--link-decoration-color);
   --text-underline-position: under;
 
   color: var(--color);
@@ -115,14 +115,6 @@ a,
         --background-color: var(--contrast-focus);
       }
     }
-  }
-}
-
-a:visited {
-  color: var(--color);
-  text-decoration-color: var(--link-visited);
-  &:focus, &:hover {
-    color: var(--link-visited);
   }
 }
 
