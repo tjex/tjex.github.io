@@ -4,10 +4,14 @@
 
 // Variables
 @import "../variables";
-@import "tjex.net/colors";
 
-// Commons styles
-@import "tjex.net/styles";
+// styling
+@import "tjex.net/root";
+@import "tjex.net/colors";
+@import "tjex.net/posts";
+@import "tjex.net/responsive";
+@import "tjex.net/typography";
+@import "tjex.net/ui";
 
 // Light theme (tjex.net)
 // Can be forced with data-theme="light"

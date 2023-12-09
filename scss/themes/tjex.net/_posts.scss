@@ -1,0 +1,59 @@
+/* POSTS / BLOG */
+
+.postlist {
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.postlist-single {
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+// for divs that display page infrormation such as author and date
+.post-info {
+  color: var(--muted);
+  text-align: right;
+  margin-bottom: var(--spacing);
+  font-size: var(--font-small);
+}
+
+// div class for next/prevPost links
+.neighbourPost {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing);
+}
+
+.nextPost a,
+.prevPost a {
+  display: inline-flex;
+  margin: 0.4em;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.2em 0.8em;
+  background-color: var(--secondary-focus);
+  transition: var(--transition);
+}
+
+.nextPost a:hover,
+.nextPost a:focus,
+.prevPost a:hover,
+.prevPost a:focus {
+  background-color: var(--secondary-hover);
+  text-decoration: none;
+}
+
+.nextPost a::before {
+  content: var(--icon-left-arrow);
+}
+
+.prevPost a::after {
+  content: var(--icon-right-arrow);
+}
+

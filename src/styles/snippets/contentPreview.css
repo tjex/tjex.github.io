@@ -1,31 +1,31 @@
-a {
-  text-decoration: none;
-  color: var(--primary);
-}
-
-a:hover > .title {
+a:hover {
   text-decoration: underline;
   text-decoration-thickness: var(--text-decoration-thickness);
 }
 
-.title,
+.preview-title,
 .author,
 .publish-date {
   margin: 0;
 }
 
-.pub-date,
-.author {
-  font-size: 0.8rem;
-  color: var(--secondary);
-}
-
-.title {
+.preview-title {
   font-size: 1rem;
   font-weight: 700;
   color: var(--primary);
+  text-decoration: none;
+}
+
+.pub-date,
+.author {
+  font-size: var(--font-small);
+  color: var(--secondary);
 }
 
 .description {
   color: var(--secondary);
+}
+
+.content-preview {
+  padding-bottom: var(--spacing);
 }

@@ -1,17 +1,16 @@
 ---
 // post preview component for content filed under "Hacks"
 import "../styles/snippets/contentPreview.css";
-
 export interface Props {
-    post: any;
+  post: any;
 }
 
 const { post } = Astro.props;
 ---
 
 <article>
-    <a href={`/hacks/${post.slug}`}>
-        <h1 class="title">{post.title}</h1>
-    </a>
-    <span class="secondary">{post.description}</span>
+  <a class="preview-title" href={`/hacks/${post.slug}`}>
+    {post.title}
+  </a>
+  <p class="description">{post.description}</p>
 </article>

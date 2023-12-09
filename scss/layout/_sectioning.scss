@@ -11,10 +11,16 @@
 :root {
   --max-width: 1200px;
 }
+
 // Render the `main` element consistently in IE
 main {
   display: block;
   max-width: var(--max-width);
+}
+
+// Responsive spacings for section
+section {
+  margin-bottom: var(--block-spacing-vertical);
 }
 
 body {
