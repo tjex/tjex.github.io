@@ -20,7 +20,7 @@
   --muted-border-color: #{$grey-50};
 
   // Primary colors
-  --primary: #{$primary-600};
+  --primary: #{$primary-700};
   --primary-muted: #{$primary-200};
   --primary-hover: #{$primary-700};
   --primary-focus: #{rgba($primary-600, 0.125)};
@@ -33,9 +33,8 @@
   --secondary-inverse: #{$black};
 
   // Links
-  --link-hover: #{ $green-200 };
-  --link-visited: #{$green-200};
-  --link-visited-hover: #{$green-300}; 
+  --link-visited: #{$purple-200};
+  --link-visited-hover: #{$purple-200}; 
 
   // Contrast colors
   --contrast: #{$grey-900};

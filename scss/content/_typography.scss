@@ -13,7 +13,6 @@ strong {
   font-weight: bolder;
 }
 
-
 // Prevent `sub` and `sup` elements from affecting the line height in all browsers
 sub,
 sup {
@@ -54,31 +53,38 @@ ul {
 // 1. Remove the gray background on active links in IE 10
 a,
 [role="link"] {
-  --color: var(--primary);
+  --color: var(--color);
   --background-color: transparent;
-  --text-decoration: none;
-  --text-decoration-thickness: 3px;
+  --text-decoration: underline;
+  --text-decoration-thickness: 2px;
+  --text-decoration-color: var(--primary);
   --text-underline-position: under;
 
   color: var(--color);
   text-decoration: var(--text-decoration);
   text-decoration-thickness: var(--text-decoration-thickness);
   text-underline-position: var(--text-underline-position);
+  text-decoration-color: var(--text-decoration-color);
   outline: none;
 
   @if $enable-transitions {
-    transition: background-color var(--transition), color var(--transition),
-      text-decoration var(--transition), box-shadow var(--transition);
+    transition:
+      background-color var(--transition),
+      color var(--link-visited-hover),
+      text-decoration var(--transition),
+      box-shadow var(--transition);
   }
 
   &:is([aria-current], :hover, :active, :focus) {
-    --color: var(--link-hover);
+    --color: var(--primary);
     --text-decoration: underline;
-    --text-decoration-color: var(--link-hover);
+    --text-decoration-color: var(--primary);
   }
 
   &:focus {
     --background-color: var(--primary-focus);
+    --text-decoration: none;
+    outline: dashed;
   }
 
   @if $enable-classes {
@@ -89,14 +95,13 @@ a,
       &:is([aria-current], :hover, :active, :focus) {
         --color: var(--secondary-hover);
         --text-decoration: underline;
-        --text-decoration-color: var(--link-hover);
+        --text-decoration-color: var(--primary-hover);
       }
 
       &:focus {
         --background-color: var(--secondary-focus);
       }
     }
-
 
     // Contrast
     &.contrast {
@@ -105,25 +110,24 @@ a,
       &:is([aria-current], :hover, :active, :focus) {
         --color: var(--contrast-hover);
         --text-decoration: underline;
-        --text-decoration-color: var(--link-hover);
+        --text-decoration-color: var(--primary-hover);
       }
 
       &:focus {
         --background-color: var(--contrast-focus);
       }
     }
-      // visit[ed] class
-      &.visit:visited {
-        --color: var(--link-visited);
-      }
-
-      &.visit:visited:hover {
-        --color: var(--link-visited-hover);
-      }
-
   }
 }
 
+a:visited {
+  color: var(--color);
+  text-decoration-color: var(--link-visited);
+}
+
+a:visited:hover {
+  color: var(--link-visited);
+}
 
 // Headings
 h1,
@@ -221,19 +225,18 @@ small {
 
 // Span
 span.secondary {
-    font-size: var(--font-small);
-    color: var(--secondary);
-
+  font-size: var(--font-small);
+  color: var(--secondary);
 }
 
 span.bubble {
-    color: var(--secondary-contrast);
-    font-size: var(--font-small);
-    margin: 0.4em;
-    border: none;
-    border-radius: .3em;
-    padding: .1em 0.5em;
-    background-color: var(--secondary-focus);
+  color: var(--secondary-contrast);
+  font-size: var(--font-small);
+  margin: 0.4em;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.1em 0.5em;
+  background-color: var(--secondary-focus);
 }
 
 // Lists
@@ -314,8 +317,7 @@ del {
 
 /* These styles are required to make icons render reliably */
 .icon::before {
-display: inline-block;
-text-rendering: auto;
--webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
 }
-

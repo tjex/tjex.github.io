@@ -1,9 +1,8 @@
 // Commons Styles
 :root {
   // Typography
-  --font-family: system-ui, -apple-system, "Segoe UI", "Helvetica", "Roboto", "Ubuntu",
-    "Cantarell", "Oxygen-Sans", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family: system-ui, -apple-system, "Segoe UI", "Helvetica", "Roboto", "Ubuntu", "Cantarell", "Oxygen-Sans",
+    "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --line-height: 1.6;
   --font-weight: 400;
   --font-size: 1rem;
@@ -137,7 +136,6 @@
 
   // Modal
   dialog > article {
-
     --block-spacing-vertical: calc(var(--spacing) * 2);
     --block-spacing-horizontal: var(--spacing);
 
@@ -157,10 +155,9 @@
   }
 }
 
-
 // Small
 small {
-  --font-size: 0.875em;
+  --font-size: var(--font-small);
 }
 
 // Headings
@@ -221,115 +218,126 @@ tfoot {
   --font-size: 0.875em;
 }
 
+// <a> link classes
+.no-visit {
+  color: var(--primary) !important;
+}
+
+.nav-link,
+.site-heading {
+  color: var(--primary) !important;
+  --text-decoration: none !important;
+}
 
 .site-heading {
-    text-decoration: none;
-    color: var(--primary);
-    font-size: 3rem;
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 3rem;
 }
 
 .pill-link a {
-    color: var(--primary);
-    text-decoration: none;
-    margin: 0.4em;
-    border: none;
-    border-radius: .3em;
-    padding: .2em .8em;
-    background-color: var(--secondary-focus);
-    transition: var(--transition);
+  color: var(--primary);
+  text-decoration: none;
+  margin: 0.4em;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.2em 0.8em;
+  background-color: var(--secondary-focus);
+  transition: var(--transition);
 }
 
 .tag,
 .tag a {
-    display: inline-block;
-    font-size: 0.8rem;
-    font-weight: 400; /* e.g. tags in heading or emboldened phrase */
-    text-decoration: none;
-    margin: 0.2em 0.3em;
-    border: none;
-    border-radius: .3em;
-    padding: .1em .8em;
-    background-color: var(--secondary-focus);
-    color: var(--muted);
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 400; /* e.g. tags in heading or emboldened phrase */
+  text-decoration: none;
+  margin: 0.2em 0.3em;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.1em 0.8em;
+  background-color: var(--secondary-focus);
+  color: var(--muted) !important;
 }
 
 .pill-link a:hover,
 .pill-link a:focus {
-    background-color: var(--secondary-hover);
+  background-color: var(--secondary-hover);
 }
 
 .media-link {
-    padding-bottom: var(--spacing);
+  padding-bottom: var(--spacing);
 }
 
 /* POSTS / BLOG */
 
 .postlist {
-    padding: 1rem 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
 .postlist-single {
-    padding: 1rem 0;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1rem;
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
 }
 
 // for divs that display page infrormation such as author and date
 .post-info {
-    color: var(--muted);
-    text-align: right;
-    margin-bottom: var(--spacing);
-    font-size: var(--font-small);
+  color: var(--muted);
+  text-align: right;
+  margin-bottom: var(--spacing);
+  font-size: var(--font-small);
 }
 
 .neighbourPost {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: var(--spacing);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing);
 }
-.nextPost a, .prevPost a {
-    display: inline-flex;
-    margin: 0.4em;
-    border: none;
-    border-radius: .3em;
-    padding: .2em .8em;
-    background-color: var(--secondary-focus);
-    transition: var(--transition);
+.nextPost a,
+.prevPost a {
+  display: inline-flex;
+  margin: 0.4em;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.2em 0.8em;
+  background-color: var(--secondary-focus);
+  transition: var(--transition);
 }
 
-.nextPost a:hover, .nextPost a:focus,
-.prevPost a:hover, .prevPost a:focus {
-    background-color: var(--secondary-hover);
-    text-decoration: none;
-
+.nextPost a:hover,
+.nextPost a:focus,
+.prevPost a:hover,
+.prevPost a:focus {
+  background-color: var(--secondary-hover);
+  text-decoration: none;
 }
 
 .nextPost a::before {
-    content: var(--icon-left-arrow);
+  content: var(--icon-left-arrow);
 }
 
 .prevPost a::after {
-    content: var(--icon-right-arrow);
+  content: var(--icon-right-arrow);
 }
 
 @media screen and (max-width: 769px) {
-    .postlist {
-      grid-template-columns: 1fr;
-    }
+  .postlist {
+    grid-template-columns: 1fr;
   }
+}
 
 body::-webkit-scrollbar {
-    width: 0.6em;
+  width: 0.6em;
 }
 body::-webkit-scrollbar-track {
-    background: var(--code-background-color);
+  background: var(--code-background-color);
 }
 body::-webkit-scrollbar-thumb {
-    background: var(--muted-color);
-
+  background: var(--muted-color);
 }

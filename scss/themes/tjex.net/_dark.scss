@@ -31,8 +31,7 @@
   --secondary-inverse: #{$white};
 
   // Links
-  --link-hover: #{ $amber-100 };
-  --link-visited: #{mix($purple-100, $black)};
+  --link-visited: #{ $purple-200};
   --link-visited-hover: #{mix($purple-100, $black, 75%)};
 
   // Contrast colors
