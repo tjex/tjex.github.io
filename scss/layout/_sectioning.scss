@@ -161,6 +161,7 @@ body {
   }
   .sidebar-left, .sidebar-left ul {
     display: flex;
+    flex-wrap: wrap;
     padding-top: var(--spacing);
     flex-direction: row;
     text-align: left;

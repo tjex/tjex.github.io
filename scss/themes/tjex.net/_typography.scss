@@ -41,9 +41,15 @@ h5 {
 }
 
 // finer grained <a> link classes
-.nav-link {
+.site-nav,
+.site-nav a {
   color: var(--primary) !important;
+  font-size: 1.3rem;
   --text-decoration: none !important;
+}
+
+.site-nav a:after {
+    content: " •";
 }
 
 .pill-link a {
