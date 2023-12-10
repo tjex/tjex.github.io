@@ -1,10 +1,16 @@
 ---
 // this is the base component for the LEFT sidebar on PAGES
 // it's wrapped in the <aside> attribute, which is part of the flex layout of the site.
-
-import SiteNav from "./SiteNav.astro";
 ---
 
-<aside class="aside aside-1">
-  <SiteNav />
+<aside class="aside sidebar-left">
+  <nav>
+    <ul>
+      <li><a class="nav-link" href="/contact">contact •</a></li>
+      <li><a class="nav-link" href="/projects">projects •</a></li>
+      <li><a class="nav-link" href="/blog">blog •</a></li>
+      <li><a class="nav-link" href="/hacks">hacks •</a></li>
+      <li><a class="nav-link" href="/listening">listening •</a></li>
+    </ul>
+  </nav>
 </aside>

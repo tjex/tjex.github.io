@@ -81,8 +81,8 @@ body {
 }
 
 /* sidebars */
-.aside-1,
-.aside-2 {
+.sidebar-left,
+.sidebar-right {
   display: flex;
   padding-top: calc(var(--spacing) * 6);
   position: sticky;
@@ -90,7 +90,7 @@ body {
   max-height: calc(100vh - var(--spacing) * 2);
 }
 
-.aside-1 {
+.sidebar-left {
   flex-flow: column wrap;
   gap: 0.5em;
   --offset: var(--spacing);
@@ -137,13 +137,13 @@ body {
   .header-right {
     order: 3;
   }
-  .aside-1 {
+  .sidebar-left {
     order: 4;
   }
   .main-content {
     order: 5;
   }
-  .aside-2 {
+  .sidebar-right {
     order: 6;
   }
 }
@@ -159,7 +159,8 @@ body {
   .header-right {
     flex: 0 0 0;
   }
-  .aside-1 {
+  .sidebar-left, .sidebar-left ul {
+    display: flex;
     padding-top: var(--spacing);
     flex-direction: row;
     text-align: left;
