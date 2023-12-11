@@ -49,6 +49,11 @@ The `sudo install...` commands are taken from Wezterm's own [deploy
 script](https://github.com/wez/wezterm/blob/e3cd2e93d0ee5f3af7f3fe0af86ffad0cf8c7ea8/ci/deploy.sh#L209C1-L241C4)
 logic, as [recommended by Wez himself](https://github.com/wez/wezterm/discussions/2128).
 
+Contrary to the deply script above, I've changed the install path in the instructions from
+`/usr/bin` to `/usr/local/bin`, as the [general
+recommendation](https://www.baeldung.com/linux/differences-bin-sbin-usr-local#5-usrlocalbin) is to
+install programs that are *not* managed by package mangers to `/usr/local/bin`.
+
 To clone, build and install Wezterm:
 
 ```bash
@@ -60,10 +65,10 @@ git submodule update --init --recursive
 ./get-deps
 cargo build --release
 cd target/release
-mkdir -p /usr/bin /etc/profile.d
-sudo install -Dm755 assets/open-wezterm-here wezterm wezterm-gui wezterm-mux-server strip-ansi-escapes -t /usr/bin
+mkdir -p /usr/local/bin /etc/profile.d
+sudo install -Dm755 assets/open-wezterm-here wezterm wezterm-gui wezterm-mux-server strip-ansi-escapes -t /usr/local/bin
 sudo install -Dm644 assets/shell-integration/* -t /etc/profile.d
-sudo install -Dm644 assets/shell-completion/zsh /usr/share/zsh/site-functions/_wezterm
+sudo install -Dm644 assets/shell-completion/zsh /usr/local/share/zsh/site-functions/_wezterm
 sudo install -Dm644 assets/shell-completion/bash /etc/bash_completion.d/wezterm
 ```
 
