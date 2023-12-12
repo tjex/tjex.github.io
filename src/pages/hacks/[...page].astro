@@ -7,38 +7,41 @@ import Paginator from "../../components/Paginator.astro";
 import * as colUtil from "../../scripts/collectionUtil.ts";
 
 export async function getStaticPaths({ paginate }) {
-    const posts = await colUtil.noDrafts("hacks").then((posts) =>
-        posts
-            .map((post: any) => ({
-                slug: post.slug,
-                title: post.data.title,
-                description: post.data.description,
-                tags: post.data.tags,
-                pubDate: post.data.pubDate,
-            }))
-            .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate)),
-    );
-    return paginate(posts, { pageSize: 10 });
+  const posts = await colUtil.noDrafts("hacks").then((posts) =>
+    posts
+      .map((post: any) => ({
+        slug: post.slug,
+        title: post.data.title,
+        description: post.data.description,
+        tags: post.data.tags,
+        pubDate: post.data.pubDate,
+      }))
+      .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate)),
+  );
+  return paginate(posts, { pageSize: 10 });
 }
 
 const seo = {
-    title: "Hacks",
-    description:
-        "Collection of hacks, configs, scripts and setups to help make you more productive and / or impress your manager",
+  title: "Hacks",
+  description:
+    "Collection of hacks, configs, scripts and setups to help make you more productive and / or impress your manager",
 };
 
 const { page } = Astro.props;
 ---
 
 <Layout seo={seo}>
-    <h1> Hacks </h1>
-    <p> Here you can find some hacks, configs, scripts and setups I think are worth filling servers with. <br> To see how my computer will suddenly erupt in flames, check my <a rel="me" href=`${tjex.dotfiles}`>dotfiles</a>. </p>
-        <div class="post-info">
-            View by tag: <TagsUnique collection={"hacks"} />
-        </div>
-    <section class="postlist">
-        {page.data.map((post: any) => <HackPreview post={post} />)}
-    </section>
-    <Paginator page={page} />
+  <h1>Hacks</h1>
+  <p>
+    Here you can find some hacks, configs, scripts and setups I feel are worth documenting.<br />
+     Usually because I couldn't find a solution to a problem I had, or I did find a solution and
+     improved it.
+  </p>
+  <div class="post-info">
+    View by tag: <TagsUnique collection={"hacks"} />
+  </div>
+  <section class="postlist">
+    {page.data.map((post: any) => <HackPreview post={post} />)}
+  </section>
+  <Paginator page={page} />
 </Layout>
-
