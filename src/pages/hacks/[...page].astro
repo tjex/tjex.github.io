@@ -38,7 +38,7 @@ const { page } = Astro.props;
      improved it.
   </p>
   <div class="post-info">
-    View by tag: <TagsUnique collection={"hacks"} />
+    Filter by tag: <TagsUnique collection={"hacks"} />
   </div>
   <section class="postlist">
     {page.data.map((post: any) => <HackPreview post={post} />)}
