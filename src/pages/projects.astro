@@ -3,34 +3,47 @@ import Layout from "../layouts/Page.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 
 const seo = {
-    title: "Projects",
-    description:
-        "Personal projects of Tillman Jex within software, open-source, music and arts.",
+  title: "Projects",
+  description: "Personal projects of Tillman Jex within software, open-source, music and arts.",
 };
 ---
 
 <Layout {seo}>
-    <h1>Projects</h1>
-    <div class="filterWrapper">
-        <ProjectCard
-            src={"https://github.com/tjex/ofTombola-sequencer"}
-            project={"ofTombola-sequencer"}
-            description={"A tool to create musical sequences using the physics of bouncing balls and collisions"}
-            lang={"C++"}
-        />
-        <div class="grid">
-            <ProjectCard
-                src={"https://github.com/tjex/dbookmarks"}
-                project={"dbookmarks"}
-                description={"Read and open URLs saved in a text file, using dmenu-mac"}
-                lang={"Go"}
-            />
-            <ProjectCard
-                src={"https://github.com/tjex/mailbox-org-cli"}
-                project={"mailbox-org-cli"}
-                description={"My maintained fork of a CLI utility to work with disposable email addresses supplied by mailbox.org"}
-                lang={"Go"}
-            />
-        </div>
+  <h1>Projects</h1>
+  <div class="filterWrapper">
+      <ProjectCard
+        src={"https://ctechfilmuniversity.github.io/zalf-ar-documentation/documentation.html"}
+        project={"ZALF - Cookbook"}
+        description={"Prototyping an Augmented Reality cookbook for the research institute ZALF"}
+        lang={["Unity", "C#"]}
+      />
+    <div class="grid">
+      <ProjectCard
+        src={"https://github.com/tjex/Shortcut-FirstTermProject?tab=readme-ov-file"}
+        project={"Shortcut - A virtual reality dreamscape"}
+        description={"Exploring an intersection between the unconscious, digital art and technology"}
+        lang={["Unity", "C#", "Processing4"]}
+      />
+      <ProjectCard
+        src={"https://github.com/tjex/ofTombola-sequencer"}
+        project={"ofTombola-sequencer"}
+        description={"A tool to create musical sequences using the physics of bouncing balls and collisions"}
+        lang={["C++"]}
+      />
     </div>
+    <div class="grid">
+      <ProjectCard
+        src={"https://github.com/tjex/dbookmarks"}
+        project={"dbookmarks"}
+        description={"Read and open URLs saved in a text file, using dmenu-mac"}
+        lang={["Go"]}
+      />
+      <ProjectCard
+        src={"https://github.com/tjex/mailbox-org-cli"}
+        project={"mailbox-org-cli"}
+        description={"My maintained fork of a CLI utility to work with disposable email addresses supplied by mailbox.org"}
+        lang={["Go"]}
+      />
+    </div>
+  </div>
 </Layout>

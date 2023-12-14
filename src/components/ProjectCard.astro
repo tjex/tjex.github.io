@@ -6,7 +6,8 @@ const { src, title, description, lang, project } = Astro.props;
 ---
 
 <article>
-  <a class="preview-title" href={`${src}`}> {project}</a>
-  <span class="description"> ( {lang} )</span><br />
-  <p class="description">{description}</p>
+  <a class="preview-title" href={`${src}`}> {project}</a><br />
+  <p class="description"> {description} <br>
+  {lang.map((l: any) => <span class="tag">{l}</span>)}
+  </p>
 </article>

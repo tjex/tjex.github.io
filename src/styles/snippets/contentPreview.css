@@ -29,3 +29,8 @@ a:hover {
 .content-preview {
   padding-bottom: var(--spacing);
 }
+
+.tag {
+    margin-left: 0rem;
+    color: var(--color) !important;
+}
