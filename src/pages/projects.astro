@@ -11,38 +11,32 @@ const seo = {
 <Layout {seo}>
   <h1>Projects</h1>
   <div class="filterWrapper">
-    <ProjectCard
-      src={"https://ctechfilmuniversity.github.io/zalf-ar-documentation/documentation.html"}
-      project={"ZALF - AR Cookbook"}
-      description={"Prototyping an augmented reality cookbook for the research institute, ZALF"}
-      lang={["Unity", "C#"]}
-    />
+    <div class="grid">
+      <ProjectCard
+        src={"https://github.com/zk-org"}
+        project={"zk-org - tools for Zettelkasten note taking"}
+        description={"co-maintainer of the Zettelkasten CLI note taking tool, zk, and its neovim plugin."}
+        lang={["go", "lua"]}
+      />
+      <ProjectCard
+        src={"https://ctechfilmuniversity.github.io/zalf-ar-documentation/documentation.html"}
+        project={"ZALF - AR Cookbook"}
+        description={"Prototyping an augmented reality cookbook for the research institute, ZALF."}
+        lang={["Unity", "C#"]}
+      />
+    </div>
     <div class="grid">
       <ProjectCard
         src={"https://github.com/tjex/Shortcut-FirstTermProject?tab=readme-ov-file"}
         project={"Shortcut - A VR dreamscape"}
-        description={"Exploring an intersection between the unconscious, digital art and virtual reality"}
+        description={"Exploring an intersection between the unconscious, digital art and virtual reality."}
         lang={["Unity", "C#", "Processing4"]}
       />
       <ProjectCard
         src={"https://github.com/tjex/ofTombola-sequencer"}
         project={"ofTombola-sequencer"}
-        description={"A tool to create musical sequences using the physics of bouncing balls and collisions"}
+        description={"MIDI sequencer using the physics of bouncing balls and collisions as note events."}
         lang={["C++"]}
-      />
-    </div>
-    <div class="grid">
-      <ProjectCard
-        src={"https://github.com/tjex/dbookmarks"}
-        project={"dbookmarks"}
-        description={"Read and open URLs saved in a text file, using dmenu-mac"}
-        lang={["Go"]}
-      />
-      <ProjectCard
-        src={"https://github.com/tjex/mailbox-org-cli"}
-        project={"mailbox-org-cli"}
-        description={"My maintained fork of a CLI utility to work with disposable email addresses supplied by mailbox.org"}
-        lang={["Go"]}
       />
     </div>
   </div>
