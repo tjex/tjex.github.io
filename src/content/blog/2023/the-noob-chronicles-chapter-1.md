@@ -17,7 +17,7 @@ and I'm *not* going back to birth...
 ## Music, Art and For Loops
 
 It's been two years since I learnt want a for loop is. Since then the ball has
-been rolling with great joy, but cracks are appearing on it's surface. I heard
+been rolling with great joy, but cracks are appearing on its surface. I heard
 quite early on that the more you learn, the more you realise how much you don't
 know. 
 
