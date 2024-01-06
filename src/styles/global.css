@@ -1275,6 +1275,9 @@ img {
   max-width: 100%;
   height: auto;
   border-style: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 :where(svg:not([fill])) {
