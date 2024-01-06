@@ -16,20 +16,20 @@
 </aside>
 
 <style>
+  .site-nav,
+  .site-nav a {
+    color: var(--primary);
+    font-size: 1.3rem;
+    text-decoration: none;
+    /* allows button hover to fill as little space as possible */
+    margin-inline-start: auto;
+  }
 
-.site-nav,
-.site-nav a {
-  color: var(--primary);
-  font-size: 1.3rem;
-  text-decoration: none;
-  /* margin-left: 50px; */
-}
-
-.site-nav a:after {
+  .site-nav a:after {
     content: " •";
-}
+  }
 
-.site-nav a:hover {
+  .site-nav a:hover {
     text-decoration: underline;
-}
+  }
 </style>

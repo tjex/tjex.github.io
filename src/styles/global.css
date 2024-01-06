@@ -547,7 +547,7 @@ body {
 }
 
 /* from: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-examples */
-@media all and (min-width: 960px) {
+@media all and (min-width: 1031px) {
   .aside {
     flex: 1 0 0;
   }
@@ -566,11 +566,14 @@ body {
   .main-content {
     order: 5;
   }
-  .sidebar-right {
+  .footer {
     order: 6;
   }
+  .sidebar-right {
+    order: 7;
+  }
 }
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1030px) {
   .header-center {
     display: none;
   }
@@ -580,13 +583,26 @@ body {
   .header-right {
     flex: 0 0 0;
   }
-  .sidebar-left, .sidebar-left ul {
+  .sidebar-left,
+  .sidebar-left ul {
     display: flex;
     flex-wrap: wrap;
     padding-top: var(--spacing);
     flex-direction: row;
     text-align: left;
     position: inherit;
+  }
+  .sidebar-left .site-nav,
+  .sidebar-left .site-nav a,
+  .sidebar-left ul .site-nav,
+  .sidebar-left ul .site-nav a {
+    margin-inline: auto;
+  }
+  .sidebar-left .site-nav a:after,
+  .sidebar-left a:before,
+  .sidebar-left ul .site-nav a:after,
+  .sidebar-left ul a:before {
+    content: none !important;
   }
   .main-content {
     width: 100%;
