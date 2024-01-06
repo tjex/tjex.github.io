@@ -2,7 +2,7 @@
 
 ---
 
-<button class="outline" id="themeToggle" aria-label="theme toggle">
+<button class="no-outline" id="themeToggle" aria-label="theme toggle">
     <svg
         id="icon-toggle"
         xmlns="http://www.w3.org/2000/svg"
@@ -10,6 +10,8 @@
         x="0px"
         y="0px"
         viewBox="0 0 120 120"
+        width="40"
+        height="40"
         xml:space="preserve"
     >
         <g>
@@ -43,7 +45,9 @@
 
 <style>
     #themeToggle {
-        /* margin-left: auto; */
-        width: 25px;
+        /* the width and height allow for no flex shrink or grow */
+        width: 70px;
+        height: 70px;
+        flex: 0 0 auto;
     }
 </style>
