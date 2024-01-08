@@ -3,7 +3,7 @@ title: Hello World
 description: It's traditional.
 pubDate: 2023-05-28T10:30:00Z
 author: tjex
-tags: ['misc']
+tags: []
 draft: false
 ---
 

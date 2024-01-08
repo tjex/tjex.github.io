@@ -1,13 +1,11 @@
 ---
-title: The Zettelkasten GRID system
-description: My adaptation of a few different Zettelkasten organisation techniques, which I call the GRID system.
+title: The Zettelkasten GRID System
+description: The GRID system is a framework for frictionless organisation of a Zettelkasten. It defines a set of rules for note creation and note tagging that suppress the need for content categorisation. 
 pubDate: 2024-01-06T19:01:33Z
 author: tjex
 tags: ['learning']
-draft: true
+draft: false
 ---
-
-## Summary
 
 The GRID system is a framework for frictionless Zettelkasten organisation. It
 defines a set of rules for note creation and note tagging that suppress the
@@ -16,19 +14,42 @@ need for content categorisation.
 An example of content categorisation is the question, "Which topic does this 
 note relate to?".
 
-The lack of categorisation promotes a focus on the core principle of how the
+The lack of categorisation helps reduce cognitive friction (not losing the
+train of thought) and promotes a focus on the core principle of how the
 Zettelkasten method creates value, inter-note linking.
 
-The system was designed in keeping with two main concepts:
+The system was designed with two main concepts in mind:
 
-1. Keeping things simple and following a few simple, and well defined principles
-   is the best technique to deal with complexity.
+1. Keeping things simple and following a few well defined principles is the
+   best technique to deal with complexity.
 2. Content categorisation is the main cause of cognitive friction when working
    within a Zettelkasten.
 
 Some advice is also given for practices which support the goal of a
 "frictionless system", such as metadata suggestions and file naming with Unique
 Identifiers (UIDs), but they are not directly part of the GRID system itself.
+
+# Table of Contents
+
+- [Back Story](#back-story)
+- [(Over)categorisation is the death of a Zettelkasten](#overcategorisation-is-the-death-of-a-zettelkasten)
+- [The Fundamentals](#the-fundamentals)
+- [The GRID System](#the-grid-system)
+  - [G for glossary](#g-for-glossary)
+  - [R for reference](#r-for-reference)
+  - [I for indexes](#i-for-indexes)
+  - [D for diaries](#d-for-diaries)
+  - [(And the rest of the notes...)](#and-the-rest-of-the-notes)
+- [Tagging](#tagging)
+  - [Source tags](#source-tags)
+  - [Status tags](#status-tags)
+  - [Structure tags](#structure-tags)
+- [Note Metadata, File Naming and Future Proofing](#note-metadata-and-file-naming-and-future-proofing)
+  - [Metadata](#metadata)
+  - [File Naming](#file-naming)
+  - [Future Proofing](#future-proofing)
+- [Final Thoughts](#final-thoughts)
+
 
 ## Back Story
 
@@ -48,13 +69,13 @@ structure can severely hinder the effectiveness of a Zettelkasten.
 >
 > ~ Ahrens Sönke, How To Take Smart Notes
 
-The bitter sweet reality of any organisational technique is that
-we don't know how well it works for us until we spend some time working
-with it.
+The bitter sweet reality of any organisational technique is that we don't know
+how well it works for us until we spend some time working with it. After many
+iterations, this system emerged and has remained unchanged for quite some time;
+I have a solid feeling that I've found what works for me and feel it's robust
+enough to present.
 
-This post will explain what I tried, what I kept and what I changed to
-eventually bring me to my own iteration, which by sheer fluke could be named
-the GRID system. But first...
+I hope it provides some value to you.
 
 ## (Over)categorisation is the death of a Zettelkasten
 
@@ -99,7 +120,7 @@ Again:
 >
 > ~ Ahrens Sönke, How To Take Smart Notes
 
-## Brace yourself
+## The Fundamentals
 
 First and foremost, I highly recommend to read up a little on Niklas Luhmann's
 original Zettelkasten method *before* churning through the swathes of different
@@ -110,9 +131,11 @@ developments](../2023/fundamentals-all-the-way-down) (whether they be ideas,
 technologies, relationships, etc). 
 
 [Zettelkasten.de](https://www.zettelkasten.de) is undoubtedly the most precious
-resource for that. Christian and Sascha [communicate the topic with such
-excellence](https://zettelkasten.de/introduction/), and the forum there is also
+resource for that. Christian and Sascha communicate the topic with such
+excellence, and the forum there is also
 full of great discussion and attitudes.
+
+This [introduction to the Zettelkasten method](https://zettelkasten.de/introduction/) is a great jumping in point.
 
 ## A brief review of other systems in the wilderness
 
@@ -239,14 +262,14 @@ something up, please email me!
 
 ## The GRID System
 
-Like PARA and ACCESS, GRID is also an acronym for the folder structure. The acronym 
-was a total fluke, but I've enjoyed discovering that the acronym also provided 
-a soft barrier when considering if I needed another folder or not.
+Like PARA and ACCESS, GRID is also an acronym for the folder structure. The
+acronym was a total fluke.
 
-> I *did* have another folder for projects (inspired by PARA), so it was called
-> the GRID-P system, or P-GRID, or GRIPD (as in the 'uncool', and non gamer tag
-> way to write 'gripped') ... The point is; the acronym did *not* 
-> define the system.
+I *did* have another folder for projects (inspired by PARA), so it was called
+the GRID-P system, or P-GRID, or GRIPD (as in the 'uncool', and non gamer tag
+way to write 'gripped') ... 
+
+The point is; the acronym did *not* define the system.
 
 
 ### G for glossary
@@ -436,7 +459,9 @@ folders.
 > search picker for tags, narrow to `glossary` and then fuzzy find through all
 > my glossary notes.
 
-## Note Metadata and File Naming
+## Note Metadata, File Naming and Future Proofing
+
+The below are recommendations of mine and not explicitly part of the GRID system.
 
 ### Metadata 
 
@@ -498,4 +523,37 @@ alphanumeric, lower case). This is for a few reasons:
 > This is a far cry from Obsidian's UID functionality (I used Obsidian happily
 > for years).
 
+### Future Proofing
 
+'Future proofing' relates to how well a system will keep working through the
+development of the surrounding technologies (computers, storage mediums,
+operating systems, etc).
+
+It also relates to switching costs, which is how well a system can keep
+operating when it is transferred immediately into a new environment. E.g.,
+changing your note taking app or operating system.
+
+In terms of a Zettelkasten (repository of markdown documents), I would list
+these practices as contributing heavily to future proofing:
+
+- only use programs that work with *local* markdown files (meaning the files
+  are on your own computer and can be accessed by you outside of the app
+  without restriction) 
+- no spaces in file names: `file-names.md` or `file_names.md` instead.
+- no special characters in file names except hyphens and underscores. 
+- no spaces in tags with multiple words: `tags-with-multiple-words` instead.
+- not using programs that have syntax that differs from standard markdown spec.
+- lower case letters for directories (if you ever progress to using the
+  terminal or writing programs, this will save you a lot of head and finger
+  ache).
+- critically review any features that you bring into your workflow that are
+  program specific (such as Dataview in Obsidian)
+- use open-source software as it will not disappear overnight or put up a
+  paywall that you either cannot or will not want to pay. 
+
+
+## Final Thoughts
+
+...none. You've copped enough already. Happy Zetteling!
+
+(But if you do have any questions or comments, I'd be happy to receive your email)
