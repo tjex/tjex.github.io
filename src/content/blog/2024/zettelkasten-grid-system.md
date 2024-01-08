@@ -7,71 +7,108 @@ tags: ['learning']
 draft: true
 ---
 
+## Summary
+
+The GRID system is a framework for frictionless Zettelkasten organisation. It
+defines a set of rules for note creation and note tagging that suppress the
+need for content categorisation. 
+
+An example of content categorisation is the question, "Which topic does this 
+note relate to?".
+
+The lack of categorisation promotes a focus on the core principle of how the
+Zettelkasten method creates value, inter-note linking.
+
+The system was designed in keeping with two main concepts:
+
+1. Keeping things simple and following a few simple, and well defined principles
+   is the best technique to deal with complexity.
+2. Content categorisation is the main cause of cognitive friction when working
+   within a Zettelkasten.
+
+Some advice is also given for practices which support the goal of a
+"frictionless system", such as metadata suggestions and file naming with Unique
+Identifiers (UIDs), but they are not directly part of the GRID system itself.
+
+## Back Story
+
 Over the past few years I've read through many ideas of how to structure and
 organise a Zettelkasten vault. The difficulty of this hangs in the balance
-between the need for *some* structure, but the knowledge that too much
+between the need for *some* structure, but the truth that too much
 structure can severely hinder the effectiveness of a Zettelkasten.
 
-> *A good structure enables flow
-> ...
-> *The best way to deal with complexity is to keep things as simple as possible
-> and to follow a few basic principles.*
-> ...
-> *The biggest threat to creativity and scientific progress is therefore the
+> *"A good structure enables flow"* \
+> ... \
+> *"The best way to deal with complexity is to keep things as simple as possible
+> and to follow a few basic principles."*\
+> ...\
+> *"The biggest threat to creativity and scientific progress is therefore the
 > opposite: a lack of structure and restrictions. Without structure, we cannot
-> differentiate, compare or experiment with ideas.*
+> differentiate, compare or experiment with ideas."*
 >
 > ~ Ahrens Sönke, How To Take Smart Notes
 
-The bitter sweet truth of any Zettelkasten organisational technique is that
-you won't know how well it works for you until you spend some time working
+The bitter sweet reality of any organisational technique is that
+we don't know how well it works for us until we spend some time working
 with it.
-
-Depending on what structural elements are part of that system can mean a lot
-when it comes to changing to a new system. Links can break, tags can get out of
-control and features of one program may not be available in another.
 
 This post will explain what I tried, what I kept and what I changed to
 eventually bring me to my own iteration, which by sheer fluke could be named
-the GRID system (explained below).
+the GRID system. But first...
 
 ## (Over)categorisation is the death of a Zettelkasten
 
 The initial foray into the Zettelkasten technique is uncomfortable. It goes
-totally against the grain of how we've been taught through school to take
-notes. One notebook per class, divided into semesters / classes / topics / ...
+totally against the grain of how we were taught through school to take notes.
+One notebook per class, divided into semesters / classes / topics / ...
 
-This isn't bad. That style of documentation generally fits the requirements of
-that domain, to learn facts and pass exams. And it fits the capabilities of the
-students. Keeping up with the onslaught of classes day by day
-is plenty.
-
-The 'problem' becomes, that that kind of note taking solidifies as *the* way we record
+This kind of note taking solidifies as *the* way we record
 knowledge for ourselves, and so does the structural thinking that goes behind
-it, categorisation. [We're hardwired to
+it, categorisation. This is the real problem. [We're hardwired to
 categorise](https://www.scientificamerican.com/article/wired-for-categorization/),
 and we use it for everything, libraries, music, art, ethnicity, psychological
 disposition, physical state. An adjective is a categorisation. We categorise to
-try and formulate some order to the chaos of reality.
+try and create *some* structure within the chaos of of reality.
+
+But when we access memories, or follow a train of thought, we rarely do so by using rigid 
+categorisations.  
+
+> "Recall all memories that relate to house I grew up in", does not return *just* the memories 
+> of your childhood home. It will most likely return the image of your childhood home as it 
+> exists in your memory, but it will inadvertently return memories *linked* to your childhood home.
+
 
 In a Zettelkasten system, information is linked together by a *local* context, meaning
 from one note to another, and each note is [atomic](https://notes.andymatuschak.org/Evergreen_notes_should_be_atomic).
-Trying to categorise for retrieval down the track, quickly leads to over categorisation.
+Trying to categorise for retrieval down the track, quickly leads to over-categorisation.
 
 This is why I think starting with the Zettelkasten technique is daunting, and
 also why it's hard to find a system that works, because we're so used to the
 crutch of categorisation, but categorisation is the antithesis of the
 Zettelkasten system.
 
-But the extreme opposite; a singular folder full of all notes, without tags, without titles and
-without dates... By definition, there is a balance to be struck, hence the task of finding
-a system that works well.
+But a total lack of structure, let's say a singular folder full of all notes,
+without tags, without titles and without dates... This is chaos. By definition,
+there is a balance to be struck, hence the task of finding a system that works
+well.
+
+Again:
+
+> *"Without structure, we cannot differentiate, compare or experiment with
+> ideas."*
+>
+> ~ Ahrens Sönke, How To Take Smart Notes
 
 ## Brace yourself
 
 First and foremost, I highly recommend to read up a little on Niklas Luhmann's
 original Zettelkasten method *before* churning through the swathes of different
-approaches within a digital Zettelkasten (this post included).
+approaches within a digital Zettelkasten (this post included). Understanding
+the fundamental principles of anything before delving into developments built
+on top, [greatly enhances our evaluation of those
+developments](../2023/fundamentals-all-the-way-down) (whether they be ideas,
+technologies, relationships, etc). 
+
 [Zettelkasten.de](https://www.zettelkasten.de) is undoubtedly the most precious
 resource for that. Christian and Sascha [communicate the topic with such
 excellence](https://zettelkasten.de/introduction/), and the forum there is also
@@ -89,43 +126,36 @@ how and in what degree to use:
 - naming conventions (e.g., including symbols)
 - note metadata (keywords, aliases, author, contextual stimulus, modification date, ...)
 
-The biggest traps for over categorisation are folders and tags.
+The biggest traps for over-categorisation are folders and tags.
 
 The formalised systems I've predominantly seen mentioned within Zettelkasten
 related forums, videos and posts are [the Jonny Decimal
 System](https://johnnydecimal.com/), Tiago Forte's [PARA
-system](https://fortelabs.com/blog/para/), Nick Milo's [the ACCESS
+system](https://fortelabs.com/blog/para/), Nick Milo's [ACCESS
 system](https://www.youtube.com/watch?v=p0zWJ-TLghw) and Bryan Jenks' [ADHD
-wrangler](https://youtu.be/wB89lJs5A3s?feature=shared&t=1115) (a lot in there...).
+wrangler](https://youtu.be/wB89lJs5A3s?feature=shared&t=1115).
 
 I've integrated all of them to considerable degrees except the Jonny Decimal system.
-
-> *we need to decide how to categorise the things that we’re going to store.* ~ Jonny
-
-The amount of categorisation required for the Jonny Decimal system is for me,
-not fabulous and most certainly a ['nisht
-nisht'](https://youtu.be/LazrAzBP_0I?feature=shared&t=248).
 
 ### Folders
 
 The aforementioned systems primarily try to formalise a directory structure for
 note storage. Within a Zettelkasten system, folders don't create a major
-hurdle, as we can link across folders. This leads many (including my past self) to
-make the mistake of building a folder structure, that only ever gets deeper.
-
-As the folder structure gets deeper, we become more invested in it and begin to
-rely on it as search tool.
+hurdle, as we can link across folders. This leads many (including my past self)
+to make the mistake of building a folder structure, that only ever gets deeper.
+And as the folder structure gets deeper, we also become more invested in it and
+begin to rely on it as search tool.
 
 However, the biggest issue with folders is that it creates cognitive friction
 during note creation. "Where do I store this note?" should never require
-thought or time navigating a directory structure.
-This is a design feature of the GRID system.
+thought or time navigating a directory structure. This is a design feature of
+the GRID system.
 
 Jonny Decimal, PARA and ACCESS are based on a categorisation of directories,
 but I find the categorisation to miss the mark for various reasons:
 
-- Jonny Decimal is limitless in its folder structure. That's a rabbit hole. *Way*
-  too much cognitive friction.
+- Jonny Decimal is limitless in its directory structure depth ( categorisation
+  granularity). That's a rabbit hole. *Way* too much cognitive friction.
 - PARA is designed with project managers in mind. The folder structure is
   incongruous with Zettelkasten principles, e.g., the "Archives" folder. A
   Zettelkasten *is* and archive. A note is never 'inactive', just as a memory
@@ -142,8 +172,70 @@ between notes, like 'shared hobbies', or tags as [*statuses*, that
 describe the *state* of a note](https://www.youtube.com/watch?v=zIh1S7ra3aI&t=172s).
 
 The GRID system sits strongly in the tags as *statuses* camp, but leans a
-little bit over into the other as well by tagging notes with their information
-source.
+little bit over into the other camp as well by tagging notes with their information
+source (see [tagging](#tagging)).
+
+Categorical (topical) tags follow the same pitfalls as folders; it requires an ever 
+increasing amount of mental energy to handle. The following thought processes are involved 
+in managing a group of topical tags when writing a note:
+
+1. "What tags relate to this note?" (in other words "how many ideas do I think
+   could possible have to do with this note's content?"...)
+2. "Do I already use this tag, or do I have a tag that is similar that will
+   suffice?" (and how quickly and efficiently can you check that you have that
+   tag or not?)
+3. "If I don't have anything with this tag, is it worth adding it?"
+    1. "if I add it, the filtering strength for *all* other tags will be
+       weakened"
+    2. "so, will I really think to find this note again by filtering for tag
+       *x*, or will it be missed entirely?"
+        1. "if I add it, and don't use it, I've weakened the filtering strength of all my
+           other tags for nothing"
+
+One solution is to give ourselves a hard limit to how many tags each note should be given.
+But this just creates an extra step:
+
+4. "If this note deserves four tags, (because it's such an important and rich
+   note that it deserves to be found more easily than others), but I've only allowed myself three 
+   tags per note, which are the top three tags?"
+
+This exact problem is what structure notes help to solve (see [I for indexes](#i-for-indexes)).
+
+## My requirements for the system
+
+The system should:
+
+1. strongly facilitate *idea generation*. It should not become a database for simply
+   recording and retrieving knowledge. 
+2. be as *frictionless as possible* when creating, managing and processing
+   notes.
+
+*Idea generation* happens when notes are linked together meaningfully and
+densely. This allows us to move fluidly through the system, replicating the
+process of cognitive thought.
+
+As *frictionless as possible* means picking a spot somewhere between order and
+chaos. Too much order creates friction. There are too many decisions to
+consider and too often:
+
+Chaos occurs when there is too little order, and the system scales beyond a
+certain point. There is a time factor involved, which is why committing to an
+organisational design system for their Zettelkasten system is stressful; and
+could well be why you're reading this post.
+
+> *The best way to deal with complexity is to keep things as simple as possible
+> and to follow a few basic principles.* ~ Sönke Ahrens, How To Take Smart
+> Notes.
+
+The above quote encapsulates the way I've evaluated design decisions for the
+GRID system. 
+
+"Keeping thing as simple as possible" is in my mind "keeping things as
+frictionless as possible".
+
+It should hopefully become clear in the system specification below how these
+design decisions support that goal. But if it doesn't and, you'd like to clear
+something up, please email me!
 
 ## The GRID System
 
@@ -156,75 +248,42 @@ a soft barrier when considering if I needed another folder or not.
 > way to write 'gripped') ... The point is; the acronym did *not* 
 > define the system.
 
-The folders are: Glossary, Reference, Index, Diary.
-
-### My requirements for a system
-
-To help give context to the system's description below, it will help to understand 
-what my requirements were. In other words, what I believe makes for an effective digital
-Zettelkasten in specific.
-
-I want my Zettelkasten to be:
-
-1. used for *idea generation* and not a repository for information
-   storage and retrieval.
-2. as *frictionless as possible* when creating, managing and processing notes.
-3. as *future proof* as possible.
-
-*Idea generation* happens when notes are linked together meaningfully and
-densely. This allows us to move fluidly through the system, replicating the
-process of cognitive thought. With the perfect accuracy of information recall a
-computer provides, thinking and ideation become greatly enhanced within a
-Zettelkasten, as what we are recalling with perfect accuracy are our own
-thoughts. 
-
-As *frictionless as possible* means picking a spot somewhere between order and
-chaos. Too much order creates friction. There are too many decisions to consider and 
-too often:
-
-> *The best way to deal with complexity is to keep things as simple as possible
-> and to follow a few basic principles.* ~ Sönke Ahrens, How To Take Smart Notes.
-
-Chaos occurs when there is too little order, and the system scales beyond a
-certain point. There is a time factor involved, which is why it stressed people
-out so much when making a design decision for their Zettelkasten system, and
-could well be why you're reading this post.
-
-*Future proofing* revolves mostly around technical decisions. As a steadfast principle; 
-*never*, *ever* use a note taking program that doesn't let you export your content 
-to some strong standard file type such as markdown, text or html.
-
-Each requirement should hopefully become clear by the below explanations of the system. 
-
-
-## The GRID Folders
-
 
 ### G for glossary
 
 For notes that serve no other purpose than to factually define a thing. Useful 
 for using as a jumping off point for a specific thing. 
 
-> "what notes do I have that I've linked to 'the Zeigarnik effect'?"
+> what notes do I have that I've linked to?..
+> - the Zeigarnik effect
+> - chickenisation
+> - Adam Curtis
+> - recursion
 
-This helps to avoid cognitive friction. If we can't remember what a certain
-thing is, we can quickly refresh our memories within the same system, rather than
-opening a browser and breaking our mental context and focus. 
+This helps to avoid context switching (cognitive friction). If we can't
+remember what a certain thing is, we can quickly refresh our memories within
+the same system. Navigating to a glossary note returns us the facts that most
+interest us and which we may be able to add too, given new knowledge we may have. 
 
-These notes can also serve as mini-indexes if we wish (see indexes below), by
+The opposite process is opening a browser or book, searching for information
+and in the process shifting our mental context and, after *x* amount of time,
+losing our focus entirely (particularly if you're searching through the internet). 
+
+These notes can also serve as mini-indexes if we wish (see 'I for indexes' [below](#i-for-indexes)), by
 including a small selection of valued notes that relate to the glossary term.
 
 ### R for reference
 
 Notes on content we read, watch, hear. Termed 'literature notes' in many discussions. 
-The folder is titled 'Reference' to aid in frictionless filing: If we're consuming some 
-information and writing notes on it, it goes in the 'Reference' folder, it doesn't matter 
+The folder is titled `reference` to aid in frictionless filing: If we're consuming some 
+information and writing notes on it, it goes in the `reference` folder, it doesn't matter 
 if it's a video, recording, academic paper, etc. 
 
 > This is a good example of where to withhold the temptation to create more folders.
-> We could make 'Reference/Papers', 'Reference/Videos', etc. But it's again a rabbit hole. 
-> How often have you come across a research publication and tried to determine whether it 
-> was a 'paper' or an 'academic journal article'... Poof! There goes your train of thought.
+> We could make `Reference/Papers`, `Reference/Videos`, etc. But it's again a rabbit hole.
+>
+> How often have we come across a research publication and tried to determine whether it 
+> was a 'paper' or an 'academic journal article'... Poof! There goes our train of thought.
 > Not worth it.
 
 There are different styles of making reference notes. [This post](https://forum.zettelkasten.de/discussion/2002/concrete-example-of-literature-notes) 
@@ -245,6 +304,27 @@ As an example, some of my index notes are:
 - Programming
 - Zettelkasten
 
+
+#### A brief case for structure notes
+
+Structure notes strike a functional balance between folders and tags. They
+provide a topical starting point, e.g., "Cognition" along with some linked
+notes relating to "Cognition". But the structure note requires us to insert a
+link manually, and each time we go to do that, we *see* what other notes are
+*already* linked. As we view the pre-existing links in the index, we develop a
+perception as to how valuable it is to add the new link. Compare this with
+adding a tag, whereby we have no immediate idea of how the current note we're
+tagging compares in value to other notes tagged "Cognition". 
+
+
+The result of curating index notes is that each time we decide to search through our
+Zettelkasten by a category (by opening an index note), our direction is already
+thoughtfully predefined by our past selves, using our own thought processes to
+inform *what we define as good focal points for that category*. This helps
+maintain our current velocity of thought, and provides much less friction in
+deciding which note to select when compared to doing a tag search for
+"Cognition".
+
 ### D for diaries
 
 With dates as titles. A place to write down fleeting information or personal 
@@ -252,41 +332,44 @@ entries.
 
 ### (And the rest of the notes...)
 
-Exist at the root level, from where they may sprout and grow into evergreen
-notes.
+Exist at the root level, from where they may sprout and grow into [evergreen
+notes](https://notes.andymatuschak.org/z5E5QawiXCMbtNtupvxeoEX).
 
 
-## Tags
+## Tagging
 
 As mentioned, tagging in the GRID system focuses on describing the *status* of a note, with 
 a small exception for reference and glossary notes.
 
-Tags must never describe the concept matter of the note. It does not scale and
-creates friction when writing notes (thinking about what tags to assign). Instead, tags
-communicate either what form the *source* of the information is or what the
-*status* of the note is.
+Like folders, tags must never describe the concept matter of the note. It does
+not scale and creates friction when writing notes (thinking about what tags to
+assign), as mentioned [above](#tags). Instead, tags communicate either what
+form the *source* of the information is or what the *status* of the note is.
 
 ### Source tags 
 
 "Through which communication medium was the information received?":
 
-1. *audio:* music, sound recordings 
+1. *audio:* music, sound recordings, podcasts, discussions, debates
 2. *image:* visual art, photography, graphical content
-3. *lit:* literature; book, paper, research, publication, blog post, newsletter
-4. *me:* thoughts that arise from 'nowhere'
-5. *video:* film, documentary, news reports
-6. *vocal:* podcasts, discussions, debates, people, quotes
-7. *branch:* sprouted directly from the content of another note.
+3. *text:* anything text based; book, paper, research, publication, blog post, newsletter
+4. *me:* thoughts that arise from 'nowhere' (dreams, sudden thoughts)
+5. *video:* (moving images) film, documentary, news reports
+6. *branch:* sprouted directly from the content of another note.
+
+Of course, some edge cases exist. In *my personal interpretation*:
+
+- a music track on Youtube is tagged `audio`
+- a music video on Youtube is tagged `video`
 
 Notes with a source tag, should therefore *always* have an accompanying
-reference entry at the bottom of the note. 
+[reference entry](https://zettelkasten.de/introduction/#reference) at the
+bottom of the note. 
 
-A reference note: 
+A reference note on a book: 
 ```markdown
 ---
-...
-tags: [lit]
-...
+tags: [text]
 ---
 
 # Title
@@ -299,12 +382,10 @@ References:
 - url to external source.
 ```
 
-A 'branched' note:
+A note resulting from the content of another:
 ```markdown
 ---
-...
 tags: [branch]
-...
 ---
 
 # Title
@@ -317,7 +398,6 @@ References:
 - [The note that inspired the creation of this note](./note.md)
 ```
 
-Tags can be combined: 'video' + 'vocal' suggests a video interview, or talk on Youtube.
 
 ### Status tags
 
@@ -329,26 +409,34 @@ Tags can be combined: 'video' + 'vocal' suggests a video interview, or talk on Y
 I heard this terminology through Bryan Jenks. I like the symbolism.
 
 The status tags are great aids in Zettelkasten maintenance. We can filter our
-notes by 'seed' tag, and pick some to work on, iteratively promoting them to
+notes by `seed` tag, and pick some to work on, iteratively promoting them to
 ferns or discovering they already are, and the tag just didn't get updated.
 
 The bi-product of this process is stumbling across old ideas and connecting
-them under new context (remember the "Archive" folder in the PARA system?):
+them under new context. 
 
 > *In the old system, the question is: Under which topic do I store this note?
 > In the new system, the question is: In which context will I want to stumble
 > upon it again?* ~ Sönke Ahrens, How to Take Smart Notes.
 
+This further invalidates the "Archive" folder in the PARA system.
+
 ### Structure tags
 
-4. *index*: a structure note for a specific topic.
-5. *project*: a structure note for a specific project.
+4. *index*: an index note for a specific topic.
+5. *project*: an index note for a specific project (I have one for my masters thesis).
+    - As this is also an index note, it gets saved in the index folder.
+5. *glossary*: all notes in the glossary folder.
 
-The purpose of these tags is purely technical. They are useful for sorting, either 
-for retrieval or programmatic processes.
+The purpose of these tags is purely functional. They provide an alternate 
+way to access or filter these notes as apposed to navigating to the `index` or `glossary` 
+folders.
 
+> for example, in [zk-nvim](https://github.com/zk-org/zk-nvim), I can open a
+> search picker for tags, narrow to `glossary` and then fuzzy find through all
+> my glossary notes.
 
-## Note Metadata, File Naming and Future Proofing
+## Note Metadata and File Naming
 
 ### Metadata 
 
@@ -372,22 +460,34 @@ aliases: e.g., 'AI' (for the note Artificial Intelligence)
 This is already too much for some. But for me it's fine because *no matter what type of note*, 
 those metadata fields are applicable.
 
+For reference notes I have an extra `people` field, as: 
+
+- it is a useful search filter (e.g., for researchers or authors)
+- the tag name is immediately obvious (the authors name), so there's no
+  cognitive friction to add it.
+- it is not a tag, and therefore does not pollute my tags list (this is
+  important, particularly if you're an Obsidian user and like to display your
+  tags in the graph view).
+
 
 ### File Naming
 
 As hinted at in the above metadata, I use UIDs as file names (4 character
 alphanumeric, lower case). This is for a few reasons:
 
-- it reduces the friction of providing a good file name
+- it reduces all friction of providing a good file name (the program creates
+  the UID for me...)
 - the file name never needs to be changed
-    - this will prevent link breakage and force you to not use the note's
-      filename as natural language in your sentences. For example, this
-      \[[sentence]] will become ridiculous if the `sentence.md` is renamed to `chicken.md`.
-- links remain small and tidy when viewing in a raw format
+    - this will prevent link breakage (also if notes are referenced from
+      other apps).
+    - this will force you not to use the note's filename as natural language in
+      your sentences, as if your program updates link titles for you this
+      \[[sentence]] will become ridiculous if the `sentence.md` is renamed to
+      `chicken.md`.
+- links remain small and tidy when viewing in a raw format (I write in neovim)
 - files are super easy to locate and process if needed
-- basically everything to do with programmatically working with the
-  Zettelkasten via the terminal or scripts becomes way faster and much more
-  fail safe
+    - Locating the file `s5wf.md` in my file system is laughably easier than
+      `cool...AI...note.md`, as I have 20+ notes with 'AI' in the title.
 
 > I use [zk](https://github.com/zk-org/zk) which handles UIDs incredibly well.
 > Notes are created with a title and are searchable and linkable by that title,
@@ -398,6 +498,4 @@ alphanumeric, lower case). This is for a few reasons:
 > This is a far cry from Obsidian's UID functionality (I used Obsidian happily
 > for years).
 
-### Future Proofing
 
-The mere fact that the system as it has been described so far
