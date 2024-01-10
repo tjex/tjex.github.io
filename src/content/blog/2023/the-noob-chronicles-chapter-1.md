@@ -4,6 +4,7 @@ description: It's been two years since I learnt what a for loop was. How's it be
 pubDate: 2023-10-26T19:48:11Z 
 author: tjex
 tags: ['career', 'learning']
+license: cc
 draft: false
 ---
 

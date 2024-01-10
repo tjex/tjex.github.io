@@ -4,6 +4,7 @@ description: The GRID system is a framework for frictionless organisation of a Z
 pubDate: 2024-01-06T19:01:33Z
 author: tjex
 tags: ['learning']
+license: cc
 draft: false
 ---
 

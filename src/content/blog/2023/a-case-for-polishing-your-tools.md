@@ -4,6 +4,7 @@ description: Polishing your tools is a good thing. It can teach you a lot, parti
 pubDate: 2023-10-07T09:31:34Z 
 author: tjex
 tags: ['learning']
+license: cc
 draft: false
 ---
 

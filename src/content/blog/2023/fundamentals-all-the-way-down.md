@@ -4,6 +4,7 @@ description: How deep do you start when stepping into a new field of learning? D
 pubDate: 2023-07-26T19:17:01Z 
 author: tjex
 tags: ['career', 'learning']
+license: cc
 draft: false
 ---
 
