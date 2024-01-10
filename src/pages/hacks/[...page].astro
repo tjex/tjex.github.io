@@ -38,7 +38,7 @@ const { page } = Astro.props;
      improved it.
   </p>
     <p>
-    <TagsUnique collection={"hacks"} />
+    <TagsUnique collection={"hacks"} style={"pill"} />
     </p>
     <table>
     {page.data.map((post: any) => <PostPreview post={post} collection={"hacks"} />)}

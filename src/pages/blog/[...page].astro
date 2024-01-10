@@ -34,7 +34,7 @@ const { page } = Astro.props;
 <Layout seo={seo}>
   <h1>Blog</h1>
   <p>
-    <TagsUnique collection={"blog"} />
+    <TagsUnique collection={"blog"} style={"pill"} />
   </p>
   <table>
   {page.data.map((post: any) => <PostPreview post={post} collection={"blog"} />)}
