@@ -1,7 +1,7 @@
-a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: var(--text-decoration-thickness);
-}
+/* a:hover { */
+/*   text-decoration: underline; */
+/*   text-decoration-thickness: var(--text-decoration-thickness); */
+/* } */
 
 .preview-title,
 .author,
@@ -10,9 +10,6 @@ a:hover {
 }
 
 .preview-title {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--primary);
   text-decoration: none;
 }
 

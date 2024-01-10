@@ -684,7 +684,6 @@ figure figcaption {
 }
 
 .post-info {
-  color: var(--muted);
   text-align: right;
   margin-bottom: var(--spacing);
   font-size: var(--font-small);
@@ -1177,7 +1176,6 @@ small {
   border-radius: 0.3em;
   padding: 0.1em 0.8em;
   background-color: var(--secondary-focus);
-  color: var(--muted);
 }
 
 .tag a:hover {

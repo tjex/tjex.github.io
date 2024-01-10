@@ -43,12 +43,12 @@ const postGithubUrl =  new URL('https://github.com/tjex/tjex.github.io/commits/m
                 <span> - </span><a rel="me" href=`${postGithubUrl}`> view edit history </a> ) : null
             } <br>
             <Tags tags={post.data.tags} />
+            <br>
 
             <!-- for posts that refer to computer programs used -->
             {
                 post.data.progVersions ? (
-                    <>
-                        <span>Versions used:</span>
+                    <> Versions used:
 
                         {post.data.progVersions.map((v: any) => (
                             <span class="tag">{v}</span>

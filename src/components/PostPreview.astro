@@ -1,0 +1,28 @@
+---
+// post preview component for contact filed as "Blog"
+import "../styles/snippets/contentPreview.css";
+import Date from "./utility/DateFormat.astro";
+export interface Props {
+  post: any;
+  collection: string;
+}
+
+const { post, collection } = Astro.props;
+---
+
+<!-- Inserts a link to the post as a new row in the encapsulating table where this component is called -->
+
+<article>
+  <tbody>
+    <tr>
+    { collection == "blog" ? (
+      <td><a class="preview-title" href={`/blog/${post.slug}`}> {post.title}</a> </td>
+    ) : null}
+    { collection == "hacks" ? (
+      <td><a class="preview-title" href={`/hacks/${post.slug}`}> {post.title}</a> </td>
+    ) : null}
+      
+      <td style="width: 20%;"><span class="pub-date"><Date date={post.pubDate} format={"MY"} /></span></td>
+    </tr>
+  </tbody>
+</article>

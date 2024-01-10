@@ -2,7 +2,7 @@
 import tjex from "../../data/tjex.js";
 import TagsUnique from "../../components/TagsUnique.astro";
 import Layout from "../../layouts/Page.astro";
-import HackPreview from "../../components/HackPreview.astro";
+import PostPreview from "../../components/PostPreview.astro";
 import Paginator from "../../components/Paginator.astro";
 import * as colUtil from "../../scripts/collectionUtil.ts";
 
@@ -37,11 +37,11 @@ const { page } = Astro.props;
      Usually because I couldn't find a solution to a problem I had, or I did find a solution and
      improved it.
   </p>
-  <div class="post-info">
-    Filter by tag: <TagsUnique collection={"hacks"} />
-  </div>
-  <section class="postlist">
-    {page.data.map((post: any) => <HackPreview post={post} />)}
-  </section>
+    <p>
+    <TagsUnique collection={"hacks"} />
+    </p>
+    <table>
+    {page.data.map((post: any) => <PostPreview post={post} collection={"hacks"} />)}
+    </table>
   <Paginator page={page} />
 </Layout>
