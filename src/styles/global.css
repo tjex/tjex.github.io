@@ -34,6 +34,7 @@
 :root:not([data-theme=dark]) {
   --background-color: #D6DAE2;
   --color: hsl(205, 25%, 23%);
+  --heading-color: #000;
   --h1-color: hsl(205, 30%, 15%);
   --h2-color: #24333e;
   --h3-color: hsl(205, 25%, 23%);
@@ -152,6 +153,7 @@
   :root:not([data-theme]) {
     --background-color: #1c262e;
     --color: hsl(205, 16%, 67%);
+    --heading-color: hsl(195, 85%, 41%);
     --h1-color: hsl(205, 20%, 74%);
     --h2-color: #b3c2cc;
     --h3-color: hsl(205, 18%, 76%);
@@ -270,6 +272,7 @@
 [data-theme=dark] {
   --background-color: #1c262e;
   --color: hsl(205, 16%, 67%);
+  --heading-color: hsl(195, 85%, 41%);
   --h1-color: hsl(205, 20%, 74%);
   --h2-color: #b3c2cc;
   --h3-color: hsl(205, 18%, 76%);
@@ -1075,6 +1078,7 @@ h3,
 h4,
 h5,
 h6 {
+  color: var(--heading-color);
   --font-weight: 700;
 }
 
