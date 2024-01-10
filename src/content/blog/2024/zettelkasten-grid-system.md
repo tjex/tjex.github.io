@@ -151,9 +151,10 @@ how and in what degree to use:
 - naming conventions (e.g., including symbols)
 - note metadata (keywords, aliases, author, contextual stimulus, modification date, ...)
 
-The biggest traps for over-categorisation are folders and tags.
+The biggest traps for over-categorisation are folders and tags. The GRID system 
+deals with these specifically.
 
-The formalised systems I've predominantly seen mentioned within Zettelkasten
+The other formalised systems I've seen predominantly mentioned within Zettelkasten
 related forums, videos and posts are [the Jonny Decimal
 System](https://johnnydecimal.com/), Tiago Forte's [PARA
 system](https://fortelabs.com/blog/para/), Nick Milo's [ACCESS
