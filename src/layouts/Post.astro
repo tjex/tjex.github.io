@@ -35,7 +35,7 @@ const postGithubUrl =  new URL('https://github.com/tjex/tjex.github.io/commits/m
     <article class="post-content__article">
         <h1>{post.data.title}</h1>
         <div class="post-info">
-            <span>Tillman Jex, </span> 
+            <span>Tillman Jex, </span>
             <Date date={post.data.pubDate} />
 
             <!-- if the post has been modified since original publication -->
@@ -43,7 +43,6 @@ const postGithubUrl =  new URL('https://github.com/tjex/tjex.github.io/commits/m
                 post.data.modDate ? (
                 <span> - </span><a rel="me" href=`${postGithubUrl}`> view edit history </a> ) : null
             } <br>
-            <span>Tagged:</span>
             <Tags tags={post.data.tags} /><br />
 
             <!-- for posts that refer to computer programs used -->
@@ -58,11 +57,11 @@ const postGithubUrl =  new URL('https://github.com/tjex/tjex.github.io/commits/m
                     </>
                 ) : null
             }
+    {post.data.license && <License license={post.data.license} />}
         </div>
 
         <slot />
     </article>
     <SideRightBlank slot="side-right" />
-    {post.data.license && <License license={post.data.license} />}
     <Footer slot="footer" />
 </Layout>
