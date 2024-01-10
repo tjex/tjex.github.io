@@ -425,6 +425,8 @@ section {
 body {
   padding-top: constant(safe-area-inset-top); /* For iOS 11.0-11.2 */
   padding-top: env(safe-area-inset-top); /* For iOS 11.2+ */
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .wrapper {

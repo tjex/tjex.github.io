@@ -12,6 +12,9 @@
 .preview-title {
   text-decoration: none;
 }
+.preview-title:hover {
+    text-decoration: underline;
+}
 
 .pub-date,
 .author {
