@@ -1,8 +1,13 @@
 ---
-const { date } = Astro.props;
+const { date, format } = Astro.props;
 const dateFormatted = new Date(date);
-const options = { month: 'long', day: '2-digit', year: 'numeric', hour12:false };
-const pubDate = dateFormatted.toLocaleDateString('en-US', options);
+
+const optionsMDY = { month: "long", day: "2-digit", year: "numeric", hour12: false };
+const MDY = dateFormatted.toLocaleDateString("en-US", optionsMDY);
+
+const optionsMY = { month: "long", year: "numeric", hour12: false };
+const MY = dateFormatted.toLocaleDateString("en-US", optionsMY);
 ---
 
-<time>{pubDate}</time>
+{format == "MDY" ? <time>{MDY}</time> : null}
+{format == "MY" ? <time>{MY}</time> : null}

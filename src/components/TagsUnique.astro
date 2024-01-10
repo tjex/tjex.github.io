@@ -1,5 +1,6 @@
 ---
 import * as colUtil from "../scripts/collectionUtil.ts";
+import Tags from "./Tags.astro";
 
 const { collection } = Astro.props;
 
@@ -7,12 +8,4 @@ const posts = await colUtil.noDrafts(collection);
 const tags = [...new Set(posts.map((post: any) => post.data.tags).flat())];
 ---
 
-<p>
-{
-    tags.map((tag) => (
-        <a class="tag" href={`/tags/${tag}`}>
-            {tag}
-        </a>
-    ))
-}
-</p>
+<Tags tags={tags} />

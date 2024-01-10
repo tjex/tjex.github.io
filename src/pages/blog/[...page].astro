@@ -33,11 +33,11 @@ const { page } = Astro.props;
 
 <Layout seo={seo}>
   <h1>Blog</h1>
-  <div class="post-info">
-    Filter by tag: <TagsUnique collection={"blog"} />
-  </div>
-  <section class="postlist">
-    {page.data.map((post: any) => <BlogPostPreview post={post} />)}
-  </section>
+  <p>
+    <TagsUnique collection={"blog"} />
+  </p>
+  <table>
+  {page.data.map((post: any) => <BlogPostPreview post={post} />)}
+  </table>
   <Paginator page={page} />
 </Layout>

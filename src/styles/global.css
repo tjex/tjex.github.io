@@ -10,13 +10,6 @@
  * Theme: tjex.net
  */
 :root {
-  --font-family: system-ui, -apple-system, "Segoe UI", "Helvetica", "Roboto",
-    "Ubuntu", "Cantarell", "Oxygen-Sans", "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --line-height: 1.6;
-  --font-weight: 400;
-  --font-size: 1rem;
-  --font-small: 0.85rem;
   --border-radius: 0.25rem;
   --border-width: 1px;
   --outline-width: 3px;
@@ -35,26 +28,6 @@
   --form-label-font-weight: var(--font-weight);
   --transition: 0.1s ease-out;
   --modal-overlay-backdrop-filter: blur(0.25rem);
-}
-@media (min-width: 576px) {
-  :root {
-    --font-size: 1rem;
-  }
-}
-@media (min-width: 768px) {
-  :root {
-    --font-size: 1rem;
-  }
-}
-@media (min-width: 992px) {
-  :root {
-    --font-size: 1rem;
-  }
-}
-@media (min-width: 1200px) {
-  :root {
-    --font-size: 1.05rem;
-  }
 }
 
 [data-theme=light],
@@ -508,11 +481,12 @@ body {
 /* sidebars */
 .sidebar-left,
 .sidebar-right {
-  display: flex;
+  display: inline-flex;
   padding-top: calc(var(--spacing) * 6);
   position: sticky;
   top: var(--offset);
   max-height: calc(100vh - var(--spacing) * 2);
+  width: 200px;
 }
 
 .sidebar-left {
@@ -547,7 +521,7 @@ body {
 }
 
 /* from: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-examples */
-@media all and (min-width: 1031px) {
+@media all and (min-width: 1281px) {
   .aside {
     flex: 1 0 0;
   }
@@ -573,7 +547,7 @@ body {
     order: 7;
   }
 }
-@media only screen and (max-width: 1030px) {
+@media only screen and (max-width: 1280px) {
   .header-center {
     display: none;
   }
@@ -981,6 +955,36 @@ aside li [role=button] {
 /**
  * Typography
  */
+:root {
+  --font-family: system-ui, -apple-system, "Segoe UI", "Helvetica", "Roboto",
+    "Ubuntu", "Cantarell", "Oxygen-Sans", "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --line-height: 1.6;
+  --font-weight: 400;
+  --font-size: 1rem;
+  --font-small: 0.85rem;
+}
+@media (min-width: 576px) {
+  :root {
+    --font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    --font-size: 1rem;
+  }
+}
+@media (min-width: 992px) {
+  :root {
+    --font-size: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --font-size: 1.05rem;
+  }
+}
+
 b,
 strong {
   font-weight: bolder;
@@ -1165,15 +1169,19 @@ small {
 .tag,
 .tag a {
   display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 400; /* e.g. tags in heading or emboldened phrase */
+  font-size: var(--font-small);
   text-decoration: none;
-  margin: 0.2em 0.3em;
+  margin-left: 0.4em;
+  margin-bottom: 0.4em;
   border: none;
   border-radius: 0.3em;
   padding: 0.1em 0.8em;
   background-color: var(--secondary-focus);
-  color: var(--muted) !important;
+  color: var(--muted);
+}
+
+.tag a:hover {
+  color: #000;
 }
 
 span.secondary {
@@ -1201,7 +1209,7 @@ mark {
 blockquote {
   display: block;
   margin: var(--typography-spacing-vertical) 0;
-  padding: var(--spacing);
+  padding-left: var(--spacing);
   border-right: none;
   border-left: 0.25rem solid var(--blockquote-border-color);
   border-inline-start: 0.25rem solid var(--blockquote-border-color);

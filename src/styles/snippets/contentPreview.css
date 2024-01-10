@@ -20,6 +20,7 @@ a:hover {
 .author {
   font-size: var(--font-small);
   color: var(--secondary);
+  text-align: right;
 }
 
 .description {
@@ -30,7 +31,3 @@ a:hover {
   padding-bottom: var(--spacing);
 }
 
-.tag {
-    margin-left: 0rem;
-    color: var(--color) !important;
-}
