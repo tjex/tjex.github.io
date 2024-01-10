@@ -95,9 +95,10 @@ try and create *some* structure within the chaos of of reality.
 But when we access memories, or follow a train of thought, we rarely do so by using rigid 
 categorisations.  
 
-> "Recall all memories that relate to house I grew up in", does not return *just* the memories 
-> of your childhood home. It will most likely return the image of your childhood home as it 
-> exists in your memory, but it will inadvertently return memories *linked* to your childhood home.
+> The prompt, "recall all memories that relate to the house I grew up in", does
+> not return *just* the memories of your childhood home. It will most likely
+> return the image of your childhood home as it exists in your memory, but it
+> will inadvertently return memories *linked* to your childhood home.
 
 
 In a Zettelkasten system, information is linked together by a *local* context, meaning
