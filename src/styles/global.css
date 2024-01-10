@@ -695,34 +695,20 @@ figure figcaption {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--spacing);
+  padding-top: var(--spacing);
 }
 
-.nextPost a,
-.prevPost a {
+.nextPost,
+.prevPost {
   display: inline-flex;
-  margin: 0.4em;
-  border: none;
-  border-radius: 0.3em;
-  padding: 0.2em 0.8em;
-  background-color: var(--secondary-focus);
-  transition: var(--transition);
 }
 
-.nextPost a:hover,
-.nextPost a:focus,
-.prevPost a:hover,
-.prevPost a:focus {
-  background-color: var(--secondary-hover);
-  text-decoration: none;
-}
-
-.nextPost a::before {
-  content: var(--icon-left-arrow);
-}
-
-.prevPost a::after {
+.nextPost::after {
   content: var(--icon-right-arrow);
+}
+
+.prevPost::before {
+  content: var(--icon-left-arrow);
 }
 
 @media (min-width: 576px) {
@@ -1178,10 +1164,6 @@ small {
   border-radius: 0.3em;
   padding: 0.1em 0.8em;
   background-color: var(--secondary-focus);
-}
-
-.tag a:hover {
-  color: #000;
 }
 
 span.secondary {
