@@ -5,30 +5,17 @@ const { license } = Astro.props;
 ---
 
 {
-    license == "cc" ? (
-        <p xmlns:cc="http://creativecommons.org/ns#" style="font-size: 0.8rem">
-            Licensed: {" "}
-            <a
-                href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1"
-                target="_blank"
-                rel="license noopener noreferrer"
-            >
-                CC BY 4.0
-            </a>
-        </p>
-    ) : null
-}
-{
-    license == "mit" ? (
-        <p style="font-size: 0.8rem">
-            Licensed: {" "}
-            <a
-                href="https://mit-license.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                MIT
-            </a>
-        </p>
-    ) : null
+  license == "cc" || license == "CC" ? (
+      <a
+        href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1"
+        target="_blank"
+        rel="license noopener noreferrer"
+      >
+        CC BY 4.0
+      </a>
+  ) : license == "mit" || license == "MIT" ? (
+      <a href="https://mit-license.org/" target="_blank" rel="noopener noreferrer">
+        MIT
+      </a>
+  ) : null
 }

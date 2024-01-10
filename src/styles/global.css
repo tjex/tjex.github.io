@@ -483,7 +483,7 @@ body {
 /* sidebars */
 .sidebar-left,
 .sidebar-right {
-  display: inline-flex;
+  display: flex;
   padding-top: calc(var(--spacing) * 6);
   position: sticky;
   top: var(--offset);
@@ -523,7 +523,7 @@ body {
 }
 
 /* from: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-examples */
-@media all and (min-width: 1281px) {
+@media all and (min-width: 1338px) {
   .aside {
     flex: 1 0 0;
   }
@@ -542,19 +542,19 @@ body {
   .main-content {
     order: 5;
   }
-  .footer {
+  .sidebar-right {
     order: 6;
   }
-  .sidebar-right {
+  .footer {
     order: 7;
   }
 }
-@media only screen and (max-width: 1280px) {
-  .header-center {
-    display: none;
-  }
+@media only screen and (max-width: 1340px) {
   .header-left {
     text-align: left;
+  }
+  .header-center {
+    display: none;
   }
   .header-right {
     flex: 0 0 0;
@@ -579,6 +579,9 @@ body {
   .sidebar-left ul .site-nav a:after,
   .sidebar-left ul a:before {
     content: none !important;
+  }
+  .sidebar-right {
+    display: none;
   }
   .main-content {
     width: 100%;

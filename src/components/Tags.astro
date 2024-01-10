@@ -1,7 +1,20 @@
 ---
 // takes the tags from post frontmatter and makes a href from their slug.
 // used in posts primarily in the info line
-const { tags } = Astro.props;
+const { tags, style } = Astro.props;
 ---
 
-{ tags.map((tag: any) => ( <a class="tag" href={`/tags/${tag}`}>{tag}</a> )) }
+{
+  style == "pill"
+    ? tags.map((tag: any) => (
+        <a class="tag" href={`/tags/${tag}`}>
+          {tag}
+        </a>
+      ))
+    : style == "text"
+      ? tags.map((tag, index) => (
+            <a href={`/tags/${tag}`}>{tag}</a>
+            <span>{index !== tags.length - 1 && ", "}</span>
+        ))
+      : null
+}
