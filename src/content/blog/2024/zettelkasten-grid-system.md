@@ -238,7 +238,8 @@ The system should:
 
 *Idea generation* happens when notes are linked together meaningfully and
 densely. This allows us to move fluidly through the system, replicating the
-process of cognitive thought.
+process of cognitive thought. In such a system, serendipity is often just
+around the corner.
 
 As *frictionless as possible* means picking a spot somewhere between order and
 chaos. Too much order creates friction. There are too many decisions to
