@@ -184,7 +184,7 @@ but I find the categorisation to miss the mark for various reasons:
   granularity). That's a rabbit hole. *Way* too much cognitive friction.
 - PARA is designed with project managers in mind. The folder structure is
   incongruous with Zettelkasten principles, e.g., the "Archives" folder. A
-  Zettelkasten *is* and archive. A note is never 'inactive', just as a memory
+  Zettelkasten *is* an archive. A note is never 'inactive', just as a memory
   never is; they're both just resting for a moment.
 - ACCESS comes closer to a frictionless solution of folder management, but the
   "Extra" and "Spaces" folder are again rabbits holes.
