@@ -556,6 +556,11 @@ body {
   }
 }
 @media only screen and (max-width: 1340px) {
+  body {
+    /* regain some space */
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
   .header-left {
     text-align: left;
   }
@@ -573,6 +578,7 @@ body {
     flex-direction: row;
     text-align: left;
     position: inherit;
+    justify-content: center;
   }
   .sidebar-left .site-nav,
   .sidebar-left .site-nav a,

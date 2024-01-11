@@ -1,2 +1,6 @@
 User-agent: *
 Allow: /
+
+# Google AI
+User-agent: Google-Extended
+Disallow: /
