@@ -9,19 +9,16 @@
     "format": "npx prettier --write ."
   },
   "devDependencies": {
-    "@astrojs/sitemap": "^3.0.3",
-    "astro": "^4.1.2",
     "prettier": "^3.1.0",
     "prettier-plugin-astro": "^0.12.1"
   },
   "dependencies": {
     "@astrojs/mdx": "^2.0.0",
     "@astrojs/rss": "^4.0.0",
+    "@astrojs/sitemap": "^3.0.3",
     "@astrojs/upgrade": "^0.2.2",
     "astro": "^4.1.2",
-    "markdown-it": "^13.0.0",
-    "mime": "1.4.1",
-    "sanitize-html": "^2.11.0",
-    "uglify-js": "2.6.0"
+    "markdown-it": "^14.0.0",
+    "sanitize-html": "^2.11.0"
   }
 }
