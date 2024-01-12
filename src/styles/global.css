@@ -41,14 +41,14 @@
   --h4-color: #564137;
   --h5-color: hsl(20, 20%, 32%);
   --h6-color: #6d584d;
-  --muted-color: hsl(20, 10%, 50%);
-  --muted-border-color: hsl(20, 20%, 70%);
+  --muted-color: hsl(195, 80%, 30%);
+  --muted-border-color: hsl(195, 80%, 40%);
   --primary: hsl(195, 80%, 30%);
   --primary-muted: hsl(195, 80%, 60%);
   --primary-hover: hsl(195, 60%, 30%);
   --primary-focus: rgba(23, 103, 130, 0.125);
   --primary-inverse: #D6DAE2;
-  --secondary: hsl(20, 15%, 41%);
+  --secondary: hsl(20, 10%, 50%);
   --secondary-hover: #c3b2aa;
   --secondary-focus: rgba(120, 99, 89, 0.125);
   --secondary-inverse: #000;
@@ -1260,7 +1260,8 @@ del {
 }
 
 ::selection {
-  background-color: var(--primary-focus);
+  background-color: var(--primary);
+  color: var(--contrast-inverse);
 }
 
 /**
@@ -1537,7 +1538,7 @@ ul li {
 @font-face {
   font-family: "Fira Code";
   font-style: normal;
-  font-weight: 100 200;
+  font-weight: 300 400;
   font-display: swap;
   src: url("/fonts/woff2/FiraCode-VF.woff2") format("woff2-variations");
 }
