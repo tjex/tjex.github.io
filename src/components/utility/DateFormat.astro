@@ -1,13 +1,22 @@
 ---
 const { date, format } = Astro.props;
-const dateFormatted = new Date(date);
+
+if (date == "now") {
+  var dateFormatted = new Date();
+} else {
+  var dateFormatted = new Date(date);
+}
 
 const optionsMDY = { month: "long", day: "2-digit", year: "numeric", hour12: false };
 const MDY = dateFormatted.toLocaleDateString("en-US", optionsMDY);
 
 const optionsMY = { month: "long", year: "numeric", hour12: false };
 const MY = dateFormatted.toLocaleDateString("en-US", optionsMY);
+
+const iso = dateFormatted.toISOString().split('T')[0];
+
 ---
 
 {format == "MDY" ? <time>{MDY}</time> : null}
 {format == "MY" ? <time>{MY}</time> : null}
+{format == "iso" ? <time>{iso}</time> : null}
