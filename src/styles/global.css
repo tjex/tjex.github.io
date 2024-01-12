@@ -1051,8 +1051,8 @@ a:is([aria-current], :hover, :active, :focus),
   --text-decoration: underline;
   --text-decoration-color: var(--primary);
 }
-a:focus,
-[role=link]:focus {
+a:focus-visible,
+[role=link]:focus-visible {
   background-color: var(--primary-focus);
   outline: dashed;
   outline-width: 2px;
@@ -1071,6 +1071,9 @@ a.secondary:is([aria-current], :hover, :active, :focus),
 a.secondary:focus,
 [role=link].secondary:focus {
   --background-color: var(--secondary-focus);
+  outline: dashed;
+  outline-width: 2px;
+  outline-offset: 4px;
 }
 a.contrast,
 [role=link].contrast {
@@ -1085,6 +1088,9 @@ a.contrast:is([aria-current], :hover, :active, :focus),
 a.contrast:focus,
 [role=link].contrast:focus {
   --background-color: var(--contrast-focus);
+  outline: dashed;
+  outline-width: 2px;
+  outline-offset: 4px;
 }
 
 /* outgoing link icon for outgoing links (surpirse) */
