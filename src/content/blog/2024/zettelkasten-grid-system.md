@@ -30,7 +30,7 @@ Some advice is also given for practices which support the goal of a
 "frictionless system", such as metadata suggestions and file naming with Unique
 Identifiers (UIDs), but they are not directly part of the GRID system itself.
 
-# Table of Contents
+## Table of Contents
 
 - [Back Story](#back-story)
 - [(Over)categorisation is the death of a Zettelkasten](#overcategorisation-is-the-death-of-a-zettelkasten)
