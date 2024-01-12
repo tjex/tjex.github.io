@@ -40,7 +40,7 @@ time, which is important here to avoid theme flashing
 -->
 <script is:inline>
   const themeToggle = document.getElementById("themeToggle");
-  const getTheme = () => localStorage.getItem("theme");
+  const getTheme = () => localStorage.getItem("theme") || "dark";
   const setTheme = (theme) => {
     localStorage.setItem("theme", theme);
     document.documentElement.dataset.theme = theme;
