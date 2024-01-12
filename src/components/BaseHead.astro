@@ -22,21 +22,16 @@ const image = new URL(
 const index = Astro.props.index || "all";
 ---
 
-<meta charset="utf-8" />
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover"
-/>
 
 <!-- Primary Meta Tags -->
-<title>tjex ~ {title || site.title}</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="title" content={title || site.title} />
 <meta name="description" content={description || site.description} />
 <meta name="robots" content={index} />
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover"
-/>
+
+<!-- browser tab title -->
+<title>tjex ~ {title || site.title}</title>
 
 <!-- RSS -->
 <link
