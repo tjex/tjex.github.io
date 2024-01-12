@@ -412,7 +412,7 @@ progress,
  * Container and responsive spacings for header, main, footer
  */
 :root {
-  --max-width: 1200px;
+  --max-width: 900px;
 }
 
 main {
@@ -536,7 +536,7 @@ body {
 }
 
 /* from: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-examples */
-@media all and (min-width: 1338px) {
+@media all and (min-width: 1200px) {
   .aside {
     flex: 1 0 0;
   }
@@ -562,7 +562,7 @@ body {
     order: 7;
   }
 }
-@media only screen and (max-width: 1340px) {
+@media only screen and (max-width: 1200px) {
   .header-left {
     text-align: left;
   }
@@ -589,16 +589,20 @@ body {
     margin-inline: auto;
   }
   .sidebar-left .site-nav a:after,
-  .sidebar-left a:before,
-  .sidebar-left ul .site-nav a:after,
-  .sidebar-left ul a:before {
+  .sidebar-left ul .site-nav a:after {
     content: none !important;
+  }
+  .sidebar-left .site-nav a:before,
+  .sidebar-left ul .site-nav a:before {
+    content: ":";
+    padding-right: 10px;
   }
   .sidebar-right {
     display: none;
   }
   .main-content {
     width: 100%;
+    margin: 0 auto;
   }
   .footer {
     position: relative;
@@ -736,7 +740,7 @@ figure figcaption {
     --block-spacing-vertical: calc(var(--spacing) * 2.5);
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   body > header,
   body > main,
   body > footer,
@@ -766,7 +770,7 @@ figure figcaption {
     --block-spacing-horizontal: calc(var(--spacing) * 1.25);
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   article {
     --block-spacing-horizontal: calc(var(--spacing) * 1.5);
   }
@@ -792,7 +796,7 @@ dialog > article {
     --block-spacing-horizontal: calc(var(--spacing) * 1.25);
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   dialog > article {
     --block-spacing-vertical: calc(var(--spacing) * 3);
     --block-spacing-horizontal: calc(var(--spacing) * 1.5);
@@ -974,7 +978,7 @@ aside li [role=button] {
     --font-size: 1rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   :root {
     --font-size: 1rem;
   }

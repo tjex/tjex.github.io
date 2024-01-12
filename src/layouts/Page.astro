@@ -16,7 +16,7 @@ export interface Props {
 const { seo } = Astro.props as Props;
 ---
 
-<Layout {seo}>
+<Layout seo={seo}>
   <HeaderLeft slot="header-left" />
   <HeaderCenter slot="header-center" />
   <HeaderRight slot="header-left" />
