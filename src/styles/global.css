@@ -1054,6 +1054,9 @@ a:is([aria-current], :hover, :active, :focus),
 a:focus,
 [role=link]:focus {
   background-color: var(--primary-focus);
+  outline: dashed;
+  outline-width: 2px;
+  outline-offset: 4px;
 }
 a.secondary,
 [role=link].secondary {
