@@ -7,7 +7,11 @@ export default defineConfig({
   site: "https://tjex.net",
     markdown: {
         drafts: true,
-        remarkRehype: { footnoteLabelTagName: "h5"},
+        remarkRehype: {
+            footnoteLabelTagName: "h5",
+            footnoteBackContent: "⤴",
+            footnoteLabel: "Footnotes"
+        },
     },
   integrations: [
       sitemap({}),

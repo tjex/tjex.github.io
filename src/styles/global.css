@@ -408,6 +408,18 @@ progress,
 }
 
 /**
+ * Section
+ * Responsive spacings for section
+ */
+section {
+  margin-bottom: var(--block-spacing-vertical);
+}
+
+.footnotes p, ol, ul, li {
+  font-size: var(--font-small);
+}
+
+/**
  * Sectioning
  * Container and responsive spacings for header, main, footer
  */
