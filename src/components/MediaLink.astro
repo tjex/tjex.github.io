@@ -1,10 +1,11 @@
 ---
 import "../styles/snippets/contentPreview.css";
-const { src, artist, work, source, genre } = Astro.props;
+const { src, artist, work, source, character, vocals } = Astro.props;
 ---
 
-<div class=`content-preview filter ${genre} ${source}`>
-  <a href={`${src}`}> {artist}</a>
+
+<div class=`content-preview filter ${character} ${source}`>
+  <a href={`${src}`}> {artist} - {work}</a>
   <br />
-  <span class="secondary" style="font-style: italic;">&#10149; {work}</span>
+  <span class="secondary" style="font-style: italic;">&#10149; {character}</span><br />
 </div>
