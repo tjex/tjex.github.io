@@ -18,6 +18,22 @@ local key = vim.keymap.set
 
 ```
 
+## Keep cursor centered when paging and searching
+
+```lua
+key("n", "<C-d>", "<C-d>zz", opts) -- keep cursor in middle during page down
+key("n", "<C-u>", "<C-u>zz", opts) -- keep cursor in middle during page up
+key("n", "n", "nzzzv", opts) -- keep cursor in middle during search
+
+```
+
+## Replace the text under the current cursor document wide
+
+```lua
+-- (got this one from Prime(agen)). 
+key("n", "<leader>r", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/<Left>")
+
+```
 
 ## Faster goToDefinition() workflow
 
