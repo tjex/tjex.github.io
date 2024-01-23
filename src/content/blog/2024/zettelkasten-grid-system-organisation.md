@@ -2,6 +2,7 @@
 title: The GRID System for Frictionless Zettelkasten Organisation
 description: The GRID system is a framework for frictionless organisation of a Zettelkasten. It defines a set of rules for note creation and note tagging that suppress the need for content categorisation. 
 pubDate: 2024-01-06T19:01:33Z
+modDate: 2024-01-23T09:22:50Z
 author: tjex
 tags: ['learning']
 license: cc
@@ -9,13 +10,15 @@ draft: false
 ---
 
 The GRID system is a framework for frictionless Zettelkasten organisation. It
-defines a set of rules for note creation and note tagging that suppress the
-need for content categorisation. 
+defines a set of rules for note creation and note tagging that suppress the need
+for content categorisation. The goal is to strike the balance between cognitive
+friction when writing, and observability when managing, searching, reading
+and navigating. 
 
 An example of content categorisation is the question, "Which topic does this 
 note relate to?".
 
-The lack of categorisation helps reduce cognitive friction (not losing the
+A lack of categorisation helps reduce cognitive friction (not losing the
 train of thought) and promotes a focus on the core principle of how the
 Zettelkasten method creates value, inter-note linking.
 
@@ -29,6 +32,9 @@ The system was designed with two main concepts in mind:
 Some advice is also given for practices which support the goal of a
 "frictionless system", such as metadata suggestions and file naming with Unique
 Identifiers (UIDs), but they are not directly part of the GRID system itself.
+
+> This post got very long, so you can also jump to the [conclusion](#conclusion)
+> to get more of an overview before diving in if you like.
 
 ## Table of Contents
 
@@ -178,6 +184,37 @@ but I find the categorisation to miss the mark for various reasons:
   never is; they're both just resting for a moment.
 - ACCESS comes closer to a frictionless solution of folder management, but the
   "Extra" and "Spaces" folder are again rabbits holes.
+
+
+#### The one true value of folders for a (digital) Zettelkasten [^2]
+
+In a physical Zettelkasten, folders have next to no relevance (Luhmann did keep
+his reference notes in a completely separate box [^1]), but they can be very
+useful (but still not required) in a digital system. 
+
+On a digital system we have the power to work with tools such as scripts, full
+text search and regex. Folders are powerful parameters for these features,
+inside *but also outside* of your Zettelkasten program. 
+
+Even if you personally don't use these tools yet, there is a good chance you
+will to some degree down the track. Making design decisions based around the 
+future *program independent* usage of your data is super important (called
+'future proofing'). 
+
+For example, what if you want to host your notes online [Andy
+Matuschack style](https://notes.andymatuschak.org/), but have all your personal
+diaries mixed in with everything else in one folder? 
+
+You'd really hope that you included a `diary` tag and that the hosting /
+publishing framework can filter out notes tagged `diary`, when publishing
+online. Ignoring a folder is a very basic feature of any such framework, and
+worst case, you could just provide the Zettelkasten vault with the diaries
+folder removed.
+
+A Zettelkasten has the ability to be a life long artefact for us. Ensuring and
+optimising where possible for future usability is therefore *very* important,
+and a strong consideration of the GRID system. Folders help with this.
+Recommendations of which folders [are made below](#the-grid-system).
 
 ### Tags
 
@@ -372,7 +409,6 @@ form the *source* of the information is or what the *status* of the note is.
 3. *text:* anything text based; book, paper, research, publication, blog post, newsletter
 4. *me:* thoughts that arise from 'nowhere' (dreams, sudden thoughts)
 5. *video:* (moving images) film, documentary, news reports
-6. *branch:* sprouted directly from the content of another note.
 
 Of course, some edge cases exist. In *my personal interpretation*:
 
@@ -399,10 +435,15 @@ References:
 - url to external source.
 ```
 
-A note resulting from the content of another:
+It's also nice to have an outbound back-link if the note was created out of
+direct inspiration from the content of another. But for this there is no tag, as
+such a tag will become almost all encompassing and therefore offers next to no
+practical value for filtering (this also means it will destroy your graph view if
+you use one). Simply adding the reference without a tag will then suffice: 
+
 ```markdown
 ---
-tags: [branch]
+tags: []
 ---
 
 # Title
@@ -445,13 +486,13 @@ This further invalidates the "Archive" folder in the PARA system.
     - As this is also an index note, it gets saved in the index folder.
 5. *glossary*: all notes in the glossary folder.
 
-The purpose of these tags is purely functional. They provide an alternate 
-way to access or filter these notes as apposed to navigating to the `index` or `glossary` 
-folders.
+The purpose of these tags is purely functional. They provide an alternate and
+typically quicker way way to access or filter these notes as apposed to
+navigating to the `index` or `glossary` folders. 
 
-> for example, in [zk-nvim](https://github.com/zk-org/zk-nvim), I can open a
-> search picker for tags, narrow to `glossary` and then fuzzy find through all
-> my glossary notes.
+Having notes in folders in addition, allows for a much simpler process when
+handling or accessing the files outside of the Zettelkasten app [see
+above](#the-one-true-value-of-folders-for-a-digital-zettelkasten).
 
 ## Note Metadata, File Naming and Future Proofing
 
@@ -546,8 +587,23 @@ these practices as contributing heavily to future proofing:
   paywall that you either cannot or will not want to pay. 
 
 
-## Final Thoughts
+## Conclusion
 
-...none. You've copped enough already. Happy Zetteling!
+The GRID system is my attempt to strike the balance between cognitive friction
+when writing and observability when managing. The folder structure deal with a
+clear separation of concerns (glossary, references, indexes and diaries) while
+the tags target the *object class* of a note's *source*, *status* and
+*structure*. 
 
-(But if you do have any questions or comments, I'd be happy to receive your email)
+This provides a level of future proofing that can pay off hugely in the long run
+and constrains the level of complexity and management costs that very easily
+arise when the amount of topical tags become too many (not to mention the
+eventual *reduction* in observability).
+
+The GRID system can therefore be implemented and used as is, but also built upon
+very easily if needed. This allows for a custom system with a strong foundation.
+
+
+[^1]: https://luhmann.surge.sh/communicating-with-slip-boxes, Section II, point 3.
+[^2]: Thanks to Christian in the [Zettelkasten.de thread](https://forum.zettelkasten.de/discussion/comment/19357/#Comment_19357) for pointing out that I'd only
+    described *how* to use folders, but now *why*.

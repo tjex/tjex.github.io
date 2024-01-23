@@ -35,24 +35,25 @@ const postGithubUrl =  new URL('https://github.com/tjex/tjex.github.io/commits/m
     <article class="post-content__article">
         <h1>{post.data.title}</h1>
         <p class="post-info">
-            <span>Tillman Jex, <Date date={post.data.pubDate} format={"MDY"} /></span>
-
-            <!-- if the post has been modified since original publication -->
-            {
-                post.data.modDate ? (
-                <span> - </span><a rel="me" href=`${postGithubUrl}`> view edit history </a> ) : null
-            }
-            <br>
+            <span>Tillman Jex, <Date date={post.data.pubDate} format={"MDY"} /></span><br>
 
             <span class="secondary">Tagged: </span> <Tags tags={post.data.tags} 
             style={"text"} />
 
             <br>
 
+
             <span class="secondary">License: </span> {post.data.license && 
             <License license={post.data.license} />}
 
             <br>
+            <!-- if the post has been modified since original publication -->
+            {
+                post.data.modDate ? (
+                <span class="secondary"> Updated: </span><a rel="me" href=`${postGithubUrl}`> <Date date={post.data.modDate} format={"MDY"}/> </a> ) : null
+            }
+            <br>
+
 
             <!-- for posts that refer to computer programs used -->
         {
