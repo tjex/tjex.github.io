@@ -7,5 +7,5 @@ const { src, artist, work, source, character, vocals } = Astro.props;
 <div class=`content-preview filter ${character} ${source}`>
   <a href={`${src}`}> {artist} - {work}</a>
   <br />
-  <span class="secondary" style="font-style: italic;">&#10149; {character}</span><br />
+  <span class="secondary" style="font-style: italic;">vocals: {vocals}</span><br />
 </div>
