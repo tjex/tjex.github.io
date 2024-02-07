@@ -2,7 +2,7 @@
 title: The GRID System for Frictionless Zettelkasten Organisation
 description: The GRID system is a framework for frictionless organisation of a Zettelkasten. It defines a set of rules for note creation and note tagging that suppress the need for content categorisation. 
 pubDate: 2024-01-06T19:01:33Z
-modDate: 2024-01-23T09:22:50Z
+modDate: 2024-02-07T16:24:55Z
 author: tjex
 tags: ['learning']
 license: cc
@@ -104,7 +104,7 @@ Trying to categorise for retrieval down the track, quickly leads to over-categor
 This is why I think starting with the Zettelkasten technique is daunting, and
 also why it's hard to find a system that works, because we're so used to the
 crutch of categorisation, but categorisation is the antithesis of the
-Zettelkasten system.
+Zettelkasten system[^3].
 
 But a total lack of structure, let's say a singular folder full of all notes,
 without tags, without titles and without dates... This is chaos. By definition,
@@ -607,3 +607,4 @@ very easily if needed. This allows for a custom system with a strong foundation.
 [^1]: https://luhmann.surge.sh/communicating-with-slip-boxes, Section II, point 3.
 [^2]: Thanks to Christian in the [Zettelkasten.de thread](https://forum.zettelkasten.de/discussion/comment/19357/#Comment_19357) for pointing out that I'd only
     described *how* to use folders, but now *why*.
+[^3]: https://zettelkasten.de/posts/no-categories/
