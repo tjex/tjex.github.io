@@ -29,7 +29,8 @@ me. Additionally, the thinking will need to go much deeper than the essay
 required.
 
 So how can we use Zettelkasten effectively, given a large and time sensitive
-writing and research task such as a thesis or Ph.D?
+writing and research task such as a thesis or Ph.D? There are a few examples of
+documentation of this, [here](https://zettelkasten.de/posts/field-report-4-what-i-learned-writing-thesis-with-zettelkasten/), and [here](https://www.youtube.com/watch?v=L9SLlxaEEXY).
 
 The biggest fear for me is the question we all dealt with when trying to first
 understand Zettelkasten; how do we find a specific note again? I will be reading
