@@ -515,7 +515,7 @@ body {
 .footer {
   display: block;
   position: fixed;
-  font-size: 0.8rem;
+  font-size: var(--font-smallest);
   left: 0;
   bottom: 0;
   width: 100%;
@@ -972,6 +972,7 @@ aside li [role=button] {
   font-weight: 400;
   font-size: 1.2rem;
   --font-small: 0.85rem;
+  --font-smallest: 0.7rem;
 }
 @media (min-width: 576px) {
   :root {
@@ -1035,6 +1036,18 @@ ul {
   font-style: normal;
   font-weight: var(--font-weight);
   font-size: var(--font-size);
+}
+
+ol,
+ul,
+li {
+  font-size: var(--font-small);
+}
+
+.footnotes p,
+.footnotes > ol {
+  font-size: var(--font-small);
+  margin-bottom: calc(var(--typography-spacing-vertical) * 0.2);
 }
 
 a,
@@ -1211,10 +1224,6 @@ blockquote {
 blockquote footer {
   margin-top: calc(var(--typography-spacing-vertical) * 0.5);
   color: var(--blockquote-footer-color);
-}
-
-.footnotes p, ol, ul, li {
-  font-size: var(--font-small);
 }
 
 .tag,
