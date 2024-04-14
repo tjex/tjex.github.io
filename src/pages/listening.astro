@@ -3,226 +3,236 @@ import Layout from "../layouts/Page.astro";
 import MediaLink from "../components/MediaLink.astro";
 
 const seo = {
-  title: "Listening List",
-  description: "External link archive of music I'm listening to",
-  index: "nofollow",
+    title: "Listening List",
+    description: "External link archive of music I'm listening to",
+    index: "nofollow",
 };
 ---
 
 <Layout seo={seo}>
-  <h1>Listening List</h1>
-  <p>
-    Below is a collection of recommended listenings. If you like the general flavours of the below list, you can find
-    more on my <a href="https://bandcamp.com/tillman-jex">bandcamp fan page</a>. Just as in open source, if you find
-    that an artist provides value to you, consider buying their music from Bandcamp, the artist gets the
-    <a href="https://get.bandcamp.help/hc/en-us/articles/1500006084082-What-are-Bandcamp-s-fees">lion's share.</a>
-  </p>
-  <p>
-    Most music here is 'safe for work' (it can blend into your cognitive background). This is also the reason for vocals
-    'yes/no', as vocals make it much harder to focus on anything but the music I find. "Genres" left out on purpose to
-    aid in unexpected discovery.
-    <br />
-  </p>
+    <h1>Listening List</h1>
+    <p>
+        Below is a collection of recommended listenings. If you like the general flavours of the below list, you can
+        find more on my <a href="https://bandcamp.com/tillman-jex">bandcamp fan page</a>. Just as in open source, if you
+        find that an artist provides value to you, consider buying their music from Bandcamp, the artist gets the
+        <a href="https://get.bandcamp.help/hc/en-us/articles/1500006084082-What-are-Bandcamp-s-fees">lion's share.</a>
+    </p>
+    <p>
+        Most music here is 'safe for work' (it can blend into your cognitive background). This is also the reason for
+        vocals 'yes/no', as vocals make it much harder to focus on anything but the music I find. "Genres" left out on
+        purpose to aid in unexpected discovery.
+        <br />
+    </p>
 
-  <div class="filterWrapper">
-    <div class="grid">
-      <MediaLink
-        src={"https://room40.bandcamp.com/album/jasper-sits-out"}
-        artist={"Norman Westberg"}
-        work={"Jasper Sits Out"}
-        character={"Acoustic + Electronic"}
-        vocals={"no"}
-        source={"Bandcamp"}
-      />
-      <MediaLink
-        src={"https://hymen-records.bandcamp.com/album/iron-city"}
-        artist={"Lusine icl"}
-        work={"Iron City"}
-        character={"Electronic"}
-        vocals={"no"}
-        source={"Bandcamp"}
-      />
+    <div class="filterWrapper">
+        <div class="grid">
+            <MediaLink
+                src={"https://open.spotify.com/album/2AkKXfAVVI91CMNMdDxJs8?si=3JOz4oV1RSGuGshr4GUsHg"}
+                artist={"DZihan & Kamien"}
+                work={"IV"}
+                character={"Electronic, Jazz"}
+                vocals={"yes"}
+                source={"Spotify"}
+            />
+        </div>
+        <div class="grid">
+            <MediaLink
+                src={"https://room40.bandcamp.com/album/jasper-sits-out"}
+                artist={"Norman Westberg"}
+                work={"Jasper Sits Out"}
+                character={"Acoustic, Electronic"}
+                vocals={"no"}
+                source={"Bandcamp"}
+            />
+            <MediaLink
+                src={"https://hymen-records.bandcamp.com/album/iron-city"}
+                artist={"Lusine icl"}
+                work={"Iron City"}
+                character={"Electronic"}
+                vocals={"no"}
+                source={"Bandcamp"}
+            />
+        </div>
+        <div class="grid">
+            <MediaLink
+                src={"https://loscil.bandcamp.com/album/colours-of-air"}
+                artist={"Loscil // Lawrence English"}
+                work={"Colours of Air"}
+                character={"Electronic"}
+                vocals={"no"}
+                source={"Bandcamp"}
+            />
+            <MediaLink
+                src={"https://www.youtube.com/watch?v=OaLhSrdHCBs"}
+                artist={"Yeghishe Manukyan"}
+                work={"Haykakan Duduk"}
+                character={"Acoustic"}
+                vocals={"no"}
+                source={"Youtube"}
+            />
+        </div>
+        <div class="grid">
+            <MediaLink
+                src={"https://elinpiel.bandcamp.com/album/ingrid-linnea"}
+                artist={"Elin Piel"}
+                work={"Ingrid Linnea"}
+                character={"Electronic"}
+                vocals={"no"}
+                source={"Bandcamp"}
+            />
+            <MediaLink
+                src={"https://biosphere.bandcamp.com/album/dropsonde-reissue-with-bonus-album"}
+                artist={"Biosphere"}
+                work={"Dropsonde"}
+                character={"Electronic"}
+                vocals={"no"}
+                source={"Bandcamp"}
+            />
+        </div>
+        <div class="grid">
+            <MediaLink
+                src={"https://aleksiperala.bandcamp.com/album/gaia-5"}
+                artist={"Aleksi Perälä"}
+                work={"GAIA 5"}
+                character={"Electronic"}
+                vocals={"no"}
+                source={"Bandcamp"}
+            />
+            <MediaLink
+                src={"https://sine-music.bandcamp.com/track/feel-love"}
+                artist={"Sine"}
+                work={"Feel Love"}
+                character={"Electronic"}
+                vocals={"no"}
+                source={"Bandcamp"}
+            />
+        </div>
+        <div class="grid">
+            <MediaLink
+                src={"https://soundcloud.com/inverted-audio/ia-mix-365-jakojako"}
+                artist={"Jako Jako"}
+                work={"Inverted Audio - Mix"}
+                character={"Electronic"}
+                vocals={"no"}
+                source={"Soundcloud"}
+            />
+            <MediaLink
+                src={"https://musicforprogramming.net/"}
+                artist={"musicforprogramming.net"}
+                work={"(various mixes)"}
+                character={"Electronic"}
+                vocals={"no"}
+                source={"Website"}
+            />
+        </div>
+        <div class="grid">
+            <MediaLink
+                src={"https://www.youtube.com/watch?v=IYHHUDqpeUQ"}
+                artist={"Telepopmusik"}
+                work={"Angel milk - Don't Look Back"}
+                character={"Electronic"}
+                vocals={"yes"}
+                source={"Youtube"}
+            />
+            <MediaLink
+                src={"https://www.nts.live/shows/red-laser-records/episodes/red-laser-records-w-starion-tommy-walker-iii-dj-absolutely-shit-metrodome-2nd-february-2020"}
+                artist={"NTS"}
+                work={"Red Laser Records: Starion, (...)"}
+                character={"Electronic"}
+                vocals={"yes"}
+                source={"Podcast"}
+            />
+        </div>
+        <div class="grid">
+            <MediaLink
+                src={"https://somafm.com/groovesalad/"}
+                artist={"Soma FM"}
+                work={"Groove Salad"}
+                character={"Electronic"}
+                character={"Various"}
+                vocals={"no"}
+                source={"Online Radio"}
+            />
+            <MediaLink
+                src={"https://robertrich.com/album/vestiges/"}
+                artist={"Robert Rich"}
+                work={"Vestiges"}
+                character={"Electronic"}
+                vocals={"no"}
+                source={"Bandcamp"}
+            />
+        </div>
+        <div class="grid">
+            <MediaLink
+                src={"https://murcofmusic.bandcamp.com/album/cosmos-2022-remaster"}
+                artist={"Murcof"}
+                work={"Cosmos"}
+                character={"Electronic"}
+                vocals={"no"}
+                source={"Bandcamp"}
+            />
+            <MediaLink
+                src={"https://room40.bandcamp.com/album/glitter-in-my-tears"}
+                artist={"Janek Schaefer"}
+                work={"Glitter in my Tears"}
+                character={"Electronic"}
+                vocals={"no"}
+                source={"Bandcamp"}
+            />
+        </div>
+        <div class="grid">
+            <MediaLink
+                src={"https://iliantape.bandcamp.com/album/itx028-picture-in-picture"}
+                artist={"nimu"}
+                work={"Picture in Picture"}
+                character={"Electronic"}
+                vocals={"no"}
+                source={"Bandcamp"}
+            />
+            <MediaLink
+                src={"https://www.youtube.com/watch?v=ZXJWO2FQ16c"}
+                artist={"Steve Reich"}
+                work={"Music for 18 Musicians"}
+                character={"Classical"}
+                vocals={"no"}
+                source={"Youtube"}
+            />
+        </div>
+        <div class="grid">
+            <MediaLink
+                src={"https://jonkennedy.bandcamp.com/album/corporeal-lp"}
+                artist={"Jon Kennedy"}
+                work={"Corporeal"}
+                character={"Electronic"}
+                vocals={"yes"}
+                source={"Bandcamp"}
+            />
+            <MediaLink
+                src={"https://www.youtube.com/playlist?list=OLAK5uy_m64aE84r9H7rUZtaK7GmjtGxpGmfC42L0"}
+                artist={"Groove Armada"}
+                work={"Goodbye Country (Hello Nightclub)"}
+                character={"Electronic"}
+                vocals={"yes"}
+                source={"Youtube"}
+            />
+        </div>
+        <div class="grid">
+            <MediaLink
+                src={"https://iliantape.bandcamp.com/album/itlp04-compro"}
+                artist={"Skee Mask"}
+                work={"Compro"}
+                character={"Electronic"}
+                vocals={"no"}
+                source={"Bandcamp"}
+            />
+            <MediaLink
+                src={"https://www.youtube.com/watch?v=OOWEY4MGzM8&list=OLAK5uy_kog7h-Mfv5sc02JhwsXqQOHlFtyTTeu-s&index=8"}
+                artist={"Underworld"}
+                work={"dubnobasswithmyheadman"}
+                character={"Electronic"}
+                vocals={"no"}
+                source={"Youtube"}
+            />
+        </div>
     </div>
-    <div class="grid">
-      <MediaLink
-        src={"https://loscil.bandcamp.com/album/colours-of-air"}
-        artist={"Loscil // Lawrence English"}
-        work={"Colours of Air"}
-        character={"Electronic"}
-        vocals={"no"}
-        source={"Bandcamp"}
-      />
-      <MediaLink
-        src={"https://www.youtube.com/watch?v=OaLhSrdHCBs"}
-        artist={"Yeghishe Manukyan"}
-        work={"Haykakan Duduk"}
-        character={"Acoustic"}
-        vocals={"no"}
-        source={"Youtube"}
-      />
-    </div>
-    <div class="grid">
-      <MediaLink
-        src={"https://elinpiel.bandcamp.com/album/ingrid-linnea"}
-        artist={"Elin Piel"}
-        work={"Ingrid Linnea"}
-        character={"Electronic"}
-        vocals={"no"}
-        source={"Bandcamp"}
-      />
-      <MediaLink
-        src={"https://biosphere.bandcamp.com/album/dropsonde-reissue-with-bonus-album"}
-        artist={"Biosphere"}
-        work={"Dropsonde"}
-        character={"Electronic"}
-        vocals={"no"}
-        source={"Bandcamp"}
-      />
-    </div>
-    <div class="grid">
-      <MediaLink
-        src={"https://aleksiperala.bandcamp.com/album/gaia-5"}
-        artist={"Aleksi Perälä"}
-        work={"GAIA 5"}
-        character={"Electronic"}
-        vocals={"no"}
-        source={"Bandcamp"}
-      />
-      <MediaLink
-        src={"https://sine-music.bandcamp.com/track/feel-love"}
-        artist={"Sine"}
-        work={"Feel Love"}
-        character={"Electronic"}
-        vocals={"no"}
-        source={"Bandcamp"}
-      />
-    </div>
-    <div class="grid">
-      <MediaLink
-        src={"https://soundcloud.com/inverted-audio/ia-mix-365-jakojako"}
-        artist={"Jako Jako"}
-        work={"Inverted Audio - Mix"}
-        character={"Electronic"}
-        vocals={"no"}
-        source={"Soundcloud"}
-      />
-      <MediaLink
-        src={"https://musicforprogramming.net/"}
-        artist={"musicforprogramming.net"}
-        work={"(various mixes)"}
-        character={"Electronic"}
-        vocals={"no"}
-        source={"Website"}
-      />
-    </div>
-    <div class="grid">
-      <MediaLink
-        src={"https://www.youtube.com/watch?v=IYHHUDqpeUQ"}
-        artist={"Telepopmusik"}
-        work={"Angel milk - Don't Look Back"}
-        character={"Electronic"}
-        vocals={"yes"}
-        source={"Youtube"}
-      />
-      <MediaLink
-        src={"https://www.nts.live/shows/red-laser-records/episodes/red-laser-records-w-starion-tommy-walker-iii-dj-absolutely-shit-metrodome-2nd-february-2020"}
-        artist={"NTS"}
-        work={"Red Laser Records: Starion, (...)"}
-        character={"Electronic"}
-        vocals={"yes"}
-        source={"Podcast"}
-      />
-    </div>
-    <div class="grid">
-      <MediaLink
-        src={"https://somafm.com/groovesalad/"}
-        artist={"Soma FM"}
-        work={"Groove Salad"}
-        character={"Electronic"}
-        character={"Various"}
-        vocals={"no"}
-        source={"Online Radio"}
-      />
-      <MediaLink
-        src={"https://robertrich.com/album/vestiges/"}
-        artist={"Robert Rich"}
-        work={"Vestiges"}
-        character={"Electronic"}
-        vocals={"no"}
-        source={"Bandcamp"}
-      />
-    </div>
-    <div class="grid">
-      <MediaLink
-        src={"https://murcofmusic.bandcamp.com/album/cosmos-2022-remaster"}
-        artist={"Murcof"}
-        work={"Cosmos"}
-        character={"Electronic"}
-        vocals={"no"}
-        source={"Bandcamp"}
-      />
-      <MediaLink
-        src={"https://room40.bandcamp.com/album/glitter-in-my-tears"}
-        artist={"Janek Schaefer"}
-        work={"Glitter in my Tears"}
-        character={"Electronic"}
-        vocals={"no"}
-        source={"Bandcamp"}
-      />
-    </div>
-    <div class="grid">
-      <MediaLink
-        src={"https://iliantape.bandcamp.com/album/itx028-picture-in-picture"}
-        artist={"nimu"}
-        work={"Picture in Picture"}
-        character={"Electronic"}
-        vocals={"no"}
-        source={"Bandcamp"}
-      />
-      <MediaLink
-        src={"https://www.youtube.com/watch?v=ZXJWO2FQ16c"}
-        artist={"Steve Reich"}
-        work={"Music for 18 Musicians"}
-        character={"Classical"}
-        vocals={"no"}
-        source={"Youtube"}
-      />
-    </div>
-    <div class="grid">
-      <MediaLink
-        src={"https://jonkennedy.bandcamp.com/album/corporeal-lp"}
-        artist={"Jon Kennedy"}
-        work={"Corporeal"}
-        character={"Electronic"}
-        vocals={"yes"}
-        source={"Bandcamp"}
-      />
-      <MediaLink
-        src={"https://www.youtube.com/playlist?list=OLAK5uy_m64aE84r9H7rUZtaK7GmjtGxpGmfC42L0"}
-        artist={"Groove Armada"}
-        work={"Goodbye Country (Hello Nightclub)"}
-        character={"Electronic"}
-        vocals={"yes"}
-        source={"Youtube"}
-      />
-    </div>
-    <div class="grid">
-      <MediaLink
-        src={"https://iliantape.bandcamp.com/album/itlp04-compro"}
-        artist={"Skee Mask"}
-        work={"Compro"}
-        character={"Electronic"}
-        vocals={"no"}
-        source={"Bandcamp"}
-      />
-      <MediaLink
-        src={"https://www.youtube.com/watch?v=OOWEY4MGzM8&list=OLAK5uy_kog7h-Mfv5sc02JhwsXqQOHlFtyTTeu-s&index=8"}
-        artist={"Underworld"}
-        work={"dubnobasswithmyheadman"}
-        character={"Electronic"}
-        vocals={"no"}
-        source={"Youtube"}
-      />
-    </div>
-  </div>
 </Layout>
