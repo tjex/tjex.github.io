@@ -1,6 +1,8 @@
 ---
 title: Increase legibility of markdown in Neovim
-description: Hide link paths, code fences and other symbols that make raw Markdown a bit difficult to read.
+description:
+  Hide link paths, code fences and other symbols that make raw Markdown a bit
+  difficult to read.
 pubDate: 2024-01-21T22:29:03Z
 author: tjex
 tags: ["neovim"]
@@ -11,16 +13,17 @@ draft: false
 In vim/neovim, we can set specific syntax rules per filetype, just like we can
 set specific keybinds or settings per filetype.
 
-With the below settings, links that follow markdown sytax such as `[link title](link/path)`, 
-as well as `[[wiki link style]]`, will have all but the link's text hidden,
-meaning your eyes don't have to drag over unnecessary information. 
+With the below settings, links that follow markdown sytax such as
+`[link title](link/path)`, as well as `[[wiki link style]]`, will have all but
+the link's text hidden, meaning your eyes don't have to drag over unnecessary
+information.
 
 When your cursor is on the same line as a link, the extra syntax / link path
-gets expanded, so you can still see that detail if and when you want. 
+gets expanded, so you can still see that detail if and when you want.
 
-This makes workin with markdown *so* much better.
+This makes workin with markdown _so_ much better.
 
-Make a folder `nvim/after/syntax` and create the file `markdown.vim` inside: 
+Make a folder `nvim/after/syntax` and create the file `markdown.vim` inside:
 
 `nvim/after/syntax/markdown.vim`
 
@@ -49,4 +52,3 @@ Group.new("underlined", colors.quart, nil, nil)
 Group.new("underlined", colors.quart, nil, styles.underline)
 
 ```
-

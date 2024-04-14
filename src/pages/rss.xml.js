@@ -1,13 +1,13 @@
-import rss from '@astrojs/rss';
-import site from '../data/settings';
-import sanitizeHtml from 'sanitize-html';
-import MarkdownIt from 'markdown-it';
-import * as colUtil from "../scripts/collectionUtil.ts"
+import rss from "@astrojs/rss";
+import site from "../data/settings";
+import sanitizeHtml from "sanitize-html";
+import MarkdownIt from "markdown-it";
+import * as colUtil from "../scripts/collectionUtil.ts";
 
 const parser = new MarkdownIt();
 
 export async function GET(context) {
-    const posts = await colUtil.noDrafts("blog");
+  const posts = await colUtil.noDrafts("blog");
   return rss({
     title: "tjex.net - blog",
     description: site.description,
@@ -30,4 +30,3 @@ export async function GET(context) {
     }),
   });
 }
-

@@ -5,19 +5,19 @@ import mdx from "@astrojs/mdx";
 
 export default defineConfig({
   site: "https://tjex.net",
-    markdown: {
-        drafts: true,
-        remarkRehype: {
-            footnoteLabelTagName: "h5",
-            footnoteBackContent: "⤴",
-            footnoteLabel: "Footnotes"
-        },
+  markdown: {
+    drafts: true,
+    remarkRehype: {
+      footnoteLabelTagName: "h5",
+      footnoteBackContent: "⤴",
+      footnoteLabel: "Footnotes",
     },
-  integrations: [
-      sitemap({}),
-      mdx({
-      drafts: true,
-  })],
-  experimental: {
   },
+  integrations: [
+    sitemap({}),
+    mdx({
+      drafts: true,
+    }),
+  ],
+  experimental: {},
 });

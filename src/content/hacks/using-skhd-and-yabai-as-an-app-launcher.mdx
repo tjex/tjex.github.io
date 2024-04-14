@@ -1,36 +1,38 @@
 ---
 title: Using skhd and yabai as a launcher
-description: Mac doesn't have a good solution for launching and interfacting with terminal applications yet, this is my strategy in the meantime.
+description:
+  Mac doesn't have a good solution for launching and interfacting with terminal
+  applications yet, this is my strategy in the meantime.
 pubDate: 2023-11-21T14:18:55Z
-modDate: 2023-11-29T15:51:13Z 
+modDate: 2023-11-29T15:51:13Z
 author: tjex
-tags: ['shell']
+tags: ["shell"]
 license: mit
-progVersions: ['yabai: 6.0.1', 'skhd: 0.3.9', 'wezterm: 20230712']
+progVersions: ["yabai: 6.0.1", "skhd: 0.3.9", "wezterm: 20230712"]
 draft: false
 ---
 
 import Callout from "../../components/ui/Callout.astro";
-import { Image } from 'astro:assets';
-import center_float from './img/yabai-center-float.png';
+import { Image } from "astro:assets";
+import center_float from "./img/yabai-center-float.png";
 
 ## Intro
 
-One of the things I miss the most from my brief two month usage of GNU/Linux
-was the hackable, performant and joyfully simple selection of launchers
-available (e.g. dmenu, rofi, wofi, etc).
+One of the things I miss the most from my brief two month usage of GNU/Linux was
+the hackable, performant and joyfully simple selection of launchers available
+(e.g. dmenu, rofi, wofi, etc).
 
 I'm yet to find anything that operates the same on mac. There is
 [dmenu-mac](https://github.com/oNaiPs/dmenu-mac) but for this particular use
-case, I couldn't get it to play nice. 
+case, I couldn't get it to play nice.
 
-So I looked to try hack together a solution from tools I already used. This
-lead me to using [skhd](https://github.com/koekeishiya/skhd) and
+So I looked to try hack together a solution from tools I already used. This lead
+me to using [skhd](https://github.com/koekeishiya/skhd) and
 [yabai](https://github.com/koekeishiya/yabai) as a 'launcher' of sorts. In this
 case, we'll be setting up a keybind to bring up a terminal with
-[gopass](https://github.com/gopasspw/gopass) already running. You can
-substitute any other program with gopass. If you can run it from the terminal,
-you can run it via skhd.
+[gopass](https://github.com/gopasspw/gopass) already running. You can substitute
+any other program with gopass. If you can run it from the terminal, you can run
+it via skhd.
 
 For example, I have keybindst to brung up [lf](https://github.com/gokcehan/lf),
 english dictionary and my web browser.
@@ -39,46 +41,55 @@ english dictionary and my web browser.
 
 ### skhd
 
-The keybind comes first. skhd needs to launch a terminal instance and execute `gopass`.
-As I'm using [wezterm](https://wezfurlong.org/wezterm/) (the best terminal emulator under the sun),
-the entry in `~/.config/skhd/skhdrc` looks like:
+The keybind comes first. skhd needs to launch a terminal instance and execute
+`gopass`. As I'm using [wezterm](https://wezfurlong.org/wezterm/) (the best
+terminal emulator under the sun), the entry in `~/.config/skhd/skhdrc` looks
+like:
 
 ```bash
 alt + cmd - g : /Applications/WezTerm.app/Contents/MacOS/wezterm start zsh -l -c gopass
 ```
+
 <Callout type="note">
-If you use a different terminal emulator, replace the app path with the appropriate path change.
+  If you use a different terminal emulator, replace the app path with the
+  appropriate path change.
 </Callout>
 
-Now we can hold down `alt` - `cmd` and press `g` to spawn a terminal instance with gopass running.
+Now we can hold down `alt` - `cmd` and press `g` to spawn a terminal instance
+with gopass running.
 
 The full application is needed as otherwise skhd will launch a new instance of
 the terminal emulator, rather than using the already running process.
 
 Some extra detail on the command:
 
-- `cli start` is [specific to wezterm](https://wezfurlong.org/wezterm/cli/start.html?h=start).
-- `zsh -l` starts the spawned terminal process as a login shell, which loads our environment variables (important for gopass as it needs to know gpg directories as well as the $PASSWORD_STORE_DIR).
-- `-c <command>` takes the first argument as a command to execute ([zsh docs](https://zsh.sourceforge.io/Doc/Release/Invocation.html#Invocation)).
+- `cli start` is
+  [specific to wezterm](https://wezfurlong.org/wezterm/cli/start.html?h=start).
+- `zsh -l` starts the spawned terminal process as a login shell, which loads our
+  environment variables (important for gopass as it needs to know gpg
+  directories as well as the $PASSWORD_STORE_DIR).
+- `-c <command>` takes the first argument as a command to execute
+  ([zsh docs](https://zsh.sourceforge.io/Doc/Release/Invocation.html#Invocation)).
 
 <Callout type="note">
-In the case of a command with arguments, the entire call needs to be wrapped in quotes. This is because of how `-c` works.
-```bash
-... cli spawn --new-window zsh -l -c "bkmr search --fzf"
-```
-</Callout >
+  In the case of a command with arguments, the entire call needs to be wrapped
+  in quotes. This is because of how `-c` works. ```bash ... cli spawn
+  --new-window zsh -l -c "bkmr search --fzf" ```
+</Callout>
 
 ### yabai
 
-yabai is built by the same developer and brings tiling window management to MacOS
-(the other major contender being [Amethyst](https://github.com/ianyh/Amethyst). With
-yabai we can also define rules for window management, which is how we'll manage to
-get a new terminal instance running gopass to appear as a floating window in the center
-of the screen without altering the layout of our currently tiled windows.
+yabai is built by the same developer and brings tiling window management to
+MacOS (the other major contender being
+[Amethyst](https://github.com/ianyh/Amethyst). With yabai we can also define
+rules for window management, which is how we'll manage to get a new terminal
+instance running gopass to appear as a floating window in the center of the
+screen without altering the layout of our currently tiled windows.
 
-
-Currently, the spawned terminal will be tiled as per the default rules of yabai. But it's nicer to have it pop
-up in the center of the screen (i.e. like a launcher would). To do this we define a [rule](https://github.com/koekeishiya/yabai/blob/master/doc/yabai.asciidoc#rule).
+Currently, the spawned terminal will be tiled as per the default rules of yabai.
+But it's nicer to have it pop up in the center of the screen (i.e. like a
+launcher would). To do this we define a
+[rule](https://github.com/koekeishiya/yabai/blob/master/doc/yabai.asciidoc#rule).
 
 In `~/.config/yabai/yabairc`:
 
@@ -86,31 +97,40 @@ In `~/.config/yabai/yabairc`:
 yabai -m rule --add app="^WezTerm$" title="^gopass$" manage=off grid=3:3:1:1:1:1
 
 ```
-This informs yabai that when it encounters a window from WezTerm with the window title "gopass", that it should
-_not_ manage it (meaning don't apply tiling rules) - however, we then apply our _own_ tiling rules. The combination
-of these two ideas (don't auto tile, but apply our own tiling) effectively means we can place a floating window
-where we please.
 
-It is therefore important you take note of how your terminal emulator titles your windows. Typically, the default
-is to name it either as the current working directory, or the running process.
+This informs yabai that when it encounters a window from WezTerm with the window
+title "gopass", that it should _not_ manage it (meaning don't apply tiling
+rules) - however, we then apply our _own_ tiling rules. The combination of these
+two ideas (don't auto tile, but apply our own tiling) effectively means we can
+place a floating window where we please.
 
-The `grid` sytax is as follows: `grid=<rows>:<cols>:<start-x>:<start-y>:<width>:<height>`
+It is therefore important you take note of how your terminal emulator titles
+your windows. Typically, the default is to name it either as the current working
+directory, or the running process.
+
+The `grid` sytax is as follows:
+`grid=<rows>:<cols>:<start-x>:<start-y>:<width>:<height>`
 
 Broken down further:
 
-- `<rows>:<cols>` is how many divisions make up your custom grid. e.g. `3:3` gives you space for 9 windows.
-- `<start-x>:<start-y>` is which tile on the x axis and which on the y should the window be placed.
+- `<rows>:<cols>` is how many divisions make up your custom grid. e.g. `3:3`
+  gives you space for 9 windows.
+- `<start-x>:<start-y>` is which tile on the x axis and which on the y should
+  the window be placed.
 - `<width>:<height>` defines how many tiles the window should span in x and y.
 
 <Callout type="note">
-The above dot points are as best I understand from the documentation. However, as you see from the screenshot below, 
-the columns / rows are not evenly sized. So I'm not sure exactly what detail I'm missing there... But, it works...
+  The above dot points are as best I understand from the documentation. However,
+  as you see from the screenshot below, the columns / rows are not evenly sized.
+  So I'm not sure exactly what detail I'm missing there... But, it works...
 </Callout>
 
-Now when we execute the keybind, we get a floating window in the center which runs gopass.
+Now when we execute the keybind, we get a floating window in the center which
+runs gopass.
 
 <p>
-<Image src={center_float} alt="floating terminal window placed in center of screen" />
+  <Image
+    src={center_float}
+    alt="floating terminal window placed in center of screen"
+  />
 </p>
-
-

@@ -1,23 +1,25 @@
 ---
 title: Display link outlines only when tabbing
-description: Maintain accessibility for keyboard users during link navigation, while also removing unnecessary visual feedback for mouse users.
+description:
+  Maintain accessibility for keyboard users during link navigation, while also
+  removing unnecessary visual feedback for mouse users.
 pubDate: 2024-01-12T15:00:24Z
 author: tjex
-tags: ['frontend']
+tags: ["frontend"]
 license: mit
 draft: false
 ---
 
+You may know the
+[`:focus` psudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus),
+which is applied when a user focusses on whichever element you've extended with
+`:focus`. It's commonly used with links, where an outline is drawn around the
+focussed link with `outline: <style>` and is a very important usability feature
+for people who navigate webpages other than with a mouse.
 
-You may know the [`:focus` psudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus), which is
-applied when a user focusses on whichever element you've extended with
-`:focus`. It's commonly used with links, where an outline is drawn around the focussed
-link with `outline: <style>` and is a very important usability
-feature for people who navigate webpages other than with a mouse.
-
-However, when clicking on a link via the mouse, the same display changes
-applied under `:focus` will flash. This is not so pleasing, and is unnecessary.
-If a mouse is being used to click on the link, we don't need to see elements of
+However, when clicking on a link via the mouse, the same display changes applied
+under `:focus` will flash. This is not so pleasing, and is unnecessary. If a
+mouse is being used to click on the link, we don't need to see elements of
 `:focus`.
 
 For example, the following will display a dashed outline around a link as well
@@ -26,28 +28,29 @@ flash on click.
 
 ```css
 a:focus {
-    background-color: var(--focus-color);
-    outline: dashed;
-    outline-width: 2px;
-    outline-offset: 4px;
+  background-color: var(--focus-color);
+  outline: dashed;
+  outline-width: 2px;
+  outline-offset: 4px;
 }
-
 ```
 
-But since 2022 the [`:focus-visible` css psudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible) is supported as standard.
+But since 2022 the
+[`:focus-visible` css psudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible)
+is supported as standard.
 
 > This selector is useful to provide a different focus indicator based on the
-> user's input modality (mouse vs. keyboard) ~ [mdn docs](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible)
+> user's input modality (mouse vs. keyboard) ~
+> [mdn docs](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible)
 
-This means that our page can stay accessible for those who need or want it, while
-mouse users don't need to see flashes of UI on each click.
+This means that our page can stay accessible for those who need or want it,
+while mouse users don't need to see flashes of UI on each click.
 
 ```css
 a:focus-visible {
-    background-color: var(--focus-color);
-    outline: dashed;
-    outline-width: 2px;
-    outline-offset: 4px;
+  background-color: var(--focus-color);
+  outline: dashed;
+  outline-width: 2px;
+  outline-offset: 4px;
 }
-
 ```

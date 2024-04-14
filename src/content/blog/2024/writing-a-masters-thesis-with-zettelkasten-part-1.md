@@ -1,6 +1,8 @@
 ---
 title: Writing a masters thesis with Zettelkasten - Part 1
-description: "How can we use Zettelkasten effectively, given a large and time sensitive writing and research task such as a thesis or Ph.D?"
+description:
+  "How can we use Zettelkasten effectively, given a large and time sensitive
+  writing and research task such as a thesis or Ph.D?"
 pubDate: 2024-03-19T11:57:30Z
 author: tjex
 tags: ["learning"]
@@ -18,26 +20,28 @@ such, is a very exciting endeavour for me and my Zettelkasten. Naturally there
 will be a lot of reading, thinking and writing to do, and it would be a crying
 shame for that thinking and writing to not end up in my Zettelkasten as notes.
 
-Up until now I haven't had to use my Zettelkasten for a large piece of
-writing. The largest so far being my [essay on open source and social
-catastrophe](../2023/floss-a-partial-antidote-to-social-catastrophe), but I only
-used my Zettelkasten to review relevant literature notes and write a few new
-ones.
+Up until now I haven't had to use my Zettelkasten for a large piece of writing.
+The largest so far being my
+[essay on open source and social catastrophe](../2023/floss-a-partial-antidote-to-social-catastrophe),
+but I only used my Zettelkasten to review relevant literature notes and write a
+few new ones.
 
 For my masters thesis, I'm exploring what is effectively uncharted territory for
 me. Additionally, the thinking will need to go much deeper than the essay
 required.
 
 So how can we use Zettelkasten effectively, given a large and time sensitive
-writing and research task such as a thesis or Ph.D? There are a few
-documented experiences of this process, such as [here](https://zettelkasten.de/posts/field-report-4-what-i-learned-writing-thesis-with-zettelkasten/) and [here](https://www.youtube.com/watch?v=L9SLlxaEEXY), which I've taken some cues from.
+writing and research task such as a thesis or Ph.D? There are a few documented
+experiences of this process, such as
+[here](https://zettelkasten.de/posts/field-report-4-what-i-learned-writing-thesis-with-zettelkasten/)
+and [here](https://www.youtube.com/watch?v=L9SLlxaEEXY), which I've taken some
+cues from.
 
 The biggest fear for me is the question we all dealt with when trying to first
 understand Zettelkasten; how do we find a specific note again? I will be reading
 and writing notes on a lot of new content. The process and timeline will be very
 focussed and tight, I therefore would benefit from having my notes at hand all
-the time. Chasing after lost notes would be frustrating and time
-consuming.
+the time. Chasing after lost notes would be frustrating and time consuming.
 
 Indeed, Zettelkasten isn't designed to be a reliable search and recall system,
 it's designed to be an environment where we stumble upon previous ideas in
@@ -66,10 +70,11 @@ questions to be addressed. I realised this would make for an excellent
 Many of the sections and sub-sections had questions that were to be addressed
 within them. These questions immediately become question notes. The question
 notes are then filled with outbound links to position and ultimately argument
-notes. This process of question, position, argument documentation is
-a mixture of [the IBIS
-method](https://papers.cumincad.org/data/works/att/ca71.content.pdf), the [Three
-Layers of Evidence principle](https://zettelkasten.de/posts/layers-of-evidence/)
+notes. This process of question, position, argument documentation is a mixture
+of
+[the IBIS method](https://papers.cumincad.org/data/works/att/ca71.content.pdf),
+the
+[Three Layers of Evidence principle](https://zettelkasten.de/posts/layers-of-evidence/)
 and what's referred to as
 [QCE](https://oasislab.pubpub.org/pub/54t0y9mk/release/3) (although I have no
 idea where that acronym comes from).
@@ -106,8 +111,7 @@ Investigating these research questions:
 
 ### 2.1 Creative Ideation or Knowledge Generation?
 
-- [Is there a distinction between creative ideation and knowledge
-  generation?](../../4w2l)
+- [Is there a distinction between creative ideation and knowledge generation?](../../4w2l)
 
 ... more questions / links to notes
 
@@ -120,8 +124,8 @@ etc
 
 ### Diary
 
-As well as this, [I keep a daily diary within my
-Zettelkasten](https://tjex.net/blog/2024/zettelkasten-grid-system-organisation/#d-for-diaries)
+As well as this,
+[I keep a daily diary within my Zettelkasten](https://tjex.net/blog/2024/zettelkasten-grid-system-organisation/#d-for-diaries)
 where I can write freely about particular project or _Zettelkasten related work_
 at hand. It's _not_ a diary of my personal life, etc.
 
@@ -130,13 +134,13 @@ Here is an example of a daily note's content related to my thesis:
 ```markdown
 # 2024-03-18
 
-Addressing the question [what connections are there between the Zettelkasten
-system, creative ideation and network graphs?](../../it61). Trying to think
-about how zk and graphs are complex systems, and how creative ideation is the
-result of those systems. How does that happen? That [consciousness occurs when
-colonies of cells are large enough in number and connections](../../k8pg) is an
-interesting angle, but in the case of zk, the notes aren't 'interacting' with
-themselves per se. Rather, it is the interaction within the mind, of the
+Addressing the question
+[what connections are there between the Zettelkasten system, creative ideation and network graphs?](../../it61).
+Trying to think about how zk and graphs are complex systems, and how creative
+ideation is the result of those systems. How does that happen? That
+[consciousness occurs when colonies of cells are large enough in number and connections](../../k8pg)
+is an interesting angle, but in the case of zk, the notes aren't 'interacting'
+with themselves per se. Rather, it is the interaction within the mind, of the
 information they hold, that somehow comes together to create an idea.
 
 Idea's are generated from borrowing parts of pre-existing information.
@@ -144,10 +148,11 @@ Idea's are generated from borrowing parts of pre-existing information.
 
 ### Tags
 
-As per [my approach to tagging](https://tjex.net/blog/2024/zettelkasten-grid-system-organisation/#structure-tags)
-I will tag all notes that are deemed strongly related to my thesis with `#p/thesis`
-('p' for project). This is partly a crutch to help find a lost note, but is
-particularly useful given my Zettelkasten program of choice,
+As per
+[my approach to tagging](https://tjex.net/blog/2024/zettelkasten-grid-system-organisation/#structure-tags)
+I will tag all notes that are deemed strongly related to my thesis with
+`#p/thesis` ('p' for project). This is partly a crutch to help find a lost note,
+but is particularly useful given my Zettelkasten program of choice,
 [zk](https://github.com/zk-org/zk), has many powerful features via the command
 line. Having all my thesis notes filterable by tag, means that I can batch
 process them in all ways imaginable from the command line (eg, archival, ML
@@ -157,11 +162,11 @@ input, etc).
 
 In summary, I have this process and setup:
 
-1. An established thesis structure outline, which acts as an [index
-   note](https://zettelkasten.de/introduction/#structure-notes) where I can
-   insert and create links to notes under section headings. This is similar to
-   filing notes into folders, just much less rigid. One link can be placed under
-   multiple headings too.
+1. An established thesis structure outline, which acts as an
+   [index note](https://zettelkasten.de/introduction/#structure-notes) where I
+   can insert and create links to notes under section headings. This is similar
+   to filing notes into folders, just much less rigid. One link can be placed
+   under multiple headings too.
 2. A daily diary where I can write free form thoughts while linking notes that
    I'm referring to. This keeps track of my half formed ideas if I can't manage
    to write a proper note about them, or if the thoughts are too abstract and

@@ -30,9 +30,9 @@
   --modal-overlay-backdrop-filter: blur(0.25rem);
 }
 
-[data-theme=light],
-:root:not([data-theme=dark]) {
-  --background-color: #D6DAE2;
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --background-color: #d6dae2;
   --color: #000;
   --heading-color: #000;
   --h1-color: hsl(205, 30%, 15%);
@@ -47,7 +47,7 @@
   --primary-muted: hsl(195, 80%, 60%);
   --primary-hover: hsl(195, 60%, 30%);
   --primary-focus: rgba(23, 103, 130, 0.125);
-  --primary-inverse: #D6DAE2;
+  --primary-inverse: #d6dae2;
   --secondary: hsl(205, 10%, 50%);
   --secondary-hover: #aab9c3;
   --secondary-focus: rgba(89, 107, 120, 0.125);
@@ -58,7 +58,7 @@
   --contrast: hsl(205, 30%, 15%);
   --contrast-hover: #000;
   --contrast-focus: rgba(89, 107, 120, 0.125);
-  --contrast-inverse: #D6DAE2;
+  --contrast-inverse: #d6dae2;
   --selection-background-color: var(--primary);
   --selection-color: var(--contrast-inverse);
   --ins-color: hsl(125, 70%, 22%);
@@ -113,8 +113,7 @@
   --accordion-open-summary-color: var(--muted-color);
   --card-background-color: var(--background-color);
   --card-border-color: var(--muted-border-color);
-  --card-box-shadow:
-    0.0145rem 0.029rem 0.174rem rgba(27, 40, 50, 0.01698),
+  --card-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(27, 40, 50, 0.01698),
     0.0335rem 0.067rem 0.402rem rgba(27, 40, 50, 0.024),
     0.0625rem 0.125rem 0.75rem rgba(27, 40, 50, 0.03),
     0.1125rem 0.225rem 1.35rem rgba(27, 40, 50, 0.036),
@@ -170,16 +169,16 @@
     --primary-muted: hsl(0, 75%, 13%);
     --primary-hover: hsl(0, 60%, 30%);
     --primary-focus: rgba(88, 19, 19, 0.25);
-    --primary-inverse: #D6DAE2;
+    --primary-inverse: #d6dae2;
     --secondary: #826f66;
     --secondary-hover: #6d584e;
     --secondary-focus: rgba(140, 123, 115, 0.25);
-    --secondary-inverse: #D6DAE2;
+    --secondary-inverse: #d6dae2;
     --link-decoration-color: hsl(20, 10%, 50%);
     --link-visited: hsl(315, 64%, 65%);
     --link-visited-hover: #b072a1;
     --contrast: hsl(20, 20%, 70%);
-    --contrast-hover: #D6DAE2;
+    --contrast-hover: #d6dae2;
     --contrast-focus: rgba(140, 123, 115, 0.25);
     --contrast-inverse: #000;
     --selection-background-color: var(--primary);
@@ -200,7 +199,9 @@
     --form-element-border-color: #564137;
     --form-element-color: var(--color);
     --form-element-placeholder-color: var(--muted-color);
-    --form-element-active-background-color: var(--form-element-background-color);
+    --form-element-active-background-color: var(
+      --form-element-background-color
+    );
     --form-element-active-border-color: var(--primary);
     --form-element-focus-color: var(--primary-focus);
     --form-element-disabled-background-color: hsl(20, 25%, 23%);
@@ -237,14 +238,12 @@
     --accordion-open-summary-color: var(--muted-color);
     --card-background-color: #261a14;
     --card-border-color: var(--card-background-color);
-    --card-box-shadow:
-      0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.01698),
+    --card-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.01698),
       0.0335rem 0.067rem 0.402rem rgba(0, 0, 0, 0.024),
       0.0625rem 0.125rem 0.75rem rgba(0, 0, 0, 0.03),
       0.1125rem 0.225rem 1.35rem rgba(0, 0, 0, 0.036),
       0.2085rem 0.417rem 2.502rem rgba(0, 0, 0, 0.04302),
-      0.5rem 1rem 6rem rgba(0, 0, 0, 0.06),
-      0 0 0 0.0625rem rgba(0, 0, 0, 0.015);
+      0.5rem 1rem 6rem rgba(0, 0, 0, 0.06), 0 0 0 0.0625rem rgba(0, 0, 0, 0.015);
     --card-sectionning-background-color: #2c1e18;
     --dropdown-background-color: hsl(20, 30%, 15%);
     --dropdown-border-color: #3e2c24;
@@ -277,7 +276,7 @@
     color-scheme: dark;
   }
 }
-[data-theme=dark] {
+[data-theme="dark"] {
   --background-color: #0f0b09;
   --color: hsl(20, 12%, 59%);
   --heading-color: hsl(0, 30%, 54%);
@@ -293,16 +292,16 @@
   --primary-muted: hsl(0, 75%, 13%);
   --primary-hover: hsl(0, 60%, 30%);
   --primary-focus: rgba(88, 19, 19, 0.25);
-  --primary-inverse: #D6DAE2;
+  --primary-inverse: #d6dae2;
   --secondary: #826f66;
   --secondary-hover: #6d584e;
   --secondary-focus: rgba(140, 123, 115, 0.25);
-  --secondary-inverse: #D6DAE2;
+  --secondary-inverse: #d6dae2;
   --link-decoration-color: hsl(20, 10%, 50%);
   --link-visited: hsl(315, 64%, 65%);
   --link-visited-hover: #b072a1;
   --contrast: hsl(20, 20%, 70%);
-  --contrast-hover: #D6DAE2;
+  --contrast-hover: #d6dae2;
   --contrast-focus: rgba(140, 123, 115, 0.25);
   --contrast-inverse: #000;
   --selection-background-color: var(--primary);
@@ -360,14 +359,12 @@
   --accordion-open-summary-color: var(--muted-color);
   --card-background-color: #261a14;
   --card-border-color: var(--card-background-color);
-  --card-box-shadow:
-    0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.01698),
+  --card-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.01698),
     0.0335rem 0.067rem 0.402rem rgba(0, 0, 0, 0.024),
     0.0625rem 0.125rem 0.75rem rgba(0, 0, 0, 0.03),
     0.1125rem 0.225rem 1.35rem rgba(0, 0, 0, 0.036),
     0.2085rem 0.417rem 2.502rem rgba(0, 0, 0, 0.04302),
-    0.5rem 1rem 6rem rgba(0, 0, 0, 0.06),
-    0 0 0 0.0625rem rgba(0, 0, 0, 0.015);
+    0.5rem 1rem 6rem rgba(0, 0, 0, 0.06), 0 0 0 0.0625rem rgba(0, 0, 0, 0.015);
   --card-sectionning-background-color: #2c1e18;
   --dropdown-background-color: hsl(20, 30%, 15%);
   --dropdown-border-color: #3e2c24;
@@ -401,9 +398,9 @@
 }
 
 progress,
-[type=checkbox],
-[type=radio],
-[type=range] {
+[type="checkbox"],
+[type="radio"],
+[type="range"] {
   accent-color: var(--primary);
 }
 
@@ -783,7 +780,10 @@ dialog > article {
 /**
  * Callouts
  */
-.callout, .callout-danger, .callout-warning, .callout-note {
+.callout,
+.callout-danger,
+.callout-warning,
+.callout-note {
   display: block;
   border: solid;
   border-width: var(--border-width);
@@ -793,7 +793,10 @@ dialog > article {
   color: var(--color);
 }
 
-.callout-title, .callout-danger-title, .callout-warning-title, .callout-note-title {
+.callout-title,
+.callout-danger-title,
+.callout-warning-title,
+.callout-note-title {
   display: flex;
   align-items: center;
   padding-left: var(--spacing);
@@ -878,29 +881,31 @@ nav ul:last-of-type {
 nav li {
   display: inline-block;
   margin: 0;
-  padding: var(--nav-element-spacing-vertical) var(--nav-element-spacing-horizontal);
+  padding: var(--nav-element-spacing-vertical)
+    var(--nav-element-spacing-horizontal);
 }
 nav li > * {
   --spacing: 0;
 }
-nav :where(a, [role=link]) {
+nav :where(a, [role="link"]) {
   display: inline-block;
-  margin: calc(var(--nav-link-spacing-vertical) * -1) calc(var(--nav-link-spacing-horizontal) * -1);
+  margin: calc(var(--nav-link-spacing-vertical) * -1)
+    calc(var(--nav-link-spacing-horizontal) * -1);
   padding: var(--nav-link-spacing-vertical) var(--nav-link-spacing-horizontal);
   border-radius: var(--border-radius);
   text-decoration: none;
 }
-nav :where(a, [role=link]):is([aria-current], :hover, :active, :focus) {
+nav :where(a, [role="link"]):is([aria-current], :hover, :active, :focus) {
   text-decoration: none;
 }
-nav[aria-label=breadcrumb] {
+nav[aria-label="breadcrumb"] {
   align-items: center;
   justify-content: start;
 }
-nav[aria-label=breadcrumb] ul li:not(:first-child) {
+nav[aria-label="breadcrumb"] ul li:not(:first-child) {
   margin-inline-start: var(--nav-link-spacing-horizontal);
 }
-nav[aria-label=breadcrumb] ul li:not(:last-child) ::after {
+nav[aria-label="breadcrumb"] ul li:not(:last-child) ::after {
   position: absolute;
   width: calc(var(--nav-link-spacing-horizontal) * 2);
   margin-inline-start: calc(var(--nav-link-spacing-horizontal) / 2);
@@ -908,13 +913,13 @@ nav[aria-label=breadcrumb] ul li:not(:last-child) ::after {
   color: var(--muted-color);
   text-align: center;
 }
-nav[aria-label=breadcrumb] a[aria-current] {
+nav[aria-label="breadcrumb"] a[aria-current] {
   background-color: transparent;
   color: inherit;
   text-decoration: none;
   pointer-events: none;
 }
-nav [role=button] {
+nav [role="button"] {
   margin-right: inherit;
   margin-left: inherit;
   padding: var(--nav-link-spacing-vertical) var(--nav-link-spacing-horizontal);
@@ -927,16 +932,17 @@ aside li {
   display: block;
 }
 aside li {
-  padding: calc(var(--nav-element-spacing-vertical) * 0.5) var(--nav-element-spacing-horizontal);
+  padding: calc(var(--nav-element-spacing-vertical) * 0.5)
+    var(--nav-element-spacing-horizontal);
 }
 aside li a {
   display: block;
 }
-aside li [role=button] {
+aside li [role="button"] {
   margin: inherit;
 }
 
-[dir=rtl] nav[aria-label=breadcrumb] ul li:not(:last-child) ::after {
+[dir="rtl"] nav[aria-label="breadcrumb"] ul li:not(:last-child) ::after {
   content: "\\";
 }
 
@@ -944,7 +950,21 @@ aside li [role=button] {
  * Typography
  */
 :root {
-  font-family: system-ui, -apple-system, "Segoe UI", "Helvetica", "Roboto", "Ubuntu", "Cantarell", "Oxygen-Sans", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    "Helvetica",
+    "Roboto",
+    "Ubuntu",
+    "Cantarell",
+    "Oxygen-Sans",
+    "Noto Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
   line-height: 1.6;
   font-weight: 400;
   font-size: 1.2rem;
@@ -1028,7 +1048,7 @@ li {
 }
 
 a,
-[role=link] {
+[role="link"] {
   --color: var(--color);
   --background-color: transparent;
   --text-decoration: underline;
@@ -1041,50 +1061,54 @@ a,
   text-underline-position: var(--text-underline-position);
   text-decoration-color: var(--text-decoration-color);
   outline: none;
-  transition: background-color var(--transition), color var(--link-visited-hover), text-decoration var(--transition), box-shadow var(--transition);
+  transition:
+    background-color var(--transition),
+    color var(--link-visited-hover),
+    text-decoration var(--transition),
+    box-shadow var(--transition);
 }
 a:is([aria-current], :hover, :active, :focus),
-[role=link]:is([aria-current], :hover, :active, :focus) {
+[role="link"]:is([aria-current], :hover, :active, :focus) {
   --color: var(--primary);
   --text-decoration: underline;
   --text-decoration-color: var(--primary);
 }
 a:focus-visible,
-[role=link]:focus-visible {
+[role="link"]:focus-visible {
   background-color: var(--primary-focus);
   outline: dashed;
   outline-width: 2px;
   outline-offset: 4px;
 }
 a.secondary,
-[role=link].secondary {
+[role="link"].secondary {
   --color: var(--secondary);
 }
 a.secondary:is([aria-current], :hover, :active, :focus),
-[role=link].secondary:is([aria-current], :hover, :active, :focus) {
+[role="link"].secondary:is([aria-current], :hover, :active, :focus) {
   --color: var(--secondary-hover);
   --text-decoration: underline;
   --text-decoration-color: var(--primary-hover);
 }
 a.secondary:focus,
-[role=link].secondary:focus {
+[role="link"].secondary:focus {
   --background-color: var(--secondary-focus);
   outline: dashed;
   outline-width: 2px;
   outline-offset: 4px;
 }
 a.contrast,
-[role=link].contrast {
+[role="link"].contrast {
   --color: var(--contrast);
 }
 a.contrast:is([aria-current], :hover, :active, :focus),
-[role=link].contrast:is([aria-current], :hover, :active, :focus) {
+[role="link"].contrast:is([aria-current], :hover, :active, :focus) {
   --color: var(--contrast-hover);
   --text-decoration: underline;
   --text-decoration-color: var(--primary-hover);
 }
 a.contrast:focus,
-[role=link].contrast:focus {
+[role="link"].contrast:focus {
   --background-color: var(--contrast-focus);
   outline: dashed;
   outline-width: 2px;
@@ -1093,7 +1117,8 @@ a.contrast:focus,
 
 /* outgoing link icon for outgoing links (surpirse) */
 article a[href^=http]::after,
-article a[href^="https://"]::after {
+article a[href^="https://"]::after
+{
   content: "";
   width: 14px;
   height: 14px;
@@ -1165,7 +1190,8 @@ h6 {
   font-style: italic;
 }
 
-:where(address, blockquote, dl, figure, form, ol, p, pre, table, ul) ~ :is(h1, h2, h3, h4, h5, h6) {
+:where(address, blockquote, dl, figure, form, ol, p, pre, table, ul)
+  ~ :is(h1, h2, h3, h4, h5, h6) {
   margin-top: var(--typography-spacing-vertical);
 }
 
@@ -1318,9 +1344,9 @@ button {
 }
 
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -1330,21 +1356,22 @@ button {
   margin-bottom: var(--spacing);
 }
 
-[role=button] {
+[role="button"] {
   display: inline-block;
   text-decoration: none;
 }
 
 button,
-input[type=submit],
-input[type=button],
-input[type=reset],
-[role=button] {
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+[role="button"] {
   --background-color: var(--primary);
   --border-color: var(--primary);
   --color: var(--primary-inverse);
   --box-shadow: var(--button-box-shadow, 0 0 0 rgba(0, 0, 0, 0));
-  padding: var(--form-element-spacing-vertical) var(--form-element-spacing-horizontal);
+  padding: var(--form-element-spacing-vertical)
+    var(--form-element-spacing-horizontal);
   border: var(--border-width) solid var(--border-color);
   border-radius: var(--border-radius);
   outline: none;
@@ -1356,108 +1383,200 @@ input[type=reset],
   line-height: var(--line-height);
   text-align: center;
   cursor: pointer;
-  transition: background-color var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition);
+  transition:
+    background-color var(--transition),
+    border-color var(--transition),
+    color var(--transition),
+    box-shadow var(--transition);
 }
 button:is([aria-current], :hover, :active, :focus),
-input[type=submit]:is([aria-current], :hover, :active, :focus),
-input[type=button]:is([aria-current], :hover, :active, :focus),
-input[type=reset]:is([aria-current], :hover, :active, :focus),
-[role=button]:is([aria-current], :hover, :active, :focus) {
+input[type="submit"]:is([aria-current], :hover, :active, :focus),
+input[type="button"]:is([aria-current], :hover, :active, :focus),
+input[type="reset"]:is([aria-current], :hover, :active, :focus),
+[role="button"]:is([aria-current], :hover, :active, :focus) {
   --background-color: var(--primary-hover);
   --border-color: var(--primary-hover);
   --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0));
   --color: var(--primary-inverse);
 }
 button:focus,
-input[type=submit]:focus,
-input[type=button]:focus,
-input[type=reset]:focus,
-[role=button]:focus {
+input[type="submit"]:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+[role="button"]:focus {
   --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
     0 0 0 var(--outline-width) var(--primary-focus);
 }
 
-:is(button, input[type=submit], input[type=button], [role=button]).secondary,
-input[type=reset] {
+:is(
+    button,
+    input[type="submit"],
+    input[type="button"],
+    [role="button"]
+  ).secondary,
+input[type="reset"] {
   --background-color: var(--secondary);
   --border-color: var(--secondary);
   --color: var(--secondary-inverse);
   cursor: pointer;
 }
-:is(button, input[type=submit], input[type=button], [role=button]).secondary:is([aria-current], :hover, :active, :focus),
-input[type=reset]:is([aria-current], :hover, :active, :focus) {
+:is(
+    button,
+    input[type="submit"],
+    input[type="button"],
+    [role="button"]
+  ).secondary:is([aria-current], :hover, :active, :focus),
+input[type="reset"]:is([aria-current], :hover, :active, :focus) {
   --background-color: var(--secondary-hover);
   --border-color: var(--secondary-hover);
   --color: var(--secondary-inverse);
 }
-:is(button, input[type=submit], input[type=button], [role=button]).secondary:focus,
-input[type=reset]:focus {
+:is(
+    button,
+    input[type="submit"],
+    input[type="button"],
+    [role="button"]
+  ).secondary:focus,
+input[type="reset"]:focus {
   --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
     0 0 0 var(--outline-width) var(--secondary-focus);
 }
 
-:is(button, input[type=submit], input[type=button], [role=button]).contrast {
+:is(
+    button,
+    input[type="submit"],
+    input[type="button"],
+    [role="button"]
+  ).contrast {
   --background-color: var(--contrast);
   --border-color: var(--contrast);
   --color: var(--contrast-inverse);
 }
-:is(button, input[type=submit], input[type=button], [role=button]).contrast:is([aria-current], :hover, :active, :focus) {
+:is(
+    button,
+    input[type="submit"],
+    input[type="button"],
+    [role="button"]
+  ).contrast:is([aria-current], :hover, :active, :focus) {
   --background-color: var(--contrast-hover);
   --border-color: var(--contrast-hover);
   --color: var(--contrast-inverse);
 }
-:is(button, input[type=submit], input[type=button], [role=button]).contrast:focus {
+:is(
+    button,
+    input[type="submit"],
+    input[type="button"],
+    [role="button"]
+  ).contrast:focus {
   --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
     0 0 0 var(--outline-width) var(--contrast-focus);
 }
 
-:is(button, input[type=submit], input[type=button], [role=button]).outline,
-input[type=reset].outline {
+:is(
+    button,
+    input[type="submit"],
+    input[type="button"],
+    [role="button"]
+  ).outline,
+input[type="reset"].outline {
   --background-color: transparent;
   --color: var(--primary);
 }
-:is(button, input[type=submit], input[type=button], [role=button]).outline:is([aria-current], :hover, :active, :focus),
-input[type=reset].outline:is([aria-current], :hover, :active, :focus) {
+:is(
+    button,
+    input[type="submit"],
+    input[type="button"],
+    [role="button"]
+  ).outline:is([aria-current], :hover, :active, :focus),
+input[type="reset"].outline:is([aria-current], :hover, :active, :focus) {
   --background-color: transparent;
   --color: var(--primary-hover);
 }
 
-:is(button, input[type=submit], input[type=button], [role=button]).no-outline,
-input[type=reset].outline {
+:is(
+    button,
+    input[type="submit"],
+    input[type="button"],
+    [role="button"]
+  ).no-outline,
+input[type="reset"].outline {
   border: none;
   --background-color: transparent;
   --color: var(--primary);
 }
-:is(button, input[type=submit], input[type=button], [role=button]).no-outline:is([aria-current], :hover, :active, :focus),
-input[type=reset].outline:is([aria-current], :hover, :active, :focus) {
+:is(
+    button,
+    input[type="submit"],
+    input[type="button"],
+    [role="button"]
+  ).no-outline:is([aria-current], :hover, :active, :focus),
+input[type="reset"].outline:is([aria-current], :hover, :active, :focus) {
   border: none;
   --background-color: transparent;
   --color: var(--primary-hover);
 }
-:is(button, input[type=submit], input[type=button], [role=button]).no-outline:focus,
-input[type=reset].outline:focus {
+:is(
+    button,
+    input[type="submit"],
+    input[type="button"],
+    [role="button"]
+  ).no-outline:focus,
+input[type="reset"].outline:focus {
   --box-shadow: none;
 }
 
-:is(button, input[type=submit], input[type=button], [role=button]).outline.secondary,
-input[type=reset].outline {
+:is(
+    button,
+    input[type="submit"],
+    input[type="button"],
+    [role="button"]
+  ).outline.secondary,
+input[type="reset"].outline {
   --color: var(--secondary);
 }
-:is(button, input[type=submit], input[type=button], [role=button]).outline.secondary:is([aria-current], :hover, :active, :focus),
-input[type=reset].outline:is([aria-current], :hover, :active, :focus) {
+:is(
+    button,
+    input[type="submit"],
+    input[type="button"],
+    [role="button"]
+  ).outline.secondary:is([aria-current], :hover, :active, :focus),
+input[type="reset"].outline:is([aria-current], :hover, :active, :focus) {
   --color: var(--secondary-hover);
 }
 
-:is(button, input[type=submit], input[type=button], [role=button]).outline.contrast {
+:is(
+    button,
+    input[type="submit"],
+    input[type="button"],
+    [role="button"]
+  ).outline.contrast {
   --color: var(--contrast);
 }
-:is(button, input[type=submit], input[type=button], [role=button]).outline.contrast:is([aria-current], :hover, :active, :focus) {
+:is(
+    button,
+    input[type="submit"],
+    input[type="button"],
+    [role="button"]
+  ).outline.contrast:is([aria-current], :hover, :active, :focus) {
   --color: var(--contrast-hover);
 }
 
-:where(button, [type=submit], [type=button], [type=reset], [role=button])[disabled],
-:where(fieldset[disabled]) :is(button, [type=submit], [type=button], [type=reset], [role=button]),
-a[role=button]:not([href]) {
+:where(
+    button,
+    [type="submit"],
+    [type="button"],
+    [type="reset"],
+    [role="button"]
+  )[disabled],
+:where(fieldset[disabled])
+  :is(
+    button,
+    [type="submit"],
+    [type="button"],
+    [type="reset"],
+    [role="button"]
+  ),
+a[role="button"]:not([href]) {
   opacity: 0.5;
   pointer-events: none;
 }
@@ -1494,7 +1613,7 @@ tfoot td {
   --font-size: 0.875em;
 }
 
-table[role=grid] tbody tr:nth-child(odd) {
+table[role="grid"] tbody tr:nth-child(odd) {
   background-color: var(--table-row-stripped-background-color);
 }
 
@@ -1538,7 +1657,9 @@ code,
 kbd,
 samp {
   font-size: var(--font-small);
-  font-family: "Fira Code", "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Fira Code", "Menlo", "Consolas", "Roboto Mono",
+    "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 pre {
@@ -1606,16 +1727,16 @@ kbd {
   cursor: pointer;
 }
 
-[aria-disabled=true],
+[aria-disabled="true"],
 [disabled] {
   cursor: not-allowed;
 }
 
-[aria-hidden=false][hidden] {
+[aria-hidden="false"][hidden] {
   display: initial;
 }
 
-[aria-hidden=false][hidden]:not(:focus) {
+[aria-hidden="false"][hidden]:not(:focus) {
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }
@@ -1632,7 +1753,7 @@ textarea,
   -ms-touch-action: manipulation;
 }
 
-[dir=rtl] {
+[dir="rtl"] {
   direction: rtl;
 }
 
@@ -1640,9 +1761,9 @@ textarea,
 * Reduce Motion Features
 */
 @media (prefers-reduced-motion: reduce) {
-  *:not([aria-busy=true]),
-  :not([aria-busy=true])::before,
-  :not([aria-busy=true])::after {
+  *:not([aria-busy="true"]),
+  :not([aria-busy="true"])::before,
+  :not([aria-busy="true"])::after {
     background-attachment: initial !important;
     animation-duration: 1ms !important;
     animation-delay: -1ms !important;

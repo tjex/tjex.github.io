@@ -1,23 +1,27 @@
 ---
 title: Using formatter.nvim and lsp format together
-description: Define which filetypes should be formatted using formatter.nvim, and format the rest with lsp.
+description:
+  Define which filetypes should be formatted using formatter.nvim, and format
+  the rest with lsp.
 pubDate: 2023-11-11T18:42:17Z
 author: tjex
-tags: ['neovim']
+tags: ["neovim"]
 license: mit
-progVersions: ['neovim: 0.9', 'formatter.nvim: commit 34dcdfa']
+progVersions: ["neovim: 0.9", "formatter.nvim: commit 34dcdfa"]
 draft: false
 ---
 
-For most filetypes, I prefer to use formatters provided by [formatter.nvim](https://github.com/mhartington/formatter.nvim).
-But there are some exceptions, for which I would use lsp format.
+For most filetypes, I prefer to use formatters provided by
+[formatter.nvim](https://github.com/mhartington/formatter.nvim). But there are
+some exceptions, for which I would use lsp format.
 
 To avoid having to manually decide and execute formatter.nvim or lsp format, we
 can define the decision logic within our formatter.nvim config and assign it to
 a singluar keybind.
 
-This allows us to simply hit our keybind for formatting, and based on our predefined logic, the file will either
-be formatted with formatter.nvim or lsp format.
+This allows us to simply hit our keybind for formatting, and based on our
+predefined logic, the file will either be formatted with formatter.nvim or lsp
+format.
 
 A basic config for formatter.nvim looks like this:
 
@@ -43,10 +47,12 @@ require("formatter").setup({
 
 ```
 
-The special `"*"` filetype, will be run on every call to `:Format` (the command that runs formatter.nvim).
+The special `"*"` filetype, will be run on every call to `:Format` (the command
+that runs formatter.nvim).
 
-We can therefore define a function within `["*"]` which checks whether we have assigned a formatter to a filetype in
-formatter.nvim, and if we haven't, to execute `vim.lsp.buf.format()` instead.
+We can therefore define a function within `["*"]` which checks whether we have
+assigned a formatter to a filetype in formatter.nvim, and if we haven't, to
+execute `vim.lsp.buf.format()` instead.
 
 ```lua
 -- ...
@@ -111,12 +117,13 @@ require("formatter").setup({
 
 ```
 
-With this setup, if we run `:Format` on a lua file, we will format with formatter.nvim using stylua. 
-If we wanted instead to format our lua files with `lua-language-server` (a lsp for lua), we can simply 
-remove the config for lua filetypes:
+With this setup, if we run `:Format` on a lua file, we will format with
+formatter.nvim using stylua. If we wanted instead to format our lua files with
+`lua-language-server` (a lsp for lua), we can simply remove the config for lua
+filetypes:
 
 ```lua
--- ... 
+-- ...
 	filetype = {
 		-- lua = {
 		-- 	require("formatter.filetypes.lua").stylua,
@@ -130,4 +137,5 @@ remove the config for lua filetypes:
 
 ```
 
-For more context you can check the solution source [here in Github issues](https://github.com/mhartington/formatter.nvim/issues/192#issuecomment-1755651346).
+For more context you can check the solution source
+[here in Github issues](https://github.com/mhartington/formatter.nvim/issues/192#issuecomment-1755651346).

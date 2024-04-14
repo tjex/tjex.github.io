@@ -1,6 +1,8 @@
 ---
 title: Installing Wezterm on a Raspberry Pi / Linux server
-description: Wezterm has an inbuilt multiplexer, which is very useful for working via SSH on remote machines such as a Raspberry PI.
+description:
+  Wezterm has an inbuilt multiplexer, which is very useful for working via SSH
+  on remote machines such as a Raspberry PI.
 pubDate: 2023-12-11T16:40:45Z
 author: tjex
 tags: ["raspbery-pi", "shell"]
@@ -11,48 +13,58 @@ draft: false
 
 import Callout from "../../components/ui/Callout.astro";
 
-[Wezterm](https://wezfurlong.org/wezterm/) is awesome. It's incredibly feature rich and offers a
-very low level of access for configuration compared to many terminal emulators. Wez is also a very
-kind, easy going and patient maintainer. So it just feels good to be using and supporting his work.
-It's also cross platform, meaning a) if I ever do need to work on another OS, my terminal won't feel
-foreign to me and b) the inbuilt multiplexer is of huge advantage when working remotely on other
-machines.
+[Wezterm](https://wezfurlong.org/wezterm/) is awesome. It's incredibly feature
+rich and offers a very low level of access for configuration compared to many
+terminal emulators. Wez is also a very kind, easy going and patient maintainer.
+So it just feels good to be using and supporting his work. It's also cross
+platform, meaning a) if I ever do need to work on another OS, my terminal won't
+feel foreign to me and b) the inbuilt multiplexer is of huge advantage when
+working remotely on other machines.
 
-I used to use [tmux](https://github.com/tmux/tmux/wiki), but having a multiplexer built directly into the terminal offers
-excellent configurability (also because Wezterm boasts this as it is) and of course seamless
-integration by default. It's also very stable. I'm yet to
-encounter any bugs on the multiplexer side of Wezterm.
+I used to use [tmux](https://github.com/tmux/tmux/wiki), but having a
+multiplexer built directly into the terminal offers excellent configurability
+(also because Wezterm boasts this as it is) and of course seamless integration
+by default. It's also very stable. I'm yet to encounter any bugs on the
+multiplexer side of Wezterm.
 
-Following are the steps to install Wezterm on a Raspberry Pi and to setup your local
-Wezterm config to allow multiplexing on the Raspberry via SSH. The steps should remain the same for any Debian/Ubuntu 
-based distro at the very least.
+Following are the steps to install Wezterm on a Raspberry Pi and to setup your
+local Wezterm config to allow multiplexing on the Raspberry via SSH. The steps
+should remain the same for any Debian/Ubuntu based distro at the very least.
 
 ## 1. Install Wezterm on the remote machine
 
 On your remote machine first install Rust if you need to:
+
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
-For the Wezterm install itself, [the instructions on Wezterm's website](https://wezfurlong.org/wezterm/install/source.html) get you
-most of the way, but they fall short of installing the binaries in `$PATH`.
 
-The option of installing via the "smaller source tarball" did not work for me (problems with tar.gz
-uncompressing... a classic), so I went for the full git repo route.
+For the Wezterm install itself,
+[the instructions on Wezterm's website](https://wezfurlong.org/wezterm/install/source.html)
+get you most of the way, but they fall short of installing the binaries in
+`$PATH`.
 
-<Callout type={"note"} >
-The following instructions include installing the `wezterm-gui` binary. If you will only ever
-interact with your remote machine via SSH (i.e. as a server / no desktop environment), you can omit
-`wezterm-gui` from the `sudo install` call.
+The option of installing via the "smaller source tarball" did not work for me
+(problems with tar.gz uncompressing... a classic), so I went for the full git
+repo route.
+
+<Callout type={"note"}>
+  The following instructions include installing the `wezterm-gui` binary. If you
+  will only ever interact with your remote machine via SSH (i.e. as a server /
+  no desktop environment), you can omit `wezterm-gui` from the `sudo install`
+  call.
 </Callout>
 
-The `sudo install...` commands are taken from Wezterm's own [deploy
-script](https://github.com/wez/wezterm/blob/e3cd2e93d0ee5f3af7f3fe0af86ffad0cf8c7ea8/ci/deploy.sh#L209C1-L241C4)
-logic, as [recommended by Wez himself](https://github.com/wez/wezterm/discussions/2128).
+The `sudo install...` commands are taken from Wezterm's own
+[deploy script](https://github.com/wez/wezterm/blob/e3cd2e93d0ee5f3af7f3fe0af86ffad0cf8c7ea8/ci/deploy.sh#L209C1-L241C4)
+logic, as
+[recommended by Wez himself](https://github.com/wez/wezterm/discussions/2128).
 
-Contrary to the deply script above, I've changed the install path in the instructions from
-`/usr/bin` to `/usr/local/bin`, as the [general
-recommendation](https://www.baeldung.com/linux/differences-bin-sbin-usr-local#5-usrlocalbin) is to
-install programs that are *not* managed by package mangers to `/usr/local/bin`.
+Contrary to the deply script above, I've changed the install path in the
+instructions from `/usr/bin` to `/usr/local/bin`, as the
+[general recommendation](https://www.baeldung.com/linux/differences-bin-sbin-usr-local#5-usrlocalbin)
+is to install programs that are _not_ managed by package mangers to
+`/usr/local/bin`.
 
 To clone, build and install Wezterm:
 
@@ -76,12 +88,13 @@ Now `which wezterm` should return `/usr/bin/wezterm`.
 
 ## 2. Setup multiplexing over SSH
 
-[Here is the page](https://wezfurlong.org/wezterm/multiplexing.html#multiplexing) for multiplexing on the Wezterm website.
+[Here is the page](https://wezfurlong.org/wezterm/multiplexing.html#multiplexing)
+for multiplexing on the Wezterm website.
 
-You don't need to configure anything at all on the remote machine / server side. 
+You don't need to configure anything at all on the remote machine / server side.
 
-It's in your local (client) side (i.e your personal computer) where you edit your `wezterm.lua`
-config file to include the details of your remote machine.
+It's in your local (client) side (i.e your personal computer) where you edit
+your `wezterm.lua` config file to include the details of your remote machine.
 
 Which will look along the lines of this:
 
@@ -112,12 +125,16 @@ config.ssh_domains = {
 }
 ```
 
-Now on your local machine, you can execute `wezterm connect <your-server-name>` (e.g. `wezterm connect raspi`) and Wezterm will
-open a new window and connect to the remote machine via SSH.
+Now on your local machine, you can execute `wezterm connect <your-server-name>`
+(e.g. `wezterm connect raspi`) and Wezterm will open a new window and connect to
+the remote machine via SSH.
 
-Once a connection is established, a mux session will be started on the remote machine. 
+Once a connection is established, a mux session will be started on the remote
+machine.
 
-This means that when you close or exit your terminal session, or the connection is broken, you can
-just reconnect with `wezterm connect <your-server-name>` and continue where you left off. 
+This means that when you close or exit your terminal session, or the connection
+is broken, you can just reconnect with `wezterm connect <your-server-name>` and
+continue where you left off.
 
-If the remote machine shuts down though, you will of course not be able to restore the session.
+If the remote machine shuts down though, you will of course not be able to
+restore the session.

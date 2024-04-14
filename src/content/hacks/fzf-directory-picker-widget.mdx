@@ -1,14 +1,16 @@
 ---
 title: Directory picker widget for fzf
-description: Pick a directory with fzf and paste it into the current shell prompt.
-pubDate: 2023-11-06T18:56:44Z 
+description:
+  Pick a directory with fzf and paste it into the current shell prompt.
+pubDate: 2023-11-06T18:56:44Z
 author: tjex
-tags: ['shell']
+tags: ["shell"]
 license: mit
 draft: false
 ---
 
-[fzf](https://github.com/junegunn/fzf) is of course one of the best tools around. 
+[fzf](https://github.com/junegunn/fzf) is of course one of the best tools
+around.
 
 Out of the box it offers:
 
@@ -16,7 +18,7 @@ Out of the box it offers:
 - history search
 - "auto `cd`" (search for a directory and cd into it on selection)
 
-I would say 80% of the time I use `fzf` to pick files, and therefore have my 
+I would say 80% of the time I use `fzf` to pick files, and therefore have my
 `$FZF_DEFAULT_COMMAND` set to only find files.
 
 ```zsh
@@ -25,9 +27,9 @@ export FZF_DEFAULT_COMMAND='fd -H -tf'
 
 This then means that I can't use the `CTRL-T` keybinding to find directories.
 
-I dug into the `zsh` functions that come with `fzf` to replicate the same file picking 
-behaviour, but for directories. It get's exported as a widget, which you can then 
-use to bind to a keybind of your choice.
+I dug into the `zsh` functions that come with `fzf` to replicate the same file
+picking behaviour, but for directories. It get's exported as a widget, which you
+can then use to bind to a keybind of your choice.
 
 In your `.zshrc`:
 
@@ -52,9 +54,10 @@ bindkey '^d' fzf_dir # set in ./functions
 
 The magic is happening in `LBUFFER="${LBUFFER}${(q)cmd}"`
 
-The `(q)` in `${(q)cmd}`, quotes the resulting expanded variable (`cmd`). In other words, wraps 
-it in quotation marks. This allows file paths with spaces to be interpreted correctly by the shell.
+The `(q)` in `${(q)cmd}`, quotes the resulting expanded variable (`cmd`). In
+other words, wraps it in quotation marks. This allows file paths with spaces to
+be interpreted correctly by the shell.
 
-`LBUFFER` is the contents to the left of the cursor. By setting itself to itself, appended with the 
-expansion of `${(q)cmd}`, we are left with the prompt as we had it before, appended by the chosen 
-directory from `fzf`.
+`LBUFFER` is the contents to the left of the cursor. By setting itself to
+itself, appended with the expansion of `${(q)cmd}`, we are left with the prompt
+as we had it before, appended by the chosen directory from `fzf`.

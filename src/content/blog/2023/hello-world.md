@@ -8,7 +8,7 @@ license: cc
 draft: false
 ---
 
-Why am I starting to blog? 
+Why am I starting to blog?
 
 - to learn more concretely
 - to be more critical of my thoughts
@@ -21,4 +21,3 @@ And if people actually get to this blog...
 - to test my ideas against the chaos of the internet
 
 Let's see...
-

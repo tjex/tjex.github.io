@@ -6,7 +6,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "format": "npx prettier --write ."
+    "format": "npx prettier --print-width=80 --prose-wrap=always --write ."
   },
   "devDependencies": {
     "prettier": "^3.1.0",

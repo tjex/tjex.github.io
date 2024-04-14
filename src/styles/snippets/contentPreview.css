@@ -13,7 +13,7 @@
   text-decoration: none;
 }
 .preview-title:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .pub-date,
@@ -30,4 +30,3 @@
 .content-preview {
   padding-bottom: var(--spacing);
 }
-
