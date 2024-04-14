@@ -7,7 +7,7 @@ pubDate: 2024-04-14T13:13:24Z
 author: tjex
 tags: ["neovim"]
 license: mit
-draft: true
+draft: false
 ---
 
 The below pairing of autocommands sets Neovim to open all new window splits as
