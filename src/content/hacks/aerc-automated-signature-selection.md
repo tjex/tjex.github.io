@@ -7,7 +7,7 @@ pubDate: 2024-04-27T18:06:39Z
 author: tjex
 tags: ["aerc"]
 license: mit
-draft: true
+draft: false
 ---
 
 Within the `accounts.conf` of [Aerc](https://git.sr.ht/~rjarry/aerc), there is a
@@ -114,6 +114,7 @@ replying, in which case there will always be a from address to be found.
 
 ## Bash script
 
+`aerc/scripts/sig-picker.sh`:
 ```bash
 #!/usr/bin/env bash
 
@@ -128,7 +129,7 @@ fi
 
 ## Signature file example
 
-`aerc/sigs/tjex`:
+`aerc/sigs/tjex.txt`:
 
 ```
 --
@@ -153,11 +154,15 @@ quoted-reply=reply-quoted
 
 Now `:reply` and `:reply -q` should "work"; meaning, a specific signature will
 be selected depending on which email address is filled in the "from" header when
-you're replying (i.e. one of your account aliases).
+you're replying (i.e. one of your account aliases). This is provided that
+aliases have been set up properly; if you send an email to an alias, that alias
+should be automatically present in the "from" field upon replying.
 
 For getting the right signature into a new email (i.e. not a reply):
 
 ```
+[messages]
+
 mx = :compose -H "From: Tillman Jex \<tjex@tjex.net\>"<enter>
 ```
 
