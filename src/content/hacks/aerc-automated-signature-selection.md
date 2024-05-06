@@ -5,7 +5,7 @@ description:
   tempalte queries.
 pubDate: 2024-04-27T18:06:39Z
 author: tjex
-tags: ["aerc"]
+tags: ["aerc", "dotfiles"]
 license: mit
 draft: false
 ---

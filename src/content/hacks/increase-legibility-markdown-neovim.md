@@ -5,7 +5,7 @@ description:
   difficult to read.
 pubDate: 2024-01-21T22:29:03Z
 author: tjex
-tags: ["neovim"]
+tags: ["neovim", "dotfiles"]
 license: mit
 draft: false
 ---

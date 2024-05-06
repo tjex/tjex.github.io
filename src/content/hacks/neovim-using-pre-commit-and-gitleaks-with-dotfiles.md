@@ -1,13 +1,12 @@
 ---
 title:
-  "Dotfiles: catching secrets in bare git repos using gitleaks and pre-commit
-  hooks"
+  "Catching secrets in bare git repos using gitleaks and hooks"
 description:
   Installing pre-commit requires its config to be at the root of a repo, but
   there is an extra detail when achieving this with a bare repository.
 pubDate: 2024-05-02T11:33:38Z
 author: tjex
-tags: ["neovim"]
+tags: ["dotfiles"]
 license: MIT
 draft: false
 ---
