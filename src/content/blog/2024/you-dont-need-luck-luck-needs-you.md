@@ -19,7 +19,7 @@ I find this a bit annoying.
 Luck is a given. To the point where it's redundant. You're lucky to even be here
 in the first place. I myself owe my existence (in large part) to a coin toss.
 
-In the late 1980's, a young Australian lady was travelling through Greece and
+In the late 1980's, a young Australian writer was travelling through Greece and
 boarded a ferry with the intention of visiting Naxos. She went up deck, spotting
 a man whom she asked to hold one of her bags, while she went back downstairs to
 get the other. The man came from a small town in Germany, and was on a work
