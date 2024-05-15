@@ -1,7 +1,6 @@
 {
   "name": "tjex.net",
   "version": "v1.4.0",
-  "private": false,
   "scripts": {
     "start": "astro dev",
     "build": "astro build",
@@ -20,5 +19,6 @@
     "astro": "^4.1.2",
     "markdown-it": "^14.0.0",
     "sanitize-html": "^2.11.0"
-  }
+  },
+  "packageManager": "yarn@4.2.2"
 }
