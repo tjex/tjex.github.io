@@ -1,14 +1,18 @@
 ---
 title: You don't need luck, luck needs you
-description: 
-    Luck is an inherent part of life, it's not a requirement or
-    a special trick for success.
+description:
+  Luck is an inherent part of life, it's not a requirement or a special trick
+  for success.
 pubDate: 2024-05-08T12:59:21Z
 author: tjex
 tags: ["philosopy"]
 license: cc
 draft: false
 ---
+
+> _Luck is what happens when preparation meets opportunity._
+>
+> - Seneca ([disputed](https://en.wikiquote.org/wiki/Seneca_the_Younger))
 
 Often someone will describe success as requiring a collection of abilities
 including, but not limited to: determination, dedication, an open mind,
@@ -46,8 +50,30 @@ to worry about "good" or "bad" luck coming your way. Ever heard someone comment
 on a past happening as a "blessing in disguise?". Luck is then a question. Can
 you recognise it when it comes your way, and will you be prepared when it does?
 
-> _Luck is what happens when preparation meets opportunity._
->
-> - Seneca ([disputed](https://en.wikiquote.org/wiki/Seneca_the_Younger))
+In
+[_Wired to Create_](https://www.penguinrandomhouse.com/books/317947/wired-to-create-by-scott-barry-kaufman-and-carolyn-gregoire/),
+Kaufman and Gregoire recount how opportunity and preparedness forged a
+crystalline unit of luck, sending Albert Hofman on a bike ride he would never
+forget.
+
+In his 1983 memoir
+[_LSD: My Problem Child_](https://archive.org/details/lsdmyproblemchil0000hofm_g1j0),
+Hofman wrote, "I could not forget the relatively uninteresting LSD-25", "A
+peculiar presentiment...induced me, five years after the first synthesis, to
+produce LSD-25 once again so that a sample could be given to the pharmacological
+department for further tests."[^1]
+
+In the final stages of crystallizing the sample that would be sent to the
+department, the smallest of doses dropped on his hand, making him feel a bit
+strange and go home sick. This case of chance piqued his curiosity and on April
+19, 1943 Hofmann ingested an "infinitesimal dose" of LSD and while riding home
+on his bike from the lab, experienced the first acid trip ever.
+
+> _"In the realm of scientific observation, luck is granted only to those who
+> are prepared"_ - Louis Pasteur
 
 You don't need luck, luck needs you.
+
+[^1]:
+    Kaufman, S. B. and Gregoire, C. (2016), Wired to Create: Unraveling the
+    Mysteries of the Creative Mind. p.59-60
