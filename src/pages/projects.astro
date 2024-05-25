@@ -3,41 +3,49 @@ import Layout from "../layouts/Page.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 
 const seo = {
-  title: "Projects",
-  description: "Personal projects of Tillman Jex within software, open-source, music and arts.",
+    title: "Projects",
+    description: "Personal projects of Tillman Jex within software, open-source, music and arts.",
 };
 ---
 
 <Layout seo={seo}>
-  <h1>Projects</h1>
-  <div class="filterWrapper">
-    <div class="grid">
-      <ProjectCard
-        src={"https://github.com/zk-org"}
-        project={"zk-org - tools for Zettelkasten note taking"}
-        description={"co-maintainer of the Zettelkasten CLI note taking tool, zk, and its neovim plugin."}
-        lang={["go", "lua"]}
-      />
-      <ProjectCard
-        src={"https://ctechfilmuniversity.github.io/zalf-ar-documentation/documentation.html"}
-        project={"ZALF - AR Cookbook"}
-        description={"Prototyping an augmented reality cookbook for the research institute, ZALF."}
-        lang={["Unity", "C#"]}
-      />
+    <h1>Projects</h1>
+    <div class="filterWrapper">
+        <div class="grid">
+            <ProjectCard
+                src={"https://github.com/tjex/dotf"}
+                project={"dotf"}
+                description={"A git wrapper which makes dotfile tracking with a bare git repository even more convenient."}
+                lang={["go"]}
+            />
+        </div>
+        <div class="grid">
+            <ProjectCard
+                src={"https://github.com/zk-org"}
+                project={"zk-org - tools for Zettelkasten note taking"}
+                description={"co-maintainer of the Zettelkasten CLI note taking tool, zk, and its neovim plugin."}
+                lang={["go", "lua"]}
+            />
+            <ProjectCard
+                src={"https://ctechfilmuniversity.github.io/zalf-ar-documentation/documentation.html"}
+                project={"ZALF - AR Cookbook"}
+                description={"Prototyping an augmented reality cookbook for the research institute, ZALF."}
+                lang={["Unity", "C#"]}
+            />
+        </div>
+        <div class="grid">
+            <ProjectCard
+                src={"https://github.com/tjex/Shortcut-FirstTermProject?tab=readme-ov-file"}
+                project={"Shortcut - A VR dreamscape"}
+                description={"Exploring an intersection between the unconscious, digital art and virtual reality."}
+                lang={["Unity", "C#", "Processing4"]}
+            />
+            <ProjectCard
+                src={"https://github.com/tjex/ofTombola-sequencer"}
+                project={"ofTombola-sequencer"}
+                description={"MIDI sequencer using the physics of bouncing balls and collisions as note events."}
+                lang={["C++"]}
+            />
+        </div>
     </div>
-    <div class="grid">
-      <ProjectCard
-        src={"https://github.com/tjex/Shortcut-FirstTermProject?tab=readme-ov-file"}
-        project={"Shortcut - A VR dreamscape"}
-        description={"Exploring an intersection between the unconscious, digital art and virtual reality."}
-        lang={["Unity", "C#", "Processing4"]}
-      />
-      <ProjectCard
-        src={"https://github.com/tjex/ofTombola-sequencer"}
-        project={"ofTombola-sequencer"}
-        description={"MIDI sequencer using the physics of bouncing balls and collisions as note events."}
-        lang={["C++"]}
-      />
-    </div>
-  </div>
 </Layout>
