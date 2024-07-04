@@ -118,7 +118,7 @@ Shortly after learning what a for loop is, I programmed the below image. So it
 would be the first thing I ever programmed; an illustrious and provocative work
 made with Processing4.
 
-![self-portrait](../../../images/self-portrait-2021.png)
+![self-portrait](../../../images/2023/self-portrait-2021.png)
 
 Since then I've...
 
