@@ -1,11 +1,13 @@
 ---
 import Layout from "../layouts/Page.astro";
+import { Image } from "astro:assets";
+import profile from "../images/profile-square.jpg";
 
 const seo = {
-    title: "Home",
+    title: "About",
     description:
-        "Home page for tjex (Tillman Jex), programmer, creative technologist and animated meat sack from Australia. Based in Berlin, Germany.",
-    image: "../src/tjex-social-img.jpg",
+        "About tjex (Tillman Jex), programmer and creative technologist from Melbourne, Australia. Currently living in Berlin, Germany.",
+    image: "../images/profile-square.jpg",
 };
 ---
 
@@ -13,8 +15,10 @@ const seo = {
     <h1>About</h1>
     <p>
         I've done many things, but now I code. I took a scenic route so to say. <br />
-        Currently I'm writing my masters thesis on the mechanics behind the Zettelkasten method, how these mechanics facilitate
-        creative ideation and what software solutions I can build to best support that creative ideation process.<br />
+        Currently I'm writing my masters thesis on the mechanics behind the <a
+            href="https://en.wikipedia.org/wiki/Zettelkasten">Zettelkasten system</a
+        >, how these mechanics facilitate creative ideation, and what software solutions I can build to best support
+        that process.<br />
     </p>
     <p>
         Before finding a home in programming, I was working in the arts / music industry as a <a
@@ -35,8 +39,6 @@ const seo = {
         collaborator arrise from a broad set of lived experiences and trained skill sets. <br />
         These are qualities I actively try to foster.
     </p>
-    <p>
-        -- <br />
-        Tillman Jex
-    </p>
+    <Image src={profile} width={profile.width / 4} alt={"Profile picture of Tillman Jex"} />
+    <p style="text-align: center;"><br />Tillman Jex</p>
 </Layout>

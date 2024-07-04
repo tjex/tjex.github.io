@@ -13,15 +13,10 @@ export interface Props {
 
 const title = Astro.props.title || site.title;
 const description = Astro.props.description || site.description;
-const canonicalURL =
-    Astro.props.canonicalURL || new URL(Astro.url.pathname, Astro.site);
-const image = new URL(
-    Astro.props.image || `${site.url}/img/tjex-social-img.jpg`,
-    Astro.site,
-);
+const canonicalURL = Astro.props.canonicalURL || new URL(Astro.url.pathname, Astro.site);
+const image = new URL(Astro.props.image || `${site.url}/img/profile-square.jpg`, Astro.site);
 const index = Astro.props.index || "all";
 ---
-
 
 <!-- Primary Meta Tags -->
 <meta charset="utf-8" />
@@ -31,37 +26,18 @@ const index = Astro.props.index || "all";
 <meta name="robots" content={index} />
 
 <!-- browser tab title -->
-<title>tjex ~ {title || site.title}</title>
+<title>tjex • {title || site.title}</title>
 
 <!-- RSS -->
-<link
-    rel="alternate"
-    type="application/rss+xml"
-    title={`${site.rssName}`}
-    href={`${site.rssURL}`}
-/>
+<link rel="alternate" type="application/rss+xml" title={`${site.rssName}`} href={`${site.rssURL}`} />
 <!-- Canonical -->
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Favicons -->
-<link
-    rel="apple-touch-icon"
-    sizes="180x180"
-    href="/favicon/apple-touch-icon.png"
-/>
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
 <link rel="icon" type="image/ico" sizes="48x48" href="/favicon/favicon.ico" />
-<link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="/favicon/favicon-32x32.png"
-/>
-<link
-    rel="icon"
-    type="image/png"
-    sizes="16x16"
-    href="/favicon/favicon-16x16.png"
-/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />

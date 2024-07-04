@@ -2,36 +2,35 @@
 import site from "../data/settings.js";
 
 export interface Props {
-    post: any,
+    post: any;
 }
 
 const { post } = Astro.props;
 
 const ldData = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  headline: `${post.data.title}`,
-  url: `${site.url}/blog/${post.slug}`,
-  datePublished: `${post.data.pubDate}`,
-  description: `${post.data.description}`,
-  author: {
-    "@type": "Person",
-    name: `${site.webName}`,
-    image: {
-      "@type": "ImageObject",
-      url: `${site.url}/img/tjex-social-img.jpg`,
-      width: 488,
-      height: 488,
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: `${post.data.title}`,
+    url: `${site.url}/blog/${post.slug}`,
+    datePublished: `${post.data.pubDate}`,
+    description: `${post.data.description}`,
+    author: {
+        "@type": "Person",
+        name: `${site.webName}`,
+        image: {
+            "@type": "ImageObject",
+            url: `${site.url}/img/profile-square.jpg`,
+            width: 488,
+            height: 488,
+        },
+        url: `${site.url}`,
+        sameAs: [`${site.url}/blog`, `${site.githubURL}`, `${site.mastodonURL}`],
     },
-    url: `${site.url}`,
-    sameAs: [`${site.url}/blog`, `${site.githubURL}`, `${site.mastodonURL}`],
-  },
-  mainEntityOfPage: {
-    "@type": "WebPage",
-    "@id": `${site.url}/blog/`,
-  },
+    mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `${site.url}/blog/`,
+    },
 };
 ---
 
-<script type="application/ld+json" set:html={JSON.stringify(ldData)} is:inline
-></script>
+<script type="application/ld+json" set:html={JSON.stringify(ldData)} is:inline />
