@@ -23,6 +23,9 @@ This required then two functions. One to update the `previous_workspace` field
 when simply changing to workspaces (e.g, via keybinds or commands) and one to
 toggle between the current and previous workspaces.
 
+The below can be found
+[here in my dotfiles](https://git.sr.ht/~tjex/dotfiles/tree/8fafa12077cf0eab610cc8d6361d5f00f75d7080/item/.config/wezterm/functions/funcs.lua#L31).
+
 Given my wezterm config directory structure:
 
 ```tree
