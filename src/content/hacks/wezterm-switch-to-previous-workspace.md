@@ -10,9 +10,9 @@ license: MIT
 draft: false
 ---
 
-This was a feature from tmux that I sorely missed. WezTerm offers customization
-via `lua` and exposes a _very_ large API surface to the user. This is one of the
-reasons why I love WezTerm. The implementation is as follows.
+One feature of tmux I really appreciated was switching between the previous and
+current workspaces. Unfortunately, this functionality is not yet native in
+WezTerm. So, the itch had to be scratched.
 
 WezTerm makes available a global storage object to the user at `wezterm.GLOBAL`
 ([docs](https://wezfurlong.org/wezterm/config/lua/wezterm/GLOBAL.html?h=global)).
