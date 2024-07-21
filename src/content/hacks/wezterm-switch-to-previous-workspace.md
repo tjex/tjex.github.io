@@ -43,7 +43,7 @@ Given my wezterm config directory structure:
 ```
 
 ```lua
--- func.lua
+-- funcs.lua
 
 local wezterm = require("wezterm")
 local act = wezterm.action
@@ -84,7 +84,7 @@ return M
 -- keybinds.lua
 
 local wezterm = require("wezterm")
-local func = require("functions.func")
+local func = require("functions.funcs")
 
 config.keys = {
 			key = "l",
