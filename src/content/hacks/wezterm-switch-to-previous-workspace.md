@@ -113,3 +113,40 @@ config.keys = {
 			end),
 		},
 ```
+
+Or if that's too clunky to bake into another functionality, you can also simply
+update the `previous_workspace` field before switching workspaces, like here in
+the sessioniser function
+([from keturiosakys](https://github.com/wez/wezterm/discussions/4796)).
+
+[See code in full context](https://github.com/tjex/dotfiles/blob/e38a3674bec9acb3bf678d038935add265e1fbbf/.config/wezterm/functions/sessioniser.lua).
+
+```lua
+-- ... more code
+	-- update previous_workspace before changing to new workspace.
+	wezterm.GLOBAL.previous_workspace = window:active_workspace()
+	window:perform_action(
+		act.InputSelector({
+			action = wezterm.action_callback(function(win, _, id, label)
+				if not id and not label then
+					wezterm.log_info("Cancelled")
+				else
+					wezterm.log_info("Selected " .. label)
+					win:perform_action(
+						act.SwitchToWorkspace({
+							name = id,
+							spawn = { cwd = home .. label },
+						}),
+						pane
+					)
+				end
+			end),
+			fuzzy = true,
+			title = "Select project",
+			choices = projects,
+		}),
+		pane
+	)
+
+-- ... more code
+```
