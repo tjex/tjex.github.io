@@ -24,7 +24,7 @@ when simply changing to workspaces (e.g, via keybinds or commands) and one to
 toggle between the current and previous workspaces.
 
 The below can be found
-[here in my dotfiles](https://git.sr.ht/~tjex/dotfiles/tree/8fafa12077cf0eab610cc8d6361d5f00f75d7080/item/.config/wezterm/functions/funcs.lua#L31).
+[here in my dotfiles](https://github.com/tjex/wezterm-conf/blob/cddec4a0ff4d4ef1cbcd2cab1d95dc4f1b89aaa6/functions/funcs.lua).
 
 Given my wezterm config directory structure:
 
@@ -68,16 +68,17 @@ M.switch_workspace = function(window, pane, workspace)
 	wezterm.GLOBAL.previous_workspace = current_workspace
 end
 
-M.switch_to_last_workspace = function(window, pane)
+M.switch_to_previous_workspace = function(window, pane)
 	local current_workspace = window:active_workspace()
 	local workspace = wezterm.GLOBAL.previous_workspace
 
-	if current_workspace == workspace then
+	if current_workspace == workspace or wezterm.GLOBAL.previous_workspace == nil then
 		return
 	end
 
 	M.switch_workspace(window, pane, workspace)
 end
+
 
 return M
 
@@ -119,7 +120,7 @@ update the `previous_workspace` field before switching workspaces, like here in
 the sessioniser function
 ([from keturiosakys](https://github.com/wez/wezterm/discussions/4796)).
 
-[See code in full context](https://github.com/tjex/dotfiles/blob/e38a3674bec9acb3bf678d038935add265e1fbbf/.config/wezterm/functions/sessioniser.lua).
+[See code in full context](https://github.com/tjex/wezterm-conf/blob/cddec4a0ff4d4ef1cbcd2cab1d95dc4f1b89aaa6/functions/sessioniser.lua).
 
 ```lua
 -- ... more code
