@@ -161,7 +161,7 @@
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     --background-color: #0f0b09;
-    --color: hsl(20, 12%, 59%);
+    --color: hsl(20, 14%, 68%);
     --heading-color: hsl(0, 30%, 54%);
     --h1-color: hsl(20, 20%, 70%);
     --h2-color: #c8b6ad;
@@ -289,7 +289,7 @@
 }
 [data-theme=dark] {
   --background-color: #0f0b09;
-  --color: hsl(20, 12%, 59%);
+  --color: hsl(20, 14%, 68%);
   --heading-color: hsl(0, 30%, 54%);
   --h1-color: hsl(20, 20%, 70%);
   --h2-color: #c8b6ad;
@@ -1044,13 +1044,13 @@ li {
 
 a,
 [role=link] {
-  --color: var(--color);
+  --color: var(--link-color);
   --background-color: transparent;
   --text-decoration: underline;
   --text-decoration-thickness: 2px;
   --text-decoration-color: var(--link-decoration-color);
   --text-underline-position: under;
-  color: var(--link-color);
+  color: var(--color);
   text-decoration: var(--text-decoration);
   text-decoration-thickness: var(--text-decoration-thickness);
   text-underline-position: var(--text-underline-position);
@@ -1060,9 +1060,8 @@ a,
 }
 a:is([aria-current], :hover, :active, :focus),
 [role=link]:is([aria-current], :hover, :active, :focus) {
-  --color: var(--primary);
-  --text-decoration: underline;
-  --text-decoration-color: var(--primary);
+  --color: var(--primary-hover);
+  --text-decoration: none;
 }
 a:focus-visible,
 [role=link]:focus-visible {
