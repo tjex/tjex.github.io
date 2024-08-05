@@ -6,7 +6,7 @@ pubDate: 2024-08-05T20:27:49Z
 author: tjex
 tags: ["scripts", "terminal"]
 license: MIT
-draft: true
+draft: false
 ---
 
 If you write in neovim, you want to write in neovim everywhere.
