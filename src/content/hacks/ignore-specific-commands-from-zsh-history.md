@@ -1,7 +1,8 @@
 ---
 title: Ignore specific commands from being written to zsh history
-description: A simple and effective way to keep certain shell commands from
-being written to your zsh history.
+description:
+  A simple and effective way to keep certain shell commands from being written
+  to your zsh history.
 pubDate: 2024-08-23T20:01:15Z
 author: tjex
 tags: ["terminal"]
@@ -24,8 +25,8 @@ this is way too annoying.
 
 As `fg` is basically as fast as hiting `UP,UP`, I can do without having the `fg`
 entry in my shell history at all. This will enable me to always hit `UP` _once_
-to select the last command, enabling a workflow as such: `work in neovim ->
-ctrl-z -> go run main.go -> fg -> (repeat)`.
+to select the last command, enabling a workflow as such:
+`work in neovim -> ctrl-z -> go run main.go -> fg -> (repeat)`.
 
 ## Solution
 
@@ -46,5 +47,5 @@ alias fg =" fg"
 ```
 
 Now, when you execute your command, it will be substituted by your shell with
-the set alias, and because the actual command that's executed (the alias) has
-a whitespace preceding it, it will not be written to your zshhistory. 
+the set alias, and because the actual command that's executed (the alias) has a
+whitespace preceding it, it will not be written to your zshhistory.
