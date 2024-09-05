@@ -26,6 +26,8 @@ algorithms in particular. The problem is, unless you did maths throughout school
 (and enjoyed it enough), there aren't really any other opportunities to practice
 this kind of skill.
 
+## On a High Level
+
 I noticed this pattern the more I reviewed the LeetCode submissions that _far_
 outperform the rest. Those submissions are typically written using single
 letters as variables, but _also_ achieve the correct result with pure
@@ -84,6 +86,8 @@ evoke at the very least a feeling of natural forces at play. Gravity, inertia,
 momentum, friction and fragility can all be identified in the image. And we all
 at some level know what heavy, rough, light, fast or hollow objects may sound
 like in any particular environment.
+
+## Constants, Variables, Syntax and Narrative
 
 When I consider the above, what stands out to me is that between programming
 languages, maths and music, there are many shared components: _constants_,
