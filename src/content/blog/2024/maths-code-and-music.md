@@ -31,8 +31,8 @@ this kind of skill.
 I noticed this pattern the more I reviewed the LeetCode submissions that _far_
 outperform the rest. Those submissions are typically written using single
 letters as variables, but _also_ achieve the correct result with pure
-mathematical computations and logic (instead of using data structures or
-standard library functions), which is why they're so performant.
+mathematical computations and logic (instead of using data structures), which is
+why they're so performant.
 
 Through this I see the translation of mathematics into programming at the
 surface level. Of course, there are _many_ levels deeper where serious skills in
