@@ -5,7 +5,7 @@ description:
   for success.
 pubDate: 2024-05-08T12:59:21Z
 author: tjex
-tags: ["philosopy"]
+tags: ["philosophy"]
 license: cc
 draft: false
 ---
