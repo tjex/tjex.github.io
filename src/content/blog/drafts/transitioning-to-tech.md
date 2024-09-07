@@ -1,3 +1,14 @@
+---
+title: placeholder
+description: placeholder
+pubDate: 2024-09-07T20:49:13Z
+author: tjex
+tags: [""]
+license: cc
+draft: true
+---
+
+
 - listen to _good_ podcasts.
   - you will hear terminology in context.
   - you will get many good references for further research.
