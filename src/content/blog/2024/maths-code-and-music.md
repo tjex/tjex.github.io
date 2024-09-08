@@ -15,16 +15,16 @@ others. And it was actually a contributing reason why I never considered
 learning programming earlier on. I just figured I wouldn't get very far, as
 I don't have the best of love stories with maths...
 
-But as I chip away at ye old obligatory LeetCode problems in preparation for the
-post uni job hunt, I've come to realise why a relatively good grasp of maths
-does go a long way. But it doesn't necessarily come down to being able to
-calculate, more so the type of mental gymnastics that maths requires.
+But as I chip away at LeetCode in preparation for the post uni job hunt, I've
+come to realise why a relatively good grasp of maths does go a long way. But it
+doesn't necessarily come down to being able to calculate, more so the type of
+mental gymnastics that maths requires.
 
-At the very surface level, it comes down to keeping the value of variables in
-your head. That kind of mental gymnastic is required when reading and writing
-algorithms in particular. The problem is, unless you did maths throughout school
-(and enjoyed it enough), there aren't really any other opportunities to practice
-this kind of skill.
+I would argue there are two main skills that get trained when practicing maths
+that help a lot with reading and writing algorithms; keeping multiple values in
+your head while you think, and recognising patterns. The problem is, unless you
+did maths throughout school (and enjoyed it enough), there aren't really any
+other opportunities to practice this kind of skill.
 
 ## On a High Level
 
