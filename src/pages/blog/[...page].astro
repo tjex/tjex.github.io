@@ -9,35 +9,35 @@ import * as colUtil from "../../scripts/collectionUtil.ts";
 
 // TODO: refactor this into colUtil
 export async function getStaticPaths({ paginate }) {
-  const posts = await colUtil.noDrafts("blog").then((posts) =>
-    posts
-      .map((post: any) => ({
-        slug: post.slug,
-        title: post.data.title,
-        description: post.data.description,
-        tags: post.data.tags,
-        pubDate: post.data.pubDate,
-      }))
-      .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate)),
-  );
-  return paginate(posts, { pageSize: 10 });
+    const posts = await colUtil.noDrafts("blog").then((posts) =>
+        posts
+            .map((post: any) => ({
+                slug: post.slug,
+                title: post.data.title,
+                description: post.data.description,
+                tags: post.data.tags,
+                pubDate: post.data.pubDate,
+            }))
+            .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate)),
+    );
+    return paginate(posts, { pageSize: 10 });
 }
 
 const seo = {
-  title: "Blog",
-  description: "Blog posts, essays, diaries, news and tutorials by tjex (Tillman Jex)",
+    title: "Blog",
+    description: "Blog posts, essays, diaries, news and tutorials by tjex (Tillman Jex)",
 };
 
 const { page } = Astro.props;
 ---
 
 <Layout seo={seo}>
-  <h1>Blog</h1>
-  <p>
-    <TagsUnique collection={"blog"} style={"pill"} />
-  </p>
-  <table>
-  {page.data.map((post: any) => <PostPreview post={post} collection={"blog"} />)}
-  </table>
-  <Paginator page={page} />
+    <h1>Blog</h1>
+    <p>
+        <TagsUnique collection={"blog"} style={"pill"} />
+    </p>
+    <table>
+        {page.data.map((post: any) => <PostPreview post={post} collection={"blog"} />)}
+    </table>
+    <Paginator page={page} />
 </Layout>

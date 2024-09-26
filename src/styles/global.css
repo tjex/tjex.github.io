@@ -176,7 +176,7 @@
     --primary-hover: hsl(0, 60%, 30%);
     --primary-focus: rgba(88, 19, 19, 0.25);
     --primary-inverse: #fff;
-    --secondary: #826f66;
+    --secondary: #8b807a;
     --secondary-hover: #6d584e;
     --secondary-focus: rgba(140, 123, 115, 0.25);
     --secondary-inverse: #fff;
@@ -304,7 +304,7 @@
   --primary-hover: hsl(0, 60%, 30%);
   --primary-focus: rgba(88, 19, 19, 0.25);
   --primary-inverse: #fff;
-  --secondary: #826f66;
+  --secondary: #8b807a;
   --secondary-hover: #6d584e;
   --secondary-focus: rgba(140, 123, 115, 0.25);
   --secondary-inverse: #fff;
@@ -1489,12 +1489,15 @@ a[role=button]:not([href]) {
 th,
 td {
   padding: calc(var(--spacing) / 2) var(--spacing);
-  border-bottom: var(--border-width) solid var(--table-border-color);
   color: var(--color);
   font-weight: var(--font-weight);
   font-size: var(--font-size);
   text-align: left;
   text-align: start;
+}
+
+tr.striped:nth-child(odd) {
+  border-bottom: var(--border-width) solid var(--table-border-color);
 }
 
 tfoot th,

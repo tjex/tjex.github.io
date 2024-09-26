@@ -18,6 +18,7 @@
 
 .pub-date,
 .author {
+  font-family: "Fira Code", monospace;
   font-size: var(--font-small);
   color: var(--secondary);
   text-align: right;
