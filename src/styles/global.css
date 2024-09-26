@@ -165,7 +165,7 @@
     --secondary-inverse: #fff;
     --background-color: #0f0b09;
     --color: hsl(20, 12%, 59%);
-    --heading-color: var(--red);
+    --heading-color: var(--primary);
     --muted-color: #726661;
     --muted-border-color: var(--muted-color);
     --link-color: var(--color);
@@ -287,7 +287,7 @@
   --secondary-inverse: #fff;
   --background-color: #0f0b09;
   --color: hsl(20, 12%, 59%);
-  --heading-color: var(--red);
+  --heading-color: var(--primary);
   --muted-color: #726661;
   --muted-border-color: var(--muted-color);
   --link-color: var(--color);
