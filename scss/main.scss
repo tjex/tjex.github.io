@@ -1,0 +1,51 @@
+/*!
+ * Pico CSS v1.5.10 (https://picocss.com)
+ * Copyright 2019-2023 - Licensed under MIT
+ *
+ * Slim version example
+ * You can export only the modules you need
+ */
+
+// Config
+// --------------------
+
+// Enable responsive spacings for <header>, <main>, <footer>, <section>, <article>
+$enable-responsive-spacings: true;
+
+// Enable transitions
+$enable-transitions: true;
+
+// Enable overriding with !important
+$enable-important: true;
+
+// Theming
+@import "themes/sunset";
+
+// Pico Lib
+// --------------------
+
+// Config
+@import "variables";
+
+// Layout
+@import "layout/sectioning"; // body, header, main, footer
+@import "layout/document"; // html
+@import "layout/grid"; // .grid
+@import "layout/posts"; // for blog / posts / etc
+@import "layout/responsive"; // responsive spacings
+
+// Componenets
+@import "components/callouts";
+@import "components/nav";
+
+// Content
+@import "content/typography"; // a, headings, p, ul, blockquote, ...
+@import "content/miscs"; // hr, template, [hidden], dialog, canvas
+@import "content/embedded"; // audio, canvas, iframe, img, svg, video
+@import "content/table"; // table, tr, td, ...
+@import "content/lists"; // lists ...
+@import "content/code"; // pre, code, ...
+
+// Utilities
+@import "utilities/accessibility"; // -ms-touch-action, aria-*
+@import "utilities/reduce-motion"; // prefers-reduced-motion

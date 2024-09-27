@@ -1,0 +1,45 @@
+// Black & White
+$white: #fff;
+$black: #000;
+
+// Red (primary)
+$red-hue: 0 !default;
+$red-light: hsl($red-hue, 20%, 74%) !default;
+$red-medium: hsl($red-hue, 30%, 54%) !default;
+$red-dark: hsl($red-hue, 45%, 13%) !default;
+
+// Amber
+$amber-hue: 20 !default;
+$amber-light: hsl($amber-hue, 20%, 70%) !default;
+$amber-medium: hsl($amber-hue, 12%, 59%) !default;
+$amber-dark: hsl($amber-hue, 25%, 23%) !default;
+
+// Grey
+$grey-hue: 205 !default;
+$grey-50: hsl($grey-hue, 20%, 74%) !default;
+$grey-100: hsl($grey-hue, 18%, 76%) !default;
+$grey-200: hsl($grey-hue, 16%, 67%) !default;
+$grey-300: hsl($grey-hue, 14%, 68%) !default;
+$grey-400: hsl($grey-hue, 12%, 59%) !default;
+$grey-500: hsl($grey-hue, 10%, 50%) !default;
+$grey-600: hsl($grey-hue, 15%, 41%) !default;
+$grey-700: hsl($grey-hue, 20%, 32%) !default;
+$grey-800: hsl($grey-hue, 25%, 23%) !default;
+$grey-900: hsl($grey-hue, 30%, 15%) !default;
+
+// blue
+$blue-hue: 195 !default;
+$blue-light: hsl($blue-hue, 80%, 60%) !default;
+$blue-medium: hsl($blue-hue, 65%, 35%) !default;
+$blue-dark: hsl($blue-hue, 70%, 30%) !default;
+
+// Green
+$green-hue: 125 !default;
+$green-light: hsl($green-hue, 55%, 21%) !default;
+$green-medium: hsl($green-hue, 70%, 22%) !default;
+$green-dark: hsl($green-hue, 75%, 13%) !default;
+
+$purple-hue: 269 !default;
+$purple-light: hsl($purple-hue, 40%, 70%) !default;
+$purple-medium: hsl($purple-hue, 45%, 60%) !default;
+$purple-dark: hsl($purple-hue, 80%, 50%) !default;

@@ -1,0 +1,45 @@
+/* POSTS / BLOG */
+
+.postlist {
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.postlist-single {
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+// for divs that display page infrormation such as author and date
+.post-info {
+  text-align: right;
+  margin-bottom: var(--spacing);
+  font-size: var(--font-small);
+}
+
+// div class for next/prevPost links
+.neighbourPost {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--spacing);
+}
+
+.nextPost,
+.prevPost {
+  display: inline-flex;
+}
+
+.nextPost::after {
+  content: var(--icon-right-arrow);
+}
+
+.prevPost::before {
+  content: var(--icon-left-arrow);
+}
+
+

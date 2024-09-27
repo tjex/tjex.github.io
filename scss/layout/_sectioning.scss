@@ -1,0 +1,261 @@
+/**
+ * Sectioning
+ * Container and responsive spacings for header, main, footer
+ */
+
+// Reboot based on :
+// - normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
+// - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css
+// ––––––––––––––––––––
+
+// Render the `main` element consistently in IE
+
+:root {
+  --max-width: 900px;
+}
+
+// Render the `main` element consistently in IE
+main {
+  display: block;
+  max-width: var(--max-width);
+}
+
+// 1. Remove the margin in all browsers (opinionated)
+#{$semantic-root-element} {
+  width: 100%;
+  margin: 0; // 1
+
+  > header,
+  > main,
+  > footer {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    // Semantic container
+    @if $enable-semantic-container {
+      padding: var(--block-spacing-vertical) var(--block-spacing-horizontal);
+
+      // Centered viewport
+      @if $enable-viewport {
+        @if map-get($breakpoints, "sm") and $enable-viewport {
+          @media (min-width: map-get($breakpoints, "sm")) {
+            max-width: map-get($viewports, "sm");
+            padding-right: 0;
+            padding-left: 0;
+          }
+        }
+
+        @if map-get($breakpoints, "md") and $enable-viewport {
+          @media (min-width: map-get($breakpoints, "md")) {
+            max-width: map-get($viewports, "md");
+          }
+        }
+
+        @if map-get($breakpoints, "lg") and $enable-viewport {
+          @media (min-width: map-get($breakpoints, "lg")) {
+            max-width: map-get($viewports, "lg");
+            font-size: 5rem;
+          }
+        }
+
+        @if map-get($breakpoints, "xl") and $enable-viewport {
+          @media (min-width: map-get($breakpoints, "xl")) {
+            max-width: map-get($viewports, "xl");
+          }
+        }
+      }
+    }
+
+    // Semantic container
+    @else {
+      padding: var(--block-spacing-vertical) 0;
+    }
+  }
+}
+
+// Responsive spacings for section
+section {
+  margin-bottom: var(--block-spacing-vertical);
+}
+
+body {
+  padding-top: constant(safe-area-inset-top); /* For iOS 11.0-11.2 */
+  padding-top: env(safe-area-inset-top); /* For iOS 11.2+ */
+}
+
+// fundamental site structure made of flexboxes
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper > * {
+  padding: calc(var(--spacing) * 1.5);
+  flex: 1 100%;
+}
+
+.header-wrapper {
+  display: flex;
+  padding: 0;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.header-center {
+  display: flex;
+  flex: 1 1 var(--max-width);
+  justify-content: center;
+  padding: calc(var(--spacing) * 1.5);
+  max-width: var(--max-width);
+}
+
+.header-left,
+.header-right {
+  display: block;
+  padding: calc(var(--spacing) * 1.5);
+}
+
+.header-left {
+  flex: 1 1 20%;
+  min-width: 100px;
+  text-align: right;
+  justify-content: right;
+}
+
+.header-right {
+  padding-top: 3rem;
+  flex: 1 1 20%;
+}
+
+.main-content {
+  flex: 3 0px;
+  text-align: left;
+  padding: calc(var(--spacing) * 1.5);
+  padding-bottom: calc(
+    var(--spacing) * 6
+  ); // need to take footer height into account
+}
+
+/* sidebars */
+.sidebar-left,
+.sidebar-right {
+  display: flex;
+  padding-top: calc(var(--spacing) * 6);
+  position: sticky;
+  top: var(--offset);
+  max-height: calc(100vh - var(--spacing) * 2);
+  width: 200px;
+}
+
+.sidebar-left {
+  flex-flow: column wrap;
+  gap: 0.5em;
+  --offset: var(--spacing);
+  align-self: start;
+  text-align: right;
+}
+
+// see below too!
+.footer {
+  display: block;
+  position: fixed;
+  font-size: var(--font-smallest);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  padding-bottom: 1rem;
+  background: var(--background-color);
+}
+
+// this makes the crisp border ontop of the footer
+.footer::before {
+  content: "";
+  display: block;
+  height: 0;
+  border-top: 1px solid var(--secondary);
+  width: 60%; /* Set the width to 35% */
+  padding-top: var(--spacing);
+  margin: 0 auto; /* Center the element horizontally */
+}
+
+/* from: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-examples */
+@media all and (min-width: 1200px) {
+  .aside {
+    flex: 1 0 0;
+  }
+  .header-left {
+    order: 1;
+  }
+  .header-center {
+    order: 2;
+  }
+  .header-right {
+    order: 3;
+  }
+  .sidebar-left {
+    order: 4;
+  }
+  .main-content {
+    order: 5;
+  }
+  .sidebar-right {
+    order: 6;
+  }
+  .footer {
+    order: 7;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .header-left {
+    text-align: left;
+  }
+  .header-center {
+    display: none;
+  }
+  // place all the way on right
+  .header-right {
+    flex: 0 0 0;
+  }
+  .sidebar-left,
+  .sidebar-left ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: var(--spacing);
+    flex-direction: row;
+    text-align: left;
+    position: inherit;
+    justify-content: center;
+
+    // this centers, and provides tight box focussing for
+    // accessibility. I could not get center floating working
+    // with flex box.
+    .site-nav,
+    .site-nav a {
+      margin-inline: auto;
+    }
+    .site-nav a:after {
+      content: none !important;
+    }
+    .site-nav a:before {
+      content: ":";
+      padding-right: 10px;
+    }
+  }
+  .sidebar-right {
+    display: none;
+  }
+  .main-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .footer {
+    position: relative;
+    left: 0;
+    width: 100%;
+  }
+}
