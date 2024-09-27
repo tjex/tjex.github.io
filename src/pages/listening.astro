@@ -1,7 +1,21 @@
 ---
 import Layout from "../layouts/Page.astro";
 import MediaLink from "../components/MediaLink.astro";
-import music from "../data/music.json";
+
+import musicData from "../data/music.json";
+
+// Define the type for the music data
+type MusicItem = {
+    src: string;
+    artist: string;
+    work: string;
+    character: string;
+    vocals: string;
+};
+
+// Assert the type of musicData
+const music: MusicItem[] = musicData;
+
 
 const seo = {
     title: "Listening List",
@@ -19,13 +33,15 @@ const seo = {
         <a href="https://get.bandcamp.help/hc/en-us/articles/1500006084082-What-are-Bandcamp-s-fees">lion's share.</a>
     </p>
 
+    <!-- Create a two columned grid from entries. 
+        They collapse nicer than a list on small screens. -->
     {
-        music.map((e, i) => {
-        if (i % 2 === 0 )
+    music.map((_, i) => {
+    if (i % 2 === 0 && i < music.length - 1 )
                 return (
                 <div class=grid>
-                    <MediaLink src={e.src} artist={e.artist} work={e.work} vocals={e.vocals} character={e.character} />
-                    <MediaLink src={music[i+1].src} artist={music[i+1].artist} work={music[i+1].work} vocals={music[i+1].vocals} character={music[i+1].character} />
+                    <a href={`${music[i].src}`}> {music[i].artist} - {music[i].work}</a>
+                    <a href={`${music[i+1].src}`}> {music[i+1].artist} - {music[i+1].work}</a>
                 </div>
                 );
                 })
