@@ -5,26 +5,21 @@ import MediaLink from "../components/MediaLink.astro";
 const seo = {
     title: "Listening List",
     description: "External link archive of music I'm listening to",
-    index: "nofollow",
 };
+
+const { arr } = Astro.props;
 ---
 
 <Layout seo={seo}>
     <h1>Listening List</h1>
     <p>
-        Below is a collection of recommended listenings. If you like the general flavours of the below list, you can
-        find more on my <a href="https://bandcamp.com/tillman-jex">bandcamp fan page</a>. Just as in open source, if you
-        find that an artist provides value to you, consider buying their music from Bandcamp, the artist gets the
+        Some of what I listen to makes it here. If you like the general flavours of the below list, you can find more on
+        my <a href="https://bandcamp.com/tillman-jex">bandcamp fan page</a>. Just as in open source, if you find that an
+        artist provides value to you, consider supporting their work by buying their music from Bandcamp. The artist
+        gets the
         <a href="https://get.bandcamp.help/hc/en-us/articles/1500006084082-What-are-Bandcamp-s-fees">lion's share.</a>
     </p>
     <p>
-        Most music here is 'safe for work' (it can blend into your cognitive background). This is also the reason for
-        vocals 'yes/no', as vocals make it much harder to focus on anything but the music I find. "Genres" left out on
-        purpose to aid in unexpected discovery.
-        <br />
-    </p>
-
-    <div class="filterWrapper">
         <div class="grid">
             <MediaLink
                 src={"https://toscak7.bandcamp.com/album/suzuki"}
@@ -32,7 +27,6 @@ const seo = {
                 work={"Suzuki"}
                 character={"Electronic"}
                 vocals={"no"}
-                source={"Bandcamp"}
             />
             <MediaLink
                 src={"https://gebhardullmann.bandcamp.com/album/no-age"}
@@ -40,7 +34,6 @@ const seo = {
                 work={"No Age"}
                 character={"Ambient"}
                 vocals={"no"}
-                source={"Bandcamp"}
             />
         </div>
         <div class="grid">
@@ -50,7 +43,6 @@ const seo = {
                 work={"Cloud Ornament"}
                 character={"Ambient"}
                 vocals={"no"}
-                source={"Bandcamp"}
             />
             <MediaLink
                 src={"https://open.spotify.com/album/2AkKXfAVVI91CMNMdDxJs8?si=3JOz4oV1RSGuGshr4GUsHg"}
@@ -58,7 +50,6 @@ const seo = {
                 work={"IV"}
                 character={"Electronic"}
                 vocals={"yes"}
-                source={"Spotify"}
             />
         </div>
         <div class="grid">
@@ -68,7 +59,6 @@ const seo = {
                 work={"Jasper Sits Out"}
                 character={"Acoustic"}
                 vocals={"no"}
-                source={"Bandcamp"}
             />
             <MediaLink
                 src={"https://hymen-records.bandcamp.com/album/iron-city"}
@@ -76,7 +66,6 @@ const seo = {
                 work={"Iron City"}
                 character={"Electronic"}
                 vocals={"no"}
-                source={"Bandcamp"}
             />
         </div>
         <div class="grid">
@@ -86,7 +75,6 @@ const seo = {
                 work={"Colours of Air"}
                 character={"Ambient"}
                 vocals={"no"}
-                source={"Bandcamp"}
             />
             <MediaLink
                 src={"https://www.youtube.com/watch?v=OaLhSrdHCBs"}
@@ -94,7 +82,6 @@ const seo = {
                 work={"Haykakan Duduk"}
                 character={"Acoustic"}
                 vocals={"no"}
-                source={"Youtube"}
             />
         </div>
         <div class="grid">
@@ -104,7 +91,6 @@ const seo = {
                 work={"Ingrid Linnea"}
                 character={"Electronic"}
                 vocals={"no"}
-                source={"Bandcamp"}
             />
             <MediaLink
                 src={"https://biosphere.bandcamp.com/album/dropsonde-reissue-with-bonus-album"}
@@ -112,7 +98,6 @@ const seo = {
                 work={"Dropsonde"}
                 character={"Electronic"}
                 vocals={"no"}
-                source={"Bandcamp"}
             />
         </div>
         <div class="grid">
@@ -122,7 +107,6 @@ const seo = {
                 work={"GAIA 5"}
                 character={"Electronic"}
                 vocals={"no"}
-                source={"Bandcamp"}
             />
             <MediaLink
                 src={"https://sine-music.bandcamp.com/track/feel-love"}
@@ -130,7 +114,6 @@ const seo = {
                 work={"Feel Love"}
                 character={"Electronic"}
                 vocals={"no"}
-                source={"Bandcamp"}
             />
         </div>
         <div class="grid">
@@ -140,7 +123,6 @@ const seo = {
                 work={"Inverted Audio - Mix"}
                 character={"Electronic"}
                 vocals={"no"}
-                source={"Soundcloud"}
             />
             <MediaLink
                 src={"https://musicforprogramming.net/"}
@@ -148,7 +130,6 @@ const seo = {
                 work={"(various mixes)"}
                 character={"Electronic"}
                 vocals={"no"}
-                source={"Website"}
             />
         </div>
         <div class="grid">
@@ -158,15 +139,13 @@ const seo = {
                 work={"Angel milk - Don't Look Back"}
                 character={"Electronic"}
                 vocals={"yes"}
-                source={"Youtube"}
             />
             <MediaLink
                 src={"https://www.nts.live/shows/red-laser-records/episodes/red-laser-records-w-starion-tommy-walker-iii-dj-absolutely-shit-metrodome-2nd-february-2020"}
                 artist={"NTS"}
-                work={"Red Laser Records: Starion, (...)"}
+                work={"Red Laser Records: Station, (...)"}
                 character={"Electronic"}
                 vocals={"yes"}
-                source={"Podcast"}
             />
         </div>
         <div class="grid">
@@ -177,7 +156,6 @@ const seo = {
                 character={"Electronic"}
                 character={"Various"}
                 vocals={"no"}
-                source={"Online Radio"}
             />
             <MediaLink
                 src={"https://robertrich.com/album/vestiges/"}
@@ -185,7 +163,6 @@ const seo = {
                 work={"Vestiges"}
                 character={"Ambient"}
                 vocals={"no"}
-                source={"Bandcamp"}
             />
         </div>
         <div class="grid">
@@ -195,7 +172,6 @@ const seo = {
                 work={"Cosmos"}
                 character={"Electronic"}
                 vocals={"no"}
-                source={"Bandcamp"}
             />
             <MediaLink
                 src={"https://room40.bandcamp.com/album/glitter-in-my-tears"}
@@ -203,7 +179,6 @@ const seo = {
                 work={"Glitter in my Tears"}
                 character={"Electronic"}
                 vocals={"no"}
-                source={"Bandcamp"}
             />
         </div>
         <div class="grid">
@@ -213,7 +188,6 @@ const seo = {
                 work={"Picture in Picture"}
                 character={"Electronic"}
                 vocals={"no"}
-                source={"Bandcamp"}
             />
             <MediaLink
                 src={"https://www.youtube.com/watch?v=ZXJWO2FQ16c"}
@@ -221,7 +195,6 @@ const seo = {
                 work={"Music for 18 Musicians"}
                 character={"Classical"}
                 vocals={"no"}
-                source={"Youtube"}
             />
         </div>
         <div class="grid">
@@ -231,15 +204,13 @@ const seo = {
                 work={"Corporeal"}
                 character={"Electronic"}
                 vocals={"yes"}
-                source={"Bandcamp"}
             />
             <MediaLink
                 src={"https://www.youtube.com/playlist?list=OLAK5uy_m64aE84r9H7rUZtaK7GmjtGxpGmfC42L0"}
                 artist={"Groove Armada"}
-                work={"Goodbye Country (Hello Nightclub)"}
+                work={"Goodbye Country"}
                 character={"Electronic"}
                 vocals={"yes"}
-                source={"Youtube"}
             />
         </div>
         <div class="grid">
@@ -249,7 +220,6 @@ const seo = {
                 work={"Compro"}
                 character={"Electronic"}
                 vocals={"no"}
-                source={"Bandcamp"}
             />
             <MediaLink
                 src={"https://www.youtube.com/watch?v=OOWEY4MGzM8&list=OLAK5uy_kog7h-Mfv5sc02JhwsXqQOHlFtyTTeu-s&index=8"}
@@ -257,8 +227,8 @@ const seo = {
                 work={"dubnobasswithmyheadman"}
                 character={"Electronic"}
                 vocals={"no"}
-                source={"Youtube"}
             />
         </div>
-    </div>
+    </p>
 </Layout>
+
