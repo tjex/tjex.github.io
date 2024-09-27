@@ -1261,7 +1261,6 @@ blockquote footer {
 }
 
 span.secondary {
-  font-size: var(--font-small);
   color: var(--secondary);
 }
 
