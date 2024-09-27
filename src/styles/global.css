@@ -32,8 +32,8 @@
 
 [data-theme=light],
 :root:not([data-theme=dark]) {
-  --primary: hsl(195, 65%, 35%);
-  --primary-muted: hsl(195, 80%, 60%);
+  --primary: #000;
+  --primary-muted: hsl(205, 18%, 76%);
   --primary-focus: var(--primary);
   --primary-inverse: #fff;
   --secondary: hsl(205, 10%, 50%);
@@ -49,7 +49,7 @@
   --link-color: var(--color);
   --link-decoration-color: var(--color);
   --link-visited: var(--muted-color);
-  --link-visited-hover: hsl(269, 45%, 60%);
+  --link-visited-hover: var(--primary);
   --nav-link-color: var(--primary);
   --contrast: hsl(205, 30%, 15%);
   --contrast-hover: #000;
@@ -169,7 +169,7 @@
     --link-color: var(--color);
     --link-decoration-color: var(--color);
     --link-visited: var(--muted-color);
-    --link-visited-hover: hsl(269, 45%, 60%);
+    --link-visited-hover: var(--primary);
     --nav-link-color: var(--primary);
     --contrast: hsl(20, 20%, 70%);
     --contrast-hover: #fff;
@@ -289,7 +289,7 @@
   --link-color: var(--color);
   --link-decoration-color: var(--color);
   --link-visited: var(--muted-color);
-  --link-visited-hover: hsl(269, 45%, 60%);
+  --link-visited-hover: var(--primary);
   --nav-link-color: var(--primary);
   --contrast: hsl(20, 20%, 70%);
   --contrast-hover: #fff;
@@ -1265,6 +1265,13 @@ span.secondary {
   color: var(--secondary);
 }
 
+.pub-date {
+  font-family: "Fira Code", monospace;
+  font-size: var(--font-small);
+  color: var(--secondary);
+  text-align: right;
+}
+
 mark {
   padding: 0.125rem 0.25rem;
   background-color: var(--contrast);
@@ -1526,8 +1533,12 @@ td {
   text-align: start;
 }
 
-tr.striped:nth-child(odd) {
-  border-bottom: var(--border-width) solid var(--table-border-color);
+tr.content-list a {
+  text-decoration: none;
+}
+tr.content-list a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 tfoot th,
@@ -1543,6 +1554,10 @@ tfoot td {
 
 table[role=grid] tbody tr:nth-child(odd) {
   background-color: var(--table-row-stripped-background-color);
+}
+
+tr.striped:nth-child(odd) {
+  border-bottom: var(--border-width) solid var(--table-border-color);
 }
 
 :where(dl, ol, ul) {

@@ -2,7 +2,7 @@
 // tjex.net/blog (display of all blog posts)
 
 import Layout from "../../layouts/Page.astro";
-import PostPreview from "../../components/PostPreview.astro";
+import PostList from "../../components/PostList.astro";
 import TagsUnique from "../../components/TagsUnique.astro";
 import Paginator from "../../components/Paginator.astro";
 import * as colUtil from "../../scripts/collectionUtil.ts";
@@ -20,7 +20,7 @@ export async function getStaticPaths({ paginate }) {
             }))
             .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate)),
     );
-    return paginate(posts, { pageSize: 10 });
+    return paginate(posts, { pageSize: 15 });
 }
 
 const seo = {
@@ -37,7 +37,9 @@ const { page } = Astro.props;
         <TagsUnique collection={"blog"} style={"pill"} />
     </p>
     <table>
-        {page.data.map((post: any) => <PostPreview post={post} collection={"blog"} />)}
+        <tbody>
+            {page.data.map((post: any) => <PostList post={post} collection={"blog"} />)}
+        </tbody>
     </table>
     <Paginator page={page} />
 </Layout>
