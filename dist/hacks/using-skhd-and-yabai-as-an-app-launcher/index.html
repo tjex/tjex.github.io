@@ -1,0 +1,114 @@
+<!DOCTYPE html> <html lang="en"> <head><!-- Primary Meta Tags --><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="title" content="Using skhd and yabai as a launcher"><meta name="description" content="Mac doesn't have a good solution for launching and interfacting with terminal applications yet, this is my strategy in the meantime."><meta name="robots" content="all"><!-- browser tab title --><title>tjex • Using skhd and yabai as a launcher</title><!-- RSS --><link rel="alternate" type="application/rss+xml" title="Tillman Jex : tjex.net" href="https://tjex.net/rss.xml"><!-- Canonical --><link rel="canonical" href="https://tjex.net/hacks/using-skhd-and-yabai-as-an-app-launcher/"><!-- Favicons --><link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="48x48" href="/favicon/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://tjex.net/hacks/using-skhd-and-yabai-as-an-app-launcher/"><meta property="og:title" content="Using skhd and yabai as a launcher"><meta property="og:description" content="Mac doesn't have a good solution for launching and interfacting with terminal applications yet, this is my strategy in the meantime."><meta property="og:image" content="https://tjex.net/img/profile-square.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://tjex.net/hacks/using-skhd-and-yabai-as-an-app-launcher/"><meta property="twitter:title" content="Using skhd and yabai as a launcher"><meta property="twitter:description" content="Mac doesn't have a good solution for launching and interfacting with terminal applications yet, this is my strategy in the meantime."><meta property="twitter:image" content="https://tjex.net/img/profile-square.jpg"> <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Using skhd and yabai as a launcher","url":"https://tjex.net/blog/using-skhd-and-yabai-as-an-app-launcher","datePublished":"Tue Nov 21 2023 15:18:55 GMT+0100 (Central European Standard Time)","description":"Mac doesn't have a good solution for launching and interfacting with terminal applications yet, this is my strategy in the meantime.","author":{"@type":"Person","name":"tjex","image":{"@type":"ImageObject","url":"https://tjex.net/img/profile-square.jpg","width":488,"height":488},"url":"https://tjex.net","sameAs":["https://tjex.net/blog","undefined","undefined"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tjex.net/blog/"}}</script> <link rel="stylesheet" href="/_astro/_page_.BrpWBfjJ.css">
+<style>#themeToggle[data-astro-cid-lfoluaxz]{width:70px;height:70px;flex:0 0 auto}
+</style><script type="module" src="/_astro/hoisted.Dn1LBlWI.js"></script></head> <div class="wrapper"> <div class="header-wrapper"> <div class="header-left"> <a class="nav-link site-heading" href="/">tjex</a> </div><div class="header-right"> <button class="no-outline" id="themeToggle" aria-label="theme toggle" data-astro-cid-lfoluaxz> <svg id="icon-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" width="40" height="40" xml:space="preserve" data-astro-cid-lfoluaxz> <g data-astro-cid-lfoluaxz> <path d="M60,16.005c0,0,0.001,19.736,0.001,43.994c0,24.258-0.001,43.995-0.001,43.995c-24.258,0-43.994-19.736-43.994-43.995
+            C16.006,35.742,35.742,16.005,60,16.005 M60,5.005C29.627,5.005,5.006,29.626,5.006,60c0,30.372,24.622,54.995,54.994,54.995
+            S114.995,90.371,114.995,60C114.995,29.626,90.372,5.005,60,5.005L60,5.005z" data-astro-cid-lfoluaxz></path> </g> </svg> </button>  <!--
+is:inline includes the script directly into the page, instead 
+of budling it separately (Astro specific). This decreases load 
+time, which is important here to avoid theme flashing
+--> <script>
+  const themeToggle = document.getElementById("themeToggle");
+  const getTheme = () => localStorage.getItem("theme") || "dark";
+  const setTheme = (theme) => {
+    localStorage.setItem("theme", theme);
+    document.documentElement.dataset.theme = theme;
+    document.body.classList.add(theme);
+  };
+
+  // add the current theme from local storage to DOM, which 
+  // happens BEFORE rendering.
+  setTheme(getTheme())  
+
+  themeToggle.addEventListener("click", () => {
+    if (getTheme() == "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  });
+</script> </div> <div class="header-center"></div>  </div> <aside class="aside sidebar-left"> <nav class="nav-left"> <ul> <li><a class="nav-link" href="/blog">blog</a></li> <li><a class="nav-link" href="/hacks">hacks</a></li> <li><a class="nav-link" href="/projects">projects</a></li> <li><a class="nav-link" href="/listening">listening</a></li> <li><a class="nav-link" href="/contact">contact</a></li> </ul> </nav> </aside> <main class="main-content">       <article class="post-content__article"> <h1>Using skhd and yabai as a launcher</h1> <p class="post-info"> <span>Tillman Jex, <time>November 21, 2023</time></span><br> <span class="secondary">Tagged: </span> <a href="/tags/dotfiles">dotfiles</a>
+            <span></span> <br> <span class="secondary">License: </span> <a href="https://mit-license.org/" target="_blank" rel="noopener noreferrer">
+MIT
+</a> <br> <!-- if the post has been modified since original publication --> <span class="secondary"> Updated: </span><a rel="me" href="https://github.com/tjex/tjex.github.io/commits/main/src/content/hacks/using-skhd-and-yabai-as-an-app-launcher.mdx"> <time>November 29, 2023</time> </a> <br> <!-- for posts that refer to computer programs used --> <span> <span class="secondary">Versions: </span> <span> yabai: 6.0.1 ,  </span><span> skhd: 0.3.9 ,  </span><span> wezterm: 20230712  </span> </span> </p>  <h2 id="intro">Intro</h2>
+<p>One of the things I miss the most from my brief two month usage of GNU/Linux was
+the hackable, performant and joyfully simple selection of launchers available
+(e.g. dmenu, rofi, wofi, etc).</p>
+<p>I’m yet to find anything that operates the same on mac. There is
+<a href="https://github.com/oNaiPs/dmenu-mac">dmenu-mac</a> but for this particular use
+case, I couldn’t get it to play nice.</p>
+<p>So I looked to try hack together a solution from tools I already used. This lead
+me to using <a href="https://github.com/koekeishiya/skhd">skhd</a> and
+<a href="https://github.com/koekeishiya/yabai">yabai</a> as a ‘launcher’ of sorts. In this
+case, we’ll be setting up a keybind to bring up a terminal with
+<a href="https://github.com/gopasspw/gopass">gopass</a> already running. You can substitute
+any other program with gopass. If you can run it from the terminal, you can run
+it via skhd.</p>
+<p>For example, I have keybindst to brung up <a href="https://github.com/gokcehan/lf">lf</a>,
+english dictionary and my web browser.</p>
+<h2 id="configs">Configs</h2>
+<h3 id="skhd">skhd</h3>
+<p>The keybind comes first. skhd needs to launch a terminal instance and execute
+<code>gopass</code>. As I’m using <a href="https://wezfurlong.org/wezterm/">wezterm</a> (the best
+terminal emulator under the sun), the entry in <code>~/.config/skhd/skhdrc</code> looks
+like:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">alt</span><span style="color:#9ECBFF"> +</span><span style="color:#9ECBFF"> cmd</span><span style="color:#9ECBFF"> -</span><span style="color:#9ECBFF"> g</span><span style="color:#9ECBFF"> :</span><span style="color:#9ECBFF"> /Applications/WezTerm.app/Contents/MacOS/wezterm</span><span style="color:#9ECBFF"> start</span><span style="color:#9ECBFF"> zsh</span><span style="color:#79B8FF"> -l</span><span style="color:#79B8FF"> -c</span><span style="color:#9ECBFF"> gopass</span></span>
+<span class="line"></span></code></pre>
+<aside class="callout-note"> <p class="callout-note-title">note</p> <div class="callout-content"> <p>If you use a different terminal emulator, replace the app path with the
+appropriate path change.</p> </div> </aside>
+<p>Now we can hold down <code>alt</code> - <code>cmd</code> and press <code>g</code> to spawn a terminal instance
+with gopass running.</p>
+<p>The full application is needed as otherwise skhd will launch a new instance of
+the terminal emulator, rather than using the already running process.</p>
+<p>Some extra detail on the command:</p>
+<ul>
+<li><code>cli start</code> is
+<a href="https://wezfurlong.org/wezterm/cli/start.html?h=start">specific to wezterm</a>.</li>
+<li><code>zsh -l</code> starts the spawned terminal process as a login shell, which loads our
+environment variables (important for gopass as it needs to know gpg
+directories as well as the $PASSWORD_STORE_DIR).</li>
+<li><code>-c &lt;command&gt;</code> takes the first argument as a command to execute
+(<a href="https://zsh.sourceforge.io/Doc/Release/Invocation.html#Invocation">zsh docs</a>).</li>
+</ul>
+<aside class="callout-note"> <p class="callout-note-title">note</p> <div class="callout-content"> <p>In the case of a command with arguments, the entire call needs to be wrapped
+in quotes. This is because of how <code>-c</code> works. <code>bash ... cli spawn   --new-window zsh -l -c &quot;bkmr search --fzf&quot; </code></p> </div> </aside>
+<h3 id="yabai">yabai</h3>
+<p>yabai is built by the same developer and brings tiling window management to
+MacOS (the other major contender being
+<a href="https://github.com/ianyh/Amethyst">Amethyst</a>. With yabai we can also define
+rules for window management, which is how we’ll manage to get a new terminal
+instance running gopass to appear as a floating window in the center of the
+screen without altering the layout of our currently tiled windows.</p>
+<p>Currently, the spawned terminal will be tiled as per the default rules of yabai.
+But it’s nicer to have it pop up in the center of the screen (i.e. like a
+launcher would). To do this we define a
+<a href="https://github.com/koekeishiya/yabai/blob/master/doc/yabai.asciidoc#rule">rule</a>.</p>
+<p>In <code>~/.config/yabai/yabairc</code>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">yabai</span><span style="color:#79B8FF"> -m</span><span style="color:#9ECBFF"> rule</span><span style="color:#79B8FF"> --add</span><span style="color:#9ECBFF"> app=&quot;^WezTerm$&quot;</span><span style="color:#9ECBFF"> title=&quot;^gopass$&quot;</span><span style="color:#9ECBFF"> manage=off</span><span style="color:#9ECBFF"> grid=3:3:1:1:1:1</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>This informs yabai that when it encounters a window from WezTerm with the window
+title “gopass”, that it should <em>not</em> manage it (meaning don’t apply tiling
+rules) - however, we then apply our <em>own</em> tiling rules. The combination of these
+two ideas (don’t auto tile, but apply our own tiling) effectively means we can
+place a floating window where we please.</p>
+<p>It is therefore important you take note of how your terminal emulator titles
+your windows. Typically, the default is to name it either as the current working
+directory, or the running process.</p>
+<p>The <code>grid</code> sytax is as follows:
+<code>grid=&lt;rows&gt;:&lt;cols&gt;:&lt;start-x&gt;:&lt;start-y&gt;:&lt;width&gt;:&lt;height&gt;</code></p>
+<p>Broken down further:</p>
+<ul>
+<li><code>&lt;rows&gt;:&lt;cols&gt;</code> is how many divisions make up your custom grid. e.g. <code>3:3</code>
+gives you space for 9 windows.</li>
+<li><code>&lt;start-x&gt;:&lt;start-y&gt;</code> is which tile on the x axis and which on the y should
+the window be placed.</li>
+<li><code>&lt;width&gt;:&lt;height&gt;</code> defines how many tiles the window should span in x and y.</li>
+</ul>
+<aside class="callout-note"> <p class="callout-note-title">note</p> <div class="callout-content"> <p>The above dot points are as best I understand from the documentation. However,
+as you see from the screenshot below, the columns / rows are not evenly sized.
+So I’m not sure exactly what detail I’m missing there… But, it works…</p> </div> </aside>
+<p>Now when we execute the keybind, we get a floating window in the center which
+runs gopass.</p>
+<p><img src="/_astro/yabai-center-float.BFZsBgRY_Z29uoM3.webp" alt="floating terminal window placed in center of screen" width="1800" height="753" loading="lazy" decoding="async"></p> <hr> <div class="neighbourPost"> <a class="prevPost" href="/hacks/unmount-all-external-drives-shell-script"> Unmount all external drives with bash </a> <a class="nextPost" href="/hacks/installing-wezterm-on-a-raspberry-pi-or-linux-server"> Installing Wezterm on a Raspberry Pi / Linux server </a> </div>  </article>    </main> <aside class="aside sidebar-right"></aside> <div class="footer">
+Built with <a href="https://astro.build">Astro</a> and <a href="https://picocss.com">Pico CSS</a> •
+<a href="/privacy">Privacy</a> • <a href="/rss.xml" rel="me">RSS</a> </div> </div> </html>

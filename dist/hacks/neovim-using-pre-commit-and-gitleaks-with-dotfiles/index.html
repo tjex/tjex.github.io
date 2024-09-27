@@ -1,0 +1,110 @@
+<!DOCTYPE html> <html lang="en"> <head><!-- Primary Meta Tags --><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="title" content="Catching secrets in bare git repos using gitleaks and hooks"><meta name="description" content="Installing pre-commit requires its config to be at the root of a repo, but there is an extra detail when achieving this with a bare repository."><meta name="robots" content="all"><!-- browser tab title --><title>tjex • Catching secrets in bare git repos using gitleaks and hooks</title><!-- RSS --><link rel="alternate" type="application/rss+xml" title="Tillman Jex : tjex.net" href="https://tjex.net/rss.xml"><!-- Canonical --><link rel="canonical" href="https://tjex.net/hacks/neovim-using-pre-commit-and-gitleaks-with-dotfiles/"><!-- Favicons --><link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="48x48" href="/favicon/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://tjex.net/hacks/neovim-using-pre-commit-and-gitleaks-with-dotfiles/"><meta property="og:title" content="Catching secrets in bare git repos using gitleaks and hooks"><meta property="og:description" content="Installing pre-commit requires its config to be at the root of a repo, but there is an extra detail when achieving this with a bare repository."><meta property="og:image" content="https://tjex.net/img/profile-square.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://tjex.net/hacks/neovim-using-pre-commit-and-gitleaks-with-dotfiles/"><meta property="twitter:title" content="Catching secrets in bare git repos using gitleaks and hooks"><meta property="twitter:description" content="Installing pre-commit requires its config to be at the root of a repo, but there is an extra detail when achieving this with a bare repository."><meta property="twitter:image" content="https://tjex.net/img/profile-square.jpg"> <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Catching secrets in bare git repos using gitleaks and hooks","url":"https://tjex.net/blog/neovim-using-pre-commit-and-gitleaks-with-dotfiles","datePublished":"Thu May 02 2024 13:33:38 GMT+0200 (Central European Summer Time)","description":"Installing pre-commit requires its config to be at the root of a repo, but there is an extra detail when achieving this with a bare repository.","author":{"@type":"Person","name":"tjex","image":{"@type":"ImageObject","url":"https://tjex.net/img/profile-square.jpg","width":488,"height":488},"url":"https://tjex.net","sameAs":["https://tjex.net/blog","undefined","undefined"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tjex.net/blog/"}}</script> <link rel="stylesheet" href="/_astro/_page_.BrpWBfjJ.css">
+<style>#themeToggle[data-astro-cid-lfoluaxz]{width:70px;height:70px;flex:0 0 auto}
+</style><script type="module" src="/_astro/hoisted.Dn1LBlWI.js"></script></head> <div class="wrapper"> <div class="header-wrapper"> <div class="header-left"> <a class="nav-link site-heading" href="/">tjex</a> </div><div class="header-right"> <button class="no-outline" id="themeToggle" aria-label="theme toggle" data-astro-cid-lfoluaxz> <svg id="icon-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" width="40" height="40" xml:space="preserve" data-astro-cid-lfoluaxz> <g data-astro-cid-lfoluaxz> <path d="M60,16.005c0,0,0.001,19.736,0.001,43.994c0,24.258-0.001,43.995-0.001,43.995c-24.258,0-43.994-19.736-43.994-43.995
+            C16.006,35.742,35.742,16.005,60,16.005 M60,5.005C29.627,5.005,5.006,29.626,5.006,60c0,30.372,24.622,54.995,54.994,54.995
+            S114.995,90.371,114.995,60C114.995,29.626,90.372,5.005,60,5.005L60,5.005z" data-astro-cid-lfoluaxz></path> </g> </svg> </button>  <!--
+is:inline includes the script directly into the page, instead 
+of budling it separately (Astro specific). This decreases load 
+time, which is important here to avoid theme flashing
+--> <script>
+  const themeToggle = document.getElementById("themeToggle");
+  const getTheme = () => localStorage.getItem("theme") || "dark";
+  const setTheme = (theme) => {
+    localStorage.setItem("theme", theme);
+    document.documentElement.dataset.theme = theme;
+    document.body.classList.add(theme);
+  };
+
+  // add the current theme from local storage to DOM, which 
+  // happens BEFORE rendering.
+  setTheme(getTheme())  
+
+  themeToggle.addEventListener("click", () => {
+    if (getTheme() == "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  });
+</script> </div> <div class="header-center"></div>  </div> <aside class="aside sidebar-left"> <nav class="nav-left"> <ul> <li><a class="nav-link" href="/blog">blog</a></li> <li><a class="nav-link" href="/hacks">hacks</a></li> <li><a class="nav-link" href="/projects">projects</a></li> <li><a class="nav-link" href="/listening">listening</a></li> <li><a class="nav-link" href="/contact">contact</a></li> </ul> </nav> </aside> <main class="main-content">       <article class="post-content__article"> <h1>Catching secrets in bare git repos using gitleaks and hooks</h1> <p class="post-info"> <span>Tillman Jex, <time>May 02, 2024</time></span><br> <span class="secondary">Tagged: </span> <a href="/tags/dotfiles">dotfiles</a>
+            <span></span> <br> <span class="secondary">License: </span> <a href="https://mit-license.org/" target="_blank" rel="noopener noreferrer">
+MIT
+</a> <br> <!-- if the post has been modified since original publication -->  <br> <!-- for posts that refer to computer programs used -->  </p>  <p>Note: this article relates specifically to the dotfile tracking approach with
+bare git repositories as outlined
+<a href="https://www.atlassian.com/git/tutorials/dotfiles">here on Atlassian</a></p>
+<h2 id="background">Background</h2>
+<p><a href="https://github.com/gitleaks/gitleaks"><code>gitleaks</code></a> detects secrets in your
+staged files and warns you as you try to commit them. This has obvious value,
+and it’s a snappy process, so there is little reason not to implement it. This
+is particularly true when dealing with dotfiles, as they inherently deal with
+user configuration data (your data) in various forms.</p>
+<p>Getting this working in a regular git repository is simple and explained well in
+the respective documentation. However working with a bare git repository has
+some slight differences in detail. It is slightly more confusing still when
+working with bare repositories to track dotfiles.</p>
+<p>The crux of the problem is that <a href="https://pre-commit.com/"><code>pre-commit</code></a>, which
+is required to run <code>gitleaks</code>, wants to find a <code>.pre-commit-config.yaml</code> file in
+the repository’s root. This is in essence your <code>$HOME</code> directory, but because of
+the ‘detached’ way of working with the <code>$HOME</code> folder, simply placing the config
+file in <code>$HOME</code> and running <code>pre-commit install</code> will throw an error.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">$</span><span style="color:#9ECBFF"> pre-commit</span><span style="color:#9ECBFF"> install</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">An</span><span style="color:#9ECBFF"> error</span><span style="color:#9ECBFF"> has</span><span style="color:#9ECBFF"> occurred:</span><span style="color:#9ECBFF"> FatalError:</span><span style="color:#9ECBFF"> git</span><span style="color:#9ECBFF"> failed.</span><span style="color:#9ECBFF"> Is</span><span style="color:#9ECBFF"> it</span><span style="color:#9ECBFF"> installed,</span><span style="color:#9ECBFF"> and</span><span style="color:#9ECBFF"> are</span><span style="color:#9ECBFF"> you</span><span style="color:#9ECBFF"> in</span><span style="color:#9ECBFF"> a</span><span style="color:#9ECBFF"> Git</span><span style="color:#9ECBFF"> repository</span><span style="color:#9ECBFF"> directory?</span></span>
+<span class="line"><span style="color:#B392F0">Check</span><span style="color:#9ECBFF"> the</span><span style="color:#9ECBFF"> log</span><span style="color:#9ECBFF"> at</span><span style="color:#9ECBFF"> /Users/tjex/.cache/pre-commit/pre-commit.log</span></span>
+<span class="line"></span></code></pre>
+<h2 id="solution">Solution</h2>
+<p>What we actually need to do is add a worktree from within the <code>.git</code> folder
+itself, to complete this installation process.</p>
+<blockquote>
+<p>In keeping with the naming from the Atlassian tutorial and assuming the branch
+you’re working on is <code>main</code>.</p>
+</blockquote>
+<p>Install <code>pre-commit</code> as per the <a href="https://pre-commit.com/#install">docs</a>.</p>
+<p>Then add and enter into a worktree, creating a <code>.yaml</code> file for the
+<code>gitleaks</code> <a href="https://github.com/gitleaks/gitleaks?tab=readme-ov-file#pre-commit">requirements</a>.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># your git folder that holds the tracking information for your dotfiles</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> ~/.cfg</span></span>
+<span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> worktree</span><span style="color:#9ECBFF"> add</span><span style="color:#9ECBFF"> main</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> main</span></span>
+<span class="line"><span style="color:#B392F0">touch</span><span style="color:#9ECBFF"> .pre-commit-config.yaml</span></span>
+<span class="line"></span></code></pre>
+<p>Populate <code>.pre-commit-config.yaml</code> with contents as per the
+<code>gitleaks</code> <a href="https://github.com/gitleaks/gitleaks?tab=readme-ov-file#pre-commit">docs</a>.</p>
+<p>At time of writing:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#6A737D"># ~/.cfg/main/.pre-commit-config.yaml</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D">repos</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#85E89D">repo</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">https://github.com/gitleaks/gitleaks</span></span>
+<span class="line"><span style="color:#85E89D">    rev</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">v8.16.1</span></span>
+<span class="line"><span style="color:#85E89D">    hooks</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">      - </span><span style="color:#85E89D">id</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">gitleaks</span></span>
+<span class="line"></span></code></pre>
+<p>Then install the <code>gitleaks</code> hook with <code>pre-commit</code>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># we're still at: ~/.cfg/main</span></span>
+<span class="line"><span style="color:#B392F0">pre-config</span><span style="color:#9ECBFF"> autoupdate</span></span>
+<span class="line"><span style="color:#B392F0">pre-config</span><span style="color:#9ECBFF"> install</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> ~</span></span>
+<span class="line"></span></code></pre>
+<p>Now <code>gitleaks</code> and <code>pre-commit</code> are installed. You’ll find the <code>pre-commit</code> hook
+at <code>~/.cfg/hooks</code>.</p>
+<p>From here, <code>pre-commit</code> will still want to find the <code>.pre-commit-config.yaml</code> in
+your git (<code>$HOME</code>) root.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> ~</span></span>
+<span class="line"><span style="color:#B392F0">cp</span><span style="color:#9ECBFF"> ~/.cfg/main/.pre-commit-config.yaml</span><span style="color:#9ECBFF"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 'config' is the alias set as per the Atlassian tutorial</span></span>
+<span class="line"><span style="color:#B392F0">config</span><span style="color:#9ECBFF"> add</span><span style="color:#9ECBFF"> .pre-commit-config.yaml</span></span>
+<span class="line"><span style="color:#B392F0">config</span><span style="color:#9ECBFF"> commit</span><span style="color:#79B8FF"> -m</span><span style="color:#9ECBFF"> 'added pre-commit-config yaml'</span></span>
+<span class="line"></span></code></pre>
+<p>As you commit this file, you should see that <code>gitleaks</code> runs a secret check
+against the file 🤞</p>
+<p>If all is well, you can remove the worktree folder to tidy up a bit:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> ~/.cfg</span></span>
+<span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> worktree</span><span style="color:#9ECBFF"> remove</span><span style="color:#9ECBFF"> main</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span></span>
+<span class="line"></span></code></pre>
+<p>From now, <code>gitleaks</code> will run on your staged files, as you try to commit. Note:
+the <code>.pre-commit-config.yaml</code> file needs to remain in <code>$HOME</code> (which I
+personally find a bit annoying. If anyone knows otherwise, shoot me an email!)</p> <hr> <div class="neighbourPost"> <a class="prevPost" href="/hacks/aerc-automated-signature-selection"> Automated email signatures for aliases in aerc </a> <a class="nextPost" href="/hacks/open-mailto-links-with-terminal-programs"> Open mailto links with terminal applications on MacOS </a> </div>  </article>    </main> <aside class="aside sidebar-right"></aside> <div class="footer">
+Built with <a href="https://astro.build">Astro</a> and <a href="https://picocss.com">Pico CSS</a> •
+<a href="/privacy">Privacy</a> • <a href="/rss.xml" rel="me">RSS</a> </div> </div> </html>

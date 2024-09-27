@@ -1,0 +1,145 @@
+<!DOCTYPE html> <html lang="en"> <head><!-- Primary Meta Tags --><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="title" content="Using formatter.nvim and lsp format together"><meta name="description" content="Define which filetypes should be formatted using formatter.nvim, and format the rest with lsp."><meta name="robots" content="all"><!-- browser tab title --><title>tjex • Using formatter.nvim and lsp format together</title><!-- RSS --><link rel="alternate" type="application/rss+xml" title="Tillman Jex : tjex.net" href="https://tjex.net/rss.xml"><!-- Canonical --><link rel="canonical" href="https://tjex.net/hacks/neovim-using-formatter-nvim-and-lsp-format-together/"><!-- Favicons --><link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="48x48" href="/favicon/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://tjex.net/hacks/neovim-using-formatter-nvim-and-lsp-format-together/"><meta property="og:title" content="Using formatter.nvim and lsp format together"><meta property="og:description" content="Define which filetypes should be formatted using formatter.nvim, and format the rest with lsp."><meta property="og:image" content="https://tjex.net/img/profile-square.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://tjex.net/hacks/neovim-using-formatter-nvim-and-lsp-format-together/"><meta property="twitter:title" content="Using formatter.nvim and lsp format together"><meta property="twitter:description" content="Define which filetypes should be formatted using formatter.nvim, and format the rest with lsp."><meta property="twitter:image" content="https://tjex.net/img/profile-square.jpg"> <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Using formatter.nvim and lsp format together","url":"https://tjex.net/blog/neovim-using-formatter-nvim-and-lsp-format-together","datePublished":"Sat Nov 11 2023 19:42:17 GMT+0100 (Central European Standard Time)","description":"Define which filetypes should be formatted using formatter.nvim, and format the rest with lsp.","author":{"@type":"Person","name":"tjex","image":{"@type":"ImageObject","url":"https://tjex.net/img/profile-square.jpg","width":488,"height":488},"url":"https://tjex.net","sameAs":["https://tjex.net/blog","undefined","undefined"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tjex.net/blog/"}}</script> <link rel="stylesheet" href="/_astro/_page_.BrpWBfjJ.css">
+<style>#themeToggle[data-astro-cid-lfoluaxz]{width:70px;height:70px;flex:0 0 auto}
+</style><script type="module" src="/_astro/hoisted.Dn1LBlWI.js"></script></head> <div class="wrapper"> <div class="header-wrapper"> <div class="header-left"> <a class="nav-link site-heading" href="/">tjex</a> </div><div class="header-right"> <button class="no-outline" id="themeToggle" aria-label="theme toggle" data-astro-cid-lfoluaxz> <svg id="icon-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" width="40" height="40" xml:space="preserve" data-astro-cid-lfoluaxz> <g data-astro-cid-lfoluaxz> <path d="M60,16.005c0,0,0.001,19.736,0.001,43.994c0,24.258-0.001,43.995-0.001,43.995c-24.258,0-43.994-19.736-43.994-43.995
+            C16.006,35.742,35.742,16.005,60,16.005 M60,5.005C29.627,5.005,5.006,29.626,5.006,60c0,30.372,24.622,54.995,54.994,54.995
+            S114.995,90.371,114.995,60C114.995,29.626,90.372,5.005,60,5.005L60,5.005z" data-astro-cid-lfoluaxz></path> </g> </svg> </button>  <!--
+is:inline includes the script directly into the page, instead 
+of budling it separately (Astro specific). This decreases load 
+time, which is important here to avoid theme flashing
+--> <script>
+  const themeToggle = document.getElementById("themeToggle");
+  const getTheme = () => localStorage.getItem("theme") || "dark";
+  const setTheme = (theme) => {
+    localStorage.setItem("theme", theme);
+    document.documentElement.dataset.theme = theme;
+    document.body.classList.add(theme);
+  };
+
+  // add the current theme from local storage to DOM, which 
+  // happens BEFORE rendering.
+  setTheme(getTheme())  
+
+  themeToggle.addEventListener("click", () => {
+    if (getTheme() == "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  });
+</script> </div> <div class="header-center"></div>  </div> <aside class="aside sidebar-left"> <nav class="nav-left"> <ul> <li><a class="nav-link" href="/blog">blog</a></li> <li><a class="nav-link" href="/hacks">hacks</a></li> <li><a class="nav-link" href="/projects">projects</a></li> <li><a class="nav-link" href="/listening">listening</a></li> <li><a class="nav-link" href="/contact">contact</a></li> </ul> </nav> </aside> <main class="main-content">       <article class="post-content__article"> <h1>Using formatter.nvim and lsp format together</h1> <p class="post-info"> <span>Tillman Jex, <time>November 11, 2023</time></span><br> <span class="secondary">Tagged: </span> <a href="/tags/neovim">neovim</a>
+            <span></span> <br> <span class="secondary">License: </span> <a href="https://mit-license.org/" target="_blank" rel="noopener noreferrer">
+MIT
+</a> <br> <!-- if the post has been modified since original publication -->  <br> <!-- for posts that refer to computer programs used --> <span> <span class="secondary">Versions: </span> <span> neovim: 0.9 ,  </span><span> formatter.nvim: commit 34dcdfa  </span> </span> </p>  <p>For most filetypes, I prefer to use formatters provided by
+<a href="https://github.com/mhartington/formatter.nvim">formatter.nvim</a>. But there are
+some exceptions, for which I would use lsp format.</p>
+<p>To avoid having to manually decide and execute formatter.nvim or lsp format, we
+can define the decision logic within our formatter.nvim config and assign it to
+a singluar keybind.</p>
+<p>This allows us to simply hit our keybind for formatting, and based on our
+predefined logic, the file will either be formatted with formatter.nvim or lsp
+format.</p>
+<p>A basic config for formatter.nvim looks like this:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="lua"><code><span class="line"><span style="color:#79B8FF">require</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;formatter&quot;</span><span style="color:#E1E4E8">).</span><span style="color:#79B8FF">setup</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">	logging </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">	log_level </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> vim.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">levels</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">WARN</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">	filetype </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#6A737D">		-- Formatter configurations per filetype go here</span></span>
+<span class="line"><span style="color:#E1E4E8">		lua </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#6A737D">			-- format with stylua</span></span>
+<span class="line"><span style="color:#79B8FF">			require</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;formatter.filetypes.lua&quot;</span><span style="color:#E1E4E8">).</span><span style="color:#B392F0">stylua</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">		},</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">		-- Define formatter configurations for all filetypes</span></span>
+<span class="line"><span style="color:#E1E4E8">		[</span><span style="color:#9ECBFF">&quot;*&quot;</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#6A737D">			-- &quot;formatter.filetypes.any&quot; defines default configurations for any</span></span>
+<span class="line"><span style="color:#6A737D">			-- filetype</span></span>
+<span class="line"><span style="color:#79B8FF">			require</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;formatter.filetypes.any&quot;</span><span style="color:#E1E4E8">).</span><span style="color:#B392F0">remove_trailing_whitespace</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">		},</span></span>
+<span class="line"><span style="color:#E1E4E8">	},</span></span>
+<span class="line"><span style="color:#E1E4E8">})</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>The special <code>&quot;*&quot;</code> filetype, will be run on every call to <code>:Format</code> (the command
+that runs formatter.nvim).</p>
+<p>We can therefore define a function within <code>[&quot;*&quot;]</code> which checks whether we have
+assigned a formatter to a filetype in formatter.nvim, and if we haven’t, to
+execute <code>vim.lsp.buf.format()</code> instead.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="lua"><code><span class="line"><span style="color:#6A737D">-- ...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">[</span><span style="color:#9ECBFF">&quot;*&quot;</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">    function</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#F97583">        local</span><span style="color:#E1E4E8"> formatters </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> require</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;formatter.util&quot;</span><span style="color:#E1E4E8">).</span><span style="color:#79B8FF">get_available_formatters_for_ft</span><span style="color:#E1E4E8">(vim.</span><span style="color:#B392F0">bo</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">filetype</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#F97583"> #</span><span style="color:#E1E4E8">formatters </span><span style="color:#F97583">&gt;</span><span style="color:#79B8FF"> 0</span><span style="color:#F97583"> then</span></span>
+<span class="line"><span style="color:#79B8FF">            print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;formatted with formatter.nvim&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">            return</span></span>
+<span class="line"><span style="color:#F97583">        end</span></span>
+<span class="line"><span style="color:#6A737D">        -- check if there are any LSP formatters</span></span>
+<span class="line"><span style="color:#F97583">        local</span><span style="color:#E1E4E8"> lsp_clients </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> vim.</span><span style="color:#B392F0">lsp</span><span style="color:#E1E4E8">.</span><span style="color:#79B8FF">buf_get_clients</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#F97583">        for</span><span style="color:#E1E4E8"> _, client </span><span style="color:#F97583">in</span><span style="color:#79B8FF"> pairs</span><span style="color:#E1E4E8">(lsp_clients) </span><span style="color:#F97583">do</span></span>
+<span class="line"><span style="color:#F97583">            if</span><span style="color:#E1E4E8"> client.</span><span style="color:#B392F0">server_capabilities</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">document_formatting</span><span style="color:#F97583"> then</span></span>
+<span class="line"><span style="color:#79B8FF">                print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;formatted with lsp&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">                vim.</span><span style="color:#B392F0">lsp</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">buf</span><span style="color:#E1E4E8">.</span><span style="color:#79B8FF">format</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#F97583">                return</span></span>
+<span class="line"><span style="color:#F97583">            end</span></span>
+<span class="line"><span style="color:#F97583">        end</span></span>
+<span class="line"><span style="color:#79B8FF">        print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;no formatters found from formatter.nvim OR lsp&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">    end</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">},</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>All together it looks like this:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="lua"><code><span class="line"><span style="color:#F97583">local</span><span style="color:#E1E4E8"> bufopts </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> { noremap </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> true</span><span style="color:#E1E4E8">, silent </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> true</span><span style="color:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#E1E4E8">vim.</span><span style="color:#B392F0">keymap</span><span style="color:#E1E4E8">.</span><span style="color:#79B8FF">set</span><span style="color:#E1E4E8">({ </span><span style="color:#9ECBFF">&quot;v&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;n&quot; </span><span style="color:#E1E4E8">}, </span><span style="color:#9ECBFF">&quot;&lt;leader&gt;f&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;:Format&lt;cr&gt;&quot;</span><span style="color:#E1E4E8">, bufopts)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">require</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;formatter&quot;</span><span style="color:#E1E4E8">).</span><span style="color:#79B8FF">setup</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">	logging </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">	log_level </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> vim.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">levels</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">WARN</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">	filetype </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">		lua </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">			require</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;formatter.filetypes.lua&quot;</span><span style="color:#E1E4E8">).</span><span style="color:#B392F0">stylua</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">		},</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">		[</span><span style="color:#9ECBFF">&quot;*&quot;</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">			require</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;formatter.filetypes.any&quot;</span><span style="color:#E1E4E8">).</span><span style="color:#B392F0">remove_trailing_whitespace</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#F97583">			function</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#F97583">				local</span><span style="color:#E1E4E8"> formatters </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> require</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;formatter.util&quot;</span><span style="color:#E1E4E8">).</span><span style="color:#79B8FF">get_available_formatters_for_ft</span><span style="color:#E1E4E8">(vim.</span><span style="color:#B392F0">bo</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">filetype</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">				if</span><span style="color:#F97583"> #</span><span style="color:#E1E4E8">formatters </span><span style="color:#F97583">&gt;</span><span style="color:#79B8FF"> 0</span><span style="color:#F97583"> then</span></span>
+<span class="line"><span style="color:#79B8FF">					print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;formatted with formatter.nvim&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">					return</span></span>
+<span class="line"><span style="color:#F97583">				end</span></span>
+<span class="line"><span style="color:#F97583">				local</span><span style="color:#E1E4E8"> lsp_clients </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> vim.</span><span style="color:#B392F0">lsp</span><span style="color:#E1E4E8">.</span><span style="color:#79B8FF">buf_get_clients</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#F97583">				for</span><span style="color:#E1E4E8"> _, client </span><span style="color:#F97583">in</span><span style="color:#79B8FF"> pairs</span><span style="color:#E1E4E8">(lsp_clients) </span><span style="color:#F97583">do</span></span>
+<span class="line"><span style="color:#F97583">					if</span><span style="color:#E1E4E8"> client.</span><span style="color:#B392F0">server_capabilities</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">document_formatting</span><span style="color:#F97583"> then</span></span>
+<span class="line"><span style="color:#79B8FF">						print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;formatted with lsp&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">						vim.</span><span style="color:#B392F0">lsp</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">buf</span><span style="color:#E1E4E8">.</span><span style="color:#79B8FF">format</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#F97583">						return</span></span>
+<span class="line"><span style="color:#F97583">					end</span></span>
+<span class="line"><span style="color:#F97583">				end</span></span>
+<span class="line"><span style="color:#79B8FF">				print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;no formatters found from formatter.nvim OR lsp&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">			end</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">		},</span></span>
+<span class="line"><span style="color:#E1E4E8">	},</span></span>
+<span class="line"><span style="color:#E1E4E8">})</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>With this setup, if we run <code>:Format</code> on a lua file, we will format with
+formatter.nvim using stylua. If we wanted instead to format our lua files with
+<code>lua-language-server</code> (a lsp for lua), we can simply remove the config for lua
+filetypes:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="lua"><code><span class="line"><span style="color:#6A737D">-- ...</span></span>
+<span class="line"><span style="color:#E1E4E8">	filetype </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#6A737D">		-- lua = {</span></span>
+<span class="line"><span style="color:#6A737D">		-- 	require(&quot;formatter.filetypes.lua&quot;).stylua,</span></span>
+<span class="line"><span style="color:#6A737D">		-- },</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">		[</span><span style="color:#9ECBFF">&quot;*&quot;</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#79B8FF">			require</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;formatter.filetypes.any&quot;</span><span style="color:#E1E4E8">).</span><span style="color:#B392F0">remove_trailing_whitespace</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#F97583">			function</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#6A737D">                -- code below unchanged</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>For more context you can check the solution source
+<a href="https://github.com/mhartington/formatter.nvim/issues/192#issuecomment-1755651346">here in Github issues</a>.</p> <hr> <div class="neighbourPost"> <a class="prevPost" href="/hacks/fzf-directory-picker-widget"> Directory picker widget for fzf </a> <a class="nextPost" href="/hacks/unmount-all-external-drives-shell-script"> Unmount all external drives with bash </a> </div>  </article>    </main> <aside class="aside sidebar-right"></aside> <div class="footer">
+Built with <a href="https://astro.build">Astro</a> and <a href="https://picocss.com">Pico CSS</a> •
+<a href="/privacy">Privacy</a> • <a href="/rss.xml" rel="me">RSS</a> </div> </div> </html>
