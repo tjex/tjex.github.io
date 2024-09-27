@@ -1,7 +1,7 @@
 # tjex.net
 
 deploy: 
-	astro build
+	yarn build
 	git add -u
 	git commit -m "local build"
 	git push
@@ -9,4 +9,4 @@ deploy:
 clean:
 	rm -rf dist
 	mkdir dist
-	astro build
+	yarn build
