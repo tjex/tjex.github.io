@@ -1,0 +1,6 @@
+---
+import MediaLink from "../components/MediaLink.astro";
+import music from "../data/music.json";
+---
+
+{music.map((i) => <MediaLink artist={i.artist} work={i.work} />)}
