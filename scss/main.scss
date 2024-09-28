@@ -28,6 +28,7 @@ $enable-important: true;
 @import "variables";
 
 // Layout
+
 @import "layout/sectioning"; // body, header, main, footer
 @import "layout/document"; // html
 @import "layout/grid"; // .grid
@@ -39,13 +40,13 @@ $enable-important: true;
 @import "components/nav";
 
 // Content
-@import "content/typography"; // a, headings, p, ul, blockquote, ...
-@import "content/miscs"; // hr, template, [hidden], dialog, canvas
-@import "content/embedded"; // audio, canvas, iframe, img, svg, video
 @import "content/button"; // button, a[role=button], type=button, type=submit ...
-@import "content/table"; // table, tr, td, ...
-@import "content/lists"; // lists ...
 @import "content/code"; // pre, code, ...
+@import "content/embedded"; // audio, canvas, iframe, img, svg, video
+@import "content/lists"; // lists ...
+@import "content/miscs"; // hr, template, [hidden], dialog, canvas
+@import "content/table"; // table, tr, td, ...
+@import "content/typography"; // a, headings, p, ul, blockquote, ...
 
 // Utilities
 @import "utilities/accessibility"; // -ms-touch-action, aria-*

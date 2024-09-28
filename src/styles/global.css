@@ -421,7 +421,38 @@ body > footer {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding: var(--block-spacing-vertical) 0;
+  padding: var(--block-spacing-vertical) var(--block-spacing-horizontal);
+}
+@media (min-width: 576px) {
+  body > header,
+  body > main,
+  body > footer {
+    max-width: 510px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+@media (min-width: 900px) {
+  body > header,
+  body > main,
+  body > footer {
+    max-width: 900px;
+  }
+}
+@media (min-width: 1200px) {
+  body > header,
+  body > main,
+  body > footer {
+    max-width: 1200px;
+    font-size: 5rem;
+  }
+}
+@media (min-width: 1340px) {
+  body > header,
+  body > main,
+  body > footer {
+    max-width: 1340px;
+  }
 }
 
 section {
@@ -937,6 +968,369 @@ aside .nav-left a:after {
 }
 
 /**
+ * Button
+ */
+button {
+  margin: 0;
+  overflow: visible;
+  font-family: inherit;
+  text-transform: none;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin-bottom: var(--spacing);
+}
+
+[role=button] {
+  display: inline-block;
+  text-decoration: none;
+}
+
+button,
+input[type=submit],
+input[type=button],
+input[type=reset],
+[role=button] {
+  --background-color: var(--primary);
+  --border-color: var(--primary);
+  --color: var(--primary-inverse);
+  --box-shadow: var(--button-box-shadow, 0 0 0 rgba(0, 0, 0, 0));
+  padding: var(--form-element-spacing-vertical) var(--form-element-spacing-horizontal);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  outline: none;
+  background-color: var(--background-color);
+  box-shadow: var(--box-shadow);
+  color: var(--color);
+  font-weight: var(--font-weight);
+  font-size: 1rem;
+  line-height: var(--line-height);
+  text-align: center;
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition);
+}
+button:is([aria-current], :hover, :active, :focus),
+input[type=submit]:is([aria-current], :hover, :active, :focus),
+input[type=button]:is([aria-current], :hover, :active, :focus),
+input[type=reset]:is([aria-current], :hover, :active, :focus),
+[role=button]:is([aria-current], :hover, :active, :focus) {
+  --background-color: var(--primary-focus);
+  --border-color: var(--primary-focus);
+  --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0));
+  --color: var(--primary-inverse);
+}
+button:focus,
+input[type=submit]:focus,
+input[type=button]:focus,
+input[type=reset]:focus,
+[role=button]:focus {
+  --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
+    0 0 0 var(--outline-width) var(--primary-focus);
+}
+
+:is(button, input[type=submit], input[type=button], [role=button]).secondary,
+input[type=reset] {
+  --background-color: var(--secondary);
+  --border-color: var(--secondary);
+  --color: var(--secondary-inverse);
+  cursor: pointer;
+}
+:is(button, input[type=submit], input[type=button], [role=button]).secondary:is([aria-current], :hover, :active, :focus),
+input[type=reset]:is([aria-current], :hover, :active, :focus) {
+  --background-color: var(--secondary-hover);
+  --border-color: var(--secondary-hover);
+  --color: var(--secondary-inverse);
+}
+:is(button, input[type=submit], input[type=button], [role=button]).secondary:focus,
+input[type=reset]:focus {
+  --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
+    0 0 0 var(--outline-width) var(--secondary-focus);
+}
+
+:is(button, input[type=submit], input[type=button], [role=button]).contrast {
+  --background-color: var(--contrast);
+  --border-color: var(--contrast);
+  --color: var(--contrast-inverse);
+}
+:is(button, input[type=submit], input[type=button], [role=button]).contrast:is([aria-current], :hover, :active, :focus) {
+  --background-color: var(--contrast-hover);
+  --border-color: var(--contrast-hover);
+  --color: var(--contrast-inverse);
+}
+:is(button, input[type=submit], input[type=button], [role=button]).contrast:focus {
+  --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
+    0 0 0 var(--outline-width) var(--contrast-focus);
+}
+
+:is(button, input[type=submit], input[type=button], [role=button]).outline,
+input[type=reset].outline {
+  --background-color: transparent;
+  --color: var(--primary);
+}
+:is(button, input[type=submit], input[type=button], [role=button]).outline:is([aria-current], :hover, :active, :focus),
+input[type=reset].outline:is([aria-current], :hover, :active, :focus) {
+  --background-color: transparent;
+  --color: var(--primary-focus);
+}
+
+:is(button, input[type=submit], input[type=button], [role=button]).no-outline,
+input[type=reset].outline {
+  border: none;
+  --background-color: transparent;
+  --color: var(--primary);
+}
+:is(button, input[type=submit], input[type=button], [role=button]).no-outline:is([aria-current], :hover, :active, :focus),
+input[type=reset].outline:is([aria-current], :hover, :active, :focus) {
+  border: none;
+  --background-color: transparent;
+  --color: var(--primary-focus);
+}
+:is(button, input[type=submit], input[type=button], [role=button]).no-outline:focus,
+input[type=reset].outline:focus {
+  --box-shadow: none;
+}
+
+:is(button, input[type=submit], input[type=button], [role=button]).outline.secondary,
+input[type=reset].outline {
+  --color: var(--secondary);
+}
+:is(button, input[type=submit], input[type=button], [role=button]).outline.secondary:is([aria-current], :hover, :active, :focus),
+input[type=reset].outline:is([aria-current], :hover, :active, :focus) {
+  --color: var(--secondary-hover);
+}
+
+:is(button, input[type=submit], input[type=button], [role=button]).outline.contrast {
+  --color: var(--contrast);
+}
+:is(button, input[type=submit], input[type=button], [role=button]).outline.contrast:is([aria-current], :hover, :active, :focus) {
+  --color: var(--contrast-hover);
+}
+
+:where(button, [type=submit], [type=button], [type=reset], [role=button])[disabled],
+:where(fieldset[disabled]) :is(button, [type=submit], [type=button], [type=reset], [role=button]),
+a[role=button]:not([href]) {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/**
+ * Code
+ */
+@font-face {
+  font-family: "Fira Code";
+  font-style: normal;
+  font-weight: 300 400;
+  font-display: swap;
+  src: url("/fonts/woff2/FiraCode-VF.woff2") format("woff2-variations");
+}
+@supports (font-variation-settings: normal) {
+  code {
+    font-family: "Fira Code VF", monospace;
+  }
+}
+pre,
+code,
+kbd,
+samp {
+  font-size: var(--font-small);
+  font-family: "Fira Code", "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+pre {
+  -ms-overflow-style: scrollbar;
+  overflow: auto;
+}
+
+pre,
+code,
+kbd {
+  border-radius: var(--border-radius);
+  background: var(--code-background-color-inline);
+  font-weight: var(--font-weight);
+  line-height: initial;
+}
+
+code,
+kbd {
+  display: inline-block;
+  padding: 0.2rem 0.3rem;
+}
+
+pre {
+  display: block;
+  margin-bottom: var(--spacing);
+  overflow-x: auto;
+}
+pre > code {
+  display: block;
+  padding: var(--spacing);
+  background: none;
+  font-size: 14px;
+  line-height: var(--line-height);
+}
+
+code b {
+  color: var(--code-tag-color);
+  font-weight: var(--font-weight);
+}
+code i {
+  color: var(--code-property-color);
+  font-style: normal;
+}
+code u {
+  color: var(--code-value-color);
+  text-decoration: none;
+}
+code em {
+  color: var(--code-comment-color);
+  font-style: normal;
+}
+
+kbd {
+  background-color: var(--code-background-color-inline);
+  vertical-align: baseline;
+  font-weight: bolder;
+}
+
+/**
+ * Embedded content
+ */
+:where(audio, canvas, iframe, img, svg, video) {
+  vertical-align: middle;
+}
+
+audio,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+:where(iframe) {
+  border-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+:where(svg:not([fill])) {
+  fill: currentColor;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+:where(dl, ol, ul) {
+  padding-right: 0;
+  padding-left: var(--spacing);
+  padding-inline-start: var(--spacing);
+  padding-inline-end: 0;
+}
+:where(dl, ol, ul) li {
+  margin-bottom: calc(var(--typography-spacing-vertical) * 0.25);
+}
+
+:where(dl, ol, ul) :is(dl, ol, ul) {
+  margin: 0;
+  margin-top: calc(var(--typography-spacing-vertical) * 0.25);
+}
+
+ul li {
+  list-style-type: "―";
+  padding-left: 0.4rem;
+}
+
+/**
+ * Miscs
+ */
+hr {
+  height: 0;
+  border: 0;
+  border-top: 1px solid var(--muted-border-color);
+  color: inherit;
+}
+
+[hidden],
+template {
+  display: none !important;
+}
+
+canvas {
+  display: inline-block;
+}
+
+::selection {
+  background-color: var(--selection-background-color);
+  color: var(--selection-color);
+}
+
+/**
+ * Table
+ */
+:where(table) {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-indent: 0;
+}
+
+th,
+td {
+  padding: calc(var(--spacing) / 2) var(--spacing);
+  color: var(--color);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  text-align: left;
+  text-align: start;
+}
+
+tr.content-list a {
+  text-decoration: none;
+}
+tr.content-list a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+tfoot th,
+tfoot td {
+  border-top: var(--border-width) solid var(--table-border-color);
+  border-bottom: 0;
+  border-width: 3px;
+}
+
+:not(thead, tfoot) > * > td {
+  --font-size: 0.875em;
+}
+
+table[role=grid] tbody tr:nth-child(odd) {
+  background-color: var(--table-row-stripped-background-color);
+}
+
+tr.striped:nth-child(odd) {
+  border-bottom: var(--border-width) solid var(--table-border-color);
+}
+
+/**
  * Typography
  */
 :root {
@@ -1293,369 +1687,6 @@ ins {
 
 del {
   color: var(--del-color);
-}
-
-/**
- * Miscs
- */
-hr {
-  height: 0;
-  border: 0;
-  border-top: 1px solid var(--muted-border-color);
-  color: inherit;
-}
-
-[hidden],
-template {
-  display: none !important;
-}
-
-canvas {
-  display: inline-block;
-}
-
-::selection {
-  background-color: var(--selection-background-color);
-  color: var(--selection-color);
-}
-
-/**
- * Embedded content
- */
-:where(audio, canvas, iframe, img, svg, video) {
-  vertical-align: middle;
-}
-
-audio,
-video {
-  display: inline-block;
-}
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-:where(iframe) {
-  border-style: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  border-style: none;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-:where(svg:not([fill])) {
-  fill: currentColor;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-/**
- * Button
- */
-button {
-  margin: 0;
-  overflow: visible;
-  font-family: inherit;
-  text-transform: none;
-}
-
-button,
-[type=button],
-[type=reset],
-[type=submit] {
-  -webkit-appearance: button;
-}
-
-button {
-  display: block;
-  width: 100%;
-  margin-bottom: var(--spacing);
-}
-
-[role=button] {
-  display: inline-block;
-  text-decoration: none;
-}
-
-button,
-input[type=submit],
-input[type=button],
-input[type=reset],
-[role=button] {
-  --background-color: var(--primary);
-  --border-color: var(--primary);
-  --color: var(--primary-inverse);
-  --box-shadow: var(--button-box-shadow, 0 0 0 rgba(0, 0, 0, 0));
-  padding: var(--form-element-spacing-vertical) var(--form-element-spacing-horizontal);
-  border: var(--border-width) solid var(--border-color);
-  border-radius: var(--border-radius);
-  outline: none;
-  background-color: var(--background-color);
-  box-shadow: var(--box-shadow);
-  color: var(--color);
-  font-weight: var(--font-weight);
-  font-size: 1rem;
-  line-height: var(--line-height);
-  text-align: center;
-  cursor: pointer;
-  transition: background-color var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition);
-}
-button:is([aria-current], :hover, :active, :focus),
-input[type=submit]:is([aria-current], :hover, :active, :focus),
-input[type=button]:is([aria-current], :hover, :active, :focus),
-input[type=reset]:is([aria-current], :hover, :active, :focus),
-[role=button]:is([aria-current], :hover, :active, :focus) {
-  --background-color: var(--primary-focus);
-  --border-color: var(--primary-focus);
-  --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0));
-  --color: var(--primary-inverse);
-}
-button:focus,
-input[type=submit]:focus,
-input[type=button]:focus,
-input[type=reset]:focus,
-[role=button]:focus {
-  --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
-    0 0 0 var(--outline-width) var(--primary-focus);
-}
-
-:is(button, input[type=submit], input[type=button], [role=button]).secondary,
-input[type=reset] {
-  --background-color: var(--secondary);
-  --border-color: var(--secondary);
-  --color: var(--secondary-inverse);
-  cursor: pointer;
-}
-:is(button, input[type=submit], input[type=button], [role=button]).secondary:is([aria-current], :hover, :active, :focus),
-input[type=reset]:is([aria-current], :hover, :active, :focus) {
-  --background-color: var(--secondary-hover);
-  --border-color: var(--secondary-hover);
-  --color: var(--secondary-inverse);
-}
-:is(button, input[type=submit], input[type=button], [role=button]).secondary:focus,
-input[type=reset]:focus {
-  --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
-    0 0 0 var(--outline-width) var(--secondary-focus);
-}
-
-:is(button, input[type=submit], input[type=button], [role=button]).contrast {
-  --background-color: var(--contrast);
-  --border-color: var(--contrast);
-  --color: var(--contrast-inverse);
-}
-:is(button, input[type=submit], input[type=button], [role=button]).contrast:is([aria-current], :hover, :active, :focus) {
-  --background-color: var(--contrast-hover);
-  --border-color: var(--contrast-hover);
-  --color: var(--contrast-inverse);
-}
-:is(button, input[type=submit], input[type=button], [role=button]).contrast:focus {
-  --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
-    0 0 0 var(--outline-width) var(--contrast-focus);
-}
-
-:is(button, input[type=submit], input[type=button], [role=button]).outline,
-input[type=reset].outline {
-  --background-color: transparent;
-  --color: var(--primary);
-}
-:is(button, input[type=submit], input[type=button], [role=button]).outline:is([aria-current], :hover, :active, :focus),
-input[type=reset].outline:is([aria-current], :hover, :active, :focus) {
-  --background-color: transparent;
-  --color: var(--primary-focus);
-}
-
-:is(button, input[type=submit], input[type=button], [role=button]).no-outline,
-input[type=reset].outline {
-  border: none;
-  --background-color: transparent;
-  --color: var(--primary);
-}
-:is(button, input[type=submit], input[type=button], [role=button]).no-outline:is([aria-current], :hover, :active, :focus),
-input[type=reset].outline:is([aria-current], :hover, :active, :focus) {
-  border: none;
-  --background-color: transparent;
-  --color: var(--primary-focus);
-}
-:is(button, input[type=submit], input[type=button], [role=button]).no-outline:focus,
-input[type=reset].outline:focus {
-  --box-shadow: none;
-}
-
-:is(button, input[type=submit], input[type=button], [role=button]).outline.secondary,
-input[type=reset].outline {
-  --color: var(--secondary);
-}
-:is(button, input[type=submit], input[type=button], [role=button]).outline.secondary:is([aria-current], :hover, :active, :focus),
-input[type=reset].outline:is([aria-current], :hover, :active, :focus) {
-  --color: var(--secondary-hover);
-}
-
-:is(button, input[type=submit], input[type=button], [role=button]).outline.contrast {
-  --color: var(--contrast);
-}
-:is(button, input[type=submit], input[type=button], [role=button]).outline.contrast:is([aria-current], :hover, :active, :focus) {
-  --color: var(--contrast-hover);
-}
-
-:where(button, [type=submit], [type=button], [type=reset], [role=button])[disabled],
-:where(fieldset[disabled]) :is(button, [type=submit], [type=button], [type=reset], [role=button]),
-a[role=button]:not([href]) {
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-/**
- * Table
- */
-:where(table) {
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
-  text-indent: 0;
-}
-
-th,
-td {
-  padding: calc(var(--spacing) / 2) var(--spacing);
-  color: var(--color);
-  font-weight: var(--font-weight);
-  font-size: var(--font-size);
-  text-align: left;
-  text-align: start;
-}
-
-tr.content-list a {
-  text-decoration: none;
-}
-tr.content-list a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-}
-
-tfoot th,
-tfoot td {
-  border-top: var(--border-width) solid var(--table-border-color);
-  border-bottom: 0;
-  border-width: 3px;
-}
-
-:not(thead, tfoot) > * > td {
-  --font-size: 0.875em;
-}
-
-table[role=grid] tbody tr:nth-child(odd) {
-  background-color: var(--table-row-stripped-background-color);
-}
-
-tr.striped:nth-child(odd) {
-  border-bottom: var(--border-width) solid var(--table-border-color);
-}
-
-:where(dl, ol, ul) {
-  padding-right: 0;
-  padding-left: var(--spacing);
-  padding-inline-start: var(--spacing);
-  padding-inline-end: 0;
-}
-:where(dl, ol, ul) li {
-  margin-bottom: calc(var(--typography-spacing-vertical) * 0.25);
-}
-
-:where(dl, ol, ul) :is(dl, ol, ul) {
-  margin: 0;
-  margin-top: calc(var(--typography-spacing-vertical) * 0.25);
-}
-
-ul li {
-  list-style-type: "―";
-  padding-left: 0.4rem;
-}
-
-/**
- * Code
- */
-@font-face {
-  font-family: "Fira Code";
-  font-style: normal;
-  font-weight: 300 400;
-  font-display: swap;
-  src: url("/fonts/woff2/FiraCode-VF.woff2") format("woff2-variations");
-}
-@supports (font-variation-settings: normal) {
-  code {
-    font-family: "Fira Code VF", monospace;
-  }
-}
-pre,
-code,
-kbd,
-samp {
-  font-size: var(--font-small);
-  font-family: "Fira Code", "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-pre {
-  -ms-overflow-style: scrollbar;
-  overflow: auto;
-}
-
-pre,
-code,
-kbd {
-  border-radius: var(--border-radius);
-  background: var(--code-background-color-inline);
-  font-weight: var(--font-weight);
-  line-height: initial;
-}
-
-code,
-kbd {
-  display: inline-block;
-  padding: 0.2rem 0.3rem;
-}
-
-pre {
-  display: block;
-  margin-bottom: var(--spacing);
-  overflow-x: auto;
-}
-pre > code {
-  display: block;
-  padding: var(--spacing);
-  background: none;
-  font-size: 14px;
-  line-height: var(--line-height);
-}
-
-code b {
-  color: var(--code-tag-color);
-  font-weight: var(--font-weight);
-}
-code i {
-  color: var(--code-property-color);
-  font-style: normal;
-}
-code u {
-  color: var(--code-value-color);
-  text-decoration: none;
-}
-code em {
-  color: var(--code-comment-color);
-  font-style: normal;
-}
-
-kbd {
-  background-color: var(--code-background-color-inline);
-  vertical-align: baseline;
-  font-weight: bolder;
 }
 
 /**
