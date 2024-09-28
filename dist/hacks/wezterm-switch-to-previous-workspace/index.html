@@ -1,0 +1,157 @@
+<!DOCTYPE html> <html lang="en"> <head><!-- Primary Meta Tags --><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="title" content="Switch to previous workspace in WezTerm"><meta name="description" content="Custom lua implementation to switch between the current and previous workspaces in Wezterm."><meta name="robots" content="all"><!-- browser tab title --><title>tjex • Switch to previous workspace in WezTerm</title><!-- RSS --><link rel="alternate" type="application/rss+xml" title="Tillman Jex : tjex.net" href="https://tjex.net/rss.xml"><!-- Canonical --><link rel="canonical" href="https://tjex.net/hacks/wezterm-switch-to-previous-workspace/"><!-- Favicons --><link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="48x48" href="/favicon/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://tjex.net/hacks/wezterm-switch-to-previous-workspace/"><meta property="og:title" content="Switch to previous workspace in WezTerm"><meta property="og:description" content="Custom lua implementation to switch between the current and previous workspaces in Wezterm."><meta property="og:image" content="https://tjex.net/img/profile-square.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://tjex.net/hacks/wezterm-switch-to-previous-workspace/"><meta property="twitter:title" content="Switch to previous workspace in WezTerm"><meta property="twitter:description" content="Custom lua implementation to switch between the current and previous workspaces in Wezterm."><meta property="twitter:image" content="https://tjex.net/img/profile-square.jpg"> <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Switch to previous workspace in WezTerm","url":"https://tjex.net/blog/wezterm-switch-to-previous-workspace","datePublished":"Sun Jul 21 2024 22:20:32 GMT+0200 (Central European Summer Time)","description":"Custom lua implementation to switch between the current and previous workspaces in Wezterm.","author":{"@type":"Person","name":"tjex","image":{"@type":"ImageObject","url":"https://tjex.net/img/profile-square.jpg","width":488,"height":488},"url":"https://tjex.net","sameAs":["https://tjex.net/blog","undefined","undefined"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tjex.net/blog/"}}</script> <link rel="stylesheet" href="/_astro/_page_.BrpWBfjJ.css">
+<style>#themeToggle[data-astro-cid-lfoluaxz]{width:70px;height:70px;flex:0 0 auto}
+</style><script type="module" src="/_astro/hoisted.Dn1LBlWI.js"></script></head> <div class="wrapper"> <div class="header-wrapper"> <div class="header-left"> <a class="nav-link site-heading" href="/">tjex</a> </div><div class="header-right"> <button class="no-outline" id="themeToggle" aria-label="theme toggle" data-astro-cid-lfoluaxz> <svg id="icon-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" width="40" height="40" xml:space="preserve" data-astro-cid-lfoluaxz> <g data-astro-cid-lfoluaxz> <path d="M60,16.005c0,0,0.001,19.736,0.001,43.994c0,24.258-0.001,43.995-0.001,43.995c-24.258,0-43.994-19.736-43.994-43.995
+            C16.006,35.742,35.742,16.005,60,16.005 M60,5.005C29.627,5.005,5.006,29.626,5.006,60c0,30.372,24.622,54.995,54.994,54.995
+            S114.995,90.371,114.995,60C114.995,29.626,90.372,5.005,60,5.005L60,5.005z" data-astro-cid-lfoluaxz></path> </g> </svg> </button>  <!--
+is:inline includes the script directly into the page, instead 
+of budling it separately (Astro specific). This decreases load 
+time, which is important here to avoid theme flashing
+--> <script>
+  const themeToggle = document.getElementById("themeToggle");
+  const getTheme = () => localStorage.getItem("theme") || "dark";
+  const setTheme = (theme) => {
+    localStorage.setItem("theme", theme);
+    document.documentElement.dataset.theme = theme;
+    document.body.classList.add(theme);
+  };
+
+  // add the current theme from local storage to DOM, which 
+  // happens BEFORE rendering.
+  setTheme(getTheme())  
+
+  themeToggle.addEventListener("click", () => {
+    if (getTheme() == "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  });
+</script> </div> <div class="header-center"></div>  </div> <aside class="aside sidebar-left"> <nav class="nav-left"> <ul> <li><a class="nav-link" href="/blog">blog</a></li> <li><a class="nav-link" href="/hacks">hacks</a></li> <li><a class="nav-link" href="/projects">projects</a></li> <li><a class="nav-link" href="/listening">listening</a></li> <li><a class="nav-link" href="/contact">contact</a></li> </ul> </nav> </aside> <main class="main-content">       <article class="post-content__article"> <h1>Switch to previous workspace in WezTerm</h1> <p class="post-info"> <span>Tillman Jex, <time>July 21, 2024</time></span><br> <span class="secondary">Tagged: </span> <a href="/tags/terminal">terminal</a>
+            <span></span> <br> <span class="secondary">License: </span> <a href="https://mit-license.org/" target="_blank" rel="noopener noreferrer">
+MIT
+</a> <br> <!-- if the post has been modified since original publication -->  <br> <!-- for posts that refer to computer programs used -->  </p>  <p>One feature of tmux I really appreciated was switching between the previous and
+current workspaces. Unfortunately, this functionality is not yet native in
+WezTerm. So, the itch had to be scratched.</p>
+<p>WezTerm makes available a global storage object to the user at <code>wezterm.GLOBAL</code>
+(<a href="https://wezfurlong.org/wezterm/config/lua/wezterm/GLOBAL.html?h=global">docs</a>).
+With this, we can keep track of the previous workspace. The <code>previous_workspace</code>
+is effectively the <em>current workspace</em>, before we change workspaces.</p>
+<p>This required then two functions. One to update the <code>previous_workspace</code> field
+when simply changing to workspaces (e.g, via keybinds or commands) and one to
+toggle between the current and previous workspaces.</p>
+<p>The below can be found
+<a href="https://github.com/tjex/wezterm-conf/blob/cddec4a0ff4d4ef1cbcd2cab1d95dc4f1b89aaa6/functions/funcs.lua">here in my dotfiles</a>.</p>
+<p>Given my wezterm config directory structure:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>.</span></span>
+<span class="line"><span>├── design.lua</span></span>
+<span class="line"><span>├── events.lua</span></span>
+<span class="line"><span>├── functions</span></span>
+<span class="line"><span>│   ├── balance.lua</span></span>
+<span class="line"><span>│   ├── funcs.lua</span></span>
+<span class="line"><span>│   └── sessioniser.lua</span></span>
+<span class="line"><span>├── gui_startup.lua</span></span>
+<span class="line"><span>├── keybinds.lua</span></span>
+<span class="line"><span>├── launch_menu.lua</span></span>
+<span class="line"><span>├── status.lua</span></span>
+<span class="line"><span>├── util.lua</span></span>
+<span class="line"><span>└── wezterm.lua</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="lua"><code><span class="line"><span style="color:#6A737D">-- funcs.lua</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">local</span><span style="color:#E1E4E8"> wezterm </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> require</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"wezterm"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">local</span><span style="color:#E1E4E8"> act </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> wezterm.</span><span style="color:#B392F0">action</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">local</span><span style="color:#E1E4E8"> M </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">M.</span><span style="color:#B392F0">switch_workspace</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(window, pane, workspace)</span></span>
+<span class="line"><span style="color:#F97583">	local</span><span style="color:#E1E4E8"> current_workspace </span><span style="color:#F97583">=</span><span style="color:#B392F0"> window</span><span style="color:#E1E4E8">:</span><span style="color:#79B8FF">active_workspace</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#F97583">	if</span><span style="color:#E1E4E8"> current_workspace </span><span style="color:#F97583">==</span><span style="color:#E1E4E8"> workspace </span><span style="color:#F97583">then</span></span>
+<span class="line"><span style="color:#F97583">		return</span></span>
+<span class="line"><span style="color:#F97583">	end</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">	window</span><span style="color:#E1E4E8">:</span><span style="color:#79B8FF">perform_action</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">		act.</span><span style="color:#79B8FF">SwitchToWorkspace</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">			name </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> workspace,</span></span>
+<span class="line"><span style="color:#E1E4E8">		}),</span></span>
+<span class="line"><span style="color:#E1E4E8">		pane</span></span>
+<span class="line"><span style="color:#E1E4E8">	)</span></span>
+<span class="line"><span style="color:#E1E4E8">	wezterm.</span><span style="color:#B392F0">GLOBAL</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">previous_workspace</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> current_workspace</span></span>
+<span class="line"><span style="color:#F97583">end</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">M.</span><span style="color:#B392F0">switch_to_previous_workspace</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">(window, pane)</span></span>
+<span class="line"><span style="color:#F97583">	local</span><span style="color:#E1E4E8"> current_workspace </span><span style="color:#F97583">=</span><span style="color:#B392F0"> window</span><span style="color:#E1E4E8">:</span><span style="color:#79B8FF">active_workspace</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#F97583">	local</span><span style="color:#E1E4E8"> workspace </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> wezterm.</span><span style="color:#B392F0">GLOBAL</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">previous_workspace</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">	if</span><span style="color:#E1E4E8"> current_workspace </span><span style="color:#F97583">==</span><span style="color:#E1E4E8"> workspace </span><span style="color:#F97583">or</span><span style="color:#E1E4E8"> wezterm.</span><span style="color:#B392F0">GLOBAL</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">previous_workspace</span><span style="color:#F97583"> ==</span><span style="color:#79B8FF"> nil</span><span style="color:#F97583"> then</span></span>
+<span class="line"><span style="color:#F97583">		return</span></span>
+<span class="line"><span style="color:#F97583">	end</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">	M.</span><span style="color:#79B8FF">switch_workspace</span><span style="color:#E1E4E8">(window, pane, workspace)</span></span>
+<span class="line"><span style="color:#F97583">end</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">return</span><span style="color:#E1E4E8"> M</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="lua"><code><span class="line"><span style="color:#6A737D">-- keybinds.lua</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">local</span><span style="color:#E1E4E8"> wezterm </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> require</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"wezterm"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">local</span><span style="color:#E1E4E8"> func </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> require</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"functions.funcs"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">config.</span><span style="color:#B392F0">keys</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">			key </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "l"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">			mods </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "ALT"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">			action </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> wezterm.</span><span style="color:#79B8FF">action_callback</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">function</span><span style="color:#E1E4E8">(window, pane)</span></span>
+<span class="line"><span style="color:#E1E4E8">				func.</span><span style="color:#79B8FF">switch_to_last_workspace</span><span style="color:#E1E4E8">(window, pane)</span></span>
+<span class="line"><span style="color:#F97583">			end</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#E1E4E8">		},</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>As mentioned, what’s essential, is that any calls to
+wezterm.action.SwitchToWorkspace need to be replaced with the switch_workspace()
+function, which is effectively a wrapper around this call along with the
+wezterm.GLOBAL.previous_workspace logic.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="lua"><code><span class="line"><span style="color:#E1E4E8">config.</span><span style="color:#B392F0">keys</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">			key </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "2"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">			mods </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "ALT"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">			action </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> wezterm.</span><span style="color:#79B8FF">action_callback</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">function</span><span style="color:#E1E4E8">(window, pane)</span></span>
+<span class="line"><span style="color:#E1E4E8">				func.</span><span style="color:#79B8FF">switch_workspace</span><span style="color:#E1E4E8">(window, pane, </span><span style="color:#9ECBFF">"admin"</span><span style="color:#E1E4E8">) </span><span style="color:#6A737D">-- switch to 'admin' workspace</span></span>
+<span class="line"><span style="color:#F97583">			end</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#E1E4E8">		},</span></span>
+<span class="line"></span></code></pre>
+<p>Or if that’s too clunky to bake into another functionality, you can also simply
+update the <code>previous_workspace</code> field before switching workspaces, like here in
+the sessioniser function
+(<a href="https://github.com/wez/wezterm/discussions/4796">from keturiosakys</a>).</p>
+<p><a href="https://github.com/tjex/wezterm-conf/blob/cddec4a0ff4d4ef1cbcd2cab1d95dc4f1b89aaa6/functions/sessioniser.lua">See code in full context</a>.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="lua"><code><span class="line"><span style="color:#6A737D">-- ... more code</span></span>
+<span class="line"><span style="color:#6A737D">	-- update previous_workspace before changing to new workspace.</span></span>
+<span class="line"><span style="color:#E1E4E8">	wezterm.</span><span style="color:#B392F0">GLOBAL</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">previous_workspace</span><span style="color:#F97583"> =</span><span style="color:#B392F0"> window</span><span style="color:#E1E4E8">:</span><span style="color:#79B8FF">active_workspace</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#B392F0">	window</span><span style="color:#E1E4E8">:</span><span style="color:#79B8FF">perform_action</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">		act.</span><span style="color:#79B8FF">InputSelector</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">			action </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> wezterm.</span><span style="color:#79B8FF">action_callback</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">function</span><span style="color:#E1E4E8">(win, _, id, label)</span></span>
+<span class="line"><span style="color:#F97583">				if</span><span style="color:#F97583"> not</span><span style="color:#E1E4E8"> id </span><span style="color:#F97583">and</span><span style="color:#F97583"> not</span><span style="color:#E1E4E8"> label </span><span style="color:#F97583">then</span></span>
+<span class="line"><span style="color:#E1E4E8">					wezterm.</span><span style="color:#79B8FF">log_info</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"Cancelled"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">				else</span></span>
+<span class="line"><span style="color:#E1E4E8">					wezterm.</span><span style="color:#79B8FF">log_info</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"Selected " </span><span style="color:#F97583">..</span><span style="color:#E1E4E8"> label)</span></span>
+<span class="line"><span style="color:#B392F0">					win</span><span style="color:#E1E4E8">:</span><span style="color:#79B8FF">perform_action</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">						act.</span><span style="color:#79B8FF">SwitchToWorkspace</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">							name </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> id,</span></span>
+<span class="line"><span style="color:#E1E4E8">							spawn </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> { cwd </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> home </span><span style="color:#F97583">..</span><span style="color:#E1E4E8"> label },</span></span>
+<span class="line"><span style="color:#E1E4E8">						}),</span></span>
+<span class="line"><span style="color:#E1E4E8">						pane</span></span>
+<span class="line"><span style="color:#E1E4E8">					)</span></span>
+<span class="line"><span style="color:#F97583">				end</span></span>
+<span class="line"><span style="color:#F97583">			end</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#E1E4E8">			fuzzy </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">			title </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "Select project"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">			choices </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> projects,</span></span>
+<span class="line"><span style="color:#E1E4E8">		}),</span></span>
+<span class="line"><span style="color:#E1E4E8">		pane</span></span>
+<span class="line"><span style="color:#E1E4E8">	)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">-- ... more code</span></span>
+<span class="line"></span></code></pre> <hr> <div class="neighbourPost"> <a class="prevPost" href="/hacks/youtube-get-channel-rss-feed-script"> Get rss feed from a Youtube channel </a> <a class="nextPost" href="/hacks/write-in-neovim-everywhere"> Write in neovim anywhere and everywhere </a> </div>  </article>    </main> <aside class="aside sidebar-right"></aside> <div class="footer">
+Built with <a href="https://astro.build">Astro</a> and <a href="https://picocss.com">Pico CSS</a> •
+<a href="/privacy">Privacy</a> • <a href="/rss.xml" rel="me">RSS</a> </div> </div> </html>
