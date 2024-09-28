@@ -12,5 +12,5 @@ deploy: css
 	yarn build
 	git add dist src/styles
 	git commit -m "local build"
-	git push
+	git push origin deploy
 
