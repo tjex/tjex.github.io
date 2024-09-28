@@ -8,9 +8,11 @@ clean:
 css:
 	sass scss/main.scss src/styles/global.css
 
-deploy: css
+deploy: 
+	make css
 	yarn build
-	git add dist src/styles
-	git commit -m "local build"
-	git push origin deploy
+	git add -f dist src/styles
+	git commit -m "build and deploy"
+	git push origin main:deploy
+
 
