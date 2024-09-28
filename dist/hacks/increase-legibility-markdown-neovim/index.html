@@ -1,0 +1,64 @@
+<!DOCTYPE html> <html lang="en"> <head><!-- Primary Meta Tags --><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="title" content="Increase legibility of markdown in Neovim"><meta name="description" content="Hide link paths, code fences and other symbols that make raw Markdown a bit difficult to read."><meta name="robots" content="all"><!-- browser tab title --><title>tjex • Increase legibility of markdown in Neovim</title><!-- RSS --><link rel="alternate" type="application/rss+xml" title="Tillman Jex : tjex.net" href="https://tjex.net/rss.xml"><!-- Canonical --><link rel="canonical" href="https://tjex.net/hacks/increase-legibility-markdown-neovim/"><!-- Favicons --><link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="48x48" href="/favicon/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://tjex.net/hacks/increase-legibility-markdown-neovim/"><meta property="og:title" content="Increase legibility of markdown in Neovim"><meta property="og:description" content="Hide link paths, code fences and other symbols that make raw Markdown a bit difficult to read."><meta property="og:image" content="https://tjex.net/img/profile-square.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://tjex.net/hacks/increase-legibility-markdown-neovim/"><meta property="twitter:title" content="Increase legibility of markdown in Neovim"><meta property="twitter:description" content="Hide link paths, code fences and other symbols that make raw Markdown a bit difficult to read."><meta property="twitter:image" content="https://tjex.net/img/profile-square.jpg"> <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Increase legibility of markdown in Neovim","url":"https://tjex.net/blog/increase-legibility-markdown-neovim","datePublished":"Sun Jan 21 2024 23:29:03 GMT+0100 (Central European Standard Time)","description":"Hide link paths, code fences and other symbols that make raw Markdown a bit difficult to read.","author":{"@type":"Person","name":"tjex","image":{"@type":"ImageObject","url":"https://tjex.net/img/profile-square.jpg","width":488,"height":488},"url":"https://tjex.net","sameAs":["https://tjex.net/blog","undefined","undefined"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tjex.net/blog/"}}</script> <link rel="stylesheet" href="/_astro/_page_.BrpWBfjJ.css">
+<style>#themeToggle[data-astro-cid-lfoluaxz]{width:70px;height:70px;flex:0 0 auto}
+</style><script type="module" src="/_astro/hoisted.CNCQv4ZC.js"></script></head> <div class="wrapper"> <div class="header-wrapper"> <div class="header-left"> <a class="nav-link site-heading" href="/">tjex</a> </div><div class="header-right"> <button class="no-outline" id="themeToggle" aria-label="theme toggle" data-astro-cid-lfoluaxz> <svg id="icon-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" width="40" height="40" xml:space="preserve" data-astro-cid-lfoluaxz> <g data-astro-cid-lfoluaxz> <path d="M60,16.005c0,0,0.001,19.736,0.001,43.994c0,24.258-0.001,43.995-0.001,43.995c-24.258,0-43.994-19.736-43.994-43.995
+            C16.006,35.742,35.742,16.005,60,16.005 M60,5.005C29.627,5.005,5.006,29.626,5.006,60c0,30.372,24.622,54.995,54.994,54.995
+            S114.995,90.371,114.995,60C114.995,29.626,90.372,5.005,60,5.005L60,5.005z" data-astro-cid-lfoluaxz></path> </g> </svg> </button>  <!--
+is:inline includes the script directly into the page, instead 
+of budling it separately (Astro specific). This decreases load 
+time, which is important here to avoid theme flashing
+--> <script>
+  const themeToggle = document.getElementById("themeToggle");
+  const getTheme = () => localStorage.getItem("theme") || "dark";
+  const setTheme = (theme) => {
+    localStorage.setItem("theme", theme);
+    document.documentElement.dataset.theme = theme;
+    document.body.classList.add(theme);
+  };
+
+  // add the current theme from local storage to DOM, which 
+  // happens BEFORE rendering.
+  setTheme(getTheme())  
+
+  themeToggle.addEventListener("click", () => {
+    if (getTheme() == "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  });
+</script> </div> <div class="header-center"></div>  </div> <aside class="aside sidebar-left"> <nav class="nav-left"> <ul> <li><a class="nav-link" href="/blog">blog</a></li> <li><a class="nav-link" href="/hacks">hacks</a></li> <li><a class="nav-link" href="/projects">projects</a></li> <li><a class="nav-link" href="/listening">listening</a></li> <li><a class="nav-link" href="/contact">contact</a></li> </ul> </nav> </aside> <main class="main-content">       <article class="post-content__article"> <h1>Increase legibility of markdown in Neovim</h1> <p class="post-info"> <span>Tillman Jex, <time>January 21, 2024</time></span><br> <span class="secondary">Tagged: </span> <a href="/tags/neovim">neovim</a>
+            <span>, </span><a href="/tags/dotfiles">dotfiles</a>
+            <span></span> <br> <span class="secondary">License: </span> <a href="https://mit-license.org/" target="_blank" rel="noopener noreferrer">
+MIT
+</a> <br> <!-- if the post has been modified since original publication -->  <br> <!-- for posts that refer to computer programs used -->  </p>  <p>In vim/neovim, we can set specific syntax rules per filetype, just like we can
+set specific keybinds or settings per filetype.</p>
+<p>With the below settings, links that follow markdown sytax such as
+<code>[link title](link/path)</code>, as well as <code>[[wiki link style]]</code>, will have all but
+the link’s text hidden, meaning your eyes don’t have to drag over unnecessary
+information.</p>
+<p>When your cursor is on the same line as a link, the extra syntax / link path
+gets expanded, so you can still see that detail if and when you want.</p>
+<p>This makes workin with markdown <em>so</em> much better.</p>
+<p>Make a folder <code>nvim/after/syntax</code> and create the file <code>markdown.vim</code> inside:</p>
+<p><code>nvim/after/syntax/markdown.vim</code></p>
+<p>Within that file, paste this:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="vim"><code><span class="line"><span style="color:#6A737D">" markdownWikiLink is a new region</span></span>
+<span class="line"><span style="color:#F97583">syn</span><span style="color:#79B8FF"> region</span><span style="color:#E1E4E8"> markdownWikiLink </span><span style="color:#F97583">matchgroup=</span><span style="color:#E1E4E8">markdownLinkDelimiter </span><span style="color:#F97583">start=</span><span style="color:#9ECBFF">"\[\["</span><span style="color:#F97583"> end=</span><span style="color:#9ECBFF">"\]\]"</span><span style="color:#F97583"> contains=</span><span style="color:#E1E4E8">markdownUrl </span><span style="color:#F97583">keepend</span><span style="color:#F97583"> oneline</span><span style="color:#E1E4E8"> concealends</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">" markdownLinkText is copied from runtime files with 'concealends' appended</span></span>
+<span class="line"><span style="color:#F97583">syn</span><span style="color:#79B8FF"> region</span><span style="color:#E1E4E8"> markdownLinkText </span><span style="color:#F97583">matchgroup=</span><span style="color:#E1E4E8">markdownLinkTextDelimiter </span><span style="color:#F97583">start=</span><span style="color:#9ECBFF">"!\=\[\%(\%(\_[^][]\|\[\_[^][]*\]\)*]\%( \=[[(]\)\)\@="</span><span style="color:#F97583"> end=</span><span style="color:#9ECBFF">"\]\%( \=[[(]\)\@="</span><span style="color:#F97583"> nextgroup=</span><span style="color:#E1E4E8">markdownLink,markdownId </span><span style="color:#F97583">skipwhite</span><span style="color:#F97583"> contains=</span><span style="color:#E1E4E8">@markdownInline,markdownLineStart concealends</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">" markdownLink is copied from runtime files with 'conceal' appended</span></span>
+<span class="line"><span style="color:#F97583">syn</span><span style="color:#79B8FF"> region</span><span style="color:#E1E4E8"> markdownLink </span><span style="color:#F97583">matchgroup=</span><span style="color:#E1E4E8">markdownLinkDelimiter </span><span style="color:#F97583">start=</span><span style="color:#9ECBFF">"("</span><span style="color:#F97583"> end=</span><span style="color:#9ECBFF">")"</span><span style="color:#F97583"> contains=</span><span style="color:#E1E4E8">markdownUrl </span><span style="color:#F97583">keepend</span><span style="color:#F97583"> contained</span><span style="color:#E1E4E8"> conceal</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>You can color the links by targeting the <code>Underlined</code> highlight group.</p>
+<p>For example, with colorbuddy:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="lua"><code><span class="line"><span style="color:#E1E4E8">Group.</span><span style="color:#79B8FF">new</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"underlined"</span><span style="color:#E1E4E8">, colors.</span><span style="color:#B392F0">quart</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">nil</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">nil</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">-- or to actually include underlines under link text</span></span>
+<span class="line"><span style="color:#E1E4E8">Group.</span><span style="color:#79B8FF">new</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"underlined"</span><span style="color:#E1E4E8">, colors.</span><span style="color:#B392F0">quart</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">nil</span><span style="color:#E1E4E8">, styles.</span><span style="color:#B392F0">underline</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre> <hr> <div class="neighbourPost"> <a class="prevPost" href="/hacks/displaying-link-outlines-only-when-tabbing"> Display link outlines only when tabbing </a> <a class="nextPost" href="/hacks/neovim-vertical-window-splits-by-default-with-exceptions"> Vertical window splits by default, with exceptions </a> </div>  </article>    </main> <aside class="aside sidebar-right"></aside> <div class="footer">
+Built with <a href="https://astro.build">Astro</a> and <a href="https://picocss.com">Pico CSS</a> •
+<a href="/privacy">Privacy</a> • <a href="/rss.xml" rel="me">RSS</a> </div> </div> </html>

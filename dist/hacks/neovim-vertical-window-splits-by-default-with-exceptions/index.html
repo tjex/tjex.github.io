@@ -1,0 +1,78 @@
+<!DOCTYPE html> <html lang="en"> <head><!-- Primary Meta Tags --><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="title" content="Vertical window splits by default, with exceptions"><meta name="description" content="Use autocommands to set all window splits in Neovim to open vertically with optional exceptions."><meta name="robots" content="all"><!-- browser tab title --><title>tjex • Vertical window splits by default, with exceptions</title><!-- RSS --><link rel="alternate" type="application/rss+xml" title="Tillman Jex : tjex.net" href="https://tjex.net/rss.xml"><!-- Canonical --><link rel="canonical" href="https://tjex.net/hacks/neovim-vertical-window-splits-by-default-with-exceptions/"><!-- Favicons --><link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="48x48" href="/favicon/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://tjex.net/hacks/neovim-vertical-window-splits-by-default-with-exceptions/"><meta property="og:title" content="Vertical window splits by default, with exceptions"><meta property="og:description" content="Use autocommands to set all window splits in Neovim to open vertically with optional exceptions."><meta property="og:image" content="https://tjex.net/img/profile-square.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://tjex.net/hacks/neovim-vertical-window-splits-by-default-with-exceptions/"><meta property="twitter:title" content="Vertical window splits by default, with exceptions"><meta property="twitter:description" content="Use autocommands to set all window splits in Neovim to open vertically with optional exceptions."><meta property="twitter:image" content="https://tjex.net/img/profile-square.jpg"> <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Vertical window splits by default, with exceptions","url":"https://tjex.net/blog/neovim-vertical-window-splits-by-default-with-exceptions","datePublished":"Sun Apr 14 2024 15:13:24 GMT+0200 (Central European Summer Time)","description":"Use autocommands to set all window splits in Neovim to open vertically with optional exceptions.","author":{"@type":"Person","name":"tjex","image":{"@type":"ImageObject","url":"https://tjex.net/img/profile-square.jpg","width":488,"height":488},"url":"https://tjex.net","sameAs":["https://tjex.net/blog","undefined","undefined"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tjex.net/blog/"}}</script> <link rel="stylesheet" href="/_astro/_page_.BrpWBfjJ.css">
+<style>#themeToggle[data-astro-cid-lfoluaxz]{width:70px;height:70px;flex:0 0 auto}
+</style><script type="module" src="/_astro/hoisted.CNCQv4ZC.js"></script></head> <div class="wrapper"> <div class="header-wrapper"> <div class="header-left"> <a class="nav-link site-heading" href="/">tjex</a> </div><div class="header-right"> <button class="no-outline" id="themeToggle" aria-label="theme toggle" data-astro-cid-lfoluaxz> <svg id="icon-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" width="40" height="40" xml:space="preserve" data-astro-cid-lfoluaxz> <g data-astro-cid-lfoluaxz> <path d="M60,16.005c0,0,0.001,19.736,0.001,43.994c0,24.258-0.001,43.995-0.001,43.995c-24.258,0-43.994-19.736-43.994-43.995
+            C16.006,35.742,35.742,16.005,60,16.005 M60,5.005C29.627,5.005,5.006,29.626,5.006,60c0,30.372,24.622,54.995,54.994,54.995
+            S114.995,90.371,114.995,60C114.995,29.626,90.372,5.005,60,5.005L60,5.005z" data-astro-cid-lfoluaxz></path> </g> </svg> </button>  <!--
+is:inline includes the script directly into the page, instead 
+of budling it separately (Astro specific). This decreases load 
+time, which is important here to avoid theme flashing
+--> <script>
+  const themeToggle = document.getElementById("themeToggle");
+  const getTheme = () => localStorage.getItem("theme") || "dark";
+  const setTheme = (theme) => {
+    localStorage.setItem("theme", theme);
+    document.documentElement.dataset.theme = theme;
+    document.body.classList.add(theme);
+  };
+
+  // add the current theme from local storage to DOM, which 
+  // happens BEFORE rendering.
+  setTheme(getTheme())  
+
+  themeToggle.addEventListener("click", () => {
+    if (getTheme() == "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  });
+</script> </div> <div class="header-center"></div>  </div> <aside class="aside sidebar-left"> <nav class="nav-left"> <ul> <li><a class="nav-link" href="/blog">blog</a></li> <li><a class="nav-link" href="/hacks">hacks</a></li> <li><a class="nav-link" href="/projects">projects</a></li> <li><a class="nav-link" href="/listening">listening</a></li> <li><a class="nav-link" href="/contact">contact</a></li> </ul> </nav> </aside> <main class="main-content">       <article class="post-content__article"> <h1>Vertical window splits by default, with exceptions</h1> <p class="post-info"> <span>Tillman Jex, <time>April 14, 2024</time></span><br> <span class="secondary">Tagged: </span> <a href="/tags/neovim">neovim</a>
+            <span></span> <br> <span class="secondary">License: </span> <a href="https://mit-license.org/" target="_blank" rel="noopener noreferrer">
+MIT
+</a> <br> <!-- if the post has been modified since original publication -->  <br> <!-- for posts that refer to computer programs used -->  </p>  <p>The below pairing of autocommands sets Neovim to open all new window splits as
+vertical splits. Two autocommands are needed as there are some windows which are
+nicer to have as their intended / original horizontal splits, such as the quick
+fix list.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="lua"><code><span class="line"><span style="color:#6A737D">-- Open all new windows as vertical splits</span></span>
+<span class="line"><span style="color:#79B8FF">auto</span><span style="color:#E1E4E8">({ </span><span style="color:#9ECBFF">"WinNew" </span><span style="color:#E1E4E8">}, {</span></span>
+<span class="line"><span style="color:#E1E4E8">	group </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "windows"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">	pattern </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "*"</span><span style="color:#E1E4E8">, </span><span style="color:#6A737D">-- apply to all</span></span>
+<span class="line"><span style="color:#B392F0">	callback</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#E1E4E8">		vim.</span><span style="color:#79B8FF">cmd</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"wincmd L"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">	end</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">})</span></span>
+<span class="line"></span></code></pre>
+<p><code>wincmd L</code> is the same as <code>&#x3C;C-w> L</code>. See <code>:help wincmd</code>. It sets the new window
+to be a vertical split on the left side. If you’d prefer to open your new
+windows to the right, set <code>vim.cmd("wincmd R")</code>.</p>
+<p>The <code>WinNew</code> event executes as the window is created, but (and I could be wrong
+here) at this point we can’t retrieve the file type of the buffer within that
+window. However, after the new window is created, the cursor jumps to it. The
+<code>BufEnter</code> event is therefore triggered, which means that we can query the file
+type of the buffer and act upon it.</p>
+<p>So, if the file type is <code>qf</code> (quick fix list) or <code>trouble</code>
+(<a href="https://github.com/folke/trouble.nvim">trouble.nvim</a> 🙌), the split will be
+set to horizontal.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="lua"><code><span class="line"><span style="color:#6A737D">-- If the entered buffer is one of horizontal_ftypes, move to bottom</span></span>
+<span class="line"><span style="color:#6A737D">-- horizontal window.</span></span>
+<span class="line"><span style="color:#F97583">local</span><span style="color:#E1E4E8"> horizontal_ftypes </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> { </span><span style="color:#9ECBFF">"qf"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"trouble" </span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#79B8FF">auto</span><span style="color:#E1E4E8">({ </span><span style="color:#9ECBFF">"BufEnter" </span><span style="color:#E1E4E8">}, {</span></span>
+<span class="line"><span style="color:#E1E4E8">	group </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "windows"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#B392F0">	callback</span><span style="color:#F97583"> =</span><span style="color:#F97583"> function</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#F97583">		local</span><span style="color:#E1E4E8"> ft </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> vim.</span><span style="color:#B392F0">bo</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">filetype</span></span>
+<span class="line"><span style="color:#F97583">		if</span><span style="color:#E1E4E8"> vim.</span><span style="color:#79B8FF">tbl_contains</span><span style="color:#E1E4E8">(horizontal_ftypes, ft) </span><span style="color:#F97583">then</span></span>
+<span class="line"><span style="color:#E1E4E8">			vim.</span><span style="color:#79B8FF">cmd</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"wincmd J"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">		end</span></span>
+<span class="line"><span style="color:#F97583">	end</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">})</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>As mentioned, in the case of the quick fix list and trouble, both open as
+horizontal splits by default. Despite them being effectively moved from a
+horizontal split, to a vertical and then back to horizontal again, the changes
+appear ‘instantaneous’. So, based on that, this solution feels acceptable for me
+at least.</p>
+<p>But if anyone has an solution to achieve the file type query logic within the
+<code>WinNew</code> event, shoot me an email!</p> <hr> <div class="neighbourPost"> <a class="prevPost" href="/hacks/increase-legibility-markdown-neovim"> Increase legibility of markdown in Neovim </a> <a class="nextPost" href="/hacks/aerc-automated-signature-selection"> Automated email signatures for aliases in aerc </a> </div>  </article>    </main> <aside class="aside sidebar-right"></aside> <div class="footer">
+Built with <a href="https://astro.build">Astro</a> and <a href="https://picocss.com">Pico CSS</a> •
+<a href="/privacy">Privacy</a> • <a href="/rss.xml" rel="me">RSS</a> </div> </div> </html>

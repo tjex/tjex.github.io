@@ -1,0 +1,128 @@
+<!DOCTYPE html> <html lang="en"> <head><!-- Primary Meta Tags --><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="title" content="Installing Wezterm on a Raspberry Pi / Linux server"><meta name="description" content="Wezterm has an inbuilt multiplexer, which is very useful for working via SSH on remote machines such as a Raspberry PI."><meta name="robots" content="all"><!-- browser tab title --><title>tjex • Installing Wezterm on a Raspberry Pi / Linux server</title><!-- RSS --><link rel="alternate" type="application/rss+xml" title="Tillman Jex : tjex.net" href="https://tjex.net/rss.xml"><!-- Canonical --><link rel="canonical" href="https://tjex.net/hacks/installing-wezterm-on-a-raspberry-pi-or-linux-server/"><!-- Favicons --><link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="48x48" href="/favicon/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://tjex.net/hacks/installing-wezterm-on-a-raspberry-pi-or-linux-server/"><meta property="og:title" content="Installing Wezterm on a Raspberry Pi / Linux server"><meta property="og:description" content="Wezterm has an inbuilt multiplexer, which is very useful for working via SSH on remote machines such as a Raspberry PI."><meta property="og:image" content="https://tjex.net/img/profile-square.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://tjex.net/hacks/installing-wezterm-on-a-raspberry-pi-or-linux-server/"><meta property="twitter:title" content="Installing Wezterm on a Raspberry Pi / Linux server"><meta property="twitter:description" content="Wezterm has an inbuilt multiplexer, which is very useful for working via SSH on remote machines such as a Raspberry PI."><meta property="twitter:image" content="https://tjex.net/img/profile-square.jpg"> <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Installing Wezterm on a Raspberry Pi / Linux server","url":"https://tjex.net/blog/installing-wezterm-on-a-raspberry-pi-or-linux-server","datePublished":"Mon Dec 11 2023 17:40:45 GMT+0100 (Central European Standard Time)","description":"Wezterm has an inbuilt multiplexer, which is very useful for working via SSH on remote machines such as a Raspberry PI.","author":{"@type":"Person","name":"tjex","image":{"@type":"ImageObject","url":"https://tjex.net/img/profile-square.jpg","width":488,"height":488},"url":"https://tjex.net","sameAs":["https://tjex.net/blog","undefined","undefined"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tjex.net/blog/"}}</script> <link rel="stylesheet" href="/_astro/_page_.BrpWBfjJ.css">
+<style>#themeToggle[data-astro-cid-lfoluaxz]{width:70px;height:70px;flex:0 0 auto}
+</style><script type="module" src="/_astro/hoisted.CNCQv4ZC.js"></script></head> <div class="wrapper"> <div class="header-wrapper"> <div class="header-left"> <a class="nav-link site-heading" href="/">tjex</a> </div><div class="header-right"> <button class="no-outline" id="themeToggle" aria-label="theme toggle" data-astro-cid-lfoluaxz> <svg id="icon-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" width="40" height="40" xml:space="preserve" data-astro-cid-lfoluaxz> <g data-astro-cid-lfoluaxz> <path d="M60,16.005c0,0,0.001,19.736,0.001,43.994c0,24.258-0.001,43.995-0.001,43.995c-24.258,0-43.994-19.736-43.994-43.995
+            C16.006,35.742,35.742,16.005,60,16.005 M60,5.005C29.627,5.005,5.006,29.626,5.006,60c0,30.372,24.622,54.995,54.994,54.995
+            S114.995,90.371,114.995,60C114.995,29.626,90.372,5.005,60,5.005L60,5.005z" data-astro-cid-lfoluaxz></path> </g> </svg> </button>  <!--
+is:inline includes the script directly into the page, instead 
+of budling it separately (Astro specific). This decreases load 
+time, which is important here to avoid theme flashing
+--> <script>
+  const themeToggle = document.getElementById("themeToggle");
+  const getTheme = () => localStorage.getItem("theme") || "dark";
+  const setTheme = (theme) => {
+    localStorage.setItem("theme", theme);
+    document.documentElement.dataset.theme = theme;
+    document.body.classList.add(theme);
+  };
+
+  // add the current theme from local storage to DOM, which 
+  // happens BEFORE rendering.
+  setTheme(getTheme())  
+
+  themeToggle.addEventListener("click", () => {
+    if (getTheme() == "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  });
+</script> </div> <div class="header-center"></div>  </div> <aside class="aside sidebar-left"> <nav class="nav-left"> <ul> <li><a class="nav-link" href="/blog">blog</a></li> <li><a class="nav-link" href="/hacks">hacks</a></li> <li><a class="nav-link" href="/projects">projects</a></li> <li><a class="nav-link" href="/listening">listening</a></li> <li><a class="nav-link" href="/contact">contact</a></li> </ul> </nav> </aside> <main class="main-content">       <article class="post-content__article"> <h1>Installing Wezterm on a Raspberry Pi / Linux server</h1> <p class="post-info"> <span>Tillman Jex, <time>December 11, 2023</time></span><br> <span class="secondary">Tagged: </span> <a href="/tags/raspbery-pi">raspbery-pi</a>
+            <span>, </span><a href="/tags/scripts">scripts</a>
+            <span></span> <br> <span class="secondary">License: </span> <a href="https://mit-license.org/" target="_blank" rel="noopener noreferrer">
+MIT
+</a> <br> <!-- if the post has been modified since original publication -->  <br> <!-- for posts that refer to computer programs used --> <span> <span class="secondary">Versions: </span> <span> Raspberry Pi 4: Bookworm ,  </span><span> wezterm: 20230712  </span> </span> </p>  <p><a href="https://wezfurlong.org/wezterm/">Wezterm</a> is awesome. It’s incredibly feature
+rich and offers a very low level of access for configuration compared to many
+terminal emulators. Wez is also a very kind, easy going and patient maintainer.
+So it just feels good to be using and supporting his work. It’s also cross
+platform, meaning a) if I ever do need to work on another OS, my terminal won’t
+feel foreign to me and b) the inbuilt multiplexer is of huge advantage when
+working remotely on other machines.</p>
+<p>I used to use <a href="https://github.com/tmux/tmux/wiki">tmux</a>, but having a
+multiplexer built directly into the terminal offers excellent configurability
+(also because Wezterm boasts this as it is) and of course seamless integration
+by default. It’s also very stable. I’m yet to encounter any bugs on the
+multiplexer side of Wezterm.</p>
+<p>Following are the steps to install Wezterm on a Raspberry Pi and to setup your
+local Wezterm config to allow multiplexing on the Raspberry via SSH. The steps
+should remain the same for any Debian/Ubuntu based distro at the very least.</p>
+<h2 id="1-install-wezterm-on-the-remote-machine">1. Install Wezterm on the remote machine</h2>
+<p>On your remote machine first install Rust if you need to:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">curl</span><span style="color:#79B8FF"> --proto</span><span style="color:#9ECBFF"> &#39;=https&#39;</span><span style="color:#79B8FF"> --tlsv1.2</span><span style="color:#79B8FF"> -sSf</span><span style="color:#9ECBFF"> https://sh.rustup.rs</span><span style="color:#F97583"> |</span><span style="color:#B392F0"> sh</span></span>
+<span class="line"></span></code></pre>
+<p>For the Wezterm install itself,
+<a href="https://wezfurlong.org/wezterm/install/source.html">the instructions on Wezterm’s website</a>
+get you most of the way, but they fall short of installing the binaries in
+<code>$PATH</code>.</p>
+<p>The option of installing via the “smaller source tarball” did not work for me
+(problems with tar.gz uncompressing… a classic), so I went for the full git
+repo route.</p>
+<aside class="callout-note"> <p class="callout-note-title">note</p> <div class="callout-content"> <p>The following instructions include installing the <code>wezterm-gui</code> binary. If you
+will only ever interact with your remote machine via SSH (i.e. as a server /
+no desktop environment), you can omit <code>wezterm-gui</code> from the <code>sudo install</code>
+call.</p> </div> </aside>
+<p>The <code>sudo install...</code> commands are taken from Wezterm’s own
+<a href="https://github.com/wez/wezterm/blob/e3cd2e93d0ee5f3af7f3fe0af86ffad0cf8c7ea8/ci/deploy.sh#L209C1-L241C4">deploy script</a>
+logic, as
+<a href="https://github.com/wez/wezterm/discussions/2128">recommended by Wez himself</a>.</p>
+<p>Contrary to the deply script above, I’ve changed the install path in the
+instructions from <code>/usr/bin</code> to <code>/usr/local/bin</code>, as the
+<a href="https://www.baeldung.com/linux/differences-bin-sbin-usr-local#5-usrlocalbin">general recommendation</a>
+is to install programs that are <em>not</em> managed by package mangers to
+<code>/usr/local/bin</code>.</p>
+<p>To clone, build and install Wezterm:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">mkdir</span><span style="color:#79B8FF"> -p</span><span style="color:#9ECBFF"> ~/.local/src</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> ~/.local/src</span></span>
+<span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> clone</span><span style="color:#79B8FF"> --depth=1</span><span style="color:#79B8FF"> --branch=main</span><span style="color:#79B8FF"> --recursive</span><span style="color:#9ECBFF"> https://github.com/wez/wezterm.git</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> wezterm</span></span>
+<span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> submodule</span><span style="color:#9ECBFF"> update</span><span style="color:#79B8FF"> --init</span><span style="color:#79B8FF"> --recursive</span></span>
+<span class="line"><span style="color:#B392F0">./get-deps</span></span>
+<span class="line"><span style="color:#B392F0">cargo</span><span style="color:#9ECBFF"> build</span><span style="color:#79B8FF"> --release</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> target/release</span></span>
+<span class="line"><span style="color:#B392F0">mkdir</span><span style="color:#79B8FF"> -p</span><span style="color:#9ECBFF"> /usr/local/bin</span><span style="color:#9ECBFF"> /etc/profile.d</span></span>
+<span class="line"><span style="color:#B392F0">sudo</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -Dm755</span><span style="color:#9ECBFF"> assets/open-wezterm-here</span><span style="color:#9ECBFF"> wezterm</span><span style="color:#9ECBFF"> wezterm-gui</span><span style="color:#9ECBFF"> wezterm-mux-server</span><span style="color:#9ECBFF"> strip-ansi-escapes</span><span style="color:#79B8FF"> -t</span><span style="color:#9ECBFF"> /usr/local/bin</span></span>
+<span class="line"><span style="color:#B392F0">sudo</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -Dm644</span><span style="color:#9ECBFF"> assets/shell-integration/</span><span style="color:#79B8FF">*</span><span style="color:#79B8FF"> -t</span><span style="color:#9ECBFF"> /etc/profile.d</span></span>
+<span class="line"><span style="color:#B392F0">sudo</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -Dm644</span><span style="color:#9ECBFF"> assets/shell-completion/zsh</span><span style="color:#9ECBFF"> /usr/local/share/zsh/site-functions/_wezterm</span></span>
+<span class="line"><span style="color:#B392F0">sudo</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -Dm644</span><span style="color:#9ECBFF"> assets/shell-completion/bash</span><span style="color:#9ECBFF"> /etc/bash_completion.d/wezterm</span></span>
+<span class="line"></span></code></pre>
+<p>Now <code>which wezterm</code> should return <code>/usr/bin/wezterm</code>.</p>
+<h2 id="2-setup-multiplexing-over-ssh">2. Setup multiplexing over SSH</h2>
+<p><a href="https://wezfurlong.org/wezterm/multiplexing.html#multiplexing">Here is the page</a>
+for multiplexing on the Wezterm website.</p>
+<p>You don’t need to configure anything at all on the remote machine / server side.</p>
+<p>It’s in your local (client) side (i.e your personal computer) where you edit
+your <code>wezterm.lua</code> config file to include the details of your remote machine.</p>
+<p>Which will look along the lines of this:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="lua"><code><span class="line"><span style="color:#E1E4E8">config.</span><span style="color:#B392F0">ssh_domains</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">  {</span></span>
+<span class="line"><span style="color:#6A737D">    -- This name identifies the domain</span></span>
+<span class="line"><span style="color:#E1E4E8">    name </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &#39;my.server&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#6A737D">    -- The hostname or address to connect to. Will be used to match settings</span></span>
+<span class="line"><span style="color:#6A737D">    -- from your ssh config file</span></span>
+<span class="line"><span style="color:#E1E4E8">    remote_address </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &#39;192.168.1.1&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#6A737D">    -- The username to use on the remote host</span></span>
+<span class="line"><span style="color:#E1E4E8">    username </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &#39;wez&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span></code></pre>
+<p>So in the case of my Raspberry Pi, it looks like this (<code>username</code> is the name of
+your user on the remote machine):</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="lua"><code><span class="line"><span style="color:#E1E4E8">config.</span><span style="color:#B392F0">ssh_domains</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">  {</span></span>
+<span class="line"><span style="color:#E1E4E8">    name </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &#39;raspi&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    remote_address </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &#39;rpi.local&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    username </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &#39;tjex&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span></code></pre>
+<p>Now on your local machine, you can execute <code>wezterm connect &lt;your-server-name&gt;</code>
+(e.g. <code>wezterm connect raspi</code>) and Wezterm will open a new window and connect to
+the remote machine via SSH.</p>
+<p>Once a connection is established, a mux session will be started on the remote
+machine.</p>
+<p>This means that when you close or exit your terminal session, or the connection
+is broken, you can just reconnect with <code>wezterm connect &lt;your-server-name&gt;</code> and
+continue where you left off.</p>
+<p>If the remote machine shuts down though, you will of course not be able to
+restore the session.</p> <hr> <div class="neighbourPost"> <a class="prevPost" href="/hacks/using-skhd-and-yabai-as-an-app-launcher"> Using skhd and yabai as a launcher </a> <a class="nextPost" href="/hacks/displaying-link-outlines-only-when-tabbing"> Display link outlines only when tabbing </a> </div>  </article>    </main> <aside class="aside sidebar-right"></aside> <div class="footer">
+Built with <a href="https://astro.build">Astro</a> and <a href="https://picocss.com">Pico CSS</a> •
+<a href="/privacy">Privacy</a> • <a href="/rss.xml" rel="me">RSS</a> </div> </div> </html>
