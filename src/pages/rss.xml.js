@@ -27,6 +27,6 @@ export async function GET(context) {
         link: `/blog/${post.slug}/`,
         content: sanitizeHtml(parser.render(post.body)),
       };
-    }),
+    }).sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate)),
   });
 }
