@@ -10,6 +10,7 @@ css:
 
 deploy: 
 	git checkout deploy
+	git merge main
 	make css
 	yarn build
 	git add -f dist src/styles
