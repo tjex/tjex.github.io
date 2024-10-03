@@ -9,12 +9,13 @@ css:
 	sass scss/main.scss src/styles/global.css
 
 deploy: 
-	git checkout -b deploy
+	git checkout deploy
+	git merge main
 	make css
 	yarn build
 	git add -f dist src/styles
 	git commit -m "build and deploy"
 	git push origin deploy
-	git checkout -b main
+	git checkout main
 
 
