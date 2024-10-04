@@ -40,10 +40,13 @@ const seo = {
     if (i % 2 === 0 && i < music.length - 1 )
                 return (
                 <div class=grid>
-                    <a href={`${music[i].src}`}> {music[i].artist}: <span class="secondary" style="font-style: italic;">{music[i].work}</span></a>
-                    <a href={`${music[i+1].src}`}> {music[i+1].artist}: <span class="secondary" style="font-style: italic;">{music[i+1].work}</span></a>
+                    <p>
+                        <a href={`${music[i].src}`} > {music[i].artist}: <span class="secondary" style="font-style: italic;">{music[i].work}</span></a>
+                    </p>
+                    <p>
+                        <a href={`${music[i+1].src}`}> {music[i+1].artist}: <span class="secondary" style="font-style: italic;">{music[i+1].work}</span></a>
+                    </p>
                 </div>
-                <br>
                 );
                 })
     }
