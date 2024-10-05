@@ -38,25 +38,26 @@ It's not do different from searching Google in place of books, or spell
 correction in place of searching through a dictionary. There's no need to learn,
 because we can get it done faster with a tool. Auto-correct or the searching
 Google once again for that basic information may be one thing, but where do
-_you_ draw the line for your learning your career skills as developer, lawyer,
+_you_ draw the line for learning your career skills as developer, lawyer,
 writer, doctor...?
 
 ## Prophecy Time
 
-This is why, in some number of years, I think there will be a divergence of two
-broad segments of the workforce. There will be those who can understand,
-conceptualise and materialise solutions to problems or creative ideas without
-AI tools, and those who cannot.
+This is why, in some number of years, and if AI technologies really do embed
+themselves in our workflows, I think there will be a divergence of two broad
+segments of the workforce. There will be those who can understand, conceptualise
+and materialise solutions to problems or creative ideas without AI tools, and
+those who cannot.
 
 What the culture of the world will look like then though, I don't have an
 equally prophetic claim. Either there will come a time where people who have
-maintained their mental faculties will become in incredibly high demand, or they
-the "meat heads", will be left to menial tasks, while the "silicon heads" churn
-through their tasks.
+maintained their mental faculties will become in incredibly high demand, or
+they, the "meat heads", will be left to menial tasks, while the "silicon heads"
+churn through their tasks.
 
 Here's another. The AI bubble could pop. [AI capabilities could
 plateau](https://www.youtube.com/watch?v=dDUC-LqVrPU). This would leave us with
-only mediocre tools that may well remain close to their current state
-(megalomaniacs, tricksters and pushovers). If this is the case, the "silicon
-heads" will have to reckon with the hardest lesson of their time: how does one
-_actually_ make a paper clip? (And then proceed to craft 1 paper clip).
+only mediocre tools that may well remain close to their current state. If this
+is the case, the "silicon heads" will have to reckon with the hardest lesson of
+their time: how does one _actually_ make a paper clip? (And then proceed to
+craft 1 paper clip).

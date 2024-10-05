@@ -10,7 +10,6 @@ css:
 
 deploy: 
 	git checkout deploy
-	rm -rf dist/
 	git merge main
 	make css
 	yarn build
