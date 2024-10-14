@@ -558,10 +558,10 @@ process of cognitive thought. In such a system, serendipity is often just around
 the corner.&lt;/p&gt;
 &lt;p&gt;As &lt;em&gt;frictionless as possible&lt;/em&gt; means picking a spot somewhere between order and
 chaos. Too much order creates friction. There are too many decisions to consider
-and too often:&lt;/p&gt;
+and too often.&lt;/p&gt;
 &lt;p&gt;Chaos occurs when there is too little order, and the system scales beyond a
 certain point. There is a time factor involved, which is why committing to an
-organisational design system for their Zettelkasten system is stressful; and
+organisational design system for their Zettelkasten system is stressful - and
 could well be why you&apos;re reading this post.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;The best way to deal with complexity is to keep things as simple as possible
@@ -597,7 +597,7 @@ for using as a jumping off point for a specific thing.&lt;/p&gt;
 &lt;p&gt;This helps to avoid context switching (cognitive friction). If we can&apos;t remember
 what a certain thing is, we can quickly refresh our memories within the same
 system. Navigating to a glossary note returns us the facts that most interest us
-and which we may be able to add too, given new knowledge we may have.&lt;/p&gt;
+and which we may be able to add to, given new knowledge we may have.&lt;/p&gt;
 &lt;p&gt;The opposite process is opening a browser or book, searching for information and
 in the process shifting our mental context and, after &lt;em&gt;x&lt;/em&gt; amount of time, losing
 our focus entirely (particularly if you&apos;re searching through the internet).&lt;/p&gt;
@@ -608,7 +608,7 @@ relate to the glossary term.&lt;/p&gt;
 &lt;p&gt;Notes on content we read, watch, hear. Termed &apos;literature notes&apos; in many
 discussions. The folder is titled &lt;code&gt;reference&lt;/code&gt; to aid in frictionless filing: If
 we&apos;re consuming some information and writing notes on it, it goes in the
-&lt;code&gt;reference&lt;/code&gt; folder, it doesn&apos;t matter if it&apos;s a video, recording, academic
+&lt;code&gt;reference&lt;/code&gt; folder - it doesn&apos;t matter if it&apos;s a video, recording, academic
 paper, etc.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This is a good example of where to withhold the temptation to create more
@@ -838,7 +838,7 @@ paywall that you either cannot or will not want to pay.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;The GRID system is my attempt to strike the balance between cognitive friction
-when writing and observability when managing. The folder structure deal with a
+when writing and observability when managing. The folder structure deals with a
 clear separation of concerns (glossary, references, indexes and diaries) while
 the tags target the &lt;em&gt;object class&lt;/em&gt; of a note&apos;s &lt;em&gt;source&lt;/em&gt;, &lt;em&gt;status&lt;/em&gt; and
 &lt;em&gt;structure&lt;/em&gt;.&lt;/p&gt;
@@ -848,9 +848,8 @@ arise when the amount of topical tags become too many (not to mention the
 eventual &lt;em&gt;reduction&lt;/em&gt; in observability).&lt;/p&gt;
 &lt;p&gt;The GRID system can therefore be implemented and used as is, but also built upon
 very easily if needed. This allows for a custom system with a strong foundation.&lt;/p&gt;
-&lt;p&gt;[^1]:
-https://luhmann.surge.sh/communicating-with-slip-boxes, Section II, point 3.&lt;/p&gt;
-&lt;p&gt;[^2]:
+&lt;p&gt;[^1]: https://luhmann.surge.sh/communicating-with-slip-boxes, Section II, point 3.
+[^2]:
 Thanks to Christian in the
 &lt;a href=&quot;https://forum.zettelkasten.de/discussion/comment/19357/#Comment_19357&quot;&gt;Zettelkasten.de thread&lt;/a&gt;
 for pointing out that I&apos;d only described &lt;em&gt;how&lt;/em&gt; to use folders, but now
