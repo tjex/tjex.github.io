@@ -1,7 +1,6 @@
 ---
 title: The GRID System for Frictionless Zettelkasten Organisation
-description:
-  The GRID system is a framework for frictionless organisation of a
+description: The GRID system is a framework for frictionless organisation of a
   Zettelkasten. It defines a set of rules for note creation and note tagging
   that suppress the need for content categorisation.
 pubDate: 2024-01-06T19:01:33Z
@@ -277,11 +276,11 @@ the corner.
 
 As _frictionless as possible_ means picking a spot somewhere between order and
 chaos. Too much order creates friction. There are too many decisions to consider
-and too often:
+and too often.
 
 Chaos occurs when there is too little order, and the system scales beyond a
 certain point. There is a time factor involved, which is why committing to an
-organisational design system for their Zettelkasten system is stressful; and
+organisational design system for their Zettelkasten system is stressful - and
 could well be why you're reading this post.
 
 > _The best way to deal with complexity is to keep things as simple as possible
@@ -324,7 +323,7 @@ for using as a jumping off point for a specific thing.
 This helps to avoid context switching (cognitive friction). If we can't remember
 what a certain thing is, we can quickly refresh our memories within the same
 system. Navigating to a glossary note returns us the facts that most interest us
-and which we may be able to add too, given new knowledge we may have.
+and which we may be able to add to, given new knowledge we may have.
 
 The opposite process is opening a browser or book, searching for information and
 in the process shifting our mental context and, after _x_ amount of time, losing
@@ -339,7 +338,7 @@ relate to the glossary term.
 Notes on content we read, watch, hear. Termed 'literature notes' in many
 discussions. The folder is titled `reference` to aid in frictionless filing: If
 we're consuming some information and writing notes on it, it goes in the
-`reference` folder, it doesn't matter if it's a video, recording, academic
+`reference` folder - it doesn't matter if it's a video, recording, academic
 paper, etc.
 
 > This is a good example of where to withhold the temptation to create more
@@ -601,7 +600,7 @@ these practices as contributing heavily to future proofing:
 ## Conclusion
 
 The GRID system is my attempt to strike the balance between cognitive friction
-when writing and observability when managing. The folder structure deal with a
+when writing and observability when managing. The folder structure deals with a
 clear separation of concerns (glossary, references, indexes and diaries) while
 the tags target the _object class_ of a note's _source_, _status_ and
 _structure_.
@@ -614,9 +613,7 @@ eventual _reduction_ in observability).
 The GRID system can therefore be implemented and used as is, but also built upon
 very easily if needed. This allows for a custom system with a strong foundation.
 
-[^1]:
-    https://luhmann.surge.sh/communicating-with-slip-boxes, Section II, point 3.
-
+[^1]: https://luhmann.surge.sh/communicating-with-slip-boxes, Section II, point 3.
 [^2]:
     Thanks to Christian in the
     [Zettelkasten.de thread](https://forum.zettelkasten.de/discussion/comment/19357/#Comment_19357)
