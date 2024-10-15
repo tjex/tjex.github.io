@@ -1,4 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="/rss/styles.xsl" type="text/xsl"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>tjex.net - blog</title><description>Programmer and creative technologist.</description><link>https://tjex.net/</link><atom:link href="https://tjex.net/rss.xml" rel="self" type="application/rss+xml" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"/><item><title>Learning in the prehistoric age of AI</title><link>https://tjex.net/blog/2024/prehistoric-ai-learning/</link><guid isPermaLink="true">https://tjex.net/blog/2024/prehistoric-ai-learning/</guid><description>To what degree do we actually learn with AI tools? And will those of us who turn to these tools, be condemned to a bleak reality once the AI bubble pops?</description><pubDate>Fri, 04 Oct 2024 20:31:38 GMT</pubDate><content:encoded>&lt;p&gt;A significant issue with AI learning is that it&apos;s all to easy to leave the
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="/rss/styles.xsl" type="text/xsl"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>tjex.net - blog</title><description>Programmer and creative technologist.</description><link>https://tjex.net/</link><atom:link href="https://tjex.net/rss.xml" rel="self" type="application/rss+xml" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"/><item><title>The Arvelie time system</title><link>https://tjex.net/blog/2024/arvelie-time-system/</link><guid isPermaLink="true">https://tjex.net/blog/2024/arvelie-time-system/</guid><description>The Arvelie time system is a concise and useful way to approach our relationship to time, and also time management.</description><pubDate>Tue, 15 Oct 2024 13:33:08 GMT</pubDate><content:encoded>&lt;p&gt;I&apos;m currently wrapping my head around Devine&apos;s time system,
+&lt;a href=&quot;https://wiki.xxiivv.com/site/time&quot;&gt;Arvelie&lt;/a&gt; (after also having it
+bent by his &lt;a href=&quot;https://wiki.xxiivv.com/site/horaire&quot;&gt;time tracking system&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;There are two things I really like about the time system. One, that time ranges
+are uniform. Each month has 14 days, which creates 26 months. This makes time
+management feel much more approachable. And two, that time for any project or
+moment, begins at 0. So Arvelie time is always relative to the artefact which it
+is logging.&lt;/p&gt;
+&lt;p&gt;This creates a different relationship between us and time. As we no longer have
+a positional relationship to the past. That is, the past that came before year
+&quot;0&quot;.&lt;/p&gt;
+&lt;p&gt;This is mostly how we measure time anyway. How old are you? How long have you
+been programming? etc. Except that we additionally reference that against &quot;time
+immortal&quot; (which in some domains has the suffixes &apos;BC&apos; and &apos;AD&apos;).&lt;/p&gt;
+&lt;p&gt;So you may be 24 years old, having been born in the year 2000. But in Arvelie
+time, you would be 24 years old, having been born in the year 0. It creates an
+interesting and alternate feeling about the past. It feels more like each birth
+(organic, or otherwise - like a project) is its own strand of time, sprouting
+from the true &quot;time immortal&quot;, which does not have a start date.&lt;/p&gt;
+&lt;p&gt;While this can sound a bit wishy-washy, I would argue, that this is a lot more
+accurate given the context in which we live.&lt;/p&gt;
+&lt;p&gt;Because we actually measure time in the same style as Arvelie - the universe is
+(by our best measure) about 13.8 billion years old. Meaning, that the big bang
+was year 0. However, I&apos;m writing this in the year 2024. Or more interestingly,
+I&apos;m writing this in the year 2024AD.&lt;/p&gt;
+&lt;p&gt;This is interesting to me, because the BC / AD attribute, directly communicates
+an understanding that time is infinite (or that it moves more like an
+oscillation). This is one of the few aspects of religion that I actually like.
+That infinity is maintained as a truth, rather than a concept.&lt;/p&gt;
+&lt;p&gt;Although, granted, this has all too often been used as a weapon (heaven and hell
+for eternity). &lt;a href=&quot;https://www.theverge.com/2024/4/4/24120352/israel-lavender-artificial-intelligence-gaza-ai&quot;&gt;But we turn all sorts of good things into
+weapons&lt;/a&gt;.&lt;/p&gt;
+</content:encoded><category>philosophy</category></item><item><title>Learning in the prehistoric age of AI</title><link>https://tjex.net/blog/2024/prehistoric-ai-learning/</link><guid isPermaLink="true">https://tjex.net/blog/2024/prehistoric-ai-learning/</guid><description>To what degree do we actually learn with AI tools? And will those of us who turn to these tools, be condemned to a bleak reality once the AI bubble pops?</description><pubDate>Fri, 04 Oct 2024 20:31:38 GMT</pubDate><content:encoded>&lt;p&gt;A significant issue with AI learning is that it&apos;s all to easy to leave the
 &quot;why?&quot; out of the answer. We don&apos;t learn the context of &lt;em&gt;why&lt;/em&gt; that answer is a
 good answer. The generated solution may work, but we have no knowledge of how it
 compares to other solutions.&lt;/p&gt;
