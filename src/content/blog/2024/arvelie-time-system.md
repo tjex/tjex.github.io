@@ -13,6 +13,10 @@ I'm currently wrapping my head around Devine's time system,
 [Arvelie](https://wiki.xxiivv.com/site/time) (after also having it
 bent by his [time tracking system](https://wiki.xxiivv.com/site/horaire)).
 
+> Since writing this post, I decided to try implement Arvelie into my
+> journaling and have written [a CLI helper for converting to and from
+> Arvelie](https://git.sr.ht/~tjex/arvelie) for any that are interested.
+
 There are two things I really like about the time system. One, that time ranges
 are uniform. Each month has 14 days, which creates 26 months. This makes time
 management feel much more approachable. And two, that time for any project or
@@ -24,14 +28,19 @@ a positional relationship to the past. That is, the past that came before year
 "0".
 
 This is mostly how we measure time anyway. How old are you? How long have you
-been programming? etc. Except that we additionally reference that against "time
-immortal" (which in some domains has the suffixes 'BC' and 'AD').
+been programming? For people into computers, [Unix
+time](https://en.wikipedia.org/wiki/Unix_time) follows this same concept.
 
-So you may be 24 years old, having been born in the year 2000. But in Arvelie
-time, you would be 24 years old, having been born in the year 0. It creates an
-interesting and alternate feeling about the past. It feels more like each birth
-(organic, or otherwise - like a project) is its own strand of time, sprouting
-from the true "time immortal", which does not have a start date.
+Typically when conceptualising a date or time, we additionally reference it
+against "time immortal" (which in some domains has the suffixes 'BC' and 'AD').
+This meaning, we're in the year 2024 now, and can recognise how much things have
+changed in the last 150 years (even without having been alive then).
+
+But it's different in Arvelie time. If you're, 24 now, then what we know as the
+year 2000, would for _you_ be the year 0. This creates an interesting and
+alternate feeling about the past. It feels more like each birth (organic, or
+otherwise - like a project) is its own strand of time, sprouting from the true
+"time immortal", which does not have a start date.
 
 While this can sound a bit wishy-washy, I would argue, that this is a lot more
 accurate given the context in which we live.
