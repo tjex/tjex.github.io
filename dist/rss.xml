@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="/rss/styles.xsl" type="text/xsl"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>tjex.net - blog</title><description>Programmer and creative technologist.</description><link>https://tjex.net/</link><atom:link href="https://tjex.net/rss.xml" rel="self" type="application/rss+xml" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"/><item><title>The Arvelie time system</title><link>https://tjex.net/blog/2024/arvelie-time-system/</link><guid isPermaLink="true">https://tjex.net/blog/2024/arvelie-time-system/</guid><description>The Arvelie time system is a concise and useful way to approach our relationship to time, and also time management.</description><pubDate>Tue, 15 Oct 2024 13:33:08 GMT</pubDate><content:encoded>&lt;p&gt;I&apos;m currently wrapping my head around Devine&apos;s time system,
 &lt;a href=&quot;https://wiki.xxiivv.com/site/time&quot;&gt;Arvelie&lt;/a&gt; (after also having it
 bent by his &lt;a href=&quot;https://wiki.xxiivv.com/site/horaire&quot;&gt;time tracking system&lt;/a&gt;).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Since writing this post, I decided to try implement Arvelie into my
+journaling and have written &lt;a href=&quot;https://git.sr.ht/~tjex/arvelie&quot;&gt;a CLI helper for converting to and from
+Arvelie&lt;/a&gt; for any that are interested.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;There are two things I really like about the time system. One, that time ranges
 are uniform. Each month has 14 days, which creates 26 months. This makes time
 management feel much more approachable. And two, that time for any project or
@@ -10,13 +15,17 @@ is logging.&lt;/p&gt;
 a positional relationship to the past. That is, the past that came before year
 &quot;0&quot;.&lt;/p&gt;
 &lt;p&gt;This is mostly how we measure time anyway. How old are you? How long have you
-been programming? etc. Except that we additionally reference that against &quot;time
-immortal&quot; (which in some domains has the suffixes &apos;BC&apos; and &apos;AD&apos;).&lt;/p&gt;
-&lt;p&gt;So you may be 24 years old, having been born in the year 2000. But in Arvelie
-time, you would be 24 years old, having been born in the year 0. It creates an
-interesting and alternate feeling about the past. It feels more like each birth
-(organic, or otherwise - like a project) is its own strand of time, sprouting
-from the true &quot;time immortal&quot;, which does not have a start date.&lt;/p&gt;
+been programming? For people into computers, &lt;a href=&quot;https://en.wikipedia.org/wiki/Unix_time&quot;&gt;Unix
+time&lt;/a&gt; follows this same concept.&lt;/p&gt;
+&lt;p&gt;Typically when conceptualising a date or time, we additionally reference it
+against &quot;time immortal&quot; (which in some domains has the suffixes &apos;BC&apos; and &apos;AD&apos;).
+This meaning, we&apos;re in the year 2024 now, and can recognise how much things have
+changed in the last 150 years (even without having been alive then).&lt;/p&gt;
+&lt;p&gt;But it&apos;s different in Arvelie time. If you&apos;re, 24 now, then what we know as the
+year 2000, would for &lt;em&gt;you&lt;/em&gt; be the year 0. This creates an interesting and
+alternate feeling about the past. It feels more like each birth (organic, or
+otherwise - like a project) is its own strand of time, sprouting from the true
+&quot;time immortal&quot;, which does not have a start date.&lt;/p&gt;
 &lt;p&gt;While this can sound a bit wishy-washy, I would argue, that this is a lot more
 accurate given the context in which we live.&lt;/p&gt;
 &lt;p&gt;Because we actually measure time in the same style as Arvelie - the universe is
