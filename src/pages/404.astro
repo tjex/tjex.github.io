@@ -2,29 +2,26 @@
 import Layout from "../layouts/Base.astro";
 
 const seo = {
-  title: "404",
-  description: "404. Nothing here",
-  index: "none",
+    title: "404",
+    description: "404. Nothing here",
+    index: "none",
 };
 ---
 
 <script src="../scripts/emailDecode.js"></script>
 
-<!-- No idea why I need to override main here, but without it -->
-<!-- layout does not center itself -->
+<!-- No idea why I need to override main here, but without it --><!-- layout does not center itself -->
 <main style="max-width: 1200px">
-
-<Layout seo={seo}>
-  <center>
-    <h1>404</h1>
-    <p>zinger...</p>
-    <p>Nothing here.</p>
-    <p>
-      If you think this is an error on my end, <br />
-       please shoot me a quick <a id="denc" href="">email</a> letting me know.
-    </p>
-    <a href="/">Return Home</a>
-  </center>
-</Layout>
-
+    <Layout seo={seo}>
+        <center>
+            <h1>404</h1>
+            <p>zinger...</p>
+            <p>Nothing here.</p>
+            <p>
+                If you think this is an error on my end, <br />
+                please shoot me a quick <a id="denc" href="">email</a> letting me know. Otherwise...
+            </p>
+            <a href="/">Go Home</a>
+        </center>
+    </Layout>
 </main>
