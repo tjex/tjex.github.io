@@ -8,6 +8,7 @@ author: tjex
 tags: ["career", "learning"]
 license: cc
 draft: false
+slug: 2023/the-noob-chronicles-chapter-1
 ---
 
 It's important to step back and get some perspective about your progress with
@@ -118,7 +119,7 @@ Shortly after learning what a for loop is, I programmed the below image. So it
 would be the first thing I ever programmed; an illustrious and provocative work
 made with Processing4.
 
-![self-portrait](../../../images/2023/self-portrait-2021.png)
+![self-portrait](../../images/2023/self-portrait-2021.png)
 
 Since then I've...
 

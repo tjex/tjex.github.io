@@ -8,6 +8,7 @@ author: tjex
 tags: ["meditation", "philosophy"]
 license: cc
 draft: false
+slug: 2023/first-vipassana-course
 ---
 
 ## Vipassana

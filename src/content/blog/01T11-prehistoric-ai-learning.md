@@ -8,6 +8,7 @@ author: tjex
 tags: ["learning", "society", "career"]
 license: cc
 draft: false
+slug: 2024/prehistoric-ai-learning
 ---
 
 A significant issue with AI learning is that it's all to easy to leave the

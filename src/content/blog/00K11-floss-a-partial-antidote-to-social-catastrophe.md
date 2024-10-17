@@ -9,6 +9,7 @@ author: tjex
 tags: ["open-source", "society"]
 license: cc
 draft: false
+slug: 2023/floss-a-partial-antidote-to-social-catastrophe
 ---
 
 ## What is the problem?
