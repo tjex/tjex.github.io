@@ -19,6 +19,7 @@
   text-align: right;
   margin-bottom: var(--spacing);
   font-size: var(--font-small);
+  line-height: 1.8em;
 }
 
 // div class for next/prevPost links
@@ -41,5 +42,3 @@
 .prevPost::before {
   content: var(--icon-left-arrow);
 }
-
-

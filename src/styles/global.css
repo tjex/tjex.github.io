@@ -709,6 +709,7 @@ body {
   text-align: right;
   margin-bottom: var(--spacing);
   font-size: var(--font-small);
+  line-height: 1.8em;
 }
 
 .neighbourPost {
