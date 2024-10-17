@@ -32,13 +32,13 @@ const postGithubUrl = new URL("https://github.com/tjex/tjex.github.io/blob/main/
     <SideLeftPage slot="side-left" />
     <article class="post-content__article">
         <h1>{post.data.title}</h1>
-        <p class="post-info">
-            <span style="font-family: monospace"><Date date={post.data.arvDate} format={"arvelie"} /></span><br />
-            <Tags tags={post.data.tags} style={"text"} /><br />
-        </p>
-
-        <slot />
+        <div class="post-info">
+            <span style="font-family: monospace"><Date date={post.data.arvDate} format={"arvelie"} /></span>
+            <div><Tags tags={post.data.tags} style={"text"} /></div>
+        </div>
     </article>
+
+    <slot />
     <SideRightBlank slot="side-right" />
     <Footer slot="footer" />
 </Layout>
