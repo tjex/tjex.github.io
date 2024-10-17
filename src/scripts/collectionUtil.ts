@@ -12,9 +12,7 @@ export async function getPostsPerTag(collections: string[]) {
   for (const collection of collections) {
     const posts = await noDrafts(collection);
 
-    const uniqueTags = [
-      ...new Set(posts.map((post: any) => post.data.tags).flat()),
-    ];
+    const uniqueTags = [...new Set(posts.map((post: any) => post.data.tags).flat())];
 
     const allFiltPosts = uniqueTags.map((tag) => {
       const filtPosts = posts
@@ -23,6 +21,7 @@ export async function getPostsPerTag(collections: string[]) {
           slug: slug,
           title: data.title,
           description: data.description,
+          arvDate: data.arvDate,
           pubDate: data.pubDate,
           collection: collection,
         }))
@@ -41,9 +40,7 @@ export async function getAllPostsFromCollection(collection: string) {
   const posts = await noDrafts(collection);
   const numberOfPosts = posts.length;
 
-  const postsSortedByDate = posts.sort(
-    (a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate),
-  );
+  const postsSortedByDate = posts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
   return postsSortedByDate.map((post: any, i) => ({
     params: { slug: post.slug },
     props: {

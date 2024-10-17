@@ -3,6 +3,7 @@ title: Writing a masters thesis with Zettelkasten - Part 1
 description:
   "How can we use Zettelkasten effectively, given a large and time sensitive
   writing and research task such as a thesis or Ph.D?"
+arvDate: 01F08
 pubDate: 2024-03-19T11:57:30Z
 author: tjex
 tags: ["learning"]
