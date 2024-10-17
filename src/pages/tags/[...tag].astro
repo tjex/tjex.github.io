@@ -6,8 +6,8 @@ import PostPreview from "../../components/PostPreview.astro";
 import * as colUtil from "../../scripts/collectionUtil.ts";
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = await colUtil.getPostsPerTag(["blog", "hacks"]);
-  return paths;
+    const paths = await colUtil.getPostsPerTag(["blog"]);
+    return paths;
 };
 
 const { tag } = Astro.params;
@@ -15,17 +15,17 @@ const { posts } = Astro.props;
 
 const seoTitle = tag;
 const seo = {
-  title: seoTitle,
-  description: `All posts tagged with ${seoTitle} on tjex.net`,
+    title: seoTitle,
+    description: `All posts tagged with ${seoTitle} on tjex.net`,
 };
 ---
 
 <Layout seo={seo}>
-  <h1>{tag}</h1>
-  <p>Posts tagged: <span class="tag">{tag}</span></p>
-  <article class="blog-page-content__article">
-    <table>
-      {posts.map((post: any) => <PostPreview post={post} collection={post.collection} />)}
-    </table>
-  </article>
+    <h1>{tag}</h1>
+    <p>Posts tagged: <span class="tag">{tag}</span></p>
+    <article class="blog-page-content__article">
+        <table>
+            {posts.map((post: any) => <PostPreview post={post} collection={post.collection} />)}
+        </table>
+    </article>
 </Layout>

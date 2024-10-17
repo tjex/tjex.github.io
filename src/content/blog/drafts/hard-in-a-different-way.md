@@ -1,6 +1,7 @@
 ---
 title: Hard in a different way
 description: Some thoughts on what makes life "hard" these days.
+arvDate: placeholder
 pubDate: 2023-11-21T19:01:40Z
 author: tjex
 tags: ["society", "psychology"]

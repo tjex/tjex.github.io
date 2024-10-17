@@ -2,6 +2,7 @@
 title: Maths in code, code in music, and music in code
 description: As I get more comfortable with programming, I'm starting to see
   more and more parallels between my old life and my new one.
+arvDate: 01R10
 pubDate: 2024-09-05T14:58:58Z
 author: tjex
 tags: ["philosophy", "psychology", "learning"]
