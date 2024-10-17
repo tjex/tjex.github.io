@@ -16,6 +16,7 @@ export async function getStaticPaths({ paginate }) {
                 title: post.data.title,
                 description: post.data.description,
                 tags: post.data.tags,
+                arvDate: post.data.arvDate,
                 pubDate: post.data.pubDate,
             }))
             .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate)),
