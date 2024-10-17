@@ -1,34 +1,21 @@
 ---
-const { nextPost, prevPost, collection } = Astro.props;
+const { nextPost, prevPost } = Astro.props;
 ---
 
 <hr />
 {
-  collection === "blog" ? (
-    <div class="neighbourPost">
-      {prevPost.data && (
-        <a class="prevPost" href={`/blog/${prevPost.slug}`}>
-          {prevPost.data.title}
-        </a>
-      )}
-      {nextPost.data && (
-        <a class="nextPost" href={`/blog/${nextPost.slug}`}>
-          {nextPost.data.title}
-        </a>
-      )}
-    </div>
-  ) : collection === "hacks" ? (
-    <div class="neighbourPost">
-      {prevPost.data && (
-        <a class="prevPost" href={`/hacks/${prevPost.slug}`}>
-          {prevPost.data.title}
-        </a>
-      )}
-      {nextPost.data && (
-        <a class="nextPost" href={`/hacks/${nextPost.slug}`}>
-          {nextPost.data.title}
-        </a>
-      )}
-    </div>
-  ) : null
+    (
+        <div class="neighbourPost">
+            {prevPost.data && (
+                <a class="prevPost" href={`/blog/${prevPost.slug}`}>
+                    {prevPost.data.title}
+                </a>
+            )}
+            {nextPost.data && (
+                <a class="nextPost" href={`/blog/${nextPost.slug}`}>
+                    {nextPost.data.title}
+                </a>
+            )}
+        </div>
+    )
 }
