@@ -2,6 +2,7 @@
 title: The Arvelie time system
 description: The Arvelie time system is a concise and useful way to approach our
   relationship to time, and also time management.
+arvDate: 01U08
 pubDate: 2024-10-15T13:33:08Z
 author: tjex
 tags: ["philosophy"]
