@@ -35,7 +35,7 @@ const postGithubUrl =  new URL('https://github.com/tjex/tjex.github.io/commits/m
     <article class="post-content__article">
         <h1>{post.data.title}</h1>
         <p class="post-info">
-            <span>Tillman Jex, <Date date={post.data.pubDate} format={"MDY"} /></span><br>
+      <span>Tillman Jex,</span> <span class="pub-date"><Date date={post.data.arvDate} format={"arvelie"} /></span><br>
 
             <span class="secondary">Tagged: </span> <Tags tags={post.data.tags} 
             style={"text"} />
