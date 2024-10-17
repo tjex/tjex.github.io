@@ -2,6 +2,7 @@
 title: Write in neovim anywhere and everywhere
 description:
   A script that effectively lets you write in any text box using neovim.
+arvDate: hell
 pubDate: 2024-08-05T20:27:49Z
 author: tjex
 tags: ["scripts", "terminal"]

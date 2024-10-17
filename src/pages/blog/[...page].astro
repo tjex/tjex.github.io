@@ -1,13 +1,11 @@
 ---
-// tjex.net/blog (display of all blog posts)
-
 import Layout from "../../layouts/Page.astro";
 import PostList from "../../components/PostList.astro";
 import TagsUnique from "../../components/TagsUnique.astro";
 import Paginator from "../../components/Paginator.astro";
 import * as colUtil from "../../scripts/collectionUtil.ts";
+import type { GetStaticPaths } from "astro";
 
-// TODO: refactor this into colUtil
 export async function getStaticPaths({ paginate }) {
     const posts = await colUtil.noDrafts("blog").then((posts) =>
         posts
