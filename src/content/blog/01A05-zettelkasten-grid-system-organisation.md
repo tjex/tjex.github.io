@@ -5,7 +5,6 @@ description: The GRID system is a framework for frictionless organisation of a
   that suppress the need for content categorisation.
 arvDate: 001A05
 pubDate: 2024-01-06T19:01:33Z
-modDate: 2024-02-07T16:24:55Z
 author: tjex
 tags: ["learning"]
 license: cc

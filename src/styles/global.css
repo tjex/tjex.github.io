@@ -709,6 +709,7 @@ body {
   text-align: right;
   margin-bottom: var(--spacing);
   font-size: var(--font-small);
+  line-height: 1.8em;
 }
 
 .neighbourPost {
@@ -1334,7 +1335,7 @@ tr.striped:nth-child(odd) {
  * Typography
  */
 :root {
-  font-family: system-ui, -apple-system, "Segoe UI", "Helvetica", "Roboto", "Ubuntu", "Cantarell", "Oxygen-Sans", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Arial, system-ui, -apple-system, "Segoe UI", "Helvetica", "Roboto", "Ubuntu", "Cantarell", "Oxygen-Sans", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 1.6;
   font-weight: 400;
   font-size: 1.15rem;

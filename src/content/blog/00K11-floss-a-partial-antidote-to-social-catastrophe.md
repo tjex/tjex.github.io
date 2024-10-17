@@ -5,7 +5,6 @@ description:
   principals help mitigate the harm that society is enduring?
 arvDate: 00K11
 pubDate: 2023-06-01T18:00:00Z
-modDate: 2024-08-08T10:51:48Z
 author: tjex
 tags: ["open-source", "society"]
 license: cc
