@@ -7,6 +7,7 @@ author: tjex
 tags: ["philosophy"]
 license: cc
 draft: false
+slug: 2024/arvelie-time-system
 ---
 
 I'm currently wrapping my head around Devine's time system,
