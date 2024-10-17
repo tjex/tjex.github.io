@@ -11,7 +11,6 @@ import HeaderLeft from "../components/HeaderLeft.astro";
 import HeaderRight from "../components/HeaderRight.astro";
 import Tags from "../components/Tags.astro";
 import Footer from "../components/Footer.astro";
-import License from "../components/License.astro";
 
 const { seo } = Astro.props;
 const { post } = Astro.props;
@@ -42,11 +41,6 @@ const postGithubUrl =  new URL('https://github.com/tjex/tjex.github.io/commits/m
 
             <br>
 
-
-            <span class="secondary">License: </span> {post.data.license && 
-            <License license={post.data.license} />}
-
-            <br>
             <!-- if the post has been modified since original publication -->
             {
                 post.data.modDate ? (
