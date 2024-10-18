@@ -11,7 +11,7 @@
 // Render the `main` element consistently in IE
 
 :root {
-  --max-width: 900px;
+  --max-width: 750px;
 }
 
 // Render the `main` element consistently in IE
@@ -133,9 +133,7 @@ body {
   flex: 3 0px;
   text-align: left;
   padding: calc(var(--spacing) * 1.5);
-  padding-bottom: calc(
-    var(--spacing) * 6
-  ); // need to take footer height into account
+  padding-bottom: calc(var(--spacing) * 6); // need to take footer height into account
 }
 
 /* sidebars */
@@ -168,7 +166,6 @@ body {
   text-align: center;
   padding: 0;
   padding-bottom: 1rem;
-  background: var(--background-color);
 }
 
 // this makes the crisp border ontop of the footer
@@ -176,7 +173,7 @@ body {
   content: "";
   display: block;
   height: 0;
-  border-top: 1px solid var(--secondary);
+  border-top: 1px solid var(--muted-color);
   width: 60%; /* Set the width to 35% */
   padding-top: var(--spacing);
   margin: 0 auto; /* Center the element horizontally */

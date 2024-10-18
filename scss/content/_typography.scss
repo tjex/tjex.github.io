@@ -27,7 +27,7 @@
     "Noto Color Emoji";
   line-height: 1.6;
   font-weight: 400;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   --font-small: 0.85rem;
   --font-smallest: 0.7rem;
 
@@ -162,7 +162,6 @@ a,
   }
 
   &:focus-visible:visited {
-    background-color: var(--link-visited-hover);
     color: var(--link-visited-hover);
   }
 
@@ -221,49 +220,31 @@ a.nav-link {
   }
 }
 
-a.site-heading {
-  display: inline-flex;
-  font-size: 4rem;
-  font-weight: 700;
-  &:before {
-    content: ":";
-    margin-right: 15px;
-  }
-  &:hover {
-    font-style: normal !important;
-  }
-}
-
-/* outgoing link icon for outgoing links */
-article a[href^="http"]::after,
-article a[href^="https://"]::after
-{
-  content: "";
-  width: 14px;
-  height: 14px;
-  margin-left: 2px;
-  background-image: var(--icon-outlink);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+.pill,
+a.pill {
   display: inline-block;
-}
-
-.pill-link a {
-  color: var(--primary);
+  font-size: var(--font-small);
+  // font-weight: 400; /* e.g. tags in heading or emboldened phrase */
   text-decoration: none;
-  margin: 0.4em;
+  margin-left: 0.4em;
+  margin-bottom: 0.4em;
   border: none;
   border-radius: 0.3em;
-  padding: 0.2em 0.8em;
-  background-color: var(--secondary-focus);
-  transition: var(--transition);
+  padding: 0.1em 0.8em;
+  background-color: var(--grey-surface);
+  &:visited {
+    color: var(--color);
+  }
+  &:visited:hover {
+    color: var(--amber-light);
+    background-color: var(--grey-surface-hover);
+  }
+  &:hover {
+    color: var(--amber-light);
+    background-color: var(--grey-surface-hover);
+  }
 }
 
-.pill-link a:hover,
-.pill-link a:focus {
-  background-color: var(--secondary-hover);
-}
 // Headings
 
 h1,
@@ -375,37 +356,13 @@ blockquote {
   }
 }
 
-.tag,
-.tag a {
-  display: inline-block;
-  font-size: var(--font-small);
-  // font-weight: 400; /* e.g. tags in heading or emboldened phrase */
-  text-decoration: none;
-  margin-left: 0.4em;
-  margin-bottom: 0.4em;
-  border: none;
-  border-radius: 0.3em;
-  padding: 0.1em 0.8em;
-  background-color: var(--secondary-focus);
-  &:visited {
-    color: var(--link-color);
-  }
-  &:visited:hover {
-    color: var(--link-hover-color);
-  }
-}
-
 // Span
 span.secondary {
   color: var(--secondary);
 }
 
-// blog posts, etc.
-.pub-date {
-  font-family: "Fira Code", monospace;
-  font-size: var(--font-small);
-  color: var(--secondary);
-  text-align: right;
+span.muted {
+  color: var(--muted-color);
 }
 
 // Highlighted text

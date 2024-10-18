@@ -14,6 +14,14 @@
   gap: 1rem;
 }
 
+// blog posts, etc.
+.pub-date {
+  font-family: "Fira Code", monospace;
+  font-size: var(--font-small);
+  color: var(--muted-color);
+  text-align: right;
+}
+
 // for divs that display page infrormation such as author and date
 .post-info {
   text-align: right;
