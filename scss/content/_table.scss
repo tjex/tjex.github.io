@@ -49,7 +49,7 @@ tfoot {
 }
 
 :not(thead, tfoot) > * > td {
-  --font-size: 0.875em;
+  --font-size: var(--font-size);
 }
 
 // Striped
