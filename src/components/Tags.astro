@@ -5,16 +5,26 @@ const { tags, style } = Astro.props;
 ---
 
 {
-  style == "pill"
-    ? tags.map((tag: any) => (
-        <a class="tag" href={`/tags/${tag}`}>
-          {tag}
-        </a>
-      ))
-    : style == "text"
-      ? tags.map((tag, index) => (
-            <a href={`/tags/${tag}`}>{tag}</a>
-            <span>{index !== tags.length - 1 && ", "}</span>
-        ))
-      : null
+    style == "pill"
+        ? tags.map((tag: any) => (
+              <a class="tag" href={`/tags/${tag}`}>
+                  {tag}
+              </a>
+          ))
+        : style == "text"
+          ? tags.map((tag, index) => (
+                <>
+                    <a href={`/tags/${tag}`}>{tag}</a>
+                    <span>{index !== tags.length - 1 && " . "}</span>
+                </>
+            ))
+          : style == "list"
+            ? // NOTE: parent component needs to wrapped win <ul> tags.
+              tags.map((tag) => (
+                  <li>
+                      {" "}
+                      <a href={`/tags/${tag}`}>{tag}</a>{" "}
+                  </li>
+              ))
+            : null
 }

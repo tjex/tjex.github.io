@@ -1256,7 +1256,7 @@ svg:not(:root) {
 }
 
 ul li {
-  list-style-type: "―";
+  list-style-type: "–";
   padding-left: 0.4rem;
 }
 
