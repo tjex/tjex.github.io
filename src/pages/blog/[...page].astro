@@ -4,7 +4,6 @@ import PostList from "../../components/PostList.astro";
 import TagsUnique from "../../components/TagsUnique.astro";
 import Paginator from "../../components/Paginator.astro";
 import * as colUtil from "../../scripts/collectionUtil.ts";
-import type { GetStaticPaths } from "astro";
 
 export async function getStaticPaths({ paginate }) {
     const posts = await colUtil.noDrafts("blog").then((posts) =>
@@ -31,12 +30,10 @@ const { page } = Astro.props;
 ---
 
 <Layout seo={seo}>
-    <h1>Blog</h1>
+    <h1>blog</h1>
     <p>
-        Time here is measured in <a href="https://wiki.xxiivv.com/site/arvelie.html">Arvelie time</a>.
-    </p>
-    <p>
-        <TagsUnique collection={"blog"} style={"pill"} />
+        Time here is measured in <a href="https://wiki.xxiivv.com/site/arvelie.html">Arvelie time</a>. <br />
+        Posts are ordered chronologically, newest to oldest, you can also <a href="/tags">filter by tags</a>.
     </p>
     <table>
         <tbody>
