@@ -23,7 +23,7 @@
 
   // Texts colors
   --color: #{$amber-medium};
-  --heading-color: var(--primary);
+  --heading-color: #{$amber-light};
 
   // Muted colors
   --muted: #{mix($amber-medium, $grey-700, 60%)};
