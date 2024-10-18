@@ -167,6 +167,7 @@ dead-link = "error"
 [alias]
 # Here are a few aliases to get you started.
 
+post = "zk new --title $@"
 # Shortcut to a command.
 #ls = "zk list $@"
 
