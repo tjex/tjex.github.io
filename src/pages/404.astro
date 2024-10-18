@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Base.astro";
+import Email from "../components/Email.astro"
 
 const seo = {
     title: "404",
@@ -8,20 +9,19 @@ const seo = {
 };
 ---
 
-<script src="../scripts/emailDecode.js"></script>
-
-<!-- No idea why I need to override main here, but without it --><!-- layout does not center itself -->
-<main style="max-width: 1200px">
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center;">
     <Layout seo={seo}>
-        <center>
+        <div style="text-align: center;">
             <h1>404</h1>
             <p>zinger...</p>
             <p>Nothing here.</p>
             <p>
                 If you think this is an error on my end, <br />
-                please shoot me a quick <a id="denc" href="">email</a> letting me know. Otherwise...
+                please <Email text={"shoot me a quick email"} subject={"404 on tjex.net"} /> letting me know. Otherwise...
             </p>
-            <a href="/">Go Home</a>
-        </center>
+            <a style="font-size: 3em;" href="/">Go Home</a>
+        </div>
     </Layout>
-</main>
+</div>
+
+

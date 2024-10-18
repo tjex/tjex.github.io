@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Page.astro";
-import Email from "../components/Email.astro"
+import Email from "../components/Email.astro";
 
 const seo = {
     title: "Contact",
@@ -9,15 +9,13 @@ const seo = {
 };
 ---
 
-<script src="../scripts/emailDecode.js"></script>
-
 <Layout seo={seo}>
     <h1>contact</h1>
     <div class="grid">
         <div>
             <h5 style="color: var(--color)">Chat:</h5>
             <ul>
-                <li><Email text={"Email"}/></li>
+                <li><Email text={"Email"} /></li>
                 <li><a rel="me" href="https://fosstodon.org/@tjex">Mastodon</a></li>
                 <li><a rel="me" href="https://www.linkedin.com/in/tillman-jex/">LinkedIn</a></li>
             </ul>
