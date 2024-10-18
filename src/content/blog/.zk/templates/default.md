@@ -1,7 +1,7 @@
 ---
 title: {{title}}
 description:
-arvDate: {{sh 'arvelie 2023 -c $(date +%Y-%m-%d)'}}
+arvDate: {{sh "arvelie 2023 -c today"}}
 pubDate: {{format-date now}}
 author: tjex
 tags: []
