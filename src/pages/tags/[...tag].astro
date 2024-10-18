@@ -22,7 +22,7 @@ const seo = {
 
 <Layout seo={seo}>
     <h1>{tag}</h1>
-    <p>Posts tagged: <span class="tag">{tag}</span></p>
+    <p>Posts tagged: <span class="pill">{tag}</span></p>
     <article class="blog-page-content__article">
         <table>
             {posts.map((post: any) => <PostPreview post={post} collection={post.collection} />)}

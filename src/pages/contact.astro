@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Page.astro";
+import Email from "../components/Email.astro"
 
 const seo = {
     title: "Contact",
@@ -16,7 +17,7 @@ const seo = {
         <div>
             <h5 style="color: var(--color)">Chat:</h5>
             <ul>
-                <li><a id="denc" href="">tj<!--foo>-->ex@<!--bar \n-->tjex.<!--baz-->net</a></li>
+                <li><Email text={"Email"}/></li>
                 <li><a rel="me" href="https://fosstodon.org/@tjex">Mastodon</a></li>
                 <li><a rel="me" href="https://www.linkedin.com/in/tillman-jex/">LinkedIn</a></li>
             </ul>

@@ -41,10 +41,10 @@ const seo = {
                 return (
                 <div class=grid>
                     <p>
-                        <a href={`${music[i].src}`} > {music[i].artist}: <span class="secondary" style="font-style: italic;">{music[i].work}</span></a>
+      <a href={`${music[i].src}`} > {music[i].artist} </a>  <span class="muted"><br> &#10149; {music[i].work}</span>
                     </p>
                     <p>
-                        <a href={`${music[i+1].src}`}> {music[i+1].artist}: <span class="secondary" style="font-style: italic;">{music[i+1].work}</span></a>
+      <a href={`${music[i+1].src}`}> {music[i+1].artist} </a> <br> <span class="muted">&#10149; {music[i+1].work}</span>
                     </p>
                 </div>
                 );
