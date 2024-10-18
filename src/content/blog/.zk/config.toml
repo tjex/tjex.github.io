@@ -15,7 +15,7 @@
 #default-title = "Untitled"
 
 # Template used to generate a note's filename, without extension.
-filename = "{{sh 'arvelie 2023 -c $(date +%Y-%m-%d)'}}-{{title}}"
+filename = "{{sh 'arvelie 2023 -c $(date +%Y-%m-%d)'}}-{{slug title}}"
 
 # The file extension used for the notes.
 #extension = "md"
