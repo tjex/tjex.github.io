@@ -11,7 +11,7 @@ draft: false
 slug: 2024/maths-code-and-music
 ---
 
-The other day I encountered again the statement that I must be good at maths if
+The other day I again encountered the statement that I must be good at maths if
 I'm able to read and write code. I myself remember thinking the same of
 others. And it was actually a contributing reason why I never considered
 learning programming earlier on. I just figured I wouldn't get very far, as
@@ -95,7 +95,7 @@ When I consider the above, what stands out to me is that between programming
 languages, maths and music, there are many shared components: _constants_,
 _variables_, _syntax_ and _narrative_. These components simply hold different
 values, given different domains. Sound and movement for music, numbers for
-maths, and data for code. 
+maths, and data for code.
 
 I think if I'd been aware of this back in school, that there is much more
 fluidity between skill sets than is immediately apparent, I wouldn't have
