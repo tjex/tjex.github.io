@@ -1319,7 +1319,7 @@ tfoot td {
 }
 
 :not(thead, tfoot) > * > td {
-  --font-size: 0.875em;
+  --font-size: var(--font-size);
 }
 
 table[role=grid] tbody tr:nth-child(odd) {
