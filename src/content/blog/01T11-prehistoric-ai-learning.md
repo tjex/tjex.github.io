@@ -12,10 +12,10 @@ draft: false
 slug: 2024/prehistoric-ai-learning
 ---
 
-A significant issue with AI learning is that it's all to easy to leave the
-"why?" out of the answer. We don't learn the context of _why_ that answer is a
-good answer. The generated solution may work, but we have no knowledge of how it
-compares to other solutions.
+A significant issue with AI learning is how easy it is to gloss over the
+question of, "why?". "Why ..." is the generated answer a good answer? The
+generated solution may work, but we have no knowledge of how it compares to
+other solutions, nor the process of getting to the solution.
 
 It's also a loaded situation, asking the LLM to explain why it's proposing any
 given solution, because the LLM _always_ has the right answer EVEN WHEN IT
