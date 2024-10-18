@@ -27,7 +27,7 @@
 
   // Muted colors
   --muted: #{mix($amber-medium, $grey-700, 60%)};
-  --muted-border-color: #{$amber-dark};
+  --muted-border: #{$amber-dark};
 
   // Links
   --link-color: var(--color);
@@ -51,7 +51,7 @@
   --del-color: #{$red-dark};
 
   // Blockquote
-  --blockquote-border-color: var(--muted-border-color);
+  --blockquote-border-color: var(--muted-border);
   --blockquote-footer-color: var(--muted);
 
   // Callouts
@@ -102,7 +102,7 @@
   --range-thumb-active-color: var(--red);
 
   // Table
-  --table-border-color: var(--muted-border-color);
+  --table-border-color: var(--muted-border);
   --table-row-stripped-background-color: #{rgba($amber-medium, 0.05)};
 
   // Code
@@ -113,7 +113,7 @@
   --code-comment-color: #{mix($amber-dark, $amber-medium)};
 
   // Accordion (<details>)
-  --accordion-border-color: var(--muted-border-color);
+  --accordion-border-color: var(--muted-border);
   --accordion-active-summary-color: var(--red);
   --accordion-close-summary-color: var(--color);
   --accordion-open-summary-color: var(--muted);

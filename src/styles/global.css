@@ -46,7 +46,7 @@
   --color: #000;
   --heading-color: var(--primary);
   --muted: hsl(205, 10%, 40%);
-  --muted-border-color: var(--muted);
+  --muted-border: var(--muted);
   --link-color: var(--color);
   --link-decoration-color: var(--color);
   --link-visited: var(--muted);
@@ -60,7 +60,7 @@
   --selection-color: var(--contrast-inverse);
   --ins-color: hsl(125, 70%, 22%);
   --del-color: hsl(0, 45%, 13%);
-  --blockquote-border-color: var(--muted-border-color);
+  --blockquote-border-color: var(--muted-border);
   --blockquote-footer-color: var(--muted);
   --note: hsl(210, 35%, 55%);
   --background-note: #cbd2dd;
@@ -95,18 +95,18 @@
   --range-thumb-color: var(--secondary);
   --range-thumb-hover-color: var(--secondary-hover);
   --range-thumb-active-color: var(--red);
-  --table-border-color: var(--muted-border-color);
+  --table-border-color: var(--muted-border);
   --table-row-stripped-background-color: #dbe0e7;
   --code-background-color-inline: var(--grey-surface);
   --code-tag-color: hsl(330, 40%, 50%);
   --code-property-color: hsl(185, 40%, 40%);
   --code-value-color: hsl(40, 20%, 50%);
   --code-comment-color: hsl(205, 14%, 60%);
-  --accordion-border-color: var(--muted-border-color);
+  --accordion-border-color: var(--muted-border);
   --accordion-close-summary-color: var(--color);
   --accordion-open-summary-color: var(--muted);
   --card-background-color: var(--background-color);
-  --card-border-color: var(--muted-border-color);
+  --card-border-color: var(--muted-border);
   --card-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(23, 26, 28, 0.01698),
     0.0335rem 0.067rem 0.402rem rgba(23, 26, 28, 0.024),
     0.0625rem 0.125rem 0.75rem rgba(23, 26, 28, 0.03),
@@ -164,7 +164,7 @@
     --color: hsl(20, 12%, 60%);
     --heading-color: hsl(20, 20%, 70%);
     --muted: #756e6b;
-    --muted-border-color: hsl(20, 12%, 50%);
+    --muted-border: hsl(20, 12%, 50%);
     --link-color: var(--color);
     --link-decoration-color: var(--color);
     --link-visited: var(--muted);
@@ -178,7 +178,7 @@
     --selection-color: var(--contrast-inverse);
     --ins-color: hsl(125, 70%, 22%);
     --del-color: hsl(0, 45%, 13%);
-    --blockquote-border-color: var(--muted-border-color);
+    --blockquote-border-color: var(--muted-border);
     --blockquote-footer-color: var(--muted);
     --note: hsl(210, 35%, 55%);
     --background-note: #1e2a36;
@@ -213,14 +213,14 @@
     --range-thumb-color: var(--secondary);
     --range-thumb-hover-color: var(--secondary-hover);
     --range-thumb-active-color: var(--red);
-    --table-border-color: var(--muted-border-color);
+    --table-border-color: var(--muted-border);
     --table-row-stripped-background-color: rgba(165, 149, 141, 0.05);
     --code-background-color-inline: var(--grey-surface);
     --code-tag-color: hsl(330, 30%, 50%);
     --code-property-color: hsl(185, 30%, 50%);
     --code-value-color: hsl(40, 10%, 50%);
     --code-comment-color: #9a887f;
-    --accordion-border-color: var(--muted-border-color);
+    --accordion-border-color: var(--muted-border);
     --accordion-active-summary-color: var(--red);
     --accordion-close-summary-color: var(--color);
     --accordion-open-summary-color: var(--muted);
@@ -282,7 +282,7 @@
   --color: hsl(20, 12%, 60%);
   --heading-color: hsl(20, 20%, 70%);
   --muted: #756e6b;
-  --muted-border-color: hsl(20, 12%, 50%);
+  --muted-border: hsl(20, 12%, 50%);
   --link-color: var(--color);
   --link-decoration-color: var(--color);
   --link-visited: var(--muted);
@@ -296,7 +296,7 @@
   --selection-color: var(--contrast-inverse);
   --ins-color: hsl(125, 70%, 22%);
   --del-color: hsl(0, 45%, 13%);
-  --blockquote-border-color: var(--muted-border-color);
+  --blockquote-border-color: var(--muted-border);
   --blockquote-footer-color: var(--muted);
   --note: hsl(210, 35%, 55%);
   --background-note: #1e2a36;
@@ -331,14 +331,14 @@
   --range-thumb-color: var(--secondary);
   --range-thumb-hover-color: var(--secondary-hover);
   --range-thumb-active-color: var(--red);
-  --table-border-color: var(--muted-border-color);
+  --table-border-color: var(--muted-border);
   --table-row-stripped-background-color: rgba(165, 149, 141, 0.05);
   --code-background-color-inline: var(--grey-surface);
   --code-tag-color: hsl(330, 30%, 50%);
   --code-property-color: hsl(185, 30%, 50%);
   --code-value-color: hsl(40, 10%, 50%);
   --code-comment-color: #9a887f;
-  --accordion-border-color: var(--muted-border-color);
+  --accordion-border-color: var(--muted-border);
   --accordion-active-summary-color: var(--red);
   --accordion-close-summary-color: var(--color);
   --accordion-open-summary-color: var(--muted);
@@ -536,6 +536,7 @@ body {
   text-align: center;
   padding: 0;
   padding-bottom: 1rem;
+  background: var(--background-color);
 }
 
 .footer::before {
@@ -1264,7 +1265,7 @@ ul li {
 hr {
   height: 0;
   border: 0;
-  border-top: 1px solid var(--muted-border-color);
+  border-top: 1px solid var(--muted-border);
   color: inherit;
 }
 
@@ -1541,6 +1542,7 @@ h5,
 h6 {
   color: var(--heading-color);
   font-weight: 700;
+  border-bottom: solid 1px var(--muted-border);
 }
 
 h1 {
