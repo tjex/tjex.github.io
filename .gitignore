@@ -7,6 +7,9 @@ dist/
 #src/assets/
 *.test.md
 
+# zk
+notebook.db
+
 ### Node ###
 # Logs
 logs
