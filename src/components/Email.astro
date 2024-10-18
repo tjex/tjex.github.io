@@ -1,0 +1,26 @@
+---
+const { subject, text } = Astro.props;
+---
+
+<email-reply data-message={subject} text={text}>
+  <a href="" id="denc-reply">{text}</a>
+</email-reply>
+
+<script>
+  class EmailReply extends HTMLElement {
+    connectedCallback() {
+      const subject = this.dataset.message; // message, is a keyword, not a variable name!
+      const encEmail = "dGpleEB0amV4Lm5ldA==";
+      const email = atob(encEmail);
+      const e = this.querySelector("#denc-reply");
+      if (subject === undefined) {
+        e.setAttribute("href", `mailto:${email}`);
+      } else {
+        e.setAttribute("href", `mailto:${email}?subject=${encodeURIComponent(subject)}`);
+      }
+    }
+  }
+
+  customElements.define("email-reply", EmailReply);
+</script>
+
