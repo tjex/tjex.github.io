@@ -23,22 +23,24 @@ const postGithubUrl = new URL("https://github.com/tjex/tjex.github.io/blob/main/
 <script src="../scripts/emailDecode.js"></script>
 
 <Layout {seo}>
-    <Fragment slot="head-bottom">
-        <ArticleSchema {post} />
-    </Fragment>
-    <HeaderLeft slot="header-left" />
-    <HeaderCenter slot="header-center" />
-    <HeaderRight slot="header-left" />
-    <SideLeftPage slot="side-left" />
-    <article class="post-content__article">
-        <h1>{post.data.title}</h1>
-        <div class="post-info">
-            <span style="font-family: monospace"><Date date={post.data.arvDate} format={"arvelie"} /></span>
-            <div><Tags tags={post.data.tags} style={"text"} /></div>
-        </div>
-    </article>
+  <Fragment slot="head-bottom">
+    <ArticleSchema {post} />
+  </Fragment>
+  <HeaderLeft slot="header-left" />
+  <HeaderCenter slot="header-center" />
+  <HeaderRight slot="header-left" />
+  <SideLeftPage slot="side-left" />
+  <article class="post-content__article">
+    <h1>{post.data.title}</h1>
+    <div class="post-info">
+      <span style="font-family: monospace"
+        ><abbr title=`${post.data.pubDate}`><Date date={post.data.arvDate} format={"arvelie"} /></abbr></span
+      >
+      <div><Tags tags={post.data.tags} style={"text"} /></div>
+    </div>
+  </article>
 
-    <slot />
-    <SideRightBlank slot="side-right" />
-    <Footer slot="footer" />
+  <slot />
+  <SideRightBlank slot="side-right" />
+  <Footer slot="footer" />
 </Layout>
