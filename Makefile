@@ -9,6 +9,7 @@ css:
 	sass scss/main.scss src/styles/global.css
 
 deploy: 
+	git stash
 	git checkout deploy
 	git merge main
 	make css
@@ -17,5 +18,5 @@ deploy:
 	git commit -m "build and deploy"
 	git push origin deploy
 	git checkout main
-
+	git stash pop
 
