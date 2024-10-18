@@ -11,18 +11,15 @@ import HeaderLeft from "../components/HeaderLeft.astro";
 import HeaderRight from "../components/HeaderRight.astro";
 import Tags from "../components/Tags.astro";
 import Footer from "../components/Footer.astro";
-import EmailReply from "../components/Email.astro"
+import EmailReply from "../components/Email.astro";
 
 const { seo } = Astro.props;
 const { post } = Astro.props;
-const { subject } = post.data.title;
 
 // cobble together a valid url for GitHub
 const filename = path.basename(post.id);
 const postGithubUrl = new URL("https://github.com/tjex/tjex.github.io/blob/main/src/content/blog/" + filename);
 ---
-
-
 
 <Layout {seo}>
     <Fragment slot="head-bottom">
