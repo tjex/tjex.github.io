@@ -44,11 +44,11 @@
   --grey-surface: hsl(205, 18%, 80%);
   --color: #000;
   --heading-color: var(--primary);
-  --muted-color: hsl(205, 10%, 40%);
-  --muted-border-color: var(--muted-color);
+  --muted: hsl(205, 10%, 40%);
+  --muted-border-color: var(--muted);
   --link-color: var(--color);
   --link-decoration-color: var(--color);
-  --link-visited: var(--muted-color);
+  --link-visited: var(--muted);
   --link-visited-hover: var(--primary);
   --nav-link-color: var(--primary);
   --contrast: hsl(205, 10%, 10%);
@@ -60,7 +60,7 @@
   --ins-color: hsl(125, 70%, 22%);
   --del-color: hsl(0, 45%, 13%);
   --blockquote-border-color: var(--muted-border-color);
-  --blockquote-footer-color: var(--muted-color);
+  --blockquote-footer-color: var(--muted);
   --note: hsl(210, 35%, 55%);
   --background-note: #f0f4f8;
   --warning: hsl(20, 12%, 60%);
@@ -72,7 +72,7 @@
   --form-element-background-color: transparent;
   --form-element-border-color: hsl(205, 14%, 60%);
   --form-element-color: var(--color);
-  --form-element-placeholder-color: var(--muted-color);
+  --form-element-placeholder-color: var(--muted);
   --form-element-active-background-color: transparent;
   --form-element-active-border-color: var(--red);
   --form-element-focus-color: var(--red-focus);
@@ -103,7 +103,7 @@
   --code-comment-color: hsl(205, 14%, 60%);
   --accordion-border-color: var(--muted-border-color);
   --accordion-close-summary-color: var(--color);
-  --accordion-open-summary-color: var(--muted-color);
+  --accordion-open-summary-color: var(--muted);
   --card-background-color: var(--background-color);
   --card-border-color: var(--muted-border-color);
   --card-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(23, 26, 28, 0.01698),
@@ -167,11 +167,11 @@
     --grey-surface-hover: hsl(205, 15%, 15%);
     --color: hsl(20, 12%, 60%);
     --heading-color: var(--primary);
-    --muted-color: #6a6563;
+    --muted: #756e6b;
     --muted-border-color: hsl(20, 12%, 50%);
     --link-color: var(--color);
     --link-decoration-color: var(--color);
-    --link-visited: var(--muted-color);
+    --link-visited: var(--muted);
     --link-visited-hover: var(--primary);
     --nav-link-color: var(--primary);
     --contrast: hsl(20, 20%, 70%);
@@ -183,7 +183,7 @@
     --ins-color: hsl(125, 70%, 22%);
     --del-color: hsl(0, 45%, 13%);
     --blockquote-border-color: var(--muted-border-color);
-    --blockquote-footer-color: var(--muted-color);
+    --blockquote-footer-color: var(--muted);
     --note: hsl(210, 35%, 55%);
     --background-note: #1e2a36;
     --warning: hsl(20, 12%, 60%);
@@ -195,7 +195,7 @@
     --form-element-background-color: #594c46;
     --form-element-border-color: #8f7a70;
     --form-element-color: var(--color);
-    --form-element-placeholder-color: var(--muted-color);
+    --form-element-placeholder-color: var(--muted);
     --form-element-active-background-color: var(--form-element-background-color);
     --form-element-active-border-color: var(--red);
     --form-element-focus-color: var(--red-focus);
@@ -227,7 +227,7 @@
     --accordion-border-color: var(--muted-border-color);
     --accordion-active-summary-color: var(--red);
     --accordion-close-summary-color: var(--color);
-    --accordion-open-summary-color: var(--muted-color);
+    --accordion-open-summary-color: var(--muted);
     --card-background-color: #6b5c54;
     --card-border-color: var(--card-background-color);
     --card-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.01698),
@@ -285,11 +285,11 @@
   --grey-surface-hover: hsl(205, 15%, 15%);
   --color: hsl(20, 12%, 60%);
   --heading-color: var(--primary);
-  --muted-color: #6a6563;
+  --muted: #756e6b;
   --muted-border-color: hsl(20, 12%, 50%);
   --link-color: var(--color);
   --link-decoration-color: var(--color);
-  --link-visited: var(--muted-color);
+  --link-visited: var(--muted);
   --link-visited-hover: var(--primary);
   --nav-link-color: var(--primary);
   --contrast: hsl(20, 20%, 70%);
@@ -301,7 +301,7 @@
   --ins-color: hsl(125, 70%, 22%);
   --del-color: hsl(0, 45%, 13%);
   --blockquote-border-color: var(--muted-border-color);
-  --blockquote-footer-color: var(--muted-color);
+  --blockquote-footer-color: var(--muted);
   --note: hsl(210, 35%, 55%);
   --background-note: #1e2a36;
   --warning: hsl(20, 12%, 60%);
@@ -313,7 +313,7 @@
   --form-element-background-color: #594c46;
   --form-element-border-color: #8f7a70;
   --form-element-color: var(--color);
-  --form-element-placeholder-color: var(--muted-color);
+  --form-element-placeholder-color: var(--muted);
   --form-element-active-background-color: var(--form-element-background-color);
   --form-element-active-border-color: var(--red);
   --form-element-focus-color: var(--red-focus);
@@ -345,7 +345,7 @@
   --accordion-border-color: var(--muted-border-color);
   --accordion-active-summary-color: var(--red);
   --accordion-close-summary-color: var(--color);
-  --accordion-open-summary-color: var(--muted-color);
+  --accordion-open-summary-color: var(--muted);
   --card-background-color: #6b5c54;
   --card-border-color: var(--card-background-color);
   --card-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.01698),
@@ -546,7 +546,7 @@ body {
   content: "";
   display: block;
   height: 0;
-  border-top: 1px solid var(--muted-color);
+  border-top: 1px solid var(--muted);
   width: 60%; /* Set the width to 35% */
   padding-top: var(--spacing);
   margin: 0 auto; /* Center the element horizontally */
@@ -703,7 +703,7 @@ body {
 .pub-date {
   font-family: "Fira Code", monospace;
   font-size: var(--font-small);
-  color: var(--muted-color);
+  color: var(--muted);
   text-align: right;
 }
 
@@ -930,7 +930,7 @@ nav[aria-label=breadcrumb] ul li:not(:last-child) ::after {
   width: calc(var(--nav-link-spacing-horizontal) * 2);
   margin-inline-start: calc(var(--nav-link-spacing-horizontal) / 2);
   content: "/";
-  color: var(--muted-color);
+  color: var(--muted);
   text-align: center;
 }
 nav[aria-label=breadcrumb] a[aria-current] {
@@ -1595,7 +1595,7 @@ hgroup > *,
 }
 hgroup > *:last-child,
 .headings > *:last-child {
-  --color: var(--muted-color);
+  --color: var(--muted);
   --font-weight: unset;
   font-size: 1rem;
   font-family: unset;
@@ -1624,7 +1624,7 @@ span.secondary {
 }
 
 span.muted {
-  color: var(--muted-color);
+  color: var(--muted);
 }
 
 mark {

@@ -308,7 +308,7 @@ h6 {
     }
 
     > *:last-child {
-      --color: var(--muted-color);
+      --color: var(--muted);
       --font-weight: unset;
       font-size: 1rem;
       font-family: unset;
@@ -326,7 +326,7 @@ h6 {
     }
 
     > *:last-child {
-      --color: var(--muted-color);
+      --color: var(--muted);
       --font-weight: unset;
       font-size: 1rem;
       font-family: unset;
@@ -362,7 +362,7 @@ span.secondary {
 }
 
 span.muted {
-  color: var(--muted-color);
+  color: var(--muted);
 }
 
 // Highlighted text
