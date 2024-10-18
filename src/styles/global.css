@@ -549,10 +549,6 @@ body {
   margin: 0 auto; /* Center the element horizontally */
 }
 
-.four-oh-four {
-  text-align: center;
-}
-
 /* from: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-examples */
 @media all and (min-width: 1200px) {
   .aside {
