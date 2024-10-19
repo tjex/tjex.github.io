@@ -3,7 +3,7 @@ title: First 10 Day Vipassana Course
 description:
   A few thoughts after my first 10 day silent meditation course in the technique
   of Vipassana and a consolidation of its philosophies.
-arvDate: 00M08
+arvDate: 02M08
 pubDate: 2023-06-26T18:51:08Z
 author: tjex
 tags: ["meditation", "philosophy"]

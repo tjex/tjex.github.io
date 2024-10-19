@@ -3,7 +3,7 @@ title: The GRID System for Frictionless Zettelkasten Organisation
 description: The GRID system is a framework for frictionless organisation of a
   Zettelkasten. It defines a set of rules for note creation and note tagging
   that suppress the need for content categorisation.
-arvDate: 001A05
+arvDate: 021A05
 pubDate: 2024-01-06T19:01:33Z
 author: tjex
 tags: ["learning"]
