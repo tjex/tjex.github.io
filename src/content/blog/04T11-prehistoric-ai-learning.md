@@ -3,7 +3,7 @@ title: Learning in the prehistoric age of AI
 description: To what degree do we actually learn with AI tools? And will those
   of us who turn to these tools, be condemned to a bleak reality once the AI
   bubble pops?
-arvDate: 03T11
+arvDate: 04T11
 pubDate: 2024-10-04T20:31:38Z
 author: tjex
 tags: ["learning", "society", "career"]

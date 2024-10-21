@@ -2,7 +2,7 @@
 title: Hello World
 description: It's traditional.
 pubDate: 2023-05-28T10:30:00Z
-arvDate: 02K07
+arvDate: 03K07
 author: tjex
 tags: []
 license: cc

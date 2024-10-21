@@ -4,7 +4,7 @@ description:
   Polishing your tools is a good thing. It can teach you a lot, particularly if
   you're new to a technology or practice. Just keep track of how far down the
   rabbit hole you are.
-arvDate: 02T13
+arvDate: 03T13
 pubDate: 2023-10-07T09:31:34Z
 author: tjex
 tags: ["learning"]
