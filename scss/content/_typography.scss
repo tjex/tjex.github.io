@@ -92,7 +92,6 @@ figure,
 form,
 ol,
 p,
-pre,
 table,
 ul {
   margin-top: 0;
@@ -354,6 +353,24 @@ blockquote {
   footer {
     margin-top: calc(var(--typography-spacing-vertical) * 0.5);
     color: var(--blockquote-footer-color);
+  }
+}
+
+q {
+  font-style: italic;
+  > code {
+    background: unset;
+    padding: unset;
+  }
+}
+
+cite {
+  display: block;
+  color: var(--muted);
+  font-style: italic;
+  &:before {
+    padding-right: 0.25em;
+    content: "\2015";
   }
 }
 
