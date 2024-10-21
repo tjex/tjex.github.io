@@ -29,9 +29,8 @@ code,
 kbd,
 samp {
   font-size: var(--font-small); // 2
-  font-family: "Fira Code", "Menlo", "Consolas", "Roboto Mono",
-    "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Fira Code", "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono",
+    "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 // Prevent overflow of the container in all browsers (opinionated)
@@ -60,16 +59,18 @@ kbd {
 
 pre {
   display: block;
+  padding: 0.2rem 0.3rem;
   margin-bottom: var(--spacing);
   overflow-x: auto;
 
-  > code {
-    display: block;
-    padding: var(--spacing);
-    background: none;
-    font-size: 14px;
-    line-height: var(--line-height);
-  }
+  /* this is redundant right? pre is pre-formatted anyway (monospaced) */
+  /* > code { */
+  /*   display: block; */
+  /*   padding: var(--spacing); */
+  /*   background: none; */
+  /*   font-size: 14px; */
+  /*   line-height: var(--line-height); */
+  /* } */
 }
 
 // Code Syntax

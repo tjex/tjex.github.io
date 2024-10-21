@@ -9,7 +9,7 @@ author: tjex
 tags: ["learning"]
 license: cc
 draft: false
-slug: 2024/zettelkasten-grid-system-organisation
+slug: zettelkasten-grid-system-organisation
 ---
 
 The GRID system is a framework for frictionless Zettelkasten organisation. It

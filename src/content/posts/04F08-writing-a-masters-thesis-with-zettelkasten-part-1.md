@@ -9,7 +9,7 @@ author: tjex
 tags: ["learning"]
 license: cc
 draft: false
-slug: 2024/writing-a-masters-thesis-with-zettelkasten-part-1
+slug: writing-a-masters-thesis-with-zettelkasten-part-1
 ---
 
 I've finally arrived on a topic for my masters thesis. It's an investigation
@@ -127,7 +127,7 @@ etc
 ### Diary
 
 As well as this,
-[I keep a daily diary within my Zettelkasten](https://tjex.net/blog/2024/zettelkasten-grid-system-organisation/#d-for-diaries)
+[I keep a daily diary within my Zettelkasten](https://tjex.net/posts/zettelkasten-grid-system-organisation/#d-for-diaries)
 where I can write freely about particular project or _Zettelkasten related work_
 at hand. It's _not_ a diary of my personal life, etc.
 
@@ -151,7 +151,7 @@ Idea's are generated from borrowing parts of pre-existing information.
 ### Tags
 
 As per
-[my approach to tagging](https://tjex.net/blog/2024/zettelkasten-grid-system-organisation/#structure-tags)
+[my approach to tagging](https://tjex.net/posts/zettelkasten-grid-system-organisation/#structure-tags)
 I will tag all notes that are deemed strongly related to my thesis with
 `#p/thesis` ('p' for project). This is partly a crutch to help find a lost note,
 but is particularly useful given my Zettelkasten program of choice,

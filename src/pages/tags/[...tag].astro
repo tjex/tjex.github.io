@@ -6,7 +6,7 @@ import PostPreview from "../../components/PostPreview.astro";
 import * as colUtil from "../../scripts/collectionUtil.ts";
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const paths = await colUtil.getPostsPerTag(["blog"]);
+    const paths = await colUtil.getPostsPerTag(["posts"]);
     return paths;
 };
 

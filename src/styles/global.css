@@ -1167,15 +1167,17 @@ kbd {
 
 pre {
   display: block;
+  padding: 0.2rem 0.3rem;
   margin-bottom: var(--spacing);
   overflow-x: auto;
-}
-pre > code {
-  display: block;
-  padding: var(--spacing);
-  background: none;
-  font-size: 14px;
-  line-height: var(--line-height);
+  /* this is redundant right? pre is pre-formatted anyway (monospaced) */
+  /* > code { */
+  /*   display: block; */
+  /*   padding: var(--spacing); */
+  /*   background: none; */
+  /*   font-size: 14px; */
+  /*   line-height: var(--line-height); */
+  /* } */
 }
 
 code b {
@@ -1394,7 +1396,6 @@ figure,
 form,
 ol,
 p,
-pre,
 table,
 ul {
   margin-top: 0;
@@ -1615,6 +1616,24 @@ blockquote {
 blockquote footer {
   margin-top: calc(var(--typography-spacing-vertical) * 0.5);
   color: var(--blockquote-footer-color);
+}
+
+q {
+  font-style: italic;
+}
+q > code {
+  background: unset;
+  padding: unset;
+}
+
+cite {
+  display: block;
+  color: var(--muted);
+  font-style: italic;
+}
+cite:before {
+  padding-right: 0.25em;
+  content: "―";
 }
 
 span.secondary {
