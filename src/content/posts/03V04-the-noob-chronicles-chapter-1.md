@@ -9,7 +9,7 @@ author: tjex
 tags: ["career", "learning"]
 license: cc
 draft: false
-slug: the-noob-chronicles-chapter-1
+slug: 2023/the-noob-chronicles-chapter-1
 ---
 
 It's important to step back and get some perspective about your progress with
