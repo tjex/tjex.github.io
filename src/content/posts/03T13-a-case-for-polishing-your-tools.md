@@ -10,7 +10,7 @@ author: tjex
 tags: ["learning"]
 license: cc
 draft: false
-slug: 2023/a-case-for-polishing-your-tools
+slug: a-case-for-polishing-your-tools
 ---
 
 I have a lust in understand things to a deeper level than what is needed to

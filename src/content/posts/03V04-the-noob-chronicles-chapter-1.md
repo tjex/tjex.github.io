@@ -9,7 +9,7 @@ author: tjex
 tags: ["career", "learning"]
 license: cc
 draft: false
-slug: 2023/the-noob-chronicles-chapter-1
+slug: the-noob-chronicles-chapter-1
 ---
 
 It's important to step back and get some perspective about your progress with
@@ -114,7 +114,7 @@ my skill progressions into perspective. For myself to look back on, and also any
 other person also grappling with the huge initial learning curve of programming.
 
 So please read this like you're reading my personal diary. In a large sense,
-that is actually [what this blog is](/blog/2023/hello-world).
+that is actually [what this blog is](/posts/hello-world).
 
 Shortly after learning what a for loop is, I programmed the below image. So it
 would be the first thing I ever programmed; an illustrious and provocative work
