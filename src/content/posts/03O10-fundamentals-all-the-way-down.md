@@ -9,7 +9,7 @@ author: tjex
 tags: ["career", "learning"]
 license: cc
 draft: false
-slug: fundamentals-all-the-way-down
+slug: 2023/fundamentals-all-the-way-down
 ---
 
 I recently listened to an

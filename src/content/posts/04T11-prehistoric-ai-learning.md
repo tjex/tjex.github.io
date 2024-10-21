@@ -9,7 +9,7 @@ author: tjex
 tags: ["learning", "society", "career"]
 license: cc
 draft: false
-slug: prehistoric-ai-learning
+slug: 2024/prehistoric-ai-learning
 ---
 
 A significant issue with AI learning is how easy it is to gloss over the

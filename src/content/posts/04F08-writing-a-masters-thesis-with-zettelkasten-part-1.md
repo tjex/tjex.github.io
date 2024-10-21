@@ -9,7 +9,7 @@ author: tjex
 tags: ["learning"]
 license: cc
 draft: false
-slug: writing-a-masters-thesis-with-zettelkasten-part-1
+slug: 2024/writing-a-masters-thesis-with-zettelkasten-part-1
 ---
 
 I've finally arrived on a topic for my masters thesis. It's an investigation

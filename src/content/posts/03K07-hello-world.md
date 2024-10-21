@@ -7,7 +7,7 @@ author: tjex
 tags: []
 license: cc
 draft: false
-slug: hello-world
+slug: 2023/hello-world
 ---
 
 Why am I starting to blog?

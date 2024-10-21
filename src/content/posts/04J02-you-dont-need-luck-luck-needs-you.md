@@ -9,7 +9,7 @@ author: tjex
 tags: ["philosophy"]
 license: cc
 draft: false
-slug: you-dont-need-luck-luck-needs-you
+slug: 2024/you-dont-need-luck-luck-needs-you
 ---
 
 > _Luck is what happens when preparation meets opportunity._
