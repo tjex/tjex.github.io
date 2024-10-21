@@ -8,6 +8,7 @@ export default defineConfig({
   redirects: {
     "/blog": "/posts",
     "/blog/[...page]": "/posts/[...page]",
+    "/blog/[...slug]": "/posts/[...slug]",
   },
   markdown: {
     drafts: true,
