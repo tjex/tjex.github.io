@@ -6,7 +6,7 @@ import Paginator from "../../components/Paginator.astro";
 import * as colUtil from "../../scripts/collectionUtil.ts";
 
 export async function getStaticPaths({ paginate }) {
-    const posts = await colUtil.noDrafts("blog").then((posts) =>
+    const posts = await colUtil.noDrafts("posts").then((posts) =>
         posts
             .map((post: any) => ({
                 slug: post.slug,
@@ -39,7 +39,7 @@ const { page } = Astro.props;
     </p>
     <table>
         <tbody>
-            {page.data.map((post: any) => <PostList post={post} collection={"blog"} />)}
+            {page.data.map((post: any) => <PostList post={post} collection={"posts"} />)}
         </tbody>
     </table>
     <Paginator page={page} />

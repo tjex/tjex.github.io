@@ -7,9 +7,9 @@ import * as colUtil from "../scripts/collectionUtil.ts";
 const parser = new MarkdownIt();
 
 export async function GET(context) {
-  const posts = await colUtil.noDrafts("blog");
+  const posts = await colUtil.noDrafts("posts");
   return rss({
-    title: "tjex.net - blog",
+    title: "tjex.net - posts",
     description: site.description,
     site: context.site,
     customData: `
@@ -25,7 +25,7 @@ export async function GET(context) {
           pubDate: post.data.pubDate,
           description: post.data.description,
           categories: post.data.tags,
-          link: `/blog/${post.slug}/`,
+          link: `/posts/${post.slug}/`,
           content: sanitizeHtml(parser.render(post.body)),
         };
       })
