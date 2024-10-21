@@ -1,5 +1,5 @@
 import rss from "@astrojs/rss";
-import site from "../data/settings";
+import site from "../data/settings.js";
 import sanitizeHtml from "sanitize-html";
 import MarkdownIt from "markdown-it";
 import * as colUtil from "../scripts/collectionUtil.ts";
@@ -18,15 +18,17 @@ export async function GET(context) {
       </atom:link>
     `,
     stylesheet: "/rss/styles.xsl",
-    items: posts.map((post) => {
-      return {
-        title: post.data.title,
-        pubDate: post.data.pubDate,
-        description: post.data.description,
-        categories: post.data.tags,
-        link: `/blog/${post.slug}/`,
-        content: sanitizeHtml(parser.render(post.body)),
-      };
-    }).sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate)),
+    items: posts
+      .map((post) => {
+        return {
+          title: post.data.title,
+          pubDate: post.data.pubDate,
+          description: post.data.description,
+          categories: post.data.tags,
+          link: `/blog/${post.slug}/`,
+          content: sanitizeHtml(parser.render(post.body)),
+        };
+      })
+      .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate)),
   });
 }
