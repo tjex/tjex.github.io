@@ -7,8 +7,6 @@ export default defineConfig({
   site: "https://tjex.net",
   redirects: {
     "/blog": "/posts",
-    "/blog/[...page]": "/posts/[...page]",
-    "/blog/[...slug]": "/posts/[...slug]",
   },
   markdown: {
     drafts: true,
