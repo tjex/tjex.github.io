@@ -11,7 +11,7 @@ const ldData = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: `${post.data.title}`,
-    url: `${site.url}/blog/${post.slug}`,
+    url: `${site.url}/posts/${post.slug}`,
     datePublished: `${post.data.pubDate}`,
     description: `${post.data.description}`,
     author: {
@@ -28,7 +28,7 @@ const ldData = {
     },
     mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": `${site.url}/blog/`,
+        "@id": `${site.url}/posts/`,
     },
 };
 ---
