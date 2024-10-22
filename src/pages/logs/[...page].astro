@@ -1,0 +1,62 @@
+---
+import Layout from "../../layouts/Page.astro";
+import PostList from "../../components/PostList.astro";
+import Paginator from "../../components/Paginator.astro";
+import * as colUtil from "../../scripts/collectionUtil.ts";
+
+export async function getStaticPaths({ paginate }) {
+    const log = await colUtil.noDrafts("logs").then((logs) =>
+        logs
+            .map((log: any) => ({
+                slug: log.slug,
+                title: log.data.title,
+                arve: log.data.arve,
+                date: log.data.date,
+            }))
+            .sort((a, b) => new Date(b.date) - new Date(a.date)),
+    );
+    return paginate(log, { pageSize: 50 });
+}
+
+const seo = {
+    title: "Logs",
+    description: "Daily logs of the monkey mind.",
+};
+
+const { page } = Astro.props;
+---
+
+<Layout seo={seo}>
+    <h1>Logs</h1>
+    <p>
+        Time here is measured in <a href="https://wiki.xxiivv.com/site/arvelie.html">Arvelie time</a>. Year 0 in my case
+        is 2020.
+    </p>
+            {
+                page.data.map((log: any) => (
+                    <tr>
+                        <td>
+                            <span class="pub-date">
+                                <a href={`/logs/${log.slug}`}>{log.title}</a>
+                            </span>
+                        </td>
+                    </tr>
+                ))
+            }
+    <!-- <table> -->
+    <!--     <tbody> -->
+    <!--         { -->
+    <!--             page.data.map((log: any) => ( -->
+    <!--                 <tr> -->
+    <!--                     <td> -->
+    <!--                         <span class="pub-date"> -->
+    <!--                             <a href={`/logs/${log.slug}`}>{log.title}</a> -->
+    <!--                         </span> -->
+    <!--                     </td> -->
+    <!--                 </tr> -->
+    <!--             )) -->
+    <!--         } -->
+    <!--     </tbody> -->
+    <!-- </table> -->
+    <Paginator page={page} />
+</Layout>
