@@ -22,13 +22,13 @@ export async function GET(context) {
       .map((post) => {
         return {
           title: post.data.title,
-          pubDate: post.data.date, // 'pubDate' (syntax) pertains to the rss schema. (schema / frontmatter)
+          pubDate: post.data.date, // 'pubDate' (syntax) pertains to the rss schema. (schema / frontmatter) (site settings)
           description: post.data.description,
           categories: post.data.tags,
           link: `/posts/${post.slug}/`,
           content: sanitizeHtml(parser.render(post.body)),
         };
       })
-      .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate)),
+      .sort((a, b) => new Date(b.date) - new Date(a.date)),
   });
 }
