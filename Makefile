@@ -9,6 +9,7 @@ css:
 	sass scss/main.scss src/styles/global.css
 
 deploy: 
+	rm -rf dist/
 	git checkout deploy
 	git merge main
 	make css
