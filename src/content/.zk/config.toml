@@ -40,6 +40,6 @@ dead-link = "error"
 
 [alias]
 
-post = "zk new posts/{{sh 'arvelie 2020 -c today | cut -c 1,2'}} --title $@"
-log = "zk new logs/{{sh 'arvelie 2020 -c today | cut -c 1,2'}}" 
+log = "zk new logs/$(arvelie 2020 -c today | cut -c 1,2)"
+post = "zk new posts/$(arvelie 2020 -c today | cut -c 1,2) --title $1"
 
