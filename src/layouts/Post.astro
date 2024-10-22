@@ -36,7 +36,7 @@ const postGithubUrl = new URL("https://github.com/tjex/tjex.github.io/blob/main/
         <h1>{post.data.title}</h1>
         <div class="post-info">
             <span style="font-family: monospace"
-                ><abbr title=`${post.data.date}`><Date date={post.data.arvDate} format={"arvelie"} /></abbr></span
+                ><abbr title=`${post.data.date}`><Date date={post.data.arve} format={"arvelie"} /></abbr></span
             >
             <div><Tags tags={post.data.tags} style={"text"} /></div>
             <EmailReply subject={post.data.title} text={"reply via email"} />
