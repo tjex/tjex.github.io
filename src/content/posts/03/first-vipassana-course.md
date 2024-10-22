@@ -8,7 +8,7 @@ date: 2023-06-26T18:51:08Z
 author: tjex
 tags: ["meditation", "philosophy"]
 draft: false
-slug: 2023/first-vipassana-course
+slug: first-vipassana-course
 ---
 
 ## Vipassana

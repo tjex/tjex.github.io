@@ -8,7 +8,7 @@ date: 2023-06-01T18:00:00Z
 author: tjex
 tags: ["open-source", "society"]
 draft: false
-slug: 2023/floss-a-partial-antidote-to-social-catastrophe
+slug: floss-a-partial-antidote-to-social-catastrophe
 ---
 
 ## What is the problem?

@@ -9,7 +9,7 @@ date: 2023-10-07T09:31:34Z
 author: tjex
 tags: ["learning"]
 draft: false
-slug: 2023/a-case-for-polishing-your-tools
+slug: a-case-for-polishing-your-tools
 ---
 
 I have a lust in understand things to a deeper level than what is needed to

@@ -8,7 +8,7 @@ date: 2024-03-19T11:57:30Z
 author: tjex
 tags: ["learning"]
 draft: false
-slug: 2024/writing-a-masters-thesis-with-zettelkasten-part-1
+slug: writing-a-masters-thesis-with-zettelkasten-part-1
 ---
 
 I've finally arrived on a topic for my masters thesis. It's an investigation
