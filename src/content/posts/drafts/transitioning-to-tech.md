@@ -1,11 +1,10 @@
 ---
 title: placeholder
 description: placeholder
-arvDate: placeholder
-pubDate: 2024-09-07T20:49:13Z
+arve: placeholder
+date: 2024-09-07T20:49:13Z
 author: tjex
-tags: [""]
-license: cc
+tags: []
 draft: true
 ---
 

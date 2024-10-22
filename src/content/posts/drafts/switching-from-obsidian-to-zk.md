@@ -1,8 +1,8 @@
 ---
 title: Switching from Obsidian to ZK
 description: asdf
-arvDate: placeholder
-pubDate: 2024-01-06T19:01:33Z
+arve: placeholder
+date: 2024-01-06T19:01:33Z
 author: tjex
 tags: ["learning"]
 draft: true

@@ -5,13 +5,10 @@ const posts = defineCollection({
     z.object({
       title: z.string(),
       description: z.string(),
-      pubDate: z.date(),
-      arvDate: z.string(),
-      modDate: z.date().optional(),
-      author: z.string(),
+      date: z.date(),
+      arve: z.string(),
       tags: z.array(z.string()),
       draft: z.boolean(),
-      license: z.string().optional(),
       image: z
         .object({
           src: z.optional(image()),
@@ -21,6 +18,17 @@ const posts = defineCollection({
     }),
 });
 
+const logs = defineCollection({
+  type: "content",
+  schema: () =>
+    z.object({
+      title: z.string(),
+      date: z.date(),
+      arve: z.string(),
+    }),
+});
+
 export const collections = {
   posts: posts,
+  logs: logs,
 };

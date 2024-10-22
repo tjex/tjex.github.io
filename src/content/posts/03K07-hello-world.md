@@ -1,11 +1,10 @@
 ---
 title: Hello World
 description: It's traditional.
-pubDate: 2023-05-28T10:30:00Z
-arvDate: 03K07
+date: 2023-05-28T10:30:00Z
+arve: 03K07
 author: tjex
 tags: []
-license: cc
 draft: false
 slug: 2023/hello-world
 ---

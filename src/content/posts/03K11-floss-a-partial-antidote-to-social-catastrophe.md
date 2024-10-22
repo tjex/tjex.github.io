@@ -3,11 +3,10 @@ title: Floss, A Partial Antidote To Social Catastrophe
 description:
   Technology and software have together enabled immense change. Can FLOSS
   principals help mitigate the harm that society is enduring?
-arvDate: 03K11
-pubDate: 2023-06-01T18:00:00Z
+arve: 03K11
+date: 2023-06-01T18:00:00Z
 author: tjex
 tags: ["open-source", "society"]
-license: cc
 draft: false
 slug: 2023/floss-a-partial-antidote-to-social-catastrophe
 ---
@@ -59,8 +58,7 @@ cost money to use. Stallman aims to clear up the confusion as such,
 "Open source" on the other hand stands for criteria a littler looser than free
 software. Like free software, the source code still needs to be available for
 any who wish to inspect it, but where it departs is the restrictiveness of some
-open source licenses and the divergent philosophy this brings to the production
-of software ([src](https://mitpress.mit.edu/9780262542289/coding-democracy/)).
+open source of software ([src](https://mitpress.mit.edu/9780262542289/coding-democracy/)).
 
 FLOSS appends "Libre" (French and Spanish for "free" in the sense of freedom) to
 the "free software" idiom in order to make clearer the true meaning of the

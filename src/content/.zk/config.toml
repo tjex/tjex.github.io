@@ -15,7 +15,7 @@
 #default-title = "Untitled"
 
 # Template used to generate a note's filename, without extension.
-filename = "{{sh 'arvelie 2023 -c today'}}-{{slug title}}"
+filename = "untitled"
 
 # The file extension used for the notes.
 #extension = "md"
@@ -68,12 +68,19 @@ template = "default.md"
 # the group. This can be useful to quickly declare a group by the name of the
 # directory it applies to.
 
-#[group."<NAME>"]
-#paths = ["<DIR1>", "<DIR2>"]
-#[group."<NAME>".note]
-#filename = "{{format-date now}}"
-#[group."<NAME>".extra]
-#key = "value"
+[group.posts]
+paths = ["posts"]
+
+[group.posts.note]
+filename = "{{sh 'arvelie 2020 -c today'}}-{{slug title}}"
+template = "post.md"
+
+[group.logs]
+paths = ["logs"]
+
+[group.logs.note]
+filename = "{{sh 'arvelie 2020 -c today'}}"
+template = "log.md"
 
 
 # MARKDOWN SETTINGS

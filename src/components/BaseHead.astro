@@ -27,7 +27,7 @@ const robots = Astro.props.robots || "all";
 <link rel="sitemap" href="/sitemap-index.xml" />
 
 <!-- browser tab title -->
-<title>tjex • {title || site.title}</title>
+<title>{title || site.title}</title>
 
 <!-- RSS -->
 <link rel="alternate" type="application/rss+xml" title={`${site.rssName}`} href={`${site.rssURL}`} />
