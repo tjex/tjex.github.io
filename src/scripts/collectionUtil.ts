@@ -22,10 +22,10 @@ export async function getPostsPerTag(collections: string[]) {
           title: data.title,
           description: data.description,
           arvDate: data.arvDate,
-          pubDate: data.pubDate,
+          date: data.date,
           collection: collection,
         }))
-        .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+        .sort((a, b) => new Date(b.date) - new Date(a.date));
       return {
         params: { tag },
         props: { posts: filtPosts },
@@ -40,7 +40,7 @@ export async function getAllPostsFromCollection(collection: string) {
   const posts = await noDrafts(collection);
   const numberOfPosts = posts.length;
 
-  const postsSortedByDate = posts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
+  const postsSortedByDate = posts.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
   return postsSortedByDate.map((post: any, i) => ({
     params: { slug: post.slug },
     props: {

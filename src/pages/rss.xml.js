@@ -22,7 +22,7 @@ export async function GET(context) {
       .map((post) => {
         return {
           title: post.data.title,
-          pubDate: post.data.pubDate,
+          pubDate: post.data.date, // 'pubDate' (syntax) pertains to the rss schema. (schema / frontmatter)
           description: post.data.description,
           categories: post.data.tags,
           link: `/posts/${post.slug}/`,
