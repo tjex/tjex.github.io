@@ -1,6 +1,5 @@
 ---
 import Layout from "../../layouts/Page.astro";
-import PostList from "../../components/PostList.astro";
 import Paginator from "../../components/Paginator.astro";
 import * as colUtil from "../../scripts/collectionUtil.ts";
 
@@ -29,10 +28,11 @@ const { page } = Astro.props;
 <Layout seo={seo}>
     <h1>Logs</h1>
     <p>
-        These are daily logs. They capture a filtered "monkey mind" through the day. Time here is measured in <a
-            href="https://wiki.xxiivv.com/site/arvelie.html">Arvelie time</a
-        >. Year 0 in my case is 2020. E.g, I started logging on <span class="monospace">04V01</span>, which is October,
-        22 2024.
+        These are daily logs. They capture a filtered <a href="https://en.wikipedia.org/wiki/Monkey_mind"
+            >"monkey mind"</a
+        > through the day. Time here is measured in <a href="https://wiki.xxiivv.com/site/arvelie.html">Arvelie time</a
+        >. Year 0 in my case is 2020. I started logging on <span class="monospace">04V01</span>, which is October 22nd,
+        2024.
     </p>
     <div class="grid">
         <!--     <p> -->
