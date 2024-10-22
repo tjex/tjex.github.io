@@ -12,8 +12,7 @@ export default defineConfig({
   site: "https://tjex.net",
   redirects: {
     "/blog": "/posts",
-    "/blog/[...page]": "/posts/[...page]",
-    "/blog/[...slug]": "/posts/[...slug]",
+    "/blog/2024/zettelkasten-grid-system-organisation/": "/posts/zettelkasten-grid-system-organisation",
   },
   markdown: {
     drafts: true,
