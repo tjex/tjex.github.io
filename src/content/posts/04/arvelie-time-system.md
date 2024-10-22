@@ -10,8 +10,8 @@ draft: false
 slug: arveelie-time-system
 ---
 
-I'm currently wrapping my head around Devine's time system,
-[Arvelie](https://wiki.xxiivv.com/site/time) (after also having it
+I'm currently wrapping my head around the Arvelie time system, which I found [here on Devine's website](https://wiki.xxiivv.com/site/time),
+(after also having it
 bent by his [time tracking system](https://wiki.xxiivv.com/site/horaire)).
 
 > Since writing this post, I decided to try implement Arvelie into my
