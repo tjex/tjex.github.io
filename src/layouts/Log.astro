@@ -1,18 +1,11 @@
 ---
-import ArticleSchema from "../components/ArticleSchema.astro";
-import Date from "../components/utility/DateFormat.astro";
-import path from "node:path";
-
 import Layout from "./Page.astro";
-import Tags from "../components/Tags.astro";
+import ArticleSchema from "../components/ArticleSchema.astro";
 import EmailReply from "../components/Email.astro";
+import Date from "../components/utility/DateFormat.astro";
 
 const { seo } = Astro.props;
 const { post } = Astro.props;
-
-// cobble together a valid url for GitHub
-const filename = path.basename(post.id);
-const postGithubUrl = new URL("https://github.com/tjex/tjex.github.io/blob/main/src/content/posts/" + filename);
 ---
 
 <Layout {seo}>
@@ -25,7 +18,6 @@ const postGithubUrl = new URL("https://github.com/tjex/tjex.github.io/blob/main/
       <span style="font-family: monospace"
         ><abbr title=`${post.data.date}`><Date date={post.data.arve} format={"arvelie"} /></abbr></span
       >
-      <div><Tags tags={post.data.tags} style={"text"} /></div>
       <EmailReply subject={post.data.title} text={"reply via email"} />
     </div>
   <slot />
