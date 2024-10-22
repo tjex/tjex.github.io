@@ -8,7 +8,7 @@ date: 2023-07-26T19:17:01Z
 author: tjex
 tags: ["career", "learning"]
 draft: false
-slug: 2023/fundamentals-all-the-way-down
+slug: fundamentals-all-the-way-down
 ---
 
 I recently listened to an

@@ -8,7 +8,7 @@ date: 2023-10-26T19:48:11Z
 author: tjex
 tags: ["career", "learning"]
 draft: false
-slug: 2023/the-noob-chronicles-chapter-1
+slug: the-noob-chronicles-chapter-1
 ---
 
 It's important to step back and get some perspective about your progress with
@@ -58,7 +58,7 @@ bouncing off the wall and hitting the fan, leaving you standing dumbfounded in a
 brown haze.
 
 On this topic, I wrote how I think
-[polishing your tools is a good thing](http://tjex.net/posts/a-case-for-polishing-your-tools). It
+[polishing your tools is a good thing](https://tjex.net/posts/a-case-for-polishing-your-tools). It
 discusses how tinkering, or hacking on your setups or tools can actually teach
 you a lot. And this is valuable. But each little optimization or little bug fix
 in your setup also allows for much smaller spans of time and effort between

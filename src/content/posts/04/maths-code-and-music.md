@@ -7,7 +7,7 @@ date: 2024-09-05T14:58:58Z
 author: tjex
 tags: ["philosophy", "psychology", "learning"]
 draft: false
-slug: 2024/maths-code-and-music
+slug: maths-code-and-music
 ---
 
 The other day I again encountered the statement that I must be good at maths if

@@ -7,7 +7,7 @@ date: 2024-10-15T13:33:08Z
 author: tjex
 tags: ["philosophy"]
 draft: false
-slug: 2024/arveelie-time-system
+slug: arveelie-time-system
 ---
 
 I'm currently wrapping my head around Devine's time system,
