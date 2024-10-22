@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="/rss/styles.xsl" type="text/xsl"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>tjex.net - posts</title><description>Programmer and creative technologist.</description><link>https://tjex.net/</link><atom:link href="https://tjex.net/rss.xml" rel="self" type="application/rss+xml" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"/><item><title>A Case for Polishing Your Tools</title><link>https://tjex.net/posts/2023/a-case-for-polishing-your-tools/</link><guid isPermaLink="true">https://tjex.net/posts/2023/a-case-for-polishing-your-tools/</guid><description>Polishing your tools is a good thing. It can teach you a lot, particularly if you&apos;re new to a technology or practice. Just keep track of how far down the rabbit hole you are.</description><pubDate>Sat, 07 Oct 2023 09:31:34 GMT</pubDate><content:encoded>&lt;p&gt;I have a lust in understand things to a deeper level than what is needed to
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="/rss/styles.xsl" type="text/xsl"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>tjex.net - posts</title><description>Programmer and creative technologist.</description><link>https://tjex.net/</link><atom:link href="https://tjex.net/rss.xml" rel="self" type="application/rss+xml" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"/><item><title>A Case for Polishing Your Tools</title><link>https://tjex.net/posts/a-case-for-polishing-your-tools/</link><guid isPermaLink="true">https://tjex.net/posts/a-case-for-polishing-your-tools/</guid><description>Polishing your tools is a good thing. It can teach you a lot, particularly if you&apos;re new to a technology or practice. Just keep track of how far down the rabbit hole you are.</description><pubDate>Sat, 07 Oct 2023 09:31:34 GMT</pubDate><content:encoded>&lt;p&gt;I have a lust in understand things to a deeper level than what is needed to
 actually implement or use the thing. &lt;em&gt;How deep&lt;/em&gt; is a question for each learning
 or interest in question. There is always a trade off between productivity and
 capability. Do you just implement and move on without knowing anything about
@@ -66,7 +66,7 @@ rewarding environment. No-one wants to use a rusty hammer that gives them
 splinters, particularly if they can learn things a long the way by polishing and
 sanding it. As with everything, self control, moderation and keeping an end goal
 in mind is key.&lt;/p&gt;
-</content:encoded><category>learning</category></item><item><title>First 10 Day Vipassana Course</title><link>https://tjex.net/posts/2023/first-vipassana-course/</link><guid isPermaLink="true">https://tjex.net/posts/2023/first-vipassana-course/</guid><description>A few thoughts after my first 10 day silent meditation course in the technique of Vipassana and a consolidation of its philosophies.</description><pubDate>Mon, 26 Jun 2023 18:51:08 GMT</pubDate><content:encoded>&lt;h2&gt;Vipassana&lt;/h2&gt;
+</content:encoded><category>learning</category></item><item><title>First 10 Day Vipassana Course</title><link>https://tjex.net/posts/first-vipassana-course/</link><guid isPermaLink="true">https://tjex.net/posts/first-vipassana-course/</guid><description>A few thoughts after my first 10 day silent meditation course in the technique of Vipassana and a consolidation of its philosophies.</description><pubDate>Mon, 26 Jun 2023 18:51:08 GMT</pubDate><content:encoded>&lt;h2&gt;Vipassana&lt;/h2&gt;
 &lt;p&gt;Vipassana is the original, unaltered meditation technique of &quot;The Buddha&quot; (as we
 were taught, any enlightened person is Buddha), Siddhartha Gautama. It is a
 practice of meditation that is universal in that everyone has access to it. You
@@ -262,7 +262,7 @@ focus, will be reached.&lt;/p&gt;
 I did some research for cases where people may lose the ability to perceive
 all perception of sensations in the body, but did not find anything. Only
 partial loss in sensation. If I&apos;m wrong, please email me!&lt;/p&gt;
-</content:encoded><category>meditation</category><category>philosophy</category></item><item><title>Floss, A Partial Antidote To Social Catastrophe</title><link>https://tjex.net/posts/2023/floss-a-partial-antidote-to-social-catastrophe/</link><guid isPermaLink="true">https://tjex.net/posts/2023/floss-a-partial-antidote-to-social-catastrophe/</guid><description>Technology and software have together enabled immense change. Can FLOSS principals help mitigate the harm that society is enduring?</description><pubDate>Thu, 01 Jun 2023 18:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;What is the problem?&lt;/h2&gt;
+</content:encoded><category>meditation</category><category>philosophy</category></item><item><title>Floss, A Partial Antidote To Social Catastrophe</title><link>https://tjex.net/posts/floss-a-partial-antidote-to-social-catastrophe/</link><guid isPermaLink="true">https://tjex.net/posts/floss-a-partial-antidote-to-social-catastrophe/</guid><description>Technology and software have together enabled immense change. Can FLOSS principals help mitigate the harm that society is enduring?</description><pubDate>Thu, 01 Jun 2023 18:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;What is the problem?&lt;/h2&gt;
 &lt;p&gt;Technology, and in particular software, moves fast, and increasingly so.
 Software interfaces with our lives on so many levels, that it becomes harder and
 harder to distinguish between what is software driven and what is not. With such
@@ -584,7 +584,7 @@ good, and can result in tools that not only function better, respect the
 fundamental freedoms of users and remain accessible across the wealth divide,
 but which can also help communicate to government and industry what a partial
 antidote to social catastrophe can look like.&lt;/p&gt;
-</content:encoded><category>open-source</category><category>society</category></item><item><title>Fundamentals all the Way Down</title><link>https://tjex.net/posts/2023/fundamentals-all-the-way-down/</link><guid isPermaLink="true">https://tjex.net/posts/2023/fundamentals-all-the-way-down/</guid><description>How deep do you start when stepping into a new field of learning? Do you learn the fundamentals, or get up and going as quickly as possible?</description><pubDate>Wed, 26 Jul 2023 19:17:01 GMT</pubDate><content:encoded>&lt;p&gt;I recently listened to an
+</content:encoded><category>open-source</category><category>society</category></item><item><title>Fundamentals all the Way Down</title><link>https://tjex.net/posts/fundamentals-all-the-way-down/</link><guid isPermaLink="true">https://tjex.net/posts/fundamentals-all-the-way-down/</guid><description>How deep do you start when stepping into a new field of learning? Do you learn the fundamentals, or get up and going as quickly as possible?</description><pubDate>Wed, 26 Jul 2023 19:17:01 GMT</pubDate><content:encoded>&lt;p&gt;I recently listened to an
 &lt;a href=&quot;https://changelog.com/jsparty/283&quot;&gt;episode of The Changelog&lt;/a&gt;, that dealt with
 the topic of whether it&apos;s important or not as programmers to understand the
 fundamentals of the technology, and if so, how many layers deep should we go?
@@ -660,7 +660,7 @@ I&apos;d love to give both Stallman and Torvalds simultaneous credit when
 writing, but GNU/Linux just didn&apos;t stick. Sorry. Marketing language sucks,
 but it happens. The heard lets some things stick, and some things not.
 https://www.gnu.org/gnu/incorrect-quotation.en.html&lt;/p&gt;
-</content:encoded><category>career</category><category>learning</category></item><item><title>Hello World</title><link>https://tjex.net/posts/2023/hello-world/</link><guid isPermaLink="true">https://tjex.net/posts/2023/hello-world/</guid><description>It&apos;s traditional.</description><pubDate>Sun, 28 May 2023 10:30:00 GMT</pubDate><content:encoded>&lt;p&gt;Why am I starting to blog?&lt;/p&gt;
+</content:encoded><category>career</category><category>learning</category></item><item><title>Hello World</title><link>https://tjex.net/posts/hello-world/</link><guid isPermaLink="true">https://tjex.net/posts/hello-world/</guid><description>It&apos;s traditional.</description><pubDate>Sun, 28 May 2023 10:30:00 GMT</pubDate><content:encoded>&lt;p&gt;Why am I starting to blog?&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;to learn more concretely&lt;/li&gt;
 &lt;li&gt;to be more critical of my thoughts&lt;/li&gt;
@@ -673,7 +673,7 @@ https://www.gnu.org/gnu/incorrect-quotation.en.html&lt;/p&gt;
 &lt;li&gt;to test my ideas against the chaos of the internet&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Let&apos;s see...&lt;/p&gt;
-</content:encoded></item><item><title>The Noob Chronicles - Chapter 1</title><link>https://tjex.net/posts/2023/the-noob-chronicles-chapter-1/</link><guid isPermaLink="true">https://tjex.net/posts/2023/the-noob-chronicles-chapter-1/</guid><description>It&apos;s been two years since I learnt what a for loop was. How&apos;s it been going since then?</description><pubDate>Thu, 26 Oct 2023 19:48:11 GMT</pubDate><content:encoded>&lt;p&gt;It&apos;s important to step back and get some perspective about your progress with
+</content:encoded></item><item><title>The Noob Chronicles - Chapter 1</title><link>https://tjex.net/posts/the-noob-chronicles-chapter-1/</link><guid isPermaLink="true">https://tjex.net/posts/the-noob-chronicles-chapter-1/</guid><description>It&apos;s been two years since I learnt what a for loop was. How&apos;s it been going since then?</description><pubDate>Thu, 26 Oct 2023 19:48:11 GMT</pubDate><content:encoded>&lt;p&gt;It&apos;s important to step back and get some perspective about your progress with
 any skill. And considering the mammoth idea of taking a career side step into
 programming, and my general high expectations for myself; I thought to begin a
 post series titled &lt;em&gt;The Noob Chronicles&lt;/em&gt;, where I look back in time since the
@@ -711,7 +711,7 @@ work &lt;em&gt;at all&lt;/em&gt;; Like opening your mouth to sing and excrement 
 bouncing off the wall and hitting the fan, leaving you standing dumbfounded in a
 brown haze.&lt;/p&gt;
 &lt;p&gt;On this topic, I wrote how I think
-&lt;a href=&quot;http://tjex.net/posts/a-case-for-polishing-your-tools&quot;&gt;polishing your tools is a good thing&lt;/a&gt;. It
+&lt;a href=&quot;https://tjex.net/posts/a-case-for-polishing-your-tools&quot;&gt;polishing your tools is a good thing&lt;/a&gt;. It
 discusses how tinkering, or hacking on your setups or tools can actually teach
 you a lot. And this is valuable. But each little optimization or little bug fix
 in your setup also allows for much smaller spans of time and effort between
@@ -802,7 +802,7 @@ masters thesis - and can actually comprehend what I&apos;m reading.&lt;/li&gt;
 &lt;li&gt;learn about distributed systems and the respective technologies&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Let&apos;s see what happens up until chapter two!&lt;/p&gt;
-</content:encoded><category>career</category><category>learning</category></item><item><title>The Arvelie time system</title><link>https://tjex.net/posts/2024/arveelie-time-system/</link><guid isPermaLink="true">https://tjex.net/posts/2024/arveelie-time-system/</guid><description>The Arvelie time system is a concise and useful way to approach our relationship to time, and also time management.</description><pubDate>Tue, 15 Oct 2024 13:33:08 GMT</pubDate><content:encoded>&lt;p&gt;I&apos;m currently wrapping my head around Devine&apos;s time system,
+</content:encoded><category>career</category><category>learning</category></item><item><title>The Arvelie time system</title><link>https://tjex.net/posts/arveelie-time-system/</link><guid isPermaLink="true">https://tjex.net/posts/arveelie-time-system/</guid><description>The Arvelie time system is a concise and useful way to approach our relationship to time, and also time management.</description><pubDate>Tue, 15 Oct 2024 13:33:08 GMT</pubDate><content:encoded>&lt;p&gt;I&apos;m currently wrapping my head around Devine&apos;s time system,
 &lt;a href=&quot;https://wiki.xxiivv.com/site/time&quot;&gt;Arvelie&lt;/a&gt; (after also having it
 bent by his &lt;a href=&quot;https://wiki.xxiivv.com/site/horaire&quot;&gt;time tracking system&lt;/a&gt;).&lt;/p&gt;
 &lt;blockquote&gt;
@@ -843,7 +843,7 @@ That infinity is maintained as a truth, rather than a concept.&lt;/p&gt;
 &lt;p&gt;Although, granted, this has all too often been used as a weapon (heaven and hell
 for eternity). &lt;a href=&quot;https://www.theverge.com/2024/4/4/24120352/israel-lavender-artificial-intelligence-gaza-ai&quot;&gt;But we turn all sorts of good things into
 weapons&lt;/a&gt;.&lt;/p&gt;
-</content:encoded><category>philosophy</category></item><item><title>Maths in code, code in music, and music in code</title><link>https://tjex.net/posts/2024/maths-code-and-music/</link><guid isPermaLink="true">https://tjex.net/posts/2024/maths-code-and-music/</guid><description>As I get more comfortable with programming, I&apos;m starting to see more and more parallels between my old life and my new one.</description><pubDate>Thu, 05 Sep 2024 14:58:58 GMT</pubDate><content:encoded>&lt;p&gt;The other day I again encountered the statement that I must be good at maths if
+</content:encoded><category>philosophy</category></item><item><title>Maths in code, code in music, and music in code</title><link>https://tjex.net/posts/maths-code-and-music/</link><guid isPermaLink="true">https://tjex.net/posts/maths-code-and-music/</guid><description>As I get more comfortable with programming, I&apos;m starting to see more and more parallels between my old life and my new one.</description><pubDate>Thu, 05 Sep 2024 14:58:58 GMT</pubDate><content:encoded>&lt;p&gt;The other day I again encountered the statement that I must be good at maths if
 I&apos;m able to read and write code. I myself remember thinking the same of
 others. And it was actually a contributing reason why I never considered
 learning programming earlier on. I just figured I wouldn&apos;t get very far, as
@@ -919,7 +919,7 @@ things for me to learn.&lt;/p&gt;
 &quot;analytical&quot; mind, like I was told. It just doesn&apos;t work like that, and creates
 a belief in an impressionable mind, that there are two paths, and they can only
 walk one of them.&lt;/p&gt;
-</content:encoded><category>philosophy</category><category>psychology</category><category>learning</category></item><item><title>Learning in the prehistoric age of AI</title><link>https://tjex.net/posts/2024/prehistoric-ai-learning/</link><guid isPermaLink="true">https://tjex.net/posts/2024/prehistoric-ai-learning/</guid><description>To what degree do we actually learn with AI tools? And will those of us who turn to these tools, be condemned to a bleak reality once the AI bubble pops?</description><pubDate>Fri, 04 Oct 2024 20:31:38 GMT</pubDate><content:encoded>&lt;p&gt;A significant issue with AI learning is how easy it is to gloss over the
+</content:encoded><category>philosophy</category><category>psychology</category><category>learning</category></item><item><title>Learning in the prehistoric age of AI</title><link>https://tjex.net/posts/prehistoric-ai-learning/</link><guid isPermaLink="true">https://tjex.net/posts/prehistoric-ai-learning/</guid><description>To what degree do we actually learn with AI tools? And will those of us who turn to these tools, be condemned to a bleak reality once the AI bubble pops?</description><pubDate>Fri, 04 Oct 2024 20:31:38 GMT</pubDate><content:encoded>&lt;p&gt;A significant issue with AI learning is how easy it is to gloss over the
 question of, &quot;why?&quot;. &quot;Why ...&quot; is the generated answer a good answer? The
 generated solution may work, but we have no knowledge of how it compares to
 other solutions, nor the process of getting to the solution.&lt;/p&gt;
@@ -961,7 +961,7 @@ only mediocre tools that may well remain close to their current state. If this
 is the case, the &quot;silicon heads&quot; will have to reckon with the hardest lesson of
 their time: how does one &lt;em&gt;actually&lt;/em&gt; make a paper clip? (And then proceed to
 craft 1 paper clip).&lt;/p&gt;
-</content:encoded><category>learning</category><category>society</category><category>career</category></item><item><title>Writing a masters thesis with Zettelkasten - Part 1</title><link>https://tjex.net/posts/2024/writing-a-masters-thesis-with-zettelkasten-part-1/</link><guid isPermaLink="true">https://tjex.net/posts/2024/writing-a-masters-thesis-with-zettelkasten-part-1/</guid><description>How can we use Zettelkasten effectively, given a large and time sensitive writing and research task such as a thesis or Ph.D?</description><pubDate>Tue, 19 Mar 2024 11:57:30 GMT</pubDate><content:encoded>&lt;p&gt;I&apos;ve finally arrived on a topic for my masters thesis. It&apos;s an investigation
+</content:encoded><category>learning</category><category>society</category><category>career</category></item><item><title>Writing a masters thesis with Zettelkasten - Part 1</title><link>https://tjex.net/posts/writing-a-masters-thesis-with-zettelkasten-part-1/</link><guid isPermaLink="true">https://tjex.net/posts/writing-a-masters-thesis-with-zettelkasten-part-1/</guid><description>How can we use Zettelkasten effectively, given a large and time sensitive writing and research task such as a thesis or Ph.D?</description><pubDate>Tue, 19 Mar 2024 11:57:30 GMT</pubDate><content:encoded>&lt;p&gt;I&apos;ve finally arrived on a topic for my masters thesis. It&apos;s an investigation
 into how the Zettelkasten system enables creative ideation, and subsequent
 development of a network graph user interface, which will be optimized for that
 end goal (generating ideas).&lt;/p&gt;
@@ -1110,7 +1110,7 @@ the thesis clearer and easier to understand.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Let&apos;s see how it goes! I&apos;ll write part 2 at some point down the track and review
 how this system performed, how it changed, etc.&lt;/p&gt;
-</content:encoded><category>learning</category></item><item><title>You don&apos;t need luck, luck needs you</title><link>https://tjex.net/posts/2024/you-dont-need-luck-luck-needs-you/</link><guid isPermaLink="true">https://tjex.net/posts/2024/you-dont-need-luck-luck-needs-you/</guid><description>Luck is an inherent part of life, it&apos;s not a requirement or a special trick for success.</description><pubDate>Wed, 08 May 2024 12:59:21 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+</content:encoded><category>learning</category></item><item><title>You don&apos;t need luck, luck needs you</title><link>https://tjex.net/posts/you-dont-need-luck-luck-needs-you/</link><guid isPermaLink="true">https://tjex.net/posts/you-dont-need-luck-luck-needs-you/</guid><description>Luck is an inherent part of life, it&apos;s not a requirement or a special trick for success.</description><pubDate>Wed, 08 May 2024 12:59:21 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Luck is what happens when preparation meets opportunity.&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Seneca (&lt;a href=&quot;https://en.wikiquote.org/wiki/Seneca_the_Younger&quot;&gt;disputed&lt;/a&gt;)&lt;/li&gt;
@@ -1171,7 +1171,7 @@ are prepared&quot;&lt;/em&gt; - Louis Pasteur&lt;/p&gt;
 &lt;p&gt;[^1]:
 Kaufman, S. B. and Gregoire, C. (2016), Wired to Create: Unraveling the
 Mysteries of the Creative Mind. p.59-60&lt;/p&gt;
-</content:encoded><category>philosophy</category></item><item><title>The GRID System for Frictionless Zettelkasten Organisation</title><link>https://tjex.net/posts/2024/zettelkasten-grid-system-organisation/</link><guid isPermaLink="true">https://tjex.net/posts/2024/zettelkasten-grid-system-organisation/</guid><description>The GRID system is a framework for frictionless organisation of a Zettelkasten. It defines a set of rules for note creation and note tagging that suppress the need for content categorisation.</description><pubDate>Sat, 06 Jan 2024 19:01:33 GMT</pubDate><content:encoded>&lt;p&gt;The GRID system is a framework for frictionless Zettelkasten organisation. It
+</content:encoded><category>philosophy</category></item><item><title>The GRID System for Frictionless Zettelkasten Organisation</title><link>https://tjex.net/posts/zettelkasten-grid-system-organisation/</link><guid isPermaLink="true">https://tjex.net/posts/zettelkasten-grid-system-organisation/</guid><description>The GRID system is a framework for frictionless organisation of a Zettelkasten. It defines a set of rules for note creation and note tagging that suppress the need for content categorisation.</description><pubDate>Sat, 06 Jan 2024 19:01:33 GMT</pubDate><content:encoded>&lt;p&gt;The GRID system is a framework for frictionless Zettelkasten organisation. It
 defines a set of rules for note creation and note tagging that suppress the need
 for content categorisation. The goal is to strike the balance between cognitive
 friction when writing, and observability when managing, searching, reading and
