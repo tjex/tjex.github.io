@@ -959,7 +959,7 @@ aside li [role=button] {
 }
 aside .nav-left a:after {
   content: ":";
-  padding-left: 10px;
+  padding-left: var(--nav-element-spacing-horizontal);
 }
 
 [dir=rtl] nav[aria-label=breadcrumb] ul li:not(:last-child) ::after {
@@ -1505,6 +1505,13 @@ a.nav-link:visited:hover, a.nav-link:focus {
 }
 a.nav-link:hover {
   font-style: italic;
+}
+a.nav-link.divider {
+  padding-left: var(--spacing);
+  padding-right: var(--spacing);
+}
+a.nav-link.divider:hover {
+  font-style: unset;
 }
 
 .pill,

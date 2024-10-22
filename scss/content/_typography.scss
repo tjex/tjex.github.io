@@ -217,6 +217,13 @@ a.nav-link {
   &:hover {
     font-style: italic;
   }
+  &.divider {
+    padding-left: var(--spacing);
+    padding-right: var(--spacing);
+    &:hover {
+      font-style: unset;
+    }
+  }
 }
 
 .pill,
