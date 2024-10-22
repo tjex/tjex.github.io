@@ -15,7 +15,7 @@ export async function getStaticPaths({ paginate }) {
             }))
             .sort((a, b) => new Date(b.date) - new Date(a.date)),
     );
-    return paginate(log, { pageSize: 50 });
+    return paginate(log, { pageSize: 500 });
 }
 
 const seo = {
@@ -32,31 +32,36 @@ const { page } = Astro.props;
         Time here is measured in <a href="https://wiki.xxiivv.com/site/arvelie.html">Arvelie time</a>. Year 0 in my case
         is 2020.
     </p>
-            {
-                page.data.map((log: any) => (
-                    <tr>
-                        <td>
-                            <span class="pub-date">
-                                <a href={`/logs/${log.slug}`}>{log.title}</a>
-                            </span>
-                        </td>
-                    </tr>
-                ))
-            }
-    <!-- <table> -->
-    <!--     <tbody> -->
-    <!--         { -->
-    <!--             page.data.map((log: any) => ( -->
-    <!--                 <tr> -->
-    <!--                     <td> -->
-    <!--                         <span class="pub-date"> -->
-    <!--                             <a href={`/logs/${log.slug}`}>{log.title}</a> -->
-    <!--                         </span> -->
-    <!--                     </td> -->
-    <!--                 </tr> -->
-    <!--             )) -->
+    <div class="grid">
+    <!--     <p> -->
+    <!-- { -->
+    <!--     page.data.map((log: any) => { -->
+    <!--         if (log.slug.startsWith("05")) { -->
+    <!--             return ( -->
+    <!--                 <span class="pub-date"> -->
+    <!--                     <a href={`/logs/${log.slug}`}>{log.title}</a> -->
+    <!--                 </span> -->
+    <!--             ); -->
     <!--         } -->
-    <!--     </tbody> -->
-    <!-- </table> -->
+    <!--         return null; // else -->
+    <!--     }) -->
+    <!-- } -->
+    <!--     </p> -->
+        <p>
+    {
+        page.data.map((log: any) => {
+            if (log.slug.startsWith("04")) {
+                return (
+                    <span class="pub-date">
+                        <a href={`/logs/${log.slug}`}>{log.title}</a>
+                    </span>
+                );
+            }
+            return null; // else
+        })
+    }
+        </p>
+    </div>
+
     <Paginator page={page} />
 </Layout>
