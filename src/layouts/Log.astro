@@ -9,17 +9,17 @@ const { post } = Astro.props;
 ---
 
 <Layout {seo}>
-  <Fragment slot="head-bottom">
-    <ArticleSchema {post} />
-  </Fragment>
-  <article class="post-content__article">
-    <h1>{post.data.title}</h1>
-    <div class="post-info">
-      <span style="font-family: monospace"
-        ><abbr title=`${post.data.date}`><Date date={post.data.arve} format={"arvelie"} /></abbr></span
-      >
-      <EmailReply subject={post.data.title} text={"reply via email"} />
-    </div>
-  <slot />
-  </article>
+    <Fragment slot="head-bottom">
+        <ArticleSchema {post} />
+    </Fragment>
+    <article class="post-content__article">
+        <h1>{post.data.title}</h1>
+        <div class="post-info">
+            <span class="monospace"
+                ><abbr title=`${post.data.date}`><Date date={post.data.arve} format={"arvelie"} /></abbr></span
+            ><br />
+            <EmailReply subject={post.data.title} text={"reply via email"} />
+        </div>
+        <slot />
+    </article>
 </Layout>

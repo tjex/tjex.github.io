@@ -29,37 +29,39 @@ const { page } = Astro.props;
 <Layout seo={seo}>
     <h1>Logs</h1>
     <p>
-        Time here is measured in <a href="https://wiki.xxiivv.com/site/arvelie.html">Arvelie time</a>. Year 0 in my case
-        is 2020.
+        These are daily logs. They capture a filtered "monkey mind" through the day. Time here is measured in <a
+            href="https://wiki.xxiivv.com/site/arvelie.html">Arvelie time</a
+        >. Year 0 in my case is 2020. E.g, I started logging on <span class="monospace">04V01</span>, which is October,
+        22 2024.
     </p>
     <div class="grid">
-    <!--     <p> -->
-    <!-- { -->
-    <!--     page.data.map((log: any) => { -->
-    <!--         if (log.slug.startsWith("05")) { -->
-    <!--             return ( -->
-    <!--                 <span class="pub-date"> -->
-    <!--                     <a href={`/logs/${log.slug}`}>{log.title}</a> -->
-    <!--                 </span> -->
-    <!--             ); -->
-    <!--         } -->
-    <!--         return null; // else -->
-    <!--     }) -->
-    <!-- } -->
-    <!--     </p> -->
+        <!--     <p> -->
+        <!-- { -->
+        <!--     page.data.map((log: any) => { -->
+        <!--         if (log.slug.startsWith("05")) { -->
+        <!--             return ( -->
+        <!--                 <span class="pub-date"> -->
+        <!--                     <a href={`/logs/${log.slug}`}>{log.title}</a> -->
+        <!--                 </span> -->
+        <!--             ); -->
+        <!--         } -->
+        <!--         return null; // else -->
+        <!--     }) -->
+        <!-- } -->
+        <!--     </p> -->
         <p>
-    {
-        page.data.map((log: any) => {
-            if (log.slug.startsWith("04")) {
-                return (
-                    <span class="pub-date">
-                        <a href={`/logs/${log.slug}`}>{log.title}</a>
-                    </span>
-                );
+            {
+                page.data.map((log: any) => {
+                    if (log.slug.startsWith("04")) {
+                        return (
+                            <span class="monospace">
+                                <a href={`/logs/${log.slug}`}>{log.title}</a>
+                            </span>
+                        );
+                    }
+                    return null; // else
+                })
             }
-            return null; // else
-        })
-    }
         </p>
     </div>
 
