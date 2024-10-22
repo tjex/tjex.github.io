@@ -21,7 +21,7 @@ export async function getPostsPerTag(collections: string[]) {
           slug: slug,
           title: data.title,
           description: data.description,
-          arvDate: data.arvDate,
+          arve: data.arve,
           date: data.date,
           collection: collection,
         }))

@@ -13,12 +13,12 @@ export async function getStaticPaths({ paginate }) {
                 title: post.data.title,
                 description: post.data.description,
                 tags: post.data.tags,
-                arvDate: post.data.arvDate,
+                arve: post.data.arve,
                 date: post.data.date,
             }))
             .sort((a, b) => new Date(b.date) - new Date(a.date)),
     );
-    return paginate(posts, { pageSize: 15 });
+    return paginate(posts, { pageSize: 50 });
 }
 
 const seo = {
