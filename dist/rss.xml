@@ -1,17 +1,268 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="/rss/styles.xsl" type="text/xsl"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>tjex.net - posts</title><description>Programmer and creative technologist.</description><link>https://tjex.net/</link><atom:link href="https://tjex.net/rss.xml" rel="self" type="application/rss+xml" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"/><item><title>Hello World</title><link>https://tjex.net/posts/2023/hello-world/</link><guid isPermaLink="true">https://tjex.net/posts/2023/hello-world/</guid><description>It&apos;s traditional.</description><pubDate>Sun, 28 May 2023 10:30:00 GMT</pubDate><content:encoded>&lt;p&gt;Why am I starting to blog?&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;to learn more concretely&lt;/li&gt;
-&lt;li&gt;to be more critical of my thoughts&lt;/li&gt;
-&lt;li&gt;to hopefully contribute positively to someone else&apos;s knowledge&lt;/li&gt;
-&lt;li&gt;to make a point to myself, that will otherwise keep mutating in my head&lt;/li&gt;
-&lt;li&gt;to support a cultural and societal divergence from centralised social media&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;And if people actually get to this blog...&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;to test my ideas against the chaos of the internet&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Let&apos;s see...&lt;/p&gt;
-</content:encoded></item><item><title>Floss, A Partial Antidote To Social Catastrophe</title><link>https://tjex.net/posts/2023/floss-a-partial-antidote-to-social-catastrophe/</link><guid isPermaLink="true">https://tjex.net/posts/2023/floss-a-partial-antidote-to-social-catastrophe/</guid><description>Technology and software have together enabled immense change. Can FLOSS principals help mitigate the harm that society is enduring?</description><pubDate>Thu, 01 Jun 2023 18:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;What is the problem?&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="/rss/styles.xsl" type="text/xsl"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>tjex.net - posts</title><description>Programmer and creative technologist.</description><link>https://tjex.net/</link><atom:link href="https://tjex.net/rss.xml" rel="self" type="application/rss+xml" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"/><item><title>A Case for Polishing Your Tools</title><link>https://tjex.net/posts/2023/a-case-for-polishing-your-tools/</link><guid isPermaLink="true">https://tjex.net/posts/2023/a-case-for-polishing-your-tools/</guid><description>Polishing your tools is a good thing. It can teach you a lot, particularly if you&apos;re new to a technology or practice. Just keep track of how far down the rabbit hole you are.</description><pubDate>Sat, 07 Oct 2023 09:31:34 GMT</pubDate><content:encoded>&lt;p&gt;I have a lust in understand things to a deeper level than what is needed to
+actually implement or use the thing. &lt;em&gt;How deep&lt;/em&gt; is a question for each learning
+or interest in question. There is always a trade off between productivity and
+capability. Do you just implement and move on without knowing anything about
+what just happened, or do you dig in so hard that you end up only reading and
+not implementing?&lt;/p&gt;
+&lt;p&gt;I believe the fundamentally correct answer to this is that your behaviour should
+&lt;em&gt;shift&lt;/em&gt; within the bounds of that spectrum at any one time. If you&apos;re falling
+too deep, dig your hands and feet into the walls of the rabbit hole to halt your
+fall, scurry back up a little, and enter one of the horizontal tunnels you fell
+past. Rinse, repeat.&lt;/p&gt;
+&lt;p&gt;As someone new to programming, I was given some &quot;OK buddy&quot; treatment when
+excitedly advertising to more experienced programmers that I was switching to
+Neovim from VSCode. It&apos;s a large hurdle to overcome for sure. But the investment
+is paying dividends. Not only can I work with files and file systems &lt;em&gt;way&lt;/em&gt;
+faster, but I&apos;ve accidentally learned many fundamental programming concepts and
+practices through polishing my tool (Neovim), that even if I were to switch to a
+different editor now, it would have still be worth the time.&lt;/p&gt;
+&lt;p&gt;Consider the case of someone who&apos;s starting out. They know next to nothing about
+reading and implementing APIs, debugging, program flow or sourcing, managing and
+working with packages, binaries and configuration files on their system. That
+was me, and still is to whatever degree.&lt;/p&gt;
+&lt;p&gt;That person can teach themselves all of that through building their Neovim setup
+&lt;em&gt;from scratch&lt;/em&gt;. Anyone who opens up a bare bones Neovim/Vim install is
+&lt;em&gt;compelled&lt;/em&gt; to polish it, &lt;em&gt;hard&lt;/em&gt;. It looks awful and feels completely unusable.
+But in reality, it&apos;s a sandbox in which to play. It&apos;s easy to work iteratively
+and interactively, and it results in having a tool that greatly enhances your
+ability to work with code and your system (yes, even debugging). And it&apos;s fun to
+do it! The moments of gratification are much closer together. In this sense, it
+becomes a &quot;personal development environment&quot; (PDE, as apposed to IDE), as
+explained by TJ Devries in his video,
+&lt;a href=&quot;https://www.youtube.com/watch?v=QMVIJhC9Veg&quot;&gt;PDE: A different take on editing code&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Not only this, but working with Neovim keeps you closer to the command line.
+This has also taught me a lot. I greatly enjoyed getting over the intense
+feeling of danger when using the command line. And the power and value it
+brings! Steve Yegge comments on this at length in one of his
+&lt;a href=&quot;https://www.youtube.com/watch?v=mb8ayJEsnk8&quot;&gt;tech talks&lt;/a&gt;. Doing things in the
+command line uncovers a lot of knowledge too, in the same way as Neovim does.&lt;/p&gt;
+&lt;p&gt;For example, why does moving a file with &lt;code&gt;mv&lt;/code&gt; run so quickly, while copying it
+with &lt;code&gt;cp&lt;/code&gt; runs much slower? The path to answering this question isn&apos;t as clear
+if you work with a file manager, or do the moving and copying via the file
+browser of your IDE.&lt;/p&gt;
+&lt;p&gt;In the shell, there are many fewer layers of abstraction. You&apos;re operating in a
+space further down the rabbit hole, where information is more raw and questions
+are as a result more clear. Searching &lt;em&gt;&quot;why is mv faster than cp?&quot;&lt;/em&gt; will lead
+you to much richer information than &lt;em&gt;&quot;why does copying files in Finder, take
+longer than moving them&quot;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;So you may dig into &lt;code&gt;cp&lt;/code&gt; a little further and come across &lt;code&gt;rsync&lt;/code&gt;, and find that
+it&apos;s a better program for many copying tasks. From there you may well polish
+your tool (shell config) a little more and make an alias for it like
+&lt;code&gt;alias rsync=&quot;rsync -vrPlu&quot;&lt;/code&gt;. Now your speed is further optimised by not having
+to type the flags you always want, and your cognitive load is lower by not
+having to remember or search for those flags in the first place.&lt;/p&gt;
+&lt;p&gt;Then you may want to alias some other frequently typed commands. Now you have
+enough where you refactor them out into a separate file and source it in your
+&lt;code&gt;.zshrc&lt;/code&gt;, which requires you to learn a bit of bash syntax, which leads you to
+writing little utility scripts that run fast and do whatever you want, because
+it runs in the shell and the shell is the lowest level interface between you and
+the computer. Your computer becomes a much more powerful tool for you, and it&apos;s
+nicely polished so that you &lt;em&gt;move fast&lt;/em&gt; and &lt;em&gt;freely&lt;/em&gt;. That&apos;s ace!&lt;/p&gt;
+&lt;p&gt;Whenever someone says &quot;polishing your tools is a trap, it&apos;s a bad thing&quot;,
+they&apos;re speaking of the extremes. Polishing your tools
+&lt;a href=&quot;https://www.youtube.com/watch?v=9gUatBHuXE0&quot;&gt; can be a great thing &lt;/a&gt;. It&apos;s
+helped me learn a good amount of base knowledge in an engaging environment and
+rewarding environment. No-one wants to use a rusty hammer that gives them
+splinters, particularly if they can learn things a long the way by polishing and
+sanding it. As with everything, self control, moderation and keeping an end goal
+in mind is key.&lt;/p&gt;
+</content:encoded><category>learning</category></item><item><title>First 10 Day Vipassana Course</title><link>https://tjex.net/posts/2023/first-vipassana-course/</link><guid isPermaLink="true">https://tjex.net/posts/2023/first-vipassana-course/</guid><description>A few thoughts after my first 10 day silent meditation course in the technique of Vipassana and a consolidation of its philosophies.</description><pubDate>Mon, 26 Jun 2023 18:51:08 GMT</pubDate><content:encoded>&lt;h2&gt;Vipassana&lt;/h2&gt;
+&lt;p&gt;Vipassana is the original, unaltered meditation technique of &quot;The Buddha&quot; (as we
+were taught, any enlightened person is Buddha), Siddhartha Gautama. It is a
+practice of meditation that is universal in that everyone has access to it. You
+don&apos;t need to pay someone to provide you with your own special mantra (no access
+for the poor), to visualise an image (no access for the blind), or to sit or
+move in any particular way (no access for physically challenged). The technique
+is grounded in experiencing the present moment through observation of bodily
+sensations, something that everyone has access to [^1].&lt;/p&gt;
+&lt;p&gt;The following is my understanding of the philosophies of Vipassana meditation
+and how they interface with our daily life and nature as a whole. As context,
+you can read a text &lt;a href=&quot;https://www.dhamma.org/en/about/art&quot;&gt;here&lt;/a&gt; based on a talk
+by &lt;a href=&quot;https://www.dhamma.org/en/about/goenka&quot;&gt;S.N Goenka&lt;/a&gt;, who was a leader in the
+teaching of Vipassana from 1969-2013. A base point for any further inquisition
+should be &lt;a href=&quot;https://www.dhamma.org/en/about/vipassana&quot;&gt;dhamma.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I comment a little bit on the ten day course I completed in June 2023, but in
+keeping with the correct way of introducing people to the course - I do not want
+to influence too much or create too much of an image.&lt;/p&gt;
+&lt;p&gt;The TL;DR for the Vipassana course itself is that it was mentally and physically
+challenging but invaluably educational and rewarding. The two advices I would
+give is 1) anyone considering to undertake a course should first establish at
+least a loose practice of mindfulness meditation and be comfortable to sit on
+the ground with legs crossed. This is more so that you can take best advantage
+of the unique experience and environment of a Vipassana course, and not have to
+spend all your time battling physical discomfort. And 2) to just wait until you
+feel like it&apos;s a good time to do it. There&apos;s no need to rush. It will pay off
+much more if it&apos;s done when it wants to be done. In the meantime, further your
+meditation practice on your own accord.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Meditation can be a bit tricky to get started with. I fumbled in the dark for
+a while, but now have 4+ years of daily mediation behind me - this being just
+a preface for extending an invitation to anyone who feels they&apos;re also
+fumbling in the dark. Shoot me an email any time!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;The Retreat&lt;/h2&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;I did my course in Sweden at &lt;a href=&quot;https://sobhana.dhamma.org/&quot;&gt;Dhamma Sobhana&lt;/a&gt;. The
+environment was a manifestation of tranquility itself; well kept gardens, small
+forest areas with varieties of beautiful flowers, winding paths and cosy red
+cottages with white trim. Time is defined by the soft striking of two gongs. One
+for the male students, another for the female, a perfect fourth interval apart,
+creating a slowly phasing ambient rhythm that is heard anywhere in the compound.
+Beds are comfortable, food is wholesome and amenities just fine.&lt;/p&gt;
+&lt;p&gt;The noble silence was an interesting and special experience. On the arrival day,
+you meet everyone and can get to know each other, then from 20:00 the noble
+silence begins. The nine days that follow you may not talk or communicate with
+other students in any way. No gesturing, writing or signalling. This helps a lot
+with being able to stay in the meditational focus and frame of mind required to
+make the meditation sessions more fluid. It also reduces the mental friction
+that can occur if students compare their experiences with each other throughout
+the week. This can lead to comparison between ones self and others, which has no
+useful place in meditational practice at all. The meditation is your experience.
+The yard stick is your equanimity.&lt;/p&gt;
+&lt;p&gt;The most profound thing about the silence though is, upon the last day when the
+silence is lifted, how much more you know each other despite not having talked
+since day one. Everyone feels like close friends. This no doubt comes through
+the sharing of the challenging experience, and living in close quarters with
+each other. It was very interesting to experience how a strong sense of
+solidarity and friendship can still occur in near total lack of communication,
+vocal or otherwise.&lt;/p&gt;
+&lt;p&gt;I considered a few times that it could be an interesting exercise for teams of
+software developers to spend some days (maybe not ten) in a retreat, where they
+cannot communicate with each other at all, but need to live together and also
+work on a programming task. The value would lie in the interpersonal and social
+developments that come from a form of interaction that is outside of the normal
+and mundane (like the uncomfortable exercise of two people being tasked to stare
+for two minutes directly into each others eyes without averting their gazes.
+Anyone who&apos;s done this, realises a strange sense of &apos;knowing&apos; the person
+afterward, despite having exchanged no words).&lt;/p&gt;
+&lt;p&gt;Vipassana retreats can be anywhere from three days to fourty-five. Ten days is
+the standard and recommended length. During these ten days, you essentially live
+the life of a monk or nun. You don&apos;t speak, you eat the food that is prepared
+for you and you follow a set schedule of meditation and break times.&lt;/p&gt;
+&lt;p&gt;It&apos;s demanding, physically and mentally. Eleven hours meditation every day
+requires the body to be accustomed to sitting on the floor without unbearable or
+increasing discomfort. And to focus continuously for ten days is strenuous in of
+itself, despite the focus not being on an analytical task. You do encounter
+then, a form of mental exhaustion, and it&apos;s made worse when you indulge in
+questioning how many days are left and how difficult will those days
+increasingly be. But this is just as much part of the practice. To disengage
+from those thoughts of aversion and craving, and the tension they bring, and to
+return to the true reality of you being where you are, moment to moment.&lt;/p&gt;
+&lt;h2&gt;The Technique&lt;/h2&gt;
+&lt;p&gt;On the forth day the main Vipassana technique, &lt;em&gt;Paññā&lt;/em&gt;, is taught. It&apos;s the
+practice of observing sensations in the body and remaining equanimous with them.
+This means to not judge them as being pleasurable or unpleasurable, desirable or
+undesirable, wanted or unwanted. By practicing this equanimity, the behavioural
+pattern of the mind, which seeks to generate craving (pleasure) and aversion
+(displeasure), becomes weakened. The generation of craving or aversion leads to
+attachment; we become attached to something desirable happening, or something
+undesirable not happening. When the opposite happens, and what we want to happen
+does not eventuate, we encounter misery.&lt;/p&gt;
+&lt;p&gt;With this, Buddha concluded that craving and aversion are the root cause of all
+misery and to become fully enlightened, one must rid themselves of all craving
+and aversion. At this point, a lot of people get demotivated from the
+philosophy. &lt;em&gt;Enlightenment is a path only for some&lt;/em&gt;. The rest of us can move
+somewhere along the path and stop at whatever point is sustainable. That is the
+best collective result for society. It does not need to be all or nothing. All
+or nothing doesn&apos;t help, something more than nothing does. You can still have
+sex (even with yourself), or do &amp;lt;insert naughty thing&amp;gt;. The idea is to become
+a &lt;em&gt;better&lt;/em&gt; person, not to become Buddha. You can actually bake the cake and eat
+it too in this case, you just wont assimilate into the universe.&lt;/p&gt;
+&lt;p&gt;Vipassana teaches that each and every reaction we elicit, mental or physical,
+begins with a sensation in the body. The sensations in the body arise from the
+unconscious mind, that is its domain; the autonomous faculties of mind and
+matter. By training ourselves to calm our outer layer, the conscious mind, and
+to maintain awareness of bodily sensations as they rise and pass away, we are
+training an ability to integrate an awareness into our every day life. When we
+subsequently find ourselves in any situation, and we have a good practice of
+Vipassana established (being equanimous), we can become aware of a sensation in
+the body as they occur. With the awareness of that sensation, we can then react
+more wisely than we otherwise would, as our reactions otherwise would be just
+that - reactions, not considerations.&lt;/p&gt;
+&lt;h2&gt;Anicca, The Law of Impermanence&lt;/h2&gt;
+&lt;p&gt;From this comes the emergence of a compassion for all life an all beings,
+because all life, including ourselves, exists within the same universal law of
+impermanence. All things change. Because all things change, all things are
+impermanent, ultimate truth cannot exist in the generation of craving or
+aversion. Craving &lt;em&gt;can&lt;/em&gt; remain permanent, as can aversion. They feed themselves
+and only grow more hungry. This is incongruous with the universal law of
+impermanence. It places you on a divergent path to that of true nature, which
+ultimately generates misery for you, as you are diverging yourself from nature.&lt;/p&gt;
+&lt;p&gt;Generating craving or aversion (&lt;em&gt;sankāhra&lt;/em&gt;) is the process of desiring reality
+to be something it is not. Vipassana teaches the practitioner to observe reality
+as it is, which brings tranquility and peace to the experience of reality. This
+does not mean that we can&apos;t desire things. Or that if we desire things or want
+things to be different, that we will only generate misery. Of course in essence,
+it does work this way and becomes clearer when you take the extreme as an
+example: If you always desire a different reality than your own, then your
+reality will be misery, because day after day, year after year it is not what
+you want. This is a disease that plagues many people who are focussed on
+generating wealth and power for the sake of wealth and power. It leads to never
+being satisfied, because there is always more to be had. Drug addiction works
+the same, it&apos;s just the object of the craving is different.&lt;/p&gt;
+&lt;p&gt;We can still desire things, and to be excited about things eventuating. &lt;strong&gt;The
+measure of how much misery this brings to your life is how much tension you
+experience waiting for the thing to eventuate and how equanimous you remain when
+that desire does not eventuate.&lt;/strong&gt; If you experience no tension while waiting for
+the thing to eventuate; meaning you are present in each moment up until it
+eventuates or not, and if you do not react with frustration, anger,
+disappointment or such when it does not eventuate; then you are living a life
+closer to real peace and harmony. A life of equanimity.&lt;/p&gt;
+&lt;p&gt;Pure Vipassana theory would say that you should also not experience elation or
+euphoria when the thing &lt;em&gt;does&lt;/em&gt; occur. On the outset, this does not sound
+appropriate. However, feeling elation, euphoria or other such extreme &quot;positive&quot;
+feelings, are the &lt;em&gt;result&lt;/em&gt; of a craving being satisfied. If you were to feel
+elation, euphoria or such feelings when the thing eventuates, you would equally
+feel devastation, anger, resentment or such feelings if it did not eventuate.
+With each action there is an equal and opposite reaction.&lt;/p&gt;
+&lt;h2&gt;A Sense of Realism?&lt;/h2&gt;
+&lt;p&gt;It is however important to remember that nature and life could not exist without
+sankahra. Reproduction is fuelled by sankahra. Nature is perfect, but also
+imperfect. It is cruel and kind. We can also not simply conclude that a life
+completely void of sankahra which an enlightened person achieves, should be
+hailed as the true destination of happiness and prosperity for all humans. If
+all humans achieved this, we would stop reproducing. It would be an extinction
+event. However, it would arguably be better for all other beings and plants on
+earth if humans became extinct. Everything else suffers by our existence (except
+diseases).&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;The paradox here I suppose is that if all humans did become enlightened, no one
+would have a problem with the human race becoming extinct within a generation,
+as we would all be one with nature anyway. We would be totally and collectively
+at peace with death and the ultimate truth of nature, meaning we would not be
+compelled to reproduce - a partial process of immortalising ourselves by passing
+fragments of ourselves down to our children.&lt;/p&gt;
+&lt;p&gt;At this point it is theory. Just reading the concepts can never lead to an
+accurate conclusion of its truth. It needs to be experienced itself. And this
+comes full circle to the essence of the Vipassana technique being a universal
+truth. It is a practice that is universally true for each and every human being.
+The practice is to experience one&apos;s own reality as it is, not as one wishes it
+to be. There is no exclusivity in the accessibility to this truth or ultimately
+to enlightenment. It is universal, and nature is universal. No one is more or
+less resultant from nature than anyone else. Anyone can experience the benefits
+of Vipassana because everyone has universal access to the truth of nature
+through the manifestation of sensations of the body.&lt;/p&gt;
+&lt;p&gt;As touched upon, this is different from other modifications of the technique
+such as transcendental meditation, which requires the practitioner be given a
+mantra; a special and supposedly unique word, which only a guru can give. The
+provision of this mantra, carries the burden of secrecy whereby the practitioner
+cannot reveal the mantra to anyone else, or else the mantra will loose its
+essence. While using the mantra as a source of focus for meditation does calm
+and focus the mind, it does not allow the practitioner to access the pure truth
+of themselves and their place in nature. This is because they are themselves
+generating an alternate reality for themselves by repeating a secret word. This
+by definition is &lt;em&gt;not&lt;/em&gt; a universal truth. If each practitioner of transcendental
+meditation is given a unique word, then each practitioner is experiencing a
+reality that is divergent from their true reality when they meditate, the
+reality as it is, not as they (through repetition of mantra) wish it to be. By
+diverging from nature in a meditational practice, one can never truly access
+nature at its core. Only the surface, a calming of the mind and an enhanced
+focus, will be reached.&lt;/p&gt;
+&lt;p&gt;[^1]:
+I did some research for cases where people may lose the ability to perceive
+all perception of sensations in the body, but did not find anything. Only
+partial loss in sensation. If I&apos;m wrong, please email me!&lt;/p&gt;
+</content:encoded><category>meditation</category><category>philosophy</category></item><item><title>Floss, A Partial Antidote To Social Catastrophe</title><link>https://tjex.net/posts/2023/floss-a-partial-antidote-to-social-catastrophe/</link><guid isPermaLink="true">https://tjex.net/posts/2023/floss-a-partial-antidote-to-social-catastrophe/</guid><description>Technology and software have together enabled immense change. Can FLOSS principals help mitigate the harm that society is enduring?</description><pubDate>Thu, 01 Jun 2023 18:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;What is the problem?&lt;/h2&gt;
 &lt;p&gt;Technology, and in particular software, moves fast, and increasingly so.
 Software interfaces with our lives on so many levels, that it becomes harder and
 harder to distinguish between what is software driven and what is not. With such
@@ -333,203 +584,7 @@ good, and can result in tools that not only function better, respect the
 fundamental freedoms of users and remain accessible across the wealth divide,
 but which can also help communicate to government and industry what a partial
 antidote to social catastrophe can look like.&lt;/p&gt;
-</content:encoded><category>open-source</category><category>society</category></item><item><title>First 10 Day Vipassana Course</title><link>https://tjex.net/posts/2023/first-vipassana-course/</link><guid isPermaLink="true">https://tjex.net/posts/2023/first-vipassana-course/</guid><description>A few thoughts after my first 10 day silent meditation course in the technique of Vipassana and a consolidation of its philosophies.</description><pubDate>Mon, 26 Jun 2023 18:51:08 GMT</pubDate><content:encoded>&lt;h2&gt;Vipassana&lt;/h2&gt;
-&lt;p&gt;Vipassana is the original, unaltered meditation technique of &quot;The Buddha&quot; (as we
-were taught, any enlightened person is Buddha), Siddhartha Gautama. It is a
-practice of meditation that is universal in that everyone has access to it. You
-don&apos;t need to pay someone to provide you with your own special mantra (no access
-for the poor), to visualise an image (no access for the blind), or to sit or
-move in any particular way (no access for physically challenged). The technique
-is grounded in experiencing the present moment through observation of bodily
-sensations, something that everyone has access to [^1].&lt;/p&gt;
-&lt;p&gt;The following is my understanding of the philosophies of Vipassana meditation
-and how they interface with our daily life and nature as a whole. As context,
-you can read a text &lt;a href=&quot;https://www.dhamma.org/en/about/art&quot;&gt;here&lt;/a&gt; based on a talk
-by &lt;a href=&quot;https://www.dhamma.org/en/about/goenka&quot;&gt;S.N Goenka&lt;/a&gt;, who was a leader in the
-teaching of Vipassana from 1969-2013. A base point for any further inquisition
-should be &lt;a href=&quot;https://www.dhamma.org/en/about/vipassana&quot;&gt;dhamma.org&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I comment a little bit on the ten day course I completed in June 2023, but in
-keeping with the correct way of introducing people to the course - I do not want
-to influence too much or create too much of an image.&lt;/p&gt;
-&lt;p&gt;The TL;DR for the Vipassana course itself is that it was mentally and physically
-challenging but invaluably educational and rewarding. The two advices I would
-give is 1) anyone considering to undertake a course should first establish at
-least a loose practice of mindfulness meditation and be comfortable to sit on
-the ground with legs crossed. This is more so that you can take best advantage
-of the unique experience and environment of a Vipassana course, and not have to
-spend all your time battling physical discomfort. And 2) to just wait until you
-feel like it&apos;s a good time to do it. There&apos;s no need to rush. It will pay off
-much more if it&apos;s done when it wants to be done. In the meantime, further your
-meditation practice on your own accord.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Meditation can be a bit tricky to get started with. I fumbled in the dark for
-a while, but now have 4+ years of daily mediation behind me - this being just
-a preface for extending an invitation to anyone who feels they&apos;re also
-fumbling in the dark. Shoot me an email any time!&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;The Retreat&lt;/h2&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;I did my course in Sweden at &lt;a href=&quot;https://sobhana.dhamma.org/&quot;&gt;Dhamma Sobhana&lt;/a&gt;. The
-environment was a manifestation of tranquility itself; well kept gardens, small
-forest areas with varieties of beautiful flowers, winding paths and cosy red
-cottages with white trim. Time is defined by the soft striking of two gongs. One
-for the male students, another for the female, a perfect fourth interval apart,
-creating a slowly phasing ambient rhythm that is heard anywhere in the compound.
-Beds are comfortable, food is wholesome and amenities just fine.&lt;/p&gt;
-&lt;p&gt;The noble silence was an interesting and special experience. On the arrival day,
-you meet everyone and can get to know each other, then from 20:00 the noble
-silence begins. The nine days that follow you may not talk or communicate with
-other students in any way. No gesturing, writing or signalling. This helps a lot
-with being able to stay in the meditational focus and frame of mind required to
-make the meditation sessions more fluid. It also reduces the mental friction
-that can occur if students compare their experiences with each other throughout
-the week. This can lead to comparison between ones self and others, which has no
-useful place in meditational practice at all. The meditation is your experience.
-The yard stick is your equanimity.&lt;/p&gt;
-&lt;p&gt;The most profound thing about the silence though is, upon the last day when the
-silence is lifted, how much more you know each other despite not having talked
-since day one. Everyone feels like close friends. This no doubt comes through
-the sharing of the challenging experience, and living in close quarters with
-each other. It was very interesting to experience how a strong sense of
-solidarity and friendship can still occur in near total lack of communication,
-vocal or otherwise.&lt;/p&gt;
-&lt;p&gt;I considered a few times that it could be an interesting exercise for teams of
-software developers to spend some days (maybe not ten) in a retreat, where they
-cannot communicate with each other at all, but need to live together and also
-work on a programming task. The value would lie in the interpersonal and social
-developments that come from a form of interaction that is outside of the normal
-and mundane (like the uncomfortable exercise of two people being tasked to stare
-for two minutes directly into each others eyes without averting their gazes.
-Anyone who&apos;s done this, realises a strange sense of &apos;knowing&apos; the person
-afterward, despite having exchanged no words).&lt;/p&gt;
-&lt;p&gt;Vipassana retreats can be anywhere from three days to fourty-five. Ten days is
-the standard and recommended length. During these ten days, you essentially live
-the life of a monk or nun. You don&apos;t speak, you eat the food that is prepared
-for you and you follow a set schedule of meditation and break times.&lt;/p&gt;
-&lt;p&gt;It&apos;s demanding, physically and mentally. Eleven hours meditation every day
-requires the body to be accustomed to sitting on the floor without unbearable or
-increasing discomfort. And to focus continuously for ten days is strenuous in of
-itself, despite the focus not being on an analytical task. You do encounter
-then, a form of mental exhaustion, and it&apos;s made worse when you indulge in
-questioning how many days are left and how difficult will those days
-increasingly be. But this is just as much part of the practice. To disengage
-from those thoughts of aversion and craving, and the tension they bring, and to
-return to the true reality of you being where you are, moment to moment.&lt;/p&gt;
-&lt;h2&gt;The Technique&lt;/h2&gt;
-&lt;p&gt;On the forth day the main Vipassana technique, &lt;em&gt;Paññā&lt;/em&gt;, is taught. It&apos;s the
-practice of observing sensations in the body and remaining equanimous with them.
-This means to not judge them as being pleasurable or unpleasurable, desirable or
-undesirable, wanted or unwanted. By practicing this equanimity, the behavioural
-pattern of the mind, which seeks to generate craving (pleasure) and aversion
-(displeasure), becomes weakened. The generation of craving or aversion leads to
-attachment; we become attached to something desirable happening, or something
-undesirable not happening. When the opposite happens, and what we want to happen
-does not eventuate, we encounter misery.&lt;/p&gt;
-&lt;p&gt;With this, Buddha concluded that craving and aversion are the root cause of all
-misery and to become fully enlightened, one must rid themselves of all craving
-and aversion. At this point, a lot of people get demotivated from the
-philosophy. &lt;em&gt;Enlightenment is a path only for some&lt;/em&gt;. The rest of us can move
-somewhere along the path and stop at whatever point is sustainable. That is the
-best collective result for society. It does not need to be all or nothing. All
-or nothing doesn&apos;t help, something more than nothing does. You can still have
-sex (even with yourself), or do &amp;lt;insert naughty thing&amp;gt;. The idea is to become
-a &lt;em&gt;better&lt;/em&gt; person, not to become Buddha. You can actually bake the cake and eat
-it too in this case, you just wont assimilate into the universe.&lt;/p&gt;
-&lt;p&gt;Vipassana teaches that each and every reaction we elicit, mental or physical,
-begins with a sensation in the body. The sensations in the body arise from the
-unconscious mind, that is its domain; the autonomous faculties of mind and
-matter. By training ourselves to calm our outer layer, the conscious mind, and
-to maintain awareness of bodily sensations as they rise and pass away, we are
-training an ability to integrate an awareness into our every day life. When we
-subsequently find ourselves in any situation, and we have a good practice of
-Vipassana established (being equanimous), we can become aware of a sensation in
-the body as they occur. With the awareness of that sensation, we can then react
-more wisely than we otherwise would, as our reactions otherwise would be just
-that - reactions, not considerations.&lt;/p&gt;
-&lt;h2&gt;Anicca, The Law of Impermanence&lt;/h2&gt;
-&lt;p&gt;From this comes the emergence of a compassion for all life an all beings,
-because all life, including ourselves, exists within the same universal law of
-impermanence. All things change. Because all things change, all things are
-impermanent, ultimate truth cannot exist in the generation of craving or
-aversion. Craving &lt;em&gt;can&lt;/em&gt; remain permanent, as can aversion. They feed themselves
-and only grow more hungry. This is incongruous with the universal law of
-impermanence. It places you on a divergent path to that of true nature, which
-ultimately generates misery for you, as you are diverging yourself from nature.&lt;/p&gt;
-&lt;p&gt;Generating craving or aversion (&lt;em&gt;sankāhra&lt;/em&gt;) is the process of desiring reality
-to be something it is not. Vipassana teaches the practitioner to observe reality
-as it is, which brings tranquility and peace to the experience of reality. This
-does not mean that we can&apos;t desire things. Or that if we desire things or want
-things to be different, that we will only generate misery. Of course in essence,
-it does work this way and becomes clearer when you take the extreme as an
-example: If you always desire a different reality than your own, then your
-reality will be misery, because day after day, year after year it is not what
-you want. This is a disease that plagues many people who are focussed on
-generating wealth and power for the sake of wealth and power. It leads to never
-being satisfied, because there is always more to be had. Drug addiction works
-the same, it&apos;s just the object of the craving is different.&lt;/p&gt;
-&lt;p&gt;We can still desire things, and to be excited about things eventuating. &lt;strong&gt;The
-measure of how much misery this brings to your life is how much tension you
-experience waiting for the thing to eventuate and how equanimous you remain when
-that desire does not eventuate.&lt;/strong&gt; If you experience no tension while waiting for
-the thing to eventuate; meaning you are present in each moment up until it
-eventuates or not, and if you do not react with frustration, anger,
-disappointment or such when it does not eventuate; then you are living a life
-closer to real peace and harmony. A life of equanimity.&lt;/p&gt;
-&lt;p&gt;Pure Vipassana theory would say that you should also not experience elation or
-euphoria when the thing &lt;em&gt;does&lt;/em&gt; occur. On the outset, this does not sound
-appropriate. However, feeling elation, euphoria or other such extreme &quot;positive&quot;
-feelings, are the &lt;em&gt;result&lt;/em&gt; of a craving being satisfied. If you were to feel
-elation, euphoria or such feelings when the thing eventuates, you would equally
-feel devastation, anger, resentment or such feelings if it did not eventuate.
-With each action there is an equal and opposite reaction.&lt;/p&gt;
-&lt;h2&gt;A Sense of Realism?&lt;/h2&gt;
-&lt;p&gt;It is however important to remember that nature and life could not exist without
-sankahra. Reproduction is fuelled by sankahra. Nature is perfect, but also
-imperfect. It is cruel and kind. We can also not simply conclude that a life
-completely void of sankahra which an enlightened person achieves, should be
-hailed as the true destination of happiness and prosperity for all humans. If
-all humans achieved this, we would stop reproducing. It would be an extinction
-event. However, it would arguably be better for all other beings and plants on
-earth if humans became extinct. Everything else suffers by our existence (except
-diseases).&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;The paradox here I suppose is that if all humans did become enlightened, no one
-would have a problem with the human race becoming extinct within a generation,
-as we would all be one with nature anyway. We would be totally and collectively
-at peace with death and the ultimate truth of nature, meaning we would not be
-compelled to reproduce - a partial process of immortalising ourselves by passing
-fragments of ourselves down to our children.&lt;/p&gt;
-&lt;p&gt;At this point it is theory. Just reading the concepts can never lead to an
-accurate conclusion of its truth. It needs to be experienced itself. And this
-comes full circle to the essence of the Vipassana technique being a universal
-truth. It is a practice that is universally true for each and every human being.
-The practice is to experience one&apos;s own reality as it is, not as one wishes it
-to be. There is no exclusivity in the accessibility to this truth or ultimately
-to enlightenment. It is universal, and nature is universal. No one is more or
-less resultant from nature than anyone else. Anyone can experience the benefits
-of Vipassana because everyone has universal access to the truth of nature
-through the manifestation of sensations of the body.&lt;/p&gt;
-&lt;p&gt;As touched upon, this is different from other modifications of the technique
-such as transcendental meditation, which requires the practitioner be given a
-mantra; a special and supposedly unique word, which only a guru can give. The
-provision of this mantra, carries the burden of secrecy whereby the practitioner
-cannot reveal the mantra to anyone else, or else the mantra will loose its
-essence. While using the mantra as a source of focus for meditation does calm
-and focus the mind, it does not allow the practitioner to access the pure truth
-of themselves and their place in nature. This is because they are themselves
-generating an alternate reality for themselves by repeating a secret word. This
-by definition is &lt;em&gt;not&lt;/em&gt; a universal truth. If each practitioner of transcendental
-meditation is given a unique word, then each practitioner is experiencing a
-reality that is divergent from their true reality when they meditate, the
-reality as it is, not as they (through repetition of mantra) wish it to be. By
-diverging from nature in a meditational practice, one can never truly access
-nature at its core. Only the surface, a calming of the mind and an enhanced
-focus, will be reached.&lt;/p&gt;
-&lt;p&gt;[^1]:
-I did some research for cases where people may lose the ability to perceive
-all perception of sensations in the body, but did not find anything. Only
-partial loss in sensation. If I&apos;m wrong, please email me!&lt;/p&gt;
-</content:encoded><category>meditation</category><category>philosophy</category></item><item><title>Fundamentals all the Way Down</title><link>https://tjex.net/posts/2023/fundamentals-all-the-way-down/</link><guid isPermaLink="true">https://tjex.net/posts/2023/fundamentals-all-the-way-down/</guid><description>How deep do you start when stepping into a new field of learning? Do you learn the fundamentals, or get up and going as quickly as possible?</description><pubDate>Wed, 26 Jul 2023 19:17:01 GMT</pubDate><content:encoded>&lt;p&gt;I recently listened to an
+</content:encoded><category>open-source</category><category>society</category></item><item><title>Fundamentals all the Way Down</title><link>https://tjex.net/posts/2023/fundamentals-all-the-way-down/</link><guid isPermaLink="true">https://tjex.net/posts/2023/fundamentals-all-the-way-down/</guid><description>How deep do you start when stepping into a new field of learning? Do you learn the fundamentals, or get up and going as quickly as possible?</description><pubDate>Wed, 26 Jul 2023 19:17:01 GMT</pubDate><content:encoded>&lt;p&gt;I recently listened to an
 &lt;a href=&quot;https://changelog.com/jsparty/283&quot;&gt;episode of The Changelog&lt;/a&gt;, that dealt with
 the topic of whether it&apos;s important or not as programmers to understand the
 fundamentals of the technology, and if so, how many layers deep should we go?
@@ -605,75 +660,20 @@ I&apos;d love to give both Stallman and Torvalds simultaneous credit when
 writing, but GNU/Linux just didn&apos;t stick. Sorry. Marketing language sucks,
 but it happens. The heard lets some things stick, and some things not.
 https://www.gnu.org/gnu/incorrect-quotation.en.html&lt;/p&gt;
-</content:encoded><category>career</category><category>learning</category></item><item><title>A Case for Polishing Your Tools</title><link>https://tjex.net/posts/2023/a-case-for-polishing-your-tools/</link><guid isPermaLink="true">https://tjex.net/posts/2023/a-case-for-polishing-your-tools/</guid><description>Polishing your tools is a good thing. It can teach you a lot, particularly if you&apos;re new to a technology or practice. Just keep track of how far down the rabbit hole you are.</description><pubDate>Sat, 07 Oct 2023 09:31:34 GMT</pubDate><content:encoded>&lt;p&gt;I have a lust in understand things to a deeper level than what is needed to
-actually implement or use the thing. &lt;em&gt;How deep&lt;/em&gt; is a question for each learning
-or interest in question. There is always a trade off between productivity and
-capability. Do you just implement and move on without knowing anything about
-what just happened, or do you dig in so hard that you end up only reading and
-not implementing?&lt;/p&gt;
-&lt;p&gt;I believe the fundamentally correct answer to this is that your behaviour should
-&lt;em&gt;shift&lt;/em&gt; within the bounds of that spectrum at any one time. If you&apos;re falling
-too deep, dig your hands and feet into the walls of the rabbit hole to halt your
-fall, scurry back up a little, and enter one of the horizontal tunnels you fell
-past. Rinse, repeat.&lt;/p&gt;
-&lt;p&gt;As someone new to programming, I was given some &quot;OK buddy&quot; treatment when
-excitedly advertising to more experienced programmers that I was switching to
-Neovim from VSCode. It&apos;s a large hurdle to overcome for sure. But the investment
-is paying dividends. Not only can I work with files and file systems &lt;em&gt;way&lt;/em&gt;
-faster, but I&apos;ve accidentally learned many fundamental programming concepts and
-practices through polishing my tool (Neovim), that even if I were to switch to a
-different editor now, it would have still be worth the time.&lt;/p&gt;
-&lt;p&gt;Consider the case of someone who&apos;s starting out. They know next to nothing about
-reading and implementing APIs, debugging, program flow or sourcing, managing and
-working with packages, binaries and configuration files on their system. That
-was me, and still is to whatever degree.&lt;/p&gt;
-&lt;p&gt;That person can teach themselves all of that through building their Neovim setup
-&lt;em&gt;from scratch&lt;/em&gt;. Anyone who opens up a bare bones Neovim/Vim install is
-&lt;em&gt;compelled&lt;/em&gt; to polish it, &lt;em&gt;hard&lt;/em&gt;. It looks awful and feels completely unusable.
-But in reality, it&apos;s a sandbox in which to play. It&apos;s easy to work iteratively
-and interactively, and it results in having a tool that greatly enhances your
-ability to work with code and your system (yes, even debugging). And it&apos;s fun to
-do it! The moments of gratification are much closer together. In this sense, it
-becomes a &quot;personal development environment&quot; (PDE, as apposed to IDE), as
-explained by TJ Devries in his video,
-&lt;a href=&quot;https://www.youtube.com/watch?v=QMVIJhC9Veg&quot;&gt;PDE: A different take on editing code&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Not only this, but working with Neovim keeps you closer to the command line.
-This has also taught me a lot. I greatly enjoyed getting over the intense
-feeling of danger when using the command line. And the power and value it
-brings! Steve Yegge comments on this at length in one of his
-&lt;a href=&quot;https://www.youtube.com/watch?v=mb8ayJEsnk8&quot;&gt;tech talks&lt;/a&gt;. Doing things in the
-command line uncovers a lot of knowledge too, in the same way as Neovim does.&lt;/p&gt;
-&lt;p&gt;For example, why does moving a file with &lt;code&gt;mv&lt;/code&gt; run so quickly, while copying it
-with &lt;code&gt;cp&lt;/code&gt; runs much slower? The path to answering this question isn&apos;t as clear
-if you work with a file manager, or do the moving and copying via the file
-browser of your IDE.&lt;/p&gt;
-&lt;p&gt;In the shell, there are many fewer layers of abstraction. You&apos;re operating in a
-space further down the rabbit hole, where information is more raw and questions
-are as a result more clear. Searching &lt;em&gt;&quot;why is mv faster than cp?&quot;&lt;/em&gt; will lead
-you to much richer information than &lt;em&gt;&quot;why does copying files in Finder, take
-longer than moving them&quot;&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;So you may dig into &lt;code&gt;cp&lt;/code&gt; a little further and come across &lt;code&gt;rsync&lt;/code&gt;, and find that
-it&apos;s a better program for many copying tasks. From there you may well polish
-your tool (shell config) a little more and make an alias for it like
-&lt;code&gt;alias rsync=&quot;rsync -vrPlu&quot;&lt;/code&gt;. Now your speed is further optimised by not having
-to type the flags you always want, and your cognitive load is lower by not
-having to remember or search for those flags in the first place.&lt;/p&gt;
-&lt;p&gt;Then you may want to alias some other frequently typed commands. Now you have
-enough where you refactor them out into a separate file and source it in your
-&lt;code&gt;.zshrc&lt;/code&gt;, which requires you to learn a bit of bash syntax, which leads you to
-writing little utility scripts that run fast and do whatever you want, because
-it runs in the shell and the shell is the lowest level interface between you and
-the computer. Your computer becomes a much more powerful tool for you, and it&apos;s
-nicely polished so that you &lt;em&gt;move fast&lt;/em&gt; and &lt;em&gt;freely&lt;/em&gt;. That&apos;s ace!&lt;/p&gt;
-&lt;p&gt;Whenever someone says &quot;polishing your tools is a trap, it&apos;s a bad thing&quot;,
-they&apos;re speaking of the extremes. Polishing your tools
-&lt;a href=&quot;https://www.youtube.com/watch?v=9gUatBHuXE0&quot;&gt; can be a great thing &lt;/a&gt;. It&apos;s
-helped me learn a good amount of base knowledge in an engaging environment and
-rewarding environment. No-one wants to use a rusty hammer that gives them
-splinters, particularly if they can learn things a long the way by polishing and
-sanding it. As with everything, self control, moderation and keeping an end goal
-in mind is key.&lt;/p&gt;
-</content:encoded><category>learning</category></item><item><title>The Noob Chronicles - Chapter 1</title><link>https://tjex.net/posts/2023/the-noob-chronicles-chapter-1/</link><guid isPermaLink="true">https://tjex.net/posts/2023/the-noob-chronicles-chapter-1/</guid><description>It&apos;s been two years since I learnt what a for loop was. How&apos;s it been going since then?</description><pubDate>Thu, 26 Oct 2023 19:48:11 GMT</pubDate><content:encoded>&lt;p&gt;It&apos;s important to step back and get some perspective about your progress with
+</content:encoded><category>career</category><category>learning</category></item><item><title>Hello World</title><link>https://tjex.net/posts/2023/hello-world/</link><guid isPermaLink="true">https://tjex.net/posts/2023/hello-world/</guid><description>It&apos;s traditional.</description><pubDate>Sun, 28 May 2023 10:30:00 GMT</pubDate><content:encoded>&lt;p&gt;Why am I starting to blog?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;to learn more concretely&lt;/li&gt;
+&lt;li&gt;to be more critical of my thoughts&lt;/li&gt;
+&lt;li&gt;to hopefully contribute positively to someone else&apos;s knowledge&lt;/li&gt;
+&lt;li&gt;to make a point to myself, that will otherwise keep mutating in my head&lt;/li&gt;
+&lt;li&gt;to support a cultural and societal divergence from centralised social media&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And if people actually get to this blog...&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;to test my ideas against the chaos of the internet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let&apos;s see...&lt;/p&gt;
+</content:encoded></item><item><title>The Noob Chronicles - Chapter 1</title><link>https://tjex.net/posts/2023/the-noob-chronicles-chapter-1/</link><guid isPermaLink="true">https://tjex.net/posts/2023/the-noob-chronicles-chapter-1/</guid><description>It&apos;s been two years since I learnt what a for loop was. How&apos;s it been going since then?</description><pubDate>Thu, 26 Oct 2023 19:48:11 GMT</pubDate><content:encoded>&lt;p&gt;It&apos;s important to step back and get some perspective about your progress with
 any skill. And considering the mammoth idea of taking a career side step into
 programming, and my general high expectations for myself; I thought to begin a
 post series titled &lt;em&gt;The Noob Chronicles&lt;/em&gt;, where I look back in time since the
@@ -711,7 +711,7 @@ work &lt;em&gt;at all&lt;/em&gt;; Like opening your mouth to sing and excrement 
 bouncing off the wall and hitting the fan, leaving you standing dumbfounded in a
 brown haze.&lt;/p&gt;
 &lt;p&gt;On this topic, I wrote how I think
-&lt;a href=&quot;a-case-for-polishing-your-tools&quot;&gt;polishing your tools is a good thing&lt;/a&gt;. It
+&lt;a href=&quot;http://tjex.net/posts/a-case-for-polishing-your-tools&quot;&gt;polishing your tools is a good thing&lt;/a&gt;. It
 discusses how tinkering, or hacking on your setups or tools can actually teach
 you a lot. And this is valuable. But each little optimization or little bug fix
 in your setup also allows for much smaller spans of time and effort between
@@ -755,7 +755,7 @@ dense beast I got for free titled
 my skill progressions into perspective. For myself to look back on, and also any
 other person also grappling with the huge initial learning curve of programming.&lt;/p&gt;
 &lt;p&gt;So please read this like you&apos;re reading my personal diary. In a large sense,
-that is actually &lt;a href=&quot;/posts/hello-world&quot;&gt;what this blog is&lt;/a&gt;.&lt;/p&gt;
+that is actually &lt;a href=&quot;https://tjex.net/posts/hello-world&quot;&gt;what this blog is&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Shortly after learning what a for loop is, I programmed the below image. So it
 would be the first thing I ever programmed; an illustrious and provocative work
 made with Processing4.&lt;/p&gt;
@@ -802,7 +802,376 @@ masters thesis - and can actually comprehend what I&apos;m reading.&lt;/li&gt;
 &lt;li&gt;learn about distributed systems and the respective technologies&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Let&apos;s see what happens up until chapter two!&lt;/p&gt;
-</content:encoded><category>career</category><category>learning</category></item><item><title>The GRID System for Frictionless Zettelkasten Organisation</title><link>https://tjex.net/posts/2024/zettelkasten-grid-system-organisation/</link><guid isPermaLink="true">https://tjex.net/posts/2024/zettelkasten-grid-system-organisation/</guid><description>The GRID system is a framework for frictionless organisation of a Zettelkasten. It defines a set of rules for note creation and note tagging that suppress the need for content categorisation.</description><pubDate>Sat, 06 Jan 2024 19:01:33 GMT</pubDate><content:encoded>&lt;p&gt;The GRID system is a framework for frictionless Zettelkasten organisation. It
+</content:encoded><category>career</category><category>learning</category></item><item><title>The Arvelie time system</title><link>https://tjex.net/posts/2024/arveelie-time-system/</link><guid isPermaLink="true">https://tjex.net/posts/2024/arveelie-time-system/</guid><description>The Arvelie time system is a concise and useful way to approach our relationship to time, and also time management.</description><pubDate>Tue, 15 Oct 2024 13:33:08 GMT</pubDate><content:encoded>&lt;p&gt;I&apos;m currently wrapping my head around Devine&apos;s time system,
+&lt;a href=&quot;https://wiki.xxiivv.com/site/time&quot;&gt;Arvelie&lt;/a&gt; (after also having it
+bent by his &lt;a href=&quot;https://wiki.xxiivv.com/site/horaire&quot;&gt;time tracking system&lt;/a&gt;).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Since writing this post, I decided to try implement Arvelie into my
+journaling and have written &lt;a href=&quot;https://git.sr.ht/~tjex/arveelie&quot;&gt;a CLI helper for converting to and from
+Arvelie&lt;/a&gt; for any that are interested.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;There are two things I really like about the time system. One, that time ranges
+are uniform. Each month has 14 days, which creates 26 months. This makes time
+management feel much more approachable. And two, that time for any project or
+moment, begins at 0. So Arvelie time is always relative to the artefact which it
+is logging.&lt;/p&gt;
+&lt;p&gt;This creates a different relationship between us and time. As we no longer have
+a positional relationship to the past. That is, the past that came before year
+&quot;0&quot;.&lt;/p&gt;
+&lt;p&gt;This is mostly how we measure time anyway. How old are you? How long have you
+been programming? For people into computers, &lt;a href=&quot;https://en.wikipedia.org/wiki/Unix_time&quot;&gt;Unix
+time&lt;/a&gt; follows this same concept.&lt;/p&gt;
+&lt;p&gt;Typically when conceptualising a date or time, we additionally reference it
+against &quot;time immortal&quot; (which in some domains has the suffixes &apos;BC&apos; and &apos;AD&apos;).
+This meaning, we&apos;re in the year 2024 now, and can recognise how much things have
+changed in the last 150 years (even without having been alive then).&lt;/p&gt;
+&lt;p&gt;But it&apos;s different in Arvelie time. If you&apos;re, 24 now, then what we know as the
+year 2000, would for &lt;em&gt;you&lt;/em&gt; be the year 0. This creates an interesting and
+alternate feeling about the past. It feels more like each birth (organic, or
+otherwise - like a project) is its own strand of time, sprouting from the true
+&quot;time immortal&quot;, which does not have a start date.&lt;/p&gt;
+&lt;p&gt;While this can sound a bit wishy-washy, I would argue, that this is a lot more
+accurate given the context in which we live.&lt;/p&gt;
+&lt;p&gt;Because we actually measure time in the same style as Arvelie - the universe is
+(by our best measure) about 13.8 billion years old. Meaning, that the big bang
+was year 0. However, I&apos;m writing this in the year 2024. Or more interestingly,
+I&apos;m writing this in the year 2024AD.&lt;/p&gt;
+&lt;p&gt;This is interesting to me, because the BC / AD attribute, directly communicates
+an understanding that time is infinite (or that it moves more like an
+oscillation). This is one of the few aspects of religion that I actually like.
+That infinity is maintained as a truth, rather than a concept.&lt;/p&gt;
+&lt;p&gt;Although, granted, this has all too often been used as a weapon (heaven and hell
+for eternity). &lt;a href=&quot;https://www.theverge.com/2024/4/4/24120352/israel-lavender-artificial-intelligence-gaza-ai&quot;&gt;But we turn all sorts of good things into
+weapons&lt;/a&gt;.&lt;/p&gt;
+</content:encoded><category>philosophy</category></item><item><title>Maths in code, code in music, and music in code</title><link>https://tjex.net/posts/2024/maths-code-and-music/</link><guid isPermaLink="true">https://tjex.net/posts/2024/maths-code-and-music/</guid><description>As I get more comfortable with programming, I&apos;m starting to see more and more parallels between my old life and my new one.</description><pubDate>Thu, 05 Sep 2024 14:58:58 GMT</pubDate><content:encoded>&lt;p&gt;The other day I again encountered the statement that I must be good at maths if
+I&apos;m able to read and write code. I myself remember thinking the same of
+others. And it was actually a contributing reason why I never considered
+learning programming earlier on. I just figured I wouldn&apos;t get very far, as
+I don&apos;t have the best of love stories with maths...&lt;/p&gt;
+&lt;p&gt;But as I chip away at LeetCode in preparation for the post uni job hunt, I&apos;ve
+come to realise why a relatively good grasp of maths does go a long way. But it
+doesn&apos;t necessarily come down to being able to calculate, more so the type of
+mental gymnastics that maths requires.&lt;/p&gt;
+&lt;p&gt;I would argue there are two main skills that get trained when practicing maths
+that help a lot with reading and writing algorithms; keeping multiple values in
+your head while you think, and recognising patterns. The problem is, unless you
+did maths throughout school (and enjoyed it enough), there aren&apos;t really any
+other opportunities to practice this kind of skill.&lt;/p&gt;
+&lt;h2&gt;On a High Level&lt;/h2&gt;
+&lt;p&gt;I noticed this pattern the more I reviewed the LeetCode submissions that &lt;em&gt;far&lt;/em&gt;
+outperform the rest. Those submissions are typically written using single
+letters as variables, but &lt;em&gt;also&lt;/em&gt; achieve the correct result with pure
+mathematical computations and logic (instead of using data structures), which is
+why they&apos;re so performant.&lt;/p&gt;
+&lt;p&gt;Through this I see the translation of mathematics into programming at the
+surface level. Of course, there are &lt;em&gt;many&lt;/em&gt; levels deeper where serious skills in
+maths are required to solve hard problems with code (e.g, encryption).&lt;/p&gt;
+&lt;p&gt;But it was interesting to recognise the value of maths, even when not performing
+any mathematical calculations. The ability to keep a track of values assigned to
+variables is applied in other areas of life as well.&lt;/p&gt;
+&lt;h2&gt;Code in Music&lt;/h2&gt;
+&lt;p&gt;One of my long term goals is to understand how my previous life in music
+composition can integrate into my new life as a programmer on a cognitive level,
+rather than a creative one. It&apos;s interesting to think how I took the ability to
+read music as a completely unrelated skill. And equally, how I figured I would
+just always hate maths.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;Even though it&apos;s been a while, I can still get a general idea of what the above
+music sounds like just by looking at the score above. Music notation is itself
+code. I would say it&apos;s easier than the code of programming languages, because to
+put it simply, music notation deals with &lt;em&gt;constants&lt;/em&gt;. Every marking on that page
+will always communicate the same intention, time signature in 2/4, everyone
+plays &quot;very loud&quot; on bar 9 (not 0 indexed), the squiggle means to not play for
+one beat, etc.&lt;/p&gt;
+&lt;p&gt;The interpretation of the score is however a &lt;em&gt;variable&lt;/em&gt;. This is what
+a conductor does (to some degree). Their job is to coordinate the orchestra, but
+they also give their own flair or interpretation to certain areas of the
+score. They operate within a fairly limited range of possibilities. They can&apos;t
+change notes, but rather guide the energy and timing of the orchestra, which is
+enough to make some performances of the score stand out from others.&lt;/p&gt;
+&lt;p&gt;Things get a little more towards programming with the score below (Stockhausen).&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;This is what&apos;s called a &apos;graphical score&apos;, and was pioneered by composers like
+Stockhausen. It carries over similarities from classical notation, but
+introduces its own &lt;em&gt;syntax&lt;/em&gt; as well. Often, the symbology would be described in
+an accompanying document to the score. But other times (not necessarily in
+Stockhausen&apos;s case as he was a complete control freak), it would be left very
+abstract and open for interpretation.&lt;/p&gt;
+&lt;p&gt;What&apos;s interesting about graphical notation, is that you almost need &lt;em&gt;less&lt;/em&gt;
+musical training to be able to interpret it. This is because when we look at
+a score like the one above, we can more or less pick out a &lt;em&gt;narrative&lt;/em&gt;, as it&apos;s
+laid out left to right and incorporates angles, curves, shapes and shadings that
+evoke at the very least a feeling of natural forces at play. Gravity, inertia,
+momentum, friction and fragility can all be identified in the image. And we all
+at some level know what heavy, rough, light, fast or hollow objects may sound
+like in any particular environment.&lt;/p&gt;
+&lt;h2&gt;Constants, Variables, Syntax and Narrative&lt;/h2&gt;
+&lt;p&gt;When I consider the above, what stands out to me is that between programming
+languages, maths and music, there are many shared components: &lt;em&gt;constants&lt;/em&gt;,
+&lt;em&gt;variables&lt;/em&gt;, &lt;em&gt;syntax&lt;/em&gt; and &lt;em&gt;narrative&lt;/em&gt;. These components simply hold different
+values, given different domains. Sound and movement for music, numbers for
+maths, and data for code.&lt;/p&gt;
+&lt;p&gt;I think if I&apos;d been aware of this back in school, that there is much more
+fluidity between skill sets than is immediately apparent, I wouldn&apos;t have
+convinced myself that maths and programming were two completely impossible
+things for me to learn.&lt;/p&gt;
+&lt;p&gt;I for one will never suggest to my children that they have a &quot;creative&quot; OR
+&quot;analytical&quot; mind, like I was told. It just doesn&apos;t work like that, and creates
+a belief in an impressionable mind, that there are two paths, and they can only
+walk one of them.&lt;/p&gt;
+</content:encoded><category>philosophy</category><category>psychology</category><category>learning</category></item><item><title>Learning in the prehistoric age of AI</title><link>https://tjex.net/posts/2024/prehistoric-ai-learning/</link><guid isPermaLink="true">https://tjex.net/posts/2024/prehistoric-ai-learning/</guid><description>To what degree do we actually learn with AI tools? And will those of us who turn to these tools, be condemned to a bleak reality once the AI bubble pops?</description><pubDate>Fri, 04 Oct 2024 20:31:38 GMT</pubDate><content:encoded>&lt;p&gt;A significant issue with AI learning is how easy it is to gloss over the
+question of, &quot;why?&quot;. &quot;Why ...&quot; is the generated answer a good answer? The
+generated solution may work, but we have no knowledge of how it compares to
+other solutions, nor the process of getting to the solution.&lt;/p&gt;
+&lt;p&gt;It&apos;s also a loaded situation, asking the LLM to explain why it&apos;s proposing any
+given solution, because the LLM &lt;em&gt;always&lt;/em&gt; has the right answer EVEN WHEN IT
+DOESN&apos;T. Total smoke and mirrors.&lt;/p&gt;
+&lt;p&gt;Recalling an answer happens in part because we recognise the context of a
+problem: we&apos;ve seen the problem before, or at least part of it is familiar to
+us. Reinforced pathways in our brain get fired, and our memory of how to
+construct the solution get called into our working memory.&lt;/p&gt;
+&lt;p&gt;Staring bewildered at a code editor will not etch any pathways of learning into
+our mind. In fact, it&apos;s more likely to train an association between the feeling
+of confusion and stress, and the action of reaching for the LLM. Like what
+coffee or bus stops are to smokers.&lt;/p&gt;
+&lt;p&gt;Conversely, trying to work out solutions (i.e, the act of &quot;problem solving&quot;)
+does reinforce neural pathways. Reaching for a quick answer does not. We may
+still learn, but it&apos;s a fickle learning experience, and one that may well fade
+quickly from memory.&lt;/p&gt;
+&lt;p&gt;It&apos;s not do different from searching Google in place of books, or spell
+correction in place of searching through a dictionary. There&apos;s no need to learn,
+because we can get it done faster with a tool. Auto-correct or the searching
+Google once again for that basic information may be one thing, but where do
+&lt;em&gt;you&lt;/em&gt; draw the line for learning your career skills as developer, lawyer,
+writer, doctor...?&lt;/p&gt;
+&lt;h2&gt;Prophecy Time&lt;/h2&gt;
+&lt;p&gt;This is why, in some number of years, and if AI technologies really do embed
+themselves in our workflows, I think there will be a divergence of two broad
+segments of the workforce. There will be those who can understand, conceptualise
+and materialise solutions to problems or creative ideas without AI tools, and
+those who cannot.&lt;/p&gt;
+&lt;p&gt;What the culture of the world will look like then though, I don&apos;t have an
+equally prophetic claim. Either there will come a time where people who have
+maintained their mental faculties will become in incredibly high demand, or
+they, the &quot;meat heads&quot;, will be left to menial tasks, while the &quot;silicon heads&quot;
+churn through their tasks.&lt;/p&gt;
+&lt;p&gt;Here&apos;s another. The AI bubble could pop. &lt;a href=&quot;https://www.youtube.com/watch?v=dDUC-LqVrPU&quot;&gt;AI capabilities could
+plateau&lt;/a&gt;. This would leave us with
+only mediocre tools that may well remain close to their current state. If this
+is the case, the &quot;silicon heads&quot; will have to reckon with the hardest lesson of
+their time: how does one &lt;em&gt;actually&lt;/em&gt; make a paper clip? (And then proceed to
+craft 1 paper clip).&lt;/p&gt;
+</content:encoded><category>learning</category><category>society</category><category>career</category></item><item><title>Writing a masters thesis with Zettelkasten - Part 1</title><link>https://tjex.net/posts/2024/writing-a-masters-thesis-with-zettelkasten-part-1/</link><guid isPermaLink="true">https://tjex.net/posts/2024/writing-a-masters-thesis-with-zettelkasten-part-1/</guid><description>How can we use Zettelkasten effectively, given a large and time sensitive writing and research task such as a thesis or Ph.D?</description><pubDate>Tue, 19 Mar 2024 11:57:30 GMT</pubDate><content:encoded>&lt;p&gt;I&apos;ve finally arrived on a topic for my masters thesis. It&apos;s an investigation
+into how the Zettelkasten system enables creative ideation, and subsequent
+development of a network graph user interface, which will be optimized for that
+end goal (generating ideas).&lt;/p&gt;
+&lt;p&gt;This topic stems from my life long interests in psychology and technology and as
+such, is a very exciting endeavour for me and my Zettelkasten. Naturally there
+will be a lot of reading, thinking and writing to do, and it would be a crying
+shame for that thinking and writing to not end up in my Zettelkasten as notes.&lt;/p&gt;
+&lt;p&gt;Up until now I haven&apos;t had to use my Zettelkasten for a large piece of writing.
+The largest so far being my
+&lt;a href=&quot;../2023/floss-a-partial-antidote-to-social-catastrophe&quot;&gt;essay on open source and social catastrophe&lt;/a&gt;,
+but I only used my Zettelkasten to review relevant literature notes and write a
+few new ones.&lt;/p&gt;
+&lt;p&gt;For my masters thesis, I&apos;m exploring what is effectively uncharted territory for
+me. Additionally, the thinking will need to go much deeper than the essay
+required.&lt;/p&gt;
+&lt;p&gt;So how can we use Zettelkasten effectively, given a large and time sensitive
+writing and research task such as a thesis or Ph.D? There are a few documented
+experiences of this process, such as
+&lt;a href=&quot;https://zettelkasten.de/posts/field-report-4-what-i-learned-writing-thesis-with-zettelkasten/&quot;&gt;here&lt;/a&gt;
+and &lt;a href=&quot;https://www.youtube.com/watch?v=L9SLlxaEEXY&quot;&gt;here&lt;/a&gt;, which I&apos;ve taken some
+cues from.&lt;/p&gt;
+&lt;p&gt;The biggest fear for me is the question we all dealt with when trying to first
+understand Zettelkasten; how do we find a specific note again? I will be reading
+and writing notes on a lot of new content. The process and timeline will be very
+focussed and tight, I therefore would benefit from having my notes at hand all
+the time. Chasing after lost notes would be frustrating and time consuming.&lt;/p&gt;
+&lt;p&gt;Indeed, Zettelkasten isn&apos;t designed to be a reliable search and recall system,
+it&apos;s designed to be an environment where we stumble upon previous ideas in
+contextually relevant and therefore meaningful ways.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&quot;&lt;em&gt;In the old system, the question is: Under which topic do I store this note?
+In the new system, the question is: In which context will I want to stumble
+upon it again?&lt;/em&gt;&quot; &lt;br /&gt;
+~ Ahrens, Sönke - How to Take Smart Notes&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;But I don&apos;t want to be stumbling around all the time... This project requires
+some more stability in note recall.&lt;/p&gt;
+&lt;h2&gt;Strategy&lt;/h2&gt;
+&lt;p&gt;The task then is to establish some system of keeping track of which notes I&apos;m
+working on that are specific to my thesis.&lt;/p&gt;
+&lt;h3&gt;Thesis Structure as an Index Note&lt;/h3&gt;
+&lt;p&gt;I had already made a rough plan for the structure of my thesis, which included
+section headings, sub headings, and dot points for the intended content and
+questions to be addressed. I realised this would make for an excellent
+&lt;a href=&quot;https://zettelkasten.de/introduction/#structure-notes&quot;&gt;index/structure note&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Many of the sections and sub-sections had questions that were to be addressed
+within them. These questions immediately become question notes. The question
+notes are then filled with outbound links to position and ultimately argument
+notes. This process of question, position, argument documentation is a mixture
+of
+&lt;a href=&quot;https://papers.cumincad.org/data/works/att/ca71.content.pdf&quot;&gt;the IBIS method&lt;/a&gt;,
+the
+&lt;a href=&quot;https://zettelkasten.de/posts/layers-of-evidence/&quot;&gt;Three Layers of Evidence principle&lt;/a&gt;
+and what&apos;s referred to as
+&lt;a href=&quot;https://oasislab.pubpub.org/pub/54t0y9mk/release/3&quot;&gt;QCE&lt;/a&gt; (although I have no
+idea where that acronym comes from).&lt;/p&gt;
+&lt;p&gt;To illustrate, here&apos;s a sample of the index note:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: ctech masters thesis
+date: 2024-01-02
+id: ip4r
+tags: [index]
+aliases:
+---
+
+# ctech masters thesis
+
+Driving motivation for the practical project:
+
+As creative technologists, it is essential to have tools that help us generate
+creative ideas and solutions, not just tools that are used to build the end
+product.
+
+## Research questions
+
+Investigating these research questions:
+
+- [what defines the Zettelkasten system?](../kp4q)
+- [how does the Zettelkasten system promote creative ideation?](../8sb8)
+
+... more questions / links to notes
+
+## 2. Introduction
+
+### 2.1 Creative Ideation or Knowledge Generation?
+
+- [Is there a distinction between creative ideation and knowledge generation?](../../4w2l)
+
+... more questions / links to notes
+
+### 2.2 Zettelkasten and Systems Thinking
+
+... more questions / links to notes
+
+etc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Diary&lt;/h3&gt;
+&lt;p&gt;As well as this,
+&lt;a href=&quot;https://tjex.net/posts/zettelkasten-grid-system-organisation/#d-for-diaries&quot;&gt;I keep a daily diary within my Zettelkasten&lt;/a&gt;
+where I can write freely about particular project or &lt;em&gt;Zettelkasten related work&lt;/em&gt;
+at hand. It&apos;s &lt;em&gt;not&lt;/em&gt; a diary of my personal life, etc.&lt;/p&gt;
+&lt;p&gt;Here is an example of a daily note&apos;s content related to my thesis:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 2024-03-18
+
+Addressing the question
+[what connections are there between the Zettelkasten system, creative ideation and network graphs?](../../it61).
+Trying to think about how zk and graphs are complex systems, and how creative
+ideation is the result of those systems. How does that happen? That
+[consciousness occurs when colonies of cells are large enough in number and connections](../../k8pg)
+is an interesting angle, but in the case of zk, the notes aren&apos;t &apos;interacting&apos;
+with themselves per se. Rather, it is the interaction within the mind, of the
+information they hold, that somehow comes together to create an idea.
+
+Idea&apos;s are generated from borrowing parts of pre-existing information.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Tags&lt;/h3&gt;
+&lt;p&gt;As per
+&lt;a href=&quot;https://tjex.net/posts/zettelkasten-grid-system-organisation/#structure-tags&quot;&gt;my approach to tagging&lt;/a&gt;
+I will tag all notes that are deemed strongly related to my thesis with
+&lt;code&gt;#p/thesis&lt;/code&gt; (&apos;p&apos; for project). This is partly a crutch to help find a lost note,
+but is particularly useful given my Zettelkasten program of choice,
+&lt;a href=&quot;https://github.com/zk-org/zk&quot;&gt;zk&lt;/a&gt;, has many powerful features via the command
+line. Having all my thesis notes filterable by tag, means that I can batch
+process them in all ways imaginable from the command line (eg, archival, ML
+input, etc).&lt;/p&gt;
+&lt;h2&gt;Moving Forward&lt;/h2&gt;
+&lt;p&gt;In summary, I have this process and setup:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;An established thesis structure outline, which acts as an
+&lt;a href=&quot;https://zettelkasten.de/introduction/#structure-notes&quot;&gt;index note&lt;/a&gt; where I
+can insert and create links to notes under section headings. This is similar
+to filing notes into folders, just much less rigid. One link can be placed
+under multiple headings too.&lt;/li&gt;
+&lt;li&gt;A daily diary where I can write free form thoughts while linking notes that
+I&apos;m referring to. This keeps track of my half formed ideas if I can&apos;t manage
+to write a proper note about them, or if the thoughts are too abstract and
+undefined for a note. These are often called &apos;fleeting notes&apos;.&lt;/li&gt;
+&lt;li&gt;Following the iterative process of making a &lt;em&gt;question note&lt;/em&gt;, which links to
+many different &lt;em&gt;position notes&lt;/em&gt; (possible conclusion to the question), which
+ultimately links to an &lt;em&gt;argument note&lt;/em&gt; (the final conclusion to the
+question). By following this process, I can keep track of multiple ideas that
+relate to any one initial question, which helps in developing ideas. It also
+fosters good thinking processes in general and will help keep the content of
+the thesis clearer and easier to understand.&lt;/li&gt;
+&lt;li&gt;A broad based filter and search capability via the shared &lt;code&gt;#p/thesis&lt;/code&gt; tag.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Let&apos;s see how it goes! I&apos;ll write part 2 at some point down the track and review
+how this system performed, how it changed, etc.&lt;/p&gt;
+</content:encoded><category>learning</category></item><item><title>You don&apos;t need luck, luck needs you</title><link>https://tjex.net/posts/2024/you-dont-need-luck-luck-needs-you/</link><guid isPermaLink="true">https://tjex.net/posts/2024/you-dont-need-luck-luck-needs-you/</guid><description>Luck is an inherent part of life, it&apos;s not a requirement or a special trick for success.</description><pubDate>Wed, 08 May 2024 12:59:21 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Luck is what happens when preparation meets opportunity.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Seneca (&lt;a href=&quot;https://en.wikiquote.org/wiki/Seneca_the_Younger&quot;&gt;disputed&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Often someone will describe success as requiring a collection of abilities
+including, but not limited to: determination, dedication, an open mind,
+structure, healthy habits, practice, focus, etc. But what seemingly &lt;em&gt;always&lt;/em&gt;
+get&apos;s included is &quot;a little luck&quot;.&lt;br /&gt;
+I find this a bit annoying.&lt;/p&gt;
+&lt;p&gt;Luck is a given. To the point where it&apos;s redundant. You&apos;re lucky to even be here
+in the first place. I myself owe my existence (in large part) to a coin toss.&lt;/p&gt;
+&lt;p&gt;In the late 1980&apos;s, a young Australian writer was travelling through Greece and
+boarded a ferry with the intention of visiting Naxos. She went up deck, spotting
+a man whom she asked to hold one of her bags, while she went back downstairs to
+get the other. The man came from a small town in Germany, and was on a work
+trip, conducting seminars in Jazz drumming and rhythm. Once back up, and after
+some time conversing, the man asked if she would come with him to Paros. The
+lady, being an excited companion to the twists and turns of life, tossed a coin.
+Heads for Paros, tails for Naxos. As luck would have it, it landed on heads. And
+so I&apos;m here today writing this post, and for the sake of a nice story, can
+report my parents are happily together to this day, and that my mum still has
+the coin.&lt;/p&gt;
+&lt;p&gt;I&apos;m by no means suggesting that being born is your best shot at success. That&apos;s
+called privilege, the dark shadow of luck. Instead, I&apos;m wanting to point out
+that luck is so pervasive, so integral to life, that it&apos;s redundant to include
+it as a pre-requisite for success. In other words, luck is an inherit
+consequence of being spawn of this universe. Every day we play the game of
+chance.&lt;/p&gt;
+&lt;p&gt;So, forget about your endeavours needing to depend on luck. Instead, rid your
+mind of the worry and get busy, so that when luck does reveal itself, you can
+seize it. Naturally, luck can deliver unexpected ease to a goal. But it&apos;s not
+predictable, nor is it controllable. It&apos;s therefore a waste of time and energy
+to worry about &quot;good&quot; or &quot;bad&quot; luck coming your way. Ever heard someone comment
+on a past happening as a &quot;blessing in disguise?&quot;. Luck is then a question. Can
+you recognise it when it comes your way, and will you be prepared when it does?&lt;/p&gt;
+&lt;p&gt;In
+&lt;a href=&quot;https://www.penguinrandomhouse.com/books/317947/wired-to-create-by-scott-barry-kaufman-and-carolyn-gregoire/&quot;&gt;&lt;em&gt;Wired to Create&lt;/em&gt;&lt;/a&gt;,
+Kaufman and Gregoire recount how opportunity and preparedness forged a
+crystalline unit of luck, sending Albert Hofman on a bike ride he would never
+forget.&lt;/p&gt;
+&lt;p&gt;In his 1983 memoir
+&lt;a href=&quot;https://archive.org/details/lsdmyproblemchil0000hofm_g1j0&quot;&gt;&lt;em&gt;LSD: My Problem Child&lt;/em&gt;&lt;/a&gt;,
+Hofman wrote, &quot;I could not forget the relatively uninteresting LSD-25&quot;, &quot;A
+peculiar presentiment...induced me, five years after the first synthesis, to
+produce LSD-25 once again so that a sample could be given to the pharmacological
+department for further tests.&quot;[^1]&lt;/p&gt;
+&lt;p&gt;In the final stages of crystallizing the sample that would be sent to the
+department, the smallest of doses dropped on his hand, making him feel a bit
+strange and go home sick. This case of chance piqued his curiosity and on April
+19, 1943 Hofmann ingested an &quot;infinitesimal dose&quot; of LSD and while riding home
+on his bike from the lab, experienced the first acid trip ever.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&quot;In the realm of scientific observation, luck is granted only to those who
+are prepared&quot;&lt;/em&gt; - Louis Pasteur&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;You don&apos;t need luck, luck needs you.&lt;/p&gt;
+&lt;p&gt;[^1]:
+Kaufman, S. B. and Gregoire, C. (2016), Wired to Create: Unraveling the
+Mysteries of the Creative Mind. p.59-60&lt;/p&gt;
+</content:encoded><category>philosophy</category></item><item><title>The GRID System for Frictionless Zettelkasten Organisation</title><link>https://tjex.net/posts/2024/zettelkasten-grid-system-organisation/</link><guid isPermaLink="true">https://tjex.net/posts/2024/zettelkasten-grid-system-organisation/</guid><description>The GRID system is a framework for frictionless organisation of a Zettelkasten. It defines a set of rules for note creation and note tagging that suppress the need for content categorisation.</description><pubDate>Sat, 06 Jan 2024 19:01:33 GMT</pubDate><content:encoded>&lt;p&gt;The GRID system is a framework for frictionless Zettelkasten organisation. It
 defines a set of rules for note creation and note tagging that suppress the need
 for content categorisation. The goal is to strike the balance between cognitive
 friction when writing, and observability when managing, searching, reading and
@@ -1330,373 +1699,4 @@ Thanks to Christian in the
 &lt;a href=&quot;https://forum.zettelkasten.de/discussion/comment/19357/#Comment_19357&quot;&gt;Zettelkasten.de thread&lt;/a&gt;
 for pointing out that I&apos;d only described &lt;em&gt;how&lt;/em&gt; to use folders, but now
 &lt;em&gt;why&lt;/em&gt;.&lt;/p&gt;
-</content:encoded><category>learning</category></item><item><title>Writing a masters thesis with Zettelkasten - Part 1</title><link>https://tjex.net/posts/2024/writing-a-masters-thesis-with-zettelkasten-part-1/</link><guid isPermaLink="true">https://tjex.net/posts/2024/writing-a-masters-thesis-with-zettelkasten-part-1/</guid><description>How can we use Zettelkasten effectively, given a large and time sensitive writing and research task such as a thesis or Ph.D?</description><pubDate>Tue, 19 Mar 2024 11:57:30 GMT</pubDate><content:encoded>&lt;p&gt;I&apos;ve finally arrived on a topic for my masters thesis. It&apos;s an investigation
-into how the Zettelkasten system enables creative ideation, and subsequent
-development of a network graph user interface, which will be optimized for that
-end goal (generating ideas).&lt;/p&gt;
-&lt;p&gt;This topic stems from my life long interests in psychology and technology and as
-such, is a very exciting endeavour for me and my Zettelkasten. Naturally there
-will be a lot of reading, thinking and writing to do, and it would be a crying
-shame for that thinking and writing to not end up in my Zettelkasten as notes.&lt;/p&gt;
-&lt;p&gt;Up until now I haven&apos;t had to use my Zettelkasten for a large piece of writing.
-The largest so far being my
-&lt;a href=&quot;../2023/floss-a-partial-antidote-to-social-catastrophe&quot;&gt;essay on open source and social catastrophe&lt;/a&gt;,
-but I only used my Zettelkasten to review relevant literature notes and write a
-few new ones.&lt;/p&gt;
-&lt;p&gt;For my masters thesis, I&apos;m exploring what is effectively uncharted territory for
-me. Additionally, the thinking will need to go much deeper than the essay
-required.&lt;/p&gt;
-&lt;p&gt;So how can we use Zettelkasten effectively, given a large and time sensitive
-writing and research task such as a thesis or Ph.D? There are a few documented
-experiences of this process, such as
-&lt;a href=&quot;https://zettelkasten.de/posts/field-report-4-what-i-learned-writing-thesis-with-zettelkasten/&quot;&gt;here&lt;/a&gt;
-and &lt;a href=&quot;https://www.youtube.com/watch?v=L9SLlxaEEXY&quot;&gt;here&lt;/a&gt;, which I&apos;ve taken some
-cues from.&lt;/p&gt;
-&lt;p&gt;The biggest fear for me is the question we all dealt with when trying to first
-understand Zettelkasten; how do we find a specific note again? I will be reading
-and writing notes on a lot of new content. The process and timeline will be very
-focussed and tight, I therefore would benefit from having my notes at hand all
-the time. Chasing after lost notes would be frustrating and time consuming.&lt;/p&gt;
-&lt;p&gt;Indeed, Zettelkasten isn&apos;t designed to be a reliable search and recall system,
-it&apos;s designed to be an environment where we stumble upon previous ideas in
-contextually relevant and therefore meaningful ways.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&quot;&lt;em&gt;In the old system, the question is: Under which topic do I store this note?
-In the new system, the question is: In which context will I want to stumble
-upon it again?&lt;/em&gt;&quot; &lt;br /&gt;
-~ Ahrens, Sönke - How to Take Smart Notes&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;But I don&apos;t want to be stumbling around all the time... This project requires
-some more stability in note recall.&lt;/p&gt;
-&lt;h2&gt;Strategy&lt;/h2&gt;
-&lt;p&gt;The task then is to establish some system of keeping track of which notes I&apos;m
-working on that are specific to my thesis.&lt;/p&gt;
-&lt;h3&gt;Thesis Structure as an Index Note&lt;/h3&gt;
-&lt;p&gt;I had already made a rough plan for the structure of my thesis, which included
-section headings, sub headings, and dot points for the intended content and
-questions to be addressed. I realised this would make for an excellent
-&lt;a href=&quot;https://zettelkasten.de/introduction/#structure-notes&quot;&gt;index/structure note&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Many of the sections and sub-sections had questions that were to be addressed
-within them. These questions immediately become question notes. The question
-notes are then filled with outbound links to position and ultimately argument
-notes. This process of question, position, argument documentation is a mixture
-of
-&lt;a href=&quot;https://papers.cumincad.org/data/works/att/ca71.content.pdf&quot;&gt;the IBIS method&lt;/a&gt;,
-the
-&lt;a href=&quot;https://zettelkasten.de/posts/layers-of-evidence/&quot;&gt;Three Layers of Evidence principle&lt;/a&gt;
-and what&apos;s referred to as
-&lt;a href=&quot;https://oasislab.pubpub.org/pub/54t0y9mk/release/3&quot;&gt;QCE&lt;/a&gt; (although I have no
-idea where that acronym comes from).&lt;/p&gt;
-&lt;p&gt;To illustrate, here&apos;s a sample of the index note:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;---
-title: ctech masters thesis
-date: 2024-01-02
-id: ip4r
-tags: [index]
-aliases:
----
-
-# ctech masters thesis
-
-Driving motivation for the practical project:
-
-As creative technologists, it is essential to have tools that help us generate
-creative ideas and solutions, not just tools that are used to build the end
-product.
-
-## Research questions
-
-Investigating these research questions:
-
-- [what defines the Zettelkasten system?](../kp4q)
-- [how does the Zettelkasten system promote creative ideation?](../8sb8)
-
-... more questions / links to notes
-
-## 2. Introduction
-
-### 2.1 Creative Ideation or Knowledge Generation?
-
-- [Is there a distinction between creative ideation and knowledge generation?](../../4w2l)
-
-... more questions / links to notes
-
-### 2.2 Zettelkasten and Systems Thinking
-
-... more questions / links to notes
-
-etc
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Diary&lt;/h3&gt;
-&lt;p&gt;As well as this,
-&lt;a href=&quot;https://tjex.net/posts/zettelkasten-grid-system-organisation/#d-for-diaries&quot;&gt;I keep a daily diary within my Zettelkasten&lt;/a&gt;
-where I can write freely about particular project or &lt;em&gt;Zettelkasten related work&lt;/em&gt;
-at hand. It&apos;s &lt;em&gt;not&lt;/em&gt; a diary of my personal life, etc.&lt;/p&gt;
-&lt;p&gt;Here is an example of a daily note&apos;s content related to my thesis:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# 2024-03-18
-
-Addressing the question
-[what connections are there between the Zettelkasten system, creative ideation and network graphs?](../../it61).
-Trying to think about how zk and graphs are complex systems, and how creative
-ideation is the result of those systems. How does that happen? That
-[consciousness occurs when colonies of cells are large enough in number and connections](../../k8pg)
-is an interesting angle, but in the case of zk, the notes aren&apos;t &apos;interacting&apos;
-with themselves per se. Rather, it is the interaction within the mind, of the
-information they hold, that somehow comes together to create an idea.
-
-Idea&apos;s are generated from borrowing parts of pre-existing information.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Tags&lt;/h3&gt;
-&lt;p&gt;As per
-&lt;a href=&quot;https://tjex.net/posts/zettelkasten-grid-system-organisation/#structure-tags&quot;&gt;my approach to tagging&lt;/a&gt;
-I will tag all notes that are deemed strongly related to my thesis with
-&lt;code&gt;#p/thesis&lt;/code&gt; (&apos;p&apos; for project). This is partly a crutch to help find a lost note,
-but is particularly useful given my Zettelkasten program of choice,
-&lt;a href=&quot;https://github.com/zk-org/zk&quot;&gt;zk&lt;/a&gt;, has many powerful features via the command
-line. Having all my thesis notes filterable by tag, means that I can batch
-process them in all ways imaginable from the command line (eg, archival, ML
-input, etc).&lt;/p&gt;
-&lt;h2&gt;Moving Forward&lt;/h2&gt;
-&lt;p&gt;In summary, I have this process and setup:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;An established thesis structure outline, which acts as an
-&lt;a href=&quot;https://zettelkasten.de/introduction/#structure-notes&quot;&gt;index note&lt;/a&gt; where I
-can insert and create links to notes under section headings. This is similar
-to filing notes into folders, just much less rigid. One link can be placed
-under multiple headings too.&lt;/li&gt;
-&lt;li&gt;A daily diary where I can write free form thoughts while linking notes that
-I&apos;m referring to. This keeps track of my half formed ideas if I can&apos;t manage
-to write a proper note about them, or if the thoughts are too abstract and
-undefined for a note. These are often called &apos;fleeting notes&apos;.&lt;/li&gt;
-&lt;li&gt;Following the iterative process of making a &lt;em&gt;question note&lt;/em&gt;, which links to
-many different &lt;em&gt;position notes&lt;/em&gt; (possible conclusion to the question), which
-ultimately links to an &lt;em&gt;argument note&lt;/em&gt; (the final conclusion to the
-question). By following this process, I can keep track of multiple ideas that
-relate to any one initial question, which helps in developing ideas. It also
-fosters good thinking processes in general and will help keep the content of
-the thesis clearer and easier to understand.&lt;/li&gt;
-&lt;li&gt;A broad based filter and search capability via the shared &lt;code&gt;#p/thesis&lt;/code&gt; tag.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Let&apos;s see how it goes! I&apos;ll write part 2 at some point down the track and review
-how this system performed, how it changed, etc.&lt;/p&gt;
-</content:encoded><category>learning</category></item><item><title>You don&apos;t need luck, luck needs you</title><link>https://tjex.net/posts/2024/you-dont-need-luck-luck-needs-you/</link><guid isPermaLink="true">https://tjex.net/posts/2024/you-dont-need-luck-luck-needs-you/</guid><description>Luck is an inherent part of life, it&apos;s not a requirement or a special trick for success.</description><pubDate>Wed, 08 May 2024 12:59:21 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Luck is what happens when preparation meets opportunity.&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Seneca (&lt;a href=&quot;https://en.wikiquote.org/wiki/Seneca_the_Younger&quot;&gt;disputed&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Often someone will describe success as requiring a collection of abilities
-including, but not limited to: determination, dedication, an open mind,
-structure, healthy habits, practice, focus, etc. But what seemingly &lt;em&gt;always&lt;/em&gt;
-get&apos;s included is &quot;a little luck&quot;.&lt;br /&gt;
-I find this a bit annoying.&lt;/p&gt;
-&lt;p&gt;Luck is a given. To the point where it&apos;s redundant. You&apos;re lucky to even be here
-in the first place. I myself owe my existence (in large part) to a coin toss.&lt;/p&gt;
-&lt;p&gt;In the late 1980&apos;s, a young Australian writer was travelling through Greece and
-boarded a ferry with the intention of visiting Naxos. She went up deck, spotting
-a man whom she asked to hold one of her bags, while she went back downstairs to
-get the other. The man came from a small town in Germany, and was on a work
-trip, conducting seminars in Jazz drumming and rhythm. Once back up, and after
-some time conversing, the man asked if she would come with him to Paros. The
-lady, being an excited companion to the twists and turns of life, tossed a coin.
-Heads for Paros, tails for Naxos. As luck would have it, it landed on heads. And
-so I&apos;m here today writing this post, and for the sake of a nice story, can
-report my parents are happily together to this day, and that my mum still has
-the coin.&lt;/p&gt;
-&lt;p&gt;I&apos;m by no means suggesting that being born is your best shot at success. That&apos;s
-called privilege, the dark shadow of luck. Instead, I&apos;m wanting to point out
-that luck is so pervasive, so integral to life, that it&apos;s redundant to include
-it as a pre-requisite for success. In other words, luck is an inherit
-consequence of being spawn of this universe. Every day we play the game of
-chance.&lt;/p&gt;
-&lt;p&gt;So, forget about your endeavours needing to depend on luck. Instead, rid your
-mind of the worry and get busy, so that when luck does reveal itself, you can
-seize it. Naturally, luck can deliver unexpected ease to a goal. But it&apos;s not
-predictable, nor is it controllable. It&apos;s therefore a waste of time and energy
-to worry about &quot;good&quot; or &quot;bad&quot; luck coming your way. Ever heard someone comment
-on a past happening as a &quot;blessing in disguise?&quot;. Luck is then a question. Can
-you recognise it when it comes your way, and will you be prepared when it does?&lt;/p&gt;
-&lt;p&gt;In
-&lt;a href=&quot;https://www.penguinrandomhouse.com/books/317947/wired-to-create-by-scott-barry-kaufman-and-carolyn-gregoire/&quot;&gt;&lt;em&gt;Wired to Create&lt;/em&gt;&lt;/a&gt;,
-Kaufman and Gregoire recount how opportunity and preparedness forged a
-crystalline unit of luck, sending Albert Hofman on a bike ride he would never
-forget.&lt;/p&gt;
-&lt;p&gt;In his 1983 memoir
-&lt;a href=&quot;https://archive.org/details/lsdmyproblemchil0000hofm_g1j0&quot;&gt;&lt;em&gt;LSD: My Problem Child&lt;/em&gt;&lt;/a&gt;,
-Hofman wrote, &quot;I could not forget the relatively uninteresting LSD-25&quot;, &quot;A
-peculiar presentiment...induced me, five years after the first synthesis, to
-produce LSD-25 once again so that a sample could be given to the pharmacological
-department for further tests.&quot;[^1]&lt;/p&gt;
-&lt;p&gt;In the final stages of crystallizing the sample that would be sent to the
-department, the smallest of doses dropped on his hand, making him feel a bit
-strange and go home sick. This case of chance piqued his curiosity and on April
-19, 1943 Hofmann ingested an &quot;infinitesimal dose&quot; of LSD and while riding home
-on his bike from the lab, experienced the first acid trip ever.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;&quot;In the realm of scientific observation, luck is granted only to those who
-are prepared&quot;&lt;/em&gt; - Louis Pasteur&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;You don&apos;t need luck, luck needs you.&lt;/p&gt;
-&lt;p&gt;[^1]:
-Kaufman, S. B. and Gregoire, C. (2016), Wired to Create: Unraveling the
-Mysteries of the Creative Mind. p.59-60&lt;/p&gt;
-</content:encoded><category>philosophy</category></item><item><title>Maths in code, code in music, and music in code</title><link>https://tjex.net/posts/2024/maths-code-and-music/</link><guid isPermaLink="true">https://tjex.net/posts/2024/maths-code-and-music/</guid><description>As I get more comfortable with programming, I&apos;m starting to see more and more parallels between my old life and my new one.</description><pubDate>Thu, 05 Sep 2024 14:58:58 GMT</pubDate><content:encoded>&lt;p&gt;The other day I again encountered the statement that I must be good at maths if
-I&apos;m able to read and write code. I myself remember thinking the same of
-others. And it was actually a contributing reason why I never considered
-learning programming earlier on. I just figured I wouldn&apos;t get very far, as
-I don&apos;t have the best of love stories with maths...&lt;/p&gt;
-&lt;p&gt;But as I chip away at LeetCode in preparation for the post uni job hunt, I&apos;ve
-come to realise why a relatively good grasp of maths does go a long way. But it
-doesn&apos;t necessarily come down to being able to calculate, more so the type of
-mental gymnastics that maths requires.&lt;/p&gt;
-&lt;p&gt;I would argue there are two main skills that get trained when practicing maths
-that help a lot with reading and writing algorithms; keeping multiple values in
-your head while you think, and recognising patterns. The problem is, unless you
-did maths throughout school (and enjoyed it enough), there aren&apos;t really any
-other opportunities to practice this kind of skill.&lt;/p&gt;
-&lt;h2&gt;On a High Level&lt;/h2&gt;
-&lt;p&gt;I noticed this pattern the more I reviewed the LeetCode submissions that &lt;em&gt;far&lt;/em&gt;
-outperform the rest. Those submissions are typically written using single
-letters as variables, but &lt;em&gt;also&lt;/em&gt; achieve the correct result with pure
-mathematical computations and logic (instead of using data structures), which is
-why they&apos;re so performant.&lt;/p&gt;
-&lt;p&gt;Through this I see the translation of mathematics into programming at the
-surface level. Of course, there are &lt;em&gt;many&lt;/em&gt; levels deeper where serious skills in
-maths are required to solve hard problems with code (e.g, encryption).&lt;/p&gt;
-&lt;p&gt;But it was interesting to recognise the value of maths, even when not performing
-any mathematical calculations. The ability to keep a track of values assigned to
-variables is applied in other areas of life as well.&lt;/p&gt;
-&lt;h2&gt;Code in Music&lt;/h2&gt;
-&lt;p&gt;One of my long term goals is to understand how my previous life in music
-composition can integrate into my new life as a programmer on a cognitive level,
-rather than a creative one. It&apos;s interesting to think how I took the ability to
-read music as a completely unrelated skill. And equally, how I figured I would
-just always hate maths.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;Even though it&apos;s been a while, I can still get a general idea of what the above
-music sounds like just by looking at the score above. Music notation is itself
-code. I would say it&apos;s easier than the code of programming languages, because to
-put it simply, music notation deals with &lt;em&gt;constants&lt;/em&gt;. Every marking on that page
-will always communicate the same intention, time signature in 2/4, everyone
-plays &quot;very loud&quot; on bar 9 (not 0 indexed), the squiggle means to not play for
-one beat, etc.&lt;/p&gt;
-&lt;p&gt;The interpretation of the score is however a &lt;em&gt;variable&lt;/em&gt;. This is what
-a conductor does (to some degree). Their job is to coordinate the orchestra, but
-they also give their own flair or interpretation to certain areas of the
-score. They operate within a fairly limited range of possibilities. They can&apos;t
-change notes, but rather guide the energy and timing of the orchestra, which is
-enough to make some performances of the score stand out from others.&lt;/p&gt;
-&lt;p&gt;Things get a little more towards programming with the score below (Stockhausen).&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;This is what&apos;s called a &apos;graphical score&apos;, and was pioneered by composers like
-Stockhausen. It carries over similarities from classical notation, but
-introduces its own &lt;em&gt;syntax&lt;/em&gt; as well. Often, the symbology would be described in
-an accompanying document to the score. But other times (not necessarily in
-Stockhausen&apos;s case as he was a complete control freak), it would be left very
-abstract and open for interpretation.&lt;/p&gt;
-&lt;p&gt;What&apos;s interesting about graphical notation, is that you almost need &lt;em&gt;less&lt;/em&gt;
-musical training to be able to interpret it. This is because when we look at
-a score like the one above, we can more or less pick out a &lt;em&gt;narrative&lt;/em&gt;, as it&apos;s
-laid out left to right and incorporates angles, curves, shapes and shadings that
-evoke at the very least a feeling of natural forces at play. Gravity, inertia,
-momentum, friction and fragility can all be identified in the image. And we all
-at some level know what heavy, rough, light, fast or hollow objects may sound
-like in any particular environment.&lt;/p&gt;
-&lt;h2&gt;Constants, Variables, Syntax and Narrative&lt;/h2&gt;
-&lt;p&gt;When I consider the above, what stands out to me is that between programming
-languages, maths and music, there are many shared components: &lt;em&gt;constants&lt;/em&gt;,
-&lt;em&gt;variables&lt;/em&gt;, &lt;em&gt;syntax&lt;/em&gt; and &lt;em&gt;narrative&lt;/em&gt;. These components simply hold different
-values, given different domains. Sound and movement for music, numbers for
-maths, and data for code.&lt;/p&gt;
-&lt;p&gt;I think if I&apos;d been aware of this back in school, that there is much more
-fluidity between skill sets than is immediately apparent, I wouldn&apos;t have
-convinced myself that maths and programming were two completely impossible
-things for me to learn.&lt;/p&gt;
-&lt;p&gt;I for one will never suggest to my children that they have a &quot;creative&quot; OR
-&quot;analytical&quot; mind, like I was told. It just doesn&apos;t work like that, and creates
-a belief in an impressionable mind, that there are two paths, and they can only
-walk one of them.&lt;/p&gt;
-</content:encoded><category>philosophy</category><category>psychology</category><category>learning</category></item><item><title>Learning in the prehistoric age of AI</title><link>https://tjex.net/posts/2024/prehistoric-ai-learning/</link><guid isPermaLink="true">https://tjex.net/posts/2024/prehistoric-ai-learning/</guid><description>To what degree do we actually learn with AI tools? And will those of us who turn to these tools, be condemned to a bleak reality once the AI bubble pops?</description><pubDate>Fri, 04 Oct 2024 20:31:38 GMT</pubDate><content:encoded>&lt;p&gt;A significant issue with AI learning is how easy it is to gloss over the
-question of, &quot;why?&quot;. &quot;Why ...&quot; is the generated answer a good answer? The
-generated solution may work, but we have no knowledge of how it compares to
-other solutions, nor the process of getting to the solution.&lt;/p&gt;
-&lt;p&gt;It&apos;s also a loaded situation, asking the LLM to explain why it&apos;s proposing any
-given solution, because the LLM &lt;em&gt;always&lt;/em&gt; has the right answer EVEN WHEN IT
-DOESN&apos;T. Total smoke and mirrors.&lt;/p&gt;
-&lt;p&gt;Recalling an answer happens in part because we recognise the context of a
-problem: we&apos;ve seen the problem before, or at least part of it is familiar to
-us. Reinforced pathways in our brain get fired, and our memory of how to
-construct the solution get called into our working memory.&lt;/p&gt;
-&lt;p&gt;Staring bewildered at a code editor will not etch any pathways of learning into
-our mind. In fact, it&apos;s more likely to train an association between the feeling
-of confusion and stress, and the action of reaching for the LLM. Like what
-coffee or bus stops are to smokers.&lt;/p&gt;
-&lt;p&gt;Conversely, trying to work out solutions (i.e, the act of &quot;problem solving&quot;)
-does reinforce neural pathways. Reaching for a quick answer does not. We may
-still learn, but it&apos;s a fickle learning experience, and one that may well fade
-quickly from memory.&lt;/p&gt;
-&lt;p&gt;It&apos;s not do different from searching Google in place of books, or spell
-correction in place of searching through a dictionary. There&apos;s no need to learn,
-because we can get it done faster with a tool. Auto-correct or the searching
-Google once again for that basic information may be one thing, but where do
-&lt;em&gt;you&lt;/em&gt; draw the line for learning your career skills as developer, lawyer,
-writer, doctor...?&lt;/p&gt;
-&lt;h2&gt;Prophecy Time&lt;/h2&gt;
-&lt;p&gt;This is why, in some number of years, and if AI technologies really do embed
-themselves in our workflows, I think there will be a divergence of two broad
-segments of the workforce. There will be those who can understand, conceptualise
-and materialise solutions to problems or creative ideas without AI tools, and
-those who cannot.&lt;/p&gt;
-&lt;p&gt;What the culture of the world will look like then though, I don&apos;t have an
-equally prophetic claim. Either there will come a time where people who have
-maintained their mental faculties will become in incredibly high demand, or
-they, the &quot;meat heads&quot;, will be left to menial tasks, while the &quot;silicon heads&quot;
-churn through their tasks.&lt;/p&gt;
-&lt;p&gt;Here&apos;s another. The AI bubble could pop. &lt;a href=&quot;https://www.youtube.com/watch?v=dDUC-LqVrPU&quot;&gt;AI capabilities could
-plateau&lt;/a&gt;. This would leave us with
-only mediocre tools that may well remain close to their current state. If this
-is the case, the &quot;silicon heads&quot; will have to reckon with the hardest lesson of
-their time: how does one &lt;em&gt;actually&lt;/em&gt; make a paper clip? (And then proceed to
-craft 1 paper clip).&lt;/p&gt;
-</content:encoded><category>learning</category><category>society</category><category>career</category></item><item><title>The Arvelie time system</title><link>https://tjex.net/posts/2024/arveelie-time-system/</link><guid isPermaLink="true">https://tjex.net/posts/2024/arveelie-time-system/</guid><description>The Arvelie time system is a concise and useful way to approach our relationship to time, and also time management.</description><pubDate>Tue, 15 Oct 2024 13:33:08 GMT</pubDate><content:encoded>&lt;p&gt;I&apos;m currently wrapping my head around Devine&apos;s time system,
-&lt;a href=&quot;https://wiki.xxiivv.com/site/time&quot;&gt;Arvelie&lt;/a&gt; (after also having it
-bent by his &lt;a href=&quot;https://wiki.xxiivv.com/site/horaire&quot;&gt;time tracking system&lt;/a&gt;).&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Since writing this post, I decided to try implement Arvelie into my
-journaling and have written &lt;a href=&quot;https://git.sr.ht/~tjex/arveelie&quot;&gt;a CLI helper for converting to and from
-Arvelie&lt;/a&gt; for any that are interested.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;There are two things I really like about the time system. One, that time ranges
-are uniform. Each month has 14 days, which creates 26 months. This makes time
-management feel much more approachable. And two, that time for any project or
-moment, begins at 0. So Arvelie time is always relative to the artefact which it
-is logging.&lt;/p&gt;
-&lt;p&gt;This creates a different relationship between us and time. As we no longer have
-a positional relationship to the past. That is, the past that came before year
-&quot;0&quot;.&lt;/p&gt;
-&lt;p&gt;This is mostly how we measure time anyway. How old are you? How long have you
-been programming? For people into computers, &lt;a href=&quot;https://en.wikipedia.org/wiki/Unix_time&quot;&gt;Unix
-time&lt;/a&gt; follows this same concept.&lt;/p&gt;
-&lt;p&gt;Typically when conceptualising a date or time, we additionally reference it
-against &quot;time immortal&quot; (which in some domains has the suffixes &apos;BC&apos; and &apos;AD&apos;).
-This meaning, we&apos;re in the year 2024 now, and can recognise how much things have
-changed in the last 150 years (even without having been alive then).&lt;/p&gt;
-&lt;p&gt;But it&apos;s different in Arvelie time. If you&apos;re, 24 now, then what we know as the
-year 2000, would for &lt;em&gt;you&lt;/em&gt; be the year 0. This creates an interesting and
-alternate feeling about the past. It feels more like each birth (organic, or
-otherwise - like a project) is its own strand of time, sprouting from the true
-&quot;time immortal&quot;, which does not have a start date.&lt;/p&gt;
-&lt;p&gt;While this can sound a bit wishy-washy, I would argue, that this is a lot more
-accurate given the context in which we live.&lt;/p&gt;
-&lt;p&gt;Because we actually measure time in the same style as Arvelie - the universe is
-(by our best measure) about 13.8 billion years old. Meaning, that the big bang
-was year 0. However, I&apos;m writing this in the year 2024. Or more interestingly,
-I&apos;m writing this in the year 2024AD.&lt;/p&gt;
-&lt;p&gt;This is interesting to me, because the BC / AD attribute, directly communicates
-an understanding that time is infinite (or that it moves more like an
-oscillation). This is one of the few aspects of religion that I actually like.
-That infinity is maintained as a truth, rather than a concept.&lt;/p&gt;
-&lt;p&gt;Although, granted, this has all too often been used as a weapon (heaven and hell
-for eternity). &lt;a href=&quot;https://www.theverge.com/2024/4/4/24120352/israel-lavender-artificial-intelligence-gaza-ai&quot;&gt;But we turn all sorts of good things into
-weapons&lt;/a&gt;.&lt;/p&gt;
-</content:encoded><category>philosophy</category></item></channel></rss>
+</content:encoded><category>learning</category></item></channel></rss>
