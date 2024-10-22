@@ -2,6 +2,11 @@ import { defineConfig } from "astro/config";
 
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
+import rehypeAstroRelativeMarkdownLinks from "astro-rehype-relative-markdown-links";
+
+const options = {
+  contentPath: "src/content/posts",
+};
 
 export default defineConfig({
   site: "https://tjex.net",
@@ -17,6 +22,7 @@ export default defineConfig({
       footnoteBackContent: "⤴",
       footnoteLabel: "Footnotes",
     },
+    rehypePlugins: [[rehypeAstroRelativeMarkdownLinks, options]],
   },
   integrations: [
     sitemap({}),

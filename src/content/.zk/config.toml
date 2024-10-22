@@ -10,7 +10,7 @@ template = "default.md"
 paths = ["posts"]
 
 [group.posts.note]
-filename = "{{sh 'arvelie 2020 -c today'}}-{{slug title}}"
+filename = "{{slug title}}"
 template = "post.md"
 
 [group.logs]

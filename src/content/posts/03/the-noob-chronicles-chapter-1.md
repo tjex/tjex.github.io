@@ -58,7 +58,7 @@ bouncing off the wall and hitting the fan, leaving you standing dumbfounded in a
 brown haze.
 
 On this topic, I wrote how I think
-[polishing your tools is a good thing](a-case-for-polishing-your-tools). It
+[polishing your tools is a good thing](http://tjex.net/posts/a-case-for-polishing-your-tools). It
 discusses how tinkering, or hacking on your setups or tools can actually teach
 you a lot. And this is valuable. But each little optimization or little bug fix
 in your setup also allows for much smaller spans of time and effort between
@@ -113,13 +113,13 @@ my skill progressions into perspective. For myself to look back on, and also any
 other person also grappling with the huge initial learning curve of programming.
 
 So please read this like you're reading my personal diary. In a large sense,
-that is actually [what this blog is](/posts/hello-world).
+that is actually [what this blog is](https://tjex.net/posts/hello-world).
 
 Shortly after learning what a for loop is, I programmed the below image. So it
 would be the first thing I ever programmed; an illustrious and provocative work
 made with Processing4.
 
-![self-portrait](../../images/2023/self-portrait-2021.png)
+![self-portrait](../../../images/2023/self-portrait-2021.png)
 
 Since then I've...
 
