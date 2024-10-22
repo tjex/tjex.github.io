@@ -2,13 +2,12 @@
 title: The Arvelie time system
 description: The Arvelie time system is a concise and useful way to approach our
   relationship to time, and also time management.
-arvDate: 04U08
-pubDate: 2024-10-15T13:33:08Z
+arve: 04U08
+date: 2024-10-15T13:33:08Z
 author: tjex
 tags: ["philosophy"]
-license: cc
 draft: false
-slug: 2024/arvelie-time-system
+slug: 2024/arveelie-time-system
 ---
 
 I'm currently wrapping my head around Devine's time system,
@@ -17,7 +16,7 @@ bent by his [time tracking system](https://wiki.xxiivv.com/site/horaire)).
 
 > Since writing this post, I decided to try implement Arvelie into my
 > journaling and have written [a CLI helper for converting to and from
-> Arvelie](https://git.sr.ht/~tjex/arvelie) for any that are interested.
+> Arvelie](https://git.sr.ht/~tjex/arveelie) for any that are interested.
 
 There are two things I really like about the time system. One, that time ranges
 are uniform. Each month has 14 days, which creates 26 months. This makes time

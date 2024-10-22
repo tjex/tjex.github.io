@@ -3,11 +3,10 @@ title: You don't need luck, luck needs you
 description:
   Luck is an inherent part of life, it's not a requirement or a special trick
   for success.
-arvDate: 04J02
-pubDate: 2024-05-08T12:59:21Z
+arve: 04J02
+date: 2024-05-08T12:59:21Z
 author: tjex
 tags: ["philosophy"]
-license: cc
 draft: false
 slug: 2024/you-dont-need-luck-luck-needs-you
 ---

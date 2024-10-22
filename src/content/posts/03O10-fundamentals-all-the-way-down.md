@@ -3,11 +3,10 @@ title: Fundamentals all the Way Down
 description:
   How deep do you start when stepping into a new field of learning? Do you learn
   the fundamentals, or get up and going as quickly as possible?
-arvDate: 03O10
-pubDate: 2023-07-26T19:17:01Z
+arve: 03O10
+date: 2023-07-26T19:17:01Z
 author: tjex
 tags: ["career", "learning"]
-license: cc
 draft: false
 slug: 2023/fundamentals-all-the-way-down
 ---
