@@ -140,7 +140,7 @@ body {
 .sidebar-left,
 .sidebar-right {
   display: flex;
-  padding-top: calc(var(--spacing) * 6);
+  padding-top: calc(var(--spacing) * 8);
   position: sticky;
   top: var(--offset);
   max-height: calc(100vh - var(--spacing) * 2);
@@ -149,7 +149,6 @@ body {
 
 .sidebar-left {
   flex-flow: column wrap;
-  gap: 0.5em;
   --offset: var(--spacing);
   align-self: start;
   text-align: right;
