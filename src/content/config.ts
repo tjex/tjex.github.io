@@ -25,6 +25,7 @@ const logs = defineCollection({
       title: z.string(),
       date: z.date(),
       arve: z.string(),
+      horaire: z.array(z.string()).optional(),
     }),
 });
 

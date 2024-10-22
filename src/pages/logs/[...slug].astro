@@ -1,0 +1,27 @@
+---
+// this file generates each log in the "logs" collection.
+
+import Layout from "../../layouts/Log.astro";
+import NextPrevPost from "../../components/NextPrevPost.astro";
+import * as colUtil from "../../scripts/collectionUtil.ts";
+
+export async function getStaticPaths() {
+	return colUtil.getAllPostsFromCollection("logs");
+}
+
+const { post, prevPost, nextPost } = Astro.props;
+const { Content } = await post.render();
+
+const seoTitle = post.data.title;
+const seoDescription = post.data.description;
+
+const seo = {
+	title: seoTitle,
+	description: seoDescription,
+};
+---
+
+<Layout seo={seo} post={post}>
+	<Content />
+	<NextPrevPost nextPost={nextPost} prevPost={prevPost} />
+</Layout>

@@ -1644,6 +1644,10 @@ span.muted {
   color: var(--muted);
 }
 
+span.monospace {
+  font-family: monospace !important;
+}
+
 mark {
   padding: 0.125rem 0.25rem;
   background-color: var(--contrast);

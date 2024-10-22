@@ -1,20 +1,18 @@
 ---
 import ArticleSchema from "../components/ArticleSchema.astro";
+import { getEntry } from "astro:content";
 import Date from "../components/utility/DateFormat.astro";
 import path from "node:path";
 
-import Layout from "./Base.astro";
-import SideLeftPage from "../components/SideLeftPage.astro";
-import SideRightBlank from "../components/SideRightBlank.astro";
-import HeaderCenter from "../components/HeaderCenter.astro";
-import HeaderLeft from "../components/HeaderLeft.astro";
-import HeaderRight from "../components/HeaderRight.astro";
+import Layout from "./Page.astro";
 import Tags from "../components/Tags.astro";
 import Footer from "../components/Footer.astro";
 import EmailReply from "../components/Email.astro";
 
 const { seo } = Astro.props;
 const { post } = Astro.props;
+
+const dailyLog = await getEntry("logs", post.data.arve);
 
 // cobble together a valid url for GitHub
 const filename = path.basename(post.id);
@@ -25,22 +23,24 @@ const postGithubUrl = new URL("https://github.com/tjex/tjex.github.io/blob/main/
     <Fragment slot="head-bottom">
         <ArticleSchema {post} />
     </Fragment>
-    <HeaderLeft slot="header-left" />
-    <HeaderCenter slot="header-center" />
-    <HeaderRight slot="header-left" />
-    <SideLeftPage slot="side-left" />
     <article class="post-content__article">
         <h1>{post.data.title}</h1>
         <div class="post-info">
-            <span style="font-family: monospace"
-                ><abbr title=`${post.data.date}`><Date date={post.data.arve} format={"arvelie"} /></abbr></span
-            >
+            {
+                // Link to the daily log, if there is one.
+                dailyLog != null ? (
+                    <a href=`/logs/${dailyLog.slug}`><span class="monospace">
+                            <Date date={post.data.arve} format={"arvelie"} />
+                    </span></a>
+                ) : (
+                    <span class="monospace">
+                            <Date date={post.data.arve} format={"arvelie"} />
+                    </span>
+                ) 
+            }
             <div><Tags tags={post.data.tags} style={"text"} /></div>
             <EmailReply subject={post.data.title} text={"reply via email"} />
         </div>
+        <slot />
     </article>
-
-    <slot />
-    <SideRightBlank slot="side-right" />
-    <Footer slot="footer" />
 </Layout>
