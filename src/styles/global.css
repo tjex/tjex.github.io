@@ -413,38 +413,7 @@ body > footer {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding: var(--block-spacing-vertical) var(--block-spacing-horizontal);
-}
-@media (min-width: 576px) {
-  body > header,
-  body > main,
-  body > footer {
-    max-width: 510px;
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-@media (min-width: 900px) {
-  body > header,
-  body > main,
-  body > footer {
-    max-width: 900px;
-  }
-}
-@media (min-width: 1200px) {
-  body > header,
-  body > main,
-  body > footer {
-    max-width: 1200px;
-    font-size: 5rem;
-  }
-}
-@media (min-width: 1340px) {
-  body > header,
-  body > main,
-  body > footer {
-    max-width: 1340px;
-  }
+  padding: var(--block-spacing-vertical) 0;
 }
 
 section {
@@ -549,7 +518,7 @@ body {
 }
 
 /* from: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-examples */
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1300px) {
   .aside {
     flex: 1 0 0;
   }
@@ -575,40 +544,33 @@ body {
     order: 7;
   }
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1300px) {
   .header-left {
     text-align: left;
+    display: none;
   }
   .header-center {
     display: none;
   }
   .header-right {
-    flex: 0 0 0;
+    flex: 0 0 auto;
   }
   .sidebar-left,
   .sidebar-left ul {
     display: flex;
     flex-wrap: wrap;
     padding-top: var(--spacing);
-    flex-direction: row;
-    text-align: left;
     position: inherit;
+    padding-top: unset;
+    flex-direction: row;
     justify-content: center;
   }
-  .sidebar-left .site-nav,
-  .sidebar-left .site-nav a,
-  .sidebar-left ul .site-nav,
-  .sidebar-left ul .site-nav a {
-    margin-inline: auto;
+  a.nav-link {
+    padding-left: var(--spacing);
+    padding-left: var(--spacing);
   }
-  .sidebar-left .site-nav a:after,
-  .sidebar-left ul .site-nav a:after {
-    content: none !important;
-  }
-  .sidebar-left .site-nav a:before,
-  .sidebar-left ul .site-nav a:before {
-    content: ":";
-    padding-right: 10px;
+  aside span.link-divider {
+    display: none;
   }
   .sidebar-right {
     display: none;
@@ -754,7 +716,7 @@ body {
     --block-spacing-vertical: calc(var(--spacing) * 3.5);
   }
 }
-@media (min-width: 1340px) {
+@media (min-width: 1300px) {
   body > header,
   body > main,
   body > footer,
@@ -778,7 +740,7 @@ body {
     --block-spacing-horizontal: calc(var(--spacing) * 1.75);
   }
 }
-@media (min-width: 1340px) {
+@media (min-width: 1300px) {
   article {
     --block-spacing-horizontal: calc(var(--spacing) * 2);
   }
@@ -956,10 +918,6 @@ aside li a {
 }
 aside li [role=button] {
   margin: inherit;
-}
-aside .nav-left a:after {
-  content: ":";
-  padding-left: var(--nav-element-spacing-horizontal);
 }
 
 [dir=rtl] nav[aria-label=breadcrumb] ul li:not(:last-child) ::after {
@@ -1342,26 +1300,6 @@ tr.striped:nth-child(odd) {
   --font-small: 0.85rem;
   --font-smallest: 0.7rem;
 }
-@media (min-width: 576px) {
-  :root {
-    --font-size: 1rem;
-  }
-}
-@media (min-width: 900px) {
-  :root {
-    --font-size: 1rem;
-  }
-}
-@media (min-width: 1200px) {
-  :root {
-    --font-size: 1rem;
-  }
-}
-@media (min-width: 1340px) {
-  :root {
-    --font-size: 1.05rem;
-  }
-}
 
 small {
   font-size: var(--font-size);
@@ -1492,25 +1430,37 @@ a.contrast:focus,
   outline-offset: 4px;
 }
 
+nav-link, link-divider,
+span.link-divider,
 a.nav-link {
   color: var(--nav-link-color);
   font-size: 1.3rem;
   text-decoration: none;
   font-weight: 700;
 }
-a.nav-link:visited:hover, a.nav-link:focus {
+nav-link:visited:hover, link-divider:visited:hover,
+span.link-divider:visited:hover, nav-link:focus, link-divider:focus,
+span.link-divider:focus,
+a.nav-link:visited:hover,
+a.nav-link:focus {
   background: none;
   color: var(--nav-link-color);
   border-radius: 2px;
 }
+nav-link:hover, link-divider:hover,
+span.link-divider:hover,
 a.nav-link:hover {
   font-style: italic;
 }
-a.nav-link.divider {
-  padding-left: var(--spacing);
-  padding-right: var(--spacing);
+
+link-divider,
+span.link-divider {
+  display: inline-flex;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
 }
-a.nav-link.divider:hover {
+link-divider:hover,
+span.link-divider:hover {
   font-style: unset;
 }
 
