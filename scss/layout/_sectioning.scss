@@ -180,7 +180,7 @@ body {
 }
 
 /* from: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-examples */
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1300px) {
   .aside {
     flex: 1 0 0;
   }
@@ -207,42 +207,40 @@ body {
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1300px) {
   .header-left {
     text-align: left;
+    display: none;
   }
   .header-center {
     display: none;
   }
   // place all the way on right
   .header-right {
-    flex: 0 0 0;
+    flex: 0 0 auto;
   }
   .sidebar-left,
   .sidebar-left ul {
     display: flex;
     flex-wrap: wrap;
     padding-top: var(--spacing);
+    position: inherit; // for scrolling
+    padding-top: unset;
     flex-direction: row;
-    text-align: left;
-    position: inherit;
     justify-content: center;
+  }
 
-    // this centers, and provides tight box focussing for
-    // accessibility. I could not get center floating working
-    // with flex box.
-    .site-nav,
-    .site-nav a {
-      margin-inline: auto;
-    }
-    .site-nav a:after {
-      content: none !important;
-    }
-    .site-nav a:before {
-      content: ":";
-      padding-right: 10px;
+  a.nav-link {
+    padding-left: var(--spacing);
+    padding-left: var(--spacing);
+  }
+
+  aside {
+    span.link-divider {
+      display: none;
     }
   }
+
   .sidebar-right {
     display: none;
   }

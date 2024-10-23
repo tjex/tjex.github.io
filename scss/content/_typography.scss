@@ -35,13 +35,13 @@
   @if $enable-responsive-typography {
     @if map-get($breakpoints, "sm") {
       @media (min-width: map-get($breakpoints, "sm")) {
-        --font-size: 1rem;
+        --font-size: 0.8rem;
       }
     }
 
     @if map-get($breakpoints, "md") {
       @media (min-width: map-get($breakpoints, "md")) {
-        --font-size: 1rem;
+        --font-size: 0.9rem;
       }
     }
 
@@ -203,6 +203,7 @@ a,
   }
 }
 
+nav-link,
 a.nav-link {
   color: var(--nav-link-color);
   font-size: 1.3rem;
@@ -217,12 +218,16 @@ a.nav-link {
   &:hover {
     font-style: italic;
   }
-  &.divider {
-    padding-left: var(--spacing);
-    padding-right: var(--spacing);
-    &:hover {
-      font-style: unset;
-    }
+}
+
+link-divider,
+span.link-divider {
+  @extend nav-link;
+  display: inline-flex;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  &:hover {
+    font-style: unset;
   }
 }
 

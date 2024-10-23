@@ -121,13 +121,6 @@ aside {
       margin: inherit;
     }
   }
-
-  .nav-left a {
-    &:after {
-      content: ":";
-      padding-left: var(--nav-element-spacing-horizontal);
-    }
-  }
 }
 
 // Breadcrumb RTL
