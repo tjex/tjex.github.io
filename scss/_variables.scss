@@ -5,19 +5,19 @@
 $semantic-root-element: "body" !default;
 
 // Enable <header>, <main>, <footer> inside $semantic-root-element as containers
-$enable-semantic-container: true !default;
+$enable-semantic-container: false !default;
 
 // Enable a centered viewport for <header>, <main>, <footer> inside $enable-semantic-container
 // Fluid layout if disabled
-$enable-viewport: true !default;
+$enable-viewport: false !default;
 
 // Enable responsive spacings for <header>, <main>, <footer>, <section>, <article>
 // Fixed spacings if disabled
-$enable-responsive-spacings: true !default;
+$enable-responsive-spacings: false !default;
 
 // Enable responsive typography
 // Fixed root element size if disabled
-$enable-responsive-typography: true !default;
+$enable-responsive-typography: false !default;
 
 // Enable .classes
 // .classless version if disabled
@@ -27,7 +27,7 @@ $enable-classes: true !default;
 $enable-grid: true !default;
 
 // Enable transitions
-$enable-transitions: true !default;
+$enable-transitions: false !default;
 
 // Enable overriding with !important
 $enable-important: true !default;
@@ -53,7 +53,7 @@ $breakpoints: (
   sm: 576px,
   md: 900px,
   lg: 1200px,
-  xl: 1340px,
+  xl: 1300px,
 ) !default;
 
 // Viewports
@@ -62,5 +62,5 @@ $viewports: (
   sm: 510px,
   md: 900px,
   lg: 1200px,
-  xl: 1340px
+  xl: 1300px
 ) !default;

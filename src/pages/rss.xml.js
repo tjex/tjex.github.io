@@ -1,5 +1,5 @@
 import rss from "@astrojs/rss";
-import site from "../data/settings.js";
+import site from "../data/tjex.js";
 import sanitizeHtml from "sanitize-html";
 import MarkdownIt from "markdown-it";
 import * as colUtil from "../scripts/collectionUtil.ts";

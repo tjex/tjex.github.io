@@ -1,5 +1,12 @@
 export default {
-  github: `https://github.com/tjex`,
+  title: `tjex`,
+  description: `Programmer and creative technologist.`,
+  url: `https://tjex.net`, // No trailing slash!
+  rssURL: `https://tjex.net/rss.xml`,
+  webName: `tjex`,
+  rssName: `tjex.net`,
   mastodon: `https://fosstodon.org/@tjex`,
-  dotfiles: `https://github.com/tjex/dotfiles`,
+  github: `https://github.com/tjex`,
+  sourcehut: `https://sr.ht/~tjex`,
+  bandcamp: `https://tjex.bandcamp.com`,
 };
