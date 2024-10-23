@@ -16,6 +16,8 @@ deploy:
 	yarn build
 	git add -f dist src/styles
 	git commit -m "build and deploy"
+	git reset --soft HEAD~2
+	git commit -m "make deploy"
 	git push origin deploy
 	git checkout main
 
