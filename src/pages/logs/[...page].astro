@@ -4,67 +4,68 @@ import Paginator from "../../components/Paginator.astro";
 import * as colUtil from "../../scripts/collectionUtil.ts";
 
 export async function getStaticPaths({ paginate }) {
-  const log = await colUtil.noDrafts("logs").then((logs) =>
-    logs
-      .map((log: any) => ({
-        slug: log.slug,
-        collection: log.collection,
-        title: log.data.title,
-        arve: log.data.arve,
-        date: log.data.date,
-      }))
-      .sort((a, b) => new Date(b.date) - new Date(a.date)),
-  );
-  return paginate(log, { pageSize: 500 });
+    const log = await colUtil.noDrafts("logs").then((logs) =>
+        logs
+            .map((log: any) => ({
+                slug: log.slug,
+                collection: log.collection,
+                title: log.data.title,
+                arve: log.data.arve,
+                date: log.data.date,
+            }))
+            .sort((a, b) => new Date(b.date) - new Date(a.date)),
+    );
+    return paginate(log, { pageSize: 500 });
 }
 
 const seo = {
-  title: "Logs",
-  description: "Daily logs of the monkey mind.",
+    title: "Logs",
+    description: "Daily logs of the monkey mind.",
 };
 
 const { page } = Astro.props;
 ---
 
 <Layout seo={seo}>
-  <h1>Logs</h1>
-  <p>
-    These are daily logs. They capture a filtered <a href="https://en.wikipedia.org/wiki/Monkey_mind" target="_blank">"monkey mind"</a> through
-    the day. <a href="posts/logging-the-monkey-mind">I documented why I'm doing this.</a> Time here is measured in <a
-      href="https://wiki.xxiivv.com/site/arvelie.html" target="_blank">Arvelie time</a
-    >. Year 0 in my case is 2020. I started logging on <span class="monospace">04V01</span>, which is October 22nd,
-    2024.
-  </p>
-  <div class="grid">
-    <!--     <p> -->
-    <!-- { -->
-    <!--     page.data.map((log: any) => { -->
-    <!--         if (log.slug.startsWith("05")) { -->
-    <!--             return ( -->
-    <!--                 <span class="pub-date"> -->
-    <!--                     <a href={`/logs/${log.slug}`}>{log.title}</a> -->
-    <!--                 </span> -->
-    <!--             ); -->
-    <!--         } -->
-    <!--         return null; // else -->
-    <!--     }) -->
-    <!-- } -->
-    <!--     </p> -->
+    <h1>Logs</h1>
     <p>
-      {
-        page.data.map((log: any) => {
-          if (log.slug.startsWith("04")) {
-            return (
-              <span class="monospace">
-                <a href={`/${log.collection}/${log.slug}`}>{log.title}</a>
-              </span>
-            );
-          }
-          return null; // else
-        })
-      }
+        These are daily logs. They capture a filtered <a
+            href="https://en.wikipedia.org/wiki/Monkey_mind"
+            target="_blank">"monkey mind"</a
+        > through the day. <a href="posts/logging-the-monkey-mind">I documented why I'm doing this.</a> Time here is measured
+        in <a href="https://wiki.xxiivv.com/site/arvelie.html" target="_blank">Arvelie time</a>. Year 0 in my case is
+        2020. I started logging on <span class="monospace">04V01</span>, which is October 22nd, 2024.
     </p>
-  </div>
+    <div class="grid">
+        <!--     <p> -->
+        <!-- { -->
+        <!--     page.data.map((log: any) => { -->
+        <!--         if (log.slug.startsWith("05")) { -->
+        <!--             return ( -->
+        <!--                 <span class="pub-date"> -->
+        <!--                     <a href={`/logs/${log.slug}`}>{log.title}</a> -->
+        <!--                 </span> -->
+        <!--             ); -->
+        <!--         } -->
+        <!--         return null; // else -->
+        <!--     }) -->
+        <!-- } -->
+        <!--     </p> -->
+        <p>
+            {
+                page.data.map((log: any) => {
+                    if (log.slug.startsWith("04")) {
+                        return (
+                            <span class="monospace">
+                                <a href={`/${log.collection}/${log.slug}`}>{log.title}</a>
+                            </span>
+                        );
+                    }
+                    return null; // else
+                })
+            }
+        </p>
+    </div>
 
-  <Paginator page={page} />
+    <Paginator page={page} />
 </Layout>
