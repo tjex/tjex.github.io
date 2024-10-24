@@ -2,7 +2,6 @@
 import ArticleSchema from "../components/ArticleSchema.astro";
 import { getEntry } from "astro:content";
 import Date from "../components/utility/DateFormat.astro";
-import path from "node:path";
 
 import Layout from "./Page.astro";
 import Tags from "../components/Tags.astro";
@@ -11,11 +10,7 @@ import EmailReply from "../components/Email.astro";
 const { seo } = Astro.props;
 const { post } = Astro.props;
 
-const dailyLog = await getEntry("logs", post.data.date);
-
-// cobble together a valid url for GitHub
-const filename = path.basename(post.id);
-const postGithubUrl = new URL("https://github.com/tjex/tjex.github.io/blob/main/src/content/posts/" + filename);
+const dailyLog = await getEntry("logs", post.data.arve);
 ---
 
 <Layout {seo}>
