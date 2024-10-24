@@ -11,7 +11,6 @@ const options = {
 export default defineConfig({
   site: "https://tjex.net",
   redirects: {
-    "/blog": "/posts",
     "/blog/2024/zettelkasten-grid-system-organisation/": "/posts/zettelkasten-grid-system-organisation",
   },
   markdown: {
