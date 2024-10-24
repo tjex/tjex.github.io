@@ -1,7 +1,7 @@
 import { getCollection } from "astro:content";
 
 export async function noDrafts(collection: string) {
-  const noDrafts = getCollection(collection, ({ data }) => {
+  const noDrafts = await getCollection(collection, ({ data }) => {
     return import.meta.env.PROD ? data.draft !== true : true;
   });
   return noDrafts;
@@ -19,11 +19,11 @@ export async function getPostsPerTag(collections: string[]) {
         .filter((post) => post.data.tags.includes(tag))
         .map(({ data, slug }) => ({
           slug: slug,
+          collection: collection,
           title: data.title,
           description: data.description,
           arve: data.arve,
           date: data.date,
-          collection: collection,
         }))
         .sort((a, b) => new Date(b.date) - new Date(a.date));
       return {
@@ -57,4 +57,12 @@ export async function getAllPostsFromCollection(collection: string) {
           : posts[i - 1],
     },
   }));
+}
+
+export async function getPostsOnArve(collection: string, arve: string) {
+  const posts = await noDrafts(collection);
+  const postsOnArve = posts.filter(({ data }) => {
+    return data.arve == arve;
+  });
+  return postsOnArve;
 }
