@@ -29,6 +29,6 @@ export async function GET(context) {
           content: sanitizeHtml(parser.render(post.body)),
         };
       })
-      .sort((a, b) => new Date(b.date) - new Date(a.date)),
+      .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate)),
   });
 }
