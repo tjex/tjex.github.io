@@ -846,27 +846,18 @@ weapons&lt;/a&gt;.&lt;/p&gt;
 </content:encoded><category>philosophy</category></item><item><title>logging the monkey mind</title><link>https://tjex.net/posts/logging-the-monkey-mind/</link><guid isPermaLink="true">https://tjex.net/posts/logging-the-monkey-mind/</guid><description>A new style of logging that sits somewhere between a diary entry and a social media post.</description><pubDate>Wed, 23 Oct 2024 16:16:07 GMT</pubDate><content:encoded>&lt;p&gt;As of &lt;a href=&quot;https://tjex.net/logs/04V01&quot;&gt;yesterday&lt;/a&gt; I&apos;m trialling a style of logging that sits somewhere between a
 social media post and a diary. This will be taking place over at
 &lt;a href=&quot;https://tjex.net/logs&quot;&gt;logs&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Why? I keep a personal diary, and I also sometimes &lt;a href=&quot;https://fosstodon.org/@tjex&quot;&gt;post on
-Mastodon&lt;/a&gt;. But neither of those places are good for
-the &lt;a href=&quot;https://en.wikipedia.org/wiki/Monkey_mind&quot;&gt;monkey mind&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I&apos;m putting effort into making this site more of an
-&lt;a href=&quot;https://tjex.net/#this-site&quot;&gt;artefact&lt;/a&gt;, rather than a digital business
-card and accompanying blog to illustrate that I&apos;m still alive. So in keeping
-with that goal, I think it&apos;s fitting to log on this site a (filtered) monkey
-mind so that (a) you the reader may
-stumble across some interesting links, ideas, notions or comedy and (b) I the
-monkey have a record of my fleeting thoughts.&lt;/p&gt;
+&lt;p&gt;Why? I&apos;m putting effort into making this site more of an
+&lt;a href=&quot;https://tjex.net/#this-site&quot;&gt;artefact&lt;/a&gt;, rather than a digital business card and
+accompanying blog to illustrate that I&apos;m still alive. So in keeping with that
+goal, logging a (filtered) &lt;a href=&quot;https://mntre.com/reform.html&quot;&gt;monkey mind&lt;/a&gt; could be
+a value over time so that
+(a) you, the reader, may stumble across some interesting links, ideas, notions or
+comedy and (b) I, the monkey, have a record of my fleeting thoughts.&lt;/p&gt;
 &lt;p&gt;I think having this record online will maintain &lt;em&gt;some&lt;/em&gt; sense of thoughtfulness and
 tact, and with the added side effect that I can also access them the
 internet - as it does happen where I recall something cool I saw but am not on
 my own machine to find the link in my history or
 &lt;a href=&quot;https://github.com/sysid/bkmr&quot;&gt;bookmarks&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;...and (c) I really don&apos;t want to spam this stuff to the few people who follow
-me on Mastodon, or may feel like doing so. They should get the double filtered
-monkey mind at the very least.&lt;/p&gt;
-&lt;p&gt;I guess an RSS feed for the &lt;a href=&quot;https://tjex.net/logs&quot;&gt;logs&lt;/a&gt; would make sense as a
-happy medium for this, like &lt;a href=&quot;https://pluralistic.net/&quot;&gt;Cory Doctorow&apos;s Daily Links&lt;/a&gt; - but
-I&apos;m not that important or interesting.&lt;/p&gt;
 </content:encoded><category>admin</category></item><item><title>Maths in code, code in music, and music in code</title><link>https://tjex.net/posts/maths-code-and-music/</link><guid isPermaLink="true">https://tjex.net/posts/maths-code-and-music/</guid><description>As I get more comfortable with programming, I&apos;m starting to see more and more parallels between my old life and my new one.</description><pubDate>Thu, 05 Sep 2024 14:58:58 GMT</pubDate><content:encoded>&lt;p&gt;The other day I again encountered the statement that I must be good at maths if
 I&apos;m able to read and write code. I myself remember thinking the same of
 others. And it was actually a contributing reason why I never considered
