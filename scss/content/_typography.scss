@@ -204,7 +204,7 @@ a,
 }
 
 /* outgoing link icon for outgoing links */
-article a:not([href^="https://tjex.net"])
+a:not([href^="https://tjex.net"])
 {
   --text-decoration: underline;
 }
