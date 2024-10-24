@@ -203,7 +203,7 @@ a,
   }
 }
 
-/* outgoing link icon for outgoing links */
+/* style all outgoing links */
 a:not([href^="https://tjex.net"])
 {
   --text-decoration: underline;
