@@ -11,7 +11,7 @@ import EmailReply from "../components/Email.astro";
 const { seo } = Astro.props;
 const { post } = Astro.props;
 
-const dailyLog = await getEntry("logs", post.data.arve);
+const dailyLog = await getEntry("logs", post.data.date);
 
 // cobble together a valid url for GitHub
 const filename = path.basename(post.id);

@@ -6,22 +6,36 @@ import NextPrevPost from "../../components/NextPrevPost.astro";
 import * as colUtil from "../../scripts/collectionUtil.ts";
 
 export async function getStaticPaths() {
-	return colUtil.getAllPostsFromCollection("logs");
+    return colUtil.getAllPostsFromCollection("logs");
 }
 
 const { post, prevPost, nextPost } = Astro.props;
 const { Content } = await post.render();
 
+const todaysPosts = await colUtil.getPostsOnArve("posts", post.data.arve);
+
 const seoTitle = post.data.title;
 const seoDescription = post.data.description;
 
 const seo = {
-	title: seoTitle,
-	description: seoDescription,
+    title: seoTitle,
+    description: seoDescription,
 };
 ---
 
 <Layout seo={seo} post={post}>
-	<Content />
+    <Content />
+    {
+        todaysPosts.length > 0 && (
+            <>
+                <h3> Posts today: </h3>
+                <ul>
+                    {todaysPosts.map((post) => (
+                        <li><a href=`/${post.collection}/${post.slug}`>{post.data.title}</a></li>
+                    ))}
+                </ul>
+            </>
+        )
+    }
     <NextPrevPost collection={"logs"} nextPost={nextPost} prevPost={prevPost} />
 </Layout>

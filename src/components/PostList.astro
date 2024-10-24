@@ -15,7 +15,7 @@ const { post, collection } = Astro.props;
         <span class="pub-date">
             <Date date={post.arve} format={"arvelie"} /> :
         </span>
-        <a href={`/${collection}/${post.slug}`}>
+        <a href={`/${post.collection}/${post.slug}`}>
             {post.title}
         </a>
     </td>
