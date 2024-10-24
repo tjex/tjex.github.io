@@ -26,5 +26,5 @@ const seo = {
     <!-- only display image if there is one -->
     {post.data.image && <Image src={post.data.image.src} alt={post.data.image.alt} />}
     <Content />
-    <NextPrevPost nextPost={nextPost} prevPost={prevPost} />
+    <NextPrevPost collection={"posts"} nextPost={nextPost} prevPost={prevPost} />
 </Layout>

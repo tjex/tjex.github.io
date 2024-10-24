@@ -1,5 +1,5 @@
 ---
-const { nextPost, prevPost } = Astro.props;
+const { nextPost, prevPost, collection } = Astro.props;
 ---
 
 <hr />
@@ -7,12 +7,12 @@ const { nextPost, prevPost } = Astro.props;
     (
         <div class="neighbourPost">
             {prevPost.data && (
-                <a class="prevPost" href={`/posts/${prevPost.slug}`}>
+            <a class="prevPost" href={`/${collection}/${prevPost.slug}`}>
                     {prevPost.data.title}
                 </a>
             )}
             {nextPost.data && (
-                <a class="nextPost" href={`/posts/${nextPost.slug}`}>
+            <a class="nextPost" href={`/${collection}/${nextPost.slug}`}>
                     {nextPost.data.title}
                 </a>
             )}
