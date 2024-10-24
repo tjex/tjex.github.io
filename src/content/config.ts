@@ -1,4 +1,8 @@
 import { z, defineCollection } from "astro:content";
+
+// arve time needs to be included in ALL collections as it 
+// acts as a reference against any present daily log.
+
 const posts = defineCollection({
   type: "content",
   schema: ({ image }) =>
