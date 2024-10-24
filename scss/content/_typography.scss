@@ -120,7 +120,7 @@ a,
 [role="link"] {
   --color: var(--link-color);
   --background-color: transparent;
-  --text-decoration: underline;
+  --text-decoration: underline dotted;
   --text-decoration-thickness: 2px;
   --text-decoration-color: var(--link-decoration-color);
   --text-underline-position: under;
@@ -171,7 +171,7 @@ a,
 
       &:is([aria-current], :hover, :active, :focus) {
         --color: var(--secondary-hover);
-        --text-decoration: underline;
+        --text-decoration: var(--text-decoration);
         --text-decoration-color: var(--primary-focus);
       }
 
@@ -189,7 +189,7 @@ a,
 
       &:is([aria-current], :hover, :active, :focus) {
         --color: var(--contrast-hover);
-        --text-decoration: underline;
+        --text-decoration: var(--text-decoration);
         --text-decoration-color: var(--primary-focus);
       }
 
@@ -201,6 +201,12 @@ a,
       }
     }
   }
+}
+
+/* outgoing link icon for outgoing links */
+article a:not([href^="https://tjex.net"])
+{
+  --text-decoration: underline;
 }
 
 nav-link,
