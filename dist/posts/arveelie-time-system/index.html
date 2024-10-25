@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Primary Meta Tags --><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="title" content="The Arvelie time system"><meta name="description" content="The Arvelie time system is a concise and useful way to approach our relationship to time, and also time management."><meta name="robots" content="all"><link rel="sitemap" href="/sitemap-index.xml"><!-- browser tab title --><title>The Arvelie time system</title><!-- RSS --><link rel="alternate" type="application/rss+xml" title="tjex.net" href="https://tjex.net/rss.xml"><!-- Canonical --><link rel="canonical" href="https://tjex.net/posts/arveelie-time-system/"><!-- Favicons --><link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="48x48" href="/favicon/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://tjex.net/posts/arveelie-time-system/"><meta property="og:title" content="The Arvelie time system"><meta property="og:description" content="The Arvelie time system is a concise and useful way to approach our relationship to time, and also time management."><meta property="og:image" content="https://tjex.net/img/profile-square.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://tjex.net/posts/arveelie-time-system/"><meta property="twitter:title" content="The Arvelie time system"><meta property="twitter:description" content="The Arvelie time system is a concise and useful way to approach our relationship to time, and also time management."><meta property="twitter:image" content="https://tjex.net/img/profile-square.jpg"><style>#themeToggle[data-astro-cid-lfoluaxz]{width:70px;height:70px;flex:inherit;align-self:end;padding:0}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.C_xM32it.css"><script type="module">class s extends HTMLElement{connectedCallback(){const e=this.dataset.message,t=atob("dGpleEB0amV4Lm5ldA=="),l=this.querySelector("#denc-reply");e===void 0?l.setAttribute("href",`mailto:${t}`):l.setAttribute("href",`mailto:${t}?subject=${encodeURIComponent(e)}`)}}customElements.define("email-reply",s);
+</script></head> <div class="wrapper"> <div class="header-wrapper"> <div class="header-left"></div><aside class="header-right"> <nav> <a style="color: var(--muted);" class="nav-link" href="/">about</a> <span style="color: var(--muted);" class="link-divider">:</span> <a style="color: var(--muted);" class="nav-link" href="/contact">contact</a> </nav> </aside> <div class="header-center"></div>  </div> <aside class="aside sidebar-left"> <button class="no-outline" id="themeToggle" aria-label="theme toggle" data-astro-cid-lfoluaxz> <svg id="icon-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" width="40" height="40" xml:space="preserve" data-astro-cid-lfoluaxz> <g data-astro-cid-lfoluaxz> <path d="M60,16.005c0,0,0.001,19.736,0.001,43.994c0,24.258-0.001,43.995-0.001,43.995c-24.258,0-43.994-19.736-43.994-43.995
+            C16.006,35.742,35.742,16.005,60,16.005 M60,5.005C29.627,5.005,5.006,29.626,5.006,60c0,30.372,24.622,54.995,54.994,54.995
+            S114.995,90.371,114.995,60C114.995,29.626,90.372,5.005,60,5.005L60,5.005z" data-astro-cid-lfoluaxz></path> </g> </svg> </button>  <!--
+is:inline includes the script directly into the page, instead 
+of budling it separately (Astro specific). This decreases load 
+time, which is important here to avoid theme flashing
+--> <script>
+    const themeToggle = document.getElementById("themeToggle");
+    const getTheme = () => localStorage.getItem("theme") || "dark";
+    const setTheme = (theme) => {
+        localStorage.setItem("theme", theme);
+        document.documentElement.dataset.theme = theme;
+        document.body.classList.add(theme);
+    };
+
+    // add the current theme from local storage to DOM, which
+    // happens BEFORE rendering.
+    setTheme(getTheme());
+
+    themeToggle.addEventListener("click", () => {
+        if (getTheme() == "light") {
+            setTheme("dark");
+        } else {
+            setTheme("light");
+        }
+    });
+</script> <nav class="nav-left"> <ul> <li><a class="nav-link" href="/posts">posts</a><span class="link-divider">:</span></li> <li><a class="nav-link" href="/projects">projects</a><span class="link-divider">:</span></li> <li><a class="nav-link" href="/listening">listening</a><span class="link-divider">:</span></li> <li><a class="nav-link" href="/logs">logs</a><span class="link-divider">:</span></li> </ul> </nav> </aside> <main class="main-content">        <article class="post-content__article"> <h1>The Arvelie time system</h1> <div class="post-info"> <span class="monospace"> 04U08 </span> <div><a href="/tags/philosophy">philosophy</a><span></span></div> <email-reply data-message="The Arvelie time system" text="reply via email"> <a href="" id="denc-reply">reply via email</a> </email-reply>  </div>   <p>I’m currently wrapping my head around the Arvelie time system, which I found <a href="https://wiki.xxiivv.com/site/time" target="_blank">here on Devine’s website</a>,
+(after also having it
+bent by his <a href="https://wiki.xxiivv.com/site/horaire" target="_blank">time tracking system</a>).</p>
+<blockquote>
+<p>Since writing this post, I decided to try implement Arvelie into my
+journaling and have written <a href="https://git.sr.ht/~tjex/arveelie" target="_blank">a CLI helper for converting to and from
+Arvelie</a> for any that are interested.</p>
+</blockquote>
+<p>There are two things I really like about the time system. One, that time ranges
+are uniform. Each month has 14 days, which creates 26 months. This makes time
+management feel much more approachable. And two, that time for any project or
+moment, begins at 0. So Arvelie time is always relative to the artefact which it
+is logging.</p>
+<p>This creates a different relationship between us and time. As we no longer have
+a positional relationship to the past. That is, the past that came before year
+“0”.</p>
+<p>This is mostly how we measure time anyway. How old are you? How long have you
+been programming? For people into computers, <a href="https://en.wikipedia.org/wiki/Unix_time" target="_blank">Unix
+time</a> follows this same concept.</p>
+<p>Typically when conceptualising a date or time, we additionally reference it
+against “time immortal” (which in some domains has the suffixes ‘BC’ and ‘AD’).
+This meaning, we’re in the year 2024 now, and can recognise how much things have
+changed in the last 150 years (even without having been alive then).</p>
+<p>But it’s different in Arvelie time. If you’re, 24 now, then what we know as the
+year 2000, would for <em>you</em> be the year 0. This creates an interesting and
+alternate feeling about the past. It feels more like each birth (organic, or
+otherwise - like a project) is its own strand of time, sprouting from the true
+“time immortal”, which does not have a start date.</p>
+<p>While this can sound a bit wishy-washy, I would argue, that this is a lot more
+accurate given the context in which we live.</p>
+<p>Because we actually measure time in the same style as Arvelie - the universe is
+(by our best measure) about 13.8 billion years old. Meaning, that the big bang
+was year 0. However, I’m writing this in the year 2024. Or more interestingly,
+I’m writing this in the year 2024AD.</p>
+<p>This is interesting to me, because the BC / AD attribute, directly communicates
+an understanding that time is infinite (or that it moves more like an
+oscillation). This is one of the few aspects of religion that I actually like.
+That infinity is maintained as a truth, rather than a concept.</p>
+<p>Although, granted, this has all too often been used as a weapon (heaven and hell
+for eternity). <a href="https://www.theverge.com/2024/4/4/24120352/israel-lavender-artificial-intelligence-gaza-ai" target="_blank">But we turn all sorts of good things into
+weapons</a>.</p> <hr> <div class="neighbourPost"> <a class="prevPost" href="/posts/prehistoric-ai-learning"> Learning in the prehistoric age of AI </a> <a class="nextPost" href="/posts/logging-the-monkey-mind"> logging the monkey mind </a> </div>  </article>     </main> <aside class="aside sidebar-right"></aside> <div class="footer">
+Built with <a href="https://astro.build">Astro</a> and <a href="https://picocss.com">Pico CSS</a> •
+<a href="/privacy">Privacy</a> • <a href="/license" rel="me">License</a> • <a href="/rss.xml" rel="me">RSS</a> </div> </div> </html>

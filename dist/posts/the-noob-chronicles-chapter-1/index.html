@@ -1,0 +1,160 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Primary Meta Tags --><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="title" content="The Noob Chronicles - Chapter 1"><meta name="description" content="It's been two years since I learnt what a for loop was. How's it been going since then?"><meta name="robots" content="all"><link rel="sitemap" href="/sitemap-index.xml"><!-- browser tab title --><title>The Noob Chronicles - Chapter 1</title><!-- RSS --><link rel="alternate" type="application/rss+xml" title="tjex.net" href="https://tjex.net/rss.xml"><!-- Canonical --><link rel="canonical" href="https://tjex.net/posts/the-noob-chronicles-chapter-1/"><!-- Favicons --><link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="48x48" href="/favicon/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://tjex.net/posts/the-noob-chronicles-chapter-1/"><meta property="og:title" content="The Noob Chronicles - Chapter 1"><meta property="og:description" content="It's been two years since I learnt what a for loop was. How's it been going since then?"><meta property="og:image" content="https://tjex.net/img/profile-square.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://tjex.net/posts/the-noob-chronicles-chapter-1/"><meta property="twitter:title" content="The Noob Chronicles - Chapter 1"><meta property="twitter:description" content="It's been two years since I learnt what a for loop was. How's it been going since then?"><meta property="twitter:image" content="https://tjex.net/img/profile-square.jpg"><style>#themeToggle[data-astro-cid-lfoluaxz]{width:70px;height:70px;flex:inherit;align-self:end;padding:0}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.C_xM32it.css"><script type="module">class s extends HTMLElement{connectedCallback(){const e=this.dataset.message,t=atob("dGpleEB0amV4Lm5ldA=="),l=this.querySelector("#denc-reply");e===void 0?l.setAttribute("href",`mailto:${t}`):l.setAttribute("href",`mailto:${t}?subject=${encodeURIComponent(e)}`)}}customElements.define("email-reply",s);
+</script></head> <div class="wrapper"> <div class="header-wrapper"> <div class="header-left"></div><aside class="header-right"> <nav> <a style="color: var(--muted);" class="nav-link" href="/">about</a> <span style="color: var(--muted);" class="link-divider">:</span> <a style="color: var(--muted);" class="nav-link" href="/contact">contact</a> </nav> </aside> <div class="header-center"></div>  </div> <aside class="aside sidebar-left"> <button class="no-outline" id="themeToggle" aria-label="theme toggle" data-astro-cid-lfoluaxz> <svg id="icon-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" width="40" height="40" xml:space="preserve" data-astro-cid-lfoluaxz> <g data-astro-cid-lfoluaxz> <path d="M60,16.005c0,0,0.001,19.736,0.001,43.994c0,24.258-0.001,43.995-0.001,43.995c-24.258,0-43.994-19.736-43.994-43.995
+            C16.006,35.742,35.742,16.005,60,16.005 M60,5.005C29.627,5.005,5.006,29.626,5.006,60c0,30.372,24.622,54.995,54.994,54.995
+            S114.995,90.371,114.995,60C114.995,29.626,90.372,5.005,60,5.005L60,5.005z" data-astro-cid-lfoluaxz></path> </g> </svg> </button>  <!--
+is:inline includes the script directly into the page, instead 
+of budling it separately (Astro specific). This decreases load 
+time, which is important here to avoid theme flashing
+--> <script>
+    const themeToggle = document.getElementById("themeToggle");
+    const getTheme = () => localStorage.getItem("theme") || "dark";
+    const setTheme = (theme) => {
+        localStorage.setItem("theme", theme);
+        document.documentElement.dataset.theme = theme;
+        document.body.classList.add(theme);
+    };
+
+    // add the current theme from local storage to DOM, which
+    // happens BEFORE rendering.
+    setTheme(getTheme());
+
+    themeToggle.addEventListener("click", () => {
+        if (getTheme() == "light") {
+            setTheme("dark");
+        } else {
+            setTheme("light");
+        }
+    });
+</script> <nav class="nav-left"> <ul> <li><a class="nav-link" href="/posts">posts</a><span class="link-divider">:</span></li> <li><a class="nav-link" href="/projects">projects</a><span class="link-divider">:</span></li> <li><a class="nav-link" href="/listening">listening</a><span class="link-divider">:</span></li> <li><a class="nav-link" href="/logs">logs</a><span class="link-divider">:</span></li> </ul> </nav> </aside> <main class="main-content">        <article class="post-content__article"> <h1>The Noob Chronicles - Chapter 1</h1> <div class="post-info"> <span class="monospace"> 03V04 </span> <div><a href="/tags/career">career</a><span> . </span><a href="/tags/learning">learning</a><span></span></div> <email-reply data-message="The Noob Chronicles - Chapter 1" text="reply via email"> <a href="" id="denc-reply">reply via email</a> </email-reply>  </div>   <p>It’s important to step back and get some perspective about your progress with
+any skill. And considering the mammoth idea of taking a career side step into
+programming, and my general high expectations for myself; I thought to begin a
+post series titled <em>The Noob Chronicles</em>, where I look back in time since the
+last chapter and review what’s happend since then. This is the first chapter and
+I’m <em>not</em> going back to birth…</p>
+<h2 id="music-art-and-for-loops">Music, Art and For Loops</h2>
+<p>It’s been two years since I learnt want a for loop is. Since then the ball has
+been rolling with great joy, but cracks are appearing on its surface. I heard
+quite early on that the more you learn, the more you realise how much you don’t
+know.</p>
+<p>I’ve never felt this more than with programming.</p>
+<p>In music and art, a lot of your technique, creativity and craft is hidden, in
+that the “source code” of a music file or image output is not observable. There
+is often no reference material at all for the public to unpack how you made that
+content. And often, there can also be no material for yourself to look back on
+(as in the case of improvised music or setups using a modular synthesiser which
+no longer holds the same patch).</p>
+<p>In programming, the technique and craft of others is very often visible due to
+open-source development, but also tutorials, APIs, and internal code bases. And
+as you start to learn, you start to understand parts of what you’re looking at,
+but become very much aware of how much you have no clue about.</p>
+<p>The difference here between arts and programming, is that the process of
+learning to program has much larger gaps between moments of gratification. Or
+put otherwise, the hurdles are larger and further in between than when making
+music and art.</p>
+<p>With music and art, it more often than not feels good all the time. Playing
+music in particular creates a symbiosis between your body (playing the
+instrument), your mind (accessing your creativity, memories and emotions) and
+your environment (hearing the result of body and mind, echoed into the room).
+Actually, this is why it’s very hard to be even a <em>good</em> singer. It takes <em>a
+lot</em> of training to listen to the <em>actual</em> sound and pitch of your voice and to
+correct it, as apposed to hearing what you <em>think</em> your pitch is.</p>
+<p>With programming, you are not given so much leeway. Usually things just don’t
+work <em>at all</em>; Like opening your mouth to sing and excrement just spraying out,
+bouncing off the wall and hitting the fan, leaving you standing dumbfounded in a
+brown haze.</p>
+<p>On this topic, I wrote how I think
+<a href="https://tjex.net/posts/a-case-for-polishing-your-tools">polishing your tools is a good thing</a>. It
+discusses how tinkering, or hacking on your setups or tools can actually teach
+you a lot. And this is valuable. But each little optimization or little bug fix
+in your setup also allows for much smaller spans of time and effort between
+moments of gratification.</p>
+<p>It’s very true, that learning to code can happen much faster if you can apply it
+within a project that you are invested in - in the case of the above post,
+Neovim.</p>
+<h2 id="filling-in-gaps">Filling in Gaps</h2>
+<p>The hardest thing in my programming education or me has been filling in the
+gaps. As stated, I first learnt what a for loop was two years ago, and this was
+at the start of my masters degree. It’s not a computer science masters, but a
+very large part of it deals with programming languages.</p>
+<p>I’m studying a Masters of Creative Technologies, which essentially gears you up
+to be a highly proficient operator at the interaction of technology, media and
+art.</p>
+<p>My personal trajectory though, is to become a software engineer, and I want be
+as good as I can be. As I completed my various class assignments, moving through
+python, JavaScript, c++, Java, lua and fields of graphics, audio, interaction,
+networking, machine learning, cyber security, web development and games, I
+became chronically aware of how many foundational elements were being glossed
+over or skipped entirely. This is natural of course. The more things learned in
+a given amount of time, the more superficially they will have to be learned.</p>
+<p>To fill the gaps, I went searching for drop in replacements for full computer
+science knowledge. This lead me to resources like
+<a href="https://bottomupcs.com/" target="_blank">Computer Science from the Bottom Up</a>, an online web
+version of
+<a href="https://github.com/sarabander/sicp" target="_blank">Structure and Interpretation of Computer Programs</a>,
+and of course the well known
+<a href="https://www.nand2tetris.org/" target="_blank">Nand to Tetris series</a>.</p>
+<p>Progress has however been slow. I’ve finished my course work as of July this
+year, so have only had enough brain space since then to start looking at
+learnings outside my own masters courses.</p>
+<p>I’m also gradually chipping through
+<a href="https://www.goodreads.com/book/show/3735293-clean-code" target="_blank">Clean Code: A Handbook of Agile Software Craftsmanship</a>,
+<a href="https://www.gopl.io/" target="_blank">The Go Programming Language (book)</a>,
+<a href="https://www.algorist.com/" target="_blank">The Algorithm Design Manual</a> and waiting for me is a
+dense beast I got for free titled
+<a href="https://www.oreilly.com/library/view/internetworking-with-tcpip/9780137464197/" target="_blank">Internetworking with TCP/IP</a></p>
+<h2 id="back-patting">Back Patting</h2>
+<p>I don’t want to come across as a self righteous prick now. But I do want to put
+my skill progressions into perspective. For myself to look back on, and also any
+other person also grappling with the huge initial learning curve of programming.</p>
+<p>So please read this like you’re reading my personal diary. In a large sense,
+that is actually <a href="https://tjex.net/posts/hello-world">what this blog is</a>.</p>
+<p>Shortly after learning what a for loop is, I programmed the below image. So it
+would be the first thing I ever programmed; an illustrious and provocative work
+made with Processing4.</p>
+<p><img  src="/_astro/self-portrait-2021.BbZFoSxm_Ze6KJf.webp" alt="self-portrait" width="325" height="324" loading="lazy" decoding="async"></p>
+<p>Since then I’ve…</p>
+<ul>
+<li>implemented machine learning algorithms that
+<a href="https://github.com/tjex/pdf-correlator" target="_blank">provide useful information</a>.</li>
+<li>built a tool that I’ve wanted to have for at least eight years, a
+<a href="https://github.com/tjex/ofTombola-sequencer" target="_blank">Tombola Sequencer</a>, written in
+C++.</li>
+<li>worked with others to build a continuous integration server from scratch on a
+Raspberry PI</li>
+<li>become markedly proficient with Neovim and just weep with joy with how god
+damn easy it is to work with text and files compared to before.</li>
+<li>built my own website from scratch <em>and actually make conscious design
+decisions that I follow through on</em>.</li>
+<li>studied a full semester of computer science at one of the most notable
+engineering schools in Europe (KTH, Stockholm) and survived.</li>
+<li>became proficient with git and feel safe and confident to try out changes
+quickly and deeply within my projects.</li>
+<li>become comfortable reading and implementing API documentation.</li>
+<li>learned my way around JavaScript, Python, Go, HTML, CSS, Lua and Bash to a
+degree that is on average between functional and mediocre.</li>
+<li>solved a real world creative problem with code during an
+<a href="https://github.com/tjex/WOMB-Installation" target="_blank">artistic project</a>.</li>
+<li>reinvigorated my musical side and creative palette with
+<a href="https://tidalcycles.org/" target="_blank">TidalCycles</a>, allowing me to do things that are
+otherwise incredibly arduous or complex otherwise.</li>
+<li>made useful contributions to real world open-source projects.</li>
+<li>manually setup an encrypted install of Artix Linux and used it as a daily
+driver, until I got sick of poor hardware performance compared to my M1 Mac…</li>
+<li>researching into topics of distributed systems, conflict-free replicated data
+types, ActivityPub, LoRaWAN, Multi-agent systems and pattern generation for my
+masters thesis - and can actually comprehend what I’m reading.</li>
+</ul>
+<h2 id="until-next-time">Until Next Time</h2>
+<p>My main goals / tasks from here are to:</p>
+<ol>
+<li>finish my masters thesis</li>
+<li>learn algorithms</li>
+<li>learn JavaScript, Go, Node and Flutter</li>
+<li>up my Machine Learning skills</li>
+<li>learn about distributed systems and the respective technologies</li>
+</ol>
+<p>Let’s see what happens up until chapter two!</p> <hr> <div class="neighbourPost"> <a class="prevPost" href="/posts/a-case-for-polishing-your-tools"> A Case for Polishing Your Tools </a> <a class="nextPost" href="/posts/zettelkasten-grid-system-organisation"> The GRID System for Frictionless Zettelkasten Organisation </a> </div>  </article>     </main> <aside class="aside sidebar-right"></aside> <div class="footer">
+Built with <a href="https://astro.build">Astro</a> and <a href="https://picocss.com">Pico CSS</a> •
+<a href="/privacy">Privacy</a> • <a href="/license" rel="me">License</a> • <a href="/rss.xml" rel="me">RSS</a> </div> </div> </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Primary Meta Tags --><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="title" content="04V02"><meta name="description" content="Programmer and creative technologist."><meta name="robots" content="all"><link rel="sitemap" href="/sitemap-index.xml"><!-- browser tab title --><title>04V02</title><!-- RSS --><link rel="alternate" type="application/rss+xml" title="tjex.net" href="https://tjex.net/rss.xml"><!-- Canonical --><link rel="canonical" href="https://tjex.net/logs/04V02/"><!-- Favicons --><link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="48x48" href="/favicon/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://tjex.net/logs/04V02/"><meta property="og:title" content="04V02"><meta property="og:description" content="Programmer and creative technologist."><meta property="og:image" content="https://tjex.net/img/profile-square.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://tjex.net/logs/04V02/"><meta property="twitter:title" content="04V02"><meta property="twitter:description" content="Programmer and creative technologist."><meta property="twitter:image" content="https://tjex.net/img/profile-square.jpg"><style>#themeToggle[data-astro-cid-lfoluaxz]{width:70px;height:70px;flex:inherit;align-self:end;padding:0}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.C_xM32it.css"><script type="module">class s extends HTMLElement{connectedCallback(){const e=this.dataset.message,t=atob("dGpleEB0amV4Lm5ldA=="),l=this.querySelector("#denc-reply");e===void 0?l.setAttribute("href",`mailto:${t}`):l.setAttribute("href",`mailto:${t}?subject=${encodeURIComponent(e)}`)}}customElements.define("email-reply",s);
+</script></head> <div class="wrapper"> <div class="header-wrapper"> <div class="header-left"></div><aside class="header-right"> <nav> <a style="color: var(--muted);" class="nav-link" href="/">about</a> <span style="color: var(--muted);" class="link-divider">:</span> <a style="color: var(--muted);" class="nav-link" href="/contact">contact</a> </nav> </aside> <div class="header-center"></div>  </div> <aside class="aside sidebar-left"> <button class="no-outline" id="themeToggle" aria-label="theme toggle" data-astro-cid-lfoluaxz> <svg id="icon-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" width="40" height="40" xml:space="preserve" data-astro-cid-lfoluaxz> <g data-astro-cid-lfoluaxz> <path d="M60,16.005c0,0,0.001,19.736,0.001,43.994c0,24.258-0.001,43.995-0.001,43.995c-24.258,0-43.994-19.736-43.994-43.995
+            C16.006,35.742,35.742,16.005,60,16.005 M60,5.005C29.627,5.005,5.006,29.626,5.006,60c0,30.372,24.622,54.995,54.994,54.995
+            S114.995,90.371,114.995,60C114.995,29.626,90.372,5.005,60,5.005L60,5.005z" data-astro-cid-lfoluaxz></path> </g> </svg> </button>  <!--
+is:inline includes the script directly into the page, instead 
+of budling it separately (Astro specific). This decreases load 
+time, which is important here to avoid theme flashing
+--> <script>
+    const themeToggle = document.getElementById("themeToggle");
+    const getTheme = () => localStorage.getItem("theme") || "dark";
+    const setTheme = (theme) => {
+        localStorage.setItem("theme", theme);
+        document.documentElement.dataset.theme = theme;
+        document.body.classList.add(theme);
+    };
+
+    // add the current theme from local storage to DOM, which
+    // happens BEFORE rendering.
+    setTheme(getTheme());
+
+    themeToggle.addEventListener("click", () => {
+        if (getTheme() == "light") {
+            setTheme("dark");
+        } else {
+            setTheme("light");
+        }
+    });
+</script> <nav class="nav-left"> <ul> <li><a class="nav-link" href="/posts">posts</a><span class="link-divider">:</span></li> <li><a class="nav-link" href="/projects">projects</a><span class="link-divider">:</span></li> <li><a class="nav-link" href="/listening">listening</a><span class="link-divider">:</span></li> <li><a class="nav-link" href="/logs">logs</a><span class="link-divider">:</span></li> </ul> </nav> </aside> <main class="main-content">        <article class="post-content__article"> <h1>04V02</h1> <div class="post-info"> <span class="monospace"><abbr title="Wed Oct 23 2024 22:31:38 GMT+0200 (Central European Summer Time)">04V02</abbr></span><br> <email-reply data-message="04V02" text="reply via email"> <a href="" id="denc-reply">reply via email</a> </email-reply>  </div>  <p>It amazes me how much time and attention people give on forums to help others.
+And it saddens me that this will likely disappear in the AI age.</p>
+<p>Like <a href="https://stackoverflow.com/a/42333350" target="_blank">this example on StackOverflow</a>.</p>
+<p>It’s also immediately apparent to me how differently I evaluate the answer based
+on the date. The answer was written in 2017. This was pre LLM’s. It was written
+by a human. It feels real, even in digital form.</p>
+<p>In 10 years, I don’t think this will be a regular feeling to have.</p>  <h3> Posts today: </h3> <ul> <li><a href="/posts/logging-the-monkey-mind">logging the monkey mind</a></li> </ul> <hr> <div class="neighbourPost"> <a class="prevPost" href="/logs/04V01"> 04V01 </a> <a class="nextPost" href="/logs/04V03"> 04V03 </a> </div>  </article>     </main> <aside class="aside sidebar-right"></aside> <div class="footer">
+Built with <a href="https://astro.build">Astro</a> and <a href="https://picocss.com">Pico CSS</a> •
+<a href="/privacy">Privacy</a> • <a href="/license" rel="me">License</a> • <a href="/rss.xml" rel="me">RSS</a> </div> </div> </html>
