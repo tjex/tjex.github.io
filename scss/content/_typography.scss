@@ -204,9 +204,11 @@ a,
 }
 
 /* style all outgoing links */
-a[href^="https://tjex.net"]
-{
-  --text-decoration: underline;
+a {
+  &:not([href^="https://tjex.net"], [href^="/"])
+  {
+    --text-decoration: underline;
+  }
 }
 
 nav-link,
