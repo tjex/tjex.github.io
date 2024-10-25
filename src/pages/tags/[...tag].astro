@@ -2,7 +2,7 @@
 // Lists pages with tag x
 import type { GetStaticPaths } from "astro";
 import Layout from "../../layouts/Page.astro";
-import PostPreview from "../../components/PostPreview.astro";
+import PostList from "../../components/PostList.astro";
 import * as colUtil from "../../scripts/collectionUtil.ts";
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -25,7 +25,7 @@ const seo = {
     <p>Posts tagged: <span class="pill">{tag}</span></p>
     <article class="blog-page-content__article">
         <table>
-            {posts.map((post: any) => <PostPreview post={post} collection={post.collection} />)}
+            {posts.map((post: any) => <PostList post={post} collection={post.collection} />)}
         </table>
     </article>
 </Layout>

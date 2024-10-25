@@ -2,7 +2,6 @@
 import Layout from "./Page.astro";
 import ArticleSchema from "../components/ArticleSchema.astro";
 import EmailReply from "../components/Email.astro";
-import Date from "../components/utility/DateFormat.astro";
 
 const { seo } = Astro.props;
 const { post } = Astro.props;
@@ -16,7 +15,7 @@ const { post } = Astro.props;
         <h1>{post.data.title}</h1>
         <div class="post-info">
             <span class="monospace"
-                ><abbr title=`${post.data.date}`><Date date={post.data.arve} format={"arvelie"} /></abbr></span
+                ><abbr title=`${post.data.date}`>{post.data.arve}</abbr></span
             ><br />
             <EmailReply subject={post.data.title} text={"reply via email"} />
         </div>

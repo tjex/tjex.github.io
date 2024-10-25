@@ -1,20 +1,17 @@
 ---
 // post preview component for contact filed as "Blog"
-import Date from "./utility/DateFormat.astro";
 export interface Props {
     post: any;
     collection: string;
 }
 
-const { post, collection } = Astro.props;
+const { post } = Astro.props;
 ---
 
 <!-- Inserts a link to the post as a new row in the encapsulating table where this component is called -->
 <tr class="content-list">
     <td>
-        <span class="pub-date">
-            <Date date={post.arve} format={"arvelie"} /> :
-        </span>
+        <span class="pub-date"> {post.arve} :</span>
         <a href={`/${post.collection}/${post.slug}`}>
             {post.title}
         </a>

@@ -1,7 +1,6 @@
 ---
 import ArticleSchema from "../components/ArticleSchema.astro";
 import { getEntry } from "astro:content";
-import Date from "../components/utility/DateFormat.astro";
 
 import Layout from "./Page.astro";
 import Tags from "../components/Tags.astro";
@@ -23,13 +22,9 @@ const dailyLog = await getEntry("logs", post.data.arve);
             {
                 // Link to the daily log, if there is one.
                 dailyLog != null ? (
-                    <a href=`/logs/${dailyLog.slug}`><span class="monospace">
-                            <Date date={post.data.arve} format={"arvelie"} />
-                    </span></a>
+                    <a style="font-family: monospace" href=`/logs/${dailyLog.slug}`>{post.data.arve}</a>
                 ) : (
-                    <span class="monospace">
-                            <Date date={post.data.arve} format={"arvelie"} />
-                    </span>
+                    <span class="monospace"> {post.data.arve} </span>
                 ) 
             }
             <div><Tags tags={post.data.tags} style={"text"} /></div>
