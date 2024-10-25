@@ -9,15 +9,10 @@ css:
 	sass scss/main.scss src/styles/global.css
 
 deploy: 
-	rm -rf dist/
+	yarn run build
 	git checkout deploy
-	git merge --no-edit main
-	make css
-	yarn build
-	git add -f dist src/styles
-	git commit -m "build and deploy"
-	git reset --soft HEAD~2
-	git commit -m "make deploy"
+	git add -f dist
+	git commit -m "deploy from Makefile"
 	git push origin deploy
 	git checkout main
 
