@@ -12,6 +12,7 @@ css:
 deploy: 
 	rm -rf dist/
 	git checkout deploy
+	rm -rf src/
 	git merge --no-edit main
 	make css
 	yarn build
