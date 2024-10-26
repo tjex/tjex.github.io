@@ -164,6 +164,12 @@ a,
     color: var(--link-visited-hover);
   }
 
+  // style internal / external links.
+  &:not([href^="https://tjex.net"], [href^="/"])
+  {
+    --text-decoration: underline;
+  }
+
   @if $enable-classes {
     // Secondary
     &.secondary {
@@ -200,14 +206,6 @@ a,
         outline-offset: 4px;
       }
     }
-  }
-}
-
-/* style all outgoing links */
-a {
-  &:not([href^="https://tjex.net"], [href^="/"])
-  {
-    --text-decoration: underline;
   }
 }
 
