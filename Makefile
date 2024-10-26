@@ -13,6 +13,7 @@ deploy:
 	rm -rf dist/
 	git checkout deploy
 	git merge --no-edit main
+	make css
 	yarn run build
 	git add -f dist
 	git commit -m "build and deploy"
