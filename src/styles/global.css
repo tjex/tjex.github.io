@@ -1127,6 +1127,9 @@ pre {
   padding: 0.2rem 0.3rem;
   margin-bottom: var(--spacing);
   overflow-x: auto;
+  /* > code { */
+  /*   background: none; */
+  /* } */
   /* this is redundant right? pre is pre-formatted anyway (monospaced) */
   /* > code { */
   /*   display: block; */

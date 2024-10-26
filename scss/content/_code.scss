@@ -63,14 +63,9 @@ pre {
   margin-bottom: var(--spacing);
   overflow-x: auto;
 
-  /* this is redundant right? pre is pre-formatted anyway (monospaced) */
-  /* > code { */
-  /*   display: block; */
-  /*   padding: var(--spacing); */
-  /*   background: none; */
-  /*   font-size: 14px; */
-  /*   line-height: var(--line-height); */
-  /* } */
+  > code {
+    background: none;
+  }
 }
 
 // Code Syntax
