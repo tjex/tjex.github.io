@@ -1127,6 +1127,9 @@ pre {
   padding: 0.2rem 0.3rem;
   margin-bottom: var(--spacing);
   overflow-x: auto;
+  /* > code { */
+  /*   background: none; */
+  /* } */
   /* this is redundant right? pre is pre-formatted anyway (monospaced) */
   /* > code { */
   /*   display: block; */
@@ -1371,8 +1374,8 @@ a,
   outline: none;
   transition: background-color var(--transition), color var(--link-visited-hover), text-decoration var(--transition), box-shadow var(--transition);
 }
-a:not([aria-current], [href^="https://tjex.net"], [href^="/"]),
-[role=link]:not([aria-current], [href^="https://tjex.net"], [href^="/"]) {
+a:not([aria-current], [href^="https://tjex.net"], [href^="/"], [href^="#"]),
+[role=link]:not([aria-current], [href^="https://tjex.net"], [href^="/"], [href^="#"]) {
   text-decoration-style: dotted;
 }
 a:is([aria-current], :hover, :active, :focus),
