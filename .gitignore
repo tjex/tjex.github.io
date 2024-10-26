@@ -2,10 +2,11 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=node
 .astro
 .DS_Store
-scraps/
+
+# build / deploy
 dist/
-#src/assets/
-*.test.md
+*.tar.gz
+
 
 # zk
 notebook.db
