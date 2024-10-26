@@ -1375,12 +1375,12 @@ a,
 }
 a:not([aria-current], [href^="https://tjex.net"], [href^="/"]),
 [role=link]:not([aria-current], [href^="https://tjex.net"], [href^="/"]) {
-  --text-decoration-style: unset;
+  text-decoration-style: unset;
 }
 a:is([aria-current], :hover, :active, :focus),
 [role=link]:is([aria-current], :hover, :active, :focus) {
-  --color: var(--primary-focus);
-  --text-decoration: none;
+  color: var(--primary-focus);
+  text-decoration: none;
 }
 a:visited,
 [role=link]:visited {
@@ -1407,13 +1407,13 @@ a:not([href^="https://tjex.net"], [href^="/"]),
 }
 a.secondary,
 [role=link].secondary {
-  --color: var(--secondary);
+  color: var(--secondary);
 }
 a.secondary:is([aria-current], :hover, :active, :focus),
 [role=link].secondary:is([aria-current], :hover, :active, :focus) {
-  --color: var(--secondary-hover);
-  --text-decoration: var(--text-decoration);
-  --text-decoration-color: var(--primary-focus);
+  color: var(--secondary-hover);
+  text-decoration: var(--text-decoration);
+  text-decoration-color: var(--primary-focus);
 }
 a.secondary:focus,
 [role=link].secondary:focus {
@@ -1424,13 +1424,13 @@ a.secondary:focus,
 }
 a.contrast,
 [role=link].contrast {
-  --color: var(--contrast);
+  color: var(--contrast);
 }
 a.contrast:is([aria-current], :hover, :active, :focus),
 [role=link].contrast:is([aria-current], :hover, :active, :focus) {
-  --color: var(--contrast-hover);
-  --text-decoration: var(--text-decoration);
-  --text-decoration-color: var(--primary-focus);
+  color: var(--contrast-hover);
+  text-decoration: var(--text-decoration);
+  text-decoration-color: var(--primary-focus);
 }
 a.contrast:focus,
 [role=link].contrast:focus {

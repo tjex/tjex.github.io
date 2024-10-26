@@ -145,12 +145,12 @@ a,
   // style internal / external links.
   &:not([aria-current], [href^="https://tjex.net"], [href^="/"])
   {
-    --text-decoration-style: unset;
+    text-decoration-style: unset;
   }
 
   &:is([aria-current], :hover, :active, :focus) {
-    --color: var(--primary-focus);
-    --text-decoration: none;
+    color: var(--primary-focus);
+    text-decoration: none;
   }
 
   &:visited {
@@ -181,12 +181,12 @@ a,
   @if $enable-classes {
     // Secondary
     &.secondary {
-      --color: var(--secondary);
+      color: var(--secondary);
 
       &:is([aria-current], :hover, :active, :focus) {
-        --color: var(--secondary-hover);
-        --text-decoration: var(--text-decoration);
-        --text-decoration-color: var(--primary-focus);
+        color: var(--secondary-hover);
+        text-decoration: var(--text-decoration);
+        text-decoration-color: var(--primary-focus);
       }
 
       &:focus {
@@ -199,12 +199,12 @@ a,
 
     // Contrast
     &.contrast {
-      --color: var(--contrast);
+      color: var(--contrast);
 
       &:is([aria-current], :hover, :active, :focus) {
-        --color: var(--contrast-hover);
-        --text-decoration: var(--text-decoration);
-        --text-decoration-color: var(--primary-focus);
+        color: var(--contrast-hover);
+        text-decoration: var(--text-decoration);
+        text-decoration-color: var(--primary-focus);
       }
 
       &:focus {
