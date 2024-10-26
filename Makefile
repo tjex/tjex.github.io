@@ -12,14 +12,10 @@ css:
 deploy: 
 	rm -rf dist/
 	git checkout deploy
-	rm -rf src/
 	git merge --no-edit main
-	make css
-	yarn build
-	git add -f dist src/styles
+	yarn run build
+	git add -f dist
 	git commit -m "build and deploy"
-	git reset --soft HEAD~2
-	git commit -m "make deploy"
 	git push origin deploy
 	git checkout main
 
