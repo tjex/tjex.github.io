@@ -11,6 +11,11 @@ const seo = {
 ---
 
 <Layout seo={seo}>
+    <blockquote>
+        This is a sanity check file, to be sure the site is being displayed as expected.
+        Here is the below template for your own design tests: <code><a href="/files/format.html">format.html</a></code>
+    </blockquote>
+
     <h1>header1</h1>
     <h2>header2</h2>
     <h3>header3</h3>
@@ -19,7 +24,8 @@ const seo = {
 
     <p>
         This is a paragraph, with <b>bold</b>, <i>italic</i>, <code>code</code>, a <a href="/">local link</a> and an <a
-            href="">external link</a
+            href=""
+            target="_blank">external link</a
         >. This is a <kbd>kbd</kbd> element.
     </p>
 
@@ -27,7 +33,7 @@ const seo = {
         <p>
             This is a paragraph inside an article block, with <b>bold</b>, <i>italic</i>, <code>code</code>, a <a
                 href="/">local link</a
-            > and an <a href="">external link</a>.
+            > and an <a href="" target="_blank">external link</a>.
         </p>
     </article>
 
@@ -55,4 +61,10 @@ const seo = {
 
     <q>This is a quote block, with <b>bold</b>, <i>italic</i>, <code>code</code> and a <a>link</a>.</q>
     <cite>Author, Source</cite>
+
+    <blockquote>
+        This is a blockquote block, with <b>bold</b>, <i>italic</i>, <code>code</code> and a <a>link</a>.
+    </blockquote>
+
+    <p>debug: hosted from sourcehut</p>
 </Layout>
