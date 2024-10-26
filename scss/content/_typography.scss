@@ -140,6 +140,12 @@ a,
       box-shadow var(--transition);
   }
 
+  // style internal / external links.
+  &:not([aria-current], [href^="https://tjex.net"], [href^="/"])
+  {
+    --text-decoration: underline;
+  }
+
   &:is([aria-current], :hover, :active, :focus) {
     --color: var(--primary-focus);
     --text-decoration: none;
