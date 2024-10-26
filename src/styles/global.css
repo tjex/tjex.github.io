@@ -1394,6 +1394,10 @@ a:focus-visible:visited,
 [role=link]:focus-visible:visited {
   color: var(--link-visited-hover);
 }
+a:not([href^="https://tjex.net"], [href^="/"]),
+[role=link]:not([href^="https://tjex.net"], [href^="/"]) {
+  --text-decoration: underline;
+}
 a.secondary,
 [role=link].secondary {
   color: var(--secondary);
