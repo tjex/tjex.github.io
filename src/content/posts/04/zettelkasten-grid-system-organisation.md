@@ -46,8 +46,7 @@ Identifiers (UIDs), but they are not directly part of the GRID system itself.
 - [My requirements for the system](#my-requirements-for-the-system)
 - [The GRID System](#the-grid-system)
 - [Tagging](#tagging)
-- [Note Metadata, File Naming and Future Proofing](#note-metadata-and-file-naming-and-future-proofing)
-- [Final Thoughts](#final-thoughts)
+- [Note Metadata, File Naming and Future Proofing](#note-metadata-file-naming-and-future-proofing)
 
 ## Back Story
 
@@ -470,7 +469,7 @@ References:
 ### Status tags
 
 1. _seed_: all notes start with this. It's a way to easily search for unrefined
-   ideas. A note is a _seed_ if it has less than 3 [meaningful links](ma31).
+   ideas. A note is a _seed_ if it has less than 3 meaningful links.
 2. _fern_: assigned upon removal of the seed tag.
 3. _evergreen_: when a _fern_ has 5 or more meaningful links.
 
