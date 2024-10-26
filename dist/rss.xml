@@ -13,7 +13,68 @@ tact, and with the added side effect that I can also access them the
 internet - as it does happen where I recall something cool I saw but am not on
 my own machine to find the link in my history or
 &lt;a href=&quot;https://github.com/sysid/bkmr&quot;&gt;bookmarks&lt;/a&gt;.&lt;/p&gt;
-</content:encoded><category>admin</category></item><item><title>The Arvelie time system</title><link>https://tjex.net/posts/arveelie-time-system/</link><guid isPermaLink="true">https://tjex.net/posts/arveelie-time-system/</guid><description>The Arvelie time system is a concise and useful way to approach our relationship to time, and also time management.</description><pubDate>Tue, 15 Oct 2024 13:33:08 GMT</pubDate><content:encoded>&lt;p&gt;I&apos;m currently wrapping my head around the Arvelie time system, which I found &lt;a href=&quot;https://wiki.xxiivv.com/site/time&quot;&gt;here on Devine&apos;s website&lt;/a&gt;,
+</content:encoded><category>admin</category></item><item><title>Why use the Arvelie time system?</title><link>https://tjex.net/posts/why-use-the-arvelie-time-system/</link><guid isPermaLink="true">https://tjex.net/posts/why-use-the-arvelie-time-system/</guid><description>Why use an alternate time system? Because it carries more meaning.</description><pubDate>Tue, 22 Oct 2024 17:24:13 GMT</pubDate><content:encoded>&lt;p&gt;I&apos;ve implemented the Arvelie time system, which I found documented &lt;a href=&quot;https://wiki.xxiivv.com/site/arvelie.html&quot;&gt;here on
+Devine Lu Linvega&apos;s site&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I wrote my initial thoughts on the time system in, &lt;a href=&quot;https://tjex.net/posts/the-arvelie-time-system&quot;&gt;The Arvelie time system&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;But why actually use it? Particularly, when I, unlike Devine do not live on a
+boat and do need to exist much more rigidly within the dark ages of the Gregorian calendar.&lt;/p&gt;
+&lt;p&gt;For me it&apos;s for two main reasons.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Treating the beginning of a project as year 0 creates a closer relationship
+to the project.&lt;/li&gt;
+&lt;li&gt;This site is not a news site.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Additionally, Arvelie time offers a much cleaner framework for project planning
+and time management. In the Gregorian calendar a &quot;month&quot; of work can be anywhere
+between 28 to 31 days. A &quot;month&quot; in Arvelie is 14 days, always.&lt;/p&gt;
+&lt;h2&gt;A closer relationship to a project&lt;/h2&gt;
+&lt;p&gt;This website is a personal project. Not just the source code, but the projects,
+posts and artefacts that get presented on it. I am also a personal project
+(WIP). 2020 was the year when my direction in life began to steer in a very
+different direction (moving from a life in music to a life in software
+development).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Strangely enough, before any of that was apparent, and before
+Covid-19 hit, I had started a physical journal mid 2019 and titled in Paradigm
+Shift. I later &lt;a href=&quot;https://tjex.bandcamp.com/track/paradigm-shift&quot;&gt;released the music I was making at the
+time&lt;/a&gt; under the same title.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;By embedding the age of a project within time, time itself becomes a member of
+the project, rather than its usual function -- a tool to categorize and sort all
+historical and future events.&lt;/p&gt;
+&lt;p&gt;I developed that impression very quickly when browsing through Devine&apos;s website.
+Seeing time stamps in Arvelie communicated the progression of the work
+within the context of the Devine Lu Linvega / xxiivv project, rather than a
+universal point in time.&lt;/p&gt;
+&lt;p&gt;A nice side effect is that the connotations of a timestamp is also removed. If I
+see a timestamp somewhere in the range of 2020-2022 I think &quot;Covid-19&quot;. On
+Devine&apos;s site 2020-2022 would be represented as 14A00-16A00.&lt;/p&gt;
+&lt;p&gt;Sometimes that context can bolster the character of a work. But other times
+it can hinder it. When browsing a blog for example, it&apos;s easy to go back a year
+or two and begin to characterise the posts as &quot;old&quot;, even though the topics may
+be completely relevant or even &lt;em&gt;more&lt;/em&gt; relevant -- it&apos;s no secret that to see the
+future, we need to look into the past.&lt;/p&gt;
+&lt;p&gt;Arvelie time allows for a less &apos;flavoured&apos; interpretation of the artefact, and
+brings Time on board as a project member, rather than a standard universal
+measuring stick.&lt;/p&gt;
+&lt;h2&gt;This site is not a news site&lt;/h2&gt;
+&lt;p&gt;The posts I&apos;ve made so far may include some references to current
+happenings, like &lt;a href=&quot;https://tjex.net/posts/prehistoric-ai-learning&quot;&gt;learning in the prehistoric age of AI&lt;/a&gt;,
+but I&apos;m not reporting on events.&lt;/p&gt;
+&lt;p&gt;Because of this, regular dates are not nearly as important.&lt;/p&gt;
+&lt;p&gt;In any case, Arvelie time maps perfectly to the Gregorian calendar. It&apos;s just a
+cleaner way to divide up spans of time. I built an &lt;a href=&quot;https://git.sr.ht/~tjex/arvelie&quot;&gt;Arverlie
+converter&lt;/a&gt; that I use in all my blog and diary
+templates. In my &lt;a href=&quot;https://tjex.net/logs&quot;&gt;logs&lt;/a&gt; I reveal the regular date if
+you hover over the Arvelie time stamp on an individual log page, like the &lt;a href=&quot;https://tjex.net/logs/04V01&quot;&gt;log
+page for today&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Likewise, technical blog posts would not be suited for Arvelie time. People
+need to know the date of a technical post to get an idea of how outdated the
+tools now are.&lt;/p&gt;
+&lt;p&gt;Particularly in the web domain or when learning a new tool or language, things
+move so fast that a technical tutorial a year or two old can land you with in a
+sub-optimal or completely dated solution.&lt;/p&gt;
+</content:encoded><category>philosophy</category></item><item><title>The Arvelie time system</title><link>https://tjex.net/posts/arveelie-time-system/</link><guid isPermaLink="true">https://tjex.net/posts/arveelie-time-system/</guid><description>The Arvelie time system is a concise and useful way to approach our relationship to time, and also time management.</description><pubDate>Tue, 15 Oct 2024 13:33:08 GMT</pubDate><content:encoded>&lt;p&gt;I&apos;m currently wrapping my head around the Arvelie time system, which I found &lt;a href=&quot;https://wiki.xxiivv.com/site/time&quot;&gt;here on Devine&apos;s website&lt;/a&gt;,
 (after also having it
 bent by his &lt;a href=&quot;https://wiki.xxiivv.com/site/horaire&quot;&gt;time tracking system&lt;/a&gt;).&lt;/p&gt;
 &lt;blockquote&gt;
@@ -414,8 +475,7 @@ to get more of an overview before diving in if you like.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;#my-requirements-for-the-system&quot;&gt;My requirements for the system&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#the-grid-system&quot;&gt;The GRID System&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#tagging&quot;&gt;Tagging&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#note-metadata-and-file-naming-and-future-proofing&quot;&gt;Note Metadata, File Naming and Future Proofing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#final-thoughts&quot;&gt;Final Thoughts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#note-metadata-file-naming-and-future-proofing&quot;&gt;Note Metadata, File Naming and Future Proofing&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Back Story&lt;/h2&gt;
 &lt;p&gt;Over the past few years I&apos;ve read through many ideas of how to structure and
@@ -774,7 +834,7 @@ References:
 &lt;h3&gt;Status tags&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;em&gt;seed&lt;/em&gt;: all notes start with this. It&apos;s a way to easily search for unrefined
-ideas. A note is a &lt;em&gt;seed&lt;/em&gt; if it has less than 3 &lt;a href=&quot;ma31&quot;&gt;meaningful links&lt;/a&gt;.&lt;/li&gt;
+ideas. A note is a &lt;em&gt;seed&lt;/em&gt; if it has less than 3 meaningful links.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;fern&lt;/em&gt;: assigned upon removal of the seed tag.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;evergreen&lt;/em&gt;: when a &lt;em&gt;fern&lt;/em&gt; has 5 or more meaningful links.&lt;/li&gt;
 &lt;/ol&gt;
