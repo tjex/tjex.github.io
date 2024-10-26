@@ -1371,6 +1371,10 @@ a,
   outline: none;
   transition: background-color var(--transition), color var(--link-visited-hover), text-decoration var(--transition), box-shadow var(--transition);
 }
+a:not([aria-current], [href^="https://tjex.net"], [href^="/"]),
+[role=link]:not([aria-current], [href^="https://tjex.net"], [href^="/"]) {
+  --text-decoration: underline;
+}
 a:is([aria-current], :hover, :active, :focus),
 [role=link]:is([aria-current], :hover, :active, :focus) {
   --color: var(--primary-focus);
@@ -1394,10 +1398,6 @@ a:focus-visible,
 a:focus-visible:visited,
 [role=link]:focus-visible:visited {
   color: var(--link-visited-hover);
-}
-a:not([href^="https://tjex.net"], [href^="/"]),
-[role=link]:not([href^="https://tjex.net"], [href^="/"]) {
-  --text-decoration: underline;
 }
 a.secondary,
 [role=link].secondary {
