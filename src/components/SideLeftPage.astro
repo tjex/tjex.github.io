@@ -1,0 +1,17 @@
+---
+// this is the base component for the LEFT sidebar on PAGES
+// it's wrapped in the <aside> attribute, which is part of the flex layout of the site.
+import ThemeToggle from "./ui/ThemeToggle.astro";
+---
+
+<aside class="aside sidebar-left">
+    <ThemeToggle />
+    <nav class="nav-left">
+        <ul>
+            <li><a class="nav-link" href="/posts">posts</a><span class="link-divider">:</span></li>
+            <li><a class="nav-link" href="/projects">projects</a><span class="link-divider">:</span></li>
+            <li><a class="nav-link" href="/listening">listening</a><span class="link-divider">:</span></li>
+            <li><a class="nav-link" href="/logs">logs</a><span class="link-divider">:</span></li>
+        </ul>
+    </nav>
+</aside>

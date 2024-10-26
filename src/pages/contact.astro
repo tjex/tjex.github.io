@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Page.astro";
+import Email from "../components/Email.astro";
+import tjex from "../data/tjex.js";
+
+const seo = {
+    title: "Contact",
+    description:
+        "Contact page for tjex (Tillman Jex). Software developer and creative technologist based in Berlin, Germany.",
+};
+---
+
+<Layout seo={seo}>
+    <h1>contact</h1>
+    <div class="grid">
+        <div>
+            <h5 style="color: var(--color)">chat</h5>
+            <ul>
+                <li><Email text={"Email"} /></li>
+                <li><a rel="me" href=`${tjex.mastodon}`>Mastodon</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5 style="color: var(--color)">code</h5>
+            <ul>
+                <li><a rel="me" href=`${tjex.github}`>GitHub</a></li>
+                <li><a rel="me" href=`${tjex.sourcehut}`>Sourcehut</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h5 style="color: var(--color)">music</h5>
+            <ul>
+                <li><a rel="me" href=`${tjex.bandcamp}`>Bandcamp</a></li>
+            </ul>
+        </div>
+    </div>
+</Layout>

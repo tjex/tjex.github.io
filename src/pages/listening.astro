@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Page.astro";
+import MediaLink from "../components/MediaLink.astro";
+
+import musicData from "../data/music.json";
+
+// Define the type for the music data
+type MusicItem = {
+    src: string;
+    artist: string;
+    work: string;
+    character: string;
+    vocals: string;
+};
+
+// Assert the type of musicData
+const music: MusicItem[] = musicData;
+
+
+const seo = {
+    title: "Listening List",
+    description: "External link archive of music I'm listening to",
+};
+---
+
+<Layout seo={seo}>
+    <h1>listening list</h1>
+    <p>
+        Some of what I listen to makes it here. If you like the general flavours of the below list, you can find more on
+        my <a href="https://bandcamp.com/tjex-fan">bandcamp fan page</a>. Just as in open source, if you find that an
+        artist provides value to you, consider supporting their work by buying their music from Bandcamp. The artist
+        gets the
+        <a href="https://get.bandcamp.help/hc/en-us/articles/23020665520663-What-are-Bandcamp-s-fees">lion's share.</a>
+    </p>
+
+    <!-- Create a two columned grid from entries. 
+        They collapse nicer than a list on small screens. -->
+    {
+    music.map((_, i) => {
+    if (i % 2 === 0 && i < music.length - 1 )
+                return (
+                <div class=grid>
+                    <p>
+      <a href={`${music[i].src}`} target="_blank"> {music[i].artist} </a>  <span class="muted"><br> &#10149; {music[i].work}</span>
+                    </p>
+                    <p>
+      <a href={`${music[i+1].src}`} target="_blank"> {music[i+1].artist} </a> <br> <span class="muted">&#10149; {music[i+1].work}</span>
+                    </p>
+                </div>
+                );
+                })
+    }
+</Layout>

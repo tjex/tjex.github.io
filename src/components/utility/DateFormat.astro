@@ -1,0 +1,30 @@
+---
+const { date, format } = Astro.props;
+
+let MDY,
+    MY,
+    ISO = "";
+
+if (date === "now") {
+    var dateFormatted = new Date();
+} else {
+    var dateFormatted = new Date(date);
+}
+if (format === "MDY") {
+    const optionsMDY = { month: "long", day: "2-digit", year: "numeric", hour12: false };
+    MDY = dateFormatted.toLocaleDateString("en-US", optionsMDY);
+}
+
+if (format === "MY") {
+    const optionsMY = { month: "short", year: "numeric", hour12: false };
+    MY = dateFormatted.toLocaleDateString("en-US", optionsMY);
+}
+
+if (format === "ISO") {
+    ISO = dateFormatted.toISOString().split("T")[0];
+}
+---
+
+{format == "MDY" ? <time>{MDY}</time> : null}
+{format == "MY" ? <time>{MY}</time> : null}
+{format == "ISO" ? <time>{ISO}</time> : null}

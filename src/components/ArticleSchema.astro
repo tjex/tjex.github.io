@@ -1,0 +1,36 @@
+---
+import site from "../data/tjex.js";
+
+export interface Props {
+    post: any;
+}
+
+const { post } = Astro.props;
+
+const ldData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: `${post.data.title}`,
+    url: `${site.url}/posts/${post.slug}`,
+    datePublished: `${post.data.date}`,
+    description: `${post.data.description}`,
+    author: {
+        "@type": "Person",
+        name: `${site.webName}`,
+        image: {
+            "@type": "ImageObject",
+            url: `${site.url}/img/profile-square.jpg`,
+            width: 488,
+            height: 488,
+        },
+        url: `${site.url}`,
+        sameAs: [`${site.url}/posts`, `${site.github}`, `${site.mastodon}`],
+    },
+    mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `${site.url}/posts/`,
+    },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(ldData)} is:inline />

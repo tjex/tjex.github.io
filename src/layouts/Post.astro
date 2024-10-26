@@ -1,0 +1,35 @@
+---
+import ArticleSchema from "../components/ArticleSchema.astro";
+import { getEntry } from "astro:content";
+
+import Layout from "./Page.astro";
+import Tags from "../components/Tags.astro";
+import EmailReply from "../components/Email.astro";
+
+const { seo } = Astro.props;
+const { post } = Astro.props;
+
+const dailyLog = await getEntry("logs", post.data.arve);
+---
+
+<Layout {seo}>
+    <Fragment slot="head-bottom">
+        <ArticleSchema {post} />
+    </Fragment>
+    <article class="post-content__article">
+        <h1>{post.data.title}</h1>
+        <div class="post-info">
+            {
+                // Link to the daily log, if there is one.
+                dailyLog != null ? (
+                    <a style="font-family: monospace" href=`/logs/${dailyLog.slug}`>{post.data.arve}</a>
+                ) : (
+                    <span class="monospace"> {post.data.arve} </span>
+                ) 
+            }
+            <div><Tags tags={post.data.tags} style={"text"} /></div>
+            <EmailReply subject={post.data.title} text={"reply via email"} />
+        </div>
+        <slot />
+    </article>
+</Layout>
