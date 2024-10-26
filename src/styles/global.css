@@ -1395,6 +1395,10 @@ a:focus-visible:visited,
 [role=link]:focus-visible:visited {
   color: var(--link-visited-hover);
 }
+a:not([href^="https://tjex.net"], [href^="/"]),
+[role=link]:not([href^="https://tjex.net"], [href^="/"]) {
+  --text-decoration: underline;
+}
 a.secondary,
 [role=link].secondary {
   --color: var(--secondary);
@@ -1428,11 +1432,6 @@ a.contrast:focus,
   outline: dashed;
   outline-width: 2px;
   outline-offset: 4px;
-}
-
-/* style all outgoing links */
-a:not([href^="https://tjex.net"], [href^="/"]) {
-  --text-decoration: underline;
 }
 
 nav-link, link-divider,
