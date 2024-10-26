@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Primary Meta Tags --><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="title" content="Writing a masters thesis with Zettelkasten - Part 1"><meta name="description" content="How can we use Zettelkasten effectively, given a large and time sensitive writing and research task such as a thesis or Ph.D?"><meta name="robots" content="all"><link rel="sitemap" href="/sitemap-index.xml"><!-- browser tab title --><title>Writing a masters thesis with Zettelkasten - Part 1</title><!-- RSS --><link rel="alternate" type="application/rss+xml" title="tjex.net" href="https://tjex.net/rss.xml"><!-- Canonical --><link rel="canonical" href="https://tjex.net/posts/writing-a-masters-thesis-with-zettelkasten-part-1/"><!-- Favicons --><link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="48x48" href="/favicon/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://tjex.net/posts/writing-a-masters-thesis-with-zettelkasten-part-1/"><meta property="og:title" content="Writing a masters thesis with Zettelkasten - Part 1"><meta property="og:description" content="How can we use Zettelkasten effectively, given a large and time sensitive writing and research task such as a thesis or Ph.D?"><meta property="og:image" content="https://tjex.net/img/profile-square.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://tjex.net/posts/writing-a-masters-thesis-with-zettelkasten-part-1/"><meta property="twitter:title" content="Writing a masters thesis with Zettelkasten - Part 1"><meta property="twitter:description" content="How can we use Zettelkasten effectively, given a large and time sensitive writing and research task such as a thesis or Ph.D?"><meta property="twitter:image" content="https://tjex.net/img/profile-square.jpg"><style>#themeToggle[data-astro-cid-lfoluaxz]{width:70px;height:70px;flex:inherit;align-self:end;padding:0}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.C3eSBfh1.css"><script type="module">class s extends HTMLElement{connectedCallback(){const e=this.dataset.message,t=atob("dGpleEB0amV4Lm5ldA=="),l=this.querySelector("#denc-reply");e===void 0?l.setAttribute("href",`mailto:${t}`):l.setAttribute("href",`mailto:${t}?subject=${encodeURIComponent(e)}`)}}customElements.define("email-reply",s);
+</script></head> <div class="wrapper"> <div class="header-wrapper"> <div class="header-left"></div><aside class="header-right"> <nav> <a style="color: var(--muted);" class="nav-link" href="/">about</a> <span style="color: var(--muted);" class="link-divider">:</span> <a style="color: var(--muted);" class="nav-link" href="/contact">contact</a> </nav> </aside> <div class="header-center"></div>  </div> <aside class="aside sidebar-left"> <button class="no-outline" id="themeToggle" aria-label="theme toggle" data-astro-cid-lfoluaxz> <svg id="icon-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" width="40" height="40" xml:space="preserve" data-astro-cid-lfoluaxz> <g data-astro-cid-lfoluaxz> <path d="M60,16.005c0,0,0.001,19.736,0.001,43.994c0,24.258-0.001,43.995-0.001,43.995c-24.258,0-43.994-19.736-43.994-43.995
+            C16.006,35.742,35.742,16.005,60,16.005 M60,5.005C29.627,5.005,5.006,29.626,5.006,60c0,30.372,24.622,54.995,54.994,54.995
+            S114.995,90.371,114.995,60C114.995,29.626,90.372,5.005,60,5.005L60,5.005z" data-astro-cid-lfoluaxz></path> </g> </svg> </button>  <!--
+is:inline includes the script directly into the page, instead 
+of budling it separately (Astro specific). This decreases load 
+time, which is important here to avoid theme flashing
+--> <script>
+    const themeToggle = document.getElementById("themeToggle");
+    const getTheme = () => localStorage.getItem("theme") || "dark";
+    const setTheme = (theme) => {
+        localStorage.setItem("theme", theme);
+        document.documentElement.dataset.theme = theme;
+        document.body.classList.add(theme);
+    };
+
+    // add the current theme from local storage to DOM, which
+    // happens BEFORE rendering.
+    setTheme(getTheme());
+
+    themeToggle.addEventListener("click", () => {
+        if (getTheme() == "light") {
+            setTheme("dark");
+        } else {
+            setTheme("light");
+        }
+    });
+</script> <nav class="nav-left"> <ul> <li><a class="nav-link" href="/posts">posts</a><span class="link-divider">:</span></li> <li><a class="nav-link" href="/projects">projects</a><span class="link-divider">:</span></li> <li><a class="nav-link" href="/listening">listening</a><span class="link-divider">:</span></li> <li><a class="nav-link" href="/logs">logs</a><span class="link-divider">:</span></li> </ul> </nav> </aside> <main class="main-content">        <article class="post-content__article"> <h1>Writing a masters thesis with Zettelkasten - Part 1</h1> <div class="post-info"> <span class="monospace"> 04F08 </span> <div><a href="/tags/learning">learning</a><span></span></div> <email-reply data-message="Writing a masters thesis with Zettelkasten - Part 1" text="reply via email"> <a href="" id="denc-reply">reply via email</a> </email-reply>  </div>   <p>I’ve finally arrived on a topic for my masters thesis. It’s an investigation
+into how the Zettelkasten system enables creative ideation, and subsequent
+development of a network graph user interface, which will be optimized for that
+end goal (generating ideas).</p>
+<p>This topic stems from my life long interests in psychology and technology and as
+such, is a very exciting endeavour for me and my Zettelkasten. Naturally there
+will be a lot of reading, thinking and writing to do, and it would be a crying
+shame for that thinking and writing to not end up in my Zettelkasten as notes.</p>
+<p>Up until now I haven’t had to use my Zettelkasten for a large piece of writing.
+The largest so far being my
+<a href="../2023/floss-a-partial-antidote-to-social-catastrophe">essay on open source and social catastrophe</a>,
+but I only used my Zettelkasten to review relevant literature notes and write a
+few new ones.</p>
+<p>For my masters thesis, I’m exploring what is effectively uncharted territory for
+me. Additionally, the thinking will need to go much deeper than the essay
+required.</p>
+<p>So how can we use Zettelkasten effectively, given a large and time sensitive
+writing and research task such as a thesis or Ph.D? There are a few documented
+experiences of this process, such as
+<a href="https://zettelkasten.de/posts/field-report-4-what-i-learned-writing-thesis-with-zettelkasten/" target="_blank">here</a>
+and <a href="https://www.youtube.com/watch?v=L9SLlxaEEXY" target="_blank">here</a>, which I’ve taken some
+cues from.</p>
+<p>The biggest fear for me is the question we all dealt with when trying to first
+understand Zettelkasten; how do we find a specific note again? I will be reading
+and writing notes on a lot of new content. The process and timeline will be very
+focussed and tight, I therefore would benefit from having my notes at hand all
+the time. Chasing after lost notes would be frustrating and time consuming.</p>
+<p>Indeed, Zettelkasten isn’t designed to be a reliable search and recall system,
+it’s designed to be an environment where we stumble upon previous ideas in
+contextually relevant and therefore meaningful ways.</p>
+<blockquote>
+<p>“<em>In the old system, the question is: Under which topic do I store this note?
+In the new system, the question is: In which context will I want to stumble
+upon it again?</em>” <br>
+~ Ahrens, Sönke - How to Take Smart Notes</p>
+</blockquote>
+<p>But I don’t want to be stumbling around all the time… This project requires
+some more stability in note recall.</p>
+<h2 id="strategy">Strategy</h2>
+<p>The task then is to establish some system of keeping track of which notes I’m
+working on that are specific to my thesis.</p>
+<h3 id="thesis-structure-as-an-index-note">Thesis Structure as an Index Note</h3>
+<p>I had already made a rough plan for the structure of my thesis, which included
+section headings, sub headings, and dot points for the intended content and
+questions to be addressed. I realised this would make for an excellent
+<a href="https://zettelkasten.de/introduction/#structure-notes" target="_blank">index/structure note</a>.</p>
+<p>Many of the sections and sub-sections had questions that were to be addressed
+within them. These questions immediately become question notes. The question
+notes are then filled with outbound links to position and ultimately argument
+notes. This process of question, position, argument documentation is a mixture
+of
+<a href="https://papers.cumincad.org/data/works/att/ca71.content.pdf" target="_blank">the IBIS method</a>,
+the
+<a href="https://zettelkasten.de/posts/layers-of-evidence/" target="_blank">Three Layers of Evidence principle</a>
+and what’s referred to as
+<a href="https://oasislab.pubpub.org/pub/54t0y9mk/release/3" target="_blank">QCE</a> (although I have no
+idea where that acronym comes from).</p>
+<p>To illustrate, here’s a sample of the index note:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#79B8FF;font-weight:bold">---</span></span>
+<span class="line"><span style="color:#E1E4E8">title: ctech masters thesis</span></span>
+<span class="line"><span style="color:#E1E4E8">date: 2024-01-02</span></span>
+<span class="line"><span style="color:#E1E4E8">id: ip4r</span></span>
+<span class="line"><span style="color:#E1E4E8">tags: [</span><span style="color:#DBEDFF;text-decoration:underline">index</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">aliases:</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># ctech masters thesis</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">Driving motivation for the practical project:</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">As creative technologists, it is essential to have tools that help us generate</span></span>
+<span class="line"><span style="color:#E1E4E8">creative ideas and solutions, not just tools that are used to build the end</span></span>
+<span class="line"><span style="color:#E1E4E8">product.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">## Research questions</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">Investigating these research questions:</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> [</span><span style="color:#DBEDFF;text-decoration:underline">what defines the Zettelkasten system?</span><span style="color:#E1E4E8">](</span><span style="color:#E1E4E8;text-decoration:underline">../kp4q</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> [</span><span style="color:#DBEDFF;text-decoration:underline">how does the Zettelkasten system promote creative ideation?</span><span style="color:#E1E4E8">](</span><span style="color:#E1E4E8;text-decoration:underline">../8sb8</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">... more questions / links to notes</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">## 2. Introduction</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">### 2.1 Creative Ideation or Knowledge Generation?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> [</span><span style="color:#DBEDFF;text-decoration:underline">Is there a distinction between creative ideation and knowledge generation?</span><span style="color:#E1E4E8">](</span><span style="color:#E1E4E8;text-decoration:underline">../../4w2l</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">... more questions / links to notes</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">### 2.2 Zettelkasten and Systems Thinking</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">... more questions / links to notes</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">etc</span></span>
+<span class="line"></span></code></pre>
+<h3 id="diary">Diary</h3>
+<p>As well as this,
+<a href="https://tjex.net/posts/zettelkasten-grid-system-organisation/#d-for-diaries">I keep a daily diary within my Zettelkasten</a>
+where I can write freely about particular project or <em>Zettelkasten related work</em>
+at hand. It’s <em>not</em> a diary of my personal life, etc.</p>
+<p>Here is an example of a daily note’s content related to my thesis:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#79B8FF;font-weight:bold"># 2024-03-18</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">Addressing the question</span></span>
+<span class="line"><span style="color:#E1E4E8">[</span><span style="color:#DBEDFF;text-decoration:underline">what connections are there between the Zettelkasten system, creative ideation and network graphs?</span><span style="color:#E1E4E8">](</span><span style="color:#E1E4E8;text-decoration:underline">../../it61</span><span style="color:#E1E4E8">).</span></span>
+<span class="line"><span style="color:#E1E4E8">Trying to think about how zk and graphs are complex systems, and how creative</span></span>
+<span class="line"><span style="color:#E1E4E8">ideation is the result of those systems. How does that happen? That</span></span>
+<span class="line"><span style="color:#E1E4E8">[</span><span style="color:#DBEDFF;text-decoration:underline">consciousness occurs when colonies of cells are large enough in number and connections</span><span style="color:#E1E4E8">](</span><span style="color:#E1E4E8;text-decoration:underline">../../k8pg</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">is an interesting angle, but in the case of zk, the notes aren't 'interacting'</span></span>
+<span class="line"><span style="color:#E1E4E8">with themselves per se. Rather, it is the interaction within the mind, of the</span></span>
+<span class="line"><span style="color:#E1E4E8">information they hold, that somehow comes together to create an idea.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">Idea's are generated from borrowing parts of pre-existing information.</span></span>
+<span class="line"></span></code></pre>
+<h3 id="tags">Tags</h3>
+<p>As per
+<a href="https://tjex.net/posts/zettelkasten-grid-system-organisation/#structure-tags">my approach to tagging</a>
+I will tag all notes that are deemed strongly related to my thesis with
+<code>#p/thesis</code> (‘p’ for project). This is partly a crutch to help find a lost note,
+but is particularly useful given my Zettelkasten program of choice,
+<a href="https://github.com/zk-org/zk" target="_blank">zk</a>, has many powerful features via the command
+line. Having all my thesis notes filterable by tag, means that I can batch
+process them in all ways imaginable from the command line (eg, archival, ML
+input, etc).</p>
+<h2 id="moving-forward">Moving Forward</h2>
+<p>In summary, I have this process and setup:</p>
+<ol>
+<li>An established thesis structure outline, which acts as an
+<a href="https://zettelkasten.de/introduction/#structure-notes" target="_blank">index note</a> where I
+can insert and create links to notes under section headings. This is similar
+to filing notes into folders, just much less rigid. One link can be placed
+under multiple headings too.</li>
+<li>A daily diary where I can write free form thoughts while linking notes that
+I’m referring to. This keeps track of my half formed ideas if I can’t manage
+to write a proper note about them, or if the thoughts are too abstract and
+undefined for a note. These are often called ‘fleeting notes’.</li>
+<li>Following the iterative process of making a <em>question note</em>, which links to
+many different <em>position notes</em> (possible conclusion to the question), which
+ultimately links to an <em>argument note</em> (the final conclusion to the
+question). By following this process, I can keep track of multiple ideas that
+relate to any one initial question, which helps in developing ideas. It also
+fosters good thinking processes in general and will help keep the content of
+the thesis clearer and easier to understand.</li>
+<li>A broad based filter and search capability via the shared <code>#p/thesis</code> tag.</li>
+</ol>
+<p>Let’s see how it goes! I’ll write part 2 at some point down the track and review
+how this system performed, how it changed, etc.</p> <hr> <div class="neighbourPost"> <a class="prevPost" href="/posts/zettelkasten-grid-system-organisation"> The GRID System for Frictionless Zettelkasten Organisation </a> <a class="nextPost" href="/posts/you-dont-need-luck-luck-needs-you"> You don&#39;t need luck, luck needs you </a> </div>  </article>     </main> <aside class="aside sidebar-right"></aside> <div class="footer">
+Built with <a href="https://astro.build">Astro</a> and <a href="https://picocss.com">Pico CSS</a> •
+<a href="/privacy">Privacy</a> • <a href="/license" rel="me">License</a> • <a href="/rss.xml" rel="me">RSS</a> </div> </div> </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Primary Meta Tags --><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="title" content="About"><meta name="description" content="About tjex (Tillman Jex), programmer and creative technologist from Melbourne, Australia. Currently living in Berlin, Germany."><meta name="robots" content="all"><link rel="sitemap" href="/sitemap-index.xml"><!-- browser tab title --><title>About</title><!-- RSS --><link rel="alternate" type="application/rss+xml" title="tjex.net" href="https://tjex.net/rss.xml"><!-- Canonical --><link rel="canonical" href="https://tjex.net/"><!-- Favicons --><link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="48x48" href="/favicon/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://tjex.net/"><meta property="og:title" content="About"><meta property="og:description" content="About tjex (Tillman Jex), programmer and creative technologist from Melbourne, Australia. Currently living in Berlin, Germany."><meta property="og:image" content="https://tjex.net/images/profile-square.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://tjex.net/"><meta property="twitter:title" content="About"><meta property="twitter:description" content="About tjex (Tillman Jex), programmer and creative technologist from Melbourne, Australia. Currently living in Berlin, Germany."><meta property="twitter:image" content="https://tjex.net/images/profile-square.jpg"><style>#themeToggle[data-astro-cid-lfoluaxz]{width:70px;height:70px;flex:inherit;align-self:end;padding:0}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.C3eSBfh1.css"></head> <div class="wrapper"> <div class="header-wrapper"> <div class="header-left"></div><aside class="header-right"> <nav> <a style="color: var(--muted);" class="nav-link" href="/">about</a> <span style="color: var(--muted);" class="link-divider">:</span> <a style="color: var(--muted);" class="nav-link" href="/contact">contact</a> </nav> </aside> <div class="header-center"></div>  </div> <aside class="aside sidebar-left"> <button class="no-outline" id="themeToggle" aria-label="theme toggle" data-astro-cid-lfoluaxz> <svg id="icon-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" width="40" height="40" xml:space="preserve" data-astro-cid-lfoluaxz> <g data-astro-cid-lfoluaxz> <path d="M60,16.005c0,0,0.001,19.736,0.001,43.994c0,24.258-0.001,43.995-0.001,43.995c-24.258,0-43.994-19.736-43.994-43.995
+            C16.006,35.742,35.742,16.005,60,16.005 M60,5.005C29.627,5.005,5.006,29.626,5.006,60c0,30.372,24.622,54.995,54.994,54.995
+            S114.995,90.371,114.995,60C114.995,29.626,90.372,5.005,60,5.005L60,5.005z" data-astro-cid-lfoluaxz></path> </g> </svg> </button>  <!--
+is:inline includes the script directly into the page, instead 
+of budling it separately (Astro specific). This decreases load 
+time, which is important here to avoid theme flashing
+--> <script>
+    const themeToggle = document.getElementById("themeToggle");
+    const getTheme = () => localStorage.getItem("theme") || "dark";
+    const setTheme = (theme) => {
+        localStorage.setItem("theme", theme);
+        document.documentElement.dataset.theme = theme;
+        document.body.classList.add(theme);
+    };
+
+    // add the current theme from local storage to DOM, which
+    // happens BEFORE rendering.
+    setTheme(getTheme());
+
+    themeToggle.addEventListener("click", () => {
+        if (getTheme() == "light") {
+            setTheme("dark");
+        } else {
+            setTheme("light");
+        }
+    });
+</script> <nav class="nav-left"> <ul> <li><a class="nav-link" href="/posts">posts</a><span class="link-divider">:</span></li> <li><a class="nav-link" href="/projects">projects</a><span class="link-divider">:</span></li> <li><a class="nav-link" href="/listening">listening</a><span class="link-divider">:</span></li> <li><a class="nav-link" href="/logs">logs</a><span class="link-divider">:</span></li> </ul> </nav> </aside> <main class="main-content">       <h1>about</h1> <h2>this site</h2> <p>
+My long term goal is to have a website that exists as an artefact of my personal, professional and creative
+        selves. A place outside myself where they can intermingle in a more systematic way. Ideally, the result is
+        interesting content for you, the reader. But please note, this site is as much for me, as it is for you.
+</p> <p>
+On this site, an internal link <a href="/">looks like this</a>, while an external link <a>like this</a>. <br>
+Time is measured in <a href="https://wiki.xxiivv.com/site/arvelie.html">Arvelie time</a>. Year 0 is 2020. To
+        simplify browsing by date range, the first two digits are years since 2020. 'M' is the middle of the year.
+<a href="/posts/why-use-the-arvelie-time-system">Why do this?</a>.
+</p> <h2>tjex</h2> <p>I've done many things, but now I code. I took a scenic route so to say.</p> <p>
+Currently I'm writing my masters thesis on the mechanics behind the <a href="https://en.wikipedia.org/wiki/Zettelkasten">Zettelkasten system</a>, how these mechanics facilitate creative ideation, and what software solutions I can build to best support
+        that process. I'm also the core maintainer of the Zettelkasten note taking CLI tool, <a href="https://github.com/zk-org/zk">zk</a>.
+</p> <p>
+Before finding a home in programming, I was working in the arts / music industry as a <a rel="me" href="https://tjex.bandcamp.com">producer of story music</a>, <a href="https://www.youtube.com/watch?v=hvmIbHW5AZc" rel="me">film composer</a>, and sound engineer. I was
+        also the head engineer and studio manager of
+<a href="https://www.monomsound.com/">MONOM</a>, a state-of-the-art spatial audio studio in Berlin, which saw my
+        two loves of music and technology come together and insighted me to investigate further by means of the above
+        mentioned masters degree.
+</p> <p>
+I'm also a qualified remedial massage therapist, which has seen me work for sporting teams, in clinics, on
+        yachts and in luxury saunas. I train Jiu Jitsu and am working at becoming a better swimmer.
+</p>     </main> <aside class="aside sidebar-right"></aside> <div class="footer">
+Built with <a href="https://astro.build">Astro</a> and <a href="https://picocss.com">Pico CSS</a> •
+<a href="/privacy">Privacy</a> • <a href="/license" rel="me">License</a> • <a href="/rss.xml" rel="me">RSS</a> </div> </div> </html>
