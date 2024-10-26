@@ -1359,12 +1359,14 @@ a,
 [role=link] {
   --color: var(--link-color);
   --background-color: transparent;
-  --text-decoration: underline dotted;
+  --text-decoration: underline;
+  --text-decoration-style: dotted;
   --text-decoration-thickness: 2px;
   --text-decoration-color: var(--link-decoration-color);
   --text-underline-position: under;
   color: var(--color);
   text-decoration: var(--text-decoration);
+  text-decoration-style: var(--text-decoration-style);
   text-decoration-thickness: var(--text-decoration-thickness);
   text-underline-position: var(--text-underline-position);
   text-decoration-color: var(--text-decoration-color);
@@ -1373,7 +1375,7 @@ a,
 }
 a:not([aria-current], [href^="https://tjex.net"], [href^="/"]),
 [role=link]:not([aria-current], [href^="https://tjex.net"], [href^="/"]) {
-  --text-decoration: underline;
+  --text-decoration-style: unset;
 }
 a:is([aria-current], :hover, :active, :focus),
 [role=link]:is([aria-current], :hover, :active, :focus) {
