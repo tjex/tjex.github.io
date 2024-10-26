@@ -5,7 +5,7 @@ date: 2024-10-22T17:24:13Z
 arve: 04V01
 author: tjex
 tags: [philosophy]
-draft: true
+draft: false
 slug: why-use-the-arvelie-time-system
 ---
 
