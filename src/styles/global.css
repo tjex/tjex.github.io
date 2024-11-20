@@ -37,8 +37,8 @@
   --primary-focus: var(--primary);
   --primary-inverse: #d6dae2;
   --secondary: hsl(205, 10%, 40%);
-  --secondary-hover: #b5c2ca;
-  --secondary-focus: rgba(69, 78, 84, 0.125);
+  --secondary-hover: rgb(180.54, 193.035, 201.96);
+  --secondary-focus: rgba(68.85, 77.775, 84.15, 0.125);
   --secondary-inverse: #000;
   --background-color: #d6dae2;
   --grey-surface: hsl(205, 20%, 90%);
@@ -54,7 +54,7 @@
   --nav-link-color: var(--primary);
   --contrast: hsl(205, 10%, 10%);
   --contrast-hover: #000;
-  --contrast-focus: rgba(69, 78, 84, 0.125);
+  --contrast-focus: rgba(68.85, 77.775, 84.15, 0.125);
   --contrast-inverse: #d6dae2;
   --selection-background-color: var(--red);
   --selection-color: var(--contrast-inverse);
@@ -63,11 +63,11 @@
   --blockquote-border-color: var(--muted-border);
   --blockquote-footer-color: var(--muted);
   --note: hsl(210, 35%, 55%);
-  --background-note: #cbd2dd;
+  --background-note: rgb(202.60875, 210.225, 221.44125);
   --warning: hsl(20, 12%, 60%);
-  --background-warning: #d1d3da;
+  --background-warning: rgb(209.124, 211.092, 217.476);
   --danger: hsl(0, 30%, 54%);
-  --background-danger: #d2cfd6;
+  --background-danger: rgb(209.889, 206.451, 213.651);
   --button-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   --button-hover-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   --form-element-background-color: transparent;
@@ -82,10 +82,10 @@
   --form-element-disabled-opacity: 0.5;
   --form-element-invalid-border-color: hsl(0, 45%, 13%);
   --form-element-invalid-active-border-color: hsl(0, 45%, 13%);
-  --form-element-invalid-focus-color: rgba(48, 18, 18, 0.125);
+  --form-element-invalid-focus-color: rgba(48.0675, 18.2325, 18.2325, 0.125);
   --form-element-valid-border-color: hsl(125, 70%, 22%);
   --form-element-valid-active-border-color: hsl(125, 55%, 21%);
-  --form-element-valid-focus-color: rgba(24, 83, 29, 0.125);
+  --form-element-valid-focus-color: rgba(24.0975, 83.0025, 29.00625, 0.125);
   --switch-background-color: hsl(205, 16%, 70%);
   --switch-color: var(--red-inverse);
   --switch-checked-background-color: var(--red);
@@ -96,7 +96,7 @@
   --range-thumb-hover-color: var(--secondary-hover);
   --range-thumb-active-color: var(--red);
   --table-border-color: var(--muted-border);
-  --table-row-stripped-background-color: #dbe0e7;
+  --table-row-stripped-background-color: rgb(219.2, 224.175, 230.3);
   --code-background-color-inline: var(--grey-surface);
   --code-tag-color: hsl(330, 40%, 50%);
   --code-property-color: hsl(185, 40%, 40%);
@@ -107,20 +107,20 @@
   --accordion-open-summary-color: var(--muted);
   --card-background-color: var(--background-color);
   --card-border-color: var(--muted-border);
-  --card-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(23, 26, 28, 0.01698),
-    0.0335rem 0.067rem 0.402rem rgba(23, 26, 28, 0.024),
-    0.0625rem 0.125rem 0.75rem rgba(23, 26, 28, 0.03),
-    0.1125rem 0.225rem 1.35rem rgba(23, 26, 28, 0.036),
-    0.2085rem 0.417rem 2.502rem rgba(23, 26, 28, 0.04302),
-    0.5rem 1rem 6rem rgba(23, 26, 28, 0.06),
-    0 0 0 0.0625rem rgba(23, 26, 28, 0.015);
-  --card-sectionning-background-color: #d9dde4;
-  --dropdown-background-color: #d9dde4;
-  --dropdown-border-color: #d2dae0;
+  --card-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(22.95, 25.925, 28.05, 0.01698),
+    0.0335rem 0.067rem 0.402rem rgba(22.95, 25.925, 28.05, 0.024),
+    0.0625rem 0.125rem 0.75rem rgba(22.95, 25.925, 28.05, 0.03),
+    0.1125rem 0.225rem 1.35rem rgba(22.95, 25.925, 28.05, 0.036),
+    0.2085rem 0.417rem 2.502rem rgba(22.95, 25.925, 28.05, 0.04302),
+    0.5rem 1rem 6rem rgba(22.95, 25.925, 28.05, 0.06),
+    0 0 0 0.0625rem rgba(22.95, 25.925, 28.05, 0.015);
+  --card-sectionning-background-color: rgb(216.6, 221.0875, 228.15);
+  --dropdown-background-color: rgb(216.6, 221.0875, 228.15);
+  --dropdown-border-color: rgb(209.61, 217.94, 223.89);
   --dropdown-box-shadow: var(--card-box-shadow);
   --dropdown-color: var(--color);
   --dropdown-hover-background-color: hsl(205, 20%, 90%);
-  --modal-overlay-background-color: rgba(195, 206, 213, 0.7);
+  --modal-overlay-background-color: rgba(194.82, 205.53, 213.18, 0.7);
   --progress-background-color: hsl(205, 18%, 80%);
   --progress-color: var(--red);
   --loading-spinner-opacity: 0.5;
@@ -152,18 +152,18 @@
     --primary-muted: hsl(0, 45%, 13%);
     --primary-focus: var(--primary);
     --primary-inverse: var(--contrast);
-    /* --secondary: #7c706a; */
+    /* --secondary: rgb(123.93, 111.69, 105.57); */
     --secondary: hsl(210, 35%, 55%);
-    --secondary-hover: #577089;
-    --secondary-focus: rgba(100, 140, 180, 0.25);
+    --secondary-hover: rgb(86.221875, 111.5625, 136.903125);
+    --secondary-focus: rgba(100.0875, 140.25, 180.4125, 0.25);
     --secondary-inverse: #d6dae2;
-    /* --background-color: #1d1816; */
+    /* --background-color: rgb(28.56, 24.48, 22.44); */
     --background-color: #000;
     --grey-surface: hsl(205, 10%, 20%);
     --grey-surface-hover: hsl(205, 15%, 15%);
     --color: hsl(20, 12%, 60%);
     --heading-color: hsl(20, 20%, 70%);
-    --muted: #756e6b;
+    --muted: rgb(117.504, 110.092, 106.896);
     --muted-border: hsl(20, 12%, 50%);
     --link-color: var(--color);
     --link-decoration-color: var(--color);
@@ -172,7 +172,7 @@
     --nav-link-color: var(--primary);
     --contrast: hsl(20, 20%, 70%);
     --contrast-hover: #d6dae2;
-    --contrast-focus: rgba(165, 149, 141, 0.25);
+    --contrast-focus: rgba(165.24, 148.92, 140.76, 0.25);
     --contrast-inverse: #000;
     --selection-background-color: var(--red);
     --selection-color: var(--contrast-inverse);
@@ -181,15 +181,15 @@
     --blockquote-border-color: var(--muted-border);
     --blockquote-footer-color: var(--muted);
     --note: hsl(210, 35%, 55%);
-    --background-note: #1e2a36;
+    --background-note: rgb(30.02625, 42.075, 54.12375);
     --warning: hsl(20, 12%, 60%);
-    --background-warning: #322d2a;
+    --background-warning: rgb(49.572, 44.676, 42.228);
     --danger: hsl(0, 30%, 54%);
-    --background-danger: #2b1a1a;
+    --background-danger: rgb(43.2225, 25.6275, 25.6275);
     --button-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     --button-hover-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    --form-element-background-color: #594c46;
-    --form-element-border-color: #8f7a70;
+    --form-element-background-color: rgb(89.25, 76.5, 70.125);
+    --form-element-border-color: rgb(142.8, 122.4, 112.2);
     --form-element-color: var(--color);
     --form-element-placeholder-color: var(--muted);
     --form-element-active-background-color: var(--form-element-background-color);
@@ -200,31 +200,31 @@
     --form-element-disabled-opacity: 0.5;
     --form-element-invalid-border-color: hsl(0, 45%, 13%);
     --form-element-invalid-active-border-color: hsl(0, 45%, 13%);
-    --form-element-invalid-focus-color: rgba(48, 18, 18, 0.25);
+    --form-element-invalid-focus-color: rgba(48.0675, 18.2325, 18.2325, 0.25);
     --form-element-valid-border-color: hsl(125, 75%, 13%);
     --form-element-valid-active-border-color: hsl(125, 70%, 22%);
-    --form-element-valid-focus-color: rgba(17, 95, 23, 0.25);
-    --switch-background-color: #8f7a70;
+    --form-element-valid-focus-color: rgba(16.83, 95.37, 23.375, 0.25);
+    --switch-background-color: rgb(142.8, 122.4, 112.2);
     --switch-color: var(--red-inverse);
     --switch-checked-background-color: var(--red);
-    --range-border-color: #8f7a70;
+    --range-border-color: rgb(142.8, 122.4, 112.2);
     --range-active-border-color: hsl(20, 12%, 50%);
     --range-thumb-border-color: var(--background-color);
     --range-thumb-color: var(--secondary);
     --range-thumb-hover-color: var(--secondary-hover);
     --range-thumb-active-color: var(--red);
     --table-border-color: var(--muted-border);
-    --table-row-stripped-background-color: rgba(165, 149, 141, 0.05);
+    --table-row-stripped-background-color: rgba(165.24, 148.92, 140.76, 0.05);
     --code-background-color-inline: var(--grey-surface);
     --code-tag-color: hsl(330, 30%, 50%);
     --code-property-color: hsl(185, 30%, 50%);
     --code-value-color: hsl(40, 10%, 50%);
-    --code-comment-color: #9a887f;
+    --code-comment-color: rgb(154.02, 135.66, 126.48);
     --accordion-border-color: var(--muted-border);
     --accordion-active-summary-color: var(--red);
     --accordion-close-summary-color: var(--color);
     --accordion-open-summary-color: var(--muted);
-    --card-background-color: #6b5c54;
+    --card-background-color: rgb(107.1, 91.8, 84.15);
     --card-border-color: var(--card-background-color);
     --card-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.01698),
       0.0335rem 0.067rem 0.402rem rgba(0, 0, 0, 0.024),
@@ -233,14 +233,14 @@
       0.2085rem 0.417rem 2.502rem rgba(0, 0, 0, 0.04302),
       0.5rem 1rem 6rem rgba(0, 0, 0, 0.06),
       0 0 0 0.0625rem rgba(0, 0, 0, 0.015);
-    --card-sectionning-background-color: #7d6b62;
+    --card-sectionning-background-color: rgb(124.95, 107.1, 98.175);
     --dropdown-background-color: hsl(20, 12%, 50%);
-    --dropdown-border-color: #8f7a70;
+    --dropdown-border-color: rgb(142.8, 122.4, 112.2);
     --dropdown-box-shadow: var(--card-box-shadow);
     --dropdown-color: var(--color);
-    --dropdown-hover-background-color: rgba(143, 122, 112, 0.75);
-    --modal-overlay-background-color: rgba(143, 122, 112, 0.8);
-    --progress-background-color: #8f7a70;
+    --dropdown-hover-background-color: rgba(142.8, 122.4, 112.2, 0.75);
+    --modal-overlay-background-color: rgba(142.8, 122.4, 112.2, 0.8);
+    --progress-background-color: rgb(142.8, 122.4, 112.2);
     --progress-color: var(--red);
     --loading-spinner-opacity: 0.5;
     --tooltip-background-color: var(--contrast);
@@ -270,18 +270,18 @@
   --primary-muted: hsl(0, 45%, 13%);
   --primary-focus: var(--primary);
   --primary-inverse: var(--contrast);
-  /* --secondary: #7c706a; */
+  /* --secondary: rgb(123.93, 111.69, 105.57); */
   --secondary: hsl(210, 35%, 55%);
-  --secondary-hover: #577089;
-  --secondary-focus: rgba(100, 140, 180, 0.25);
+  --secondary-hover: rgb(86.221875, 111.5625, 136.903125);
+  --secondary-focus: rgba(100.0875, 140.25, 180.4125, 0.25);
   --secondary-inverse: #d6dae2;
-  /* --background-color: #1d1816; */
+  /* --background-color: rgb(28.56, 24.48, 22.44); */
   --background-color: #000;
   --grey-surface: hsl(205, 10%, 20%);
   --grey-surface-hover: hsl(205, 15%, 15%);
   --color: hsl(20, 12%, 60%);
   --heading-color: hsl(20, 20%, 70%);
-  --muted: #756e6b;
+  --muted: rgb(117.504, 110.092, 106.896);
   --muted-border: hsl(20, 12%, 50%);
   --link-color: var(--color);
   --link-decoration-color: var(--color);
@@ -290,7 +290,7 @@
   --nav-link-color: var(--primary);
   --contrast: hsl(20, 20%, 70%);
   --contrast-hover: #d6dae2;
-  --contrast-focus: rgba(165, 149, 141, 0.25);
+  --contrast-focus: rgba(165.24, 148.92, 140.76, 0.25);
   --contrast-inverse: #000;
   --selection-background-color: var(--red);
   --selection-color: var(--contrast-inverse);
@@ -299,15 +299,15 @@
   --blockquote-border-color: var(--muted-border);
   --blockquote-footer-color: var(--muted);
   --note: hsl(210, 35%, 55%);
-  --background-note: #1e2a36;
+  --background-note: rgb(30.02625, 42.075, 54.12375);
   --warning: hsl(20, 12%, 60%);
-  --background-warning: #322d2a;
+  --background-warning: rgb(49.572, 44.676, 42.228);
   --danger: hsl(0, 30%, 54%);
-  --background-danger: #2b1a1a;
+  --background-danger: rgb(43.2225, 25.6275, 25.6275);
   --button-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   --button-hover-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  --form-element-background-color: #594c46;
-  --form-element-border-color: #8f7a70;
+  --form-element-background-color: rgb(89.25, 76.5, 70.125);
+  --form-element-border-color: rgb(142.8, 122.4, 112.2);
   --form-element-color: var(--color);
   --form-element-placeholder-color: var(--muted);
   --form-element-active-background-color: var(--form-element-background-color);
@@ -318,31 +318,31 @@
   --form-element-disabled-opacity: 0.5;
   --form-element-invalid-border-color: hsl(0, 45%, 13%);
   --form-element-invalid-active-border-color: hsl(0, 45%, 13%);
-  --form-element-invalid-focus-color: rgba(48, 18, 18, 0.25);
+  --form-element-invalid-focus-color: rgba(48.0675, 18.2325, 18.2325, 0.25);
   --form-element-valid-border-color: hsl(125, 75%, 13%);
   --form-element-valid-active-border-color: hsl(125, 70%, 22%);
-  --form-element-valid-focus-color: rgba(17, 95, 23, 0.25);
-  --switch-background-color: #8f7a70;
+  --form-element-valid-focus-color: rgba(16.83, 95.37, 23.375, 0.25);
+  --switch-background-color: rgb(142.8, 122.4, 112.2);
   --switch-color: var(--red-inverse);
   --switch-checked-background-color: var(--red);
-  --range-border-color: #8f7a70;
+  --range-border-color: rgb(142.8, 122.4, 112.2);
   --range-active-border-color: hsl(20, 12%, 50%);
   --range-thumb-border-color: var(--background-color);
   --range-thumb-color: var(--secondary);
   --range-thumb-hover-color: var(--secondary-hover);
   --range-thumb-active-color: var(--red);
   --table-border-color: var(--muted-border);
-  --table-row-stripped-background-color: rgba(165, 149, 141, 0.05);
+  --table-row-stripped-background-color: rgba(165.24, 148.92, 140.76, 0.05);
   --code-background-color-inline: var(--grey-surface);
   --code-tag-color: hsl(330, 30%, 50%);
   --code-property-color: hsl(185, 30%, 50%);
   --code-value-color: hsl(40, 10%, 50%);
-  --code-comment-color: #9a887f;
+  --code-comment-color: rgb(154.02, 135.66, 126.48);
   --accordion-border-color: var(--muted-border);
   --accordion-active-summary-color: var(--red);
   --accordion-close-summary-color: var(--color);
   --accordion-open-summary-color: var(--muted);
-  --card-background-color: #6b5c54;
+  --card-background-color: rgb(107.1, 91.8, 84.15);
   --card-border-color: var(--card-background-color);
   --card-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.01698),
     0.0335rem 0.067rem 0.402rem rgba(0, 0, 0, 0.024),
@@ -351,14 +351,14 @@
     0.2085rem 0.417rem 2.502rem rgba(0, 0, 0, 0.04302),
     0.5rem 1rem 6rem rgba(0, 0, 0, 0.06),
     0 0 0 0.0625rem rgba(0, 0, 0, 0.015);
-  --card-sectionning-background-color: #7d6b62;
+  --card-sectionning-background-color: rgb(124.95, 107.1, 98.175);
   --dropdown-background-color: hsl(20, 12%, 50%);
-  --dropdown-border-color: #8f7a70;
+  --dropdown-border-color: rgb(142.8, 122.4, 112.2);
   --dropdown-box-shadow: var(--card-box-shadow);
   --dropdown-color: var(--color);
-  --dropdown-hover-background-color: rgba(143, 122, 112, 0.75);
-  --modal-overlay-background-color: rgba(143, 122, 112, 0.8);
-  --progress-background-color: #8f7a70;
+  --dropdown-hover-background-color: rgba(142.8, 122.4, 112.2, 0.75);
+  --modal-overlay-background-color: rgba(142.8, 122.4, 112.2, 0.8);
+  --progress-background-color: rgb(142.8, 122.4, 112.2);
   --progress-color: var(--red);
   --loading-spinner-opacity: 0.5;
   --tooltip-background-color: var(--contrast);
@@ -1288,7 +1288,7 @@ tr.striped:nth-child(odd) {
  * Typography
  */
 :root {
-  font-family: Arial, system-ui, -apple-system, "Segoe UI", "Helvetica", "Roboto", "Ubuntu", "Cantarell", "Oxygen-Sans", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Noto Sans", "Helvetica", "Arial", system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Oxygen-Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 1.6;
   font-weight: 400;
   font-size: 1.1rem;
